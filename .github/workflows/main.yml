@@ -15,11 +15,11 @@ jobs:
 
       - name: Build and Push Docker Images
         run: |
-          docker build -t my-frontend-image ./frontend/my-react-app
-          docker build -t my-backend-image ./backend
+          docker build -t frontend ./frontend/my-react-app
+          docker build -t backend ./backend
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker push my-frontend-image
-          docker push my-backend-image
+          docker push frontend
+          docker push backend
 
       - name: Deploy with Docker Compose
         run: |
