@@ -15,11 +15,11 @@ jobs:
 
       - name: Build and Push Docker Images
         run: |
-          docker build -t frontend:latest ./frontend/my-react-app
-          docker build -t backend:latest ./backend
+          docker build -t frontend ./frontend/my-react-app
+          docker build -t backend ./backend
           echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
-          docker push henrikmoe/frontend:latest
-          docker push henrikmoe/backend:latest
+          docker push henrikmoe/frontend
+          docker push henrikmoe/backend
 
       - name: Deploy with Docker Compose
         run: |
