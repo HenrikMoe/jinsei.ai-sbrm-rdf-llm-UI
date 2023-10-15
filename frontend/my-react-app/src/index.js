@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import http from 'http'; // Import the 'http' module
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -7,7 +8,14 @@ import reportWebVitals from './reportWebVitals';
 const port = process.env.PORT || 80;
 const host = process.env.HOST || '0.0.0.0';
 
-app.listen(port, host, () => {
+// Create an HTTP server
+const server = http.createServer((req, res) => {
+  // Handle your server logic here
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Hello, World!\n');
+});
+
+server.listen(port, host, () => {
   console.log(`Server is running on port ${port}`);
 });
 
