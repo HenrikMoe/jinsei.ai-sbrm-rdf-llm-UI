@@ -3,15 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
+import Routes from './Routes'; // Import the Routes component
 
 const port = process.env.PORT || 80;
 const host = process.env.HOST || '0.0.0.0';
 
-
+console.log(process.env.REACT_APP_GOOGLE_CLIENT_ID);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
+      <Router>
+        {/* Use the Routes component for routing */}
+        <Routes />
+      </Router>
+    </GoogleOAuthProvider>
   </React.StrictMode>
 );
 
