@@ -11,7 +11,7 @@ COPY backend/package*.json ./
 RUN npm install
 
 # Copy the entire backend app to the container
-COPY .
+COPY . /app/
 
 # Expose the port on which your Express app will run (e.g., 3000)
 EXPOSE 3000
