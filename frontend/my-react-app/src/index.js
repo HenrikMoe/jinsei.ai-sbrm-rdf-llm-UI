@@ -7,9 +7,6 @@ import reportWebVitals from './reportWebVitals';
 const port = process.env.PORT || 80;
 const host = process.env.HOST || '0.0.0.0';
 
-app.listen(port, host, () => {
-  console.log(`Server is running on port ${port}`);
-});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
