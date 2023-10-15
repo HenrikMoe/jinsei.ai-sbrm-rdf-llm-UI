@@ -11,7 +11,7 @@ COPY frontend/my-react-app/package*.json ./
 RUN npm install
 
 # Copy the entire frontend app to the container
-COPY frontend/my-react-app/ .
+COPY .
 
 # Build the frontend app for production
 RUN npm run build
