@@ -20,4 +20,4 @@ RUN npm run build
 EXPOSE 80
 
 # Define the command to serve your React app (using a simple HTTP server)
-CMD [ "npx", "serve", "-s", "build" ]
+CMD [ "npx", "serve", "-s", "build", "-l", "80" ]
