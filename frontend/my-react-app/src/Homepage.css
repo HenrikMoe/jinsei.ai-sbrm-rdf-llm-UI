@@ -1,0 +1,55 @@
+.homepage-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 200px;
+}
+
+.api-button {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  font-size: 36px; /* Increase the font size to make it bigger */
+  border: 2px solid black;
+  box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  padding: 50px 160px; /* Increase the padding to make it bigger */
+  display: block;
+  margin: 20px auto; /* Center the button horizontally */
+  cursor: pointer;
+  margin-top: 200px;
+}
+
+.google-login-button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+
+/* Add styles for the "Arriving 2023" text */
+.arriving-text {
+  font-size: 36px; /* Adjust the font size as needed */
+  text-transform: uppercase; /* Convert text to uppercase */
+  font-weight: bold;
+  text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.3); /* Add text shadow for a shadow effect */
+  letter-spacing: 2px; /* Adjust letter spacing as needed */
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* Homepage.css */
+.prototype-button {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  font-size: 36px; /* Increase the font size to make it bigger */
+  border: 2px solid black;
+  box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  padding: 50px 160px; /* Increase the padding to make it bigger */
+  display: block;
+  margin: 20px auto; /* Center the button horizontally */
+  cursor: pointer;
+}

@@ -1,0 +1,23 @@
+/* PrototypeHeader.css */
+.prototype-header {
+  background-color: white;
+  color: black;
+  border: 2px solid black; /* Set border style */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  margin-top: 150px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.prototype-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Add more styling as needed */

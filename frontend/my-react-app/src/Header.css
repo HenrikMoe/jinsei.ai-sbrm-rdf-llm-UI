@@ -1,0 +1,94 @@
+  /* Add styles for the header */
+  .header {
+    background-color: rgba(18, 18, 18, 0.01);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0;
+    transition: opacity 0.5s; /* Transition the opacity property over 0.5 seconds */
+  }
+
+  .button {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 5px; /* Adjust the vertical and horizontal padding */
+    display: block; /* Display buttons as block elements */
+    margin-bottom: 5px; /* Reduce the vertical margin */
+  }
+
+  .title {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0px;
+  }
+
+  .title {
+    margin-left: 30px;
+    color: black;
+  }
+
+  /* Style for the header image */
+  .header-image {
+    width: 200px;
+    height: 200px;
+    margin: 0px;
+  }
+
+  /* Mobile menu styles */
+  .menu-container {
+    position: fixed;
+    top: 5px; /* Adjust for the header height */
+    right: -300px; /* Start menu off-screen to the right */
+    width: 120px; /* Adjust the width as needed */
+    height: 30%;
+    background-color: rgba(18, 18, 18, 0.9);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    border-radius: 7px;
+  }
+  /* Set height to 28% on desktop screens */
+  @media (min-width: 768px) {
+    .menu-container {
+      height: 40%;
+    }
+  }
+
+  /* Set height to 20% on mobile screens */
+  @media (max-width: 767px) {
+    .menu-container {
+      height: 35%;
+    }
+  }
+
+  .menu-container.open {
+    right: 0;
+  }
+
+  .menu-button {
+    color: black;
+    font-size: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .header.hidden {
+  visibility: hidden; /* Hide the element without affecting layout */
+   opacity: 0; /* Set opacity to 0 when hidden */
+
+ }

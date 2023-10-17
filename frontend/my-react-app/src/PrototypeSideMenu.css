@@ -1,0 +1,28 @@
+/* PrototypeSideMenu.css */
+.prototype-side-menu {
+  background-color: white;
+  color: black;
+  border: 2px solid black; /* Set border style */
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  margin-top: 200px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.prototype-side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.prototype-side-menu li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Add more styling as needed */

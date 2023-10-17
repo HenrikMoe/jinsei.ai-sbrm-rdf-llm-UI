@@ -2,6 +2,8 @@ import React from 'react';
 import api from './api'; // Adjust the import path based on your project structure
 import { GoogleLogin } from '@react-oauth/google'; // Import the Google login component
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import './Homepage.css'; // Import the CSS file for styling
+
 
 function Homepage() {
   const navigate = useNavigate(); // Initialize the navigate function
@@ -39,20 +41,20 @@ function Homepage() {
      navigate('/prototype');
    };
 
-  return (
-    <div>
-      <h1>Homepage</h1>
-      <button onClick={handleClick}>Request API</button>
 
-      {/* Add the Google login button */}
-      <GoogleLogin
-        onSuccess={handleLoginSuccess}
-        onError={() => {
-          console.error('Login Failed');
-        }}
-      >
-        Login with Google
-      </GoogleLogin>
+  const handlePrototypeClick = () => {
+    navigate('/prototype');
+  };
+
+  return (
+    <div className="homepage-container">
+    <div className='arriving-text'>Arriving 2023: A global standard for business mapping, reporting, and processing.</div>
+      <button onClick={handlePrototypeClick} className="prototype-button">
+      Prototype
+    </button>
+    <button onClick={handleClick} className="api-button">Request API</button>
+
+
     </div>
   );
 }

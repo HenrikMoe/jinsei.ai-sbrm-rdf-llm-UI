@@ -1,0 +1,66 @@
+.arrive-button {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  font-size: 36px; /* Increase the font size to make it bigger */
+  border: 2px solid black;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  padding: 50px 160px; /* Increase the padding to make it bigger */
+  display: block;
+  margin: 20px auto; /* Center the button horizontally */
+  cursor: pointer;
+  margin-top: 200px;
+}
+
+
+/* Add this CSS to your stylesheet */
+
+/* Style the modal content */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add styling for the modal */
+.modal {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the modal */
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px; /* Set the maximum width of the modal */
+}
+
+/* Style the modal's title (h2) */
+.modal h2 {
+  font-size: 24px;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+/* Style the Google Login button inside the modal */
+.modal .google-login-button {
+  background-color: #4285f4; /* Google blue color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block; /* Make it a block-level element */
+  width: 100%; /* Take up the full width available */
+  text-align: center;
+}
+
+/* Style the close button */
+.modal-content .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}

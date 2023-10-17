@@ -1,37 +1,55 @@
-import React from 'react';
-import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
+import React, { useState } from 'react';
+import { GoogleLogin } from '@react-oauth/google';
+import PrototypeHeader from './PrototypeHeader';
+import PrototypeSideMenu from './PrototypeSideMenu';
+import './Prototype.css'
 
 function Prototype() {
-  // Check if the user is authenticated. You can replace this with your actual logic.
-  const isAuthenticated = true; // Replace with your user authentication logic
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeAndSetAuthenticated = () => {
+    setIsModalOpen(false);
+    setIsAuthenticated(true);
+  };
 
   return (
     <div>
-      <h1>Prototype</h1>
       {isAuthenticated ? (
         // Content for authenticated users
         <div>
-          <p>Welcome, you are signed in!</p>
+          <PrototypeHeader />
+          <PrototypeSideMenu />
           {/* Add content for signed-in users here */}
         </div>
       ) : (
         // Content for non-authenticated users
         <div>
-          <p>You are not signed in.</p>
-          {/* Add content for non-signed-in users here */}
-          <GoogleLogin
-            onSuccess={(credentialResponse) => {
-              // Handle successful authentication
-              const email = credentialResponse.getEmail();
-              console.log('User email:', email);
-              // You can use the `email` variable to access the user's email.
-            }}
-            onError={() => {
-              // Handle authentication error
-              console.log('Authentication failed');
-            }}
-            scope="email" // Include the "email" scope
-          />
+          {isModalOpen && (
+            <div className="modal">
+              <h2>Login with Google</h2>
+              <GoogleLogin
+                onSuccess={(credentialResponse) => {
+                  // Handle successful authentication
+                  //const email = credentialResponse.getEmail();
+                  console.log(credentialResponse);
+                  closeAndSetAuthenticated(); // Close the modal and set as authenticated
+                }}
+                onError={() => {
+                  // Handle authentication error
+                  console.log('Authentication failed');
+                }}
+                scope="email" // Include the "email" scope
+              />
+            </div>
+          )}
+          {!isModalOpen && (
+            <button class='arrive-button' onClick={openModal}>Login with Google</button>
+          )}
         </div>
       )}
     </div>
