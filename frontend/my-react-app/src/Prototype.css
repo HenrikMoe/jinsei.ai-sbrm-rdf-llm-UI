@@ -5,11 +5,11 @@
   font-size: 36px; /* Increase the font size to make it bigger */
   border: 2px solid black;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
-  padding: 50px 160px; /* Increase the padding to make it bigger */
+  padding: 25px 80px; /* Increase the padding to make it bigger */
   display: block;
   margin: 20px auto; /* Center the button horizontally */
   cursor: pointer;
-  margin-top: 200px;
+  margin-top: 300px;
 }
 
 

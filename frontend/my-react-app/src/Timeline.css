@@ -1,0 +1,77 @@
+/* Timeline.css */
+.timeline-title {
+  font-size: 32px;
+  color: black;
+  opacity: 0.95;
+}
+
+.title2 {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #F5F5F5;
+  opacity: 0.9;
+}
+
+.dark-button {
+  background-color: #001F3F;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 5px;
+  display: inline-block;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 1.5px 3px 0 green;
+}
+
+.timelinePosition {
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+div iframe {
+  height: 450px;
+  border-radius: 20px;
+  width: 950px;
+}
+
+@media screen and (min-width: 768px) {
+  div iframe {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  div iframe {
+    width: 100%;
+  }
+}
+
+.button-container {
+  margin-top: 100px;
+  margin-bottom: 0px;
+}
+
+.button-container2 {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.content {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.content .title2,
+.content .timelinePosition {
+  text-align: center;
+}
+.frame {
+  height: 500px;
+}
+
+.timelinePosition {
+  margin-top: 10px;
+  margin-bottom: 100px;
+}

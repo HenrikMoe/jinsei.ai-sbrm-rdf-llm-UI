@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css'; // Import the CSS file that contains your styles
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [title] = useState('My Header');
@@ -13,7 +14,8 @@ const Header = () => {
     { label: 'White-Paper', url: 'https://docs.google.com/document/d/1m_ZNJheDIbt9JHsljOIoZ6awDcaWswWgvlRDGKK3vSE/edit?usp=sharing' },
     { label: 'Deck', url: 'https://drive.google.com/file/d/1JrjXCzGImy7K36S9duByjM5D7a4xpgCq/view?usp=sharing' },
     { label: 'Timeline', url: 'https://jinsei.ai/timeline' },
-    { label: 'Register', url: 'https://jinsei.ai/email' },
+    { label: 'Privacy', url: 'https://jinsei.ai/privacy' },
+    { label: 'TermsOfService', url: 'https://jinsei.ai/tos' },
   ];
 
   const toggleMenu = () => {
@@ -50,9 +52,9 @@ const Header = () => {
     <div className={`header ${isHeaderVisible ? '' : 'hidden'}`}>
       <div className="header">
         <div className="title">
-          <a href="/" className="title">
-            <h1>jinsei.ai</h1>
-          </a>
+        <Link to="/" className="title">
+        <h1>jinsei.ai</h1>
+        </Link>
         </div>
         <div className="menu-button" onClick={toggleMenu}>
           ☰

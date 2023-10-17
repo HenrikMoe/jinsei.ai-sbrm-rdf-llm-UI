@@ -3,10 +3,13 @@ import { GoogleLogin } from '@react-oauth/google';
 import PrototypeHeader from './PrototypeHeader';
 import PrototypeSideMenu from './PrototypeSideMenu';
 import './Prototype.css'
+import { useAuthentication } from './AuthenticationContext'; // Import the context
 
 function Prototype() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isAuthenticated, login, logout } = useAuthentication();
+
+  console.log(isAuthenticated)
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -14,7 +17,7 @@ function Prototype() {
 
   const closeAndSetAuthenticated = () => {
     setIsModalOpen(false);
-    setIsAuthenticated(true);
+    login()
   };
 
   return (
@@ -48,7 +51,7 @@ function Prototype() {
             </div>
           )}
           {!isModalOpen && (
-            <button class='arrive-button' onClick={openModal}>Login with Google</button>
+            <button className='arrive-button' onClick={openModal}>Login for Access</button>
           )}
         </div>
       )}

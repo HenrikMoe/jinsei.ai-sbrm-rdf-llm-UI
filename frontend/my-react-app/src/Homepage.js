@@ -46,14 +46,20 @@ function Homepage() {
     navigate('/prototype');
   };
 
+
+    const handleTimelineClick = () => {
+      navigate('/timeline');
+    };
+
   return (
     <div className="homepage-container">
     <div className='arriving-text'>Arriving 2023: A global standard for business mapping, reporting, and processing.</div>
       <button onClick={handlePrototypeClick} className="prototype-button">
       Prototype
     </button>
-    <button onClick={handleClick} className="api-button">Request API</button>
-
+    <button onClick={handleTimelineClick} className="timeline-button">
+     General Timeline
+    </button>
 
     </div>
   );

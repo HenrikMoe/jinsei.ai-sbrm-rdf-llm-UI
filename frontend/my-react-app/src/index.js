@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
 import Routes from './Routes'; // Import the Routes component
+import { AuthenticationProvider } from './AuthenticationContext'; // Import the context provider
+
 
 const port = process.env.PORT || 80;
 const host = process.env.HOST || '0.0.0.0';
@@ -15,10 +17,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
+    <AuthenticationProvider>
       <Router>
         {/* Use the Routes component for routing */}
         <Routes />
       </Router>
+      </AuthenticationProvider>
     </GoogleOAuthProvider>
   </React.StrictMode>
 );
