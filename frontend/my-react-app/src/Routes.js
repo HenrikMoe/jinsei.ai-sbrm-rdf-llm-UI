@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Homepage from './Homepage';
 import Prototype from './Prototype';
 import PrivacyPolicy from './PrivacyPolicy'; // Import PrivacyPolicy component
-import TermsOfService from './TermsOfService'; // Import TermsOfService component
+import TermsOfService from './TermOfService'; // Import TermsOfService component
 
 const AppRoutes = () => {
   return (
