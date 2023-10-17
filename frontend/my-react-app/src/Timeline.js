@@ -1,14 +1,15 @@
 import React from 'react';
 import './Timeline.css'; // Import your CSS file
+import { Link } from 'react-router-dom';
 
 const Timeline = () => {
   return (
       <div className="content">
         <div className="timeline-title">Jinsei Corp Build Timeline</div>
         <div className="button-container">
-          <a href="/prototype" className="dark-button">
-            Jinsei Studio
-          </a>
+        <Link to="/prototype" className="dark-button">
+          Jinsei Studio
+        </Link>
           <a className="dark-button">
             Contact: henrik@jinsei.ai
           </a>

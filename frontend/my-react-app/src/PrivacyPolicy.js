@@ -1,8 +1,9 @@
 import React from 'react';
+import './PrivacyPolicy.css'; // Import the CSS file
 
 const PrivacyPolicy = () => {
   return (
-    <div>
+    <div className="center-div">
       <h1>Privacy Policy</h1>
       <p>
         Your privacy is important to us. This Privacy Policy explains how we collect, use, and disclose your personal information.

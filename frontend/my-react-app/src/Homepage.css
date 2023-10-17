@@ -68,3 +68,18 @@
   margin-top: 200px;
   cursor: pointer;
 }
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .button {
+    font-size: 20px; /* Further decrease font size for smaller screens */
+    padding: 15px 30px; /* Adjust padding for smaller screens */
+  }
+
+  .prototype-button,
+  .timeline-button {
+    font-size: 20px; /* Further decrease font size for mobile */
+    padding: 15px 30px; /* Adjust padding for mobile */
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Smaller shadow for mobile */
+  }
+}

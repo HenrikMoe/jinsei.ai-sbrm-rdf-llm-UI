@@ -15,7 +15,7 @@ const Header = () => {
     { label: 'Deck', url: 'https://drive.google.com/file/d/1JrjXCzGImy7K36S9duByjM5D7a4xpgCq/view?usp=sharing' },
     { label: 'Timeline', url: 'https://jinsei.ai/timeline' },
     { label: 'Privacy', url: 'https://jinsei.ai/privacy' },
-    { label: 'TermsOfService', url: 'https://jinsei.ai/tos' },
+    { label: 'Service', url: 'https://jinsei.ai/tos' },
   ];
 
   const toggleMenu = () => {

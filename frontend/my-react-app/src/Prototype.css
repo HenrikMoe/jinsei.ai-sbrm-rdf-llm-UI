@@ -12,6 +12,19 @@
   margin-top: 300px;
 }
 
+@media (max-width: 768px) {
+  .button {
+    font-size: 20px; /* Further decrease font size for smaller screens */
+    padding: 15px 30px; /* Adjust padding for smaller screens */
+  }
+
+  .arrive-button {
+    font-size: 20px; /* Further decrease font size for mobile */
+    padding: 15px 30px; /* Adjust padding for mobile */
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2); /* Smaller shadow for mobile */
+  }
+}
+
 
 /* Add this CSS to your stylesheet */
 

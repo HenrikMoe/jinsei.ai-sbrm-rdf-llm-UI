@@ -1,8 +1,9 @@
 import React from 'react';
+import './TermsOfService.css'; // Import the CSS file
 
 const TermsOfService = () => {
   return (
-    <div>
+    <div className="center-div">
       <h1>Terms of Service</h1>
       <p>
         By using our services, you agree to comply with these Terms of Service. Please read them carefully.

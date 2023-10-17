@@ -48,7 +48,7 @@
     top: 5px; /* Adjust for the header height */
     right: -300px; /* Start menu off-screen to the right */
     width: 120px; /* Adjust the width as needed */
-    height: 30%;
+    height: 45%;
     background-color: rgba(18, 18, 18, 0.9);
     transition: right 0.3s ease-in-out;
     z-index: 1000;
@@ -57,14 +57,14 @@
   /* Set height to 28% on desktop screens */
   @media (min-width: 768px) {
     .menu-container {
-      height: 40%;
+      height: 45%;
     }
   }
 
   /* Set height to 20% on mobile screens */
   @media (max-width: 767px) {
     .menu-container {
-      height: 35%;
+      height: 50%;
     }
   }
 
