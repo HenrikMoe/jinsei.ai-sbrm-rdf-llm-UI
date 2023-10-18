@@ -20,4 +20,30 @@
   font-size: 24px;
 }
 
+.prototype-container {
+  min-height: 100vh; /* Set a minimum height to ensure the footer is at the bottom */
+}
+
+.header-image{
+  width: 80px;
+  height: 80px;
+}
+
+
+/* Add dark mode styles for the homepage */
+.dark-mode {
+  background-color: grey;
+  color: #fff;
+  border-color: white; /* Add this line to change the border color to white in dark mode */
+}
+
+.dark-mode-text {
+  color: #fff;
+}
+
+.dark-mode-button {
+  background-color: #333;
+  color: #fff;
+}
+
 /* Add more styling as needed */

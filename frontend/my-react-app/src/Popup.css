@@ -1,0 +1,42 @@
+/* Popup.css */
+.popup-container {
+  position: relative;
+  text-align: center;
+  margin: 5px;
+}
+
+.popup-button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1; /* Ensure the popup is above the button */
+
+}
+
+.popup {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  border-radius: 5px;
+  z-index: 1000;
+  z-index: 2; /* Ensure the popup is above the button */
+
+}
+
+.popup-content {
+  padding: 10px;
+}
+
+.show-hello-button {
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+  border: 1px solid black; /* Add a border */
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); /* Add a right and bottom shadow */
+}

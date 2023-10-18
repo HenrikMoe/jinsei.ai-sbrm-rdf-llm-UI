@@ -1,7 +1,7 @@
 .homepage-container {
   text-align: center;
   padding: 20px;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .api-button {
@@ -67,6 +67,47 @@
   margin: 20px auto; /* Center the button horizontally */
   margin-top: 200px;
   cursor: pointer;
+}
+
+
+/* Homepage.css */
+/* Homepage.css */
+.lang {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-size: 12px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  margin: 20px auto; /* Center the button horizontally */
+  cursor: pointer;
+  display: block; /* Ensure it takes the full width of its container */
+}
+
+
+/* Add dark mode styles for the homepage */
+.dark-mode {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark-mode-text {
+  color: #fff;
+}
+
+.dark-mode-button {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Add more dark mode styles as needed */
+
+
+.langWrap{
+  margin-top: 120px;
+  display: flex;
+  padding: 10 10;
 }
 
 /* Media query for mobile devices */

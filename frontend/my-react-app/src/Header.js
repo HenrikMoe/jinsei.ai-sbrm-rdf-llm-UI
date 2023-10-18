@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css'; // Import the CSS file that contains your styles
 import { Link } from 'react-router-dom';
+import { useDarkMode } from './DarkModeContext';
 
 const Header = () => {
   const [title] = useState('My Header');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [scrollY, setScrollY] = useState(0);
+
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   const sourceButtons = [
     { label: 'Twitter', url: 'https://twitter.com/jinseicorp' },
@@ -16,6 +19,7 @@ const Header = () => {
     { label: 'Timeline', url: 'https://jinsei.ai/timeline' },
     { label: 'Privacy', url: 'https://jinsei.ai/privacy' },
     { label: 'Service', url: 'https://jinsei.ai/tos' },
+    { label: 'About', url: 'https://jinsei.ai/about' },
   ];
 
   const toggleMenu = () => {
@@ -25,6 +29,18 @@ const Header = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
+
+  // Add an event listener to the entire document
+  document.addEventListener("click", function (event) {
+    const menuContainer = document.querySelector(".menu-container");
+    const menuButton = document.querySelector(".menu-button");
+
+    // Check if the click target is not inside the menu or menu button
+    if (!menuContainer.contains(event.target) && event.target !== menuButton) {
+      closeMenu();
+    }
+  });
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
@@ -49,15 +65,26 @@ const Header = () => {
   }, []);
 
   return (
-    <div className={`header ${isHeaderVisible ? '' : 'hidden'}`}>
-      <div className="header">
-        <div className="title">
-        <Link to="/" className="title">
-        <h1>jinsei.ai</h1>
-        </Link>
+    <div className={`header ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`}>
+      <div className={`header ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`}>
+        <div className={`title ${isDarkMode ? 'dark-mode-text' : ''}`}>
+          <Link to="/" className={`title ${isDarkMode ? 'dark-mode-text' : ''}`}>
+            <h1>jinsei.ai</h1>
+          </Link>
+          <div className={`menu-button ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`} onClick={toggleMenu}>
+            ☰
+          </div>
         </div>
-        <div className="menu-button" onClick={toggleMenu}>
-          ☰
+
+        <div className={`menu-button ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`} onClick={toggleMenu} >
+        <div className='cornerWrap'>
+          <button className="dark-button" onClick={toggleDarkMode}>
+            {isDarkMode ? 'Disable Dark Mode' : 'Enable Dark Mode'}
+          </button>
+            <div className="title5"> 
+              Henrik Moe
+            </div>
+          </div>
         </div>
       </div>
       <div className={`menu-container ${isMenuOpen ? 'open' : ''}`}>

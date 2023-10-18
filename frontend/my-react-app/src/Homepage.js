@@ -3,10 +3,16 @@ import api from './api'; // Adjust the import path based on your project structu
 import { GoogleLogin } from '@react-oauth/google'; // Import the Google login component
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Homepage.css'; // Import the CSS file for styling
+import { useTranslation } from 'react-i18next';
+import { useDarkMode } from './DarkModeContext';
 
 
 function Homepage() {
   const navigate = useNavigate(); // Initialize the navigate function
+  const { t, i18n } = useTranslation();
+
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+
 
   const handleClick = async () => {
     try {
@@ -26,41 +32,48 @@ function Homepage() {
   };
 
   const handleLoginSuccess = (credentialResponse) => {
-     console.log('Logged in successfully:', credentialResponse);
+    console.log('Logged in successfully:', credentialResponse);
 
-     // Extract the user's email from the credentialResponse
-     const userEmail = credentialResponse.email;
-     console.log(userEmail)
+    // Extract the user's email from the credentialResponse
+    const userEmail = credentialResponse.email;
+    console.log(userEmail);
 
+    if (userEmail) {
+      console.log('User email:', userEmail);
+    }
 
-     if (userEmail) {
-       console.log('User email:', userEmail);
-     }
-
-     // You can perform actions after successful login here, e.g., set user state or redirect.
-     navigate('/prototype');
-   };
-
+    // You can perform actions after successful login here, e.g., set user state or redirect.
+    navigate('/prototype');
+  };
 
   const handlePrototypeClick = () => {
     navigate('/prototype');
   };
 
+  const handleTimelineClick = () => {
+    navigate('/timeline');
+  };
 
-    const handleTimelineClick = () => {
-      navigate('/timeline');
-    };
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    console.log(i18n);
+  };
 
   return (
-    <div className="homepage-container">
-    <div className='arriving-text'>Arriving 2023: A global standard for business mapping, reporting, and processing.</div>
-      <button onClick={handlePrototypeClick} className="prototype-button">
-      Prototype
-    </button>
-    <button onClick={handleTimelineClick} className="timeline-button">
-     General Timeline
-    </button>
-
+    <div className={`homepage-container ${isDarkMode ? 'dark-mode' : ''}`}>
+      <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
+        {t('Arriving 2023: Global standards based business reporting process pipelines.')}
+      </div>
+      <button onClick={handlePrototypeClick} className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
+        Luciano
+      </button>
+      <div className={`langWrap ${isDarkMode ? 'dark-mode-text' : ''}`}>
+        <button className={`lang ${isDarkMode ? 'dark-mode-text' : ''}`} onClick={() => changeLanguage('en')}>EN</button>
+        <button className={`lang ${isDarkMode ? 'dark-mode-text' : ''}`} onClick={() => changeLanguage('fr')}>FR</button>
+      </div>
+      <button onClick={handleTimelineClick} className={`timeline-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
+        Corp Timeline
+      </button>
     </div>
   );
 }

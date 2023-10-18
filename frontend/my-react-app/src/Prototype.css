@@ -9,7 +9,6 @@
   display: block;
   margin: 20px auto; /* Center the button horizontally */
   cursor: pointer;
-  margin-top: 300px;
 }
 
 @media (max-width: 768px) {
@@ -34,6 +33,19 @@
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal2 {
+  position: fixed;
+  margin-top: 300px;
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the modal */
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px; /* Set the maximum width of the modal */
 }
 
 /* Add styling for the modal */
@@ -76,4 +88,19 @@
   top: 10px;
   right: 10px;
   cursor: pointer;
+}
+
+/* Add dark mode styles for the homepage */
+.dark-mode {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark-mode-text {
+  color: #fff;
+}
+
+.dark-mode-button {
+  background-color: #333;
+  color: #fff;
 }

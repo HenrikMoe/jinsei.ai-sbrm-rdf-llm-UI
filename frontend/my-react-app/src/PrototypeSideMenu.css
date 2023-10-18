@@ -9,7 +9,7 @@
   left: 0;
   bottom: 0;
   z-index: 1000;
-  margin-top: 200px;
+  margin-top: 270px;
   padding: 20px;
   overflow-y: auto;
 }
@@ -26,3 +26,24 @@
 }
 
 /* Add more styling as needed */
+.prototype-side-menu.resizing {
+  cursor: col-resize; /* Change cursor to resizing cursor when resizing */
+  user-select: none; /* Disable text selection during resizing */
+  pointer-events: none; /* Ignore pointer events during resizing */
+}
+
+/* Add dark mode styles for the homepage */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+  border-color: white; /* Add this line to change the border color to white in dark mode */
+}
+
+.dark-mode-text {
+  color: #fff;
+}
+
+.dark-mode-button {
+  background-color: #333;
+  color: #fff;
+}

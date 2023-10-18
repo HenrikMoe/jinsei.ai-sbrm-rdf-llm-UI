@@ -7,6 +7,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
 import Routes from './Routes'; // Import the Routes component
 import { AuthenticationProvider } from './AuthenticationContext'; // Import the context provider
+import './i18n'; // Your i18next configuration file
 
 
 const port = process.env.PORT || 80;

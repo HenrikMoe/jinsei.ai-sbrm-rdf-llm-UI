@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import PrototypeHeader from './PrototypeHeader';
 import PrototypeSideMenu from './PrototypeSideMenu';
-import './Prototype.css'
-import { useAuthentication } from './AuthenticationContext'; // Import the context
+import './Prototype.css';
+import { useAuthentication } from './AuthenticationContext';
+import { Link } from 'react-router-dom';
+import Footer from './Footer';
+import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
 function Prototype() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { isAuthenticated, login, logout } = useAuthentication();
-
-  console.log(isAuthenticated)
+  const { isDarkMode } = useDarkMode(); // Get the dark mode status
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -17,11 +19,11 @@ function Prototype() {
 
   const closeAndSetAuthenticated = () => {
     setIsModalOpen(false);
-    login()
+    login();
   };
 
   return (
-    <div>
+    <div className={`prototype-container ${isDarkMode ? 'dark-mode' : ''}`}>
       {isAuthenticated ? (
         // Content for authenticated users
         <div>
@@ -33,25 +35,26 @@ function Prototype() {
         // Content for non-authenticated users
         <div>
           {isModalOpen && (
-            <div className="modal">
-              <h2>Login with Google</h2>
+            <div className={`modal ${isDarkMode ? 'dark-mode' : ''}`}>
+              <h2 className={isDarkMode ? 'dark-mode-text' : ''}>Login with Google</h2>
               <GoogleLogin
                 onSuccess={(credentialResponse) => {
-                  // Handle successful authentication
-                  //const email = credentialResponse.getEmail();
                   console.log(credentialResponse);
-                  closeAndSetAuthenticated(); // Close the modal and set as authenticated
+                  closeAndSetAuthenticated();
                 }}
                 onError={() => {
-                  // Handle authentication error
                   console.log('Authentication failed');
                 }}
-                scope="email" // Include the "email" scope
+                scope="email"
               />
             </div>
           )}
           {!isModalOpen && (
-            <button className='arrive-button' onClick={openModal}>Login for Access</button>
+            <div className={`modal2 ${isDarkMode ? 'dark-mode' : ''}`}>
+              <button className="arrive-button" onClick={openModal}>
+                Login for Access
+              </button>
+            </div>
           )}
         </div>
       )}
