@@ -3,6 +3,12 @@
   padding: 20px;
   margin-top: 100px;
 }
+/* Media query for mobile devices */
+  @media (max-width: 768px) {
+  .homepage-container {
+    margin-right: 40px;
+  }
+}
 
 .api-button {
   background-color: black;
@@ -38,6 +44,13 @@
   letter-spacing: 2px; /* Adjust letter spacing as needed */
   margin-top: 100px;
   margin-bottom: 100px;
+}
+@media (max-width: 767px) {
+  .arriving-text {
+    margin-right: 40px;
+    margin-left: -5px;
+
+  }
 }
 
 /* Homepage.css */
@@ -103,8 +116,8 @@
 }
 
 .dark-mode-button {
-  background-color: #333;
-  color: #fff;
+  background-color: white;
+  color: black;
   border-color: white;
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 

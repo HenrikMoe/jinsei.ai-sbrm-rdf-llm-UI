@@ -94,6 +94,7 @@
 .dark-mode {
   background-color: #000;
   color: #fff;
+  border-radius: 10px;
 }
 
 .dark-mode-text {
@@ -101,6 +102,35 @@
 }
 
 .dark-mode-button {
-  background-color: #333;
-  color: #fff;
+  background-color: white;
+  color: black;
+  border-color: white;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.content-grid {
+  margin-left: 10px;
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Adjust the width of the side menu as needed */
+  grid-gap: 20px; /* Add spacing between columns */
+  align-items: start; /* Align items to the top of the grid */
+  padding: 20px; /* Add padding as needed */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+/* Add a media query to adapt the layout for smaller screens (e.g., max-width: 768px) */
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr; /* Stack columns for smaller screens */
+  }
+}
+
+.prototype-container {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Adjust the width of the side menu as needed */
+  grid-gap: 20px; /* Add spacing between columns */
+  align-items: start; /* Align items to the top of the grid */
+  padding: 20px; /* Add padding as needed */
+  box-sizing: border-box; /* Include padding in the width */
 }

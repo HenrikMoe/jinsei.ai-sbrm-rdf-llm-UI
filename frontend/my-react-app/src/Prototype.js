@@ -26,7 +26,7 @@ function Prototype() {
     <div className={`prototype-container ${isDarkMode ? 'dark-mode' : ''}`}>
       {isAuthenticated ? (
         // Content for authenticated users
-        <div>
+        <div class='content-grid'>
           <PrototypeHeader />
           <PrototypeSideMenu />
           {/* Add content for signed-in users here */}

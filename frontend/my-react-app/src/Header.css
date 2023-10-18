@@ -39,6 +39,13 @@
   align-items: center;
   }
 
+  @media (max-width: 767px) {
+    .title {
+      margin-left: 0px;
+    }
+  }
+
+
 
 
   /* Style for the header image */
@@ -87,6 +94,22 @@
   cursor: pointer;
 }
 
+.menu-button2 {
+  color: black;
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .menu-button2 {
+    margin-right: 70px;
+  }
+}
+
+
+
+
 .dark-button {
   background-color: black; /* Dark background color */
   color: #fff; /* Text color in dark mode */
@@ -113,9 +136,22 @@
   margin-left: 10px;
   color: black;
 }
+@media (max-width: 767px) {
+  .title5 {
+    display: none;
+  }
+}
 
 .cornerWrap{
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .cornerWrap {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+    margin-right: 50px; /* Center the button horizontally and add space between buttons */
+  }
 }
 
 .close-button {

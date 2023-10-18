@@ -27,8 +27,7 @@
   .dark-button {
     padding: 8px 16px; /* Adjust padding for smaller screens */
     font-size: 14px; /* Adjust font size for smaller screens */
-    margin: 10px 0;
-    margin-right: 20px; /* Center the button horizontally and add space between buttons */
+    margin-right: 50px; /* Center the button horizontally and add space between buttons */
   }
 }
 
