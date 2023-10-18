@@ -12,7 +12,7 @@ const PrototypeHeader = () => {
   return (
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
       <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
-      <h2>Studio JS</h2>
+      <h2>Atlas - main|version 0.49 </h2>
       <Popup />
     </div>
   );
