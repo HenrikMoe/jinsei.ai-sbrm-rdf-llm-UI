@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react'; // Import useEffect
 import { Routes, Route, Outlet } from 'react-router-dom'; // Import Outlet
 
 import Header from './Header'; // Import the Header component
@@ -12,6 +12,11 @@ import Footer from './Footer'; // Replace with the actual path to your Footer co
 import { DarkModeProvider } from './DarkModeContext';
 
 const AppRoutes = () => {
+
+  useEffect(() => {
+    document.title = 'Jinsei.ai - Standards Based Taxonomy GUI'; // Change this title
+  }, []);
+
   return (
     <div>
     <DarkModeProvider>

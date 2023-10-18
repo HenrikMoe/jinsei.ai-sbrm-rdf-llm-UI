@@ -60,7 +60,7 @@ function Homepage() {
   };
 
   return (
-    <div className={`homepage-container ${isDarkMode ? 'dark-mode' : ''}`}>
+    <div className={`homepage-container ${isDarkMode ? 'dark-mode1' : ''}`}>
       <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
         {t('Arriving 2023: Global standards based business reporting process pipelines.')}
       </div>

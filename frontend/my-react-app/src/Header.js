@@ -66,7 +66,7 @@ const Header = () => {
 
   return (
     <div className={`header ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`}>
-      <div className={`header ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`}>
+      <div className={`header ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode1' : ''}`}>
         <div className={`title ${isDarkMode ? 'dark-mode-text' : ''}`}>
           <Link to="/" className={`title ${isDarkMode ? 'dark-mode-text' : ''}`}>
             <h1>jinsei.ai</h1>

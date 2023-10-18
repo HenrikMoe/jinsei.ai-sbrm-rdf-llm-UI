@@ -130,6 +130,11 @@
   }
 }
 
+.dark-mode1 {
+  background-color: #000;
+  color: #fff;
+  border-radius: 0px;
+}
 
 .title5{
   margin-top: 10px;

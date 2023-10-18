@@ -133,4 +133,5 @@
   align-items: start; /* Align items to the top of the grid */
   padding: 20px; /* Add padding as needed */
   box-sizing: border-box; /* Include padding in the width */
+  border-radius: 0px !important;
 }
