@@ -18,6 +18,18 @@ i18n
           // Add more translations here
         },
       },
+      ja: {
+        translation: {
+          '「2023 年の到来: 世界標準ベースのビジネス報告プロセス パイプライン': '「2023 年の到来: 世界標準ベースのビジネス報告プロセス パイプライン」',
+          // Add more translations here
+        },
+      },
+      de: {
+        translation: {
+          'Erscheint 2023: Auf globalen Standards basierende Prozesspipelines für die Geschäftsberichterstattung.': 'Erscheint 2023: Auf globalen Standards basierende Prozesspipelines für die Geschäftsberichterstattung.',
+          // Add more translations here
+        },
+      },
     },
     lng: 'en', // default language
     fallbackLng: 'en', // fallback language
