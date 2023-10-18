@@ -40,3 +40,32 @@
   border: 1px solid black; /* Add a border */
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); /* Add a right and bottom shadow */
 }
+
+
+.dark-mode {
+  background-color: #000;
+  color: #fff;
+  border-color: white;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.dark-button{
+  background: white;
+  color: black;
+}
+
+.dark-mode-text {
+  background-color: #000;
+  color: #fff;
+  border-color: white;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-button {
+  background-color: #333;
+  color: #fff;
+  border-color: white;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+
+}

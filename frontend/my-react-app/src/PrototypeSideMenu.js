@@ -9,7 +9,7 @@ const PrototypeSideMenu = () => {
   const [initialHeight, setInitialHeight] = useState(400); // Initial height of the side menu
   const [currentWidth, setCurrentWidth] = useState(initialWidth);
   const [currentHeight, setCurrentHeight] = useState(initialHeight);
-  const resizeBorderWidth = 30; // Additional 20 pixels to the right
+  const resizeBorderWidth = 35; // Additional 20 pixels to the right
 
   const { isDarkMode } = useDarkMode(); // Get the dark mode status
 
@@ -50,7 +50,7 @@ const PrototypeSideMenu = () => {
 
   return (
     <div
-      className={`prototype-side-menu ${isResizing ? 'resizing' : ''}`}
+    className={`prototype-side-menu ${isResizing ? 'resizing' : ''} ${isDarkMode ? 'dark-mode' : ''}`}
       onMouseDown={handleMouseDown}
     >
       {/* Add your side menu content here */}

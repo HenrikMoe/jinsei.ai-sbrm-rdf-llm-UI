@@ -93,9 +93,18 @@
   padding: 10px 20px; /* Adjust padding as needed */
   border-radius: 10px;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
-  font-size: 10px; /* Adjust font size as needed */
+  font-size: 16px; /* Adjust font size as needed */
   cursor: pointer;
   margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .dark-button {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+    margin: 10px 0;
+    margin-right: 20px; /* Center the button horizontally and add space between buttons */
+  }
 }
 
 
@@ -126,10 +135,12 @@
 .dark-mode {
   background-color: #333; /* Replace with your dark mode background color */
   color: #fff; /* Replace with your dark mode text color */
+  border-color: white;
 }
 
 .dark-mode-text {
   color: #fff; /* Text color in dark mode */
 }
+
 
 /* Rest of your styles... */

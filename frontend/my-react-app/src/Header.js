@@ -79,9 +79,9 @@ const Header = () => {
         <div className={`menu-button ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`} onClick={toggleMenu} >
         <div className='cornerWrap'>
           <button className="dark-button" onClick={toggleDarkMode}>
-            {isDarkMode ? 'Disable Dark Mode' : 'Enable Dark Mode'}
+            {isDarkMode ? 'Light' : 'Dark'}
           </button>
-            <div className="title5"> 
+            <div className={`title5 ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`}>
               Henrik Moe
             </div>
           </div>

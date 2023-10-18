@@ -23,6 +23,15 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 1.5px 3px 0 green;
 }
 
+@media (max-width: 768px) {
+  .dark-button {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+    margin: 10px 0;
+    margin-right: 20px; /* Center the button horizontally and add space between buttons */
+  }
+}
+
 .timelinePosition {
   margin-top: 10px;
   margin-bottom: 100px;
