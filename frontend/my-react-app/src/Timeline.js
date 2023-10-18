@@ -1,11 +1,15 @@
 import React from 'react';
 import './Timeline.css'; // Import your CSS file
 import { Link } from 'react-router-dom';
+import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
+
 
 const Timeline = () => {
+  const { isDarkMode } = useDarkMode(); // Get the dark mode status
+
   return (
-      <div className="content">
-        <div className="timeline-title">Jinsei Corp Build Timeline</div>
+      <div className={`content ${isDarkMode ? 'dark-mode' : ''}`}>
+        <div className={`timeline-title ${isDarkMode ? 'dark-mode' : ''}`}>B2B Timeline</div>
         <div className="button-container">
         <Link to="/prototype" className="dark-button">
           Jinsei Studio

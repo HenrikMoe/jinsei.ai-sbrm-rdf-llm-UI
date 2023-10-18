@@ -2,7 +2,12 @@
 .timeline-title {
   font-size: 32px;
   color: black;
+  margin-top: 150px;
   opacity: 0.95;
+}
+
+.dark-mode{
+  color: white;
 }
 
 .title2 {
@@ -20,7 +25,7 @@
   text-decoration: none;
   margin: 5px;
   display: inline-block;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 1.5px 3px 0 green;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 1.5px 3px 0 white;
 }
 
 @media (max-width: 768px) {
@@ -65,7 +70,7 @@ div iframe {
 }
 
 .content {
-  margin-top: 200px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;

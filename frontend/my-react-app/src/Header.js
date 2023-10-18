@@ -82,7 +82,7 @@ const Header = () => {
             {isDarkMode ? 'Light' : 'Dark'}
           </button>
             <div className={`title5 ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`}>
-              Henrik Moe
+              <a className={`title5 ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`} href='https://linkedin.com/in/henrikmoe'>Henrik Moe</a>
             </div>
           </div>
         </div>
