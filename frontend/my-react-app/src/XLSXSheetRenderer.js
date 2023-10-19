@@ -1,5 +1,7 @@
   import React, { useState, useEffect, useRef } from 'react';
   import './XLSXSheetRenderer.css'; // Import your CSS file
+  import Footer from './Footer';
+
 
   const XLSXSheetRenderer = ({ sheetData }) => {
     // Initialize tableData with an empty array
@@ -7,15 +9,36 @@
   console.log(tableDataRef)
   let header = [];
 
+//if tableCustom.length>0
+  const [tableCustom, setTableCustom] = useState([]);
+  console.log(tableCustom)
+
   const addRow = () => {
     // Add a new row to the existing data
-    const newRow = new Array(header.length).fill('');
+    //collumn length might effect this in custom table
+    if(tableCustom.length > 0){
+      const newRow = new Array(tableCustom[0].length).fill(' ');
+      tableDataRef = [...tableCustom, newRow];
+      setTableCustom(tableDataRef)
+    }else{
+    const newRow = new Array(tableDataRef[0].length).fill(' ');
     tableDataRef = [...tableDataRef, newRow];
+    setTableCustom(tableDataRef)
+  }
+
   };
 
   const addColumn = () => {
     // Add a new column to the existing data
+    if(tableCustom.length > 0){
+      tableDataRef = tableCustom.map(row => [...row, '']);
+      setTableCustom(tableDataRef)
+      }else{
+    console.log(tableDataRef.map(row => [...row, '']))
     tableDataRef = tableDataRef.map(row => [...row, '']);
+    setTableCustom(tableDataRef)
+
+  }
   };
 
   const handleCellChange = (rowIndex, cellIndex, value) => {
@@ -33,7 +56,15 @@
       console.log(sheetData);
 
       header = sheetData[0];
-      const initialData = sheetData.slice(1); // Don't map to empty strings here
+      const initialData = sheetData.slice(1).map((row, index, arr) => {
+          if (row.length < arr[arr.length - 1].length) {
+            // If the current row is shorter, add empty cells to make them the same length
+            const missingCells = arr[arr.length - 1].length - row.length;
+            return row.concat(new Array(missingCells).fill(''));
+          } else {
+            return row;
+          }
+        });
       console.log(initialData)
       tableDataRef= initialData;
     }
@@ -54,30 +85,53 @@
               ))}
             </tr>
           </thead>
-        <tbody>
-                {tableDataRef.map((row, rowIndex) => (
-                  <tr key={rowIndex}>
-                    {row.map((cell, cellIndex) => (
-                      <td
-                        key={cellIndex}
-                        contentEditable
-                        onBlur={(e) => {
-                          handleCellChange(rowIndex, cellIndex, e.target.textContent);
-                        }}
-                      >
-                        {cell}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
+{tableCustom.length>0 ? <tbody>
+      {tableCustom.map((row, rowIndex) => (
+        <tr key={rowIndex}>
+          {row.map((cell, cellIndex) => (
+            <td
+              key={cellIndex}
+              contentEditable
+              onBlur={(e) => {
+                handleCellChange(rowIndex, cellIndex, e.target.textContent);
+              }}
+            >
+              {cell}
+            </td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+    :
+    <tbody>
+      {tableDataRef.map((row, rowIndex) => (
+        <tr key={rowIndex}>
+          {row.map((cell, cellIndex) => (
+            <td
+              key={cellIndex}
+              contentEditable
+              onBlur={(e) => {
+                handleCellChange(rowIndex, cellIndex, e.target.textContent);
+              }}
+            >
+              {cell}
+            </td>
+          ))}
+        </tr>
+      ))}
+    </tbody> }
+
         </table>
-        <button className="table-button" onClick={addRow}>
-          Add Row
-        </button>
-        <button className="table-button" onClick={addColumn}>
-          Add Column
-        </button>
+        {tableDataRef.length > 0 ?
+          <div>
+          <button className="table-button" onClick={addRow}>
+            Add Row
+          </button>
+          <button className="table-button" onClick={addColumn}>
+            Add Column
+          </button></div> : <div className="table-button">Import Data</div>
+        }
+
       </div>
     );
   };

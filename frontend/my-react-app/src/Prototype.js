@@ -55,8 +55,8 @@ function Prototype() {
         <div className='content-grid'>
           <PrototypeHeader onFileUpload={handleXLSXUpload} />
           <PrototypeSideMenu />
-          <XLSXSheetRenderer sheetData={firstSheetData} />}
-          {/* Add content for signed-in users here */}
+          <XLSXSheetRenderer sheetData={firstSheetData} />
+
         </div>
       ) : (
         // Content for non-authenticated users

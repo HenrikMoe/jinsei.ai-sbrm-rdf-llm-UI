@@ -3,7 +3,8 @@
   background-color: white;
   color: black;
   border: 2px solid black; /* Set border style */
-  width: 250px;
+  width: 75px;
+  height: 300px;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,6 +16,8 @@
   border-radius: 10px;
   padding: 20px;
   overflow-y: auto;
+  overflow-x: auto;
+  transition: width 0.05s; /* Add a smooth transition effect for width changes */
 }
 
 .prototype-side-menu ul {
