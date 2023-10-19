@@ -44,7 +44,7 @@ const Header = () => {
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
-    if (window.scrollY > 140) {
+    if (window.scrollY > 50) {
       setIsHeaderVisible(false);
     } else {
       setIsHeaderVisible(true);
