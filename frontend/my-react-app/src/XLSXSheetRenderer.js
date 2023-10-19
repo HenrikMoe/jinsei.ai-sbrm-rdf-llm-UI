@@ -35,14 +35,14 @@
     if(tableCustom.length > 0){
       tableDataRef = tableCustom.map(row => [...row, '']);
       console.log(header)
-      setTableCustom(tableDataRef)
       setHeaderCustom([...headerCustom, '']); // Add a blank header
+      setTableCustom(tableDataRef)
       }else{
     console.log(tableDataRef.map(row => [...row, '']))
     tableDataRef = tableDataRef.map(row => [...row, '']);
-    console.log(header)
-    setTableCustom(tableDataRef)
+    console.log([...header, ''])
     setHeaderCustom([...header, '']); // Add a blank header
+    setTableCustom(tableDataRef)
   }
   };
 
@@ -88,7 +88,7 @@
 
 
     return (
-      <div>
+      <div >
         <table className="xlsx-table">
         {headerCustom.length>0 ?   <thead>
             <tr>
@@ -142,19 +142,21 @@
         </tr>
       ))}
     </tbody> }
-
         </table>
+
         {tableDataRef.length > 0 ?
-          <div>
+          <div class="buttons-wrap">
           <button className="table-button" onClick={addRow}>
             Add Row
           </button>
           <button className="table-button" onClick={addColumn}>
             Add Column
-          </button></div> : <div className="table-button">Import Data</div>
+          </button>
+          </div>:
+          <div className="table-button">Import Data</div>
         }
+        </div>
 
-      </div>
     );
   };
 

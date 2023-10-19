@@ -1,17 +1,44 @@
-.xlsx-table{
+.xlsx-table {
+  margin-top: 100px;
+  border: 2px solid grey;
+  top: 0;
+  padding: 5px;
+  display: inline-block;
+  margin-left: -75px;
+  border-radius: 10px !important;
+  overflow-x: auto;
+  border-collapse: separate;
+  max-width: 1100px !important; /* Limit the maximum width to 500px */
+  border-radius: 10px !important;
+}
+
+/* Apply media queries to adjust the width for different screen sizes */
+
+.xlsx-table.resizing {
+  cursor: col-resize; /* Change cursor to resizing cursor when resizing */
+  user-select: none; /* Disable text selection during resizing */
+  pointer-events: none; /* Ignore pointer events during resizing */
+}
+
+.contentWrap {
   margin-top: 250px;
   margin-left: 100px;
+  max-width: 500px !important; /* Limit the maximum width to 500px */
+
+  padding: 20px;
 }
 
-.table-button{
-  margin-left: 100px;
+.table-button {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 100px;
 }
 /* XLSXSheetRenderer.css */
-
-.xlsx-table {
-  border-collapse: collapse;
-  width: 100%;
+.buttons-wrap{
+  display: flex;
+  margin-left: 100px;
 }
+
 
 .xlsx-table th, .xlsx-table td {
   border: 1px solid #ccc;
@@ -26,6 +53,7 @@
 
 .xlsx-table td {
   background-color: #ffffff;
+
 }
 
 .xlsx-table td[contentEditable="true"]:focus {
@@ -33,6 +61,7 @@
   border: 1px solid #007bff;
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+
 }
 
 .table-button {
@@ -42,6 +71,7 @@
   padding: 10px 20px;
   cursor: pointer;
   margin-right: 10px;
+  border-radius: 5px;
 }
 
 .table-button:hover {
