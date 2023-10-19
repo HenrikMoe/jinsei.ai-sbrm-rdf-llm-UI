@@ -1,0 +1,49 @@
+.xlsx-table{
+  margin-top: 250px;
+  margin-left: 100px;
+}
+
+.table-button{
+  margin-left: 100px;
+}
+/* XLSXSheetRenderer.css */
+
+.xlsx-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.xlsx-table th, .xlsx-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.xlsx-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.xlsx-table td {
+  background-color: #ffffff;
+}
+
+.xlsx-table td[contentEditable="true"]:focus {
+  outline: none;
+  border: 1px solid #007bff;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.table-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.table-button:hover {
+  background-color: #0056b3;
+}

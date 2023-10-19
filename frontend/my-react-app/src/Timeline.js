@@ -12,7 +12,7 @@ const Timeline = () => {
         <div className={`timeline-title ${isDarkMode ? 'dark-mode' : ''}`}>B2B Timeline</div>
         <div className="button-container">
         <Link to="/prototype" className="dark-button">
-          Jinsei Studio
+          Luciano
         </Link>
           <a className="dark-button">
             Contact: henrik@jinsei.ai

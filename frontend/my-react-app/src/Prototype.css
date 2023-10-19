@@ -2,7 +2,7 @@
   background-color: black;
   color: white;
   border-radius: 30px;
-  font-size: 36px; /* Increase the font size to make it bigger */
+  font-size: 20px; /* Increase the font size to make it bigger */
   border: 2px solid black;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
   padding: 25px 80px; /* Increase the padding to make it bigger */
@@ -18,7 +18,7 @@
   }
 
   .arrive-button {
-    font-size: 20px; /* Further decrease font size for mobile */
+    font-size: 18px; /* Further decrease font size for mobile */
     padding: 15px 30px; /* Adjust padding for mobile */
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2); /* Smaller shadow for mobile */
   }

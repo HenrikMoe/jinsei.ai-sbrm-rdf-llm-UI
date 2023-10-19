@@ -65,7 +65,7 @@ function Homepage() {
         {t('Arriving 2023: Global standards based business reporting process pipelines.')}
       </div>
       <button onClick={handlePrototypeClick} className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         Atlas
+         Luciano
       </button>
       <div className={`langWrap ${isDarkMode ? 'dark-mode-text' : ''}`}>
         <button className={`lang ${isDarkMode ? 'dark-mode-text' : ''}`} onClick={() => changeLanguage('en')}>EN</button>

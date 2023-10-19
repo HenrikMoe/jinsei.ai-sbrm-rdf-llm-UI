@@ -1,19 +1,21 @@
-import React from 'react';
+// PrototypeHeader.js
+import React, { useState } from 'react';
+import './PrototypeHeader.css';
+import image from './favicon.png';
+import { useDarkMode } from './DarkModeContext';
 import Popup from './Popup';
-import './PrototypeHeader.css'; // Import the CSS file for styling
-import image from './favicon.png'; // Import the image
-import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
+const PrototypeHeader = ({onFileUpload}) => {
+  const { isDarkMode } = useDarkMode();
+  const [xlsxData, setXLSXData] = useState(null);
 
-const PrototypeHeader = () => {
-
-  const { isDarkMode } = useDarkMode(); // Get the dark mode status
 
   return (
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
       <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
-      <h2>Atlas - main|version 0.49 </h2>
-      <Popup />
+      <h2>Luciano - main|version 0.49</h2>
+      <Popup onFileUpload={onFileUpload} />
+      {/* Other components for rendering and editing */}
     </div>
   );
 };
