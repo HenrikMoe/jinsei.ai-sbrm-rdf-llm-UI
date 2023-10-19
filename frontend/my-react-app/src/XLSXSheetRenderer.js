@@ -40,7 +40,7 @@
         setHeaderCustom([...headerCustom, '']); // Add a blank header
         setTableCustom(tableDataRef)
       }else{setHeaderCustom([...header, '']); // Add a blank header
-      setTableCustom(tableDataRef)}   
+      setTableCustom(tableDataRef)}
       }else{
     console.log(tableDataRef.map(row => [...row, '']))
     tableDataRef = tableDataRef.map(row => [...row, '']);
@@ -157,7 +157,7 @@
             Add Column
           </button>
           </div>:
-          <div className="table-button">Import Data</div>
+          <div className="table-button">N/A</div>
         }
         </div>
 

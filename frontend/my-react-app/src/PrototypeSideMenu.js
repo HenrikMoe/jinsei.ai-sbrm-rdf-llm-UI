@@ -80,7 +80,7 @@ const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xslx
            >
              {title}
            </li>
-         )): <li className='sidemenu-title'> Import </li> }
+         )): <li className='sidemenu-title'> Files </li> }
        </ul>
      </div>
    );

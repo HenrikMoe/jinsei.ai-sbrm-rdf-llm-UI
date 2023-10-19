@@ -13,7 +13,7 @@ const PrototypeHeader = ({onFileUpload}) => {
   return (
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
       <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
-      <h2>Luciano - main|version 0.49</h2>
+      <h2>Luciano - git:main | version 0.59</h2>
       <Popup onFileUpload={onFileUpload} />
       {/* Other components for rendering and editing */}
     </div>

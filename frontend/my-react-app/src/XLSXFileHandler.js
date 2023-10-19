@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import * as XLSX from 'xlsx'; // Import the entire xlsx library
+import './XLSXFileHandler.css'
 
 const XLSXFileHandler = ({ onFileUpload }) => {
   const fileInputRef = useRef(null);
@@ -27,7 +28,7 @@ const XLSXFileHandler = ({ onFileUpload }) => {
 
   return (
     <div>
-    <label htmlFor="fileInput" style={{ cursor: 'pointer' }}>
+    <label htmlFor="fileInput" style={{ cursor: 'pointer' }} className='importButton'>
       Import XLSX
       </label>
       <input
