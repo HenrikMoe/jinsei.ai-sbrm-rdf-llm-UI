@@ -3,16 +3,18 @@ import './PrototypeSideMenu.css'; // Import the CSS file for styling
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
 
-const PrototypeSideMenu = () => {
+const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xslxTitle }) => {
   const [isResizing, setIsResizing] = useState(false);
-  const [initialWidth, setInitialWidth] = useState(200); // Initial width of the side menu
-  const [initialHeight, setInitialHeight] = useState(400); // Initial height of the side menu
+  const [initialWidth, setInitialWidth] = useState(200);
+  const [initialHeight, setInitialHeight] = useState(400);
   const [currentWidth, setCurrentWidth] = useState(initialWidth);
   const [currentHeight, setCurrentHeight] = useState(initialHeight);
-  const resizeBorderWidth = 35; // Additional 20 pixels to the right
+  const resizeBorderWidth = 35;
 
-  const { isDarkMode } = useDarkMode(); // Get the dark mode status
+  const [selectedSheet, setSelectedSheet] = useState(null); // Track the selected sheet title
 
+  const { isDarkMode } = useDarkMode();
+  console.log(sheetTitles)
 
   useEffect(() => {
     const handleResize = (e) => {
@@ -48,20 +50,40 @@ const PrototypeSideMenu = () => {
     setInitialHeight(e.clientY);
   };
 
-  return (
-    <div
-    className={`prototype-side-menu ${isResizing ? 'resizing' : ''} ${isDarkMode ? 'dark-mode' : ''}`}
-      onMouseDown={handleMouseDown}
-    >
-      {/* Add your side menu content here */}
-      <ul>
-        <li className={` ${isDarkMode ? 'dark-mode' : ''}`}>Menu Item 1</li>
-        <li className={` ${isDarkMode ? 'dark-mode' : ''}`}>Menu Item 2</li>
-        <li className={` ${isDarkMode ? 'dark-mode' : ''}`}>Menu Item 3</li>
-        {/* Add more menu items as needed */}
-      </ul>
-    </div>
-  );
+  const handleSheetSelect = (sheetTitle) => {
+   // Handle sheet selection here
+   console.log('Selecting sheet:', sheetTitle);
+   setSelectedSheet(sheetTitle);
+   onSheetSelect(sheetTitle);
+
+ };
+ console.log(selectedSheet)
+
+ console.log(xslxTitle)
+
+ return (
+     <div
+       className={`prototype-side-menu ${isResizing ? 'resizing' : ''} ${
+         isDarkMode ? 'dark-mode' : ''
+       }`}
+       onMouseDown={handleMouseDown}
+     >
+       <ul>
+       <div className='sidemenu-title'> {xslxTitle} </div>
+        {sheetTitles ? sheetTitles.map((title) => (
+           <li
+             key={title}
+             className={`${isDarkMode ? 'dark-mode' : ''} ${
+               title === selectedSheet ? 'selected' : ''
+             }`}
+             onClick={() => handleSheetSelect(title)}
+           >
+             {title}
+           </li>
+         )): <li className='sidemenu-title'> Import </li> }
+       </ul>
+     </div>
+   );
 };
 
 export default PrototypeSideMenu;

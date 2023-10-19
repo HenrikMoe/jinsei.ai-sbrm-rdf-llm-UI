@@ -19,23 +19,50 @@ function Prototype() {
   const [firstSheetData, setFirstSheetData] = useState(null);
   //const [secondSheetData, setSecondSheetData] = useState(null);
 
-  const [xlsxData, setXLSXData] = useState(null);
+  const [sheetTitles, setSheetTitles] = useState(null);
+
+  const [selectedSheetData, setSelectedSheetData] = useState(null);
+  const [workbook, setWorkbook] = useState(null);
+
+  const [xslxTitle, setxslxTitle] = useState(null);
+
+
+
+  const handleSheetSelect = (selectedSheetTitle) => {
+    if (workbook) {
+      // Find the data of the selected sheet in the workbook
+      const selectedSheetData = XLSX.utils.sheet_to_json(workbook.Sheets[selectedSheetTitle], { header: 1 });
+
+      // Set the selected sheet's data in the state
+      setSelectedSheetData(selectedSheetData);
+
+      // Do something with the selected sheet data, or pass it to another component
+      console.log('Selected sheet data in Prototype:', selectedSheetData);
+
+    }
+  };
+
 
   const handleXLSXUpload = (workbook) => {
-    console.log(workbook)
-    //we have all sheets here
+    console.log(workbook);
+    // Store the workbook in the state
+    setWorkbook(workbook);
 
-    //pass the sheet titles into a set for side menu
 
-    //iniitally we'll pass the first sheet into setFirstSheetData
+    // Extract the first sheet and pass it to the parent component
+    const firstSheetName = workbook.SheetNames[0];
+    const firstSheetData = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheetName], { header: 1 });
+    setFirstSheetData(firstSheetData);
 
-    //once the side menu returns something we'll react the sheet selection into setFirstSheetData
+    // Also store the sheet titles
+    setSheetTitles(workbook.SheetNames);
 
-    setFirstSheetData(workbook);
-    //setSecondSheetData(secondSheetData);
-    //setXLSXData(workbook);
-    console.log(firstSheetData)
+    // Set the selected sheet's data initially to the first sheet
+    setSelectedSheetData(firstSheetData);
+    setxslxTitle(workbook.Props.Title)
+
   };
+
 
 
 
@@ -54,8 +81,8 @@ function Prototype() {
         // Content for authenticated users
         <div className='content-grid'>
           <PrototypeHeader onFileUpload={handleXLSXUpload} />
-          <PrototypeSideMenu />
-          <XLSXSheetRenderer sheetData={firstSheetData} />
+          <PrototypeSideMenu  sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} selectedSheetData={selectedSheetData} xslxTitle={xslxTitle} />
+          <XLSXSheetRenderer sheetData={selectedSheetData} />
 
         </div>
       ) : (
