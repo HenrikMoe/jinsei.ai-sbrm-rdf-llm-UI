@@ -33,10 +33,14 @@
   const addColumn = () => {
     // Add a new column to the existing data
     if(tableCustom.length > 0){
+      console.log('correct')
       tableDataRef = tableCustom.map(row => [...row, '']);
       console.log(header)
-      setHeaderCustom([...headerCustom, '']); // Add a blank header
-      setTableCustom(tableDataRef)
+      if(headerCustom.length >0){
+        setHeaderCustom([...headerCustom, '']); // Add a blank header
+        setTableCustom(tableDataRef)
+      }else{setHeaderCustom([...header, '']); // Add a blank header
+      setTableCustom(tableDataRef)}   
       }else{
     console.log(tableDataRef.map(row => [...row, '']))
     tableDataRef = tableDataRef.map(row => [...row, '']);

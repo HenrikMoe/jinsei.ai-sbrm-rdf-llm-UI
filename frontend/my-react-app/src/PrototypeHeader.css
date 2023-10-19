@@ -5,6 +5,7 @@
   border: 2px solid black; /* Set border style */
   padding: 10px;
   display: flex;
+  max-width: 1240px;
   justify-content: space-between;
   align-items: center;
   position: fixed;
