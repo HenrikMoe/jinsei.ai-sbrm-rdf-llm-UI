@@ -11,6 +11,8 @@
 
 //if tableCustom.length>0
   const [tableCustom, setTableCustom] = useState([]);
+  const [headerCustom, setHeaderCustom] = useState([]);
+
   console.log(tableCustom)
 
   const addRow = () => {
@@ -32,12 +34,15 @@
     // Add a new column to the existing data
     if(tableCustom.length > 0){
       tableDataRef = tableCustom.map(row => [...row, '']);
+      console.log(header)
       setTableCustom(tableDataRef)
+      setHeaderCustom([...headerCustom, '']); // Add a blank header
       }else{
     console.log(tableDataRef.map(row => [...row, '']))
     tableDataRef = tableDataRef.map(row => [...row, '']);
+    console.log(header)
     setTableCustom(tableDataRef)
-
+    setHeaderCustom([...header, '']); // Add a blank header
   }
   };
 
@@ -48,6 +53,13 @@
         : row
     );
     tableDataRef = updatedData;
+  };
+
+  const handleHeaderChange = (cellIndex, value) => {
+    const newHeader = headerCustom.map((header, j) =>
+      j === cellIndex ? value : header
+    );
+    setHeaderCustom(newHeader);
   };
 
   console.log(tableDataRef.length)
@@ -78,14 +90,24 @@
     return (
       <div>
         <table className="xlsx-table">
-          <thead>
+        {headerCustom.length>0 ?   <thead>
+            <tr>
+              {headerCustom.map((headerText, index) => (
+                <th key={index} contentEditable
+                onBlur={(e) => {
+                  handleHeaderChange(index, e.target.textContent);
+                }}>{headerText}</th>
+              ))}
+            </tr>
+          </thead> :  <thead>
             <tr>
               {header.map((headerText, index) => (
                 <th key={index}>{headerText}</th>
               ))}
             </tr>
-          </thead>
-{tableCustom.length>0 ? <tbody>
+          </thead>}
+
+      {tableCustom.length>0 ? <tbody>
       {tableCustom.map((row, rowIndex) => (
         <tr key={rowIndex}>
           {row.map((cell, cellIndex) => (
