@@ -6,7 +6,7 @@
 /* Media query for mobile devices */
   @media (max-width: 768px) {
   .homepage-container {
-    margin-right: 40px;
+    margin-right: 0px;
   }
 }
 
@@ -47,7 +47,7 @@
 }
 @media (max-width: 767px) {
   .arriving-text {
-    margin-right: 40px;
+    margin-right: 0px;
     margin-left: -5px;
 
   }
