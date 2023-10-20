@@ -33,6 +33,14 @@
   height: 80px;
 }
 
+.button-wrap{
+  display: flex;
+}
+
+.title{
+  font-size: 14px;
+}
+
 
 /* Add dark mode styles for the homepage */
 .dark-mode {

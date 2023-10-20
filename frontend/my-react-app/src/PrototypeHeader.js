@@ -4,6 +4,7 @@ import './PrototypeHeader.css';
 import image from './favicon.png';
 import { useDarkMode } from './DarkModeContext';
 import Popup from './Popup';
+import Upload from './Upload';
 
 const PrototypeHeader = ({onFileUpload}) => {
   const { isDarkMode } = useDarkMode();
@@ -13,9 +14,11 @@ const PrototypeHeader = ({onFileUpload}) => {
   return (
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
       <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
-      <h2>Luciano - git:main | version 0.59</h2>
-      <Popup onFileUpload={onFileUpload} />
-      {/* Other components for rendering and editing */}
+      <div className='title'>Luciano - git:main | version 0.59</div>
+      <div className='button-wrap'>
+        <Popup onFileUpload={onFileUpload} />
+        <Upload />
+      </div>
     </div>
   );
 };
