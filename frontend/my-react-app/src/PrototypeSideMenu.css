@@ -50,6 +50,11 @@
   pointer-events: auto; /* Allow pointer events for li elements during resizing */
 }
 
+.selected {
+  background-color: grey; /* Change to the desired grey color */
+  color: white; /* Text color for the selected item */
+}
+
 /* Add dark mode styles for the homepage */
 .dark-mode {
   background-color: #333;

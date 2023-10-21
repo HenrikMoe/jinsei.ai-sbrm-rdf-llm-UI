@@ -73,9 +73,7 @@ const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xslx
         {sheetTitles ? sheetTitles.map((title) => (
            <li
              key={title}
-             className={`${isDarkMode ? 'dark-mode' : ''} ${
-               title === selectedSheet ? 'selected' : ''
-             }`}
+             className={`${isDarkMode ? 'dark-mode' : ''} ${title === selectedSheet ? 'selected' : ''}`}
              onClick={() => handleSheetSelect(title)}
            >
              {title}

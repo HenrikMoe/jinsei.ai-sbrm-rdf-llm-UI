@@ -5,10 +5,10 @@
   padding: 5px;
   display: inline-block;
   margin-left: 0px;
+  max-width: 1500px;
   border-radius: 10px !important;
   overflow-x: auto;
   border-collapse: separate;
-  max-width: 1020px ; /* Limit the maximum width to 1020px */
   border-radius: 10px !important;
 }
 
@@ -22,6 +22,7 @@
   position: absolute;
   width: 8px; /* Adjust the handle width as needed */
   height: 100%;
+  color: black;
   top: 0;
   right: -4px; /* Half of the handle width, so it stays outside the table */
   cursor: col-resize; /* Cursor style for resizing */
