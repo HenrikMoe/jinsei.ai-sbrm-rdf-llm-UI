@@ -3,6 +3,7 @@
   position: relative;
   text-align: center;
   margin: 5px;
+  margin-top: 20px !important;
 }
 
 .popup-button {
@@ -14,6 +15,38 @@
   cursor: pointer;
   z-index: 1; /* Ensure the popup is above the button */
 
+}
+
+.dropdown-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  margin-right: 20px;
+  margin-top: 15px;
+
+
+}
+
+.open .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-top: 15px;
 }
 
 .popup {

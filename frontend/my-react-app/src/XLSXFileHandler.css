@@ -4,5 +4,16 @@
   border-radius: 10px;
   color: white;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  margin-right: 100px;
+  margin-top: 200px !important;
+}
 
+
+.button-space{
+  margin-top: 10px;
+}
+
+
+.button-space2{
+  margin-top: 25px;
 }

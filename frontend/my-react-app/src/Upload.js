@@ -1,14 +1,35 @@
+
 // Popup.js
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import './Upload.css';
 import { useDarkMode } from './DarkModeContext';
+import XLSXFileHandler from './XLSXFileHandler';
+import CSVFileHandler from './CSVFileHandler'
+import JSONfileHandler from './JSONfileHandler'
+
 
 const Upload = ({ updateForm }) => {
   const { isDarkMode } = useDarkMode();
 
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <div className={`popup-container ${isDarkMode ? 'dark-mode' : ''}`}>
-      <div className="updateButton">Update XLSX</div>
+    <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
+      <button className="dropdown-button" onClick={toggleDropdown}>
+        Update &or;
+      </button>
+      <div className="dropdown-content">
+        <XLSXFileHandler  />
+        <CSVFileHandler />
+        <JSONfileHandler />
+        {/* Add other dropdown items here */}
+      </div>
+    </div>
     </div>
   );
 };

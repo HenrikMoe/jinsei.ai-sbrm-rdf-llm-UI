@@ -7,9 +7,8 @@ import CSVFileHandler from './CSVFileHandler'
 import JSONfileHandler from './JSONfileHandler'
 
 
-const Popup = ({ onFileUpload }) => {
+const Project = ({ onFileUpload }) => {
   const { isDarkMode } = useDarkMode();
-  console.log(onFileUpload)
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -21,12 +20,12 @@ const Popup = ({ onFileUpload }) => {
     <div className={`popup-container ${isDarkMode ? 'dark-mode' : ''}`}>
     <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
       <button className="dropdown-button" onClick={toggleDropdown}>
-        Import &or;
+        Project &or;
       </button>
       <div className="dropdown-content">
-        <XLSXFileHandler onFileUpload={onFileUpload} />
-        <CSVFileHandler onFileUpload={onFileUpload} />
-        <JSONfileHandler onFileUpload={onFileUpload} />
+        <XLSXFileHandler  />
+        <CSVFileHandler />
+        <JSONfileHandler />
         {/* Add other dropdown items here */}
       </div>
     </div>
@@ -34,4 +33,4 @@ const Popup = ({ onFileUpload }) => {
   );
 };
 
-export default Popup;
+export default Project;

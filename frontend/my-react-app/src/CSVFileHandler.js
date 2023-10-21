@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import * as XLSX from 'xlsx'; // Import the entire xlsx library
 import './XLSXFileHandler.css'
 
-const XLSXFileHandler = ({ onFileUpload }) => {
+const CSVFileHandler = ({ onFileUpload }) => {
   const fileInputRef = useRef(null);
   console.log(onFileUpload)
 
@@ -14,10 +14,11 @@ const XLSXFileHandler = ({ onFileUpload }) => {
       reader.onload = (e) => {
         const data = e.target.result;
         const workbook = XLSX.read(data, { type: 'binary' });
+
         //console.log(firstSheetData, secondSheetData)
-        console.log(onFileUpload)
 
         onFileUpload(workbook);
+
 
       };
 
@@ -26,9 +27,9 @@ const XLSXFileHandler = ({ onFileUpload }) => {
   };
 
   return (
-    <div className='button'>
+    <div className='button-space'>
     <label htmlFor="fileInput" style={{ cursor: 'pointer' }} className='importButton'>
-       XLSX
+       CSV
       </label>
       <input
       id="fileInput"
@@ -41,4 +42,4 @@ const XLSXFileHandler = ({ onFileUpload }) => {
   );
 };
 
-export default XLSXFileHandler;
+export default CSVFileHandler;
