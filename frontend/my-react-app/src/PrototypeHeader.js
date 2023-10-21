@@ -19,7 +19,7 @@ console.log(onFileUpload)
   return (
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
       <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
-      <div className='title'>Luciano - git:main | version 0.59</div>
+      <div className='title'>Luciano - git:main | version 0.70</div>
       <div className='button-wrap'>
 
         <Popup onFileUpload={onFileUpload} />
