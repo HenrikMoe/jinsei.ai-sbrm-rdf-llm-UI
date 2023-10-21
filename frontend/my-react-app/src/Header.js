@@ -3,7 +3,7 @@ import './Header.css'; // Import the CSS file that contains your styles
 import { Link } from 'react-router-dom';
 import { useDarkMode } from './DarkModeContext';
 
-const Header = () => {
+const Header = ({ currentRoute }) => {
   const [title] = useState('My Header');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -65,8 +65,8 @@ const Header = () => {
   }, []);
 
   return (
-    <div className={`header ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`}>
-      <div className={`header ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode1' : ''}`}>
+    <div className={`header ${currentRoute === '/' ? 'homepage-header' : 'header'} ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`}>
+      <div className={` ${currentRoute === '/' ? 'homepage-header' : 'header'} ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`}>
         <div className={`title ${isDarkMode ? 'dark-mode-text' : ''}`}>
           <Link to="/" className={`title ${isDarkMode ? 'dark-mode-text' : ''}`}>
             <h1>jinsei.ai</h1>
@@ -78,9 +78,7 @@ const Header = () => {
 
         <div className={`menu-button2 ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`} onClick={toggleMenu} >
         <div className='cornerWrap'>
-          <button className="dark-button" onClick={toggleDarkMode}>
-            {isDarkMode ? 'Light' : 'Dark'}
-          </button>
+
             <div className={`title5 ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`}>
               <a target="_blank" lassName={`title5 ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`} href='https://linkedin.com/in/henrikmoe'>Henrik Moe</a>
             </div>
@@ -102,6 +100,9 @@ const Header = () => {
             {button.label}
           </a>
         ))}
+        <button className="button" onClick={toggleDarkMode}>
+         {isDarkMode ? 'Light' : 'Dark'}
+       </button>
       </div>
     </div>
   );

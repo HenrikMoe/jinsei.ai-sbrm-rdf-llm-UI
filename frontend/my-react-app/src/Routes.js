@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'; // Import useEffect
-import { Routes, Route, Outlet } from 'react-router-dom'; // Import Outlet
-
+import { Routes, Route, Outlet, useLocation } from 'react-router-dom'; // Import Outlet
 import Header from './Header'; // Import the Header component
 import Homepage from './Homepage';
 import Prototype from './Prototype';
@@ -12,6 +11,8 @@ import Footer from './Footer'; // Replace with the actual path to your Footer co
 import { DarkModeProvider } from './DarkModeContext';
 
 const AppRoutes = () => {
+  const location = useLocation(); // Get the current location
+
 
   useEffect(() => {
     document.title = 'Jinsei.ai - Standards Based Taxonomy GUI'; // Change this title
@@ -20,7 +21,7 @@ const AppRoutes = () => {
   return (
     <div>
     <DarkModeProvider>
-      <Header /> {/* Include the Header component */}
+      <Header currentRoute={location.pathname} /> {/* Include the Header component */}
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/prototype" element={<Prototype />} />

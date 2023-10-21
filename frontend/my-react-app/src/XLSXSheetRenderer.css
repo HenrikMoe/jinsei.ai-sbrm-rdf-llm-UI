@@ -8,16 +8,25 @@
   border-radius: 10px !important;
   overflow-x: auto;
   border-collapse: separate;
-  max-width: 1020px !important; /* Limit the maximum width to 500px */
+  max-width: 1020px ; /* Limit the maximum width to 1020px */
   border-radius: 10px !important;
 }
 
-/* Apply media queries to adjust the width for different screen sizes */
+.xlsx-table.resizable {
+  /* Your existing CSS styles for the resizable table */
+  position: relative; /* Add this to enable absolute positioning for resizing handle */
+}
 
-.xlsx-table.resizing {
-  cursor: col-resize; /* Change cursor to resizing cursor when resizing */
-  user-select: none; /* Disable text selection during resizing */
-  pointer-events: none; /* Ignore pointer events during resizing */
+.xlsx-table.resizable .resize-handle {
+  /* Styling for the resizing handle */
+  position: absolute;
+  width: 8px; /* Adjust the handle width as needed */
+  height: 100%;
+  top: 0;
+  right: -4px; /* Half of the handle width, so it stays outside the table */
+  cursor: col-resize; /* Cursor style for resizing */
+  z-index: 1; /* Ensure the handle is above the table content */
+  background-color: #ddd; /* Handle color */
 }
 
 .contentWrap {

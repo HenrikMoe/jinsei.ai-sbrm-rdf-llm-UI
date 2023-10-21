@@ -13,6 +13,30 @@
     padding: 10px 20px;
     margin: 0;
     transition: opacity 0.5s; /* Transition the opacity property over 0.5 seconds */
+    width: 105%; /* Increase the width to compensate for the scaling */
+    transform: scale(0.92);
+    transform-origin: 0 0;
+  }
+
+
+  .homepage-header {
+    background-color: rgba(18, 18, 18, 0.01);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0;
+    transition: opacity 0.5s; /* Transition the opacity property over 0.5 seconds */
+    width: initial; /* Set width to its default value (null) */
+  transform: initial; /* Set transform to its default value (null) */
+  transform-origin: initial; /* Set transform-origin to its default value (null) */
+
   }
 
   .button {
@@ -22,6 +46,8 @@
     padding: 10px 5px; /* Adjust the vertical and horizontal padding */
     display: block; /* Display buttons as block elements */
     margin-bottom: 5px; /* Reduce the vertical margin */
+    background-color: transparent; /* Set the background to be transparent */
+    border: none; /* Remove the border */
   }
 
   .title {
@@ -61,24 +87,25 @@
     top: 5px; /* Adjust for the header height */
     left: -120px; /* Start menu off-screen to the left */
     width: 120px; /* Adjust the width as needed */
-    height: 55%;
     background-color: rgba(18, 18, 18, 0.9);
     transition: left 0.3s ease-in-out; /* Change "right" to "left" */
     z-index: 1000;
     border-radius: 7px;
+    height: 200px; /* Adjust the height to your preference */
+
   }
 
   /* Set height to 28% on desktop screens */
   @media (min-width: 768px) {
     .menu-container {
-      height: 50%;
+      height: 400px; /* Adjust the height to your preference */
     }
   }
 
   /* Set height to 20% on mobile screens */
   @media (max-width: 767px) {
     .menu-container {
-      height: 55%;
+      height: 550px; /* Adjust the height to your preference */
     }
   }
 

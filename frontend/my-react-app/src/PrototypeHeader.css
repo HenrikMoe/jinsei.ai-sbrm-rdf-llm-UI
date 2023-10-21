@@ -5,7 +5,7 @@
   border: 2px solid black; /* Set border style */
   padding: 10px;
   display: flex;
-  max-width: 1240px;
+  max-width: 1840px;
   justify-content: space-between;
   align-items: center;
   position: absolute;
@@ -17,6 +17,7 @@
   left: 0;
   right: 0;
   z-index: 500;
+  width: 145%;
 }
 
 .prototype-header h2 {

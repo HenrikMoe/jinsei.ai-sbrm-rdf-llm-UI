@@ -114,7 +114,7 @@
   margin-left: -19px;
   border: 2px solid grey;
   display: grid;
-  width: 1278px;
+  width: 1878px;
   border-radius: 10px;
   grid-template-columns: 200px 1fr; /* Adjust the width of the side menu as needed */
   grid-gap: 20px; /* Add spacing between columns */
@@ -138,4 +138,7 @@
   padding: 20px; /* Add padding as needed */
   box-sizing: border-box; /* Include padding in the width */
   border-radius: 0px !important;
+  transform: scale(0.67);
+  width: 145%;
+  transform-origin: 0 0;
 }

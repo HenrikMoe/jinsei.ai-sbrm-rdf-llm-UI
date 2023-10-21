@@ -66,6 +66,7 @@
     setHeaderCustom(newHeader);
   };
 
+
   console.log(tableDataRef.length)
   if (tableDataRef.length === 0 && sheetData) {
       console.log('yo');
@@ -89,13 +90,72 @@
   console.log(header);
   console.log(tableDataRef)
 
+  const [isResizing, setIsResizing] = useState(false);
+  const [initialWidth, setInitialWidth] = useState(0);
+  const [initialHeight, setInitialHeight] = useState(0);
+  const [currentWidth, setCurrentWidth] = useState(0);
+  const [currentHeight, setCurrentHeight] = useState(0);
+
+  const handleResizeStart = (e) => {
+    e.preventDefault();
+    setIsResizing(true);
+    setInitialWidth(e.clientX);
+    setInitialHeight(e.clientY);
+  };
+
+  const handleMouseUp = () => {
+    setIsResizing(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (isResizing) {
+      const newWidth = currentWidth + e.clientX - initialWidth;
+      const newHeight = currentHeight + e.clientY - initialHeight;
+      setCurrentWidth(newWidth);
+      setCurrentHeight(newHeight);
+    }
+  };
+
+  const resizeBorderWidth = 95;
+
+
+  useEffect(() => {
+    const handleResize = (e) => {
+      if (isResizing) {
+        console.log('isResizing')
+        const newWidth = currentWidth + e.clientX - initialWidth - resizeBorderWidth;
+        const newHeight = currentHeight + e.clientY - initialHeight - resizeBorderWidth;
+        document.querySelector('.xlsx-table').style.width = `${newWidth}px`;
+        document.querySelector('.xlsx-table').style.height = `${newHeight}px`;
+      }
+    };
+
+    const handleMouseUp = (e) => {
+      if (isResizing) {
+        setIsResizing(false);
+        setCurrentWidth(currentWidth + e.clientX - initialWidth - resizeBorderWidth);
+        setCurrentHeight(currentHeight + e.clientY - initialHeight - resizeBorderWidth);
+      }
+    };
+
+    document.addEventListener('mousemove', handleResize);
+    document.addEventListener('mouseup', handleMouseUp);
+
+    return () => {
+      document.removeEventListener('mousemove', handleResize);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [isResizing, initialWidth, initialHeight, currentWidth, currentHeight]);
+
 
 
     return (
       <div >
-        <table className="xlsx-table">
+        <table className={`xlsx-table ${isResizing ? 'resizable' : ''}`}
+        >
         {headerCustom.length>0 ?   <thead>
             <tr>
+            <th className="resize-handle"></th>
               {headerCustom.map((headerText, index) => (
                 <th key={index} contentEditable
                 onBlur={(e) => {
@@ -149,7 +209,7 @@
         </table>
 
         {tableDataRef.length > 0 ?
-          <div class="buttons-wrap">
+          <div className="buttons-wrap">
           <button className="table-button" onClick={addRow}>
             Add Row
           </button>
