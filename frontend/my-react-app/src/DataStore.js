@@ -14,6 +14,8 @@ const DataStoreProvider = ({ children }) => {
     },
   };
 
+  //do this in prototype, notes have example
+
   return (
     <DataStoreContext.Provider value={data}>
       {children}
