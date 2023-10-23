@@ -8,6 +8,7 @@ const dataStore = {
     // Update the count
     data.count += 1;
   },
+  
 
 
   "data": {

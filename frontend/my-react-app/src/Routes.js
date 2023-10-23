@@ -9,6 +9,7 @@ import Timeline from './Timeline'; // Import TermsOfService component
 import About from './About'; // Import TermsOfService component
 import Footer from './Footer'; // Replace with the actual path to your Footer component file
 import { DarkModeProvider } from './DarkModeContext';
+import { DataStoreProvider } from './DataStore'; // Import the DataStoreProvider
 
 const AppRoutes = () => {
   const location = useLocation(); // Get the current location
@@ -21,6 +22,7 @@ const AppRoutes = () => {
   return (
     <div>
     <DarkModeProvider>
+    <DataStoreProvider>
       <Header currentRoute={location.pathname} /> {/* Include the Header component */}
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -31,6 +33,7 @@ const AppRoutes = () => {
         <Route path="/about" element={<About />} /> {/* Add TermsOfService component */}
       </Routes>
       <Footer /> {/* Include the Header component */}
+      </DataStoreProvider>
     </DarkModeProvider>
     </div>
   );

@@ -9,7 +9,7 @@ import Footer from './Footer';
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 import XLSXSheetRenderer from './XLSXSheetRenderer'; // Import the new component
 import * as XLSX from 'xlsx'; // Import the entire xlsx library
-
+import { DataStoreProvider, useDataStore } from './DataStore'; // Import the DataStoreProvider
 
 function Prototype() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,6 +26,9 @@ function Prototype() {
 
   const [xslxTitle, setxslxTitle] = useState(null);
 
+  const dataStore = useDataStore(); // Access dataStore from the context
+  console.log('DATASTORE')
+  console.log(dataStore)
 
 
   const handleSheetSelect = (selectedSheetTitle) => {
@@ -48,8 +51,12 @@ function Prototype() {
     // Store the workbook in the state
     setWorkbook(workbook);
 
+    //STORE THE WORKBOOK IN THE STATEMANAGEMTN
+    dataStore.addWorkbook(workbook);
+    console.log('ADDED WORKBOOK TO DATASTORE')
+    console.log(dataStore)
 
-    // Extract the first sheet and pass it to the parent component
+    // Extract the first sheet and pass it to the rendering parent component
     const firstSheetName = workbook.SheetNames[0];
     const firstSheetData = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheetName], { header: 1 });
     setFirstSheetData(firstSheetData);
@@ -79,12 +86,15 @@ function Prototype() {
     <div className={`prototype-container ${isDarkMode ? 'dark-mode' : ''}`}>
       {isAuthenticated ? (
         // Content for authenticated users
+        //WRAP IN STATEMANAGEMENT HERE
+        <DataStoreProvider>
         <div className='content-grid'>
           <PrototypeHeader onFileUpload={handleXLSXUpload} />
           <PrototypeSideMenu  sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} selectedSheetData={selectedSheetData} xslxTitle={xslxTitle} />
-          <XLSXSheetRenderer sheetData={selectedSheetData} />
+          <XLSXSheetRenderer sheetData={selectedSheetData} sheetTitle={xslxTitle} dataStore={dataStore} />
 
         </div>
+        </DataStoreProvider>
       ) : (
         // Content for non-authenticated users
         <div>
