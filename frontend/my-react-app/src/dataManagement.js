@@ -8,6 +8,7 @@ const dataStore = {
 
   count: 0,
 
+  //project level stuff
 
   addWorkbook: (workbook) => {
      dataStore.workbook = workbook;
