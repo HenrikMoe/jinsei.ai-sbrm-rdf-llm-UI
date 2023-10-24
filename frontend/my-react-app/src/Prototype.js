@@ -10,6 +10,7 @@ import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 import XLSXSheetRenderer from './XLSXSheetRenderer'; // Import the new component
 import * as XLSX from 'xlsx'; // Import the entire xlsx library
 import { DataStoreProvider, useDataStore } from './DataStore'; // Import the DataStoreProvider
+import DeploymentTable from './DeploymentTable'
 
 function Prototype() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -99,7 +100,7 @@ function Prototype() {
           <PrototypeHeader onFileUpload={handleXLSXUpload} />
           <PrototypeSideMenu  sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} selectedSheetData={selectedSheetData} xslxTitle={xslxTitle} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet}/>
           <XLSXSheetRenderer sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xslxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
-
+          <DeploymentTable />
         </div>
         </DataStoreProvider>
       ) : (
