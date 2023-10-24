@@ -9,6 +9,8 @@ import Delete from './Delete'
 import Project from './Project'
 import Transform from './Transform'
 import Pipeline from './Pipeline'
+import Files from './Files'
+import Projects from './Projects'
 //<Project onFileUpload={onFileUpload}/>
 // <Upload onFileUpload={onFileUpload}/>
 // <Delete onFileUpload={onFileUpload} />
@@ -33,7 +35,7 @@ const handleOrgChange = (event) => {
   return (
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
       <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
-      <div className='title'>Luciano - git:main | version 0.80</div>
+      <div className='title'>Luciano - git:main | version 0.85</div>
       <div>Detected Model: Platinum XBRL</div>
       <div className='button-wrap'>
 
@@ -44,20 +46,20 @@ const handleOrgChange = (event) => {
         <Pipeline />
 
       </div>
-      <div>Share</div>
+      <div className='importButton1'>Share</div>
       <div> <input
         type="text"
         className="title-input"
         value={org}
         onChange={handleOrgChange}
-      /> Org</div>
+      /> <Projects /></div>
       <div> <input
         type="text"
         className="title-input"
         value={title}
         onChange={handleTitleChange}
-      /> FileTree</div>
-      <div>New</div>
+      /> <Files /></div>
+      <div className='importButton1'>New</div>
 
     </div>
   );

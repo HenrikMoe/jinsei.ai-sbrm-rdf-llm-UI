@@ -25,6 +25,17 @@
   font-size: 24px;
 }
 
+.importButton1{
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  margin-right: 00px;
+  margin-top: 15px !important;
+}
+
+
 .prototype-container {
   min-height: 100vh; /* Set a minimum height to ensure the footer is at the bottom */
 }
