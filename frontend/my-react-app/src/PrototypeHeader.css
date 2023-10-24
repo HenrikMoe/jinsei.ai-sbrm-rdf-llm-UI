@@ -53,6 +53,14 @@
   font-size: 14px;
 }
 
+.container{
+  display: flex;
+}
+
+.title-input{
+  margin-top: 25px;
+ height: 25px;
+}
 
 /* Add dark mode styles for the homepage */
 .dark-mode {

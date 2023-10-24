@@ -36,7 +36,7 @@ const handleOrgChange = (event) => {
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
       <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
       <div className='title'>Luciano - git:main | version 0.85</div>
-      <div>Detected Model: Platinum XBRL</div>
+      <div className='importButton1'>Detected Model: Platinum XBRL &or;</div>
       <div className='button-wrap'>
 
         <Popup onFileUpload={onFileUpload} />
@@ -47,13 +47,13 @@ const handleOrgChange = (event) => {
 
       </div>
       <div className='importButton1'>Share</div>
-      <div> <input
+      <div className='container'> <input
         type="text"
         className="title-input"
         value={org}
         onChange={handleOrgChange}
       /> <Projects /></div>
-      <div> <input
+      <div className='container'> <input
         type="text"
         className="title-input"
         value={title}
