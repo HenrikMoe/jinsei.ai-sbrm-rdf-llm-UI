@@ -16,6 +16,9 @@ const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xslx
   const { isDarkMode } = useDarkMode();
   console.log(sheetTitles)
 
+  const [isFirstSheetSelected, setIsFirstSheetSelected] = useState(true); // Track if the first sheet is selected
+
+
   useEffect(() => {
     const handleResize = (e) => {
       if (isResizing) {
@@ -50,14 +53,18 @@ const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xslx
     setInitialHeight(e.clientY);
   };
 
+var firstSheetSelectedOff;
+
   const handleSheetSelect = (sheetTitle) => {
    // Handle sheet selection here
    console.log('Selecting sheet:', sheetTitle);
    setSelectedSheet(sheetTitle);
    onSheetSelect(sheetTitle);
    handleSelectedSheet(sheetTitle); // Call the function to update selectedSheet
-
- };
+   if (isFirstSheetSelected) {
+       setIsFirstSheetSelected(false);
+     }
+   };
  console.log(selectedSheet)
 
  console.log(xslxTitle)
@@ -71,15 +78,17 @@ const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xslx
      >
        <ul>
        <div className='sidemenu-title'> {xslxTitle} </div>
-        {sheetTitles ? sheetTitles.map((title) => (
-           <li
+        {sheetTitles ? sheetTitles.map((title, index) => (
+          <li
              key={title}
-             className={`${isDarkMode ? 'dark-mode' : ''} ${title === selectedSheet ? 'selected' : ''}`}
+             className={`${isDarkMode ? 'dark-mode' : ''} ${title === selectedSheet ? 'selected' : ''} ${
+               index === 0 && isFirstSheetSelected ? 'selected' : '' // Highlight the first title
+             }`}
              onClick={() => handleSheetSelect(title)}
            >
              {title}
            </li>
-         )): <li className='sidemenu-title'> Files </li> }
+         )): <li className='sidemenu-title'> Sheets </li> }
        </ul>
      </div>
    );

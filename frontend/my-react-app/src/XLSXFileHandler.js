@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import * as XLSX from 'xlsx'; // Import the entire xlsx library
 import './XLSXFileHandler.css'
 
-const XLSXFileHandler = ({ onFileUpload }) => {
+const XLSXFileHandler = ({ onFileUpload, closeDropdown }) => {
   const fileInputRef = useRef(null);
   console.log(onFileUpload)
 
@@ -22,6 +22,7 @@ const XLSXFileHandler = ({ onFileUpload }) => {
       };
 
       reader.readAsBinaryString(file);
+      closeDropdown();
     }
   };
 

@@ -168,7 +168,7 @@
 
 
     return (
-      <div >
+      <div className='table-wrap'>
         <table className='xlsx-table'
         // {`xlsx-table ${isResizing ? 'resizable' : ''}`}
         // onMouseDown={handleMouseDown}
