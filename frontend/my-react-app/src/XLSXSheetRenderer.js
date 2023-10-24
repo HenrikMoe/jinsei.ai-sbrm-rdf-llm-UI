@@ -3,7 +3,7 @@
   import Footer from './Footer';
 
 
-  const XLSXSheetRenderer = ({ sheetData, sheetTitle, dataStore }) => {
+  const XLSXSheetRenderer = ({ sheetData, sheetTitles, dataStore, xslxTitle, sheetTitle, selectedSheet }) => {
     // Initialize tableData with an empty array
   let tableDataRef = []
   console.log(tableDataRef)
@@ -57,9 +57,12 @@
         : row
     );
     tableDataRef = updatedData;
-
-    dataStore.updateSheetData(sheetTitle, updatedData);
-    console.log('STATE MANAGEED CHANGES')
+    console.log('USER ENTERED INFO')
+    console.log(updatedData)
+    console.log('Selected Sheet:', selectedSheet); // Log selectedSheet
+    console.log(header)
+    dataStore.updateSheetData(selectedSheet, updatedData, header);
+    console.log('STATE MANAGED CHANGES')
     console.log(dataStore)
   };
 

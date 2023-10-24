@@ -3,7 +3,7 @@ import './PrototypeSideMenu.css'; // Import the CSS file for styling
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
 
-const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xslxTitle }) => {
+const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xslxTitle, handleSelectedSheet }) => {
   const [isResizing, setIsResizing] = useState(false);
   const [initialWidth, setInitialWidth] = useState(200);
   const [initialHeight, setInitialHeight] = useState(400);
@@ -55,6 +55,7 @@ const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xslx
    console.log('Selecting sheet:', sheetTitle);
    setSelectedSheet(sheetTitle);
    onSheetSelect(sheetTitle);
+   handleSelectedSheet(sheetTitle); // Call the function to update selectedSheet
 
  };
  console.log(selectedSheet)

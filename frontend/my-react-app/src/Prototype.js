@@ -21,8 +21,15 @@ function Prototype() {
 
   const [sheetTitles, setSheetTitles] = useState(null);
 
+  const [sheetTitle, setSheetTitle] = useState(null);
+
+
   const [selectedSheetData, setSelectedSheetData] = useState(null);
   const [workbook, setWorkbook] = useState(null);
+  const [selectedSheet, setSelectedSheet] = useState(null);
+  const handleSelectedSheet = (sheetTitle) => {
+    setSelectedSheet(sheetTitle);
+  };
 
   const [xslxTitle, setxslxTitle] = useState(null);
 
@@ -90,8 +97,8 @@ function Prototype() {
         <DataStoreProvider>
         <div className='content-grid'>
           <PrototypeHeader onFileUpload={handleXLSXUpload} />
-          <PrototypeSideMenu  sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} selectedSheetData={selectedSheetData} xslxTitle={xslxTitle} />
-          <XLSXSheetRenderer sheetData={selectedSheetData} sheetTitle={xslxTitle} dataStore={dataStore} />
+          <PrototypeSideMenu  sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} selectedSheetData={selectedSheetData} xslxTitle={xslxTitle} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet}/>
+          <XLSXSheetRenderer sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xslxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
 
         </div>
         </DataStoreProvider>

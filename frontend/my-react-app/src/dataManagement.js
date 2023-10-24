@@ -13,14 +13,16 @@ const dataStore = {
      dataStore.workbook = workbook;
    },
 
-  updateSheetData: (sheetName, sheetData) => {
+  updateSheetData: (sheetName, sheetData, header) => {
     if (dataStore.workbook) {
       // Find the sheet index by name
       const sheetIndex = dataStore.workbook.SheetNames.indexOf(sheetName);
 
       if (sheetIndex >= 0) {
         // Update the sheet's data
-        dataStore.workbook.Sheets[sheetName] = XLSX.utils.aoa_to_sheet(sheetData);
+        const sheetWithHeader = [header, ...sheetData];
+
+        dataStore.workbook.Sheets[sheetName] = XLSX.utils.aoa_to_sheet(sheetWithHeader);
       }
     }
   },
