@@ -57,6 +57,8 @@
         : row
     );
     tableDataRef = updatedData;
+
+    //MOVE INTO FUNCTION IN PROTOTYPE HEAS
     console.log('USER ENTERED INFO')
     console.log(updatedData)
     console.log('Selected Sheet:', selectedSheet); // Log selectedSheet
