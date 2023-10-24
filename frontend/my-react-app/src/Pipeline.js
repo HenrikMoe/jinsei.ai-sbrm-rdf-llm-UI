@@ -24,9 +24,9 @@ const Pipeline = ({ updateForm }) => {
         Pipeline &or;
       </button>
       <div className="dropdown-content">
-        <XLSXFileHandler  />
-        <CSVFileHandler />
-        <JSONfileHandler />
+        <div className="dropdown-item">Process Canvas</div>
+        <div className="dropdown-item">Rendering</div>
+        <div className="dropdown-item">Write Config</div>
         {/* Add other dropdown items here */}
       </div>
     </div>

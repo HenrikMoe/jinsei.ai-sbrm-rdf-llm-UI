@@ -23,9 +23,7 @@ const Delete = ({ onFileUpload }) => {
         Delete &or;
       </button>
       <div className="dropdown-content">
-        <XLSXFileHandler onFileUpload={onFileUpload} />
-        <CSVFileHandler />
-        <JSONfileHandler />
+        <div className="dropdown-item">Delete File</div>
         {/* Add other dropdown items here */}
       </div>
     </div>

@@ -74,6 +74,18 @@
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); /* Add a right and bottom shadow */
 }
 
+.dropdown-item{
+  background: black;
+  border-radius: 5px;
+  color: white;
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  
+
+
+
+}
 
 .dark-mode {
   background-color: #000;

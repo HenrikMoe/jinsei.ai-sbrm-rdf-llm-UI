@@ -24,7 +24,6 @@ const Transform = ({ updateForm }) => {
         Transform &or;
       </button>
       <div className="dropdown-content">
-        <XLSXFileHandler  />
         <CSVFileHandler />
         <JSONfileHandler />
         {/* Add other dropdown items here */}

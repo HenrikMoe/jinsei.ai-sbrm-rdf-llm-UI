@@ -24,9 +24,9 @@ const Upload = ({ updateForm }) => {
         Update &or;
       </button>
       <div className="dropdown-content">
-        <XLSXFileHandler  />
-        <CSVFileHandler />
-        <JSONfileHandler />
+        <div className="dropdown-item">Save</div>
+        <div className="dropdown-item">Revert</div>
+        <div className="dropdown-item">Versions</div>
         {/* Add other dropdown items here */}
       </div>
     </div>

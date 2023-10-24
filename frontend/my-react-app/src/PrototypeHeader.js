@@ -34,7 +34,7 @@ const handleOrgChange = (event) => {
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
       <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
       <div className='title'>Luciano - git:main | version 0.80</div>
-
+      <div>Detected Model: Platinum XBRL</div>
       <div className='button-wrap'>
 
         <Popup onFileUpload={onFileUpload} />
@@ -57,6 +57,7 @@ const handleOrgChange = (event) => {
         value={title}
         onChange={handleTitleChange}
       /> FileTree</div>
+      <div>New</div>
 
     </div>
   );
