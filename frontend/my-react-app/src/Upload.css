@@ -58,6 +58,18 @@
   display: flex;
 }
 
+.popup-message {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transform: translate(200px, 100px); /* Position the popup 200px above and 200px to the left of the mouse pointer */
+}
+
+
 .popup {
   position: absolute;
   top: 100%;

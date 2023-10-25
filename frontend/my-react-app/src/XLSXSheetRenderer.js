@@ -22,10 +22,12 @@
       const newRow = new Array(tableCustom[0].length).fill(' ');
       tableDataRef = [...tableCustom, newRow];
       setTableCustom(tableDataRef)
+      //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
     }else{
     const newRow = new Array(tableDataRef[0].length).fill(' ');
     tableDataRef = [...tableDataRef, newRow];
     setTableCustom(tableDataRef)
+    //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
   }
 
   };
@@ -39,14 +41,18 @@
       if(headerCustom.length >0){
         setHeaderCustom([...headerCustom, '']); // Add a blank header
         setTableCustom(tableDataRef)
+        //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
       }else{setHeaderCustom([...header, '']); // Add a blank header
       setTableCustom(tableDataRef)}
+      //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
       }else{
     console.log(tableDataRef.map(row => [...row, '']))
     tableDataRef = tableDataRef.map(row => [...row, '']);
     console.log([...header, ''])
     setHeaderCustom([...header, '']); // Add a blank header
     setTableCustom(tableDataRef)
+  //  dataStore.updateSheetData(selectedSheet, tableDataRef, header);
+
   }
   };
 
@@ -100,6 +106,42 @@
   console.log(tableDataRef)
 
 
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+   const [popupPosition, setPopupPosition] = useState({ x: 0, y: 0 });
+   const popupRef = useRef(null);
+
+   const handleCellMouseEnter = (e) => {
+   const cell = e.target;
+   const cellRect = cell.getBoundingClientRect();
+
+   // Calculate the position for the popup message
+   const x = cellRect.left + cellRect.width / 2;
+   const y = cellRect.top - 20; // Adjust as needed
+
+   setPopupPosition({ x, y });
+   setIsPopupVisible(true);
+ };
+
+ const handleCellMouseLeave = () => {
+   setIsPopupVisible(false);
+ };
+
+ useEffect(() => {
+   // Add a listener to close the popup when clicking outside of it
+   const handleClickOutside = (event) => {
+     if (popupRef.current && !popupRef.current.contains(event.target)) {
+       setIsPopupVisible(false);
+     }
+   };
+
+   document.addEventListener('mousedown', handleClickOutside);
+
+   return () => {
+     document.removeEventListener('mousedown', handleClickOutside);
+   };
+ }, []);
+
+
     return (
       <div className='table-wrap'>
 
@@ -132,6 +174,8 @@
             <td
               key={cellIndex}
               contentEditable
+              onMouseEnter={handleCellMouseEnter}
+              onMouseLeave={handleCellMouseLeave}
               onBlur={(e) => {
                 handleCellChange(rowIndex, cellIndex, e.target.textContent);
               }}
@@ -150,6 +194,8 @@
             <td
               key={cellIndex}
               contentEditable
+              onMouseEnter={handleCellMouseEnter}
+              onMouseLeave={handleCellMouseLeave}
               onBlur={(e) => {
                 handleCellChange(rowIndex, cellIndex, e.target.textContent);
               }}
@@ -161,6 +207,18 @@
       ))}
     </tbody> }
         </table>
+        {isPopupVisible ? (
+        <div
+          className="popup-message"
+          style={{
+            top: `${popupPosition.y}px`,
+            left: `${popupPosition.x}px`,
+          }}
+          ref={popupRef}
+        >
+          Your Popup Message Here
+        </div>
+      ): <div></div>}
 
         {tableDataRef.length > 0 ?
           <div className="buttons-wrap">
