@@ -115,6 +115,7 @@
   border: 2px solid grey;
   display: grid;
   width: 1878px;
+  margin-bottom: -150px;
   border-radius: 10px;
   grid-template-columns: 200px 1fr; /* Adjust the width of the side menu as needed */
   grid-gap: 20px; /* Add spacing between columns */

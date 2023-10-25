@@ -76,7 +76,7 @@ var firstSheetSelectedOff;
 
  return (
    <div>
-
+    <div className='elementTitle'>Data Taxonomy</div>
      <div
        className={`prototype-side-menu ${isResizing ? 'resizing' : ''} ${
          isDarkMode ? 'dark-mode' : ''

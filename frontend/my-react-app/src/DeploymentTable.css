@@ -2,7 +2,17 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-}
+    border: 2px solid grey;
+    padding: 5px;
+    width: 800px;
+    display: inline-block;
+    margin-left: 0px;
+    max-height: 600px;
+    border-radius: 10px !important;
+    overflow-x: auto;
+    border-collapse: separate;
+    border-radius: 10px !important;
+  }
 
 .table-header {
   background-color: #f0f0f0;

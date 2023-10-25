@@ -6,10 +6,16 @@
   display: inline-block;
   margin-left: 0px;
   max-width: 1500px;
+  max-height: 600px;
   border-radius: 10px !important;
   overflow-x: auto;
   border-collapse: separate;
   border-radius: 10px !important;
+}
+
+.elementTitle{
+  margin-top: 100px;
+  margin-bottom: -80px
 }
 
 .xlsx-table.resizable {

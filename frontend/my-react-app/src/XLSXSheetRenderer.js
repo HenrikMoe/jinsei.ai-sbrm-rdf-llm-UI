@@ -112,7 +112,7 @@
 
    // Calculate the position for the popup message
    const x = cellRect.left + cellRect.width / 2;
-   const y = cellRect.top - 20; // Adjust as needed
+   const y = cellRect.top; // Adjust as needed
 
    setPopupPosition({ x, y });
    setIsPopupVisible(true);
@@ -140,7 +140,7 @@
 
     return (
       <div className='table-wrap'>
-
+      <div className='elementTitle'>Data Render</div>
         <table className='xlsx-table'
         // {`xlsx-table ${isResizing ? 'resizable' : ''}`}
         // onMouseDown={handleMouseDown}
