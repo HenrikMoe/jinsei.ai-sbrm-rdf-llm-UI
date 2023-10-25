@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './PrototypeSideMenu.css'; // Import the CSS file for styling
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
@@ -17,6 +17,7 @@ const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xslx
   console.log(sheetTitles)
 
   const [isFirstSheetSelected, setIsFirstSheetSelected] = useState(true); // Track if the first sheet is selected
+  const resizeRef = useRef(null); // Reference to the resize area
 
 
   useEffect(() => {
@@ -36,6 +37,15 @@ const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xslx
         setCurrentHeight(currentHeight + e.clientY - initialHeight - resizeBorderWidth);
       }
     };
+    // Attach event listeners to the resize area
+    resizeRef.current.addEventListener('mousedown', (e) => {
+      if (e.target === resizeRef.current) {
+        // Only start resizing if the user clicks on the resize handle itself
+        setIsResizing(true);
+        setInitialWidth(currentWidth);
+        setInitialHeight(currentHeight);
+      }
+    });
 
     document.addEventListener('mousemove', handleResize);
     document.addEventListener('mouseup', handleMouseUp);
@@ -46,12 +56,7 @@ const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xslx
     };
   }, [isResizing, initialWidth, initialHeight, currentWidth, currentHeight]);
 
-  const handleMouseDown = (e) => {
-    e.preventDefault();
-    setIsResizing(true);
-    setInitialWidth(e.clientX);
-    setInitialHeight(e.clientY);
-  };
+
 
 var firstSheetSelectedOff;
 
@@ -74,8 +79,11 @@ var firstSheetSelectedOff;
        className={`prototype-side-menu ${isResizing ? 'resizing' : ''} ${
          isDarkMode ? 'dark-mode' : ''
        }`}
-       onMouseDown={handleMouseDown}
      >
+     <div
+        className="resize-handle"
+        ref={resizeRef} // Reference to the resize area
+      ></div>
        <ul>
        <div className='sidemenu-title'> {xslxTitle} </div>
         {sheetTitles ? sheetTitles.map((title, index) => (
