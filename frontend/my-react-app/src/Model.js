@@ -45,7 +45,7 @@ const Model = ({ updateForm }) => {
     <div className={`popup-container ${isDarkMode ? 'dark-mode' : ''}`}>
       <div ref={dropdownRef} className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
         <button className="dropdown-button" onClick={toggleDropdown}>
-          Model: {selectedModel || ''} &or;  {/* Display the selected model or 'Model' */}
+          Reporting Schemes: {selectedModel || ''} &or;  {/* Display the selected model or 'Model' */}
         </button>
         <div className="dropdown-content">
           <div className="search-bar">
@@ -57,13 +57,13 @@ const Model = ({ updateForm }) => {
             />
           </div>
           <div className="dropdown-item" onClick={() => handleModelSelect('Platinum XBRL NAIC')}>
-            Platinum XBRL NAIC
+            Platinum XBRL
           </div>
           <div className="dropdown-item" onClick={() => handleModelSelect('Asset NAIC Standard')}>
-            Asset NAIC Standard
+            Asset Standard
           </div>
           <div className="dropdown-item" onClick={() => handleModelSelect('Liability NAIC Standard')}>
-            Liability NAIC Standard
+            Liability Standard
           </div>
           {/* Add other dropdown items here */}
         </div>
