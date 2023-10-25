@@ -20,6 +20,10 @@
   width: 145%;
 }
 
+.stickyProtoHeader{
+  display: flex;
+}
+
 .prototype-header h2 {
   margin: 0;
   font-size: 24px;
@@ -56,7 +60,7 @@
 
 .titlez{
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .container{
