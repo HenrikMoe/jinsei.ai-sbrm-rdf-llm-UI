@@ -28,7 +28,7 @@ const CSVFileHandler = ({ onFileUpload }) => {
 
   return (
     <div className='button-space'>
-    <label htmlFor="fileInput" style={{ cursor: 'pointer' }} className='importButton'>
+    <label htmlFor="fileInput" style={{ cursor: 'pointer' }} className='dropdown-item'>
        CSV
       </label>
       <input

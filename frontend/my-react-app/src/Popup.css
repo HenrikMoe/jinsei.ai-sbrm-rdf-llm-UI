@@ -34,10 +34,11 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  min-width: 160px;
   z-index: 1;
   margin-right: 20px;
   margin-top: 15px;
+  padding-bottom: 10px;
+
 
 
 }

@@ -11,6 +11,7 @@ import Transform from './Transform'
 import Pipeline from './Pipeline'
 import Files from './Files'
 import Projects from './Projects'
+import Model from './Model'
 //<Project onFileUpload={onFileUpload}/>
 // <Upload onFileUpload={onFileUpload}/>
 // <Delete onFileUpload={onFileUpload} />
@@ -36,9 +37,9 @@ const handleOrgChange = (event) => {
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
       <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
       <div className='title'>Luciano - git:main | version 0.85</div>
-      <div className='importButton1'>Detected Model: Platinum XBRL &or;</div>
-      <div className='button-wrap'>
 
+      <div className='button-wrap'>
+        <Model />
         <Popup onFileUpload={onFileUpload} />
         <Upload />
         <Transform />

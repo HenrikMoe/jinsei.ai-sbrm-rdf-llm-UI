@@ -28,7 +28,7 @@ const XLSXFileHandler = ({ onFileUpload, closeDropdown }) => {
 
   return (
     <div className='button'>
-    <label htmlFor="fileInput" style={{ cursor: 'pointer' }} className='importButton'>
+    <label htmlFor="fileInput" style={{ cursor: 'pointer' }} className='dropdown-item'>
        XLSX
       </label>
       <input

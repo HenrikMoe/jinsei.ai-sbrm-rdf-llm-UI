@@ -8,17 +8,17 @@ import CSVFileHandler from './CSVFileHandler'
 import JSONfileHandler from './JSONfileHandler'
 
 
-const Transform = ({ updateForm }) => {
+const Model = ({ updateForm }) => {
   const { isDarkMode } = useDarkMode();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const [searchQuery, setSearchQuery] = useState('');
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
-
-  const dropdownRef = useRef(null);
-
 
   // Function to close the dropdown.
 const closeDropdown = () => {
@@ -43,11 +43,20 @@ const closeDropdown = () => {
     <div className={`popup-container ${isDarkMode ? 'dark-mode' : ''}`}>
     <div ref={dropdownRef} className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
       <button className="dropdown-button" onClick={toggleDropdown}>
-        Transform &or;
+        Model &or;
       </button>
       <div className="dropdown-content">
-        <CSVFileHandler />
-        <JSONfileHandler />
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Search..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      </div>
+        <div className="dropdown-item">Platinum XBRL NAIC</div>
+        <div className="dropdown-item">Asset NAIC Standard</div>
+        <div className="dropdown-item">Liability NAIC Standard</div>
         {/* Add other dropdown items here */}
       </div>
     </div>
@@ -55,4 +64,4 @@ const closeDropdown = () => {
   );
 };
 
-export default Transform;
+export default Model;

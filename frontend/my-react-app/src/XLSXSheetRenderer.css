@@ -91,3 +91,24 @@
 .table-button:hover {
   background-color: #0056b3;
 }
+
+
+/* XLSXSheetRenderer.css */
+
+/* Add this CSS at the end of your CSS file */
+
+.status-message {
+  position: absolute;
+  background-color: #333; /* Background color for the status message */
+  color: #fff; /* Text color for the status message */
+  padding: 5px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  z-index: 1; /* Ensure the status message is displayed above other content */
+  margin-top: -30px; /* Adjust the value to position it above the header or table data */
+  display: none; /* Initially hide the status message */
+}
+
+.table-wrap:hover .status-message {
+  display: block; /* Display the status message when .table-wrap is hovered over */
+}

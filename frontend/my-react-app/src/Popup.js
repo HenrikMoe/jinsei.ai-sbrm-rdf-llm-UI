@@ -1,6 +1,6 @@
 // Popup.js
 import React, { useState, useEffect, useRef } from 'react';
-import './Popup.css';
+import './Upload.css';
 import { useDarkMode } from './DarkModeContext';
 import XLSXFileHandler from './XLSXFileHandler';
 import CSVFileHandler from './CSVFileHandler'

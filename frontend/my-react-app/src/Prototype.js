@@ -94,7 +94,7 @@ function Prototype() {
     <div className={`prototype-container ${isDarkMode ? 'dark-mode' : ''}`}>
       {isAuthenticated ? (
         // Content for authenticated users
-        //WRAP IN STATEMANAGEMENT HERE
+        //pass a lot of vars to prototype header for each functionality
         <DataStoreProvider>
         <div className='content-grid'>
           <PrototypeHeader onFileUpload={handleXLSXUpload} />

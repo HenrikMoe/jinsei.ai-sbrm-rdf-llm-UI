@@ -28,7 +28,7 @@ const JSONfileHandler = ({ onFileUpload }) => {
 
   return (
     <div className='button-space2'>
-    <label htmlFor="fileInput" style={{ cursor: 'pointer' }} className='importButton'>
+    <label htmlFor="fileInput" style={{ cursor: 'pointer' }} className='dropdown-item'>
        JSON
       </label>
       <input

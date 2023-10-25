@@ -99,76 +99,10 @@
   console.log(header);
   console.log(tableDataRef)
 
-  // const [isResizing, setIsResizing] = useState(false);
-  // const [initialWidth, setInitialWidth] = useState(0);
-  // const [initialHeight, setInitialHeight] = useState(0);
-  // const [currentWidth, setCurrentWidth] = useState(1500);
-  // const [currentHeight, setCurrentHeight] = useState(300);
-  //
-  // const handleResizeStart = (e) => {
-  //   e.preventDefault();
-  //   setIsResizing(true);
-  //
-  //   setInitialWidth(e.clientX);
-  //   setInitialHeight(e.clientY);
-  // };
-  //
-  // const handleMouseUp = () => {
-  //   setIsResizing(true);
-  // };
-  //
-  // const handleMouseMove = (e) => {
-  //   if (isResizing) {
-  //     const newWidth = currentWidth + e.clientX - initialWidth;
-  //     const newHeight = currentHeight + e.clientY - initialHeight;
-  //     setCurrentWidth(newWidth);
-  //     setCurrentHeight(newHeight);
-  //   }
-  // };
-  //
-  // const resizeBorderWidth = 35;
-  //
-  // const handleMouseDown = (e) => {
-  //   e.preventDefault();
-  //   setIsResizing(true);
-  //   setInitialWidth(e.clientX);
-  //   setInitialHeight(e.clientY);
-  //   console.log(initialWidth)
-  // };
-  //
-  // useEffect(() => {
-  //   const handleResize = (e) => {
-  //     if (isResizing) {
-  //       console.log('isResizing')
-  //       console.log(currentWidth, e.clientX, initialWidth, resizeBorderWidth)
-  //       const newWidth = currentWidth + e.clientX - initialWidth - resizeBorderWidth;
-  //       const newHeight = currentHeight + e.clientY - initialHeight - resizeBorderWidth;
-  //       document.querySelector('.xlsx-table').style.width = `${newWidth}px`;
-  //       document.querySelector('.xlsx-table').style.height = `${newHeight}px`;
-  //     }
-  //   };
-  //
-  //   const handleMouseUp = (e) => {
-  //     if (isResizing) {
-  //       setIsResizing(false);
-  //       setCurrentWidth(currentWidth + e.clientX - initialWidth - resizeBorderWidth);
-  //       setCurrentHeight(currentHeight + e.clientY - initialHeight - resizeBorderWidth);
-  //     }
-  //   };
-  //
-  //   document.addEventListener('mousemove', handleResize);
-  //   document.addEventListener('mouseup', handleMouseUp);
-  //
-  //   return () => {
-  //     document.removeEventListener('mousemove', handleResize);
-  //     document.removeEventListener('mouseup', handleMouseUp);
-  //   };
-  // }, [isResizing, initialWidth, initialHeight, currentWidth, currentHeight]);
-
-
 
     return (
       <div className='table-wrap'>
+
         <table className='xlsx-table'
         // {`xlsx-table ${isResizing ? 'resizable' : ''}`}
         // onMouseDown={handleMouseDown}
