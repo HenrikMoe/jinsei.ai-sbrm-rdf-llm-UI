@@ -27,8 +27,14 @@
   padding: 10px;
   border-radius: 10px;
   color: white;
-
+  display: flex;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  align-items: center; /* Vertically align children */
+
+}
+
+.arrow {
+  margin-left: 5px; /* Adjust this value to control spacing between text and arrow */
 }
 
 .dropdown-content {
@@ -36,10 +42,8 @@
   position: absolute;
   z-index: 1;
   margin-right: 20px;
-  margin-top: 15px;
+  margin-top: 150px;
   padding-bottom: 10px;
-
-
 
 }
 
@@ -48,6 +52,7 @@
   flex-direction: column;
   margin-right: 20px;
   margin-top: 15px;
+  margin-top: 50px;
 }
 
 .popup {

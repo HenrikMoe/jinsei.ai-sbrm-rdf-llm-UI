@@ -4,6 +4,7 @@
   text-align: center;
   margin: 5px;
   margin-top: 20px !important;
+  display: flex;
 }
 
 .popup-button {
@@ -27,7 +28,7 @@
   padding: 10px;
   border-radius: 10px;
   color: white;
-
+  display: flex;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
 }
 
@@ -51,6 +52,10 @@
   flex-direction: column;
   margin-right: 20px;
   margin-top: 15px;
+}
+
+.dropdown{
+  display: flex;
 }
 
 .popup {
@@ -133,7 +138,11 @@ input[type="text"] {
   width: 100%;
   padding: 10px;
   margin: 0;
+  background: lightblue;
   border: none;
+  margin-top: 3px;
   border-bottom: 1px solid #ccc;
   outline: none;
+  margin-right: 5px;
+  border-radius: 5px;
 }

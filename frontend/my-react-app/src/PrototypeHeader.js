@@ -21,17 +21,10 @@ const PrototypeHeader = ({onFileUpload}) => {
   const [xlsxData, setXLSXData] = useState(null);
 console.log(onFileUpload)
 
-const [title, setTitle] = useState('File 1'); // Initial title
-const [org, setOrg] = useState('AB Co'); // Initial title
 
 
-const handleTitleChange = (event) => {
-  setTitle(event.target.value);
-};
 
-const handleOrgChange = (event) => {
-  setOrg(event.target.value);
-};
+
 
   return (
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
@@ -48,18 +41,10 @@ const handleOrgChange = (event) => {
 
       </div>
       <div className='importButton1'>Share</div>
-      <div className='container'> <input
-        type="text"
-        className="title-input"
-        value={org}
-        onChange={handleOrgChange}
-      /> <Projects /></div>
-      <div className='container'> <input
-        type="text"
-        className="title-input"
-        value={title}
-        onChange={handleTitleChange}
-      /> <Files /></div>
+      <div className='container'>
+       <Projects /></div>
+      <div className='container'>
+      <Files /></div>
       <div className='importButton1'>New</div>
 
     </div>

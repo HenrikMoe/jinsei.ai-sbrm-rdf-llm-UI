@@ -38,12 +38,24 @@ const closeDropdown = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+  const [title, setTitle] = useState('File 1'); // Initial title
+
+  const handleTitleChange = (event) => {
+    setTitle(event.target.value);
+  };
 
   return (
     <div className={`popup-container ${isDarkMode ? 'dark-mode' : ''}`}>
+    <input
+      type="text"
+      className="title-input"
+      value={title}
+      onChange={handleTitleChange}
+    />
     <div ref={dropdownRef} className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
       <button className="dropdown-button" onClick={toggleDropdown}>
-        Files &or;
+      <span className="button-text">Files</span>
+        <span className="arrow">&or;</span>
       </button>
       <div className="dropdown-content">
         <div className="dropdown-item">Report 1</div>

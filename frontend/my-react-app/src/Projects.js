@@ -19,6 +19,12 @@ const Projects = ({ updateForm }) => {
 
   const dropdownRef = useRef(null);
 
+  const [org, setOrg] = useState('AB Co'); // Initial title
+
+  const handleOrgChange = (event) => {
+    setOrg(event.target.value);
+  };
+
 
   // Function to close the dropdown.
 const closeDropdown = () => {
@@ -41,9 +47,16 @@ const closeDropdown = () => {
 
   return (
     <div className={`popup-container ${isDarkMode ? 'dark-mode' : ''}`}>
+    <input
+      type="text"
+      className="title-input"
+      value={org}
+      onChange={handleOrgChange}
+    />
     <div ref={dropdownRef} className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
       <button className="dropdown-button" onClick={toggleDropdown}>
-        Projects &or;
+        <span className="button-text">Projects</span>
+        <span className="arrow">&or;</span>
       </button>
       <div className="dropdown-content">
         <div className="dropdown-item">Company 1</div>
