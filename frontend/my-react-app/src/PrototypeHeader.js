@@ -29,7 +29,7 @@ console.log(onFileUpload)
   return (
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
       <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
-      <div className='title'>Luciano - git:main | version 0.85</div>
+      <div className='titlez'>Luciano - git:main | version 0.85</div>
 
       <div className='button-wrap'>
         <Model />

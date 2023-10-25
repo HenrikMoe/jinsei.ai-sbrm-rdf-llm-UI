@@ -75,6 +75,8 @@ var firstSheetSelectedOff;
  console.log(xslxTitle)
 
  return (
+   <div>
+
      <div
        className={`prototype-side-menu ${isResizing ? 'resizing' : ''} ${
          isDarkMode ? 'dark-mode' : ''
@@ -98,6 +100,7 @@ var firstSheetSelectedOff;
            </li>
          )): <li className='sidemenu-title'> Sheets </li> }
        </ul>
+     </div>
      </div>
    );
 };
