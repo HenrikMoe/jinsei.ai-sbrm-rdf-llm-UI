@@ -56,6 +56,8 @@
   }
   };
 
+
+
   const handleCellChange = (rowIndex, cellIndex, value) => {
     const updatedData = tableDataRef.map((row, i) =>
       i === rowIndex
@@ -63,12 +65,6 @@
         : row
     );
     tableDataRef = updatedData;
-
-    //MOVE INTO FUNCTION IN PROTOTYPE HEAS
-    console.log('USER ENTERED INFO')
-    console.log(updatedData)
-    console.log('Selected Sheet:', selectedSheet); // Log selectedSheet
-    console.log(header)
     dataStore.updateSheetData(selectedSheet, updatedData, header);
     console.log('STATE MANAGED CHANGES')
     console.log(dataStore)
@@ -222,10 +218,10 @@
 
         {tableDataRef.length > 0 ?
           <div className="buttons-wrap">
-          <button className="table-button" onClick={addRow}>
+          <button className="table-button" >//onClick={addRow}
             Add Row
           </button>
-          <button className="table-button" onClick={addColumn}>
+          <button className="table-button" >//onClick={addColumn}
             Add Column
           </button>
           </div>:

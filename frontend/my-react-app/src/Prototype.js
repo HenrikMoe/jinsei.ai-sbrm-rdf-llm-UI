@@ -43,7 +43,7 @@ function Prototype() {
     if (workbook) {
       // Find the data of the selected sheet in the workbook
       const selectedSheetData = XLSX.utils.sheet_to_json(workbook.Sheets[selectedSheetTitle], { header: 1 });
-
+      console.log(XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 }))
       // Set the selected sheet's data in the state
       setSelectedSheetData(selectedSheetData);
 
