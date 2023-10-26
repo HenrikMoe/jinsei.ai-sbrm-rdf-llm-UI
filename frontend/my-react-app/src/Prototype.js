@@ -42,7 +42,11 @@ function Prototype() {
   const handleSheetSelect = (selectedSheetTitle) => {
     if (dataStore.workbook) {
       // Find the data of the selected sheet in the workbook
+      //this is now showing the dited title
+      console.log('newTitleDone')
+      console.log(selectedSheetTitle)
       const selectedSheetData = XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 });
+
       console.log(XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 }))
       // Set the selected sheet's data in the state
       setSelectedSheetData(selectedSheetData);
@@ -65,6 +69,7 @@ function Prototype() {
 
     //STORE THE WORKBOOK IN THE STATEMANAGEMTN
     dataStore.addWorkbook(workbook);
+    dataStore.initializeDataTaxonomyXLSX()
     console.log('ADDED WORKBOOK TO DATASTORE')
     console.log(dataStore)
 
@@ -102,8 +107,8 @@ function Prototype() {
         <DataStoreProvider>
         <div className='content-grid'>
           <PrototypeHeader onFileUpload={handleXLSXUpload} />
-          <PrototypeSideMenu  sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} selectedSheetData={selectedSheetData} xlsxTitle={xlsxTitle} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet}/>
-          <XLSXSheetRenderer sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
+          <PrototypeSideMenu  dataStore={dataStore} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} selectedSheetData={selectedSheetData} xlsxTitle={xlsxTitle} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet}/>
+          <XLSXSheetRenderer  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
           <DeploymentTable />
         </div>
         </DataStoreProvider>

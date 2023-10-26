@@ -15,10 +15,20 @@ const dataStore = {
   },
 
 //from an edit to the taxonomy, make another for an addition and or deletion
-  updateDataTaxonomyXLSX: (index, newValue)=>{
-    dataStore.dataTaxonomyXLSX[index] = newValue
-  },
+updateDataTaxonomyXLSX: (index, titleChange) => {
+  if (dataStore.dataTaxonomyXLSX[index]) {
+    // Update the title in dataTaxonomyXLSX
+    dataStore.dataTaxonomyXLSX[index] = titleChange;
 
+    // Also update the title in the Sheets object of the workbook
+    if (dataStore.workbook && dataStore.workbook.SheetNames[index]) {
+      const oldTitle = dataStore.workbook.SheetNames[index];
+      dataStore.workbook.SheetNames[index] = titleChange;
+      dataStore.workbook.Sheets[titleChange] = dataStore.workbook.Sheets[oldTitle];
+      delete dataStore.workbook.Sheets[oldTitle];
+    }
+  }
+},
 
 
   //change the side menu so that these functions are called and the data object is used to render that list
@@ -35,9 +45,7 @@ const dataStore = {
         const sheetWithHeader = [header, ...sheetData];
         var store  = XLSX.utils.aoa_to_sheet(sheetWithHeader);
         dataStore.workbook.Sheets[sheetName] = store
-        console.log(store)
-        console.log( dataStore.workbook.Sheets[sheetName])
-        console.log(dataStore.workbook.Sheets)
+
     }
   },
 

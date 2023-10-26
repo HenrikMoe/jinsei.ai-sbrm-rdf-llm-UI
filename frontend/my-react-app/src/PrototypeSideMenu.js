@@ -3,7 +3,7 @@ import './PrototypeSideMenu.css'; // Import the CSS file for styling
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
 
-const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xlsxTitle, handleSelectedSheet }) => {
+const PrototypeSideMenu = ({ dataStore, sheetTitles, onSheetSelect, selectedSheetData, xlsxTitle, handleSelectedSheet }) => {
   const [isResizing, setIsResizing] = useState(false);
   const [initialWidth, setInitialWidth] = useState(200);
   const [initialHeight, setInitialHeight] = useState(400);
@@ -58,19 +58,17 @@ const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xlsx
   }, [isResizing, initialWidth, initialHeight, currentWidth, currentHeight]);
 
 
-
-var firstSheetSelectedOff;
-
-  const handleSheetSelect = (sheetTitle) => {
+  const handleSheetSelect = (index, sheetTitle) => {
    // Handle sheet selection here
    console.log('Selecting sheet:', sheetTitle);
    setSelectedSheet(sheetTitle);
    onSheetSelect(sheetTitle);
    handleSelectedSheet(sheetTitle); // Call the function to update selectedSheet
-   if (isFirstSheetSelected) {
-       setIsFirstSheetSelected(false);
-     }
    };
+
+   const handleTitleChange = (index, title, titleChange) => {
+    dataStore.updateDataTaxonomyXLSX(index, titleChange)
+   }
 
 
  return (
@@ -87,13 +85,14 @@ var firstSheetSelectedOff;
       ></div>
        <ul>
        <div className='sidemenu-title'> {xlsxTitle} </div>
-        {sheetTitles ? sheetTitles.map((title, index) => (
+        {dataStore.dataTaxonomyXLSX ? dataStore.dataTaxonomyXLSX.map((title, index) => (
           <li
              key={title}
+             contentEditable
              className={`${isDarkMode ? 'dark-mode' : ''} ${title === selectedSheet ? 'selected' : ''} ${
                index === 0 && isFirstSheetSelected ? 'selected' : '' // Highlight the first title
              }`}
-             onClick={() => handleSheetSelect(title)}
+             onClick={() => handleSheetSelect(index, title)}
            >
              {title}
            </li>

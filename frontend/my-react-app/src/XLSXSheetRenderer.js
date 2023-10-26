@@ -43,18 +43,14 @@ const addColumn = () => {
     dataStore.updateSheetData(selectedSheet, updatedData, header);
   };
 
-  // const handleHeaderChange = (cellIndex, value) => {
-  //   const newHeader = headerCustom.map((header, j) =>
-  //     j === cellIndex ? value : header
-  //   );
-  //   setHeaderCustom(newHeader);
-  // };
   const handleHeaderChange = (cellIndex, value) => {
     const newHeader = header.map((headerText, j) =>
       j === cellIndex ? value : headerText
     );
 
     setHeader(newHeader);
+    dataStore.updateSheetData(selectedSheet, tableData, header);
+
   };
 
 
@@ -104,7 +100,8 @@ const addColumn = () => {
          <thead>
             <tr>
               {header.map((headerText, index) => (
-                <th key={index} contentEditable   onBlur={(e) => {
+                <th key={index} contentEditable
+                onBlur={(e) => {
                     handleHeaderChange(index, e.target.textContent);
                   }}>{headerText}</th>
               ))}
@@ -130,7 +127,7 @@ const addColumn = () => {
           ))}
         </tr>
       ))}
-    </tbody> 
+    </tbody>
         </table>
         {isPopupVisible ? (
         <div

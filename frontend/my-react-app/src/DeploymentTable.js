@@ -3,8 +3,10 @@ import './DeploymentTable.css'; // Import the CSS file
 
 const DeploymentTable = () => {
   const [deployments, setDeployments] = useState([
-    { id: 1, name: 'Web App', process: 'Start', replicas: 2 },
-    { id: 2, name: 'API Server', process: 'Stop', replicas: 1 },
+    { id: 1, name: 'Web App', process: 'Start', replicas: 2 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'none'},
+    { id: 2, name: 'API Server', process: 'Stop', replicas: 1 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'none'},
+    { id: 3, name: 'SEC Verification', process: 'Stop', replicas: 1 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'jinsei/models/SEC/10-K'},
+
     // Add more initial deployments as needed
   ]);
 
@@ -31,12 +33,17 @@ const DeploymentTable = () => {
           <th className="table-header">Name</th>
           <th className="table-header">Process</th>
           <th className="table-header">Replicas</th>
+          <th className="table-header">URI</th>
+          <th className="table-header">TTL</th>
+          <th className="table-header">External</th>
+
         </tr>
       </thead>
       <tbody>
         {deployments.map((deployment) => (
           <tr key={deployment.id}>
-            <td className="table-cell">{deployment.name}</td>
+            <td className="table-cell"
+            contentEditable>{deployment.name}</td>
             <td className="table-cell">
               <select
                 className="select-input"
@@ -52,6 +59,28 @@ const DeploymentTable = () => {
                 className="number-input"
                 type="number"
                 value={deployment.replicas}
+                onChange={(e) => handleReplicasChange(deployment.id, e.target.value)}
+              />
+            </td>
+            <td className="table-cell">
+              <input
+                className="string-input"
+                type="string"
+                value={deployment.uri}
+              />
+            </td>
+            <td className="table-cell">
+              <input
+                className="number-input"
+                type="number"
+                value={deployment.TTL}
+              />
+            </td>
+            <td className="table-cell">
+              <input
+                className="string-input"
+                type="string"
+                value={deployment.external}
                 onChange={(e) => handleReplicasChange(deployment.id, e.target.value)}
               />
             </td>

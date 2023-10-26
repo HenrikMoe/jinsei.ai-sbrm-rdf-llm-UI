@@ -25,6 +25,13 @@
   border: 1px solid #ccc;
 }
 
+
+.table-cell2 {
+  padding: 10px;
+  width: 150px;
+  border: 1px solid #ccc;
+}
+
 .select-input {
   width: 100%;
   padding: 5px;
@@ -32,6 +39,11 @@
 
 .number-input {
   width: 100%;
+  padding: 5px;
+}
+
+.string-input {
+  width: 150px;
   padding: 5px;
 }
 
