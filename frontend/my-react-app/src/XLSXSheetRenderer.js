@@ -3,23 +3,22 @@
   import Footer from './Footer';
 
 
-  const XLSXSheetRenderer = ({ sheetData, sheetTitles, dataStore, xslxTitle, sheetTitle, selectedSheet }) => {
+  const XLSXSheetRenderer = ({ sheetData, sheetTitles, dataStore, xlsxTitle, sheetTitle, selectedSheet }) => {
     // Initialize tableData with an empty array
   let tableDataRef = []
-  console.log(tableDataRef)
-  let header = [];
+    let header = [];
 
 //if tableCustom.length>0
   const [tableCustom, setTableCustom] = useState([]);
   const [headerCustom, setHeaderCustom] = useState([]);
 
-  console.log(tableCustom)
 
   const addRow = () => {
     // Add a new row to the existing data
     //collumn length might effect this in custom table
     if(tableCustom.length > 0){
-      const newRow = new Array(tableCustom[0].length).fill(' ');
+      const newRow = new Array(
+        [0].length).fill(' ');
       tableDataRef = [...tableCustom, newRow];
       setTableCustom(tableDataRef)
       //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
@@ -35,9 +34,7 @@
   const addColumn = () => {
     // Add a new column to the existing data
     if(tableCustom.length > 0){
-      console.log('correct')
       tableDataRef = tableCustom.map(row => [...row, '']);
-      console.log(header)
       if(headerCustom.length >0){
         setHeaderCustom([...headerCustom, '']); // Add a blank header
         setTableCustom(tableDataRef)
@@ -46,9 +43,7 @@
       setTableCustom(tableDataRef)}
       //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
       }else{
-    console.log(tableDataRef.map(row => [...row, '']))
     tableDataRef = tableDataRef.map(row => [...row, '']);
-    console.log([...header, ''])
     setHeaderCustom([...header, '']); // Add a blank header
     setTableCustom(tableDataRef)
   //  dataStore.updateSheetData(selectedSheet, tableDataRef, header);
@@ -59,13 +54,20 @@
 
 
   const handleCellChange = (rowIndex, cellIndex, value) => {
+    console.log(rowIndex, cellIndex, value)
+    console.log(xlsxTitle)
+    console.log(selectedSheet)
     const updatedData = tableDataRef.map((row, i) =>
-      i === rowIndex
-        ? row.map((cell, j) => (j === cellIndex ? value : cell))
-        : row
-    );
+       i === rowIndex
+         ? row.map((cell, j) => (j === cellIndex ? value : cell))
+         : row
+     );
+
+    dataStore.updateSheetData(selectedSheet, updatedData, header)
+
     tableDataRef = updatedData;
-    dataStore.updateSheetData(selectedSheet, updatedData, header);
+    console.log(updatedData)
+    //dataStore.updateSheetData(selectedSheet, updatedData, header);
     console.log('STATE MANAGED CHANGES')
     console.log(dataStore)
   };
@@ -78,12 +80,10 @@
   };
 
 
-  console.log(tableDataRef.length)
   if (tableDataRef.length === 0 && sheetData) {
-      console.log('yo');
-      console.log(sheetData);
 
       header = sheetData[0];
+      //change this to dataStore.workbook.
       const initialData = sheetData.slice(1).map((row, index, arr) => {
           if (row.length < arr[arr.length - 1].length) {
             // If the current row is shorter, add empty cells to make them the same length
@@ -93,13 +93,9 @@
             return row;
           }
         });
-      console.log(initialData)
       tableDataRef= initialData;
     }
 
-  console.log(sheetData);
-  console.log(header);
-  console.log(tableDataRef)
 
 
   const [isPopupVisible, setIsPopupVisible] = useState(false);

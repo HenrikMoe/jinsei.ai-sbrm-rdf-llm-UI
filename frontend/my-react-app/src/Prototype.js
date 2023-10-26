@@ -32,7 +32,7 @@ function Prototype() {
     setSelectedSheet(sheetTitle);
   };
 
-  const [xslxTitle, setxslxTitle] = useState(null);
+  const [xlsxTitle, setxlsxTitle] = useState(null);
 
   const dataStore = useDataStore(); // Access dataStore from the context
   console.log('DATASTORE')
@@ -40,21 +40,27 @@ function Prototype() {
 
 
   const handleSheetSelect = (selectedSheetTitle) => {
-    if (workbook) {
+    if (dataStore.workbook) {
       // Find the data of the selected sheet in the workbook
-      const selectedSheetData = XLSX.utils.sheet_to_json(workbook.Sheets[selectedSheetTitle], { header: 1 });
+      const selectedSheetData = XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 });
       console.log(XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 }))
       // Set the selected sheet's data in the state
       setSelectedSheetData(selectedSheetData);
 
-      // Do something with the selected sheet data, or pass it to another component
-      console.log('Selected sheet data in Prototype:', selectedSheetData);
+      const selectedSheetDataManagmentSystem = XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 });
+      //setSelectedXLSXDataTaxonomyItem(selectedSheetDataManagmentSystem)
+
 
     }
   };
 
 
   const handleXLSXUpload = (workbook) => {
+
+    //update this to populate everything into the datamanagemnet system
+
+    //dataStore.addWorkbook(workbook)
+
     console.log(workbook);
     // Store the workbook in the state
     setWorkbook(workbook);
@@ -65,16 +71,16 @@ function Prototype() {
     console.log(dataStore)
 
     // Extract the first sheet and pass it to the rendering parent component
-    const firstSheetName = workbook.SheetNames[0];
-    const firstSheetData = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheetName], { header: 1 });
+    const firstSheetName = dataStore.workbook.SheetNames[0];
+    const firstSheetData = XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[firstSheetName], { header: 1 });
     setFirstSheetData(firstSheetData);
 
     // Also store the sheet titles
-    setSheetTitles(workbook.SheetNames);
+    setSheetTitles(dataStore.workbook.SheetNames);
 
     // Set the selected sheet's data initially to the first sheet
     setSelectedSheetData(firstSheetData);
-    setxslxTitle(workbook.Props.Title)
+    setxlsxTitle(workbook.Props.Title)
 
   };
 
@@ -98,8 +104,8 @@ function Prototype() {
         <DataStoreProvider>
         <div className='content-grid'>
           <PrototypeHeader onFileUpload={handleXLSXUpload} />
-          <PrototypeSideMenu  sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} selectedSheetData={selectedSheetData} xslxTitle={xslxTitle} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet}/>
-          <XLSXSheetRenderer sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xslxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
+          <PrototypeSideMenu  sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} selectedSheetData={selectedSheetData} xlsxTitle={xlsxTitle} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet}/>
+          <XLSXSheetRenderer sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
           <DeploymentTable />
         </div>
         </DataStoreProvider>
