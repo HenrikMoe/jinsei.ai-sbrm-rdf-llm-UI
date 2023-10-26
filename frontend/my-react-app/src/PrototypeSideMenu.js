@@ -3,7 +3,7 @@ import './PrototypeSideMenu.css'; // Import the CSS file for styling
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
 
-const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xslxTitle, handleSelectedSheet }) => {
+const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xlsxTitle, handleSelectedSheet }) => {
   const [isResizing, setIsResizing] = useState(false);
   const [initialWidth, setInitialWidth] = useState(200);
   const [initialHeight, setInitialHeight] = useState(400);
@@ -16,7 +16,8 @@ const PrototypeSideMenu = ({ sheetTitles, onSheetSelect, selectedSheetData, xslx
   const { isDarkMode } = useDarkMode();
   console.log(sheetTitles)
 
-  const [isFirstSheetSelected, setIsFirstSheetSelected] = useState(true); // Track if the first sheet is selected
+//depcerecated
+  const [isFirstSheetSelected, setIsFirstSheetSelected] = useState(false); // Track if the first sheet is selected
   const resizeRef = useRef(null); // Reference to the resize area
 
 
@@ -70,9 +71,7 @@ var firstSheetSelectedOff;
        setIsFirstSheetSelected(false);
      }
    };
- console.log(selectedSheet)
 
- console.log(xslxTitle)
 
  return (
    <div>
@@ -87,7 +86,7 @@ var firstSheetSelectedOff;
         ref={resizeRef} // Reference to the resize area
       ></div>
        <ul>
-       <div className='sidemenu-title'> {xslxTitle} </div>
+       <div className='sidemenu-title'> {xlsxTitle} </div>
         {sheetTitles ? sheetTitles.map((title, index) => (
           <li
              key={title}

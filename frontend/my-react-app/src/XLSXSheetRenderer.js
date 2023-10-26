@@ -5,52 +5,10 @@
 
   const XLSXSheetRenderer = ({ sheetData, sheetTitles, dataStore, xlsxTitle, sheetTitle, selectedSheet }) => {
     // Initialize tableData with an empty array
-  let tableDataRef = []
-
-//if tableCustom.length>0
-  const [tableCustom, setTableCustom] = useState([]);
-  const [headerCustom, setHeaderCustom] = useState([]);
 
   const [tableData, setTableData] = useState([]);
   const [header, setHeader] = useState([]);
 
-  // const addRow = () => {
-  //   // Add a new row to the existing data
-  //   //collumn length might effect this in custom table
-  //   if(tableCustom.length > 0){
-  //     const newRow = new Array(
-  //       [0].length).fill(' ');
-  //     tableDataRef = [...tableCustom, newRow];
-  //     setTableCustom(tableDataRef)
-  //     //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
-  //   }else{
-  //   const newRow = new Array(tableDataRef[0].length).fill(' ');
-  //   tableDataRef = [...tableDataRef, newRow];
-  //   setTableCustom(tableDataRef)
-  //   //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
-  // }
-  //
-  // };
-  //
-  // const addColumn = () => {
-  //   // Add a new column to the existing data
-  //   if(tableCustom.length > 0){
-  //     tableDataRef = tableCustom.map(row => [...row, '']);
-  //     if(headerCustom.length >0){
-  //       setHeaderCustom([...headerCustom, '']); // Add a blank header
-  //       setTableCustom(tableDataRef)
-  //       //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
-  //     }else{setHeaderCustom([...header, '']); // Add a blank header
-  //     setTableCustom(tableDataRef)}
-  //     //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
-  //     }else{
-  //   tableDataRef = tableDataRef.map(row => [...row, '']);
-  //   setHeaderCustom([...header, '']); // Add a blank header
-  //   setTableCustom(tableDataRef)
-  // //  dataStore.updateSheetData(selectedSheet, tableDataRef, header);
-  //
-  // }
-  // };
 
   const addRow = () => {
   const newRow = new Array(header.length).fill(' ');
@@ -85,25 +43,6 @@ const addColumn = () => {
     dataStore.updateSheetData(selectedSheet, updatedData, header);
   };
 
-  // const handleCellChange = (rowIndex, cellIndex, value) => {
-  //   console.log(rowIndex, cellIndex, value)
-  //   console.log(xlsxTitle)
-  //   console.log(selectedSheet)
-  //   const updatedData = tableDataRef.map((row, i) =>
-  //      i === rowIndex
-  //        ? row.map((cell, j) => (j === cellIndex ? value : cell))
-  //        : row
-  //    );
-  //
-  //   dataStore.updateSheetData(selectedSheet, updatedData, header)
-  //
-  //   tableDataRef = updatedData;
-  //   console.log(updatedData)
-  //   //dataStore.updateSheetData(selectedSheet, updatedData, header);
-  //   console.log('STATE MANAGED CHANGES')
-  //   console.log(dataStore)
-  // };
-
   // const handleHeaderChange = (cellIndex, value) => {
   //   const newHeader = headerCustom.map((header, j) =>
   //     j === cellIndex ? value : header
@@ -117,23 +56,6 @@ const addColumn = () => {
 
     setHeader(newHeader);
   };
-
-  // if (tableDataRef.length === 0 && sheetData) {
-  //
-  //     header = sheetData[0];
-  //     //change this to dataStore.workbook.
-  //     const initialData = sheetData.slice(1).map((row, index, arr) => {
-  //         if (row.length < arr[arr.length - 1].length) {
-  //           // If the current row is shorter, add empty cells to make them the same length
-  //           const missingCells = arr[arr.length - 1].length - row.length;
-  //           return row.concat(new Array(missingCells).fill(''));
-  //         } else {
-  //           return row;
-  //         }
-  //       });
-  //     tableDataRef= initialData;
-  //   }
-
 
 
   const [isPopupVisible, setIsPopupVisible] = useState(false);
@@ -179,17 +101,7 @@ const addColumn = () => {
         // {`xlsx-table ${isResizing ? 'resizable' : ''}`}
         // onMouseDown={handleMouseDown}
         >
-        {headerCustom.length>0 ?   <thead>
-            <tr>
-            <th className="resize-handle"></th>
-              {headerCustom.map((headerText, index) => (
-                <th key={index} contentEditable
-                onBlur={(e) => {
-                  handleHeaderChange(index, e.target.textContent);
-                }}>{headerText}</th>
-              ))}
-            </tr>
-          </thead> :  <thead>
+         <thead>
             <tr>
               {header.map((headerText, index) => (
                 <th key={index} contentEditable   onBlur={(e) => {
@@ -197,28 +109,9 @@ const addColumn = () => {
                   }}>{headerText}</th>
               ))}
             </tr>
-          </thead>}
+          </thead>
 
-      {tableCustom.length>0 ? <tbody>
-      {tableCustom.map((row, rowIndex) => (
-        <tr key={rowIndex}>
-          {row.map((cell, cellIndex) => (
-            <td
-              key={cellIndex}
-              contentEditable
-              onMouseEnter={handleCellMouseEnter}
-              onMouseLeave={handleCellMouseLeave}
-              onBlur={(e) => {
-                handleCellChange(rowIndex, cellIndex, e.target.textContent);
-              }}
-            >
-              {cell}
-            </td>
-          ))}
-        </tr>
-      ))}
-    </tbody>
-    :
+
     <tbody>
       {tableData.map((row, rowIndex) => (
         <tr key={rowIndex}>
@@ -237,7 +130,7 @@ const addColumn = () => {
           ))}
         </tr>
       ))}
-    </tbody> }
+    </tbody> 
         </table>
         {isPopupVisible ? (
         <div
@@ -252,7 +145,7 @@ const addColumn = () => {
         </div>
       ): <div></div>}
 
-        {tableDataRef.length > 0 ?
+        {tableData .length > 0 ?
           <div className="buttons-wrap">
           <button className="table-button" >//onClick={addRow}
             Add Row

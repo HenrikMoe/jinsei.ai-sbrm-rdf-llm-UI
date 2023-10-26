@@ -17,7 +17,7 @@ function Prototype() {
   const { isAuthenticated, login, logout } = useAuthentication();
   const { isDarkMode } = useDarkMode(); // Get the dark mode status
 
-  const [firstSheetData, setFirstSheetData] = useState(null);
+  //const [firstSheetData, setFirstSheetData] = useState(null);
   //const [secondSheetData, setSecondSheetData] = useState(null);
 
   const [sheetTitles, setSheetTitles] = useState(null);
@@ -46,11 +46,9 @@ function Prototype() {
       console.log(XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 }))
       // Set the selected sheet's data in the state
       setSelectedSheetData(selectedSheetData);
-
-      const selectedSheetDataManagmentSystem = XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 });
+      console.log(selectedSheetData)
+      //const selectedSheetDataManagmentSystem = XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 });
       //setSelectedXLSXDataTaxonomyItem(selectedSheetDataManagmentSystem)
-
-
     }
   };
 
@@ -73,14 +71,14 @@ function Prototype() {
     // Extract the first sheet and pass it to the rendering parent component
     const firstSheetName = dataStore.workbook.SheetNames[0];
     const firstSheetData = XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[firstSheetName], { header: 1 });
-    setFirstSheetData(firstSheetData);
+    //setFirstSheetData(firstSheetData);
 
     // Also store the sheet titles
     setSheetTitles(dataStore.workbook.SheetNames);
 
     // Set the selected sheet's data initially to the first sheet
-    setSelectedSheetData(firstSheetData);
-    setxlsxTitle(workbook.Props.Title)
+    //setSelectedSheetData(firstSheetData);
+    setxlsxTitle(dataStore.workbook.Props.Title)
 
   };
 
