@@ -6,95 +6,133 @@
   const XLSXSheetRenderer = ({ sheetData, sheetTitles, dataStore, xlsxTitle, sheetTitle, selectedSheet }) => {
     // Initialize tableData with an empty array
   let tableDataRef = []
-    let header = [];
 
 //if tableCustom.length>0
   const [tableCustom, setTableCustom] = useState([]);
   const [headerCustom, setHeaderCustom] = useState([]);
 
+  const [tableData, setTableData] = useState([]);
+  const [header, setHeader] = useState([]);
+
+  // const addRow = () => {
+  //   // Add a new row to the existing data
+  //   //collumn length might effect this in custom table
+  //   if(tableCustom.length > 0){
+  //     const newRow = new Array(
+  //       [0].length).fill(' ');
+  //     tableDataRef = [...tableCustom, newRow];
+  //     setTableCustom(tableDataRef)
+  //     //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
+  //   }else{
+  //   const newRow = new Array(tableDataRef[0].length).fill(' ');
+  //   tableDataRef = [...tableDataRef, newRow];
+  //   setTableCustom(tableDataRef)
+  //   //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
+  // }
+  //
+  // };
+  //
+  // const addColumn = () => {
+  //   // Add a new column to the existing data
+  //   if(tableCustom.length > 0){
+  //     tableDataRef = tableCustom.map(row => [...row, '']);
+  //     if(headerCustom.length >0){
+  //       setHeaderCustom([...headerCustom, '']); // Add a blank header
+  //       setTableCustom(tableDataRef)
+  //       //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
+  //     }else{setHeaderCustom([...header, '']); // Add a blank header
+  //     setTableCustom(tableDataRef)}
+  //     //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
+  //     }else{
+  //   tableDataRef = tableDataRef.map(row => [...row, '']);
+  //   setHeaderCustom([...header, '']); // Add a blank header
+  //   setTableCustom(tableDataRef)
+  // //  dataStore.updateSheetData(selectedSheet, tableDataRef, header);
+  //
+  // }
+  // };
 
   const addRow = () => {
-    // Add a new row to the existing data
-    //collumn length might effect this in custom table
-    if(tableCustom.length > 0){
-      const newRow = new Array(
-        [0].length).fill(' ');
-      tableDataRef = [...tableCustom, newRow];
-      setTableCustom(tableDataRef)
-      //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
-    }else{
-    const newRow = new Array(tableDataRef[0].length).fill(' ');
-    tableDataRef = [...tableDataRef, newRow];
-    setTableCustom(tableDataRef)
-    //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
-  }
+  const newRow = new Array(header.length).fill(' ');
+  setTableData([...tableData, newRow]);
+};
 
-  };
+const addColumn = () => {
+  const newHeader = [...header, 'New Column'];
+  setHeader(newHeader);
 
-  const addColumn = () => {
-    // Add a new column to the existing data
-    if(tableCustom.length > 0){
-      tableDataRef = tableCustom.map(row => [...row, '']);
-      if(headerCustom.length >0){
-        setHeaderCustom([...headerCustom, '']); // Add a blank header
-        setTableCustom(tableDataRef)
-        //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
-      }else{setHeaderCustom([...header, '']); // Add a blank header
-      setTableCustom(tableDataRef)}
-      //dataStore.updateSheetData(selectedSheet, tableDataRef, header);
-      }else{
-    tableDataRef = tableDataRef.map(row => [...row, '']);
-    setHeaderCustom([...header, '']); // Add a blank header
-    setTableCustom(tableDataRef)
-  //  dataStore.updateSheetData(selectedSheet, tableDataRef, header);
-
-  }
-  };
+  const newData = tableData.map((row) => [...row, '']);
+  setTableData(newData);
+};
 
 
+  useEffect(() => {
+    if (sheetData) {
+      setHeader(sheetData[0]);
+      const initialData = sheetData.slice(1);
+      setTableData(initialData);
+    }
+  }, [sheetData]);
 
   const handleCellChange = (rowIndex, cellIndex, value) => {
-    console.log(rowIndex, cellIndex, value)
-    console.log(xlsxTitle)
-    console.log(selectedSheet)
-    const updatedData = tableDataRef.map((row, i) =>
-       i === rowIndex
-         ? row.map((cell, j) => (j === cellIndex ? value : cell))
-         : row
-     );
-
-    dataStore.updateSheetData(selectedSheet, updatedData, header)
-
-    tableDataRef = updatedData;
-    console.log(updatedData)
-    //dataStore.updateSheetData(selectedSheet, updatedData, header);
-    console.log('STATE MANAGED CHANGES')
-    console.log(dataStore)
-  };
-
-  const handleHeaderChange = (cellIndex, value) => {
-    const newHeader = headerCustom.map((header, j) =>
-      j === cellIndex ? value : header
+    const updatedData = tableData.map((row, i) =>
+      i === rowIndex ? row.map((cell, j) => (j === cellIndex ? value : cell)) : row
     );
-    setHeaderCustom(newHeader);
+
+    setTableData(updatedData);
+
+    // Update the data in dataStore
+    dataStore.updateSheetData(selectedSheet, updatedData, header);
   };
 
+  // const handleCellChange = (rowIndex, cellIndex, value) => {
+  //   console.log(rowIndex, cellIndex, value)
+  //   console.log(xlsxTitle)
+  //   console.log(selectedSheet)
+  //   const updatedData = tableDataRef.map((row, i) =>
+  //      i === rowIndex
+  //        ? row.map((cell, j) => (j === cellIndex ? value : cell))
+  //        : row
+  //    );
+  //
+  //   dataStore.updateSheetData(selectedSheet, updatedData, header)
+  //
+  //   tableDataRef = updatedData;
+  //   console.log(updatedData)
+  //   //dataStore.updateSheetData(selectedSheet, updatedData, header);
+  //   console.log('STATE MANAGED CHANGES')
+  //   console.log(dataStore)
+  // };
 
-  if (tableDataRef.length === 0 && sheetData) {
+  // const handleHeaderChange = (cellIndex, value) => {
+  //   const newHeader = headerCustom.map((header, j) =>
+  //     j === cellIndex ? value : header
+  //   );
+  //   setHeaderCustom(newHeader);
+  // };
+  const handleHeaderChange = (cellIndex, value) => {
+    const newHeader = header.map((headerText, j) =>
+      j === cellIndex ? value : headerText
+    );
 
-      header = sheetData[0];
-      //change this to dataStore.workbook.
-      const initialData = sheetData.slice(1).map((row, index, arr) => {
-          if (row.length < arr[arr.length - 1].length) {
-            // If the current row is shorter, add empty cells to make them the same length
-            const missingCells = arr[arr.length - 1].length - row.length;
-            return row.concat(new Array(missingCells).fill(''));
-          } else {
-            return row;
-          }
-        });
-      tableDataRef= initialData;
-    }
+    setHeader(newHeader);
+  };
+
+  // if (tableDataRef.length === 0 && sheetData) {
+  //
+  //     header = sheetData[0];
+  //     //change this to dataStore.workbook.
+  //     const initialData = sheetData.slice(1).map((row, index, arr) => {
+  //         if (row.length < arr[arr.length - 1].length) {
+  //           // If the current row is shorter, add empty cells to make them the same length
+  //           const missingCells = arr[arr.length - 1].length - row.length;
+  //           return row.concat(new Array(missingCells).fill(''));
+  //         } else {
+  //           return row;
+  //         }
+  //       });
+  //     tableDataRef= initialData;
+  //   }
 
 
 
@@ -180,7 +218,7 @@
     </tbody>
     :
     <tbody>
-      {tableDataRef.map((row, rowIndex) => (
+      {tableData.map((row, rowIndex) => (
         <tr key={rowIndex}>
           {row.map((cell, cellIndex) => (
             <td
