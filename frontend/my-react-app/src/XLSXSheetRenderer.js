@@ -192,7 +192,9 @@ const addColumn = () => {
           </thead> :  <thead>
             <tr>
               {header.map((headerText, index) => (
-                <th key={index}>{headerText}</th>
+                <th key={index} contentEditable   onBlur={(e) => {
+                    handleHeaderChange(index, e.target.textContent);
+                  }}>{headerText}</th>
               ))}
             </tr>
           </thead>}
