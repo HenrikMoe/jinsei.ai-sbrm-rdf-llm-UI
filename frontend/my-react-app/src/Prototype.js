@@ -28,6 +28,7 @@ function Prototype() {
   const [selectedSheetData, setSelectedSheetData] = useState(null);
   const [workbook, setWorkbook] = useState(null);
   const [selectedSheet, setSelectedSheet] = useState(null);
+
   const handleSelectedSheet = (sheetTitle) => {
     setSelectedSheet(sheetTitle);
   };
@@ -42,14 +43,14 @@ function Prototype() {
 
 
   const handleSheetSelect = (selectedSheetTitle) => {
-    if (dataStore.workbook) {
+    if (dataStore.workbookXLSX) {
       // Find the data of the selected sheet in the workbook
       //this is now showing the dited title
       console.log('newTitleDone')
       console.log(selectedSheetTitle)
-      const selectedSheetData = XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 });
+      const selectedSheetData = XLSX.utils.sheet_to_json(dataStore.workbookXLSX.Sheets[selectedSheetTitle], { header: 1 });
 
-      console.log(XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 }))
+      console.log(XLSX.utils.sheet_to_json(dataStore.workbookXLSX.Sheets[selectedSheetTitle], { header: 1 }))
       // Set the selected sheet's data in the state
       setSelectedSheetData(selectedSheetData);
       console.log(selectedSheetData)
@@ -74,20 +75,20 @@ function Prototype() {
     dataStore.initializeDataTaxonomyXLSX()
     console.log('ADDED WORKBOOK TO DATASTORE')
     console.log(dataStore)
-    
+
 
 
     // Extract the first sheet and pass it to the rendering parent component
-    const firstSheetName = dataStore.workbook.SheetNames[0];
-    const firstSheetData = XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[firstSheetName], { header: 1 });
+    const firstSheetName = dataStore.workbookXLSX.SheetNames[0];
+    const firstSheetData = XLSX.utils.sheet_to_json(dataStore.workbookXLSX.Sheets[firstSheetName], { header: 1 });
     //setFirstSheetData(firstSheetData);
 
     // Also store the sheet titles
-    setSheetTitles(dataStore.workbook.SheetNames);
+    setSheetTitles(dataStore.workbookXLSX.SheetNames);
 
     // Set the selected sheet's data initially to the first sheet
     //setSelectedSheetData(firstSheetData);
-    setxlsxTitle(dataStore.workbook.Props.Title)
+    setxlsxTitle(dataStore.workbookXLSX.Props.Title)
 
   };
 

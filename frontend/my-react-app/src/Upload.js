@@ -41,12 +41,10 @@ const closeDropdown = () => {
     <div className={`popup-container ${isDarkMode ? 'dark-mode' : ''}`}>
     <div ref={dropdownRef} className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
       <button className="dropdown-button" onClick={toggleDropdown}>
-        Update &or;
+        Versions &or;
       </button>
       <div className="dropdown-content">
-        <div className="dropdown-item">Save</div>
-        <div className="dropdown-item">Revert</div>
-        <div className="dropdown-item">Versions</div>
+        <div className="dropdown-item">List File Versions</div>
         {/* Add other dropdown items here */}
       </div>
     </div>

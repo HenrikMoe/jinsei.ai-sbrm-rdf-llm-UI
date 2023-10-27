@@ -69,7 +69,7 @@ const PrototypeSideMenu = ({  sheetTitles, onSheetSelect, sheetData, xlsxTitle, 
 
   const handleSheetSelect = (index, sheetTitle) => {
    // Handle sheet selection here
-   if(dataStore.workbook){
+   if(dataStore.workbookXLSX){
      console.log('Selecting sheet:', sheetTitle);
      setSelectedSheet(sheetTitle);
      onSheetSelect(sheetTitle);
@@ -102,8 +102,8 @@ const PrototypeSideMenu = ({  sheetTitles, onSheetSelect, sheetData, xlsxTitle, 
       >
       </div>
        <ul>
-       <div className='sidemenu-title'> {dataStore.workbook ? xlsxTitle : null} </div>
-        {dataStore.workbook ? dataStore.dataTaxonomyXLSX.map((title, index) => (
+       <div className='sidemenu-title'> {dataStore.workbookXLSX ? xlsxTitle : null} </div>
+        {dataStore.workbookXLSX ? dataStore.dataTaxonomyXLSX.map((title, index) => (
           <li
              key={title}
              contentEditable

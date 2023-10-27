@@ -105,7 +105,7 @@ const addColumn = () => {
         // onMouseDown={handleMouseDown}
         >
          <thead>
-         {dataStore.workbook ?
+         {dataStore.workbookXLSX ?
             <tr>
               {header.map((headerText, index) => (
                 <th key={index} contentEditable
@@ -119,7 +119,7 @@ const addColumn = () => {
 
 
     <tbody>
-      {dataStore.workbook ? tableData.map((row, rowIndex) => (
+      {dataStore.workbookXLSX ? tableData.map((row, rowIndex) => (
         <tr key={rowIndex}>
           {row.map((cell, cellIndex) => (
             <td
