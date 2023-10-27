@@ -24,13 +24,16 @@ const addColumn = () => {
   setTableData(newData);
 };
 
- 
+
 
 
   useEffect(() => {
     if (sheetData) {
+      console.log('sheetdata xlsx render initing ')
+      console.log('header' + sheetData[0])
       setHeader(sheetData[0]);
       const initialData = sheetData.slice(1);
+      console.log(initialData)
       setTableData(initialData);
     }
   }, [sheetData]);
