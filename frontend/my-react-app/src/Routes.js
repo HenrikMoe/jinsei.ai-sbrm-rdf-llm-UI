@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'; // Import useEffect
+import React, { useEffect, useState } from 'react'; // Import useEffect
 import { Routes, Route, Outlet, useLocation } from 'react-router-dom'; // Import Outlet
 import Header from './Header'; // Import the Header component
 import Homepage from './Homepage';
@@ -10,6 +10,7 @@ import About from './About'; // Import TermsOfService component
 import Footer from './Footer'; // Replace with the actual path to your Footer component file
 import { DarkModeProvider } from './DarkModeContext';
 import { DataStoreProvider } from './DataStore'; // Import the DataStoreProvider
+import ChatGBT from './ChatGBT';
 
 const AppRoutes = () => {
   const location = useLocation(); // Get the current location
@@ -24,6 +25,7 @@ const AppRoutes = () => {
     <DarkModeProvider>
     <DataStoreProvider>
       <Header currentRoute={location.pathname} /> {/* Include the Header component */}
+      <ChatGBT />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/prototype" element={<Prototype />} />

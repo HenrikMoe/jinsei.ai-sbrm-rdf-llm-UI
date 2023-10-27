@@ -1,0 +1,64 @@
+/* chatgpt.css */
+
+/* Container styles */
+.chat-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+.chat-form {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.chat-form input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.chat-form button {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  margin-top: 150px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chat-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Response styles */
+.chat-response {
+  margin-top: 20px;
+}
+
+.chat-response h3 {
+  font-weight: bold;
+}
+
+.chat-response p {
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
