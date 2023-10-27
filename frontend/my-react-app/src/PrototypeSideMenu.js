@@ -69,10 +69,18 @@ const PrototypeSideMenu = ({  sheetTitles, onSheetSelect, sheetData, xlsxTitle, 
 
   const handleSheetSelect = (index, sheetTitle) => {
    // Handle sheet selection here
-   console.log('Selecting sheet:', sheetTitle);
-   setSelectedSheet(sheetTitle);
-   onSheetSelect(sheetTitle);
-   handleSelectedSheet(sheetTitle); // Call the function to update selectedSheet
+   if(dataStore.workbook){
+     console.log('Selecting sheet:', sheetTitle);
+     setSelectedSheet(sheetTitle);
+     onSheetSelect(sheetTitle);
+     handleSelectedSheet(sheetTitle); // Call the function to update selectedShee
+   }else{
+     console.log('deleted workbook')
+     console.log(index, sheetTitle)
+     handleSelectedSheet(''); // Call the function to update selectedShee
+     setSelectedSheet('');
+     onSheetSelect('');
+   }
    };
 
    const handleTitleChange = (index, title, titleChange) => {

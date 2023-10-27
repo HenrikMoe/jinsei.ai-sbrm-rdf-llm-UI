@@ -74,6 +74,8 @@ function Prototype() {
     dataStore.initializeDataTaxonomyXLSX()
     console.log('ADDED WORKBOOK TO DATASTORE')
     console.log(dataStore)
+    
+
 
     // Extract the first sheet and pass it to the rendering parent component
     const firstSheetName = dataStore.workbook.SheetNames[0];
