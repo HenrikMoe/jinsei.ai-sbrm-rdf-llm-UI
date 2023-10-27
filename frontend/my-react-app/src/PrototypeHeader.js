@@ -22,7 +22,8 @@ const PrototypeHeader = ({onFileUpload, dataStore}) => {
 console.log(onFileUpload)
 
 
-
+// <Transform />
+// <Pipeline />
 
 
 
@@ -30,23 +31,25 @@ console.log(onFileUpload)
 
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
       <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
-      <div className='titlez'>Luciano - git:main | version 0.111</div>
-
-      <div className='button-wrap'>
-        <Model />
-        <Popup onFileUpload={onFileUpload} />
-        <Delete  dataStore={dataStore} />
-        <Upload />
-        <Transform />
-        <Pipeline />
-
-      </div>
       <div className='importButton1'>Share</div>
       <div className='container'>
        <Projects /></div>
       <div className='container'>
       <Files /></div>
       <div className='importButton1'>New</div>
+
+      <div className='button-wrap'>
+        <Model />
+        <Popup onFileUpload={onFileUpload} />
+        <Delete  dataStore={dataStore} />
+        <Upload />
+
+
+      </div>
+  
+
+      <div className='titlez'>Luciano - git:main | version 0.111</div>
+
 
     </div>
   );
