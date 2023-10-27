@@ -3,9 +3,10 @@ import './DeploymentTable.css'; // Import the CSS file
 
 const DeploymentTable = () => {
   const [deployments, setDeployments] = useState([
-    { id: 1, name: 'Web App', process: 'Start', replicas: 2 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'none'},
+    { id: 1, name: 'Export XBRL', process: 'Start', replicas: 2 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'none'},
     { id: 2, name: 'API Server', process: 'Stop', replicas: 1 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'none'},
     { id: 3, name: 'SEC Verification', process: 'Stop', replicas: 1 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'jinsei/models/SEC/10-K'},
+    { id: 4, name: 'Export XLSX', process: 'Stop', replicas: 1 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'jinsei/models/SEC/10-K'},
 
     // Add more initial deployments as needed
   ]);

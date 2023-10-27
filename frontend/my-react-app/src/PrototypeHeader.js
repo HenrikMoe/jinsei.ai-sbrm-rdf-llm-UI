@@ -12,6 +12,7 @@ import Pipeline from './Pipeline'
 import Files from './Files'
 import Projects from './Projects'
 import Model from './Model'
+
 //<Project onFileUpload={onFileUpload}/>
 // <Upload onFileUpload={onFileUpload}/>
 // <Delete onFileUpload={onFileUpload} />
@@ -31,22 +32,22 @@ console.log(onFileUpload)
 
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
       <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
-      <div className='importButton1'>Share</div>
+
+
+      <div className='button-wrap'>
       <div className='container'>
        <Projects /></div>
       <div className='container'>
       <Files /></div>
-      <div className='importButton1'>New</div>
-
-      <div className='button-wrap'>
         <Model />
         <Popup onFileUpload={onFileUpload} />
         <Delete  dataStore={dataStore} />
         <Upload />
-
-
       </div>
-  
+      <div className='importButton1'>Share</div>
+      <div className='importButton1'>New</div>
+
+
 
       <div className='titlez'>Luciano - git:main | version 0.111</div>
 

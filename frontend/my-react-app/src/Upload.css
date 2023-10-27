@@ -104,11 +104,13 @@
   padding-right: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
-
-
-
-
 }
+
+
+.button-space{
+  margin-top: 20px;
+}
+
 
 .dark-mode {
   background-color: #000;

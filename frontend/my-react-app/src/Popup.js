@@ -5,7 +5,7 @@ import { useDarkMode } from './DarkModeContext';
 import XLSXFileHandler from './XLSXFileHandler';
 import CSVFileHandler from './CSVFileHandler'
 import JSONfileHandler from './JSONfileHandler'
-
+import XBRLFilesHandler from './XBRLFilesHandler'
 
 const Popup = ({ onFileUpload }) => {
   const { isDarkMode } = useDarkMode();
@@ -47,6 +47,7 @@ const Popup = ({ onFileUpload }) => {
         <XLSXFileHandler closeDropdown={closeDropdown} onFileUpload={onFileUpload} />
         <CSVFileHandler onFileUpload={onFileUpload} />
         <JSONfileHandler onFileUpload={onFileUpload} />
+        <XBRLFilesHandler onFileUpload={onFileUpload} />
         {/* Add other dropdown items here */}
       </div>
     </div>
