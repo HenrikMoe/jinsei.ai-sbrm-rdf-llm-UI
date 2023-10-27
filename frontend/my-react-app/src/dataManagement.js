@@ -5,30 +5,30 @@ const dataStore = {
   //profject and user stuff
 
   workbook: null, // Property to store the workbook of the XLSX //parent of dataTaxonomy and dataItems
-
-
   dataTaxonomyXLSX: null,
-
 //call this to populate the data structure, and call the data struct in the component
   initializeDataTaxonomyXLSX: ()=>{
     dataStore.dataTaxonomyXLSX = dataStore.workbook.SheetNames
   },
+  //from an edit to the taxonomy, make another for an addition and or deletion
+  updateDataTaxonomyXLSX: (index, titleChange) => {
+    if (dataStore.dataTaxonomyXLSX[index]) {
+      // Update the title in dataTaxonomyXLSX
+      dataStore.dataTaxonomyXLSX[index] = titleChange;
 
-//from an edit to the taxonomy, make another for an addition and or deletion
-updateDataTaxonomyXLSX: (index, titleChange) => {
-  if (dataStore.dataTaxonomyXLSX[index]) {
-    // Update the title in dataTaxonomyXLSX
-    dataStore.dataTaxonomyXLSX[index] = titleChange;
-
-    // Also update the title in the Sheets object of the workbook
-    if (dataStore.workbook && dataStore.workbook.SheetNames[index]) {
-      const oldTitle = dataStore.workbook.SheetNames[index];
-      dataStore.workbook.SheetNames[index] = titleChange;
-      dataStore.workbook.Sheets[titleChange] = dataStore.workbook.Sheets[oldTitle];
-      delete dataStore.workbook.Sheets[oldTitle];
+      // Also update the title in the Sheets object of the workbook
+      if (dataStore.workbook && dataStore.workbook.SheetNames[index]) {
+        const oldTitle = dataStore.workbook.SheetNames[index];
+        dataStore.workbook.SheetNames[index] = titleChange;
+        dataStore.workbook.Sheets[titleChange] = dataStore.workbook.Sheets[oldTitle];
+        delete dataStore.workbook.Sheets[oldTitle];
+      }
     }
-  }
-},
+  },
+  clearXLSXworkbook: ()=>{
+    dataStore.workbook = null
+    dataStore.dataTaxonomyXLSX = null
+  },
 
 
   //change the side menu so that these functions are called and the data object is used to render that list

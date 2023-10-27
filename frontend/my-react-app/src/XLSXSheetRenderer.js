@@ -90,6 +90,7 @@ const addColumn = () => {
  }, []);
 
 
+
     return (
       <div className='table-wrap'>
       <div className='elementTitle'>Data Render</div>
@@ -98,6 +99,7 @@ const addColumn = () => {
         // onMouseDown={handleMouseDown}
         >
          <thead>
+         {dataStore.workbook ?
             <tr>
               {header.map((headerText, index) => (
                 <th key={index} contentEditable
@@ -105,12 +107,13 @@ const addColumn = () => {
                     handleHeaderChange(index, e.target.textContent);
                   }}>{headerText}</th>
               ))}
-            </tr>
+            </tr> : <tr>null</tr>
+            }
           </thead>
 
 
     <tbody>
-      {tableData.map((row, rowIndex) => (
+      {dataStore.workbook ? tableData.map((row, rowIndex) => (
         <tr key={rowIndex}>
           {row.map((cell, cellIndex) => (
             <td
@@ -126,7 +129,7 @@ const addColumn = () => {
             </td>
           ))}
         </tr>
-      ))}
+      )): <tr><td>hello</td></tr>}
     </tbody>
         </table>
         {isPopupVisible ? (

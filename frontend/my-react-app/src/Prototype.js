@@ -106,8 +106,8 @@ function Prototype() {
         //pass a lot of vars to prototype header for each functionality
         <DataStoreProvider>
         <div className='content-grid'>
-          <PrototypeHeader onFileUpload={handleXLSXUpload} />
-          <PrototypeSideMenu  dataStore={dataStore} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} selectedSheetData={selectedSheetData} xlsxTitle={xlsxTitle} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet}/>
+          <PrototypeHeader onFileUpload={handleXLSXUpload} dataStore={dataStore}/>
+          <PrototypeSideMenu  dataStore={dataStore} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} selectedSheetData={selectedSheetData} xlsxTitle={xlsxTitle} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} />
           <XLSXSheetRenderer  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
           <DeploymentTable />
         </div>

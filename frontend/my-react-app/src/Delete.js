@@ -7,7 +7,7 @@ import CSVFileHandler from './CSVFileHandler'
 import JSONfileHandler from './JSONfileHandler'
 
 
-const Delete = ({ onFileUpload }) => {
+const Delete = ({ onFileUpload, dataStore }) => {
   const { isDarkMode } = useDarkMode();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -23,6 +23,10 @@ const Delete = ({ onFileUpload }) => {
 const closeDropdown = () => {
   setIsDropdownOpen(false);
 };
+
+const deleteFile = () =>{
+  dataStore.clearXLSXworkbook()
+}
 
     useEffect(() => {
     const handleClickOutside = (event) => {
@@ -45,7 +49,7 @@ const closeDropdown = () => {
         Delete &or;
       </button>
       <div className="dropdown-content">
-        <div className="dropdown-item">Delete File</div>
+        <div className="dropdown-item" onClick={deleteFile}>Delete File</div>
         {/* Add other dropdown items here */}
       </div>
     </div>

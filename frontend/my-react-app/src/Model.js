@@ -56,13 +56,13 @@ const Model = ({ updateForm }) => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('Platinum XBRL NAIC')}>
+          <div className="dropdown-item" onClick={() => handleModelSelect('Platinum XBRL')}>
             Platinum XBRL
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('Asset NAIC Standard')}>
+          <div className="dropdown-item" onClick={() => handleModelSelect('Asset Standard')}>
             Asset Standard
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('Liability NAIC Standard')}>
+          <div className="dropdown-item" onClick={() => handleModelSelect('Liability Standard')}>
             Liability Standard
           </div>
           {/* Add other dropdown items here */}

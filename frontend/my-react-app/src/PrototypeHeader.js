@@ -16,7 +16,7 @@ import Model from './Model'
 // <Upload onFileUpload={onFileUpload}/>
 // <Delete onFileUpload={onFileUpload} />
 
-const PrototypeHeader = ({onFileUpload}) => {
+const PrototypeHeader = ({onFileUpload, dataStore}) => {
   const { isDarkMode } = useDarkMode();
   const [xlsxData, setXLSXData] = useState(null);
 console.log(onFileUpload)
@@ -35,9 +35,9 @@ console.log(onFileUpload)
       <div className='button-wrap'>
         <Model />
         <Popup onFileUpload={onFileUpload} />
+        <Delete  dataStore={dataStore} />
         <Upload />
         <Transform />
-        <Delete  />
         <Pipeline />
 
       </div>

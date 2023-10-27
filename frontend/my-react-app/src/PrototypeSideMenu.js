@@ -82,10 +82,11 @@ const PrototypeSideMenu = ({ dataStore, sheetTitles, onSheetSelect, selectedShee
      <div
         className="resize-handle"
         ref={resizeRef} // Reference to the resize area
-      ></div>
+      >
+      </div>
        <ul>
-       <div className='sidemenu-title'> {xlsxTitle} </div>
-        {dataStore.dataTaxonomyXLSX ? dataStore.dataTaxonomyXLSX.map((title, index) => (
+       <div className='sidemenu-title'> {dataStore.workbook ? xlsxTitle : null} </div>
+        {dataStore.workbook ? dataStore.dataTaxonomyXLSX.map((title, index) => (
           <li
              key={title}
              contentEditable
