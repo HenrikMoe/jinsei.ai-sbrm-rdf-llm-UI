@@ -46,10 +46,10 @@ const deleteFile = () =>{
     <div className={`popup-container ${isDarkMode ? 'dark-mode' : ''}`}>
     <div ref={dropdownRef} className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
       <button className="dropdown-button" onClick={toggleDropdown}>
-        Delete &or;
+        Clear &or;
       </button>
       <div className="dropdown-content">
-        <div className="dropdown-item" onClick={deleteFile}>Delete File</div>
+        <div className="dropdown-item" onClick={deleteFile}>Clear Workspace</div>
         {/* Add other dropdown items here */}
       </div>
     </div>

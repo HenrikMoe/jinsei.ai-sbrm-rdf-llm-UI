@@ -62,7 +62,7 @@ function Prototype() {
     //update this to populate everything into the datamanagemnet system
 
     //dataStore.addWorkbook(workbook)
-
+    console.log('handlingfileupload')
     console.log(workbook);
     // Store the workbook in the state
     setWorkbook(workbook);
