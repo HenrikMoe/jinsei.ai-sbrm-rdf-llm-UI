@@ -57,13 +57,25 @@ const Model = ({ updateForm }) => {
             />
           </div>
           <div className="dropdown-item" onClick={() => handleModelSelect('Platinum XBRL')}>
-            Platinum XBRL
+            Accounting Equation (Platinum)
           </div>
           <div className="dropdown-item" onClick={() => handleModelSelect('Asset Standard')}>
-            Asset Standard
+            SFAC 6 (Platinum)
           </div>
           <div className="dropdown-item" onClick={() => handleModelSelect('Liability Standard')}>
-            Liability Standard
+            SFAC 8 (Platinum)
+          </div>
+          <div className="dropdown-item" onClick={() => handleModelSelect('Liability Standard')}>
+            Common (Platinum)
+          </div>
+          <div className="dropdown-item" onClick={() => handleModelSelect('Liability Standard')}>
+            MINI (Platinum)
+          </div>
+          <div className="dropdown-item" onClick={() => handleModelSelect('Liability Standard')}>
+            PROOF (Platinum)
+          </div>
+          <div className="dropdown-item" onClick={() => handleModelSelect('Liability Standard')}>
+            Simplified Disclosures for For-Profit and Not-for-Profit Tier 2 Entities (AASB 1060) (Seattle Method, Golden Version)
           </div>
           {/* Add other dropdown items here */}
         </div>
