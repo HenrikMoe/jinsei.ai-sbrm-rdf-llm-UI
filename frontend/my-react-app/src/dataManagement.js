@@ -5,16 +5,19 @@ const dataStore = {
   workbookXLSX: null,
   workbookCSV: null,
   workbookJSON: null,
+  workbookXBRL: null,
 
   dataTaxonomyXLSX: null,
   dataTaxonomyJSON: null,
   dataTaxonomyCSV: null,
+  dataTaxonomyXBRL: null,
 
   initializeDataTaxonomyXLSX: ()=>{
     dataStore.dataTaxonomyXLSX = dataStore.workbookXLSX.SheetNames
   },
   initializeDataTaxonomyCSV: ()=>{},
   initializeDataTaxonomyJSON: ()=>{},
+  initializeDataTaxonomyXBRL: ()=>{},
 
   //from an edit to the taxonomy, make another for an addition and or deletion
   updateDataTaxonomyXLSX: (index, titleChange) => {
@@ -33,6 +36,7 @@ const dataStore = {
   },
   updateDataTaxonomyCSV: ()=>{},
   updateDataTaxonomyJSON: ()=>{},
+  updateDataTaxonomyXBRL: ()=>{},
 
   // | Delete
   clearXLSXworkbook: ()=>{
@@ -41,6 +45,8 @@ const dataStore = {
   },
   clearJSONworkbook: ()=>{},
   clearCSVworkbook: ()=>{},
+  clearXBRLworkbook: ()=>{},
+
 
   //change to by type | Create
   addWorkbook: (workbook) => {
@@ -48,6 +54,7 @@ const dataStore = {
    },
   addWorkbookJSON: ()=>{},
   addWorkbookCSV: ()=>{},
+  addWorkbookXBRL: ()=>{},
 
   //change to by type | Update
   updateSheetData: (sheetName, sheetData, header) => {  //update sheet data on a cell edit for a sheet
@@ -60,9 +67,11 @@ const dataStore = {
         dataStore.workbookXLSX.Sheets[sheetName] = store
 
     }
-  },
+  }, //change to XSLX
   updateSheetDataCSV: ()=>{},
   updateSheetDataJSON: ()=>{},
+  updateSheetDataXBRL: ()=>{},
+
 
   versionUpdate: ()=>{
     //insert this above ervey mutation of data
@@ -76,6 +85,22 @@ const dataStore = {
   transformToCSV: ()=>{},
   transformToJSON: ()=>{},
   transformToXLSX: ()=>{},
+  transformToXBRL: ()=>{},
+
+  transformToHTML: ()=>{},
+  transformToDocX: ()=>{},
+  transformToPDF: ()=>{},
+  transformToAdobeInDesign: ()=>{},
+  tranformToRDF: ()=>{},
+
+  htmlWorkbook: null,
+  dockXworkbook: null,
+  pdfWorkbook: null,
+  adobeInDesignWorkbook: null,
+  rdfWorkbook: null,
+
+  addTransformation: ()=>{},
+  xWorkbook: null, //PROLOG, GSQL, SQL.
 
   overLaidModel: null,
   changeOverLaidModel: ()=>{},
