@@ -3,17 +3,18 @@
   import Footer from './Footer';
 
 
-  const XLSXSheetRenderer = ({ sheetData, sheetTitles, dataStore, xlsxTitle, sheetTitle, selectedSheet }) => {
+  const XLSXSheetRenderer = ({increment, sheetData, sheetTitles, dataStore, xlsxTitle, sheetTitle, selectedSheet, runTogether }) => {
     // Initialize tableData with an empty array
 
   const [tableData, setTableData] = useState([]);
   const [header, setHeader] = useState([]);
 
+  console.log('running on datastore change')
 
   const addRow = () => {
   const newRow = new Array(header.length).fill(' ');
-  setTableData([...tableData, newRow]);
-};
+    setTableData([...tableData, newRow]);
+  };
 
 const addColumn = () => {
   const newHeader = [...header, 'New Column'];
@@ -22,6 +23,8 @@ const addColumn = () => {
   const newData = tableData.map((row) => [...row, '']);
   setTableData(newData);
 };
+
+ 
 
 
   useEffect(() => {
@@ -49,7 +52,7 @@ const addColumn = () => {
     );
 
     setHeader(newHeader);
-    dataStore.updateSheetData(selectedSheet, tableData, header);
+    dataStore.updateSheetData(selectedSheet, tableData, newHeader);
 
   };
 

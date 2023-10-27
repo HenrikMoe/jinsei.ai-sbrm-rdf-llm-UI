@@ -38,6 +38,8 @@ function Prototype() {
   console.log('DATASTORE')
   console.log(dataStore)
 
+  //const runTogether
+
 
   const handleSheetSelect = (selectedSheetTitle) => {
     if (dataStore.workbook) {
@@ -88,6 +90,9 @@ function Prototype() {
   };
 
 
+  const [count, setCount] = useState(0);
+
+
 
 
   const openModal = () => {
@@ -107,7 +112,7 @@ function Prototype() {
         <DataStoreProvider>
         <div className='content-grid'>
           <PrototypeHeader onFileUpload={handleXLSXUpload} dataStore={dataStore}/>
-          <PrototypeSideMenu  dataStore={dataStore} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} selectedSheetData={selectedSheetData} xlsxTitle={xlsxTitle} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} />
+          <PrototypeSideMenu  sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} />
           <XLSXSheetRenderer  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
           <DeploymentTable />
         </div>

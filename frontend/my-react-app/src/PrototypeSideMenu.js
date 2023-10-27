@@ -3,7 +3,7 @@ import './PrototypeSideMenu.css'; // Import the CSS file for styling
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
 
-const PrototypeSideMenu = ({ dataStore, sheetTitles, onSheetSelect, selectedSheetData, xlsxTitle, handleSelectedSheet }) => {
+const PrototypeSideMenu = ({  sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet }) => {
   const [isResizing, setIsResizing] = useState(false);
   const [initialWidth, setInitialWidth] = useState(200);
   const [initialHeight, setInitialHeight] = useState(400);
@@ -11,10 +11,12 @@ const PrototypeSideMenu = ({ dataStore, sheetTitles, onSheetSelect, selectedShee
   const [currentHeight, setCurrentHeight] = useState(initialHeight);
   const resizeBorderWidth = 35;
 
+  console.log('running on datastore change')
+
   const [selectedSheet, setSelectedSheet] = useState(null); // Track the selected sheet title
 
   const { isDarkMode } = useDarkMode();
-  console.log(sheetTitles)
+  console.log(dataStore)
 
 //depcerecated
   const [isFirstSheetSelected, setIsFirstSheetSelected] = useState(false); // Track if the first sheet is selected
@@ -57,6 +59,13 @@ const PrototypeSideMenu = ({ dataStore, sheetTitles, onSheetSelect, selectedShee
     };
   }, [isResizing, initialWidth, initialHeight, currentWidth, currentHeight]);
 
+
+
+  useEffect(() => {
+    if (sheetData) {
+      const initialData = sheetData.slice(1);
+    }
+  }, [sheetData]);
 
   const handleSheetSelect = (index, sheetTitle) => {
    // Handle sheet selection here
