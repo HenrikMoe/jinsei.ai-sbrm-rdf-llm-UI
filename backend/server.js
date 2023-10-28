@@ -8,7 +8,8 @@ const axios = require('axios');
 
 // Use the 'cors' middleware to enable CORS for all routes
 app.use(cors());
-
+const dotenv = require('dotenv');
+dotenv.config();
 app.use(express.json());
 
 // Define a route that doesn't require authentication
@@ -17,8 +18,8 @@ app.get('/api/some-route', (req, res) => {
   res.json({ message: 'This route does not require authentication.' });
 });
 
-const OPENAI_API_KEY = process.env.Chat_Key
-
+const { CHAT_KEY } = process.env;
+console.log(CHAT_KEY)
 app.post('/api/chatgpt', async (req, res) => {
   const { prompt } = req.body; // Extract the 'prompt' from the request body
 
@@ -32,7 +33,7 @@ app.post('/api/chatgpt', async (req, res) => {
 
   const headers = {
     'Content-Type': 'application/json',
-    Authorization: `Bearer ${OPENAI_API_KEY}`,
+    Authorization: `Bearer ${CHAT_KEY}`,
   };
 
   try {
@@ -59,8 +60,7 @@ app.listen(port, () => {
 });
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const dotenv = require('dotenv');
-dotenv.config();
+
 
 const { MONGODB_URI } = process.env;
 
