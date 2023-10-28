@@ -22,7 +22,7 @@ const { CHAT_KEY } = process.env;
 console.log(CHAT_KEY)
 app.post('/api/chatgpt', async (req, res) => {
   const { prompt } = req.body; // Extract the 'prompt' from the request body
-
+  console.log(prompt)
   const chatgptRequest = {
     model: 'gpt-3.5-turbo',
     messages: [
