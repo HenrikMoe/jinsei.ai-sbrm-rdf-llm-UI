@@ -25,7 +25,6 @@ const AppRoutes = () => {
     <DarkModeProvider>
     <DataStoreProvider>
       <Header currentRoute={location.pathname} /> {/* Include the Header component */}
-      <ChatGBT />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/prototype" element={<Prototype />} />
@@ -34,6 +33,7 @@ const AppRoutes = () => {
         <Route path="/timeline" element={<Timeline />} /> {/* Add TermsOfService component */}
         <Route path="/about" element={<About />} /> {/* Add TermsOfService component */}
       </Routes>
+      <ChatGBT />
       <Footer /> {/* Include the Header component */}
       </DataStoreProvider>
     </DarkModeProvider>

@@ -9,11 +9,12 @@
   border-radius: 5px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 /* Form styles */
 .chat-form {
-  margin-top: 150px;
   display: flex;
   flex-direction: column;
 }
@@ -36,7 +37,6 @@
   color: #fff;
   border: none;
   border-radius: 3px;
-  margin-top: 150px;
   padding: 10px 15px;
   font-size: 16px;
   cursor: pointer;

@@ -16,7 +16,7 @@ const ChatGBT = () => {
   return (
     <div className="chat-container">
       <form className="chat-form" onSubmit={handleSubmit}>
-        <label htmlFor="input">Input:</label>
+        <label htmlFor="input">Jinsei Chat:</label>
         <input
           type="text"
           id="input"
