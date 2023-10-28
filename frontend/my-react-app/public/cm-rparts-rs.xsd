@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Created by Henrik Moe and Charles Hoffman, CPA 2023-10-27 -->
+<schema
+	xmlns='http://www.w3.org/2001/XMLSchema'
+	xmlns:xbrli='http://www.xbrl.org/2003/instance'
+	xmlns:link='http://www.xbrl.org/2003/linkbase'
+	xmlns:xlink='http://www.w3.org/1999/xlink'
+	elementFormDefault='qualified'
+	attributeFormDefault='unqualified'
+	xmlns:rpart-rs='http://xbrlsite.com/seattlemethod/cm/rparts-rs'
+	targetNamespace='http://xbrlsite.com/seattlemethod/cm/rparts-rs'
+	>
+
+  <annotation>
+    <appinfo>
+      <!-- Reference resouorce roles -->
+
+			<link:roleType roleURI="http://xbrlsite.com/seattlemethod/cm/roles/reportingStyle" id="reportingStyle">
+        <link:definition>A reference that points to a reporting style for a report.</link:definition>
+        <link:usedOn>link:reference</link:usedOn>
+      </link:roleType>
+
+    </appinfo>
+  </annotation>
+
+  <import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd"/>
+
+
+	<element id="rpart_Description" name="Description" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Description of resource.</documentation>
+    </annotation>
+  </element>
+
+	<element id="rpart_ReportingStyleCode" name="ReportingStyleCode" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Reporting style code.</documentation>
+    </annotation>
+  </element>
+
+	<element id="rpart_ReportingStyleLink" name="ReportingStyleLink" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Reporting style rules link (to XBRL taxonomy schema).</documentation>
+    </annotation>
+  </element>
+
+	<element id="rpart_ReportingChecklistLink" name="ReportingChecklistLink" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Reporting checklist rules link (to XBRL linkbase or XBRL taxonomy schema).</documentation>
+    </annotation>
+  </element>
+
+	<element id="rpart_TypeSubtypeRulesLink" name="TypeSubtypeRulesLink" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Type subtype relations rules link (to XBRL linkbase or XBRL taxonomy schema).</documentation>
+    </annotation>
+  </element>
+
+	<element id="rpart_TemplatesLink" name="TemplatesLink" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Link to templates for a reporting style (to XBRL linkbase or XBRL taxonomy schema).</documentation>
+    </annotation>
+  </element>
+
+	<element id="rpart_ExemplarsLink" name="ExemplarsLink" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Link to exemplars for a reporting style (to XBRL linkbase or XBRL taxonomy schema).</documentation>
+    </annotation>
+  </element>
+
+</schema>

@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Created by Henrik Moe and Charles Hoffman, CPA 2023-10-27 -->
+<schema
+	xmlns='http://www.w3.org/2001/XMLSchema'
+	xmlns:xbrli='http://www.xbrl.org/2003/instance'
+	xmlns:link='http://www.xbrl.org/2003/linkbase'
+	xmlns:xlink='http://www.w3.org/1999/xlink'
+	elementFormDefault='qualified'
+	attributeFormDefault='unqualified'
+	xmlns:rpart='https://jinsei.ai/seattlemethod/cm/rparts'
+	targetNamespace='https://jinsei.ai/seattlemethod/cm/rparts'
+	>
+
+  <annotation>
+    <appinfo>
+      <!-- Reference resouorce roles -->
+      <link:roleType roleURI="https://jinsei.ai/seattlemethod/cm/cm-roles/roles/template" id="template">
+        <link:definition>A reference that points to a template of a disclosure.</link:definition>
+        <link:usedOn>link:reference</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="https://jinsei.ai/seattlemethod/cm/cm-roles/roles/exemplar" id="exemplar">
+        <link:definition>A reference that points to an exemplar (example) of a disclosure.</link:definition>
+        <link:usedOn>link:reference</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="https://jinsei.ai/seattlemethod/cm/cm-roles/roles/exemplarsList" id="exemplarsList">
+        <link:definition>A reference that points to a LIST of exemplar (examples) of a disclosure.</link:definition>
+        <link:usedOn>link:reference</link:usedOn>
+      </link:roleType>
+
+      <link:roleType roleURI="https://jinsei.ai/seattlemethod/cm/cm-roles/roles/baseTaxonomy" id="baseTaxonomy">
+        <link:definition>A reference that points to the network URI of the base taxonomy that contains information about a disclosure.</link:definition>
+        <link:usedOn>link:reference</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="https://jinsei.ai/seattlemethod/cm/cm-roles/roles/xmlInfoset" id="xmlInfoset">
+        <link:definition>A reference that points to a machine readable XML InfoSet that contains information related to a disclosure.</link:definition>
+        <link:usedOn>link:reference</link:usedOn>
+      </link:roleType>
+
+
+			<link:roleType roleURI="https://jinsei.ai/seattlemethod/cm/cm-roles/roles/reportingStyle" id="reportingStyle">
+        <link:definition>A reference that points to a reporting style for a report.</link:definition>
+        <link:usedOn>link:reference</link:usedOn>
+      </link:roleType>
+
+    </appinfo>
+  </annotation>
+
+  <import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd"/>
+
+  <element id="rpart_ListExemplarsByDisclosure" name="ListExemplarsByDisclosure" type="anyURI" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">RDF file that has a list of exemplars for this disclosure.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_TemplateForDisclosure" name="TemplateForDisclosure" type="anyURI" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">An XBRL instance which is the entry point of a TEMPLATE that relates to a specified disclosure.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Title" name="Title" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Title of resource.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Description" name="Description" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Description of resource.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Category" name="Category" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Category of resource.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Keywords" name="Keywords" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Keywords of resource.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Link" name="Link" type="anyURI" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Link to resource.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_XMLInfoSet" name="XMLInfoSet" type="anyURI" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Link to resource formatted as an XMLInfoSet.</documentation>
+    </annotation>
+  </element>
+
+
+
+  <element id="rpart_LEI" name="LEI" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">LEI of the economic entity from which an exemplar comes.</documentation>
+    </annotation>
+  </element>
+  <element id="rpart_EntityIdentifier" name="EntityIdentifier" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">EntityIdentifier of the economic entity from which an exemplar comes.</documentation>
+    </annotation>
+  </element>
+
+
+
+  <element id="rpart_CIK" name="CIK" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">CIK of an SEC filer from which an exemplar comes.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_AccessionNumber" name="AccessionNumber" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">AccessionNumber of an SEC filer from which an exemplar comes.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_EntityRegistrantName" name="EntityRegistrantName" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">EntityRegistrantName of an SEC filer from which an exemplar comes.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Generator" name="Generator" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Software used to generate filing from which an exemplar comes.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_SECFilingPage" name="SECFilingPage" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">SEC filing page of the filing from which an exemplar comes.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Instance" name="Instance" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Instance of an SEC filer from which an exemplar comes.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Network" name="Network" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Network URI of network containing exemplar.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Table" name="Table" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Table (hypercube) containing exemplar.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Concept" name="Concept" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Concept (qname) of the exemplar contained in a table containe within a network.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Level" name="Level" type="integer" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Level of the exemplar or template: 1, 2, 3, or 4 (Level1NoteTextBlock, Level2Policy, Level3DisclosureTextBlock, Level4DisclosureDetail).</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Rendering" name="Rendering" type="anyURI" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Link to rendering of the exemplar.</documentation>
+    </annotation>
+  </element>
+
+
+  <element id="rpart_Confidence" name="Confidence" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Confidence in the form of a percentage such as 80% which indicates the probability the exemplar is correctly identified as relating to the indicated disclosure.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Likes" name="Likes" type="integer" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Number of likes associated with the exemplar or template.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Dislikes" name="Dislikes" type="integer" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Number of dislikes associated with the exemplar or template.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Rating" name="Rating" type="integer" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Rating (i.e. number of stars) for the exemplar where 5 is the highest rating and 0 is the lowest rating.</documentation>
+    </annotation>
+  </element>
+
+  <element id="rpart_Commentary" name="Commentary" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Commentary related to the exemplar or template.</documentation>
+    </annotation>
+  </element>
+
+
+
+
+
+
+
+	<element id="rpart_ReportingStyleCode" name="ReportingStyleCode" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Reporting style code.</documentation>
+    </annotation>
+  </element>
+
+	<element id="rpart_ReportingStyleLink" name="ReportingStyleLink" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Reporting style rules link (to XBRL taxonomy schema).</documentation>
+    </annotation>
+  </element>
+
+	<element id="rpart_ReportingChecklistLink" name="ReportingChecklistLink" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Reporting checklist rules link (to XBRL linkbase or XBRL taxonomy schema).</documentation>
+    </annotation>
+  </element>
+
+	<element id="rpart_TypeSubtypeRulesLink" name="TypeSubtypeRulesLink" type="string" substitutionGroup="link:part">
+    <annotation>
+      <documentation xml:lang="en">Type subtype relations rules link (to XBRL linkbase or XBRL taxonomy schema).</documentation>
+    </annotation>
+  </element>
+
+
+
+
+
+
+
+
+
+</schema>

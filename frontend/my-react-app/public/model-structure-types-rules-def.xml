@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Created by Henrik Moe and Charles Hoffman, CPA 2023-10-27 -->
+<link:linkbase
+  xmlns='http://www.xbrl.org/2003/linkbase'
+  xmlns:xbrldt='http://xbrl.org/2005/xbrldt'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:xlink='http://www.w3.org/1999/xlink'
+  xmlns:link='http://www.xbrl.org/2003/linkbase'
+  xsi:schemaLocation='http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'>
+
+  <link:arcroleRef xlink:type='simple' xlink:href='https://jinsei.ai/seattlemethod/cm/cm-arcroles.xsd#has-part' arcroleURI='https://jinsei.ai/seattlemethod/cm/arcrole/has-part'/>
+
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Network' xlink:label='cm_Network' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_Network' xlink:from='cm_Thing' order='1' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Hypercube' xlink:label='cm_Hypercube' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Network' xlink:label='cm_Network' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/has-part' xlink:to='cm_Hypercube' xlink:from='cm_Network' order='1' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Hypercube' xlink:label='cm_Hypercube' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Dimension' xlink:label='cm_Dimension' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/has-part' xlink:to='cm_Dimension' xlink:from='cm_Hypercube' order='1' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Member' xlink:label='cm_Member' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Dimension' xlink:label='cm_Dimension' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/has-part' xlink:to='cm_Member' xlink:from='cm_Dimension' order='1' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Member' xlink:label='cm_Member' />
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Member' xlink:label='cm_Member' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/has-part' xlink:to='cm_Member' xlink:from='cm_Member' order='1' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Hypercube' xlink:label='cm_Hypercube' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_LineItems' xlink:label='cm_LineItems' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/has-part' xlink:to='cm_LineItems' xlink:from='cm_Hypercube' order='2' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Abstract' xlink:label='cm_Abstract' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_LineItems' xlink:label='cm_LineItems' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/has-part' xlink:to='cm_Abstract' xlink:from='cm_LineItems' order='1' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Concept' xlink:label='cm_Concept' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_LineItems' xlink:label='cm_LineItems' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/has-part' xlink:to='cm_Concept' xlink:from='cm_LineItems' order='1' use='optional' />
+   </link:definitionLink>
+
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Hypercube' xlink:label='cm_Hypercube' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Table' xlink:label='cm_Table' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/essence-alias' xlink:to='cm_Table' xlink:from='cm_Hypercube' order='1' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Dimension' xlink:label='cm_Dimension' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Axis' xlink:label='cm_Axis' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/essence-alias' xlink:to='cm_Axis' xlink:from='cm_Dimension' order='1' use='optional' />
+   </link:definitionLink>
+
+</link:linkbase>

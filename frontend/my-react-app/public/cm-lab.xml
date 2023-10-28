@@ -1,0 +1,764 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Created by Henrik Moe and Charles Hoffman, CPA 2023-10-27 -->
+<linkbase xmlns='http://www.xbrl.org/2003/linkbase' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xlink='http://www.w3.org/1999/xlink' xsi:schemaLocation='http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'>
+  <roleRef xlink:type='simple' xlink:href='http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd#negatedLabel' roleURI='http://www.xbrl.org/2009/role/negatedLabel' />
+  <labelLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Abstract' xlink:label='cm_Abstract' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Abstract' xlink:to='cm_Abstract_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Abstract_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Abstract</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_AccountingActivity' xlink:label='cm_AccountingActivity' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_AccountingActivity' xlink:to='cm_AccountingActivity_lbl' />
+    <label xlink:type='resource' xlink:label='cm_AccountingActivity_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Accounting Activity</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Adjustment' xlink:label='cm_Adjustment' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Adjustment' xlink:to='cm_Adjustment_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Adjustment_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Adjustment</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_AffectsOnEconomicEntityDuringPeriod' xlink:label='cm_AffectsOnEconomicEntityDuringPeriod' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_AffectsOnEconomicEntityDuringPeriod' xlink:to='cm_AffectsOnEconomicEntityDuringPeriod_lbl' />
+    <label xlink:type='resource' xlink:label='cm_AffectsOnEconomicEntityDuringPeriod_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Affects on Economic Entity During Period</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_AssetGroup' xlink:label='cm_AssetGroup' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_AssetGroup' xlink:to='cm_AssetGroup_lbl' />
+    <label xlink:type='resource' xlink:label='cm_AssetGroup_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Asset Group</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Assets' xlink:label='cm_Assets' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Assets' xlink:to='cm_Assets_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Assets_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Assets</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_AutomatedAccountingAndReportingChecks' xlink:label='cm_AutomatedAccountingAndReportingChecks' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_AutomatedAccountingAndReportingChecks' xlink:to='cm_AutomatedAccountingAndReportingChecks_lbl' />
+    <label xlink:type='resource' xlink:label='cm_AutomatedAccountingAndReportingChecks_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Automated Accounting and Reporting Checks</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Axis' xlink:label='cm_Axis' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Axis' xlink:to='cm_Axis_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Axis_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Axis</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Block' xlink:label='cm_Block' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Block' xlink:to='cm_Block_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Block_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Block</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessReport' xlink:label='cm_BusinessReport' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_BusinessReport' xlink:to='cm_BusinessReport_lbl' />
+    <label xlink:type='resource' xlink:label='cm_BusinessReport_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Business Report</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRule' xlink:label='cm_BusinessRule' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_BusinessRule' xlink:to='cm_BusinessRule_lbl' />
+    <label xlink:type='resource' xlink:label='cm_BusinessRule_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Business Rule</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRulePattern' xlink:label='cm_BusinessRulePattern' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_BusinessRulePattern' xlink:to='cm_BusinessRulePattern_lbl' />
+    <label xlink:type='resource' xlink:label='cm_BusinessRulePattern_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Business Rule Pattern</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessSegment' xlink:label='cm_BusinessSegment' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_BusinessSegment' xlink:to='cm_BusinessSegment_lbl' />
+    <label xlink:type='resource' xlink:label='cm_BusinessSegment_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Business Segment</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessUnit' xlink:label='cm_BusinessUnit' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_BusinessUnit' xlink:to='cm_BusinessUnit_lbl' />
+    <label xlink:type='resource' xlink:label='cm_BusinessUnit_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Business Unit</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_CalendarPeriod' xlink:label='cm_CalendarPeriod' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_CalendarPeriod' xlink:to='cm_CalendarPeriod_lbl' />
+    <label xlink:type='resource' xlink:label='cm_CalendarPeriod_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Calendar Period</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Characteristic' xlink:label='cm_Characteristic' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Characteristic' xlink:to='cm_Characteristic_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Characteristic_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Characteristic</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Circumstance' xlink:label='cm_Circumstance' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Circumstance' xlink:to='cm_Circumstance_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Circumstance_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Circumstance</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ClassEquivalentClass' xlink:label='cm_ClassEquivalentClass' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ClassEquivalentClass' xlink:to='cm_ClassEquivalentClass_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ClassEquivalentClass_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Class-Equivalent Class</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ClassSubclass' xlink:label='cm_ClassSubclass' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ClassSubclass' xlink:to='cm_ClassSubclass_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ClassSubclass_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Class-Subclass</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_CoExists' xlink:label='cm_CoExists' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_CoExists' xlink:to='cm_CoExists_lbl' />
+    <label xlink:type='resource' xlink:label='cm_CoExists_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Co Exists</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_CommercialAndIndustrial' xlink:label='cm_CommercialAndIndustrial' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_CommercialAndIndustrial' xlink:to='cm_CommercialAndIndustrial_lbl' />
+    <label xlink:type='resource' xlink:label='cm_CommercialAndIndustrial_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Commercial and Industrial</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_CompleteComplexSet' xlink:label='cm_CompleteComplexSet' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_CompleteComplexSet' xlink:to='cm_CompleteComplexSet_lbl' />
+    <label xlink:type='resource' xlink:label='cm_CompleteComplexSet_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Complete Complex Set</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_CompleteFlatSet' xlink:label='cm_CompleteFlatSet' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_CompleteFlatSet' xlink:to='cm_CompleteFlatSet_lbl' />
+    <label xlink:type='resource' xlink:label='cm_CompleteFlatSet_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Complete Flat Set</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_CompleteHierarchicalSet' xlink:label='cm_CompleteHierarchicalSet' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_CompleteHierarchicalSet' xlink:to='cm_CompleteHierarchicalSet_lbl' />
+    <label xlink:type='resource' xlink:label='cm_CompleteHierarchicalSet_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Complete Hierarchical Set</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ComplexComputation' xlink:label='cm_ComplexComputation' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ComplexComputation' xlink:to='cm_ComplexComputation_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ComplexComputation_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Complex Computation</label>
+
+
+
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Arithmetic' xlink:label='cm_Arithmetic' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Arithmetic' xlink:to='cm_Arithmetic_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Arithmetic_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Arithmetic</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Set' xlink:label='cm_Set' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Set' xlink:to='cm_Set_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Set_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Set</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Hypercube' xlink:label='cm_Hypercube' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Hypercube' xlink:to='cm_Hypercube_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Hypercube_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Hypercube</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Dimension' xlink:label='cm_Dimension' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Dimension' xlink:to='cm_Dimension_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Dimension_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Dimension</label>
+
+
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Debit' xlink:label='cm_Debit' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Debit' xlink:to='cm_Debit_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Debit_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Debit</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Credit' xlink:label='cm_Credit' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Credit' xlink:to='cm_Credit_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Credit_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Credit</label>
+
+
+
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Component' xlink:label='cm_Component' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Component' xlink:to='cm_Component_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Component_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Component</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ComponentIntregalObject' xlink:label='cm_ComponentIntregalObject' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ComponentIntregalObject' xlink:to='cm_ComponentIntregalObject_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ComponentIntregalObject_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Component-Intregal Object</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ComprehensiveIncome' xlink:label='cm_ComprehensiveIncome' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ComprehensiveIncome' xlink:to='cm_ComprehensiveIncome_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ComprehensiveIncome_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Comprehensive Income</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Concept' xlink:label='cm_Concept' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Concept' xlink:to='cm_Concept_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Concept_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Concept</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ConceptArrangemetPattern' xlink:label='cm_ConceptArrangemetPattern' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ConceptArrangemetPattern' xlink:to='cm_ConceptArrangemetPattern_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ConceptArrangemetPattern_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Concept Arrangement Pattern</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Condition' xlink:label='cm_Condition' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Condition' xlink:to='cm_Condition_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Condition_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Condition</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ConsolidatedEntity' xlink:label='cm_ConsolidatedEntity' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ConsolidatedEntity' xlink:to='cm_ConsolidatedEntity_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ConsolidatedEntity_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Consolidated Entity</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Corporation' xlink:label='cm_Corporation' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Corporation' xlink:to='cm_Corporation_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Corporation_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Corporation</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_DefinitionOfNewSubclassAllowed' xlink:label='cm_DefinitionOfNewSubclassAllowed' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_DefinitionOfNewSubclassAllowed' xlink:to='cm_DefinitionOfNewSubclassAllowed_lbl' />
+    <label xlink:type='resource' xlink:label='cm_DefinitionOfNewSubclassAllowed_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Definition of New Subclass Allowed</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Disclosure' xlink:label='cm_Disclosure' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Disclosure' xlink:to='cm_Disclosure_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Disclosure_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Disclosure</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_DisclosureNote' xlink:label='cm_DisclosureNote' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_DisclosureNote' xlink:to='cm_DisclosureNote_lbl' />
+    <label xlink:type='resource' xlink:label='cm_DisclosureNote_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Disclosure Note</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_DisclosureType' xlink:label='cm_DisclosureType' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_DisclosureType' xlink:to='cm_DisclosureType_lbl' />
+    <label xlink:type='resource' xlink:label='cm_DisclosureType_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Disclosure Type</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_DisposalGroup' xlink:label='cm_DisposalGroup' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_DisposalGroup' xlink:to='cm_DisposalGroup_lbl' />
+    <label xlink:type='resource' xlink:label='cm_DisposalGroup_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Disposal Group</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_DistributionsToOwners' xlink:label='cm_DistributionsToOwners' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_DistributionsToOwners' xlink:to='cm_DistributionsToOwners_lbl' />
+    <label xlink:type='resource' xlink:label='cm_DistributionsToOwners_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Distributions to Owners</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_DocumentInformation' xlink:label='cm_DocumentInformation' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_DocumentInformation' xlink:to='cm_DocumentInformation_lbl' />
+    <label xlink:type='resource' xlink:label='cm_DocumentInformation_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Document Information</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_DocumentType' xlink:label='cm_DocumentType' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_DocumentType' xlink:to='cm_DocumentType_lbl' />
+    <label xlink:type='resource' xlink:label='cm_DocumentType_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Document Type</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_DomainRule' xlink:label='cm_DomainRule' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_DomainRule' xlink:to='cm_DomainRule_lbl' />
+    <label xlink:type='resource' xlink:label='cm_DomainRule_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Domain Rule</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_EconomicEntity' xlink:label='cm_EconomicEntity' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_EconomicEntity' xlink:to='cm_EconomicEntity_lbl' />
+    <label xlink:type='resource' xlink:label='cm_EconomicEntity_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Economic Entity</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ElementsOfFinancialStatements' xlink:label='cm_ElementsOfFinancialStatements' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ElementsOfFinancialStatements' xlink:to='cm_ElementsOfFinancialStatements_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ElementsOfFinancialStatements_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Elements of Financial Statement</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ElementsOfFinancialStatementsOfEconomicEntity' xlink:label='cm_ElementsOfFinancialStatementsOfEconomicEntity' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ElementsOfFinancialStatementsOfEconomicEntity' xlink:to='cm_ElementsOfFinancialStatementsOfEconomicEntity_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ElementsOfFinancialStatementsOfEconomicEntity_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Elements of Financial Statement of Economic Entity</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_EntityInformation' xlink:label='cm_EntityInformation' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_EntityInformation' xlink:to='cm_EntityInformation_lbl' />
+    <label xlink:type='resource' xlink:label='cm_EntityInformation_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Entity Information</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_EntityLegalForm' xlink:label='cm_EntityLegalForm' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_EntityLegalForm' xlink:to='cm_EntityLegalForm_lbl' />
+    <label xlink:type='resource' xlink:label='cm_EntityLegalForm_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Entity Legal Form</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_EqualTo' xlink:label='cm_EqualTo' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_EqualTo' xlink:to='cm_EqualTo_lbl' />
+    <label xlink:type='resource' xlink:label='cm_EqualTo_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Equal To</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Equity' xlink:label='cm_Equity' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Equity' xlink:to='cm_Equity_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Equity_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Equity</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Event' xlink:label='cm_Event' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Event' xlink:to='cm_Event_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Event_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Event</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Exemplar' xlink:label='cm_Exemplar' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Exemplar' xlink:to='cm_Exemplar_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Exemplar_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Exemplar</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Exists' xlink:label='cm_Exists' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Exists' xlink:to='cm_Exists_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Exists_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Exists</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Expenses' xlink:label='cm_Expenses' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Expenses' xlink:to='cm_Expenses_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Expenses_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Expenses</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ExtensionDisallowed' xlink:label='cm_ExtensionDisallowed' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ExtensionDisallowed' xlink:to='cm_ExtensionDisallowed_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ExtensionDisallowed_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Extension Disallowed</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ExtensionProperties' xlink:label='cm_ExtensionProperties' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ExtensionProperties' xlink:to='cm_ExtensionProperties_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ExtensionProperties_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Extension Properties</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_FaceFinancialStatements' xlink:label='cm_FaceFinancialStatements' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_FaceFinancialStatements' xlink:to='cm_FaceFinancialStatements_lbl' />
+    <label xlink:type='resource' xlink:label='cm_FaceFinancialStatements_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Face Financial Statements</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_FeatureActivity' xlink:label='cm_FeatureActivity' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_FeatureActivity' xlink:to='cm_FeatureActivity_lbl' />
+    <label xlink:type='resource' xlink:label='cm_FeatureActivity_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Feature-Activity</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReport' xlink:label='cm_FinancialReport' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_FinancialReport' xlink:to='cm_FinancialReport_lbl' />
+    <label xlink:type='resource' xlink:label='cm_FinancialReport_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Financial Report</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportComponent' xlink:label='cm_FinancialReportComponent' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_FinancialReportComponent' xlink:to='cm_FinancialReportComponent_lbl' />
+    <label xlink:type='resource' xlink:label='cm_FinancialReportComponent_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Financial Report Component</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportingByNotForProfitEntityInUS' xlink:label='cm_FinancialReportingByNotForProfitEntityInUS' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_FinancialReportingByNotForProfitEntityInUS' xlink:to='cm_FinancialReportingByNotForProfitEntityInUS_lbl' />
+    <label xlink:type='resource' xlink:label='cm_FinancialReportingByNotForProfitEntityInUS_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Financial Reporting by Not-for-Profit Entity in US</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportingByUSStateOrLocalGovernmentalEntity' xlink:label='cm_FinancialReportingByUSStateOrLocalGovernmentalEntity' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_FinancialReportingByUSStateOrLocalGovernmentalEntity' xlink:to='cm_FinancialReportingByUSStateOrLocalGovernmentalEntity_lbl' />
+    <label xlink:type='resource' xlink:label='cm_FinancialReportingByUSStateOrLocalGovernmentalEntity_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Financial Reporting by US State or Local Governmental Entity</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportObject' xlink:label='cm_FinancialReportObject' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_FinancialReportObject' xlink:to='cm_FinancialReportObject_lbl' />
+    <label xlink:type='resource' xlink:label='cm_FinancialReportObject_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Financial Report Object</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportsInIFRS' xlink:label='cm_FinancialReportsInIFRS' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_FinancialReportsInIFRS' xlink:to='cm_FinancialReportsInIFRS_lbl' />
+    <label xlink:type='resource' xlink:label='cm_FinancialReportsInIFRS_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Financial Reports in IFRS</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportsInIFRSSMEs' xlink:label='cm_FinancialReportsInIFRSSMEs' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_FinancialReportsInIFRSSMEs' xlink:to='cm_FinancialReportsInIFRSSMEs_lbl' />
+    <label xlink:type='resource' xlink:label='cm_FinancialReportsInIFRSSMEs_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Financial Reports in IFRS for SMEs</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_FiscalPeriod' xlink:label='cm_FiscalPeriod' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_FiscalPeriod' xlink:to='cm_FiscalPeriod_lbl' />
+    <label xlink:type='resource' xlink:label='cm_FiscalPeriod_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Fiscal Period</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_FullHasPart' xlink:label='cm_FullHasPart' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_FullHasPart' xlink:to='cm_FullHasPart_lbl' />
+    <label xlink:type='resource' xlink:label='cm_FullHasPart_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Full-Has Part</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_FundamentalAccountingConceptRelation' xlink:label='cm_FundamentalAccountingConceptRelation' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_FundamentalAccountingConceptRelation' xlink:to='cm_FundamentalAccountingConceptRelation_lbl' />
+    <label xlink:type='resource' xlink:label='cm_FundamentalAccountingConceptRelation_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Fundamental Accounting Concept Relation</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_FundOrTrust' xlink:label='cm_FundOrTrust' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_FundOrTrust' xlink:to='cm_FundOrTrust_lbl' />
+    <label xlink:type='resource' xlink:label='cm_FundOrTrust_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Fund or Trust</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Gains' xlink:label='cm_Gains' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Gains' xlink:to='cm_Gains_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Gains_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Gains</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_GeneralRelationPattern' xlink:label='cm_GeneralRelationPattern' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_GeneralRelationPattern' xlink:to='cm_GeneralRelationPattern_lbl' />
+    <label xlink:type='resource' xlink:label='cm_GeneralRelationPattern_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>General Relation Pattern</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_GeographicArea' xlink:label='cm_GeographicArea' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_GeographicArea' xlink:to='cm_GeographicArea_lbl' />
+    <label xlink:type='resource' xlink:label='cm_GeographicArea_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Geographic Area</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_GreaterThan' xlink:label='cm_GreaterThan' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_GreaterThan' xlink:to='cm_GreaterThan_lbl' />
+    <label xlink:type='resource' xlink:label='cm_GreaterThan_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Greater Than</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_GreaterThanOrEqualToZero' xlink:label='cm_GreaterThanOrEqualToZero' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_GreaterThanOrEqualToZero' xlink:to='cm_GreaterThanOrEqualToZero_lbl' />
+    <label xlink:type='resource' xlink:label='cm_GreaterThanOrEqualToZero_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Greater Than Or Equal To Zero</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Hierarchy' xlink:label='cm_Hierarchy' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Hierarchy' xlink:to='cm_Hierarchy_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Hierarchy_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Hierarchy</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_IFRS' xlink:label='cm_IFRS' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_IFRS' xlink:to='cm_IFRS_lbl' />
+    <label xlink:type='resource' xlink:label='cm_IFRS_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>IFRS</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_IncomeTaxBasis' xlink:label='cm_IncomeTaxBasis' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_IncomeTaxBasis' xlink:to='cm_IncomeTaxBasis_lbl' />
+    <label xlink:type='resource' xlink:label='cm_IncomeTaxBasis_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Income Tax Basis</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_IndustrySpecificRule' xlink:label='cm_IndustrySpecificRule' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_IndustrySpecificRule' xlink:to='cm_IndustrySpecificRule_lbl' />
+    <label xlink:type='resource' xlink:label='cm_IndustrySpecificRule_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Industry Specific Rule</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Industry' xlink:label='cm_Industry' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Industry' xlink:to='cm_Industry_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Industry_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Industry</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Instrument' xlink:label='cm_Instrument' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Instrument' xlink:to='cm_Instrument_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Instrument_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Instrument</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_InsuranceBasedRevenue' xlink:label='cm_InsuranceBasedRevenue' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_InsuranceBasedRevenue' xlink:to='cm_InsuranceBasedRevenue_lbl' />
+    <label xlink:type='resource' xlink:label='cm_InsuranceBasedRevenue_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Insurance-based Revenue</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_InterestBasedRevenue' xlink:label='cm_InterestBasedRevenue' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_InterestBasedRevenue' xlink:to='cm_InterestBasedRevenue_lbl' />
+    <label xlink:type='resource' xlink:label='cm_InterestBasedRevenue_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Interest-based Revenue</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_InvestmentsByOwners' xlink:label='cm_InvestmentsByOwners' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_InvestmentsByOwners' xlink:to='cm_InvestmentsByOwners_lbl' />
+    <label xlink:type='resource' xlink:label='cm_InvestmentsByOwners_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Investments by Owners</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_KeyFinancialRatio' xlink:label='cm_KeyFinancialRatio' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_KeyFinancialRatio' xlink:to='cm_KeyFinancialRatio_lbl' />
+    <label xlink:type='resource' xlink:label='cm_KeyFinancialRatio_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Key Financial Ratio</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_LegalEntity' xlink:label='cm_LegalEntity' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_LegalEntity' xlink:to='cm_LegalEntity_lbl' />
+    <label xlink:type='resource' xlink:label='cm_LegalEntity_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Legal Entity</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_LessThan' xlink:label='cm_LessThan' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_LessThan' xlink:to='cm_LessThan_lbl' />
+    <label xlink:type='resource' xlink:label='cm_LessThan_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Less Than</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Level1TextBlock' xlink:label='cm_Level1TextBlock' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Level1TextBlock' xlink:to='cm_Level1TextBlock_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Level1TextBlock_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Level 1 Note Text Block</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Level2TextBlock' xlink:label='cm_Level2TextBlock' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Level2TextBlock' xlink:to='cm_Level2TextBlock_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Level2TextBlock_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Level 2 Policy Text Block</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Level3TextBlock' xlink:label='cm_Level3TextBlock' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Level3TextBlock' xlink:to='cm_Level3TextBlock_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Level3TextBlock_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Level 3 Disclosure Text Block</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Level4Detail' xlink:label='cm_Level4Detail' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Level4Detail' xlink:to='cm_Level4Detail_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Level4Detail_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Level 4 Detail</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Liabilities' xlink:label='cm_Liabilities' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Liabilities' xlink:to='cm_Liabilities_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Liabilities_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Liabilities</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_LimitedLiabilityCorporation' xlink:label='cm_LimitedLiabilityCorporation' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_LimitedLiabilityCorporation' xlink:to='cm_LimitedLiabilityCorporation_lbl' />
+    <label xlink:type='resource' xlink:label='cm_LimitedLiabilityCorporation_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Limited Liability Corporation</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_LimitedLiabilityPartnership' xlink:label='cm_LimitedLiabilityPartnership' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_LimitedLiabilityPartnership' xlink:to='cm_LimitedLiabilityPartnership_lbl' />
+    <label xlink:type='resource' xlink:label='cm_LimitedLiabilityPartnership_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Limited Liability Partnership</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_LineItem' xlink:label='cm_LineItem' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_LineItem' xlink:to='cm_LineItem_lbl' />
+    <label xlink:type='resource' xlink:label='cm_LineItem_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Line Item</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_LineItems' xlink:label='cm_LineItems' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_LineItems' xlink:to='cm_LineItems_lbl' />
+    <label xlink:type='resource' xlink:label='cm_LineItems_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Line Items</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Losses' xlink:label='cm_Losses' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Losses' xlink:to='cm_Losses_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Losses_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Losses</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Member' xlink:label='cm_Member' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Member' xlink:to='cm_Member_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Member_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Member</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_MemberArrangementPattern' xlink:label='cm_MemberArrangementPattern' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_MemberArrangementPattern' xlink:to='cm_MemberArrangementPattern_lbl' />
+    <label xlink:type='resource' xlink:label='cm_MemberArrangementPattern_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Member Arrangement Pattern</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_MemberCollection' xlink:label='cm_MemberCollection' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_MemberCollection' xlink:to='cm_MemberCollection_lbl' />
+    <label xlink:type='resource' xlink:label='cm_MemberCollection_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Member-Collection</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ModelStructure' xlink:label='cm_ModelStructure' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ModelStructure' xlink:to='cm_ModelStructure_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ModelStructure_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Model Structure</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Network' xlink:label='cm_Network' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Network' xlink:to='cm_Network_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Network_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Network</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_NetworkTaggingLevel' xlink:label='cm_NetworkTaggingLevel' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_NetworkTaggingLevel' xlink:to='cm_NetworkTaggingLevel_lbl' />
+    <label xlink:type='resource' xlink:label='cm_NetworkTaggingLevel_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Network Tagging Level</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_NetworkType' xlink:label='cm_NetworkType' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_NetworkType' xlink:to='cm_NetworkType_lbl' />
+    <label xlink:type='resource' xlink:label='cm_NetworkType_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Network Section Type</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Note' xlink:label='cm_Note' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Note' xlink:to='cm_Note_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Note_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Note (Disclosure Note)</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_NotForProfit' xlink:label='cm_NotForProfit' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_NotForProfit' xlink:to='cm_NotForProfit_lbl' />
+    <label xlink:type='resource' xlink:label='cm_NotForProfit_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Not-for-Profit</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_OperatingSegment' xlink:label='cm_OperatingSegment' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_OperatingSegment' xlink:to='cm_OperatingSegment_lbl' />
+    <label xlink:type='resource' xlink:label='cm_OperatingSegment_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Operating Segment</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_OtherComprehensiveBasisOfAccounting' xlink:label='cm_OtherComprehensiveBasisOfAccounting' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_OtherComprehensiveBasisOfAccounting' xlink:to='cm_OtherComprehensiveBasisOfAccounting_lbl' />
+    <label xlink:type='resource' xlink:label='cm_OtherComprehensiveBasisOfAccounting_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Other Comprehensive Basis of Accounting</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ParentheticalComments' xlink:label='cm_ParentheticalComments' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ParentheticalComments' xlink:to='cm_ParentheticalComments_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ParentheticalComments_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Parenthetical Comments</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ParentHoldingCompany' xlink:label='cm_ParentHoldingCompany' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ParentHoldingCompany' xlink:to='cm_ParentHoldingCompany_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ParentHoldingCompany_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Parent Holding Company</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Partnership' xlink:label='cm_Partnership' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Partnership' xlink:to='cm_Partnership_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Partnership_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Partnership</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_PartOf' xlink:label='cm_PartOf' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_PartOf' xlink:to='cm_PartOf_lbl' />
+    <label xlink:type='resource' xlink:label='cm_PartOf_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Part-Of</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_PeerConsistencyRule' xlink:label='cm_PeerConsistencyRule' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_PeerConsistencyRule' xlink:to='cm_PeerConsistencyRule_lbl' />
+    <label xlink:type='resource' xlink:label='cm_PeerConsistencyRule_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Peer Consistency Rule</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_PersonalFinancialReportingInUS' xlink:label='cm_PersonalFinancialReportingInUS' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_PersonalFinancialReportingInUS' xlink:to='cm_PersonalFinancialReportingInUS_lbl' />
+    <label xlink:type='resource' xlink:label='cm_PersonalFinancialReportingInUS_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Personal Financial Reporting in US</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Phenomenon' xlink:label='cm_Phenomenon' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Phenomenon' xlink:to='cm_Phenomenon_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Phenomenon_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Phenomenon</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_PlaceArea' xlink:label='cm_PlaceArea' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_PlaceArea' xlink:to='cm_PlaceArea_lbl' />
+    <label xlink:type='resource' xlink:label='cm_PlaceArea_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Place-Area</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_PortionMass' xlink:label='cm_PortionMass' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_PortionMass' xlink:to='cm_PortionMass_lbl' />
+    <label xlink:type='resource' xlink:label='cm_PortionMass_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Portion-Mass</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_PrimaryFinancialStatement' xlink:label='cm_PrimaryFinancialStatement' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_PrimaryFinancialStatement' xlink:to='cm_PrimaryFinancialStatement_lbl' />
+    <label xlink:type='resource' xlink:label='cm_PrimaryFinancialStatement_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Primary Financial Statement</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_PriorPeriodConsistencyRule' xlink:label='cm_PriorPeriodConsistencyRule' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_PriorPeriodConsistencyRule' xlink:to='cm_PriorPeriodConsistencyRule_lbl' />
+    <label xlink:type='resource' xlink:label='cm_PriorPeriodConsistencyRule_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Prior Period Consistency Rule</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_PrivateCompany' xlink:label='cm_PrivateCompany' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_PrivateCompany' xlink:to='cm_PrivateCompany_lbl' />
+    <label xlink:type='resource' xlink:label='cm_PrivateCompany_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Private Company</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_PrivateCompanyFinancialReportsInUSGAAP' xlink:label='cm_PrivateCompanyFinancialReportsInUSGAAP' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_PrivateCompanyFinancialReportsInUSGAAP' xlink:to='cm_PrivateCompanyFinancialReportsInUSGAAP_lbl' />
+    <label xlink:type='resource' xlink:label='cm_PrivateCompanyFinancialReportsInUSGAAP_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Private Company Financial Reports In US GAAP</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Proprietorship' xlink:label='cm_Proprietorship' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Proprietorship' xlink:to='cm_Proprietorship_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Proprietorship_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Proprietorship</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Prototype' xlink:label='cm_Prototype' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Prototype' xlink:to='cm_Prototype_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Prototype_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Prototype</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_PublicCompany' xlink:label='cm_PublicCompany' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_PublicCompany' xlink:to='cm_PublicCompany_lbl' />
+    <label xlink:type='resource' xlink:label='cm_PublicCompany_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Public Company</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_PublicCompanyFinancialReportsInUSGAAPToSEC' xlink:label='cm_PublicCompanyFinancialReportsInUSGAAPToSEC' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_PublicCompanyFinancialReportsInUSGAAPToSEC' xlink:to='cm_PublicCompanyFinancialReportsInUSGAAPToSEC_lbl' />
+    <label xlink:type='resource' xlink:label='cm_PublicCompanyFinancialReportsInUSGAAPToSEC_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Public Company Financial Reports In US GAAP to SEC</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Range' xlink:label='cm_Range' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Range' xlink:to='cm_Range_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Range_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Range</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_RealEstateInvestmentTrusts' xlink:label='cm_RealEstateInvestmentTrusts' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_RealEstateInvestmentTrusts' xlink:to='cm_RealEstateInvestmentTrusts_lbl' />
+    <label xlink:type='resource' xlink:label='cm_RealEstateInvestmentTrusts_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Real Estate Investment Trusts</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReceivingEntity' xlink:label='cm_ReceivingEntity' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReceivingEntity' xlink:to='cm_ReceivingEntity_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReceivingEntity_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Receiving Entity</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReplaceRedefineAllowed' xlink:label='cm_ReplaceRedefineAllowed' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReplaceRedefineAllowed' xlink:to='cm_ReplaceRedefineAllowed_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReplaceRedefineAllowed_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Replace Redefine Allowed</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportableSegment' xlink:label='cm_ReportableSegment' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportableSegment' xlink:to='cm_ReportableSegment_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportableSegment_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Reportable Segment</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportDate' xlink:label='cm_ReportDate' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportDate' xlink:to='cm_ReportDate_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportDate_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Report Date</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportElement' xlink:label='cm_ReportElement' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportElement' xlink:to='cm_ReportElement_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportElement_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Report Element</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportElementType' xlink:label='cm_ReportElementType' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportElementType' xlink:to='cm_ReportElementType_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportElementType_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Report Element Type</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportFragment' xlink:label='cm_ReportFragment' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportFragment' xlink:to='cm_ReportFragment_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportFragment_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Report Fragment</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingEntity' xlink:label='cm_ReportingEntity' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportingEntity' xlink:to='cm_ReportingEntity_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportingEntity_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Reporting Entity</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingEntityComponent' xlink:label='cm_ReportingEntityComponent' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportingEntityComponent' xlink:to='cm_ReportingEntityComponent_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportingEntityComponent_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Reporting Entity Component</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingEntityRole' xlink:label='cm_ReportingEntityRole' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportingEntityRole' xlink:to='cm_ReportingEntityRole_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportingEntityRole_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Reporting Entity Role</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingEntityRule' xlink:label='cm_ReportingEntityRule' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportingEntityRule' xlink:to='cm_ReportingEntityRule_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportingEntityRule_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Reporting Entity Rule</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingScenario' xlink:label='cm_ReportingScenario' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportingScenario' xlink:to='cm_ReportingScenario_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportingScenario_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Reporting Scenario</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingScheme' xlink:label='cm_ReportingScheme' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportingScheme' xlink:to='cm_ReportingScheme_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportingScheme_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Reporting Scheme</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingStyle' xlink:label='cm_ReportingStyle' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportingStyle' xlink:to='cm_ReportingStyle_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportingStyle_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Reporting Style</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingSystemSpecificRule' xlink:label='cm_ReportingSystemSpecificRule' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportingSystemSpecificRule' xlink:to='cm_ReportingSystemSpecificRule_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportingSystemSpecificRule_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Reporting System Specific Rule</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingUnit' xlink:label='cm_ReportingUnit' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportingUnit' xlink:to='cm_ReportingUnit_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportingUnit_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Reporting Unit</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportLevelModelStructureRule' xlink:label='cm_ReportLevelModelStructureRule' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ReportLevelModelStructureRule' xlink:to='cm_ReportLevelModelStructureRule_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ReportLevelModelStructureRule_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Report Level Model Structure Rule</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Revenues' xlink:label='cm_Revenues' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Revenues' xlink:to='cm_Revenues_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Revenues_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Revenues</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_RollForward' xlink:label='cm_RollForward' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_RollForward' xlink:to='cm_RollForward_lbl' />
+    <label xlink:type='resource' xlink:label='cm_RollForward_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Roll Forward</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_RollForwardInfo' xlink:label='cm_RollForwardInfo' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_RollForwardInfo' xlink:to='cm_RollForwardInfo_lbl' />
+    <label xlink:type='resource' xlink:label='cm_RollForwardInfo_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Roll Forward Info</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_RollUp' xlink:label='cm_RollUp' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_RollUp' xlink:to='cm_RollUp_lbl' />
+    <label xlink:type='resource' xlink:label='cm_RollUp_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Roll Up</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ScheduleType' xlink:label='cm_ScheduleType' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ScheduleType' xlink:to='cm_ScheduleType_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ScheduleType_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Schedule Type</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_SecuritiesBasedRevenue' xlink:label='cm_SecuritiesBasedRevenue' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_SecuritiesBasedRevenue' xlink:to='cm_SecuritiesBasedRevenue_lbl' />
+    <label xlink:type='resource' xlink:label='cm_SecuritiesBasedRevenue_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Securities-based Revenue</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_SoleProprietor' xlink:label='cm_SoleProprietor' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_SoleProprietor' xlink:to='cm_SoleProprietor_lbl' />
+    <label xlink:type='resource' xlink:label='cm_SoleProprietor_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Sole Proprietor</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_StatementOfCashFlows' xlink:label='cm_StatementOfCashFlows' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_StatementOfCashFlows' xlink:to='cm_StatementOfCashFlows_lbl' />
+    <label xlink:type='resource' xlink:label='cm_StatementOfCashFlows_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Statement of Cash Flows</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_StatementOfChangesInEquity' xlink:label='cm_StatementOfChangesInEquity' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_StatementOfChangesInEquity' xlink:to='cm_StatementOfChangesInEquity_lbl' />
+    <label xlink:type='resource' xlink:label='cm_StatementOfChangesInEquity_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Statement of Changes in Equity</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_StatementOfComprehensiveIncome' xlink:label='cm_StatementOfComprehensiveIncome' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_StatementOfComprehensiveIncome' xlink:to='cm_StatementOfComprehensiveIncome_lbl' />
+    <label xlink:type='resource' xlink:label='cm_StatementOfComprehensiveIncome_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Statement of Comprehensive Income</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_StatementOfEarnings' xlink:label='cm_StatementOfEarnings' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_StatementOfEarnings' xlink:to='cm_StatementOfEarnings_lbl' />
+    <label xlink:type='resource' xlink:label='cm_StatementOfEarnings_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Statement of Earnings (Income statement)</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_StatementOfFinancialPosition' xlink:label='cm_StatementOfFinancialPosition' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_StatementOfFinancialPosition' xlink:to='cm_StatementOfFinancialPosition_lbl' />
+    <label xlink:type='resource' xlink:label='cm_StatementOfFinancialPosition_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Statement of Financial Position (Balance sheet)</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_StatementType' xlink:label='cm_StatementType' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_StatementType' xlink:to='cm_StatementType_lbl' />
+    <label xlink:type='resource' xlink:label='cm_StatementType_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Statement Type</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_StateOrLocalGovernmentalEntity' xlink:label='cm_StateOrLocalGovernmentalEntity' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_StateOrLocalGovernmentalEntity' xlink:to='cm_StateOrLocalGovernmentalEntity_lbl' />
+    <label xlink:type='resource' xlink:label='cm_StateOrLocalGovernmentalEntity_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>State or Local Governmental Entity</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_StuffObject' xlink:label='cm_StuffObject' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_StuffObject' xlink:to='cm_StuffObject_lbl' />
+    <label xlink:type='resource' xlink:label='cm_StuffObject_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Stuff-Object</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Submission' xlink:label='cm_Submission' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Submission' xlink:to='cm_Submission_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Submission_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Submission</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Subsidiary' xlink:label='cm_Subsidiary' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Subsidiary' xlink:to='cm_Subsidiary_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Subsidiary_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Subsidiary</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_SupplementaryInformation' xlink:label='cm_SupplementaryInformation' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_SupplementaryInformation' xlink:to='cm_SupplementaryInformation_lbl' />
+    <label xlink:type='resource' xlink:label='cm_SupplementaryInformation_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Supplementary Information</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Table' xlink:label='cm_Table' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Table' xlink:to='cm_Table_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Table_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Table</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_TableEquivalentTextBlock' xlink:label='cm_TableEquivalentTextBlock' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_TableEquivalentTextBlock' xlink:to='cm_TableEquivalentTextBlock_lbl' />
+    <label xlink:type='resource' xlink:label='cm_TableEquivalentTextBlock_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Table-Equivalent Text Block</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_TextBlock' xlink:label='cm_TextBlock' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_TextBlock' xlink:to='cm_TextBlock_lbl' />
+    <label xlink:type='resource' xlink:label='cm_TextBlock_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Text Block</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Thing' xlink:to='cm_Thing_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Thing_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Thing</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ThingHasRole' xlink:label='cm_ThingHasRole' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ThingHasRole' xlink:to='cm_ThingHasRole_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ThingHasRole_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Thing-Has Role</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_ToDoManualTask' xlink:label='cm_ToDoManualTask' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_ToDoManualTask' xlink:to='cm_ToDoManualTask_lbl' />
+    <label xlink:type='resource' xlink:label='cm_ToDoManualTask_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>To Do (Manual Task)</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Topic' xlink:label='cm_Topic' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Topic' xlink:to='cm_Topic_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Topic_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Topic (Disclosure topic)</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Transaction' xlink:label='cm_Transaction' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Transaction' xlink:to='cm_Transaction_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Transaction_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Transaction</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_TypeOf' xlink:label='cm_TypeOf' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_TypeOf' xlink:to='cm_TypeOf_lbl' />
+    <label xlink:type='resource' xlink:label='cm_TypeOf_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Type-Of</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_UnknownAccountingActivity' xlink:label='cm_UnknownAccountingActivity' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_UnknownAccountingActivity' xlink:to='cm_UnknownAccountingActivity_lbl' />
+    <label xlink:type='resource' xlink:label='cm_UnknownAccountingActivity_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Unknown Accounting Activity</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_UnknownEntityLegalForm' xlink:label='cm_UnknownEntityLegalForm' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_UnknownEntityLegalForm' xlink:to='cm_UnknownEntityLegalForm_lbl' />
+    <label xlink:type='resource' xlink:label='cm_UnknownEntityLegalForm_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Unknown Entity Legal Form</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_USGAAP' xlink:label='cm_USGAAP' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_USGAAP' xlink:to='cm_USGAAP_lbl' />
+    <label xlink:type='resource' xlink:label='cm_USGAAP_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>US GAAP</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Valid' xlink:label='cm_Valid' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Valid' xlink:to='cm_Valid_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Valid_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Valid</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_Variance' xlink:label='cm_Variance' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_Variance' xlink:to='cm_Variance_lbl' />
+    <label xlink:type='resource' xlink:label='cm_Variance_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Variance</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_VerificationRule' xlink:label='cm_VerificationRule' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_VerificationRule' xlink:to='cm_VerificationRule_lbl' />
+    <label xlink:type='resource' xlink:label='cm_VerificationRule_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Verification Rule</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_WholePart' xlink:label='cm_WholePart' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_WholePart' xlink:to='cm_WholePart_lbl' />
+    <label xlink:type='resource' xlink:label='cm_WholePart_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Whole-Part</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_WholePartRelationPattern' xlink:label='cm_WholePartRelationPattern' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_WholePartRelationPattern' xlink:to='cm_WholePartRelationPattern_lbl' />
+    <label xlink:type='resource' xlink:label='cm_WholePartRelationPattern_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>Whole Part Relation Pattern</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_XBRLBasedGeneralBusinessReports' xlink:label='cm_XBRLBasedGeneralBusinessReports' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_XBRLBasedGeneralBusinessReports' xlink:to='cm_XBRLBasedGeneralBusinessReports_lbl' />
+    <label xlink:type='resource' xlink:label='cm_XBRLBasedGeneralBusinessReports_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>XBRL-based General Business Reports</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_XBRLBasedReportingToIranRegulator' xlink:label='cm_XBRLBasedReportingToIranRegulator' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_XBRLBasedReportingToIranRegulator' xlink:to='cm_XBRLBasedReportingToIranRegulator_lbl' />
+    <label xlink:type='resource' xlink:label='cm_XBRLBasedReportingToIranRegulator_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>XBRL-based Reporting to Iran Regulator</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_XBRLBasedReportingUsingXBRLUSWorkInProgressSuretyTaxonomy' xlink:label='cm_XBRLBasedReportingUsingXBRLUSWorkInProgressSuretyTaxonomy' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_XBRLBasedReportingUsingXBRLUSWorkInProgressSuretyTaxonomy' xlink:to='cm_XBRLBasedReportingUsingXBRLUSWorkInProgressSuretyTaxonomy_lbl' />
+    <label xlink:type='resource' xlink:label='cm_XBRLBasedReportingUsingXBRLUSWorkInProgressSuretyTaxonomy_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>XBRL-based Reporting Using XBRL-US Work-in-Progress/Surety Taxonomy</label>
+
+    <loc xlink:type='locator' xlink:href='cm.xsd#cm_XBRLTechnicalSyntaxRule' xlink:label='cm_XBRLTechnicalSyntaxRule' />
+    <labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label' xlink:from='cm_XBRLTechnicalSyntaxRule' xlink:to='cm_XBRLTechnicalSyntaxRule_lbl' />
+    <label xlink:type='resource' xlink:label='cm_XBRLTechnicalSyntaxRule_lbl' xml:lang='en-US' xlink:role='http://www.xbrl.org/2003/role/label'>XBRL Technical Syntax Rule</label>
+
+  </labelLink>
+</linkbase>

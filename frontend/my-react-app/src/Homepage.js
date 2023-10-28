@@ -59,6 +59,65 @@ function Homepage() {
     console.log(i18n);
   };
 
+
+  const handleXML1Click = () =>{
+    navigate('/cmxsd')
+  }
+  const handleXML2Click = () =>{
+    navigate('/report-parts-rules-defxml')
+  }
+  const handleXML3Click = () =>{
+      navigate('/be-arcrolesxsd')
+    }
+  const handleXML4Click = () =>{
+        navigate('/cm-arcrolesxsd')
+      }
+  const handleXML5Click = () =>{
+          navigate('/cm-defxml')
+        }
+  const handleXML6Click = () =>{
+            navigate('/cm-docxml')
+          }
+    const handleXML7Click = () =>{
+              navigate('/cm-labxml')
+            }
+    const handleXML8Click = () =>{
+                navigate('/cm-prexml')
+              }
+    const handleXML9Click = () =>{
+                  navigate('/cm-rolesxsd')
+                }
+    const handleXML10Click = () =>{
+                    navigate('/cm-rparts-rsxsd')
+                  }
+      const handleXML11Click = () =>{
+                      navigate('/cm-rparts-xbrlxml')
+                    }
+        const handleXML12Click = () =>{
+                        navigate('/cm-rparts-xbrlxsd')
+                      }
+          const handleXML13Click = () =>{
+                          navigate('/cm-xbrlxsd')
+                        }
+        const handleXML14Click = () =>{
+                            navigate('/drules-arcrolesxsd')
+                          }
+        const handleXML15Click = () =>{
+                              navigate('/extendedLinkRolesxsd')
+                            }
+        const handleXML16Click = () =>{
+                              navigate('/model-structure-rules-strict-defxml')
+                            }
+        const handleXML17Click = () =>{
+                                navigate('/model-structure-types-rules-defxml')
+                              }
+        const handleXML18Click = () =>{
+                                navigate('/properties-rules-defxml')
+                              }
+      const handleXML19Click = () =>{
+                                  navigate('/propertiesxsd')
+                                }
+
   return (
     <div className={`homepage-container ${isDarkMode ? 'dark-mode1' : ''}`}>
       <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
@@ -76,6 +135,74 @@ function Homepage() {
       <button onClick={handleTimelineClick} className={`timeline-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
         Corp Timeline
       </button>
+
+      <div style={{ marginTop: '100px', marginLeft: '40px',  marginRight: '40px'}}>
+      <h1>Seattle Method</h1>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+      <div style={{ width: '45%' }}>
+      <button onClick={handleXML1Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         cmxsd
+      </button>
+      <button onClick={handleXML2Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         report-parts-rules-defxml
+      </button>
+      <button onClick={handleXML3Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         be-arcrolesxsd
+      </button>
+      <button onClick={handleXML4Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         cm-arcrolesxsd
+      </button>
+      <button onClick={handleXML5Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         cm-defxml
+      </button>
+      <button onClick={handleXML6Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         cm-docxml
+      </button>
+      <button onClick={handleXML7Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         cm-labxml
+      </button>
+      <button onClick={handleXML8Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+        cm-prexml
+      </button>
+      <button onClick={handleXML9Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         cm-rolesxsd
+      </button>
+      <button onClick={handleXML10Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+        cm-rparts-rsxsd
+      </button>
+      </div>
+
+      <div style={{ width: '45%' }}>
+      <button onClick={handleXML11Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+      cm-rparts-xbrlxml
+      </button>
+      <button onClick={handleXML12Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         cm-rparts-xbrlxsd
+      </button>
+      <button onClick={handleXML13Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         cm-xbrlxsd
+      </button>
+      <button onClick={handleXML14Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         drules-arcrolesxsd
+      </button>
+      <button onClick={handleXML15Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         extendedLinkRolesxsd
+      </button>
+      <button onClick={handleXML16Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+        model-structure-rules-strict-defxml
+      </button>
+      <button onClick={handleXML17Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         model-structure-types-rules-defxml
+      </button>
+      <button onClick={handleXML18Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         properties-rules-defxml
+      </button>
+      <button onClick={handleXML19Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         propertiesxsd
+      </button>
+      </div>
+      </div>
+      </div>
     </div>
   );
 }

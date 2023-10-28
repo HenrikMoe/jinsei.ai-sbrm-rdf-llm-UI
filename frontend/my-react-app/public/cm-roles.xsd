@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by Henrik Moe and Charles Hoffman, CPA 2023-10-27 -->
+<!-- Conceptual Model Roles -->
+<schema
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:xbrli="http://www.xbrl.org/2003/instance"
+	xmlns:link="http://www.xbrl.org/2003/linkbase"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xl="http://www.xbrl.org/2003/XLink"
+	xmlns:cm-roles="https://jinsei.ai/seattlemethod/cm/cm-roles"
+	targetNamespace="https://jinsei.ai/seattlemethod/cm/cm-roles"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+
+  <annotation>
+    <appinfo>
+      <!-- General Comments -->
+      <link:roleType roleURI="https://jinsei.ai/seattlemethod/cm/cm-roles/roles/GeneralComments" id="GeneralComments">
+        <link:definition>Collection of General Comments within a Business Report (extended link role)</link:definition>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="https://jinsei.ai/seattlemethod/cm/cm-roles/roles/GeneralComment" id="GeneralComment">
+        <link:definition>Individual general comment (resource role)</link:definition>
+        <link:usedOn>link:footnote</link:usedOn>
+      </link:roleType>
+      <!-- Restatements -->
+      <link:roleType roleURI="https://jinsei.ai/seattlemethod/cm/cm-roles/roles/Restatements" id="Restatements">
+        <link:definition>Collection of Restatements within a Financial Report (extended link role)</link:definition>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="https://jinsei.ai/seattlemethod/cm/cm-roles/roles/Restatement" id="Restatement">
+        <link:definition>Individual restatement (resource role)</link:definition>
+        <link:usedOn>link:footnote</link:usedOn>
+      </link:roleType>
+      <!-- Reasons Not Reported -->
+      <link:roleType roleURI="https://jinsei.ai/seattlemethod/cm/cm-roles/roles/ReasonsNotReported" id="ReasonsNotReported">
+        <link:definition>Collection of Reasons Not Reported within a Report</link:definition>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="https://jinsei.ai/seattlemethod/cm/cm-roles/roles/ReasonNotReported" id="ReasonNotReported">
+        <link:definition>Individual reason not reported (resource role)</link:definition>
+        <link:usedOn>link:footnote</link:usedOn>
+      </link:roleType>
+
+
+
+
+      <!-- Label Roles -->
+      <link:roleType roleURI="https://jinsei.ai/seattlemethod/cm/cm-roles/roles/originallyStatedLabel" id="originallyStatedLabel">
+        <link:definition>The label for a concept when presenting values that have been restated from their value as originally reported. Used in an adjustment.</link:definition>
+        <link:usedOn>link:label</link:usedOn>
+      </link:roleType>
+
+    </appinfo>
+  </annotation>
+
+  <import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" />
+
+
+</schema>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Created by Henrik Moe and Charles Hoffman, CPA 2023-10-27 -->
+<!-- Definition of Properties -->
+<link:linkbase xmlns='http://www.xbrl.org/2003/linkbase' xmlns:xbrldt='http://xbrl.org/2005/xbrldt' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:link='http://www.xbrl.org/2003/linkbase' xsi:schemaLocation='http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'>
+   <link:roleRef xlink:type='simple' xlink:href='extendedLinkRoles.xsd#Properties' roleURI='https://jinsei.ai/seattlemethod/us-gaap/rc/role/Properties'/>
+   <link:roleRef xlink:type='simple' xlink:href='extendedLinkRoles.xsd#DisjointedProperties' roleURI='https://jinsei.ai/seattlemethod/us-gaap/rc/role/DisjointedProperties'/>
+
+   <link:arcroleRef xlink:type='simple' xlink:href='cm-arcroles.xsd#property-hasProperty' arcroleURI='https://jinsei.ai/seattlemethod/cm/arcrole/property-hasProperty'/>
+   <link:arcroleRef xlink:type='simple' xlink:href='cm-arcroles.xsd#property-disjointedProperty' arcroleURI='https://jinsei.ai/seattlemethod/cm/arcrole/property-disjointedProperty'/>
+
+
+ 	 <!-- Disjointed -->
+    <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/us-gaap/rc/role/DisjointedProperties' xlink:title='Definition of Properties.'>
+      <link:loc xlink:type='locator' xlink:href='properties.xsd#prop_CurrentMember' xlink:label='prop_CurrentMember' />
+      <link:loc xlink:type='locator' xlink:href='properties.xsd#prop_NoncurrentMember' xlink:label='prop_NoncurrentMember' />
+      <link:definitionArc xlink:from='prop_CurrentMember' xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/property-disjointedProperty' xlink:to='prop_NoncurrentMember' order='1' use='optional' />
+   </link:definitionLink>
+
+
+    <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/us-gaap/rc/role/DisjointedProperties' xlink:title='Definition of Properties.'>
+      <link:loc xlink:type='locator' xlink:href='properties.xsd#prop_OperatingMember' xlink:label='prop_OperatingMember' />
+      <link:loc xlink:type='locator' xlink:href='properties.xsd#prop_NonoperatingMember' xlink:label='prop_NonoperatingMember' />
+      <link:definitionArc xlink:from='prop_OperatingMember' xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/property-disjointedProperty' xlink:to='prop_NonoperatingMember' order='3' use='optional' />
+   </link:definitionLink>
+
+
+</link:linkbase>

@@ -18,7 +18,7 @@ const XSDViewer = () => {
 
   return (
     <div style={{ marginTop: '100px', marginLeft: '40px',  marginRight: '40px'}}>
-      <h1>XSD Viewer</h1>
+      <h1>XSD/XML Viewer</h1>
       {xsdContent ? <XMLViewer xml={xsdContent} /> : <p>Loading XSD content...</p>}
     </div>
   );

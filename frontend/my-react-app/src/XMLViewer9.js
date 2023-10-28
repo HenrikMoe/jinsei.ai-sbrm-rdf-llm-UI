@@ -3,12 +3,13 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import XMLViewer from 'react-xml-viewer';
 
+
 const XMLViewer2 = () => {
   const [xmlContent, setXMLContent] = useState(null);
 
   useEffect(() => {
     // Fetch the XML file content when the component mounts
-    fetch('report-parts-rules-def.xml') // Replace 'your-xml-file.xml' with the correct file path
+    fetch('cm-roles.xsd') // Replace 'your-xml-file.xml' with the correct file path
       .then((response) => response.text())
       .then((data) => {
         setXMLContent(data);

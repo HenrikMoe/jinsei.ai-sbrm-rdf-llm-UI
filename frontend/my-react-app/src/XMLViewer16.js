@@ -8,7 +8,7 @@ const XMLViewer2 = () => {
 
   useEffect(() => {
     // Fetch the XML file content when the component mounts
-    fetch('report-parts-rules-def.xml') // Replace 'your-xml-file.xml' with the correct file path
+    fetch('model-structure-rules-strict-def.xml') // Replace 'your-xml-file.xml' with the correct file path
       .then((response) => response.text())
       .then((data) => {
         setXMLContent(data);
