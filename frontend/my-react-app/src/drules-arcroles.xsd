@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Created by Henrik Moe and Charles Hoffman, CPA 2023-10-27 -->
+<schema
+ xmlns='http://www.w3.org/2001/XMLSchema'
+ xmlns:xbrli='http://www.xbrl.org/2003/instance'
+ xmlns:link='http://www.xbrl.org/2003/linkbase'
+ xmlns:xlink='http://www.w3.org/1999/xlink'
+ xmlns:drules-arcroles='https://jinsei.ai/seattlemethod/cm/drules-arcroles'
+ targetNamespace='https://jinsei.ai/seattlemethod/cm/drules-arcroles'
+ elementFormDefault='qualified'
+ attributeFormDefault='unqualified'>
+  <annotation>
+    <documentation>Provides arcroles for articulating business rules between the different pieces of a financial report.</documentation>
+    <appinfo>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/financialReport-reportsConcept' id='financialReport-reportsConcept' cyclesAllowed='undirected'>
+        <link:definition>Indicates that a financial report contains a specific reported fact which has a characteristic of a specific concept.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/financialReport-possibleDisclosure' id='financialReport-possibleDisclosure' cyclesAllowed='undirected'>
+        <link:definition>Indicates that a financial report might possibly provide a specific disclosure.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/financialReport-requiresDisclosure' id='financialReport-requiresDisclosure' cyclesAllowed='undirected'>
+        <link:definition>Type of full-hasPart relation.  Indicates that a financial report (full) is required to have a specific disclosure (hasPart). This disclosure MUST always be present.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/summationConcept-disallowedItemConcept' id='summationConcept-disallowedItemConcept' cyclesAllowed='undirected'>
+        <link:definition>Indicates that a summation concept is not allowed to have a specific item concept within a roll up.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/conceptArrangementPattern-requiresConcept' id='conceptArrangementPattern-requiresConcept' cyclesAllowed='undirected'>
+        <link:definition>Indicates that a concept arrangment pattern requires a concept that will be the total of a roll up or balance or instant of a roll forward or total of an adjustment</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/reportingLineItem-requiresDisclosure' id='reportingLineItem-requiresDisclosure' cyclesAllowed='undirected'>
+        <link:definition>Indicates that if a specific line item is reported, then a financial report is required to have a specific disclosure. If the line item is present, the disclosure is required.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-requiresHypercube' id='disclosure-requiresHypercube' cyclesAllowed='undirected'>
+        <link:definition>Type of full-hasPart relation.  Indicates that a disclosure (full) is required to have a specific concept (hasPart). This concept MUST always be present for the specified disclosure.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-requiresBlock' id='disclosure-requiresBlock' cyclesAllowed='undirected'>
+        <link:definition>Indicates that a diclosure MUST contain a specified Block</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-requiresConcept' id='disclosure-requiresConcept' cyclesAllowed='undirected'>
+        <link:definition>Type of full-hasPart relation.  Indicates that a disclosure (full) is required to have a specific concept (hasPart). This concept MUST always be present for the specified disclosure.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/axis-allowedAlternativeAxis' id='axis-allowedAlternativeAxis' cyclesAllowed='undirected'>
+        <link:definition>Type of class-subClass relation.  Allow for an alternative axis to be used in place of another axis.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/concept-allowedAlternativeConcept' id='concept-allowedAlternativeConcept' cyclesAllowed='undirected'>
+        <link:definition>Type of class-subClass relation.  Allow for an alternative concept to be used in place of another concept.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-allowedAlternativeDisclosure' id='disclosure-allowedAlternativeDisclosure' cyclesAllowed='undirected'>
+        <link:definition>Type of class-subClass relation.  Allow for an alternative disclosure to be used in place of another disclosure.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-requiresAxis' id='disclosure-requiresAxis' cyclesAllowed='undirected'>
+        <link:definition>Indicates that the disclosure requires the specified Axis to exist.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-requiresMember' id='disclosure-requiresMember' cyclesAllowed='undirected'>
+        <link:definition>Indicates that the disclosure requires the specified Member to exist.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/reportedDisclosure-requiresDisclosure' id='reportedDisclosure-requiresDisclosure' cyclesAllowed='undirected'>
+        <link:definition>Indicates that if a specified disclosure exists, then another disclosure is also required to exist.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-requiresConceptInContext' id='disclosure-requiresConceptInContext' cyclesAllowed='undirected'>
+        <link:definition>Type of full-hasPart relation.  Indicates that a disclosure (full) is required to have a specific concept (hasPart). This concept MUST always be present for the specified disclosure AND in the same context.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-hasConceptArrangementPattern' id='disclosure-hasConceptArrangementPattern' cyclesAllowed='undirected'>
+        <link:definition>Indicates that a disclosure is organized using the indicated concept arrangement pattern.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/reportedFact-requiresReportedFact' id='reportedFact-requiresReportedFact' cyclesAllowed='undirected'>
+        <link:definition>Indicates that if a specified reported fact exist, then another reported fact is also required.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-hasMemberArrangementPattern' id='disclosure-hasMemberArrangementPattern' cyclesAllowed='undirected'>
+        <link:definition>Indicates that a disclosure has an axis whose members are arranged using a particular member arrangement pattern.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-relatedPolicy' id='disclosure-relatedPolicy' cyclesAllowed='undirected'>
+        <link:definition>Indicates that a disclosure has a related policy.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-relatedLevel1NoteTextBlock' id='disclosure-relatedLevel1NoteTextBlock' cyclesAllowed='undirected'>
+        <link:definition>Indicates that a disclosure has related Level 1 Note [Text Block].</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/reportedFact-prohibitsReportedFact' id='reportedFact-prohibitsReportedFact' cyclesAllowed='undirected'>
+        <link:definition>Indicates that if a specified reported fact exist, then another reported fact is MUST NOT exist.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-equivalentTextblock' id='disclosure-equivalentTextblock' cyclesAllowed='undirected'>
+        <link:definition>Indicates that the disclosure has the text block which can also be used to report the same information</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-isSECType' id='disclosure-isSECType' cyclesAllowed='undirected'>
+        <link:definition>Indicates that a disclosure is a specific SEC type (Document, Statement, Disclosure, Schedule) per the EFM.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-mostlyContainsConcept' id='disclosure-mostlyContainsConcept' cyclesAllowed='undirected'>
+        <link:definition>Evoking strength. A disclosure mostly contains this specific concept.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-rarelyContainsConcept' id='disclosure-rarelyContainsConcept' cyclesAllowed='undirected'>
+        <link:definition>Evoking strength. A disclosure rarely contains this specific concept.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-practicallyAlwaysContainsConcept' id='disclosure-practicallyAlwaysContainsConcept' cyclesAllowed='undirected'>
+        <link:definition>Evoking strength. A disclosure practically always contains this specific concept.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-neverContainsConcept' id='disclosure-neverContainsConcept' cyclesAllowed='undirected'>
+        <link:definition>Evoking strength. A disclosure never contains this specific concept.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/disclosure-oftenContainsConcept' id='disclosure-oftenContainsConcept' cyclesAllowed='undirected'>
+        <link:definition>Evoking strength. A disclosure often contains this specific concept.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI='https://jinsei.ai/seattlemethod/cm/drules-arcroles/arcrole/property-reportElementWithProperty' id='property-reportElementWithProperty' cyclesAllowed='undirected'>
+        <link:definition>Indicates a property that a report element has.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+
+    </appinfo>
+  </annotation>
+  <import namespace='http://www.xbrl.org/2003/instance' schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd' />
+</schema>

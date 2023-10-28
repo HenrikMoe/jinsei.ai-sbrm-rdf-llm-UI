@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Created by Henrik Moe and Charles Hoffman, CPA 2023-10-27 -->
+<!-- Definition of properties -->
+<schema
+  xmlns='http://www.w3.org/2001/XMLSchema'
+  xmlns:xbrli='http://www.xbrl.org/2003/instance'
+  xmlns:xbrldt='http://xbrl.org/2005/xbrldt'
+  xmlns:link='http://www.xbrl.org/2003/linkbase'
+  xmlns:xlink='http://www.w3.org/1999/xlink'
+  xmlns:generic='http://xbrl.org/2008/generic'
+  xmlns:nonnum='http://www.xbrl.org/dtr/type/non-numeric'
+  xmlns:num='http://www.xbrl.org/dtr/type/numeric'
+  xmlns:prop='https://jinsei.ai/seattlemethod/Properties'
+  targetNamespace='https://jinsei.ai/seattlemethod/Properties'
+  elementFormDefault='qualified'
+  attributeFormDefault='unqualified'>
+  <annotation>
+  </annotation>
+  <import namespace='http://www.xbrl.org/2003/instance' schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd' />
+  <import xmlns="http://www.w3.org/2001/XMLSchema" namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd"/>
+  <import xmlns="http://www.w3.org/2001/XMLSchema" namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd"/>
+  <import xmlns="http://www.w3.org/2001/XMLSchema" namespace="http://www.xbrl.org/dtr/type/numeric" schemaLocation="http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd"/>
+
+
+  <element
+    id="prop_CurrentnessTrait"
+    name="CurrentnessTrait"
+    type="xbrli:stringItemType"
+    substitutionGroup="xbrli:item"
+    xbrli:periodType="duration"
+    nillable="true" />
+
+  <element
+    id="prop_CurrentnessDomain"
+    name="CurrentnessDomain"
+    type="nonnum:domainItemType"
+    substitutionGroup="xbrli:item"
+    xbrli:periodType="duration"
+    nillable="true" />
+
+  <element
+    id="prop_CurrentMember"
+    name="CurrentMember"
+    type="nonnum:domainItemType"
+    substitutionGroup="xbrli:item"
+    xbrli:periodType="duration"
+    nillable="true" />
+
+  <element
+    id="prop_NoncurrentMember"
+    name="NoncurrentMember"
+    type="nonnum:domainItemType"
+    substitutionGroup="xbrli:item"
+    xbrli:periodType="duration"
+    nillable="true" />
+
+
+
+  <element
+    id="prop_OperatingnessTrait"
+    name="OperatingnessTrait"
+    type="xbrli:stringItemType"
+    substitutionGroup="xbrli:item"
+    xbrli:periodType="duration"
+    nillable="true" />
+
+  <element
+    id="prop_OperatingnessDomain"
+    name="OperatingnessDomain"
+    type="nonnum:domainItemType"
+    substitutionGroup="xbrli:item"
+    xbrli:periodType="duration"
+    nillable="true" />
+
+  <element
+    id="prop_OperatingMember"
+    name="OperatingMember"
+    type="nonnum:domainItemType"
+    substitutionGroup="xbrli:item"
+    xbrli:periodType="duration"
+    nillable="true" />
+
+  <element
+    id="prop_NonoperatingMember"
+    name="NonoperatingMember"
+    type="nonnum:domainItemType"
+    substitutionGroup="xbrli:item"
+    xbrli:periodType="duration"
+    nillable="true" />
+
+
+
+
+    <element
+      id="prop_RecordedValueTrait"
+      name="RecordedValueTrait"
+      type="xbrli:stringItemType"
+      substitutionGroup="xbrli:item"
+      xbrli:periodType="duration"
+      nillable="true" />
+
+    <element
+      id="prop_RecordedValueDomain"
+      name="RecordedValueDomain"
+      type="nonnum:domainItemType"
+      substitutionGroup="xbrli:item"
+      xbrli:periodType="duration"
+      nillable="true" />
+
+
+    <element
+      id="prop_RecordedAtHistoricalCostMember"
+      name="RecordedAtHistoricalCostMember"
+      type="nonnum:domainItemType"
+      substitutionGroup="xbrli:item"
+      xbrli:periodType="duration"
+      nillable="true" />
+
+    <element
+      id="prop_RecordedAtCarryingValueMember"
+      name="RecordedAtCarryingValueMember"
+      type="nonnum:domainItemType"
+      substitutionGroup="xbrli:item"
+      xbrli:periodType="duration"
+      nillable="true" />
+
+    <element
+      id="prop_RecordedAsEstimateMember"
+      name="RecordedAsEstimateMember"
+      type="nonnum:domainItemType"
+      substitutionGroup="xbrli:item"
+      xbrli:periodType="duration"
+      nillable="true" />
+
+
+
+
+      <element
+        id="prop_AuditRiskTrait"
+        name="AuditRiskTrait"
+        type="xbrli:stringItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="duration"
+        nillable="true" />
+
+      <element
+        id="prop_AuditRiskDomain"
+        name="AuditRiskDomain"
+        type="nonnum:domainItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="duration"
+        nillable="true" />
+
+
+      <element
+        id="prop_HighAuditRiskMember"
+        name="HighAuditRiskMember"
+        type="nonnum:domainItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="duration"
+        nillable="true" />
+
+      <element
+        id="prop_AverageAuditRiskMember"
+        name="AverageAuditRiskMember"
+        type="nonnum:domainItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="duration"
+        nillable="true" />
+
+      <element
+        id="prop_LowAuditRiskMember"
+        name="LowAuditRiskMember"
+        type="nonnum:domainItemType"
+        substitutionGroup="xbrli:item"
+        xbrli:periodType="duration"
+        nillable="true" />
+
+
+
+
+</schema>

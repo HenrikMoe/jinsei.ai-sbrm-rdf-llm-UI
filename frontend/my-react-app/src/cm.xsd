@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Created by Henrik Moe and Charles Hoffman, CPA 2023-10-27 -->
+<schema
+  xmlns='http://www.w3.org/2001/XMLSchema'
+  xmlns:xbrli='http://www.xbrl.org/2003/instance'
+  xmlns:link='http://www.xbrl.org/2003/linkbase'
+  xmlns:xlink='http://www.w3.org/1999/xlink'
+
+  xmlns:cm='https://jinsei.ai/seattlemethod/cm'
+  targetNamespace='https://jinsei.ai/seattlemethod/cm'
+
+  elementFormDefault='qualified'
+  attributeFormDefault='unqualified'>
+  <annotation>
+    <documentation>Conceptual Model (CM) in XBRL</documentation>
+    <appinfo>
+      <link:roleType roleURI='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' id='ConceptualModel'>
+        <link:definition>Financial Report Conceptual Model</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:linkbaseRef xlink:type='simple' xlink:role='http://www.xbrl.org/2003/role/labelLinkbaseRef' xlink:arcrole='http://www.w3.org/1999/xlink/properties/linkbase' xlink:href='cm-lab.xml' xlink:title='Label Links, all' />
+      <link:linkbaseRef xlink:type='simple' xlink:role='http://www.xbrl.org/2003/role/labelLinkbaseRef' xlink:arcrole='http://www.w3.org/1999/xlink/properties/linkbase' xlink:href='cm-doc.xml' xlink:title='Documentation Links, all' />
+    </appinfo>
+  </annotation>
+  <import namespace='http://www.xbrl.org/2003/instance' schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd' />
+  <import namespace='http://www.xbrl.org/2003/linkbase' schemaLocation='http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd' />
+
+  <element id='cm_Abstract' name='Abstract' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_AccountingActivity' name='AccountingActivity' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Adjustment' name='Adjustment' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_AffectsOnEconomicEntityDuringPeriod' name='AffectsOnEconomicEntityDuringPeriod' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_AssetGroup' name='AssetGroup' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Assets' name='Assets' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_AutomatedAccountingAndReportingChecks' name='AutomatedAccountingAndReportingChecks' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Axis' name='Axis' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Block' name='Block' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_BusinessReport' name='BusinessReport' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_BusinessRule' name='BusinessRule' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_BusinessRulePattern' name='BusinessRulePattern' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_BusinessSegment' name='BusinessSegment' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_BusinessUnit' name='BusinessUnit' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_CalendarPeriod' name='CalendarPeriod' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Characteristic' name='Characteristic' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Circumstance' name='Circumstance' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ClassEquivalentClass' name='ClassEquivalentClass' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ClassSubclass' name='ClassSubclass' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_CoExists' name='CoExists' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_CommercialAndIndustrial' name='CommercialAndIndustrial' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_CompleteComplexSet' name='CompleteComplexSet' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_CompleteFlatSet' name='CompleteFlatSet' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_CompleteHierarchicalSet' name='CompleteHierarchicalSet' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ComplexComputation' name='ComplexComputation' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+
+  <element id='cm_Arithmetic' name='Arithmetic' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Set' name='Set' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Hypercube' name='Hypercube' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Dimension' name='Dimension' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+
+  <element id='cm_Debit' name='Debit' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Credit' name='Credit' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+
+  <element id='cm_Component' name='Component' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ComponentIntregalObject' name='ComponentIntregalObject' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ComprehensiveIncome' name='ComprehensiveIncome' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Concept' name='Concept' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ConceptArrangemetPattern' name='ConceptArrangemetPattern' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Condition' name='Condition' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ConsolidatedEntity' name='ConsolidatedEntity' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Corporation' name='Corporation' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_DefinitionOfNewSubclassAllowed' name='DefinitionOfNewSubclassAllowed' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Disclosure' name='Disclosure' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_DisclosureNote' name='DisclosureNote' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_DisclosureType' name='DisclosureType' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_DisposalGroup' name='DisposalGroup' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_DistributionsToOwners' name='DistributionsToOwners' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_DocumentInformation' name='DocumentInformation' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_DocumentType' name='DocumentType' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_DomainRule' name='DomainRule' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_EconomicEntity' name='EconomicEntity' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ElementsOfFinancialStatements' name='ElementsOfFinancialStatements' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ElementsOfFinancialStatementsOfEconomicEntity' name='ElementsOfFinancialStatementsOfEconomicEntity' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_EntityInformation' name='EntityInformation' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_EntityLegalForm' name='EntityLegalForm' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_EqualTo' name='EqualTo' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Equity' name='Equity' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Event' name='Event' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Exemplar' name='Exemplar' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Exists' name='Exists' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Expenses' name='Expenses' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ExtensionDisallowed' name='ExtensionDisallowed' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ExtensionProperties' name='ExtensionProperties' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_FaceFinancialStatements' name='FaceFinancialStatements' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_FeatureActivity' name='FeatureActivity' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_FinancialReport' name='FinancialReport' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_FinancialReportComponent' name='FinancialReportComponent' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_FinancialReportingByNotForProfitEntityInUS' name='FinancialReportingByNotForProfitEntityInUS' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_FinancialReportingByUSStateOrLocalGovernmentalEntity' name='FinancialReportingByUSStateOrLocalGovernmentalEntity' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_FinancialReportObject' name='FinancialReportObject' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_FinancialReportsInIFRS' name='FinancialReportsInIFRS' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_FinancialReportsInIFRSSMEs' name='FinancialReportsInIFRSSMEs' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_FiscalPeriod' name='FiscalPeriod' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_FullHasPart' name='FullHasPart' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_FundamentalAccountingConceptRelation' name='FundamentalAccountingConceptRelation' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_FundOrTrust' name='FundOrTrust' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Gains' name='Gains' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_GeneralRelationPattern' name='GeneralRelationPattern' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_GeographicArea' name='GeographicArea' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_GreaterThan' name='GreaterThan' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_GreaterThanOrEqualToZero' name='GreaterThanOrEqualToZero' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Hierarchy' name='Hierarchy' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_IFRS' name='IFRS' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_IncomeTaxBasis' name='IncomeTaxBasis' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_IndustrySpecificRule' name='IndustrySpecificRule' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Industry' name='Industry' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Instrument' name='Instrument' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_InsuranceBasedRevenue' name='InsuranceBasedRevenue' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_InterestBasedRevenue' name='InterestBasedRevenue' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_InvestmentsByOwners' name='InvestmentsByOwners' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_KeyFinancialRatio' name='KeyFinancialRatio' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_LegalEntity' name='LegalEntity' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_LessThan' name='LessThan' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Level1TextBlock' name='Level1TextBlock' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Level2TextBlock' name='Level2TextBlock' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Level3TextBlock' name='Level3TextBlock' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Level4Detail' name='Level4Detail' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Liabilities' name='Liabilities' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_LimitedLiabilityCorporation' name='LimitedLiabilityCorporation' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_LimitedLiabilityPartnership' name='LimitedLiabilityPartnership' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_LineItem' name='LineItem' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_LineItems' name='LineItems' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Losses' name='Losses' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Member' name='Member' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_MemberArrangementPattern' name='MemberArrangementPattern' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_MemberCollection' name='MemberCollection' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ModelStructure' name='ModelStructure' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Network' name='Network' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_NetworkTaggingLevel' name='NetworkTaggingLevel' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_NetworkType' name='NetworkType' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Note' name='Note' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_NotForProfit' name='NotForProfit' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_OperatingSegment' name='OperatingSegment' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_OtherComprehensiveBasisOfAccounting' name='OtherComprehensiveBasisOfAccounting' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ParentheticalComments' name='ParentheticalComments' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ParentHoldingCompany' name='ParentHoldingCompany' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Partnership' name='Partnership' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_PartOf' name='PartOf' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_PeerConsistencyRule' name='PeerConsistencyRule' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_PersonalFinancialReportingInUS' name='PersonalFinancialReportingInUS' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Phenomenon' name='Phenomenon' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_PlaceArea' name='PlaceArea' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_PortionMass' name='PortionMass' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_PrimaryFinancialStatement' name='PrimaryFinancialStatement' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_PriorPeriodConsistencyRule' name='PriorPeriodConsistencyRule' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_PrivateCompany' name='PrivateCompany' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_PrivateCompanyFinancialReportsInUSGAAP' name='PrivateCompanyFinancialReportsInUSGAAP' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Proprietorship' name='Proprietorship' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Prototype' name='Prototype' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_PublicCompany' name='PublicCompany' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_PublicCompanyFinancialReportsInUSGAAPToSEC' name='PublicCompanyFinancialReportsInUSGAAPToSEC' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Range' name='Range' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_RealEstateInvestmentTrusts' name='RealEstateInvestmentTrusts' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReceivingEntity' name='ReceivingEntity' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReplaceRedefineAllowed' name='ReplaceRedefineAllowed' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportableSegment' name='ReportableSegment' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportDate' name='ReportDate' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportElement' name='ReportElement' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportElementType' name='ReportElementType' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportFragment' name='ReportFragment' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportingEntity' name='ReportingEntity' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportingEntityComponent' name='ReportingEntityComponent' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportingEntityRole' name='ReportingEntityRole' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportingEntityRule' name='ReportingEntityRule' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportingScenario' name='ReportingScenario' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportingScheme' name='ReportingScheme' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportingStyle' name='ReportingStyle' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportingSystemSpecificRule' name='ReportingSystemSpecificRule' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportingUnit' name='ReportingUnit' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ReportLevelModelStructureRule' name='ReportLevelModelStructureRule' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Revenues' name='Revenues' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_RollForward' name='RollForward' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_RollForwardInfo' name='RollForwardInfo' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_RollUp' name='RollUp' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ScheduleType' name='ScheduleType' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_SecuritiesBasedRevenue' name='SecuritiesBasedRevenue' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_SoleProprietor' name='SoleProprietor' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_StatementOfCashFlows' name='StatementOfCashFlows' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_StatementOfChangesInEquity' name='StatementOfChangesInEquity' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_StatementOfComprehensiveIncome' name='StatementOfComprehensiveIncome' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_StatementOfEarnings' name='StatementOfEarnings' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_StatementOfFinancialPosition' name='StatementOfFinancialPosition' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_StatementType' name='StatementType' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_StateOrLocalGovernmentalEntity' name='StateOrLocalGovernmentalEntity' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_StuffObject' name='StuffObject' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Submission' name='Submission' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Subsidiary' name='Subsidiary' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_SupplementaryInformation' name='SupplementaryInformation' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Table' name='Table' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_TableEquivalentTextBlock' name='TableEquivalentTextBlock' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_TextBlock' name='TextBlock' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Thing' name='Thing' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ThingHasRole' name='ThingHasRole' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_ToDoManualTask' name='ToDoManualTask' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Topic' name='Topic' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Transaction' name='Transaction' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_TypeOf' name='TypeOf' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_UnknownAccountingActivity' name='UnknownAccountingActivity' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_UnknownEntityLegalForm' name='UnknownEntityLegalForm' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_USGAAP' name='USGAAP' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Valid' name='Valid' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_Variance' name='Variance' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_VerificationRule' name='VerificationRule' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_WholePart' name='WholePart' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_WholePartRelationPattern' name='WholePartRelationPattern' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_XBRLBasedGeneralBusinessReports' name='XBRLBasedGeneralBusinessReports' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_XBRLBasedReportingToIranRegulator' name='XBRLBasedReportingToIranRegulator' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_XBRLBasedReportingUsingXBRLUSWorkInProgressSuretyTaxonomy' name='XBRLBasedReportingUsingXBRLUSWorkInProgressSuretyTaxonomy' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+  <element id='cm_XBRLTechnicalSyntaxRule' name='XBRLTechnicalSyntaxRule' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' abstract='true' />
+
+</schema>

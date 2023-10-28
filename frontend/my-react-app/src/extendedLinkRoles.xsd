@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Created by Henrik Moe and Charles Hoffman, CPA 2023-10-27 -->
+<schema
+  xmlns='http://www.w3.org/2001/XMLSchema'
+  xmlns:xbrli='http://www.xbrl.org/2003/instance'
+  xmlns:link='http://www.xbrl.org/2003/linkbase'
+  xmlns:xlink='http://www.w3.org/1999/xlink'
+  xmlns:generic='http://xbrl.org/2008/generic'
+  xmlns:roles-prop='https://jinsei.ai/seattlemethod/us-gaap/Properties/roles'
+  targetNamespace='https://jinsei.ai/seattlemethod/us-gaap/Properties/roles'
+  elementFormDefault='qualified'
+  attributeFormDefault='unqualified'>
+  <annotation>
+    <appinfo>
+         <link:roleType roleURI = 'https://jinsei.ai/seattlemethod/us-gaap/rc/role/Properties' id='Properties'>
+           <link:definition>Properties (US GAAP)</link:definition>
+           <link:usedOn>link:presentationLink</link:usedOn>
+           <link:usedOn>link:calculationLink</link:usedOn>
+           <link:usedOn>link:definitionLink</link:usedOn>
+           <link:usedOn>generic:link</link:usedOn>
+         </link:roleType>
+         <link:roleType roleURI = 'https://jinsei.ai/seattlemethod/us-gaap/rc/role/DisjointedProperties' id='DisjointedProperties'>
+           <link:definition>Disjointed Properties (US GAAP)</link:definition>
+           <link:usedOn>link:presentationLink</link:usedOn>
+           <link:usedOn>link:calculationLink</link:usedOn>
+           <link:usedOn>link:definitionLink</link:usedOn>
+           <link:usedOn>generic:link</link:usedOn>
+         </link:roleType>
+
+    </appinfo>
+  </annotation>
+  <import namespace='http://www.xbrl.org/2003/instance' schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd' />
+</schema>

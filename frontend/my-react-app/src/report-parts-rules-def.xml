@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Created by Henrik Moe and Charles Hoffman, CPA 2023-10-27 -->
+<link:linkbase
+  xmlns='http://www.xbrl.org/2003/linkbase'
+  xmlns:xbrldt='http://xbrl.org/2005/xbrldt'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:xlink='http://www.w3.org/1999/xlink'
+  xmlns:link='http://www.xbrl.org/2003/linkbase'
+  xsi:schemaLocation='http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'>
+
+  <link:arcroleRef xlink:type='simple' xlink:href='https://jinsei.ai/seattlemethod/cm/cm-arcroles.xsd#has-part' arcroleURI='https://jinsei.ai/seattlemethod/cm/arcrole/has-part'/>
+
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_FinancialReport' xlink:label='cm_FinancialReport' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_FinancialReport' xlink:from='cm_Thing' order='1' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_FinancialReport' xlink:label='cm_FinancialReport' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_PrimaryFinancialStatement' xlink:label='cm_PrimaryFinancialStatement' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/has-part' xlink:to='cm_PrimaryFinancialStatement' xlink:from='cm_FinancialReport' order='1' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_FinancialReport' xlink:label='cm_FinancialReport' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_DisclosureNote' xlink:label='cm_DisclosureNote' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/has-part' xlink:to='cm_DisclosureNote' xlink:from='cm_FinancialReport' order='2' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_FinancialReport' xlink:label='cm_FinancialReport' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_SupplementaryInformation' xlink:label='cm_SupplementaryInformation' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/has-part' xlink:to='cm_SupplementaryInformation' xlink:from='cm_FinancialReport' order='3' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_FaceFinancialStatements' xlink:label='cm_FaceFinancialStatements' />
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_PrimaryFinancialStatement' xlink:label='cm_PrimaryFinancialStatement' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/essence-alias' xlink:to='cm_FaceFinancialStatements' xlink:from='cm_PrimaryFinancialStatement' order='1' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_DisclosureNote' xlink:label='cm_DisclosureNote' />
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Note' xlink:label='cm_Note' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/essence-alias' xlink:to='cm_Note' xlink:from='cm_DisclosureNote' order='1' use='optional' />
+   </link:definitionLink>
+
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_StatementOfFinancialPosition' xlink:label='cm_StatementOfFinancialPosition' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_PrimaryFinancialStatement' xlink:label='cm_PrimaryFinancialStatement' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_StatementOfFinancialPosition' xlink:from='cm_PrimaryFinancialStatement' order='1' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_StatementOfEarnings' xlink:label='cm_StatementOfEarnings' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_PrimaryFinancialStatement' xlink:label='cm_PrimaryFinancialStatement' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_StatementOfEarnings' xlink:from='cm_PrimaryFinancialStatement' order='2' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_StatementOfComprehensiveIncome' xlink:label='cm_StatementOfComprehensiveIncome' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_PrimaryFinancialStatement' xlink:label='cm_PrimaryFinancialStatement' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_StatementOfComprehensiveIncome' xlink:from='cm_PrimaryFinancialStatement' order='3' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_StatementOfChangesInEquity' xlink:label='cm_StatementOfChangesInEquity' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_PrimaryFinancialStatement' xlink:label='cm_PrimaryFinancialStatement' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_StatementOfChangesInEquity' xlink:from='cm_PrimaryFinancialStatement' order='4' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_StatementOfCashFlows' xlink:label='cm_StatementOfCashFlows' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_PrimaryFinancialStatement' xlink:label='cm_PrimaryFinancialStatement' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_StatementOfCashFlows' xlink:from='cm_PrimaryFinancialStatement' order='5' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_FinancialReport' xlink:label='cm_FinancialReport' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_ElementsOfFinancialStatements' xlink:label='cm_ElementsOfFinancialStatements' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/has-part' xlink:to='cm_ElementsOfFinancialStatements' xlink:from='cm_FinancialReport' order='4' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Revenues' xlink:label='cm_Revenues' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_ElementsOfFinancialStatements' xlink:label='cm_ElementsOfFinancialStatements' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_Revenues' xlink:from='cm_ElementsOfFinancialStatements' order='1' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Expenses' xlink:label='cm_Expenses' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_ElementsOfFinancialStatements' xlink:label='cm_ElementsOfFinancialStatements' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_Expenses' xlink:from='cm_ElementsOfFinancialStatements' order='2' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Gains' xlink:label='cm_Gains' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_ElementsOfFinancialStatements' xlink:label='cm_ElementsOfFinancialStatements' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_Gains' xlink:from='cm_ElementsOfFinancialStatements' order='3' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Losses' xlink:label='cm_Losses' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_ElementsOfFinancialStatements' xlink:label='cm_ElementsOfFinancialStatements' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_Losses' xlink:from='cm_ElementsOfFinancialStatements' order='4' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_InvestmentsByOwners' xlink:label='cm_InvestmentsByOwners' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_ElementsOfFinancialStatements' xlink:label='cm_ElementsOfFinancialStatements' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_InvestmentsByOwners' xlink:from='cm_ElementsOfFinancialStatements' order='5' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_DistributionsToOwners' xlink:label='cm_DistributionsToOwners' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_ElementsOfFinancialStatements' xlink:label='cm_ElementsOfFinancialStatements' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_DistributionsToOwners' xlink:from='cm_ElementsOfFinancialStatements' order='6' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Assets' xlink:label='cm_Assets' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_ElementsOfFinancialStatements' xlink:label='cm_ElementsOfFinancialStatements' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_Assets' xlink:from='cm_ElementsOfFinancialStatements' order='7' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Liabilities' xlink:label='cm_Liabilities' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_ElementsOfFinancialStatements' xlink:label='cm_ElementsOfFinancialStatements' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_Liabilities' xlink:from='cm_ElementsOfFinancialStatements' order='8' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_Equity' xlink:label='cm_Equity' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_ElementsOfFinancialStatements' xlink:label='cm_ElementsOfFinancialStatements' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_Equity' xlink:from='cm_ElementsOfFinancialStatements' order='9' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link' xlink:title=''>
+     <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_ComprehensiveIncome' xlink:label='cm_ComprehensiveIncome' />
+      <link:loc xlink:type='locator' xlink:href='http://xbrlsite.com/seattlemethod/cm/cm.xsd#cm_ElementsOfFinancialStatements' xlink:label='cm_ElementsOfFinancialStatements' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/general-special' xlink:to='cm_ComprehensiveIncome' xlink:from='cm_ElementsOfFinancialStatements' order='10' use='optional' />
+   </link:definitionLink>
+
+
+</link:linkbase>

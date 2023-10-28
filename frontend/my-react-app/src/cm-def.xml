@@ -1,0 +1,720 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Created by Henrik Moe and Charles Hoffman, CPA 2023-10-27 -->
+<link:linkbase xmlns='http://www.xbrl.org/2003/linkbase' xmlns:xbrldt='http://xbrl.org/2005/xbrldt' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:link='http://www.xbrl.org/2003/linkbase' xsi:schemaLocation='http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'>
+   <link:roleRef xlink:type='simple' xlink:href='cm.xsd#ConceptualModel' roleURI='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel'/>
+   <link:arcroleRef xlink:type='simple' xlink:href='cm-arcroles.xsd#class-subClass' arcroleURI='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass'/>
+   <link:arcroleRef xlink:type='simple' xlink:href='cm-arcroles.xsd#class-equivalentClass' arcroleURI='https://jinsei.ai/seattlemethod/cm/arcrole/class-equivalentClass'/>
+   <link:arcroleRef xlink:type='simple' xlink:href='cm-arcroles.xsd#full-hasPart' arcroleURI='https://jinsei.ai/seattlemethod/cm/arcrole/full-hasPart'/>
+   <link:arcroleRef xlink:type='simple' xlink:href='cm-arcroles.xsd#part-partOf' arcroleURI='https://jinsei.ai/seattlemethod/cm/arcrole/part-partOf'/>
+   <link:arcroleRef xlink:type='simple' xlink:href='cm-arcroles.xsd#table-equivalentTextBlock' arcroleURI='https://jinsei.ai/seattlemethod/cm/arcrole/table-equivalentTextBlock'/>
+   <link:arcroleRef xlink:type='simple' xlink:href='cm-arcroles.xsd#component-integralObject' arcroleURI='https://jinsei.ai/seattlemethod/cm/arcrole/component-integralObject'/>
+   <link:arcroleRef xlink:type='simple' xlink:href='cm-arcroles.xsd#member-collection' arcroleURI='https://jinsei.ai/seattlemethod/cm/arcrole/member-collection'/>
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_IFRS' xlink:label='cm_IFRS' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportsInIFRS' xlink:label='cm_FinancialReportsInIFRS' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_FinancialReportsInIFRS' xlink:from='cm_IFRS' order='1' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingScheme' xlink:label='cm_ReportingScheme' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_USGAAP' xlink:label='cm_USGAAP' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_USGAAP' xlink:from='cm_ReportingScheme' order='2' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Characteristic' xlink:label='cm_Characteristic' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingEntity' xlink:label='cm_ReportingEntity' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_ReportingEntity' xlink:from='cm_Characteristic' order='3' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingScheme' xlink:label='cm_ReportingScheme' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_IFRS' xlink:label='cm_IFRS' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_IFRS' xlink:from='cm_ReportingScheme' order='4' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_IFRS' xlink:label='cm_IFRS' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportsInIFRSSMEs' xlink:label='cm_FinancialReportsInIFRSSMEs' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_FinancialReportsInIFRSSMEs' xlink:from='cm_IFRS' order='5' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Characteristic' xlink:label='cm_Characteristic' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_LegalEntity' xlink:label='cm_LegalEntity' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_LegalEntity' xlink:from='cm_Characteristic' order='6' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_USGAAP' xlink:label='cm_USGAAP' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_PrivateCompanyFinancialReportsInUSGAAP' xlink:label='cm_PrivateCompanyFinancialReportsInUSGAAP' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_PrivateCompanyFinancialReportsInUSGAAP' xlink:from='cm_USGAAP' order='7' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Characteristic' xlink:label='cm_Characteristic' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingScenario' xlink:label='cm_ReportingScenario' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_ReportingScenario' xlink:from='cm_Characteristic' order='8' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_USGAAP' xlink:label='cm_USGAAP' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_PublicCompanyFinancialReportsInUSGAAPToSEC' xlink:label='cm_PublicCompanyFinancialReportsInUSGAAPToSEC' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_PublicCompanyFinancialReportsInUSGAAPToSEC' xlink:from='cm_USGAAP' order='9' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Characteristic' xlink:label='cm_Characteristic' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessSegment' xlink:label='cm_BusinessSegment' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_BusinessSegment' xlink:from='cm_Characteristic' order='10' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_USGAAP' xlink:label='cm_USGAAP' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportingByNotForProfitEntityInUS' xlink:label='cm_FinancialReportingByNotForProfitEntityInUS' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_FinancialReportingByNotForProfitEntityInUS' xlink:from='cm_USGAAP' order='11' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Characteristic' xlink:label='cm_Characteristic' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_GeographicArea' xlink:label='cm_GeographicArea' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_GeographicArea' xlink:from='cm_Characteristic' order='12' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Characteristic' xlink:label='cm_Characteristic' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportDate' xlink:label='cm_ReportDate' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_ReportDate' xlink:from='cm_Characteristic' order='13' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Characteristic' xlink:label='cm_Characteristic' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FiscalPeriod' xlink:label='cm_FiscalPeriod' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_FiscalPeriod' xlink:from='cm_Characteristic' order='14' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Characteristic' xlink:label='cm_Characteristic' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_CalendarPeriod' xlink:label='cm_CalendarPeriod' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_CalendarPeriod' xlink:from='cm_Characteristic' order='15' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Characteristic' xlink:label='cm_Characteristic' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Instrument' xlink:label='cm_Instrument' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Instrument' xlink:from='cm_Characteristic' order='16' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Characteristic' xlink:label='cm_Characteristic' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Range' xlink:label='cm_Range' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Range' xlink:from='cm_Characteristic' order='17' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Characteristic' xlink:label='cm_Characteristic' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_LineItem' xlink:label='cm_LineItem' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_LineItem' xlink:from='cm_Characteristic' order='18' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ConceptArrangemetPattern' xlink:label='cm_ConceptArrangemetPattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_RollUp' xlink:label='cm_RollUp' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_RollUp' xlink:from='cm_ConceptArrangemetPattern' order='19' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ConceptArrangemetPattern' xlink:label='cm_ConceptArrangemetPattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_RollForwardInfo' xlink:label='cm_RollForwardInfo' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_RollForwardInfo' xlink:from='cm_ConceptArrangemetPattern' order='20' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ConceptArrangemetPattern' xlink:label='cm_ConceptArrangemetPattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_RollForward' xlink:label='cm_RollForward' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_RollForward' xlink:from='cm_ConceptArrangemetPattern' order='21' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ConceptArrangemetPattern' xlink:label='cm_ConceptArrangemetPattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Hierarchy' xlink:label='cm_Hierarchy' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Hierarchy' xlink:from='cm_ConceptArrangemetPattern' order='22' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ConceptArrangemetPattern' xlink:label='cm_ConceptArrangemetPattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Adjustment' xlink:label='cm_Adjustment' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Adjustment' xlink:from='cm_ConceptArrangemetPattern' order='23' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ConceptArrangemetPattern' xlink:label='cm_ConceptArrangemetPattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Variance' xlink:label='cm_Variance' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Variance' xlink:from='cm_ConceptArrangemetPattern' order='24' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ConceptArrangemetPattern' xlink:label='cm_ConceptArrangemetPattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ComplexComputation' xlink:label='cm_ComplexComputation' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_ComplexComputation' xlink:from='cm_ConceptArrangemetPattern' order='25' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ConceptArrangemetPattern' xlink:label='cm_ConceptArrangemetPattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_TextBlock' xlink:label='cm_TextBlock' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_TextBlock' xlink:from='cm_ConceptArrangemetPattern' order='26' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_TextBlock' xlink:label='cm_TextBlock' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Level2TextBlock' xlink:label='cm_Level2TextBlock' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Level2TextBlock' xlink:from='cm_TextBlock' order='27' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_TextBlock' xlink:label='cm_TextBlock' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Level1TextBlock' xlink:label='cm_Level1TextBlock' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Level1TextBlock' xlink:from='cm_TextBlock' order='28' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_TextBlock' xlink:label='cm_TextBlock' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Level3TextBlock' xlink:label='cm_Level3TextBlock' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Level3TextBlock' xlink:from='cm_TextBlock' order='29' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_MemberArrangementPattern' xlink:label='cm_MemberArrangementPattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_WholePart' xlink:label='cm_WholePart' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_WholePart' xlink:from='cm_MemberArrangementPattern' order='30' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_MemberArrangementPattern' xlink:label='cm_MemberArrangementPattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_TypeOf' xlink:label='cm_TypeOf' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_TypeOf' xlink:from='cm_MemberArrangementPattern' order='31' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRule' xlink:label='cm_BusinessRule' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_BusinessRule' xlink:from='cm_Thing' order='32' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRule' xlink:label='cm_BusinessRule' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRulePattern' xlink:label='cm_BusinessRulePattern' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/component-integralObject' xlink:to='cm_BusinessRulePattern' xlink:from='cm_BusinessRule' order='33' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRule' xlink:label='cm_BusinessRule' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_KeyFinancialRatio' xlink:label='cm_KeyFinancialRatio' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_KeyFinancialRatio' xlink:from='cm_BusinessRule' order='34' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRulePattern' xlink:label='cm_BusinessRulePattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_GreaterThanOrEqualToZero' xlink:label='cm_GreaterThanOrEqualToZero' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/member-collection' xlink:to='cm_GreaterThanOrEqualToZero' xlink:from='cm_BusinessRulePattern' order='35' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRulePattern' xlink:label='cm_BusinessRulePattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Variance' xlink:label='cm_Variance' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/member-collection' xlink:to='cm_Variance' xlink:from='cm_BusinessRulePattern' order='36' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRulePattern' xlink:label='cm_BusinessRulePattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Adjustment' xlink:label='cm_Adjustment' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/member-collection' xlink:to='cm_Adjustment' xlink:from='cm_BusinessRulePattern' order='37' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRulePattern' xlink:label='cm_BusinessRulePattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_RollUp' xlink:label='cm_RollUp' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/member-collection' xlink:to='cm_RollUp' xlink:from='cm_BusinessRulePattern' order='38' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_VerificationRule' xlink:label='cm_VerificationRule' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_PeerConsistencyRule' xlink:label='cm_PeerConsistencyRule' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_PeerConsistencyRule' xlink:from='cm_VerificationRule' order='39' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_VerificationRule' xlink:label='cm_VerificationRule' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_PriorPeriodConsistencyRule' xlink:label='cm_PriorPeriodConsistencyRule' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_PriorPeriodConsistencyRule' xlink:from='cm_VerificationRule' order='40' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRulePattern' xlink:label='cm_BusinessRulePattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_RollForward' xlink:label='cm_RollForward' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/member-collection' xlink:to='cm_RollForward' xlink:from='cm_BusinessRulePattern' order='41' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_VerificationRule' xlink:label='cm_VerificationRule' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingSystemSpecificRule' xlink:label='cm_ReportingSystemSpecificRule' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_ReportingSystemSpecificRule' xlink:from='cm_VerificationRule' order='42' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRulePattern' xlink:label='cm_BusinessRulePattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_GreaterThan' xlink:label='cm_GreaterThan' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/member-collection' xlink:to='cm_GreaterThan' xlink:from='cm_BusinessRulePattern' order='43' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_VerificationRule' xlink:label='cm_VerificationRule' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportLevelModelStructureRule' xlink:label='cm_ReportLevelModelStructureRule' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_ReportLevelModelStructureRule' xlink:from='cm_VerificationRule' order='44' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRulePattern' xlink:label='cm_BusinessRulePattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_LessThan' xlink:label='cm_LessThan' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/member-collection' xlink:to='cm_LessThan' xlink:from='cm_BusinessRulePattern' order='45' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRule' xlink:label='cm_BusinessRule' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FundamentalAccountingConceptRelation' xlink:label='cm_FundamentalAccountingConceptRelation' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_FundamentalAccountingConceptRelation' xlink:from='cm_BusinessRule' order='46' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_VerificationRule' xlink:label='cm_VerificationRule' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_XBRLTechnicalSyntaxRule' xlink:label='cm_XBRLTechnicalSyntaxRule' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_XBRLTechnicalSyntaxRule' xlink:from='cm_VerificationRule' order='47' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_VerificationRule' xlink:label='cm_VerificationRule' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FundamentalAccountingConceptRelation' xlink:label='cm_FundamentalAccountingConceptRelation' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_FundamentalAccountingConceptRelation' xlink:from='cm_VerificationRule' order='48' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_VerificationRule' xlink:label='cm_VerificationRule' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ToDoManualTask' xlink:label='cm_ToDoManualTask' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_ToDoManualTask' xlink:from='cm_VerificationRule' order='49' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_VerificationRule' xlink:label='cm_VerificationRule' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_AutomatedAccountingAndReportingChecks' xlink:label='cm_AutomatedAccountingAndReportingChecks' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_AutomatedAccountingAndReportingChecks' xlink:from='cm_VerificationRule' order='50' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRulePattern' xlink:label='cm_BusinessRulePattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Exists' xlink:label='cm_Exists' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/member-collection' xlink:to='cm_Exists' xlink:from='cm_BusinessRulePattern' order='51' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRulePattern' xlink:label='cm_BusinessRulePattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_CoExists' xlink:label='cm_CoExists' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/member-collection' xlink:to='cm_CoExists' xlink:from='cm_BusinessRulePattern' order='52' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessRulePattern' xlink:label='cm_BusinessRulePattern' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_EqualTo' xlink:label='cm_EqualTo' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/member-collection' xlink:to='cm_EqualTo' xlink:from='cm_BusinessRulePattern' order='53' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Corporation' xlink:label='cm_Corporation' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_LimitedLiabilityCorporation' xlink:label='cm_LimitedLiabilityCorporation' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_LimitedLiabilityCorporation' xlink:from='cm_Corporation' order='54' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Partnership' xlink:label='cm_Partnership' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_LimitedLiabilityPartnership' xlink:label='cm_LimitedLiabilityPartnership' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_LimitedLiabilityPartnership' xlink:from='cm_Partnership' order='55' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingScheme' xlink:label='cm_ReportingScheme' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportingByUSStateOrLocalGovernmentalEntity' xlink:label='cm_FinancialReportingByUSStateOrLocalGovernmentalEntity' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_FinancialReportingByUSStateOrLocalGovernmentalEntity' xlink:from='cm_ReportingScheme' order='56' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportComponent' xlink:label='cm_FinancialReportComponent' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_PrimaryFinancialStatement' xlink:label='cm_PrimaryFinancialStatement' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_PrimaryFinancialStatement' xlink:from='cm_FinancialReportComponent' order='57' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportComponent' xlink:label='cm_FinancialReportComponent' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ParentheticalComments' xlink:label='cm_ParentheticalComments' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_ParentheticalComments' xlink:from='cm_FinancialReportComponent' order='58' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingScheme' xlink:label='cm_ReportingScheme' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_XBRLBasedReportingToIranRegulator' xlink:label='cm_XBRLBasedReportingToIranRegulator' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_XBRLBasedReportingToIranRegulator' xlink:from='cm_ReportingScheme' order='59' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportComponent' xlink:label='cm_FinancialReportComponent' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Block' xlink:label='cm_Block' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Block' xlink:from='cm_FinancialReportComponent' order='60' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportComponent' xlink:label='cm_FinancialReportComponent' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Component' xlink:label='cm_Component' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Component' xlink:from='cm_FinancialReportComponent' order='61' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportComponent' xlink:label='cm_FinancialReportComponent' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportFragment' xlink:label='cm_ReportFragment' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_ReportFragment' xlink:from='cm_FinancialReportComponent' order='62' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportComponent' xlink:label='cm_FinancialReportComponent' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Note' xlink:label='cm_Note' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Note' xlink:from='cm_FinancialReportComponent' order='63' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportComponent' xlink:label='cm_FinancialReportComponent' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_DisclosureNote' xlink:label='cm_DisclosureNote' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_DisclosureNote' xlink:from='cm_FinancialReportComponent' order='64' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportComponent' xlink:label='cm_FinancialReportComponent' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Disclosure' xlink:label='cm_Disclosure' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Disclosure' xlink:from='cm_FinancialReportComponent' order='65' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportComponent' xlink:label='cm_FinancialReportComponent' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_SupplementaryInformation' xlink:label='cm_SupplementaryInformation' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_SupplementaryInformation' xlink:from='cm_FinancialReportComponent' order='66' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportComponent' xlink:label='cm_FinancialReportComponent' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_EntityInformation' xlink:label='cm_EntityInformation' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_EntityInformation' xlink:from='cm_FinancialReportComponent' order='67' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportComponent' xlink:label='cm_FinancialReportComponent' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_DocumentInformation' xlink:label='cm_DocumentInformation' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_DocumentInformation' xlink:from='cm_FinancialReportComponent' order='68' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingScheme' xlink:label='cm_ReportingScheme' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_XBRLBasedGeneralBusinessReports' xlink:label='cm_XBRLBasedGeneralBusinessReports' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_XBRLBasedGeneralBusinessReports' xlink:from='cm_ReportingScheme' order='69' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingScheme' xlink:label='cm_ReportingScheme' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_PersonalFinancialReportingInUS' xlink:label='cm_PersonalFinancialReportingInUS' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_PersonalFinancialReportingInUS' xlink:from='cm_ReportingScheme' order='70' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingScheme' xlink:label='cm_ReportingScheme' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_XBRLBasedReportingUsingXBRLUSWorkInProgressSuretyTaxonomy' xlink:label='cm_XBRLBasedReportingUsingXBRLUSWorkInProgressSuretyTaxonomy' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_XBRLBasedReportingUsingXBRLUSWorkInProgressSuretyTaxonomy' xlink:from='cm_ReportingScheme' order='71' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingScheme' xlink:label='cm_ReportingScheme' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_IncomeTaxBasis' xlink:label='cm_IncomeTaxBasis' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_IncomeTaxBasis' xlink:from='cm_ReportingScheme' order='72' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingScheme' xlink:label='cm_ReportingScheme' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_OtherComprehensiveBasisOfAccounting' xlink:label='cm_OtherComprehensiveBasisOfAccounting' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_OtherComprehensiveBasisOfAccounting' xlink:from='cm_ReportingScheme' order='73' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_EntityLegalForm' xlink:label='cm_EntityLegalForm' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Proprietorship' xlink:label='cm_Proprietorship' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Proprietorship' xlink:from='cm_EntityLegalForm' order='74' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_EntityLegalForm' xlink:label='cm_EntityLegalForm' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_UnknownEntityLegalForm' xlink:label='cm_UnknownEntityLegalForm' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_UnknownEntityLegalForm' xlink:from='cm_EntityLegalForm' order='75' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_EntityLegalForm' xlink:label='cm_EntityLegalForm' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Corporation' xlink:label='cm_Corporation' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Corporation' xlink:from='cm_EntityLegalForm' order='76' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_EntityLegalForm' xlink:label='cm_EntityLegalForm' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Partnership' xlink:label='cm_Partnership' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Partnership' xlink:from='cm_EntityLegalForm' order='77' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessReport' xlink:label='cm_BusinessReport' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_BusinessReport' xlink:from='cm_Thing' order='78' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_BusinessReport' xlink:label='cm_BusinessReport' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReport' xlink:label='cm_FinancialReport' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_FinancialReport' xlink:from='cm_BusinessReport' order='79' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_EconomicEntity' xlink:label='cm_EconomicEntity' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_EconomicEntity' xlink:from='cm_Thing' order='80' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingScheme' xlink:label='cm_ReportingScheme' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_ReportingScheme' xlink:from='cm_Thing' order='81' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_AccountingActivity' xlink:label='cm_AccountingActivity' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_AccountingActivity' xlink:from='cm_Thing' order='82' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_EntityLegalForm' xlink:label='cm_EntityLegalForm' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_EntityLegalForm' xlink:from='cm_Thing' order='83' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FinancialReportComponent' xlink:label='cm_FinancialReportComponent' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_FinancialReportComponent' xlink:from='cm_Thing' order='84' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Exemplar' xlink:label='cm_Exemplar' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Exemplar' xlink:from='cm_Thing' order='85' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Prototype' xlink:label='cm_Prototype' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Prototype' xlink:from='cm_Thing' order='86' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Topic' xlink:label='cm_Topic' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Topic' xlink:from='cm_Thing' order='87' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportElementType' xlink:label='cm_ReportElementType' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_ReportElementType' xlink:from='cm_Thing' order='88' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Characteristic' xlink:label='cm_Characteristic' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Characteristic' xlink:from='cm_Thing' order='89' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_MemberArrangementPattern' xlink:label='cm_MemberArrangementPattern' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_MemberArrangementPattern' xlink:from='cm_Thing' order='90' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_NetworkType' xlink:label='cm_NetworkType' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_NetworkType' xlink:from='cm_Thing' order='91' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_NetworkTaggingLevel' xlink:label='cm_NetworkTaggingLevel' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_NetworkTaggingLevel' xlink:from='cm_Thing' order='92' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ConceptArrangemetPattern' xlink:label='cm_ConceptArrangemetPattern' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_ConceptArrangemetPattern' xlink:from='cm_Thing' order='93' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_VerificationRule' xlink:label='cm_VerificationRule' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_VerificationRule' xlink:from='cm_Thing' order='94' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportingStyle' xlink:label='cm_ReportingStyle' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_ReportingStyle' xlink:from='cm_Thing' order='95' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportElementType' xlink:label='cm_ReportElementType' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Network' xlink:label='cm_Network' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Network' xlink:from='cm_ReportElementType' order='96' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportElementType' xlink:label='cm_ReportElementType' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Member' xlink:label='cm_Member' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Member' xlink:from='cm_ReportElementType' order='97' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportElementType' xlink:label='cm_ReportElementType' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Table' xlink:label='cm_Table' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Table' xlink:from='cm_ReportElementType' order='98' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportElementType' xlink:label='cm_ReportElementType' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Axis' xlink:label='cm_Axis' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Axis' xlink:from='cm_ReportElementType' order='99' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportElementType' xlink:label='cm_ReportElementType' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Concept' xlink:label='cm_Concept' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Concept' xlink:from='cm_ReportElementType' order='100' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportElementType' xlink:label='cm_ReportElementType' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Abstract' xlink:label='cm_Abstract' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Abstract' xlink:from='cm_ReportElementType' order='101' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ReportElementType' xlink:label='cm_ReportElementType' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_LineItems' xlink:label='cm_LineItems' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_LineItems' xlink:from='cm_ReportElementType' order='102' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_AccountingActivity' xlink:label='cm_AccountingActivity' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_CommercialAndIndustrial' xlink:label='cm_CommercialAndIndustrial' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_CommercialAndIndustrial' xlink:from='cm_AccountingActivity' order='103' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_AccountingActivity' xlink:label='cm_AccountingActivity' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_InterestBasedRevenue' xlink:label='cm_InterestBasedRevenue' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_InterestBasedRevenue' xlink:from='cm_AccountingActivity' order='104' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_AccountingActivity' xlink:label='cm_AccountingActivity' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_InsuranceBasedRevenue' xlink:label='cm_InsuranceBasedRevenue' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_InsuranceBasedRevenue' xlink:from='cm_AccountingActivity' order='105' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_AccountingActivity' xlink:label='cm_AccountingActivity' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_RealEstateInvestmentTrusts' xlink:label='cm_RealEstateInvestmentTrusts' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_RealEstateInvestmentTrusts' xlink:from='cm_AccountingActivity' order='106' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_AccountingActivity' xlink:label='cm_AccountingActivity' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_SecuritiesBasedRevenue' xlink:label='cm_SecuritiesBasedRevenue' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_SecuritiesBasedRevenue' xlink:from='cm_AccountingActivity' order='107' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_AccountingActivity' xlink:label='cm_AccountingActivity' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_FundOrTrust' xlink:label='cm_FundOrTrust' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_FundOrTrust' xlink:from='cm_AccountingActivity' order='108' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_AccountingActivity' xlink:label='cm_AccountingActivity' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_UnknownAccountingActivity' xlink:label='cm_UnknownAccountingActivity' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_UnknownAccountingActivity' xlink:from='cm_AccountingActivity' order='109' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_NetworkTaggingLevel' xlink:label='cm_NetworkTaggingLevel' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Level4Detail' xlink:label='cm_Level4Detail' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Level4Detail' xlink:from='cm_NetworkTaggingLevel' order='110' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_NetworkTaggingLevel' xlink:label='cm_NetworkTaggingLevel' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Level3TextBlock' xlink:label='cm_Level3TextBlock' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Level3TextBlock' xlink:from='cm_NetworkTaggingLevel' order='111' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_NetworkTaggingLevel' xlink:label='cm_NetworkTaggingLevel' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Level1TextBlock' xlink:label='cm_Level1TextBlock' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Level1TextBlock' xlink:from='cm_NetworkTaggingLevel' order='112' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_NetworkTaggingLevel' xlink:label='cm_NetworkTaggingLevel' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Level2TextBlock' xlink:label='cm_Level2TextBlock' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Level2TextBlock' xlink:from='cm_NetworkTaggingLevel' order='113' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_NetworkType' xlink:label='cm_NetworkType' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_ScheduleType' xlink:label='cm_ScheduleType' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_ScheduleType' xlink:from='cm_NetworkType' order='114' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_NetworkType' xlink:label='cm_NetworkType' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_DisclosureType' xlink:label='cm_DisclosureType' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_DisclosureType' xlink:from='cm_NetworkType' order='115' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_NetworkType' xlink:label='cm_NetworkType' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_DocumentType' xlink:label='cm_DocumentType' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_DocumentType' xlink:from='cm_NetworkType' order='116' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_NetworkType' xlink:label='cm_NetworkType' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_StatementType' xlink:label='cm_StatementType' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_StatementType' xlink:from='cm_NetworkType' order='117' use='optional' />
+   </link:definitionLink>
+
+   <link:definitionLink xlink:type='extended' xlink:role='https://jinsei.ai/seattlemethod/cm/role/ConceptualModel' xlink:title='All relations between ontology things'>
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Thing' xlink:label='cm_Thing' />
+      <link:loc xlink:type='locator' xlink:href='cm.xsd#cm_Industry' xlink:label='cm_Industry' />
+      <link:definitionArc xlink:type='arc' xlink:arcrole='https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass' xlink:to='cm_Industry' xlink:from='cm_Thing' order='118' use='optional' />
+   </link:definitionLink>
+
+</link:linkbase>

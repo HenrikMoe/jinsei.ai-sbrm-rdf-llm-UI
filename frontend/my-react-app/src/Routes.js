@@ -12,6 +12,9 @@ import { DarkModeProvider } from './DarkModeContext';
 import { DataStoreProvider } from './DataStore'; // Import the DataStoreProvider
 import ChatGBT from './ChatGBT';
 
+import XMLViewer from './XMLViewer';
+import XMLViewer2 from './XMLViewer2'
+
 const AppRoutes = () => {
   const location = useLocation(); // Get the current location
 
@@ -32,6 +35,10 @@ const AppRoutes = () => {
         <Route path="/tos" element={<TermsOfService />} /> {/* Add TermsOfService component */}
         <Route path="/timeline" element={<Timeline />} /> {/* Add TermsOfService component */}
         <Route path="/about" element={<About />} /> {/* Add TermsOfService component */}
+
+        <Route path="/cmxsd" element={<XMLViewer />} /> {/* Add TermsOfService component */}
+        <Route path="/XMLViewer2" element={<XMLViewer2 />} /> {/* Add TermsOfService component */}
+
       </Routes>
       <ChatGBT />
       <Footer /> {/* Include the Header component */}

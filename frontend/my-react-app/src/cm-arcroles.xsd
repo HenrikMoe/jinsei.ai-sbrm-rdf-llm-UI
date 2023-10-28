@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by Henrik Moe and Charles Hoffman, CPA 2023-10-27 -->
+<schema
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:xbrli="http://www.xbrl.org/2003/instance"
+	xmlns:link="http://www.xbrl.org/2003/linkbase"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:cm-arcroles="https://jinsei.ai/seattlemethod/cm/cm-arcroles"
+	targetNamespace="https://jinsei.ai/seattlemethod/cm/cm-arcroles"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+  <annotation>
+    <documentation>Provides arcroles for representing specific relationships.</documentation>
+    <appinfo>
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/class-subClass" id="class-subClass" cyclesAllowed="undirected">
+        <link:definition>The class extension of a class description is a subset of the class extension of another class description. Same as OWL definition of subClassOf.  For more information see http://www.w3.org/TR/owl-ref/#subClassOf-def</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/class-equivalentClass" id="class-equivalentClass" cyclesAllowed="undirected">
+        <link:definition>Both class extensions contain exactly the same set of individuals. Same as OWL definition of equivalentClass. For more information see http://www.w3.org/TR/owl-ref/#equivalentClass-def</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/full-hasPart" id="full-hasPart" cyclesAllowed="undirected">
+        <link:definition>A has part B.  Note that from A hasPart B we cannot infer that B is partOf A. Same as BFO definition of hasPart.  For more information see http://genomebiology.com/2005/6/5/R46</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+
+			<link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/has-part" id="has-part" cyclesAllowed="undirected">
+        <link:definition>A has part B.  Note that from A hasPart B we cannot infer that B is partOf A. Same as BFO definition of hasPart.  For more information see http://genomebiology.com/2005/6/5/R46</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+
+			<link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/whole-part" id="whole-part" cyclesAllowed="undirected">
+        <link:definition>A which is a WHOLE has part B.  Note that from A hasPart B we cannot infer that B is partOf A. Same as BFO definition of hasPart.  For more information see http://genomebiology.com/2005/6/5/R46</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/part-partOf" id="part-partOf" cyclesAllowed="undirected">
+        <link:definition>A is part of  B.  Note that from A partOf B we cannot infer that B hasPart A. Same as BFO definition of partOf.  For more information see http://genomebiology.com/2005/6/5/R46</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/entity-hasRole" id="entity-hasRole" cyclesAllowed="undirected">
+        <link:definition>A has part B.  Note that from A hasPart B we cannot infer that B is partOf A. Same as BFO definition of hasPart.  For more information see http://genomebiology.com/2005/6/5/R46</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/heading-heading" id="heading-heading" cyclesAllowed="undirected">
+        <link:definition>Heading has subheading</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/heading-topic" id="heading-topic" cyclesAllowed="undirected">
+        <link:definition>Heading has Topic</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/topic-disclosure" id="topic-disclosure" cyclesAllowed="undirected">
+        <link:definition>Topic has disclosure</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/table-equivalentTextBlock" id="table-equivalentTextBlock" cyclesAllowed="undirected">
+        <link:definition>[Table] has a [Text Block] which provides the same information. (This may not be appropriate)</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+
+
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/component-integralObject" id="component-integralObject" cyclesAllowed="undirected">
+        <link:definition>Relation between a component of an object. For example, the component handle is part of the integral object cup; wheels are a component part of a car; a refrigerator is a component of a kitchen.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/member-collection" id="member-collection" cyclesAllowed="undirected">
+        <link:definition>Relations between some member of some collection. For example, a tree is a member of the collection forest; a juror is a members of the collection jury; a ship is a member of the collection fleet.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+
+		<!-- Allowed and diasllowed relations between report element categories in presentation model structure (representation structure) -->
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/parentCategory-allowedChildCategory" id="parentCategory-allowedChildCategory" cyclesAllowed="any">
+        <link:definition>The parent report element category allows this report element category as a child.  For more information see http://financialreportontology.wikispaces.com/Report+Element</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/parentCategory-disallowedChildCategory" id="parentCategory-disallowedChildCategory" cyclesAllowed="any">
+        <link:definition>The parent report element category allows this report element category as a child.  For more information see http://financialreportontology.wikispaces.com/Report+Element</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/parentCategory-discouragedChildCategory" id="parentCategory-discouragedChildCategory" cyclesAllowed="any">
+        <link:definition>The parent report element category discourages this report element category as a child (warning).  For more information see http://financialreportontology.wikispaces.com/Report+Element</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+
+		<!-- Other ontology related -->
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/property-hasProperty" id="property-hasProperty" cyclesAllowed="any">
+        <link:definition>Creates a relation between a property and a report element that has that property.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+      <link:arcroleType arcroleURI="https://jinsei.ai/seattlemethod/cm/arcrole/property-disjointedProperty" id="property-disjointedProperty" cyclesAllowed="any">
+        <link:definition>Creates a relation between a property and another property to indicate that the two properties are disjointed.</link:definition>
+        <link:usedOn>link:definitionArc</link:usedOn>
+      </link:arcroleType>
+
+    </appinfo>
+  </annotation>
+  <import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" />
+</schema>

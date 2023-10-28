@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Created by Henrik Moe and Charles Hoffman, CPA 2023-10-27 -->
+<!-- Defines data type use for FAC validation -->
+<schema
+ xmlns='http://www.w3.org/2001/XMLSchema'
+ xmlns:xbrli='http://www.xbrl.org/2003/instance'
+ xmlns:link='http://www.xbrl.org/2003/linkbase'
+ xmlns:xlink='http://www.w3.org/1999/xlink'
+ xmlns:cm-xbrl='https://jinsei.ai/seattlemethod/cm/cm-xbrl'
+ targetNamespace='https://jinsei.ai/seattlemethod/cm/cm-xbrl'
+ elementFormDefault='qualified'
+ attributeFormDefault='unqualified'>
+  <annotation>
+    <documentation>Conceptual Model (CM) XBRL related metadata</documentation>
+    <appinfo>
+
+    </appinfo>
+  </annotation>
+  <import namespace='http://www.xbrl.org/2003/instance' schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd' />
+
+  	<element id="cm-xbrl_validationRuleItem" name="validationRuleItem" type="xbrli:monetaryItemType" xbrli:periodType="duration" substitutionGroup="xbrli:item" abstract="true"/>
+
+
+</schema>
