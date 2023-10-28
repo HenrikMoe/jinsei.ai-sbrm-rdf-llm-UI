@@ -17,7 +17,8 @@ app.get('/api/some-route', (req, res) => {
   res.json({ message: 'This route does not require authentication.' });
 });
 
-const OPENAI_API_KEY = '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';
+const OPENAI_API_KEY = process.env.Chat_Key
+
 app.post('/api/chatgpt', async (req, res) => {
   const { prompt } = req.body; // Extract the 'prompt' from the request body
 
