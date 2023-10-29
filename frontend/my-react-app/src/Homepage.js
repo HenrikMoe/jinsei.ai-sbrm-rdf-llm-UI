@@ -143,6 +143,11 @@ function Homepage() {
       <button onClick={handleXML1Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
          cmxsd
       </button>
+      <button>
+        <a href="/cm.xsd" download>
+          Download cm.XSD
+        </a>
+      </button>
       <button onClick={handleXML2Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
          report-parts-rules-defxml
       </button>
