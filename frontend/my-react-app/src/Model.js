@@ -45,7 +45,11 @@ const Model = ({ updateForm }) => {
     <div className={`popup-container ${isDarkMode ? 'dark-mode' : ''}`}>
       <div ref={dropdownRef} className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
         <button className="dropdown-button" onClick={toggleDropdown}>
-          Overlay Reporting Schemes: {selectedModel || ''} &or;  {/* Display the selected model or 'Model' */}
+        {selectedModel ? (
+          <div>{selectedModel} &or;</div>
+        ) : (
+          <div>Overlay Reporting Schemes &or;</div>
+        )}
         </button>
         <div className="dropdown-content">
           <div className="search-bar">
