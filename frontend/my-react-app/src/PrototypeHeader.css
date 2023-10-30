@@ -51,6 +51,7 @@
 
 .button-wrap{
   display: flex;
+  margin-left: -125px;
 }
 
 .title{

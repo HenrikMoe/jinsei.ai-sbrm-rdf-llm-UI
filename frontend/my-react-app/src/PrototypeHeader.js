@@ -12,6 +12,7 @@ import Pipeline from './Pipeline'
 import Files from './Files'
 import Projects from './Projects'
 import Model from './Model'
+import Modal from './Modal'
 
 //<Project onFileUpload={onFileUpload}/>
 // <Upload onFileUpload={onFileUpload}/>
@@ -35,21 +36,22 @@ console.log(onFileUpload)
 
 
       <div className='button-wrap'>
-      <div className='container'>
-       <Projects /></div>
-      <div className='container'>
-      <Files /></div>
+        <div className='container'>
+         <Projects /></div>
+        <div className='container'>
+        <Files /></div>
         <Model />
         <Popup onFileUpload={onFileUpload} />
         <Delete  dataStore={dataStore} />
         <Upload />
+        <Modal />
       </div>
       <div className='importButton1'>Share</div>
       <div className='importButton1'>New</div>
 
 
 
-      <div className='titlez'>Luciano - git:main | version 0.111</div>
+      <div className='titlez'>Luciano - git:main | version 0.131</div>
 
 
     </div>

@@ -1,0 +1,205 @@
+/* Modal.css */
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.modal-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  background: white;
+  border: 1px solid #ccc;
+  overflow: auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-content {
+  padding: 20px;
+  /* Add any styles you want for the content here */
+}
+
+/* Popup.css */
+.popup-container {
+  position: relative;
+  text-align: center;
+  margin: 5px;
+  margin-top: 20px !important;
+  display: flex;
+}
+
+.popup-button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1; /* Ensure the popup is above the button */
+
+}
+
+.dropdown-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  margin-right: 20px;
+  margin-top: 15px;
+  background-color: grey;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+
+
+}
+
+.open .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
+.dropdown{
+  display: flex;
+}
+
+.popup-message {
+  position: fixed;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transform: translate(100px, 200px); /* Position the popup 200px above and 200px to the left of the mouse pointer */
+}
+
+
+.popup {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  border-radius: 5px;
+  z-index: 1000;
+  z-index: 2; /* Ensure the popup is above the button */
+
+}
+
+.popup-content {
+  padding: 10px;
+}
+
+.show-hello-button {
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+  border: 1px solid black; /* Add a border */
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); /* Add a right and bottom shadow */
+}
+
+.dropdown-item{
+  background: black;
+  border-radius: 5px;
+  color: white;
+  margin-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+.button-space{
+  margin-top: 20px;
+}
+
+
+.dark-mode {
+  background-color: #000;
+  color: #fff;
+  border-color: white;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.dark-button{
+  background: white;
+  color: black;
+}
+
+.dark-mode-text {
+  background-color: #000;
+  color: #fff;
+  border-color: white;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-button {
+  background-color: #333;
+  color: #fff;
+  border-color: white;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.search-bar {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  width: 100px;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  background: lightblue;
+  border: none;
+  margin-top: 3px;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  margin-right: 5px;
+  border-radius: 5px;
+}

@@ -1,18 +1,23 @@
 /* chatgpt.css */
 
 /* Container styles */
+/* Container styles */
 .chat-container {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 100px auto; /* For top and bottom margin and centering on desktop */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 100px;
-  margin-bottom: 100px;
   z-index: 99999;
-  
+}
+
+@media (max-width: 768px) {
+  /* Apply the following styles on screens with a max-width of 768px (typical for mobile) */
+  .chat-container {
+    margin: 100px 20px; /* For top and bottom margin and left/right margin on mobile */
+  }
 }
 
 /* Form styles */
