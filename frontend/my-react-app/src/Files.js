@@ -54,7 +54,7 @@ const closeDropdown = () => {
     />
     <div ref={dropdownRef} className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
       <button className="dropdown-button" onClick={toggleDropdown}>
-      <span className="button-text">Files</span>
+      <span className="button-text">Reports</span>
         <span className="arrow">&or;</span>
       </button>
       <div className="dropdown-content">

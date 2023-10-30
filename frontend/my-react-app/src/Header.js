@@ -44,7 +44,7 @@ const Header = ({ currentRoute }) => {
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
-    if (window.scrollY > 50) {
+    if (window.scrollY > 30) {
       setIsHeaderVisible(false);
     } else {
       setIsHeaderVisible(true);
