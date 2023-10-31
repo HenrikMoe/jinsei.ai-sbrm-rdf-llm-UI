@@ -11,6 +11,7 @@ import XLSXSheetRenderer from './XLSXSheetRenderer'; // Import the new component
 import * as XLSX from 'xlsx'; // Import the entire xlsx library
 import { DataStoreProvider, useDataStore } from './DataStore'; // Import the DataStoreProvider
 import DeploymentTable from './DeploymentTable'
+import SubReports from './SubReports'
 
 function Prototype() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -117,6 +118,7 @@ function Prototype() {
           <PrototypeHeader onFileUpload={handleXLSXUpload} dataStore={dataStore}/>
           <PrototypeSideMenu  sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} />
           <XLSXSheetRenderer  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
+          <SubReports sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} />
         </div>
         </DataStoreProvider>
       ) : (
