@@ -102,7 +102,7 @@ const XLSXSheetRenderer = ({
 //conditinally render the subtype menu
   return (
     <div className="table-wrap">
-      <div className="elementTitle">Data Render / Schema Config / Structure Instance</div>
+      <div className="elementTitle">Schema Config </div>
       <div className="ribbon">
         {/* Top ribbon with three buttons */}
         <button className="ribbon-button">Button 1</button>

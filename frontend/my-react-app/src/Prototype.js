@@ -12,6 +12,8 @@ import * as XLSX from 'xlsx'; // Import the entire xlsx library
 import { DataStoreProvider, useDataStore } from './DataStore'; // Import the DataStoreProvider
 import DeploymentTable from './DeploymentTable'
 import SubReports from './SubReports'
+import SchemaConfigRenderer from './SchemaConfigRenderer'
+import StructureInstanceRenderer from './StructureInstanceRenderer'
 
 function Prototype() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -104,12 +106,14 @@ function Prototype() {
     setSchemaConfigSelected(true)
     console.log(schemaConfigSelected)
     console.log(sheetTitle)
+    setStructureInstanceSelected(false)
   }
 
   const handleStructureInstanceSelection = (structTitle) => {
     setStructureInstanceSelected(true)
     console.log(structureInstanceSelected)
     console.log(structTitle)
+    setSchemaConfigSelected(false)
   }
 
   const openModal = () => {
@@ -121,6 +125,9 @@ function Prototype() {
     login();
   };
 
+  //<XLSXSheetRenderer  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
+
+
   return (
     <div className={`prototype-container ${isDarkMode ? 'dark-mode' : ''}`}>
       {isAuthenticated ? (
@@ -130,7 +137,8 @@ function Prototype() {
         <div className='content-grid'>
           <PrototypeHeader onFileUpload={handleXLSXUpload} dataStore={dataStore}/>
           <PrototypeSideMenu  handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} />
-          <XLSXSheetRenderer  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
+          {schemaConfigSelected ? <SchemaConfigRenderer /> : null}
+          {structureInstanceSelected ? <StructureInstanceRenderer /> : null}
           <SubReports handleStructureInstanceSelection={handleStructureInstanceSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} />
         </div>
         </DataStoreProvider>
