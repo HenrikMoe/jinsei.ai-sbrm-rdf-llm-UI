@@ -136,80 +136,88 @@ function Homepage() {
         Corp Timeline
       </button>
 
-      <div style={{ marginTop: '100px', marginLeft: '40px',  marginRight: '40px'}}>
-      <h1>Seattle Method</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-      <div style={{ width: '45%' }}>
+      <div style={{ marginTop: '100px'}}>
       <button onClick={handleXML1Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         cmxsd
-      </button>
-      <button>
-        <a href="/cm.xsd" download>
-          Download cm.XSD
-        </a>
-      </button>
-      <button onClick={handleXML2Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         report-parts-rules-defxml
-      </button>
-      <button onClick={handleXML3Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         be-arcrolesxsd
-      </button>
-      <button onClick={handleXML4Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         cm-arcrolesxsd
-      </button>
-      <button onClick={handleXML5Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         cm-defxml
-      </button>
-      <button onClick={handleXML6Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         cm-docxml
-      </button>
-      <button onClick={handleXML7Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         cm-labxml
-      </button>
-      <button onClick={handleXML8Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-        cm-prexml
-      </button>
-      <button onClick={handleXML9Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         cm-rolesxsd
-      </button>
-      <button onClick={handleXML10Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-        cm-rparts-rsxsd
+        Seattle Method Zip
       </button>
       </div>
 
-      <div style={{ width: '45%' }}>
-      <button onClick={handleXML11Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-      cm-rparts-xbrlxml
-      </button>
-      <button onClick={handleXML12Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         cm-rparts-xbrlxsd
-      </button>
-      <button onClick={handleXML13Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         cm-xbrlxsd
-      </button>
-      <button onClick={handleXML14Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         drules-arcrolesxsd
-      </button>
-      <button onClick={handleXML15Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         extendedLinkRolesxsd
-      </button>
-      <button onClick={handleXML16Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-        model-structure-rules-strict-defxml
-      </button>
-      <button onClick={handleXML17Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         model-structure-types-rules-defxml
-      </button>
-      <button onClick={handleXML18Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         properties-rules-defxml
-      </button>
-      <button onClick={handleXML19Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         propertiesxsd
-      </button>
-      </div>
-      </div>
-      </div>
     </div>
   );
 }
 
 export default Homepage;
+
+
+// <div style={{ marginTop: '100px', marginLeft: '40px',  marginRight: '40px'}}>
+// <h1>Seattle Method</h1>
+// <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+// <div style={{ width: '45%' }}>
+// <button onClick={handleXML1Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    cmxsd
+// </button>
+// <button>
+//   <a href="/cm.xsd" download>
+//     Download cm.XSD
+//   </a>
+// </button>
+// <button onClick={handleXML2Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    report-parts-rules-defxml
+// </button>
+// <button onClick={handleXML3Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    be-arcrolesxsd
+// </button>
+// <button onClick={handleXML4Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    cm-arcrolesxsd
+// </button>
+// <button onClick={handleXML5Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    cm-defxml
+// </button>
+// <button onClick={handleXML6Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    cm-docxml
+// </button>
+// <button onClick={handleXML7Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    cm-labxml
+// </button>
+// <button onClick={handleXML8Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//   cm-prexml
+// </button>
+// <button onClick={handleXML9Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    cm-rolesxsd
+// </button>
+// <button onClick={handleXML10Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//   cm-rparts-rsxsd
+// </button>
+// </div>
+//
+// <div style={{ width: '45%' }}>
+// <button onClick={handleXML11Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+// cm-rparts-xbrlxml
+// </button>
+// <button onClick={handleXML12Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    cm-rparts-xbrlxsd
+// </button>
+// <button onClick={handleXML13Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    cm-xbrlxsd
+// </button>
+// <button onClick={handleXML14Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    drules-arcrolesxsd
+// </button>
+// <button onClick={handleXML15Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    extendedLinkRolesxsd
+// </button>
+// <button onClick={handleXML16Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//   model-structure-rules-strict-defxml
+// </button>
+// <button onClick={handleXML17Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    model-structure-types-rules-defxml
+// </button>
+// <button onClick={handleXML18Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    properties-rules-defxml
+// </button>
+// <button onClick={handleXML19Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
+//    propertiesxsd
+// </button>
+// </div>
+// </div>
+// </div>
