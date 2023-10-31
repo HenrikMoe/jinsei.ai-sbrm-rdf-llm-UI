@@ -19,6 +19,9 @@ const dataStore = {
   initializeDataTaxonomyJSON: ()=>{},
   initializeDataTaxonomyXBRL: ()=>{},
 
+  //luca side menu
+  lucaSideMenu: [['Base Information'], ['Terms'], ['Labels'], ['References'], ['Structures'], ['Associations'], ['Rules'], ['Facts']],
+
   //from an edit to the taxonomy, make another for an addition and or deletion
   updateDataTaxonomyXLSX: (index, titleChange) => {
     if (dataStore.dataTaxonomyXLSX[index]) {

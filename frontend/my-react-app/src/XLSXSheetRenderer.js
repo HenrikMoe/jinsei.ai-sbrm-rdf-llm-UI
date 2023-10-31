@@ -99,7 +99,7 @@ const addColumn = () => {
 
     return (
       <div className='table-wrap'>
-      <div className='elementTitle'>Data Render</div>
+      <div className='elementTitle'>Data Render / Schema Config / Structure Instance</div>
         <table className='xlsx-table'
         // {`xlsx-table ${isResizing ? 'resizable' : ''}`}
         // onMouseDown={handleMouseDown}

@@ -3,7 +3,7 @@ import './PrototypeSideMenu.css'; // Import the CSS file for styling
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
 
-const PrototypeSideMenu = ({  sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet }) => {
+const PrototypeSideMenu = ({  handleSchemaConfigSelection, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet }) => {
   const [isResizing, setIsResizing] = useState(false);
   const [initialWidth, setInitialWidth] = useState(200);
   const [initialHeight, setInitialHeight] = useState(400);
@@ -82,6 +82,13 @@ const PrototypeSideMenu = ({  sheetTitles, onSheetSelect, sheetData, xlsxTitle, 
      onSheetSelect('');
    }
    };
+  //switch a prop that conditionally renderers xlsx sheet renderer or another component
+
+  const handleSchemaConfigSelect = (index, sheetTitle)=>{
+    console.log(index, sheetTitle)
+    handleSchemaConfigSelection(sheetTitle)
+  }
+
 
    const handleTitleChange = (index, title, titleChange) => {
     dataStore.updateDataTaxonomyXLSX(index, titleChange)
@@ -102,15 +109,15 @@ const PrototypeSideMenu = ({  sheetTitles, onSheetSelect, sheetData, xlsxTitle, 
       >
       </div>
        <ul>
-       <div className='sidemenu-title'> {dataStore.workbookXLSX ? xlsxTitle : null} </div>
-        {dataStore.workbookXLSX ? dataStore.dataTaxonomyXLSX.map((title, index) => (
+       <div className='sidemenu-title'> </div>
+        {dataStore.lucaSideMenu ? dataStore.lucaSideMenu.map((title, index) => (
           <li
              key={title}
              contentEditable
              className={`${isDarkMode ? 'dark-mode' : ''} ${title === selectedSheet ? 'selected' : ''} ${
                index === 0 && isFirstSheetSelected ? 'selected' : '' // Highlight the first title
              }`}
-             onClick={() => handleSheetSelect(index, title)}
+             onClick={() => handleSchemaConfigSelect(index, title)}
            >
              {title}
            </li>

@@ -3,7 +3,7 @@ import './PrototypeSideMenu.css'; // Import the CSS file for styling
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
 
-const PrototypeSideMenu = ({  sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet }) => {
+const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet }) => {
   const [isResizing, setIsResizing] = useState(false);
   const [initialWidth, setInitialWidth] = useState(200);
   const [initialHeight, setInitialHeight] = useState(400);
@@ -83,6 +83,11 @@ const PrototypeSideMenu = ({  sheetTitles, onSheetSelect, sheetData, xlsxTitle, 
    }
    };
 
+   const handleStructureInstanceSelect = (index, structTitle) =>{
+     handleStructureInstanceSelection(structTitle)
+     console.log(structTitle)
+   }
+
    const handleTitleChange = (index, title, titleChange) => {
     dataStore.updateDataTaxonomyXLSX(index, titleChange)
    }
@@ -110,7 +115,7 @@ const PrototypeSideMenu = ({  sheetTitles, onSheetSelect, sheetData, xlsxTitle, 
              className={`${isDarkMode ? 'dark-mode' : ''} ${title === selectedSheet ? 'selected' : ''} ${
                index === 0 && isFirstSheetSelected ? 'selected' : '' // Highlight the first title
              }`}
-             onClick={() => handleSheetSelect(index, title)}
+             onClick={() => handleStructureInstanceSelect(index, title)}
            >
              {title}
            </li>
