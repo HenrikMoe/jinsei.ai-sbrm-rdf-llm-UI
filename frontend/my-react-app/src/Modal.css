@@ -23,6 +23,7 @@
   background: white;
   border: 1px solid #ccc;
   overflow: auto;
+  z-index: 99999;
 }
 
 .modal3 {
@@ -34,6 +35,8 @@
   border: 2px solid black;
   border-radius: 10px;
   overflow: auto;
+  z-index: 99999;
+
 }
 
 
