@@ -45,14 +45,19 @@ console.log(onFileUpload)
         <Delete  dataStore={dataStore} />
         <Upload />
       </div>
+
       <div className='button-wrap2'>
-      <Modal />
       <ProcessModal />
+      <Modal />
+      </div>
+
+      <div className='button-wrap2'>
       <div className='popup-container'>
       <div className='dropdown-button'>Share</div></div>
       <div className='popup-container'>
       <div className='dropdown-button'>New</div></div>
       </div>
+
 
 
 
