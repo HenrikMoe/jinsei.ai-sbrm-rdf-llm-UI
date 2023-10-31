@@ -38,7 +38,7 @@ const closeDropdown = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
-  const [title, setTitle] = useState('File 1'); // Initial title
+  const [title, setTitle] = useState('Report 1'); // Initial title
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);

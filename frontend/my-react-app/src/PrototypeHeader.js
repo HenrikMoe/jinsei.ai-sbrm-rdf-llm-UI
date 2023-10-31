@@ -13,7 +13,7 @@ import Files from './Files'
 import Projects from './Projects'
 import Model from './Model'
 import Modal from './Modal'
-
+import ProcessModal from './ProcessModal'
 //<Project onFileUpload={onFileUpload}/>
 // <Upload onFileUpload={onFileUpload}/>
 // <Delete onFileUpload={onFileUpload} />
@@ -44,10 +44,17 @@ console.log(onFileUpload)
         <Popup onFileUpload={onFileUpload} />
         <Delete  dataStore={dataStore} />
         <Upload />
-        <Modal />
       </div>
-      <div className='importButton1'>Share</div>
-      <div className='importButton1'>New</div>
+      <div className='button-wrap2'>
+      <Modal />
+      <ProcessModal />
+      <div className='popup-container'>
+      <div className='dropdown-button'>Share</div></div>
+      <div className='popup-container'>
+      <div className='dropdown-button'>New</div></div>
+      </div>
+
+
 
 
 

@@ -117,7 +117,6 @@ function Prototype() {
           <PrototypeHeader onFileUpload={handleXLSXUpload} dataStore={dataStore}/>
           <PrototypeSideMenu  sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} />
           <XLSXSheetRenderer  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
-          <DeploymentTable />
         </div>
         </DataStoreProvider>
       ) : (

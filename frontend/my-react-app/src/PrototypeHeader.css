@@ -54,6 +54,26 @@
   margin-left: -100px;
 }
 
+.dropdown-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px !important;
+  cursor: pointer;
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+}
+
+.button-wrap2{
+  display: flex;
+  margin-left: -100px;
+}
+
+
 .title{
   font-size: 14px;
 

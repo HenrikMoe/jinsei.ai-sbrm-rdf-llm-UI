@@ -82,7 +82,7 @@ const Model = ({ updateForm }) => {
             Simplified Disclosures for For-Profit and Not-for-Profit Tier 2 Entities (AASB 1060) (Seattle Method, Golden Version)
           </div>
           <div className="dropdown-item" onClick={() => handleModelSelect('Liability Standard')}>
-            No Scheme/Local Development
+            Local Report Scheme
           </div>
           {/* Add other dropdown items here */}
         </div>
