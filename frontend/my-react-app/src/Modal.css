@@ -91,7 +91,7 @@
   position: absolute;
   z-index: 1;
   margin-right: 20px;
-  margin-top: 15px;
+  margin-top: 55px;
   background-color: grey;
   border-radius: 5px;
   padding-left: 5px;
@@ -105,7 +105,7 @@
   display: flex;
   flex-direction: column;
   margin-right: 20px;
-  margin-top: 15px;
+  margin-top: 55px;
 }
 
 .dropdown{
