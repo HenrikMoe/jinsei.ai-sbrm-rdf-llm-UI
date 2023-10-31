@@ -90,7 +90,7 @@ const PrototypeSideMenu = ({  sheetTitles, onSheetSelect, sheetData, xlsxTitle, 
 
  return (
    <div>
-    <div className='elementTitle'>Sub-Report Taxonomy</div>
+    <div className='elementTitle'>Report Structures Taxonomy</div>
      <div
        className={`prototype-side-menu ${isResizing ? 'resizing' : ''} ${
          isDarkMode ? 'dark-mode' : ''
