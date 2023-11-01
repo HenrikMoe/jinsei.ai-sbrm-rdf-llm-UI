@@ -115,11 +115,23 @@ const XLSXSheetRenderer = ({
       {sheetTitle[0] === 'Facts' ? (
           <div className='schemaRibbon'>
 
+          <div className='subRibbon' >
+          <button className="ribbon-button">Create</button>
+          <button className="ribbon-button">Change Report Overlay</button>
+          <button className="ribbon-button">Import Report Overlay </button>
+          </div>
+
           <div className='subRibbon'>
           <button className="ribbon-button">Facts</button>
           <button className="ribbon-button">Dimensions</button>
           <button className="ribbon-button">Parenthetical</button>
           </div>
+
+
+          </div>
+        ) : sheetTitle[0] === 'Rules' ? (
+          <div className='schemaRibbon'>
+
 
           <div className='subRibbon' >
           <button className="ribbon-button">Create</button>
@@ -128,10 +140,6 @@ const XLSXSheetRenderer = ({
           </div>
 
 
-          </div>
-        ) : sheetTitle[0] === 'Rules' ? (
-          <div className='schemaRibbon'>
-
           <div className='subRibbon'>
           <button className="ribbon-button">Consistency</button>
           <button className="ribbon-button">RollForward</button>
@@ -139,12 +147,6 @@ const XLSXSheetRenderer = ({
           <button className="ribbon-button">Adjustment</button>
           <button className="ribbon-button">Variance</button>
           <button className="ribbon-button">Nonstandard</button>
-          </div>
-
-          <div className='subRibbon'>
-          <button className="ribbon-button">Create</button>
-          <button className="ribbon-button">Change Report Overlay</button>
-          <button className="ribbon-button">Import Report Overlay </button>
           </div>
 
           </div>

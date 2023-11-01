@@ -3,7 +3,7 @@ import './PrototypeSideMenu.css'; // Import the CSS file for styling
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
 
-const PrototypeSideMenu = ({  handleSchemaConfigSelection, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet }) => {
+const PrototypeSideMenu = ({  handleSchemaConfigSelection, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet, schemaConfigSelected }) => {
   const [isResizing, setIsResizing] = useState(false);
   const [initialWidth, setInitialWidth] = useState(200);
   const [initialHeight, setInitialHeight] = useState(400);
@@ -87,6 +87,8 @@ const PrototypeSideMenu = ({  handleSchemaConfigSelection, sheetTitles, onSheetS
   const handleSchemaConfigSelect = (index, sheetTitle)=>{
     console.log(index, sheetTitle)
     handleSchemaConfigSelection(sheetTitle)
+    setSelectedSheet(sheetTitle);
+
   }
 
 
@@ -114,7 +116,7 @@ const PrototypeSideMenu = ({  handleSchemaConfigSelection, sheetTitles, onSheetS
           <li
              key={title}
              contentEditable
-             className={`${isDarkMode ? 'dark-mode' : ''} ${title === selectedSheet ? 'selected' : ''} ${
+             className={`${isDarkMode ? 'dark-mode' : ''} ${title === selectedSheet && schemaConfigSelected ? 'selected' : ''} ${
                index === 0 && isFirstSheetSelected ? 'selected' : '' // Highlight the first title
              }`}
              onClick={() => handleSchemaConfigSelect(index, title)}

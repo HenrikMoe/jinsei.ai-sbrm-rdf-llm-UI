@@ -3,7 +3,7 @@ import './PrototypeSideMenu.css'; // Import the CSS file for styling
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
 
-const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet }) => {
+const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet, schemaConfigSelected }) => {
   const [isResizing, setIsResizing] = useState(false);
   const [initialWidth, setInitialWidth] = useState(200);
   const [initialHeight, setInitialHeight] = useState(400);
@@ -11,7 +11,6 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
   const [currentHeight, setCurrentHeight] = useState(initialHeight);
   const resizeBorderWidth = 35;
 
-  console.log('running on datastore change')
 
   const [selectedSheet, setSelectedSheet] = useState(null); // Track the selected sheet title
 
@@ -84,8 +83,10 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
    };
 
    const handleStructureInstanceSelect = (index, structTitle) =>{
-     handleStructureInstanceSelection(structTitle)
      console.log(structTitle)
+     setSelectedSheet(structTitle);
+     console.log(selectedSheet)
+     handleStructureInstanceSelection(structTitle)
    }
 
    const handleTitleChange = (index, title, titleChange) => {
@@ -112,7 +113,7 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
           <li
              key={title}
              contentEditable
-             className={`${isDarkMode ? 'dark-mode' : ''} ${title === selectedSheet ? 'selected' : ''} ${
+             className={`${isDarkMode ? 'dark-mode' : ''} ${title === selectedSheet && !schemaConfigSelected ? 'selected' : ''} ${
                index === 0 && isFirstSheetSelected ? 'selected' : '' // Highlight the first title
              }`}
              onClick={() => handleStructureInstanceSelect(index, title)}
