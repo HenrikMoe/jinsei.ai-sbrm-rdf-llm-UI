@@ -28,7 +28,7 @@ const XLSXSheetRenderer = ({
     if(selectedSheetData){
       console.log(selectedSheetData)
        const initialData = selectedSheetData;
-       setHeader([initialData[0]]);
+       setHeader(initialData[0]);
        setTableData(initialData.slice(1));
 
     }
@@ -152,7 +152,42 @@ const XLSXSheetRenderer = ({
           <button className="ribbon-button">Dimensions</button>
           <button className="ribbon-button">Parenthetical</button>
           </div>
+          <table className='xlsx-table'
+            >
+             <thead>
+             {dataStore.overLaidModelSheet ?
+                <tr>
+                  {header.map((headerText, index) => (
+                    <th key={index} contentEditable
+                    onBlur={(e) => {
+                        handleHeaderChange(index, e.target.textContent);
+                      }}>{headerText}</th>
+                  ))}
+                </tr> : <tr>null</tr>
+                }
+              </thead>
 
+
+        <tbody>
+          {dataStore.overLaidModelSheet ? tableData.map((row, rowIndex) => (
+            <tr key={rowIndex}>
+              {row.map((cell, cellIndex) => (
+                <td
+                  key={cellIndex}
+                  contentEditable
+                  onMouseEnter={handleCellMouseEnter}
+                  onMouseLeave={handleCellMouseLeave}
+                  onBlur={(e) => {
+                    handleCellChange(rowIndex, cellIndex, e.target.textContent);
+                  }}
+                >
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          )): <tr><td>hello</td></tr>}
+        </tbody>
+            </table>
 
           </div>
         ) : sheetTitle[0] === 'Rules' ? (
@@ -174,6 +209,42 @@ const XLSXSheetRenderer = ({
           <button className="ribbon-button">Variance</button>
           <button className="ribbon-button">Nonstandard</button>
           </div>
+          <table className='xlsx-table'
+            >
+             <thead>
+             {dataStore.overLaidModelSheet ?
+                <tr>
+                  {header.map((headerText, index) => (
+                    <th key={index} contentEditable
+                    onBlur={(e) => {
+                        handleHeaderChange(index, e.target.textContent);
+                      }}>{headerText}</th>
+                  ))}
+                </tr> : <tr>null</tr>
+                }
+              </thead>
+
+
+        <tbody>
+          {dataStore.overLaidModelSheet ? tableData.map((row, rowIndex) => (
+            <tr key={rowIndex}>
+              {row.map((cell, cellIndex) => (
+                <td
+                  key={cellIndex}
+                  contentEditable
+                  onMouseEnter={handleCellMouseEnter}
+                  onMouseLeave={handleCellMouseLeave}
+                  onBlur={(e) => {
+                    handleCellChange(rowIndex, cellIndex, e.target.textContent);
+                  }}
+                >
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          )): <tr><td>hello</td></tr>}
+        </tbody>
+            </table>
 
           </div>
         ) : (
@@ -186,8 +257,6 @@ const XLSXSheetRenderer = ({
             </div>
 
             {dataStore.overLaidModelSheet ?   <table className='xlsx-table'
-              // {`xlsx-table ${isResizing ? 'resizable' : ''}`}
-              // onMouseDown={handleMouseDown}
               >
                <thead>
                {dataStore.overLaidModelSheet ?
@@ -223,8 +292,6 @@ const XLSXSheetRenderer = ({
             )): <tr><td>hello</td></tr>}
           </tbody>
               </table>: <div>null</div>}
-
-
 
 
           </div>

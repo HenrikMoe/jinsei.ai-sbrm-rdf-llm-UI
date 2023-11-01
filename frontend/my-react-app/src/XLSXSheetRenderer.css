@@ -63,11 +63,13 @@
 .xlsx-table th, .xlsx-table td {
   border: 1px solid #ccc;
   padding: 8px;
+  color: black;
   text-align: left;
 }
 
 .xlsx-table th {
   background-color: #f0f0f0;
+  color: black;
   font-weight: bold;
 }
 
@@ -79,6 +81,7 @@
 .xlsx-table td[contentEditable="true"]:focus {
   outline: none;
   border: 1px solid #007bff;
+  color: black;
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 
