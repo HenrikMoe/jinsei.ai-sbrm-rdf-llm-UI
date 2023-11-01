@@ -107,19 +107,50 @@ const XLSXSheetRenderer = ({
       <div className="elementTitle">Schema Config </div>
       {sheetTitle[0] === 'Facts' ? (
           <div className='schemaRibbon'>
-            hi
+
+          <div>
+          <button className="ribbon-button">Facts</button>
+          <button className="ribbon-button">Dimensions</button>
+          <button className="ribbon-button">Parenthetical</button>
+          </div>
+
+          <div>
+          <button className="ribbon-button">Create</button>
+          <button className="ribbon-button">Change Report Overlay</button>
+          <button className="ribbon-button">Import Report Overlay </button>
+          </div>
+
+
           </div>
         ) : sheetTitle[0] === 'Rules' ? (
           <div className='schemaRibbon'>
-            yo
+
+          <div>
+          <button className="ribbon-button">Consistency</button>
+          <button className="ribbon-button">RollForward</button>
+          <button className="ribbon-button">Member Aggregation</button>
+          <button className="ribbon-button">Adjustment</button>
+          <button className="ribbon-button">Variance</button>
+          <button className="ribbon-button">Nonstandard</button>
+          </div>
+
+          <div>
+          <button className="ribbon-button">Create</button>
+          <button className="ribbon-button">Change Report Overlay</button>
+          <button className="ribbon-button">Import Report Overlay </button>
+          </div>
+
           </div>
         ) : (
           <div>
-          <div className="ribbon">
+          <div className="schemaRibbon">
             {/* Top ribbon with three buttons */}
-            <button className="ribbon-button">Button 1</button>
-            <button className="ribbon-button">Button 2</button>
-            <button className="ribbon-button">Button 3</button>
+            <div>
+            <button className="ribbon-button">Create</button>
+            <button className="ribbon-button">Change Report Overlay</button>
+            <button className="ribbon-button">Import Report Overlay </button>
+            </div>
+
           </div>
           <table className="xlsx-table">
             {/* Rest of your component */}
