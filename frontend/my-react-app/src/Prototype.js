@@ -51,14 +51,14 @@ function Prototype() {
 
 
   const handleSheetSelect = (selectedSheetTitle) => {
-    if (dataStore.workbookXLSX) {
+    if (dataStore.overLaidModelSheet) {
       // Find the data of the selected sheet in the workbook
       //this is now showing the dited title
       console.log('newTitleDone')
       console.log(selectedSheetTitle)
-      const selectedSheetData = XLSX.utils.sheet_to_json(dataStore.workbookXLSX.Sheets[selectedSheetTitle], { header: 1 });
+      const selectedSheetData = XLSX.utils.sheet_to_json(dataStore.overLaidModelSheet.Sheets[selectedSheetTitle], { header: 1 });
 
-      console.log(XLSX.utils.sheet_to_json(dataStore.workbookXLSX.Sheets[selectedSheetTitle], { header: 1 }))
+      console.log(XLSX.utils.sheet_to_json(dataStore.overLaidModelSheet.Sheets[selectedSheetTitle], { header: 1 }))
       // Set the selected sheet's data in the state
       setSelectedSheetData(selectedSheetData);
       console.log(selectedSheetData)
@@ -112,6 +112,35 @@ function Prototype() {
     console.log(sheetTitle)
     setStructureInstanceSelected(false)
     setSheetTitle(sheetTitle)
+    if (dataStore.overLaidModelSheet) {
+      // Find the data of the selected sheet in the workbook
+      //this is now showing the dited title
+      console.log('newTitleDone')
+      console.log(sheetTitle)
+      if (
+        dataStore.overLaidModelWorkbook &&
+        dataStore.overLaidModelWorkbook.Sheets &&
+        dataStore.overLaidModelWorkbook.Sheets[sheetTitle[0]]
+      ) {
+        const selectedSheetData = XLSX.utils.sheet_to_json(
+          dataStore.overLaidModelWorkbook.Sheets[sheetTitle[0]],
+          { header: 1 }
+        );
+        setSelectedSheetData(selectedSheetData);
+        console.log(selectedSheetData);
+      } else {
+        // Handle the case where the selected sheet doesn't exist
+        console.error('Selected sheet not found or is invalid.');
+        console.log(dataStore.overLaidModelWorkbook.Sheets)
+        console.log(dataStore.overLaidModelWorkbook.Sheets[sheetTitle[0]])
+      }
+      // console.log(XLSX.utils.sheet_to_json(dataStore.overLaidModelSheet.Sheets[sheetTitle], { header: 1 }))
+      // Set the selected sheet's data in the state
+      // setSelectedSheetData(selectedSheetData);
+      // console.log(selectedSheetData)
+      //const selectedSheetDataManagmentSystem = XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 });
+      //setSelectedXLSXDataTaxonomyItem(selectedSheetDataManagmentSystem)
+    }
 
 
   }
@@ -156,9 +185,9 @@ function Prototype() {
         //pass a lot of vars to prototype header for each functionality
         <DataStoreProvider>
         <div className='content-grid'>
-          <PrototypeHeader onFileUpload={handleXLSXUpload} dataStore={dataStore}/>
+          <PrototypeHeader onFileUpload={handleXLSXUpload} dataStore={dataStore} />
           <PrototypeSideMenu  handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />
-          {schemaConfigSelected ? <SchemaConfigRenderer dataStore={dataStore} sheetTitle={sheetTitle}/>  : null}
+          {schemaConfigSelected ? <SchemaConfigRenderer dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData}/>  : null}
           {structureInstanceSelected ? <StructureInstanceRenderer dataStore={dataStore}  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} /> : null}
           <SubReports handleStructureInstanceSelection={handleStructureInstanceSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />
         </div>

@@ -40,7 +40,7 @@ console.log(onFileUpload)
          <Projects /></div>
         <div className='container'>
         <Files /></div>
-        <Model />
+        <Model  dataStore={dataStore}/>
         <Popup onFileUpload={onFileUpload} />
         <Delete  dataStore={dataStore} />
         <Upload />

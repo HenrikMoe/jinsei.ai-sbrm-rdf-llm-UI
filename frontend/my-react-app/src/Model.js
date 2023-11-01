@@ -5,7 +5,7 @@ import XLSXFileHandler from './XLSXFileHandler';
 import CSVFileHandler from './CSVFileHandler';
 import JSONfileHandler from './JSONfileHandler';
 
-const Model = ({ updateForm }) => {
+const Model = ({ updateForm, dataStore }) => {
   const { isDarkMode } = useDarkMode();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -25,6 +25,7 @@ const Model = ({ updateForm }) => {
   const handleModelSelect = (model) => {
     setSelectedModel(model); // Set the selected model when an item is clicked
     closeDropdown(); // Close the dropdown
+    dataStore.changeOverLaidModel('PROOF (Platinum)')
   };
 
   useEffect(() => {
@@ -60,28 +61,28 @@ const Model = ({ updateForm }) => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('Platinum XBRL')}>
+          <div className="dropdown-item" onClick={() => handleModelSelect('Accounting Equation (Platinum)')}>
             Accounting Equation (Platinum)
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('Asset Standard')}>
+          <div className="dropdown-item" onClick={() => handleModelSelect('SFAC 6 (Platinum)')}>
             SFAC 6 (Platinum)
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('Liability Standard')}>
+          <div className="dropdown-item" onClick={() => handleModelSelect('SFAC 8 (Platinum)')}>
             SFAC 8 (Platinum)
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('Liability Standard')}>
+          <div className="dropdown-item" onClick={() => handleModelSelect('Common (Platinum)')}>
             Common (Platinum)
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('Liability Standard')}>
+          <div className="dropdown-item" onClick={() => handleModelSelect('MINI (Platinum)')}>
             MINI (Platinum)
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('Liability Standard')}>
+          <div className="dropdown-item" onClick={() => handleModelSelect('PROOF (Platinum)')}>
             PROOF (Platinum)
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('Liability Standard')}>
+          <div className="dropdown-item" onClick={() => handleModelSelect('AASB 1060')}>
             Simplified Disclosures for For-Profit and Not-for-Profit Tier 2 Entities (AASB 1060) (Seattle Method, Golden Version)
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('Liability Standard')}>
+          <div className="dropdown-item" onClick={() => handleModelSelect('Local Report Scheme')}>
             Local Report Scheme
           </div>
           {/* Add other dropdown items here */}

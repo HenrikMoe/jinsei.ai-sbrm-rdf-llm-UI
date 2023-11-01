@@ -22,6 +22,7 @@ const dataStore = {
   //luca side menu
   lucaSideMenu: [['Base Information'], ['Terms'], ['Labels'], ['References'], ['Structures'], ['Associations'], ['Rules'], ['Facts']],
 
+
   //from an edit to the taxonomy, make another for an addition and or deletion
   updateDataTaxonomyXLSX: (index, titleChange) => {
     if (dataStore.dataTaxonomyXLSX[index]) {
@@ -105,8 +106,47 @@ const dataStore = {
   addTransformation: ()=>{},
   xWorkbook: null, //PROLOG, GSQL, SQL.
 
-  overLaidModel: null,
-  changeOverLaidModel: ()=>{},
+  overLaidModelSheet: null,
+  updateOverLaidModelSheet: (sheetName)=>{
+    console.log('updating overlaid model sheet')
+    dataStore.overLaidModelSheet = XLSX.utils.sheet_to_json(dataStore.overLaidModelWorkbook.Sheets[sheetName])
+  },
+
+  overLaidModelWorkbook: null,
+  addOverLaidModelWorkbook: (workbook) => {
+     dataStore.overLaidModelWorkbook = workbook;
+   },
+
+  changeOverLaidModel: (model)=>{
+    //'PROOF (Platinum)'
+    // Convert JSON to an array of arrays
+    const xlsxFilePath = `${process.env.PUBLIC_URL}/PLATINUM-PROOF-REF.xlsx`;
+    fetch(xlsxFilePath)
+    .then((response) => response.arrayBuffer())
+    .then((arrayBuffer) => {
+      // Read the XLSX data and set the header and tableData states
+      const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+      console.log(workbook);
+      dataStore.addOverLaidModelWorkbook(workbook)
+      // Example: Read the first sheet from the workbook
+      const data = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], {
+        header: 1,
+      });
+      console.log(data);
+      dataStore.updateOverLaidModelSheet('Terms')
+      // You can perform further operations with the workbook and data here.
+    })
+    .catch((error) => {
+      console.error('Error importing XLSX file:', error);
+    });
+
+    //all Proof Plat
+
+    //XLSX.read(proofPlatinum, { type: 'binary' })
+
+
+    //dataStore.overLaidModel = data //has to be a selected sheet
+  },
 
   tooltipItems: null,
   changeToolTipItems: ()=>{},

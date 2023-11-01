@@ -9,6 +9,7 @@ const XLSXSheetRenderer = ({
   dataStore,
   xlsxTitle,
   sheetTitle,
+  selectedSheetData,
   selectedSheet,
   runTogether,
 }) => {
@@ -17,11 +18,22 @@ const XLSXSheetRenderer = ({
   console.log('sheettielchange in xlsx ')
   console.log(sheetTitle)
   if(!sheetTitle){
-    console.log('hiiiii')
     sheetTitle = ['doi']
   }
   const [tableData, setTableData] = useState([]);
   const [header, setHeader] = useState([]);
+
+    // Initialize tableData and header when dataStore changes
+  useEffect(() => {
+    if(selectedSheetData){
+      console.log(selectedSheetData)
+       const initialData = selectedSheetData;
+       setHeader([initialData[0]]);
+       setTableData(initialData.slice(1));
+
+    }
+   }, [selectedSheetData]);
+
 
   console.log('running on datastore change');
 
@@ -38,16 +50,30 @@ const XLSXSheetRenderer = ({
     setTableData(newData);
   };
 
+
+  const handleSheetChangeRender = () => {
+    console.log('sheetdata xlsx render initing ');
+    console.log(dataStore.overLaidModelSheet)
+    console.log(dataStore.overLaidModelSheet[0]);
+    setHeader([dataStore.overLaidModelSheet[0]]);
+    const initialData = dataStore.overLaidModelSheet.slice(1);
+    console.log(initialData);
+    setTableData(initialData);
+  }
+
+
+
   useEffect(() => {
-    if (sheetData) {
+    if (dataStore.overLaidModelSheet) {
       console.log('sheetdata xlsx render initing ');
-      console.log('header' + sheetData[0]);
-      setHeader(sheetData[0]);
-      const initialData = sheetData.slice(1);
+      console.log(dataStore.overLaidModelSheet)
+      console.log(dataStore.overLaidModelSheet[0]);
+      setHeader([dataStore.overLaidModelSheet[0]]);
+      const initialData = dataStore.overLaidModelSheet.slice(1);
       console.log(initialData);
       setTableData(initialData);
     }
-  }, [sheetData]);
+  }, [dataStore]);
 
 
 
@@ -151,7 +177,6 @@ const XLSXSheetRenderer = ({
 
           </div>
         ) : (
-          <div>
           <div className="schemaRibbon">
             {/* Top ribbon with three buttons */}
             <div className='subRibbon'>
@@ -160,10 +185,48 @@ const XLSXSheetRenderer = ({
             <button className="ribbon-button">Import Report Overlay </button>
             </div>
 
-          </div>
-          <table className="xlsx-table">
-            {/* Rest of your component */}
-          </table>
+            {dataStore.overLaidModelSheet ?   <table className='xlsx-table'
+              // {`xlsx-table ${isResizing ? 'resizable' : ''}`}
+              // onMouseDown={handleMouseDown}
+              >
+               <thead>
+               {dataStore.overLaidModelSheet ?
+                  <tr>
+                    {header.map((headerText, index) => (
+                      <th key={index} contentEditable
+                      onBlur={(e) => {
+                          handleHeaderChange(index, e.target.textContent);
+                        }}>{headerText}</th>
+                    ))}
+                  </tr> : <tr>null</tr>
+                  }
+                </thead>
+
+
+          <tbody>
+            {dataStore.overLaidModelSheet ? tableData.map((row, rowIndex) => (
+              <tr key={rowIndex}>
+                {row.map((cell, cellIndex) => (
+                  <td
+                    key={cellIndex}
+                    contentEditable
+                    onMouseEnter={handleCellMouseEnter}
+                    onMouseLeave={handleCellMouseLeave}
+                    onBlur={(e) => {
+                      handleCellChange(rowIndex, cellIndex, e.target.textContent);
+                    }}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            )): <tr><td>hello</td></tr>}
+          </tbody>
+              </table>: <div>null</div>}
+
+
+
+
           </div>
         )}
 
