@@ -14,6 +14,8 @@ const XLSXSheetRenderer = ({
 }) => {
   // Initialize tableData with an empty array
 
+  console.log('sheettielchange in xlsx ')
+  console.log(sheetTitle)
   const [tableData, setTableData] = useState([]);
   const [header, setHeader] = useState([]);
 
@@ -103,15 +105,28 @@ const XLSXSheetRenderer = ({
   return (
     <div className="table-wrap">
       <div className="elementTitle">Schema Config </div>
-      <div className="ribbon">
-        {/* Top ribbon with three buttons */}
-        <button className="ribbon-button">Button 1</button>
-        <button className="ribbon-button">Button 2</button>
-        <button className="ribbon-button">Button 3</button>
-      </div>
-      <table className="xlsx-table">
-        {/* Rest of your component */}
-      </table>
+      {sheetTitle[0] === 'Facts' ? (
+          <div className='schemaRibbon'>
+            hi
+          </div>
+        ) : sheetTitle[0] === 'Rules' ? (
+          <div className='schemaRibbon'>
+            yo
+          </div>
+        ) : (
+          <div>
+          <div className="ribbon">
+            {/* Top ribbon with three buttons */}
+            <button className="ribbon-button">Button 1</button>
+            <button className="ribbon-button">Button 2</button>
+            <button className="ribbon-button">Button 3</button>
+          </div>
+          <table className="xlsx-table">
+            {/* Rest of your component */}
+          </table>
+          </div>
+        )}
+
       {/* Rest of your component */}
     </div>
   );

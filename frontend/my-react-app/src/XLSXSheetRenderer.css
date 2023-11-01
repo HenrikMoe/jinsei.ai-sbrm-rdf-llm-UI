@@ -118,3 +118,8 @@
 .table-wrap:hover .status-message {
   display: block; /* Display the status message when .table-wrap is hovered over */
 }
+
+
+.schemaRibbon{
+  margin-top: 150px;
+}

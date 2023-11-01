@@ -17,7 +17,7 @@ const XLSXSheetRenderer = ({
   const [tableData, setTableData] = useState([]);
   const [header, setHeader] = useState([]);
 
-  console.log('running on datastore change');
+  console.log('strucutre instance running on sheet select change');
 
   const addRow = () => {
     const newRow = new Array(header.length).fill(' ');
@@ -101,19 +101,71 @@ const XLSXSheetRenderer = ({
   }, []);
 //conditinally render the subtype menu
   return (
-    <div className="table-wrap">
-      <div className="elementTitle">Structure Instance</div>
-      <div className="ribbon">
-        {/* Top ribbon with three buttons */}
-        <button className="ribbon-button">Button 1</button>
-        <button className="ribbon-button">Button 2</button>
-        <button className="ribbon-button">Button 3</button>
-      </div>
-      <table className="xlsx-table">
-        {/* Rest of your component */}
+    <div className='table-wrap'>
+    <div className='elementTitle'>Structure Instance</div>
+      <table className='xlsx-table'
+      // {`xlsx-table ${isResizing ? 'resizable' : ''}`}
+      // onMouseDown={handleMouseDown}
+      >
+       <thead>
+       {dataStore.workbookXLSX ?
+          <tr>
+            {header.map((headerText, index) => (
+              <th key={index} contentEditable
+              onBlur={(e) => {
+                  handleHeaderChange(index, e.target.textContent);
+                }}>{headerText}</th>
+            ))}
+          </tr> : <tr>null</tr>
+          }
+        </thead>
+
+
+  <tbody>
+    {dataStore.workbookXLSX ? tableData.map((row, rowIndex) => (
+      <tr key={rowIndex}>
+        {row.map((cell, cellIndex) => (
+          <td
+            key={cellIndex}
+            contentEditable
+            onMouseEnter={handleCellMouseEnter}
+            onMouseLeave={handleCellMouseLeave}
+            onBlur={(e) => {
+              handleCellChange(rowIndex, cellIndex, e.target.textContent);
+            }}
+          >
+            {cell}
+          </td>
+        ))}
+      </tr>
+    )): <tr><td>hello</td></tr>}
+  </tbody>
       </table>
-      {/* Rest of your component */}
-    </div>
+      {isPopupVisible ? (
+      <div
+        className="popup-message"
+        style={{
+          top: `${popupPosition.y}px`,
+          left: `${popupPosition.x}px`,
+        }}
+        ref={popupRef}
+      >
+        Model Specifc and Cell Specifc PopUp Message Status System
+      </div>
+    ): <div></div>}
+
+      {tableData .length > 0 ?
+        <div className="buttons-wrap">
+        <button className="table-button" >//onClick={addRow}
+          Add Row
+        </button>
+        <button className="table-button" >//onClick={addColumn}
+          Add Column
+        </button>
+        </div>:
+        <div className="table-button">N/A</div>
+      }
+      </div>
   );
 };
 
