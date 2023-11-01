@@ -16,6 +16,10 @@ const XLSXSheetRenderer = ({
 
   console.log('sheettielchange in xlsx ')
   console.log(sheetTitle)
+  if(!sheetTitle){
+    console.log('hiiiii')
+    sheetTitle = ['doi']
+  }
   const [tableData, setTableData] = useState([]);
   const [header, setHeader] = useState([]);
 
@@ -44,6 +48,9 @@ const XLSXSheetRenderer = ({
       setTableData(initialData);
     }
   }, [sheetData]);
+
+
+
 
   const handleCellChange = (rowIndex, cellIndex, value) => {
     const updatedData = tableData.map((row, i) =>
@@ -108,13 +115,13 @@ const XLSXSheetRenderer = ({
       {sheetTitle[0] === 'Facts' ? (
           <div className='schemaRibbon'>
 
-          <div>
+          <div className='subRibbon'>
           <button className="ribbon-button">Facts</button>
           <button className="ribbon-button">Dimensions</button>
           <button className="ribbon-button">Parenthetical</button>
           </div>
 
-          <div>
+          <div className='subRibbon' >
           <button className="ribbon-button">Create</button>
           <button className="ribbon-button">Change Report Overlay</button>
           <button className="ribbon-button">Import Report Overlay </button>
@@ -125,7 +132,7 @@ const XLSXSheetRenderer = ({
         ) : sheetTitle[0] === 'Rules' ? (
           <div className='schemaRibbon'>
 
-          <div>
+          <div className='subRibbon'>
           <button className="ribbon-button">Consistency</button>
           <button className="ribbon-button">RollForward</button>
           <button className="ribbon-button">Member Aggregation</button>
@@ -134,7 +141,7 @@ const XLSXSheetRenderer = ({
           <button className="ribbon-button">Nonstandard</button>
           </div>
 
-          <div>
+          <div className='subRibbon'>
           <button className="ribbon-button">Create</button>
           <button className="ribbon-button">Change Report Overlay</button>
           <button className="ribbon-button">Import Report Overlay </button>
@@ -145,7 +152,7 @@ const XLSXSheetRenderer = ({
           <div>
           <div className="schemaRibbon">
             {/* Top ribbon with three buttons */}
-            <div>
+            <div className='subRibbon'>
             <button className="ribbon-button">Create</button>
             <button className="ribbon-button">Change Report Overlay</button>
             <button className="ribbon-button">Import Report Overlay </button>
@@ -157,6 +164,7 @@ const XLSXSheetRenderer = ({
           </table>
           </div>
         )}
+
 
       {/* Rest of your component */}
     </div>
