@@ -18,6 +18,11 @@
   margin-bottom: -80px
 }
 
+.selected-button {
+  background-color: grey !important;
+  /* Add any other styles you want for the selected button */
+}
+
 .xlsx-table.resizable {
   /* Your existing CSS styles for the resizable table */
   position: relative; /* Add this to enable absolute positioning for resizing handle */

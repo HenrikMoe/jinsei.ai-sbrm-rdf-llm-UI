@@ -65,27 +65,52 @@ const XLSXSheetRenderer = ({
 
 
 
-  useEffect(() => {
-    if (dataStore.overLaidModelSheet) {
-      console.log('sheetdata xlsx render initing ');
-      console.log(dataStore.overLaidModelSheet)
-      console.log(dataStore.overLaidModelSheet[0]);
-      setHeader([dataStore.overLaidModelSheet[0]]);
-      const initialData = dataStore.overLaidModelSheet.slice(1);
-      console.log(initialData);
-      setTableData(initialData);
-    }
-  }, [dataStore]);
+  // useEffect(() => {
+  //   if (dataStore.overLaidModelSheet) {
+  //     console.log('sheetdata xlsx render initing ');
+  //     console.log(dataStore.overLaidModelSheet)
+  //     console.log(dataStore.overLaidModelSheet[0]);
+  //     setHeader([dataStore.overLaidModelSheet[0]]);
+  //     const initialData = dataStore.overLaidModelSheet.slice(1);
+  //     console.log(initialData);
+  //     setTableData(initialData);
+  //   }
+  // }, [dataStore]);
 
+  const [selectedSubSheet, setSelectedSubSheet] = useState([]);
 
   const handleSubSheetSelect = (subSheet)=>{
     console.log('subsheet selected')
     console.log(subSheet)
+    setSelectedSubSheet(subSheet)
+    console.log(selectedSubSheet)
     handleSchemaSubConfigSelection(subSheet)
-    // if(dataStore.overLaidModelSheet){
-    //   dataStore.updateOverLaidModelSheet(sheetTitle)
-    // }
-  }
+
+}
+
+useEffect(()=>{
+  console.log('useeffecting selectedsub')
+  console.log(selectedSubSheet)
+  const buttons = document.querySelectorAll('.ribbon-button');
+  buttons.forEach((button) => {
+    const subSheet = button.getAttribute('data-subsheet'); // Add a "data-subsheet" attribute to your buttons
+
+    if (subSheet === selectedSubSheet) {
+      console.log('sub-sheet-button-Highlight')
+      console.log(subSheet)
+      button.classList.add('selected-button');
+      console.log(button.classList)
+    } else {
+      //console.log('sub-sheet-button-Highlight')
+      button.classList.remove('selected-button');
+    }
+  // if(dataStore.overLaidModelSheet){
+  //   dataStore.updateOverLaidModelSheet(sheetTitle)
+  // }
+})
+},[selectedSubSheet])
+
+
 
 
   const createSchemaElement = () =>{
@@ -162,9 +187,9 @@ const XLSXSheetRenderer = ({
           </div>
 
           <div className='subRibbon'>
-          <button className="ribbon-button"  onClick={() => handleSubSheetSelect('Facts')}>Facts</button>
-          <button className="ribbon-button"  onClick={() => handleSubSheetSelect('Facts-Dimensions')}>Dimensions</button>
-          <button className="ribbon-button"  onClick={() => handleSubSheetSelect('Facts-Parenthetical')}>Parenthetical</button>
+          <button className="ribbon-button" data-subsheet="Facts" onClick={() => handleSubSheetSelect('Facts')}>Facts</button>
+          <button className="ribbon-button" data-subsheet="Facts-Dimensions"   onClick={() => handleSubSheetSelect('Facts-Dimensions')}>Dimensions</button>
+          <button className="ribbon-button" data-subsheet="Facts-Parenthetical"  onClick={() => handleSubSheetSelect('Facts-Parenthetical')}>Parenthetical</button>
           </div>
           <table className='xlsx-table'
             >
@@ -216,12 +241,12 @@ const XLSXSheetRenderer = ({
 
 
           <div className='subRibbon'>
-          <button className="ribbon-button" onClick={() => handleSubSheetSelect('Rules-Consistency')}>Consistency</button>
-          <button className="ribbon-button" onClick={() => handleSubSheetSelect('Rules-RollForward')}>RollForward</button>
-          <button className="ribbon-button" onClick={() => handleSubSheetSelect('Rules-MemberAggregation')}>Member Aggregation</button>
-          <button className="ribbon-button" onClick={() => handleSubSheetSelect('Rules-Adjustment')}>Adjustment</button>
-          <button className="ribbon-button" onClick={() => handleSubSheetSelect('Rules-Variance')}>Variance</button>
-          <button className="ribbon-button" onClick={() => handleSubSheetSelect('Rules-Nonstandard')}>Nonstandard</button>
+          <button className="ribbon-button" data-subsheet='Rules-Consistency' onClick={() => handleSubSheetSelect('Rules-Consistency')}>Consistency</button>
+          <button className="ribbon-button" data-subsheet='Rules-RollForward' onClick={() => handleSubSheetSelect('Rules-RollForward')}>RollForward</button>
+          <button className="ribbon-button" data-subsheet='Rules-MemberAggregation' onClick={() => handleSubSheetSelect('Rules-MemberAggregation')}>Member Aggregation</button>
+          <button className="ribbon-button" data-subsheet='Rules-Adjustment' onClick={() => handleSubSheetSelect('Rules-Adjustment')}>Adjustment</button>
+          <button className="ribbon-button" data-subsheet='Rules-Variance' onClick={() => handleSubSheetSelect('Rules-Variance')}>Variance</button>
+          <button className="ribbon-button" data-subsheet='Rules-Nonstandard' onClick={() => handleSubSheetSelect('Rules-Nonstandard')}>Nonstandard</button>
           </div>
           <table className='xlsx-table'
             >
