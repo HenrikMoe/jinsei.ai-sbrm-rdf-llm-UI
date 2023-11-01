@@ -87,6 +87,11 @@ const XLSXSheetRenderer = ({
     // }
   }
 
+
+  const createSchemaElement = () =>{
+
+  }
+
   const handleCellChange = (rowIndex, cellIndex, value) => {
     const updatedData = tableData.map((row, i) =>
       i === rowIndex
@@ -151,9 +156,9 @@ const XLSXSheetRenderer = ({
           <div className='schemaRibbon'>
 
           <div className='subRibbon' >
-          <button className="ribbon-button">Create</button>
-          <button className="ribbon-button">Change Report Overlay</button>
-          <button className="ribbon-button">Import Report Overlay </button>
+          <button className="ribbon-button" onClick={() => createSchemaElement()}>Create (Overide Schema Type or TypeSubType Config)</button>
+          <button className="ribbon-button">Change Report Overlay (See Top Banner) </button>
+          <button className="ribbon-button">Import Report Overlay (See Top Banner) </button>
           </div>
 
           <div className='subRibbon'>
@@ -204,9 +209,9 @@ const XLSXSheetRenderer = ({
 
 
           <div className='subRibbon' >
-          <button className="ribbon-button">Create</button>
-          <button className="ribbon-button">Change Report Overlay</button>
-          <button className="ribbon-button">Import Report Overlay </button>
+          <button className="ribbon-button" onClick={() => createSchemaElement()}>Create (Overide Schema Type or TypeSubType Config)</button>
+          <button className="ribbon-button">Change Report Overlay (See Top Banner) </button>
+          <button className="ribbon-button">Import Report Overlay (See Top Banner) </button>
           </div>
 
 
@@ -260,9 +265,9 @@ const XLSXSheetRenderer = ({
           <div className="schemaRibbon">
             {/* Top ribbon with three buttons */}
             <div className='subRibbon'>
-            <button className="ribbon-button">Create</button>
-            <button className="ribbon-button">Change Report Overlay</button>
-            <button className="ribbon-button">Import Report Overlay </button>
+            <button className="ribbon-button" onClick={() => createSchemaElement()}>Create (Overide Schema Type or TypeSubType Config)</button>
+            <button className="ribbon-button">Change Report Overlay (See Top Banner) </button>
+            <button className="ribbon-button">Import Report Overlay (See Top Banner) </button>
             </div>
 
             {dataStore.overLaidModelSheet ?   <table className='xlsx-table'
