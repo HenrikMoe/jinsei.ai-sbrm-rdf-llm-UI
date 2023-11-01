@@ -119,15 +119,42 @@ function Prototype() {
       console.log(sheetTitle)
       if (
         dataStore.overLaidModelWorkbook &&
-        dataStore.overLaidModelWorkbook.Sheets &&
-        dataStore.overLaidModelWorkbook.Sheets[sheetTitle[0]]
+        dataStore.overLaidModelWorkbook.Sheets
       ) {
-        const selectedSheetData = XLSX.utils.sheet_to_json(
-          dataStore.overLaidModelWorkbook.Sheets[sheetTitle[0]],
-          { header: 1 }
-        );
-        setSelectedSheetData(selectedSheetData);
-        console.log(selectedSheetData);
+        console.log(sheetTitle[0])
+        if(sheetTitle[0] === 'Base Information'){
+          const selectedSheetData = XLSX.utils.sheet_to_json(
+            dataStore.overLaidModelWorkbook.Sheets['BaseInformation'],
+            { header: 1 }
+          );
+          setSelectedSheetData(selectedSheetData);
+          console.log(selectedSheetData);
+        }
+        else if(sheetTitle[0] === 'Rules'){
+          const selectedSheetData = XLSX.utils.sheet_to_json(
+            dataStore.overLaidModelWorkbook.Sheets['Rules-Consistency'],
+            { header: 1 }
+          );
+          setSelectedSheetData(selectedSheetData);
+          console.log(selectedSheetData);
+        }
+        else if(sheetTitle[0] === 'Facts'){
+          const selectedSheetData = XLSX.utils.sheet_to_json(
+            dataStore.overLaidModelWorkbook.Sheets['Facts'],
+            { header: 1 }
+          );
+          setSelectedSheetData(selectedSheetData);
+          console.log(selectedSheetData);
+        }
+        else{
+          const selectedSheetData = XLSX.utils.sheet_to_json(
+            dataStore.overLaidModelWorkbook.Sheets[sheetTitle[0]],
+            { header: 1 }
+          );
+          setSelectedSheetData(selectedSheetData);
+          console.log(selectedSheetData);
+        }
+
       } else {
         // Handle the case where the selected sheet doesn't exist
         console.error('Selected sheet not found or is invalid.');

@@ -24,6 +24,7 @@ const XLSXSheetRenderer = ({
   const [header, setHeader] = useState([]);
 
     // Initialize tableData and header when dataStore changes
+  console.log(selectedSheetData)
   useEffect(() => {
     if(selectedSheetData){
       console.log(selectedSheetData)

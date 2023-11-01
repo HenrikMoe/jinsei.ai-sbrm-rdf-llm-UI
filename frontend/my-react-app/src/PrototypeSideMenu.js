@@ -85,6 +85,7 @@ const PrototypeSideMenu = ({  handleSchemaConfigSelection, sheetTitles, onSheetS
   //switch a prop that conditionally renderers xlsx sheet renderer or another component
 
   const handleSchemaConfigSelect = (index, sheetTitle)=>{
+    console.log('hello, changed schema')
     console.log(index, sheetTitle)
     handleSchemaConfigSelection(sheetTitle)
     setSelectedSheet(sheetTitle);
