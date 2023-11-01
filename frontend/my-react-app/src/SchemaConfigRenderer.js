@@ -12,6 +12,7 @@ const XLSXSheetRenderer = ({
   selectedSheetData,
   selectedSheet,
   runTogether,
+  handleSchemaSubConfigSelection,
 }) => {
   // Initialize tableData with an empty array
 
@@ -77,7 +78,14 @@ const XLSXSheetRenderer = ({
   }, [dataStore]);
 
 
-
+  const handleSubSheetSelect = (subSheet)=>{
+    console.log('subsheet selected')
+    console.log(subSheet)
+    handleSchemaSubConfigSelection(subSheet)
+    // if(dataStore.overLaidModelSheet){
+    //   dataStore.updateOverLaidModelSheet(sheetTitle)
+    // }
+  }
 
   const handleCellChange = (rowIndex, cellIndex, value) => {
     const updatedData = tableData.map((row, i) =>
@@ -149,9 +157,9 @@ const XLSXSheetRenderer = ({
           </div>
 
           <div className='subRibbon'>
-          <button className="ribbon-button">Facts</button>
-          <button className="ribbon-button">Dimensions</button>
-          <button className="ribbon-button">Parenthetical</button>
+          <button className="ribbon-button"  onClick={() => handleSubSheetSelect('Facts')}>Facts</button>
+          <button className="ribbon-button"  onClick={() => handleSubSheetSelect('Facts-Dimensions')}>Dimensions</button>
+          <button className="ribbon-button"  onClick={() => handleSubSheetSelect('Facts-Parenthetical')}>Parenthetical</button>
           </div>
           <table className='xlsx-table'
             >
@@ -203,12 +211,12 @@ const XLSXSheetRenderer = ({
 
 
           <div className='subRibbon'>
-          <button className="ribbon-button">Consistency</button>
-          <button className="ribbon-button">RollForward</button>
-          <button className="ribbon-button">Member Aggregation</button>
-          <button className="ribbon-button">Adjustment</button>
-          <button className="ribbon-button">Variance</button>
-          <button className="ribbon-button">Nonstandard</button>
+          <button className="ribbon-button" onClick={() => handleSubSheetSelect('Rules-Consistency')}>Consistency</button>
+          <button className="ribbon-button" onClick={() => handleSubSheetSelect('Rules-RollForward')}>RollForward</button>
+          <button className="ribbon-button" onClick={() => handleSubSheetSelect('Rules-MemberAggregation')}>Member Aggregation</button>
+          <button className="ribbon-button" onClick={() => handleSubSheetSelect('Rules-Adjustment')}>Adjustment</button>
+          <button className="ribbon-button" onClick={() => handleSubSheetSelect('Rules-Variance')}>Variance</button>
+          <button className="ribbon-button" onClick={() => handleSubSheetSelect('Rules-Nonstandard')}>Nonstandard</button>
           </div>
           <table className='xlsx-table'
             >

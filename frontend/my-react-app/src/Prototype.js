@@ -161,15 +161,17 @@ function Prototype() {
         console.log(dataStore.overLaidModelWorkbook.Sheets)
         console.log(dataStore.overLaidModelWorkbook.Sheets[sheetTitle[0]])
       }
-      // console.log(XLSX.utils.sheet_to_json(dataStore.overLaidModelSheet.Sheets[sheetTitle], { header: 1 }))
-      // Set the selected sheet's data in the state
-      // setSelectedSheetData(selectedSheetData);
-      // console.log(selectedSheetData)
-      //const selectedSheetDataManagmentSystem = XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 });
-      //setSelectedXLSXDataTaxonomyItem(selectedSheetDataManagmentSystem)
     }
+  }
 
-
+  const handleSchemaSubConfigSelection = (subSheet) => {
+    const selectedSheetData = XLSX.utils.sheet_to_json(
+      dataStore.overLaidModelWorkbook.Sheets[subSheet],
+      { header: 1 }
+    );
+    console.log('subSheet selected')
+    console.log(selectedSheetData)
+    setSelectedSheetData(selectedSheetData);
   }
 
   const handleStructureInstanceSelection = (structTitle) => {
@@ -214,7 +216,7 @@ function Prototype() {
         <div className='content-grid'>
           <PrototypeHeader onFileUpload={handleXLSXUpload} dataStore={dataStore} />
           <PrototypeSideMenu  handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />
-          {schemaConfigSelected ? <SchemaConfigRenderer dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData}/>  : null}
+          {schemaConfigSelected ? <SchemaConfigRenderer dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection}/>  : null}
           {structureInstanceSelected ? <StructureInstanceRenderer dataStore={dataStore}  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} /> : null}
           <SubReports handleStructureInstanceSelection={handleStructureInstanceSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />
         </div>

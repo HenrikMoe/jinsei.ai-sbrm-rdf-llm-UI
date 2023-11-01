@@ -92,7 +92,6 @@ const PrototypeSideMenu = ({  handleSchemaConfigSelection, sheetTitles, onSheetS
     if(dataStore.overLaidModelSheet){
       dataStore.updateOverLaidModelSheet(sheetTitle)
     }
-
   }
 
 
