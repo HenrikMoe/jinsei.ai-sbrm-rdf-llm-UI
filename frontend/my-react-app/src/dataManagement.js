@@ -12,6 +12,26 @@ const dataStore = {
   dataTaxonomyCSV: null,
   dataTaxonomyXBRL: null,
 
+
+  clearDefault: ()=>{dataStore.defaultHeader = null},
+  defaultHeader: ['ReportElementName', 'ReferenceRole', 'Publisher', 'Name', 'ReportElementName', 'ReferenceRole', 'Publisher', 'Name'],
+  getDefaultHeader: (sheetTitle)=>{
+    dataStore.defaultHeader = dataStore.defaultHeaders[sheetTitle]
+  },
+  //facts and rules are first one
+  defaultHeaders: {
+    "Base Information": ['ReportElementName', 'ReferenceRole', 'Publisher', 'Name', 'ReportElementName', 'ReferenceRole', 'Publisher', 'Name'],
+    "Terms": ['Header1', 'Header2', 'Header3'],
+    "Labels": ['ReportElementName', 'ReferenceRole', 'Publisher', 'Name', 'ReportElementName', 'ReferenceRole', 'Publisher', 'Name'],
+    "References": ['Header1', 'Header2', 'Header3'],
+    "Structures": ['ReportElementName', 'ReferenceRole', 'Publisher', 'Name', 'ReportElementName', 'ReferenceRole', 'Publisher', 'Name'],
+    "Associations": ['Header1', 'Header2', 'Header3'],
+    "Rules": ['ReportElementName', 'ReferenceRole', 'Publisher', 'Name', 'ReportElementName', 'ReferenceRole', 'Publisher', 'Name'],
+    "Facts": ['Header1', 'Header2', 'Header3'],
+  },
+
+  
+
   initializeDataTaxonomyXLSX: ()=>{
     dataStore.dataTaxonomyXLSX = dataStore.workbookXLSX.SheetNames
   },

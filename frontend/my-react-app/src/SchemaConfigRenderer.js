@@ -202,7 +202,7 @@ useEffect(()=>{
                         handleHeaderChange(index, e.target.textContent);
                       }}>{headerText}</th>
                   ))}
-                </tr> : <tr>null</tr>
+                </tr> : <tr><td>hello</td></tr>
                 }
               </thead>
 
@@ -259,7 +259,7 @@ useEffect(()=>{
                         handleHeaderChange(index, e.target.textContent);
                       }}>{headerText}</th>
                   ))}
-                </tr> : <tr>null</tr>
+                </tr> : <tr><td>hello</td></tr>
                 }
               </thead>
 
