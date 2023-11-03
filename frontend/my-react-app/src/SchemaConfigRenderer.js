@@ -113,7 +113,7 @@ useEffect(()=>{
 },[selectedSubSheet])
 
 
-
+if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
 
   const createSchemaElement = () =>{
 

@@ -25,7 +25,7 @@ const closeDropdown = () => {
 };
 
 const deleteFile = () =>{
-  dataStore.clearXLSXworkbook()
+  dataStore.clearSemantic()
 }
 
     useEffect(() => {

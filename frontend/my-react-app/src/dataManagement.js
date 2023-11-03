@@ -160,6 +160,7 @@ const dataStore = {
     }
   },
 
+  clearSemantic: ()=>{dataStore.semanticWorkbook = null; dataStore.semanticWorkbookSheet = null;},
 
 
   overLaidModelSheet: null,
@@ -172,6 +173,35 @@ const dataStore = {
   addOverLaidModelWorkbook: (workbook) => {
      dataStore.overLaidModelWorkbook = workbook;
    },
+
+  changeOverLaidModelDefault: ()=>{
+     //'PROOF (Platinum)'
+     // Convert JSON to an array of arrays
+     const xlsxFilePath = `${process.env.PUBLIC_URL}/DefaultSchemaSheet.xlsx`;
+     fetch(xlsxFilePath)
+     .then((response) => response.arrayBuffer())
+     .then((arrayBuffer) => {
+       // Read the XLSX data and set the header and tableData states
+       const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+       console.log(workbook);
+       dataStore.addOverLaidModelWorkbook(workbook)
+       dataStore.addSemanticWorkbook(workbook)
+       // Example: Read the first sheet from the workbook
+       const data = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], {
+         header: 1,
+       });
+       console.log(data);
+       dataStore.updateOverLaidModelSheet('Terms')
+       dataStore.updateSemanticWorkbookSheet('Terms')
+       // You can perform further operations with the workbook and data here.
+     })
+     .catch((error) => {
+       console.error('Error importing XLSX file:', error);
+     });
+
+  },
+
+
 
   changeOverLaidModel: (model)=>{
     //'PROOF (Platinum)'
