@@ -24,7 +24,7 @@ const XLSXSheetRenderer = ({
   const [tableData, setTableData] = useState([]);
   const [header, setHeader] = useState([]);
 
-    // Initialize tableData and header when dataStore changes
+  //thi is good j need the render logic rite
   console.log(selectedSheetData)
   useEffect(() => {
     if(selectedSheetData){
@@ -127,7 +127,12 @@ useEffect(()=>{
     setTableData(updatedData);
 
     // Update the data in dataStore
-    dataStore.updateSheetData(selectedSheet, updatedData, header);
+    console.log('updatingsheettet')
+    console.log(sheetTitle)
+    dataStore.updateSemanticSheetData(sheetTitle, updatedData, header);
+
+    //clear the overlaid
+    dataStore.clearOverlaid()
   };
 
   const handleHeaderChange = (cellIndex, value) => {
@@ -194,7 +199,7 @@ useEffect(()=>{
           <table className='xlsx-table'
             >
              <thead>
-             {dataStore.overLaidModelSheet ?
+             {dataStore.semanticWorkbookSheet ?
                 <tr>
                   {header.map((headerText, index) => (
                     <th key={index} contentEditable
@@ -208,7 +213,7 @@ useEffect(()=>{
 
 
         <tbody>
-          {dataStore.overLaidModelSheet ? tableData.map((row, rowIndex) => (
+          {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
             <tr key={rowIndex}>
               {row.map((cell, cellIndex) => (
                 <td
@@ -251,7 +256,7 @@ useEffect(()=>{
           <table className='xlsx-table'
             >
              <thead>
-             {dataStore.overLaidModelSheet ?
+             {dataStore.semanticWorkbookSheet ?
                 <tr>
                   {header.map((headerText, index) => (
                     <th key={index} contentEditable
@@ -265,7 +270,7 @@ useEffect(()=>{
 
 
         <tbody>
-          {dataStore.overLaidModelSheet ? tableData.map((row, rowIndex) => (
+          {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
             <tr key={rowIndex}>
               {row.map((cell, cellIndex) => (
                 <td
@@ -295,10 +300,10 @@ useEffect(()=>{
             <button className="ribbon-button">Import Report Overlay (See Top Banner) </button>
             </div>
 
-            {dataStore.overLaidModelSheet ?   <table className='xlsx-table'
+            {dataStore.semanticWorkbookSheet ?   <table className='xlsx-table'
               >
                <thead>
-               {dataStore.overLaidModelSheet ?
+               {dataStore.semanticWorkbookSheet ?
                   <tr>
                     {header.map((headerText, index) => (
                       <th key={index} contentEditable
@@ -312,7 +317,7 @@ useEffect(()=>{
 
 
           <tbody>
-            {dataStore.overLaidModelSheet ? tableData.map((row, rowIndex) => (
+            {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
               <tr key={rowIndex}>
                 {row.map((cell, cellIndex) => (
                   <td

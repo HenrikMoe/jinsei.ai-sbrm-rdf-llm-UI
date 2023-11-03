@@ -30,7 +30,7 @@ const dataStore = {
     "Facts": ['Header1', 'Header2', 'Header3'],
   },
 
-  
+
 
   initializeDataTaxonomyXLSX: ()=>{
     dataStore.dataTaxonomyXLSX = dataStore.workbookXLSX.SheetNames
@@ -126,6 +126,40 @@ const dataStore = {
   addTransformation: ()=>{},
   xWorkbook: null, //PROLOG, GSQL, SQL.
 
+
+
+
+  //make a base xlsx file that has the 10 sheets, just all empty with headers ,
+  //like changeoverlaid model
+  semanticWorkbook: null,
+  addSemanticWorkbook: (workbook) =>{
+    dataStore.semanticWorkbook = workbook
+  },
+
+  updateSemanticWorkbookSheet: (sheetTitle)=>{
+    dataStore.semanticWorkbookSheet = dataStore.semanticWorkbook.Sheets[sheetTitle]
+  },
+
+  //gets upadted evrey side menu select
+  //probably init with base information
+  semanticWorkbookSheet: null,
+  updateSemanticWorkbookSheet: (sheetName)=>{
+    dataStore.semanticWorkbookSheet = XLSX.utils.sheet_to_json(dataStore.semanticWorkbook.Sheets[sheetName])
+  },
+
+  updateSemanticSheetData: (sheetName, sheetData, header) => {  //update sheet data on a cell edit for a sheet
+    if (dataStore.semanticWorkbook) {
+        const sheetWithHeader = [header, ...sheetData];
+        var store  = XLSX.utils.aoa_to_sheet(sheetWithHeader);
+        dataStore.semanticWorkbook.Sheets[sheetName] = store
+        console.log('identig')
+        console.log(sheetName[0])
+        console.log(dataStore.semanticWorkbook.Sheets[sheetName[0]])
+    }
+  },
+
+
+
   overLaidModelSheet: null,
   updateOverLaidModelSheet: (sheetName)=>{
     console.log('updating overlaid model sheet')
@@ -148,12 +182,14 @@ const dataStore = {
       const workbook = XLSX.read(arrayBuffer, { type: 'array' });
       console.log(workbook);
       dataStore.addOverLaidModelWorkbook(workbook)
+      dataStore.addSemanticWorkbook(workbook)
       // Example: Read the first sheet from the workbook
       const data = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], {
         header: 1,
       });
       console.log(data);
       dataStore.updateOverLaidModelSheet('Terms')
+      dataStore.updateSemanticWorkbookSheet('Terms')
       // You can perform further operations with the workbook and data here.
     })
     .catch((error) => {
@@ -166,6 +202,10 @@ const dataStore = {
 
 
     //dataStore.overLaidModel = data //has to be a selected sheet
+  },
+
+  clearOverlaid: ()=>{
+    dataStore.overLaidModelWorkbook = null
   },
 
   tooltipItems: null,

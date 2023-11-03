@@ -89,8 +89,11 @@ const PrototypeSideMenu = ({  handleSchemaConfigSelection, sheetTitles, onSheetS
     console.log(index, sheetTitle)
     handleSchemaConfigSelection(sheetTitle)
     setSelectedSheet(sheetTitle);
-    if(dataStore.overLaidModelSheet){
-      dataStore.updateOverLaidModelSheet(sheetTitle)
+    // if(dataStore.overLaidModelSheet){
+    //   dataStore.updateOverLaidModelSheet(sheetTitle)
+    // }
+    if(dataStore.semanticWorkbookSheet){
+      dataStore.updateSemanticWorkbookSheet(sheetTitle)
     }
   }
 

@@ -106,20 +106,18 @@ function Prototype() {
 
 
   const handleSchemaConfigSelection = (sheetTitle) => {
-    console.log('running schema item select')
     setSchemaConfigSelected(true)
-    console.log(schemaConfigSelected)
-    console.log(sheetTitle)
     setStructureInstanceSelected(false)
     setSheetTitle(sheetTitle)
-    if (dataStore.overLaidModelSheet) {
-      // Find the data of the selected sheet in the workbook
-      //this is now showing the dited title
-      console.log('newTitleDone')
-      console.log(sheetTitle)
+    //if datastore.semantic sheet
+    //extract sheet data from ...XLSX.utils.sheet_to_json(
+    //   dataStore.overLaidModelWorkbook.Sheets[sheetTitle[0]],
+    //   { header: 1 }
+    // );, to setSelectedSheetData
+    if (dataStore.semanticWorkbookSheet) {
       if (
-        dataStore.overLaidModelWorkbook &&
-        dataStore.overLaidModelWorkbook.Sheets
+        dataStore.semanticWorkbook &&
+        dataStore.semanticWorkbook.Sheets
       ) {
         console.log(sheetTitle[0])
         if(sheetTitle[0] === 'Base Information'){
@@ -147,10 +145,13 @@ function Prototype() {
           console.log(selectedSheetData);
         }
         else{
+          //dataStore.updateSemanticWorkbookSheet(sheetTitle[0])
           const selectedSheetData = XLSX.utils.sheet_to_json(
-            dataStore.overLaidModelWorkbook.Sheets[sheetTitle[0]],
+            dataStore.semanticWorkbook.Sheets[sheetTitle[0]],
             { header: 1 }
           );
+          console.log('newSheetyo')
+          console.log(sheetTitle[0])
           setSelectedSheetData(selectedSheetData);
           console.log(selectedSheetData);
         }
@@ -158,15 +159,15 @@ function Prototype() {
       } else {
         // Handle the case where the selected sheet doesn't exist
         console.error('Selected sheet not found or is invalid.');
-        console.log(dataStore.overLaidModelWorkbook.Sheets)
-        console.log(dataStore.overLaidModelWorkbook.Sheets[sheetTitle[0]])
+        console.log(dataStore.semanticWorkbook.Sheets)
+        console.log(dataStore.semanticWorkbook.Sheets[sheetTitle[0]])
       }
     }
   }
 
   const handleSchemaSubConfigSelection = (subSheet) => {
     const selectedSheetData = XLSX.utils.sheet_to_json(
-      dataStore.overLaidModelWorkbook.Sheets[subSheet],
+      dataStore.semanticWorkbook.Sheets[subSheet],
       { header: 1 }
     );
     console.log('subSheet selected')
