@@ -67,6 +67,7 @@ const PrototypeSideMenu = ({  handleSchemaConfigSelection, sheetTitles, onSheetS
     }
   }, [sheetData]);
 
+  //depecrated????
   const handleSheetSelect = (index, sheetTitle) => {
    // Handle sheet selection here
    if(dataStore.workbookXLSX){

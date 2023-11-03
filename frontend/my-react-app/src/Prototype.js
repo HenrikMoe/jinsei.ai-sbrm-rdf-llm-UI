@@ -122,7 +122,7 @@ function Prototype() {
         console.log(sheetTitle[0])
         if(sheetTitle[0] === 'Base Information'){
           const selectedSheetData = XLSX.utils.sheet_to_json(
-            dataStore.overLaidModelWorkbook.Sheets['BaseInformation'],
+            dataStore.semanticWorkbook.Sheets['BaseInformation'],
             { header: 1 }
           );
           setSelectedSheetData(selectedSheetData);
@@ -130,7 +130,7 @@ function Prototype() {
         }
         else if(sheetTitle[0] === 'Rules'){
           const selectedSheetData = XLSX.utils.sheet_to_json(
-            dataStore.overLaidModelWorkbook.Sheets['Rules-Consistency'],
+            dataStore.semanticWorkbook.Sheets['Rules-Consistency'],
             { header: 1 }
           );
           setSelectedSheetData(selectedSheetData);
@@ -138,7 +138,7 @@ function Prototype() {
         }
         else if(sheetTitle[0] === 'Facts'){
           const selectedSheetData = XLSX.utils.sheet_to_json(
-            dataStore.overLaidModelWorkbook.Sheets['Facts'],
+            dataStore.semanticWorkbook.Sheets['Facts'],
             { header: 1 }
           );
           setSelectedSheetData(selectedSheetData);
@@ -165,6 +165,8 @@ function Prototype() {
     }
   }
 
+  const [selectedSubSheet, setSelectedSubSheet]= useState([])
+//viewing semanticworkbook with subsheet
   const handleSchemaSubConfigSelection = (subSheet) => {
     const selectedSheetData = XLSX.utils.sheet_to_json(
       dataStore.semanticWorkbook.Sheets[subSheet],
@@ -173,6 +175,7 @@ function Prototype() {
     console.log('subSheet selected')
     console.log(selectedSheetData)
     setSelectedSheetData(selectedSheetData);
+    setSelectedSubSheet(subSheet)
   }
 
   const handleStructureInstanceSelection = (structTitle) => {
@@ -217,7 +220,7 @@ function Prototype() {
         <div className='content-grid'>
           <PrototypeHeader onFileUpload={handleXLSXUpload} dataStore={dataStore} />
           <PrototypeSideMenu  handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />
-          {schemaConfigSelected ? <SchemaConfigRenderer dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection}/>  : null}
+          {schemaConfigSelected ? <SchemaConfigRenderer dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} />  : null}
           {structureInstanceSelected ? <StructureInstanceRenderer dataStore={dataStore}  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} /> : null}
           <SubReports handleStructureInstanceSelection={handleStructureInstanceSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />
         </div>

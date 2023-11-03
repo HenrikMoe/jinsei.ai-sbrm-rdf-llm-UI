@@ -13,6 +13,7 @@ const XLSXSheetRenderer = ({
   selectedSheet,
   runTogether,
   handleSchemaSubConfigSelection,
+  stateSubSheet,
 }) => {
   // Initialize tableData with an empty array
 
@@ -77,6 +78,7 @@ const XLSXSheetRenderer = ({
   //   }
   // }, [dataStore]);
 
+
   const [selectedSubSheet, setSelectedSubSheet] = useState([]);
 
   const handleSubSheetSelect = (subSheet)=>{
@@ -129,7 +131,12 @@ useEffect(()=>{
     // Update the data in dataStore
     console.log('updatingsheettet')
     console.log(sheetTitle)
+    console.log(stateSubSheet)
     dataStore.updateSemanticSheetData(sheetTitle, updatedData, header);
+    if(sheetTitle[0] === 'Rules' || sheetTitle[0] === 'Facts'){
+      dataStore.updateSemanticSheetData(stateSubSheet, updatedData, header);
+    }
+
 
     //clear the overlaid
     dataStore.clearOverlaid()

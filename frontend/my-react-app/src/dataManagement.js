@@ -150,10 +150,12 @@ const dataStore = {
   updateSemanticSheetData: (sheetName, sheetData, header) => {  //update sheet data on a cell edit for a sheet
     if (dataStore.semanticWorkbook) {
         const sheetWithHeader = [header, ...sheetData];
+        if(sheetName[0] === 'Base Information'){sheetName[0] = 'BaseInformation'}
         var store  = XLSX.utils.aoa_to_sheet(sheetWithHeader);
         dataStore.semanticWorkbook.Sheets[sheetName] = store
         console.log('identig')
         console.log(sheetName[0])
+        console.log(dataStore.semanticWorkbook.Sheets)
         console.log(dataStore.semanticWorkbook.Sheets[sheetName[0]])
     }
   },
