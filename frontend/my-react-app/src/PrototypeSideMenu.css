@@ -20,6 +20,11 @@
   display: inline-block; /* Prevent vertical expansion */
 }
 
+.structureInstanceWrap{
+  display: fixed;
+  margin-top: 00px;
+}
+
 .prototype-side-menu ul {
   list-style: none;
   padding: 0;
