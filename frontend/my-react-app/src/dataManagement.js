@@ -206,7 +206,11 @@ const dataStore = {
   changeOverLaidModel: (model)=>{
     //'PROOF (Platinum)'
     // Convert JSON to an array of arrays
-    const xlsxFilePath = `${process.env.PUBLIC_URL}/PLATINUM-PROOF-REF.xlsx`;
+    console.log(model)
+    var uri;
+    if(model === 'PROOF (Platinum)'){uri='PLATINUM-PROOF-REF.xlsx'}else if(model === 'Accounting Equation (Platinum)'){uri='null'}
+
+    const xlsxFilePath = `${process.env.PUBLIC_URL}/${uri}`;
     fetch(xlsxFilePath)
     .then((response) => response.arrayBuffer())
     .then((arrayBuffer) => {
@@ -238,6 +242,20 @@ const dataStore = {
 
   clearOverlaid: ()=>{
     dataStore.overLaidModelWorkbook = null
+  },
+
+  semanticStrucutreInstanceTaxonomy: null,
+  initDefaultSemanticStrucutreInstanceTaxonomy: ()=>{
+    dataStore.semanticStrucutreInstanceTaxonomy = ['Balance Sheet', 'NetAssets', 'Income Statement']
+  },
+
+  semanticStrucutreInstance: null,
+  initDefaultSemanticStrucutreInstance: ()=>{
+    dataStore.semanticStrucutreInstance = [['Balance Sheet', 'NetAssets', 'Income Statement']]
+  },
+
+  clearStructure: ()=>{
+      dataStore.semanticStrucutreInstanceTaxonomy = null
   },
 
   tooltipItems: null,

@@ -96,7 +96,7 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
 
  return (
    <div>
-    <div className='elementTitle'>Structure Instance Taxonomy</div>
+    <div className='elementTitle'>Structure Instance</div>
      <div
        className={`prototype-side-menu ${isResizing ? 'resizing' : ''} ${
          isDarkMode ? 'dark-mode' : ''
@@ -109,7 +109,7 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
       </div>
        <ul>
        <div className='sidemenu-title'> {dataStore.workbookXLSX ? xlsxTitle : null} </div>
-        {dataStore.workbookXLSX ? dataStore.dataTaxonomyXLSX.map((title, index) => (
+        {dataStore.semanticStrucutreInstanceTaxonomy ? dataStore.semanticStrucutreInstanceTaxonomy.map((title, index) => (
           <li
              key={title}
              contentEditable

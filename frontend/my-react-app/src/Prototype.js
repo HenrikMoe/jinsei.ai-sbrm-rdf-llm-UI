@@ -183,6 +183,7 @@ function Prototype() {
     console.log(structureInstanceSelected)
     console.log(structTitle)
     setSchemaConfigSelected(false)
+    //depcerecated
     if (dataStore.workbookXLSX) {
       // Find the data of the selected sheet in the workbook
       //this is now showing the dited title
@@ -197,6 +198,8 @@ function Prototype() {
       //const selectedSheetDataManagmentSystem = XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 });
       //setSelectedXLSXDataTaxonomyItem(selectedSheetDataManagmentSystem)
     }
+
+    //some sort of new rendering table 
   }
 
   const openModal = () => {

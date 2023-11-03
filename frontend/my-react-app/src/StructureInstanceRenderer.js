@@ -36,10 +36,19 @@ const XLSXSheetRenderer = ({
     if (sheetData) {
       console.log('sheetdata xlsx render initing ');
       console.log('header' + sheetData[0]);
-      setHeader(sheetData[0]);
-      const initialData = sheetData.slice(1);
-      console.log(initialData);
-      setTableData(initialData);
+      if(dataStore.semanticStrucutreInstance){
+        console.log(dataStore.semanticStrucutreInstance[0])
+        setHeader(dataStore.semanticStrucutreInstance[0]);
+        const initialData = dataStore.semanticStrucutreInstance.slice(1);
+        console.log(initialData);
+        setTableData(initialData);
+      }else{
+        setHeader(sheetData[0]);
+        const initialData = sheetData.slice(1);
+        console.log(initialData);
+        setTableData(initialData);
+      }
+
     }
   }, [sheetData]);
 
@@ -101,14 +110,14 @@ const XLSXSheetRenderer = ({
   }, []);
 //conditinally render the subtype menu
   return (
-    <div className='table-wrap'>
-    <div className='elementTitle'>Structure Instance</div>
+    <div className='table-wrap2'>
+    <div className='elementTitle2'>Structure Instance</div>
       <table className='xlsx-table'
       // {`xlsx-table ${isResizing ? 'resizable' : ''}`}
       // onMouseDown={handleMouseDown}
       >
        <thead>
-       {dataStore.workbookXLSX ?
+       {dataStore.semanticStrucutreInstanceTaxonomy ?
           <tr>
             {header.map((headerText, index) => (
               <th key={index} contentEditable

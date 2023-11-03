@@ -25,7 +25,10 @@ const Model = ({ updateForm, dataStore }) => {
   const handleModelSelect = (model) => {
     setSelectedModel(model); // Set the selected model when an item is clicked
     closeDropdown(); // Close the dropdown
+    console.log(model)
     dataStore.changeOverLaidModel('PROOF (Platinum)')
+    dataStore.initDefaultSemanticStrucutreInstanceTaxonomy()
+    dataStore.initDefaultSemanticStrucutreInstance()
   };
 
   useEffect(() => {
