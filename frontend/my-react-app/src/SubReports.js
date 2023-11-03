@@ -95,7 +95,7 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
 
 
  return (
-   <div className='structureInstanceWrap'>
+   <div className='structureInstance'>
     <div className='elementTitle'>Structure Instance</div>
      <div
        className={`prototype-side-menu ${isResizing ? 'resizing' : ''} ${
