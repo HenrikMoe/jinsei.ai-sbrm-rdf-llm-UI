@@ -42,7 +42,16 @@ const XLSXSheetRenderer = ({
 
   const addRow = () => {
     const newRow = new Array(header.length).fill(' ');
-    setTableData([...tableData, newRow]);
+    //setTableData([...tableData, newRow]);
+
+    const updatedDataWithNewRow = [...selectedSheetData, newRow];
+
+    setTableData(updatedDataWithNewRow)
+
+    // dataStore.updateSemanticSheetData(sheetTitle, updatedDataWithNewRow, header);
+    // if(sheetTitle[0] === 'Rules' || sheetTitle[0] === 'Facts'){
+    //   dataStore.updateSemanticSheetData(stateSubSheet, updatedDataWithNewRow, header);
+    // }
   };
 
   const addColumn = () => {
@@ -63,20 +72,6 @@ const XLSXSheetRenderer = ({
     console.log(initialData);
     setTableData(initialData);
   }
-
-
-
-  // useEffect(() => {
-  //   if (dataStore.overLaidModelSheet) {
-  //     console.log('sheetdata xlsx render initing ');
-  //     console.log(dataStore.overLaidModelSheet)
-  //     console.log(dataStore.overLaidModelSheet[0]);
-  //     setHeader([dataStore.overLaidModelSheet[0]]);
-  //     const initialData = dataStore.overLaidModelSheet.slice(1);
-  //     console.log(initialData);
-  //     setTableData(initialData);
-  //   }
-  // }, [dataStore]);
 
 
   const [selectedSubSheet, setSelectedSubSheet] = useState([]);
@@ -238,8 +233,9 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
             </tr>
           )): <tr><td>hello</td></tr>}
         </tbody>
-            </table>
 
+            </table>
+            <button onClick={()=> addRow()}>Add Row</button>
           </div>
         ) : sheetTitle[0] === 'Rules' ? (
           <div className='schemaRibbon'>
@@ -296,6 +292,7 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
           )): <tr><td>hello</td></tr>}
         </tbody>
             </table>
+            <button onClick={()=> addRow()}>Add Row</button>
 
           </div>
         ) : (
@@ -307,7 +304,7 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
             <button className="ribbon-button">Import Report Overlay (See Top Banner) </button>
             </div>
 
-            {dataStore.semanticWorkbookSheet ?   <table className='xlsx-table'
+            {dataStore.semanticWorkbookSheet ?  <div> <table className='xlsx-table'
               >
                <thead>
                {dataStore.semanticWorkbookSheet ?
@@ -342,7 +339,11 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
               </tr>
             )): <tr><td>hello</td></tr>}
           </tbody>
-              </table>: <div>null</div>}
+              </table>
+              <button onClick={()=> addRow()}>Add Row</button>
+
+              </div>
+              : <div>null</div>}
 
 
           </div>
