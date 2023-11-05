@@ -26,7 +26,7 @@ const Model = ({ updateForm, dataStore }) => {
     setSelectedModel(model); // Set the selected model when an item is clicked
     closeDropdown(); // Close the dropdown
     console.log(model)
-    dataStore.changeOverLaidModel('PROOF (Platinum)')
+    dataStore.changeOverLaidModel(model)
     dataStore.initDefaultSemanticStrucutreInstanceTaxonomy()
     dataStore.initDefaultSemanticStrucutreInstance()
   };
@@ -82,9 +82,7 @@ const Model = ({ updateForm, dataStore }) => {
           <div className="dropdown-item" onClick={() => handleModelSelect('PROOF (Platinum)')}>
             PROOF (Platinum)
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('AASB 1060')}>
-            Simplified Disclosures for For-Profit and Not-for-Profit Tier 2 Entities (AASB 1060) (Seattle Method, Golden Version)
-          </div>
+
           <div className="dropdown-item" onClick={() => handleModelSelect('Local Report Scheme')}>
             Local Report Scheme
           </div>
