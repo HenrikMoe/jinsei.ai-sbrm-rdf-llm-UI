@@ -63,6 +63,32 @@
   margin-top: 0px;
 }
 
+.unique-menu-container {
+  position: relative;
+}
+
+.unique-menu-button {
+  cursor: pointer;
+  background-color: grey;
+  margin: 10px 10px;
+}
+
+.unique-popup-menu {
+  position: absolute;
+  top: 100%; /* Position the menu below the cell */
+  left: 0;
+  display: none; /* Initially, hide the menu */
+  background-color: grey;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.unique-menu-show .unique-popup-menu {
+  display: block; /* Show the menu when .unique-show is applied to .unique-menu-container */
+}
+
+
+
 .table-button {
   margin-top: 10px;
   margin-left: 10px;

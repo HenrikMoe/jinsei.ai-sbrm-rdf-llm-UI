@@ -146,6 +146,13 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
     dataStore.updateSheetData(selectedSheet, tableData, newHeader);
   };
 
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
+
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const [popupPosition, setPopupPosition] = useState({ x: 0, y: 0 });
   const popupRef = useRef(null);
@@ -286,7 +293,18 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
                   }}
                 >
                   {cell}
-                </td>
+                  <div className={`unique-menu-container ${showMenu ? 'unique-menu-show' : ''}`}>
+                  <div className="unique-menu-button" onClick={toggleMenu}>
+                    Show Menu
+                  </div>
+                  <div className="unique-popup-menu">
+                    {/* Menu content and buttons go here */}
+                    <button>Option 1</button>
+                    <button>Option 2</button>
+                    {/* Add more buttons as needed */}
+                  </div>
+                </div>
+              </td>
               ))}
             </tr>
           )): <tr><td>hello</td></tr>}
