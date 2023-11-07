@@ -158,20 +158,20 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
   const popupRef = useRef(null);
 
   const handleCellMouseEnter = (e) => {
-    const cell = e.target;
-    const cellRect = cell.getBoundingClientRect();
-
-    // Calculate the position for the popup message
-    const x = cellRect.left + cellRect.width / 2;
-    const y = cellRect.top; // Adjust as needed
-
-    setPopupPosition({ x, y });
-    setIsPopupVisible(true);
-  };
-
+        const cell = e.target;
+        const cellRect = cell.getBoundingClientRect();
+  //
+  //   // Calculate the position for the popup message
+      const x = cellRect.left + cellRect.width / 2;
+        const y = cellRect.top; // Adjust as needed
+  //
+      setPopupPosition({ x, y });
+        setIsPopupVisible(true);
+   };
+  //
   const handleCellMouseLeave = () => {
     setIsPopupVisible(false);
-  };
+   };
 
   useEffect(() => {
     // Add a listener to close the popup when clicking outside of it
@@ -187,6 +187,42 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+
+  // const handleCellMouseEnter = (rowIndex, cellIndex) => {
+  //   const updatedVisibility = [...cellMenuVisibility];
+  //   updatedVisibility[rowIndex][cellIndex] = true;
+  //   setCellMenuVisibility(updatedVisibility);
+  // };
+  //
+  // const handleCellMouseLeave = (rowIndex, cellIndex) => {
+  //   const updatedVisibility = [...cellMenuVisibility];
+  //   updatedVisibility[rowIndex][cellIndex] = false;
+  //   setCellMenuVisibility(updatedVisibility);
+  // };
+
+  const [cellMenuVisibility, setCellMenuVisibility] = useState([]);
+
+ // Initialize the cellMenuVisibility state based on the table data
+ useEffect(() => {
+   if (tableData.length > 0) {
+     setCellMenuVisibility(
+       Array(tableData.length)
+         .fill()
+         .map(() => Array(header.length).fill(false))
+     );
+   } else {
+     // Set a default value as a nested array when tableData is empty
+     setCellMenuVisibility([]);
+   }
+ }, [tableData, header]);
+
+ const toggleCellMenu = (rowIndex, cellIndex) => {
+   const updatedVisibility = [...cellMenuVisibility];
+   updatedVisibility[rowIndex][cellIndex] = !updatedVisibility[rowIndex][cellIndex];
+   setCellMenuVisibility(updatedVisibility);
+ };
+
 //conditinally render the subtype menu
   return (
     <div className="table-wrap">
@@ -228,14 +264,32 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
                 <td
                   key={cellIndex}
                   contentEditable
-                  onMouseEnter={handleCellMouseEnter}
-                  onMouseLeave={handleCellMouseLeave}
+                  // onMouseEnter={() => handleCellMouseEnter(rowIndex, cellIndex)}
+                  // onMouseLeave={() => handleCellMouseLeave(rowIndex, cellIndex)}
                   onBlur={(e) => {
                     handleCellChange(rowIndex, cellIndex, e.target.textContent);
                   }}
                 >
+                <div className='cellWrapper'>
                   {cell}
-                </td>
+                  <div className={`unique-menu-container ${
+                    cellMenuVisibility[rowIndex] &&
+                cellMenuVisibility[rowIndex][cellIndex] ? 'unique-menu-show' : ''
+                    }`}>
+                  <div className="unique-menu-button" onClick={() => toggleCellMenu(rowIndex, cellIndex)}>
+                    ::
+                  </div>
+                  <div className="unique-popup-menu">
+                    {/* Menu content and buttons go here */}
+                    <button>Add Row</button>
+                    <button>Delete Row</button>
+                    <button>Context</button>
+
+                    {/* Add more buttons as needed */}
+                  </div>
+                </div>
+                </div>
+              </td>
               ))}
             </tr>
           )): <tr><td>hello</td></tr>}
@@ -292,17 +346,21 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
                     handleCellChange(rowIndex, cellIndex, e.target.textContent);
                   }}
                 >
+                <div className='cellWrapper'>
                   {cell}
                   <div className={`unique-menu-container ${showMenu ? 'unique-menu-show' : ''}`}>
                   <div className="unique-menu-button" onClick={toggleMenu}>
-                    Show Menu
+                    ::
                   </div>
                   <div className="unique-popup-menu">
                     {/* Menu content and buttons go here */}
-                    <button>Option 1</button>
-                    <button>Option 2</button>
+                    <button>Add Row</button>
+                    <button>Delete Row</button>
+                    <button>Context</button>
+
                     {/* Add more buttons as needed */}
                   </div>
+                </div>
                 </div>
               </td>
               ))}
@@ -351,8 +409,23 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
                       handleCellChange(rowIndex, cellIndex, e.target.textContent);
                     }}
                   >
+                  <div className='cellWrapper'>
                     {cell}
-                  </td>
+                    <div className={`unique-menu-container ${showMenu ? 'unique-menu-show' : ''}`}>
+                    <div className="unique-menu-button" onClick={toggleMenu}>
+                      ::
+                    </div>
+                    <div className="unique-popup-menu">
+                      {/* Menu content and buttons go here */}
+                      <button>Add Row</button>
+                      <button>Delete Row</button>
+                      <button>Context</button>
+
+                      {/* Add more buttons as needed */}
+                    </div>
+                  </div>
+                  </div>
+                </td>
                 ))}
               </tr>
             )): <tr><td>hello</td></tr>}
