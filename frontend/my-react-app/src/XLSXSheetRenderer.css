@@ -19,13 +19,17 @@
   margin-bottom: -80px
 }
 
+
+
 .belowSubRibbon{
   background-color: #F8FAFC;
 }
 
 .elementTitle2{
-  margin-top: 100px;
-  margin-bottom: 0px
+  margin-top: 15px;
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: black;
 }
 
 .selected-button {

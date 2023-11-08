@@ -18,6 +18,7 @@ import PipelineMenu from './PipelineMenu'
 import PipelineProcessPageElement from './PipelineProcessPageElement'
 import CanvasSideMenu from './CanvasSideMenu'
 import CanvasPageElement from './CanvasPageElement'
+import TabSelector from './TabSelector'
 
 function Prototype() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -236,6 +237,35 @@ function Prototype() {
     login();
   };
 
+  const handleTabSelection= (selection) =>{
+    if(selection === 'Structure'){
+      setStructureInstanceSelected(true)
+      setCanvasSheetSelected(false)
+      setPipelineSheetSelected(false)
+      setSchemaConfigSelected(false)
+    }
+    else if(selection === 'Canvas'){
+      setCanvasSheetSelected(true)
+      setPipelineSheetSelected(false)
+      setSchemaConfigSelected(false)
+      setStructureInstanceSelected(false)
+    }
+    else if(selection === 'Schema'){
+      setSchemaConfigSelected(true)
+      setCanvasSheetSelected(false)
+      setPipelineSheetSelected(false)
+      setStructureInstanceSelected(false)
+    }
+    else if(selection === 'Pipeline'){
+      setPipelineSheetSelected(true)
+      setCanvasSheetSelected(false)
+      setSchemaConfigSelected(false)
+      setStructureInstanceSelected(false)
+    }
+
+
+  }
+
   //<XLSXSheetRenderer  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
 
 
@@ -247,14 +277,15 @@ function Prototype() {
         <DataStoreProvider>
         <div className='content-grid'>
           <PrototypeHeader onFileUpload={handleXLSXUpload} dataStore={dataStore} />
-          <PrototypeSideMenu  handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />
-          <SchemaConfigRenderer dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} />
-          <SubReports handleStructureInstanceSelection={handleStructureInstanceSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />
+          <TabSelector handleTabSelection={handleTabSelection} />
+          {schemaConfigSelected ? <PrototypeSideMenu  handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} /> : <div className='fillerClass'>f</div>}
+          {schemaConfigSelected ? <SchemaConfigRenderer dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} /> : <div className='fillerClass'>f</div>}
+          {structureInstanceSelected ? <SubReports handleStructureInstanceSelection={handleStructureInstanceSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />: <div className='fillerClass'>f</div>}
           {structureInstanceSelected ? <StructureInstanceRenderer dataStore={dataStore}  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} /> : <div className='fillerClass'>filler</div>}
-          <PipelineMenu handlePipelineInstanceSelection={handlePipelineInstanceSelection} dataStore={dataStore}/>
-          {pipelineSheetSelected ? <PipelineProcessPageElement /> : <div className='fillerClass'>filler</div>}
-          <CanvasSideMenu handleCanvasSheetSelection={handleCanvasSheetSelection} dataStore={dataStore}/>
-          {canvasSheetSelected ? <CanvasPageElement />: <div className='fillerClass'>filler</div>}
+          {pipelineSheetSelected ? <PipelineMenu handlePipelineInstanceSelection={handlePipelineInstanceSelection} dataStore={dataStore}/>:<div className='fillerClass'>f</div>}
+          {pipelineSheetSelected ? <PipelineProcessPageElement /> : <div className='fillerClass'>f</div>}
+          {canvasSheetSelected ? <CanvasSideMenu handleCanvasSheetSelection={handleCanvasSheetSelection} dataStore={dataStore}/>: <div className='fillerClass'>f</div>}
+          {canvasSheetSelected ? <CanvasPageElement />: <div className='fillerClass'>f</div>}
         </div>
         </DataStoreProvider>
       ) : (

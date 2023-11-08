@@ -67,8 +67,10 @@
 }
 
 .elementTitle{
-  margin-top: 100px;
-  margin-bottom: -80px
+  margin-top: 00px;
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: black;
 }
 
 /* Add dark mode styles for the homepage */

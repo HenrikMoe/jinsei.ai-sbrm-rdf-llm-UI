@@ -8,3 +8,11 @@
   margin-top: 00px;
   bottom: 0;
 }
+
+
+#root {
+  /* Your CSS styles for the element with id="root" go here */
+  background-color: #F8FAFC;
+  height: 100%;
+  /* Add more styles as needed */
+}

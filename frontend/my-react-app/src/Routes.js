@@ -78,7 +78,7 @@ const AppRoutes = () => {
 
 
       </Routes>
-      <ChatGBT />
+
       <Footer /> {/* Include the Header component */}
       </DataStoreProvider>
     </DarkModeProvider>
@@ -86,4 +86,5 @@ const AppRoutes = () => {
   );
 };
 
+// <ChatGBT />
 export default AppRoutes;

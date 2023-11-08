@@ -21,6 +21,32 @@
   width: 145%;
 }
 
+
+.prototype-header2 {
+  background-color: #F8FAFC;
+  color: black;
+  /* border: 2px solid black; /* Set border style */
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 10px;
+  display: flex;
+  max-width: 1840px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  margin-top: 250px;
+  margin-bottom: 15px;
+  margin-left:27px;
+  margin-right:5px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  background-color: #F8FAFC;
+  width: 145%;
+}
+
+
 .stickyProtoHeader{
   display: flex;
 }
@@ -77,9 +103,26 @@
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
 }
 
+.dropdown-button2 {
+  border: none;
+  padding: 10px !important;
+  cursor: pointer;
+  background-color: powderblue;
+  padding: 10px;
+  border-radius: 2px;
+  margin-left: 10px;
+  color: black;
+  display: flex;
+}
+
 .button-wrap2{
   display: flex;
   margin-left: -100px;
+}
+
+.button-wrap3{
+  display: flex;
+  margin-left: 100px;
 }
 
 

@@ -227,11 +227,12 @@ const handleCellMouseLeave = (e) => {
 //conditinally render the subtype menu
   return (
     <div className="table-wrap">
-      <div className="elementTitle">Schema Config </div>
       {sheetTitle[0] === 'Facts' ? (
           <div className='schemaRibbon'>
+          <div className="elementTitle2">Configure Schema </div>
 
           <div className='subRibbon' >
+
           <button className="ribbon-button" onClick={() => createSchemaElement()}>Create (Overide Schema Type or TypeSubType Config)</button>
           <button className="ribbon-button">Change Report Overlay (See Top Banner) </button>
           <button className="ribbon-button">Import Report Overlay (See Top Banner) </button>
@@ -324,6 +325,7 @@ const handleCellMouseLeave = (e) => {
           </div>
         ) : sheetTitle[0] === 'Rules' ? (
           <div className='schemaRibbon'>
+          <div className="elementTitle2">Configure Schema </div>
 
 
           <div className='subRibbon' >
@@ -422,6 +424,8 @@ const handleCellMouseLeave = (e) => {
         ) : (
           <div className="schemaRibbon">
             {/* Top ribbon with three buttons */}
+            <div className="elementTitle2">Configure Schema </div>
+
             <div className='subRibbon'>
             <button className="ribbon-button" onClick={() => createSchemaElement()}>Create (Overide Schema Type or TypeSubType Config)</button>
             <button className="ribbon-button">Change Report Overlay (See Top Banner) </button>

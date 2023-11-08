@@ -63,7 +63,7 @@ console.log(onFileUpload)
 
 
 
-      <div className='titlez'>Luciano - git:main | version 0.173</div>
+      <div className='titlez'>Luciano - git:main | version 0.177</div>
 
 
     </div>
