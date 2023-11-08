@@ -266,6 +266,9 @@ const dataStore = {
   pipelineProcesses: ['XBRL Transformation', 'XBRL Structure Instance Verification', 'Bundled XBRL Instance Write'],
 
 
+  //canvases
+  canvases: ['Complete Canvas', 'Instances', 'Schemes + Instances', 'Pipelines + Schemes + Instances'],
+
   //deprecttaed?
   deployedRenderings: null,
   changeDeployedRenderings: ()=>{},

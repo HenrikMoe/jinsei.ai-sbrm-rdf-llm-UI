@@ -16,6 +16,8 @@ import SchemaConfigRenderer from './SchemaConfigRenderer'
 import StructureInstanceRenderer from './StructureInstanceRenderer'
 import PipelineMenu from './PipelineMenu'
 import PipelineProcessPageElement from './PipelineProcessPageElement'
+import CanvasSideMenu from './CanvasSideMenu'
+import CanvasPageElement from './CanvasPageElement'
 
 function Prototype() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -214,6 +216,17 @@ function Prototype() {
 
   }
 
+
+  const [canvasSheetSelected, setCanvasSheetSelected] = useState(null)
+
+  const handleCanvasSheetSelection = (pipelineTitle) => {
+  //  setStructureInstanceSelected(true)
+    setCanvasSheetSelected(true)
+    console.log(pipelineTitle)
+  //  setSchemaConfigSelected(false)
+
+  }
+
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -240,6 +253,8 @@ function Prototype() {
           {structureInstanceSelected ? <StructureInstanceRenderer dataStore={dataStore}  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} /> : <div className='fillerClass'>filler</div>}
           <PipelineMenu handlePipelineInstanceSelection={handlePipelineInstanceSelection} dataStore={dataStore}/>
           {pipelineSheetSelected ? <PipelineProcessPageElement /> : <div className='fillerClass'>filler</div>}
+          <CanvasSideMenu handleCanvasSheetSelection={handleCanvasSheetSelection} dataStore={dataStore}/>
+          {canvasSheetSelected ? <CanvasPageElement />: <div className='fillerClass'>filler</div>}
         </div>
         </DataStoreProvider>
       ) : (
