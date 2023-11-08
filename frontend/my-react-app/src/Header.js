@@ -3,7 +3,7 @@ import './Header.css'; // Import the CSS file that contains your styles
 import { Link } from 'react-router-dom';
 import { useDarkMode } from './DarkModeContext';
 
-const Header = ({ currentRoute }) => {
+const Header = ({ currentRoute, userInfo }) => {
   const [title] = useState('My Header');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -78,10 +78,13 @@ const Header = ({ currentRoute }) => {
 
         <div className={`menu-button2 ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`} onClick={toggleMenu} >
         <div className='cornerWrap'>
+          {userInfo ? <div className={`title5 ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`}>
+            <a target="_blank" lassName={`title5 ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`} >{userInfo.given_name} {userInfo.family_name}</a>
+          </div>
+          : <div className={`title5 ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`}>
+            <a target="_blank" lassName={`title5 ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`} href='https://linkedin.com/in/henrikmoe'>Henrik Moe</a>
+          </div>}
 
-            <div className={`title5 ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`}>
-              <a target="_blank" lassName={`title5 ${isHeaderVisible ? '' : 'hidden'} ${isDarkMode ? 'dark-mode' : ''}`} href='https://linkedin.com/in/henrikmoe'>Henrik Moe</a>
-            </div>
           </div>
         </div>
       </div>

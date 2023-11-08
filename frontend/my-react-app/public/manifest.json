@@ -1,6 +1,6 @@
 {
   "short_name": "Jinsei.ai",
-  "name": "Jinsei.ai | Global Standards Based Report Processes",
+  "name": "Jinsei.ai | Global Standards Based Reports and Processes",
   "icons": [
     {
       "src": "favicon.png",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "preview0.png",
+      "src": "preview179.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "preview.png",
+      "src": "preview179.png",
       "type": "image/png",
       "sizes": "512x512"
     }

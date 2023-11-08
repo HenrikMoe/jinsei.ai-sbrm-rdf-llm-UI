@@ -42,14 +42,22 @@ const AppRoutes = () => {
     document.title = 'Jinsei.ai - Standards Based Taxonomy GUI'; // Change this title
   }, []);
 
+  const [userInfo, setUserInfo] = useState(null)
+
+  const listLoginInfo = (info)=>{
+    setUserInfo(info)
+    //ping api
+    
+  }
+
   return (
     <div>
     <DarkModeProvider>
     <DataStoreProvider>
-      <Header currentRoute={location.pathname} /> {/* Include the Header component */}
+      <Header currentRoute={location.pathname} userInfo={userInfo}/> {/* Include the Header component */}
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/prototype" element={<Prototype />} />
+        <Route path="/prototype" element={<Prototype listLoginInfo={listLoginInfo}/>} />
         <Route path="/privacy" element={<PrivacyPolicy />} /> {/* Add PrivacyPolicy component */}
         <Route path="/tos" element={<TermsOfService />} /> {/* Add TermsOfService component */}
         <Route path="/timeline" element={<Timeline />} /> {/* Add TermsOfService component */}

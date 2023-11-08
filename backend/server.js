@@ -18,6 +18,12 @@ app.get('/api/some-route', (req, res) => {
   res.json({ message: 'This route does not require authentication.' });
 });
 
+app.get('/api/user-info', (req, res) => {
+  // Your route logic goes here
+  console.log()
+  res.json({ message: 'This route does not require authentication.' });
+});
+
 const { CHAT_KEY } = process.env;
 console.log(CHAT_KEY)
 app.post('/api/chatgpt', async (req, res) => {

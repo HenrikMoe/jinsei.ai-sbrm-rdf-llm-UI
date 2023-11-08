@@ -20,7 +20,7 @@ import CanvasSideMenu from './CanvasSideMenu'
 import CanvasPageElement from './CanvasPageElement'
 import TabSelector from './TabSelector'
 
-function Prototype() {
+function Prototype({listLoginInfo}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { isAuthenticated, login, logout } = useAuthentication();
   const { isDarkMode } = useDarkMode(); // Get the dark mode status
@@ -232,9 +232,10 @@ function Prototype() {
     setIsModalOpen(true);
   };
 
-  const closeAndSetAuthenticated = () => {
+  const closeAndSetAuthenticated = (info) => {
     setIsModalOpen(false);
     login();
+    listLoginInfo(info)
   };
 
   const handleTabSelection= (selection) =>{
@@ -296,8 +297,23 @@ function Prototype() {
               <h2 className={isDarkMode ? 'dark-mode-text' : ''}>Login with Google</h2>
               <GoogleLogin
                 onSuccess={(credentialResponse) => {
+                  console.log('credresponse')
                   console.log(credentialResponse);
-                  closeAndSetAuthenticated();
+                  const token = credentialResponse.credential; // Replace with the actual JWT token
+                  // Split the token into its parts
+                  const parts = token.split('.');
+                  const encodedPayload = parts[1];
+                  // Decode the payload (Base64Url encoded JSON)
+                  const decodedPayload = atob(encodedPayload.replace('-', '+').replace('_', '/'));
+                  // Parse the JSON payload
+                  const payload = JSON.parse(decodedPayload);
+                  // The email is usually in the "email" field of the payload
+                  console.log(payload)
+                  const email = payload.email;
+                  //.family_name .given_name
+
+                  console.log(email);
+                  closeAndSetAuthenticated(payload);
                 }}
                 onError={() => {
                   console.log('Authentication failed');

@@ -8,9 +8,6 @@ if (process.env.NODE_ENV === 'development') {
   backendUrl = 'http://54.200.183.86:3000/api'; // Replace with your remote backend URL
 }
 
-const api = {
-  someRoute: `${backendUrl}/some-route`,
-  // Define other API routes as needed
-};
 
-export default api;
+
+//export default api;
