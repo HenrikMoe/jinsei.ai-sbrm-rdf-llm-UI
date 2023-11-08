@@ -184,7 +184,7 @@ function Prototype() {
     console.log(structureInstanceSelected)
     console.log(structTitle)
     setSchemaConfigSelected(false)
-    //depcerecated
+    //depcerecated -NOT YET
     if (dataStore.workbookXLSX) {
       // Find the data of the selected sheet in the workbook
       //this is now showing the dited title
@@ -201,6 +201,16 @@ function Prototype() {
     }
 
     //some sort of new rendering table
+  }
+
+  const [pipelineSheetSelected, setPipelineSheetSelected] = useState(null)
+
+  const handlePipelineInstanceSelection = (pipelineTitle) => {
+  //  setStructureInstanceSelected(true)
+    setPipelineSheetSelected(true)
+    console.log(pipelineTitle)
+  //  setSchemaConfigSelected(false)
+
   }
 
   const openModal = () => {
@@ -227,7 +237,8 @@ function Prototype() {
           <SchemaConfigRenderer dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} />
           <SubReports handleStructureInstanceSelection={handleStructureInstanceSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />
           {structureInstanceSelected ? <StructureInstanceRenderer dataStore={dataStore}  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} /> : <div>filler</div>}
-          <PipelineMenu handleStructureInstanceSelection={handleStructureInstanceSelection} dataStore={dataStore}/>
+          <PipelineMenu handlePipelineInstanceSelection={handlePipelineInstanceSelection} dataStore={dataStore}/>
+          {pipelineSheetSelected ? <DeploymentTable /> : <div>filler</div>}
         </div>
         </DataStoreProvider>
       ) : (

@@ -3,10 +3,10 @@ import './DeploymentTable.css'; // Import the CSS file
 
 const DeploymentTable = () => {
   const [deployments, setDeployments] = useState([
-    { id: 1, name: 'Export XBRL', process: 'Start', replicas: 2 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'none'},
-    { id: 2, name: 'API Server', process: 'Stop', replicas: 1 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'none'},
-    { id: 3, name: 'SEC Verification', process: 'Stop', replicas: 1 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'jinsei/models/SEC/10-K'},
-    { id: 4, name: 'Seattle Method Verification', process: 'Stop', replicas: 1 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'jinsei/models/SEC/10-K'},
+    { id: 1, name: 'Transform To XBRL', process: 'Start', replicas: 2 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'none'},
+    { id: 2, name: 'Verifify Structure Instance 1', process: 'Stop', replicas: 1 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'none'},
+    { id: 3, name: 'Deploy Viewable Structure Instance', process: 'Stop', replicas: 1 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'jinsei/models/SEC/10-K'},
+    { id: 4, name: 'Deploy Writable Structure Instance', process: 'Stop', replicas: 1 , uri: 'jinsei.ai/myCompany', TTL: 50000000, external: 'jinsei/models/SEC/10-K'},
 
     // Add more initial deployments as needed
   ]);
