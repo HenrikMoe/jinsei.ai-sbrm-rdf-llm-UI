@@ -1,0 +1,73 @@
+/* CSS for the Balance Sheet container */
+.balance-sheet {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 140px;
+  margin-left: 100px;
+  border-radius: 10px;
+}
+
+/* CSS for the element title */
+.element-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* CSS for the balance sheet table */
+.balance-sheet-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* CSS for table headers */
+.balance-sheet-table th {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+}
+
+/* CSS for table cells */
+.balance-sheet-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: right;
+}
+
+/* CSS for the popup message */
+.popup-message {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+/* CSS for the buttons wrap */
+.buttons-wrap {
+  margin-top: 20px;
+}
+
+/* CSS for table buttons */
+.table-button {
+  background-color: #0074cc;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* CSS for the "N/A" button */
+.table-button.table-button-na {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

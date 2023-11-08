@@ -250,9 +250,9 @@ const dataStore = {
     dataStore.semanticStrucutreInstanceTaxonomy = ['Balance Sheet', 'NetAssets', 'Income Statement']
   },
 
-  semanticStrucutreInstance: null,
+  semanticStrucutreInstance: [['Assets Rolled Up', '$50,000', 'blah']],
   initDefaultSemanticStrucutreInstance: ()=>{
-    dataStore.semanticStrucutreInstance = [['Balance Sheet', 'NetAssets', 'Income Statement']]
+    dataStore.semanticStrucutreInstance = [['Assets Rolled Up', '$50,000']]
   },
 
   clearStructure: ()=>{

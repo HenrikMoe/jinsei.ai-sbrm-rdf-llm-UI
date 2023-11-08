@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './XLSXSheetRenderer.css'; // Import your CSS file
+import './StructureInstanceTable.css'; // Import your CSS file
 import Footer from './Footer';
 
 const XLSXSheetRenderer = ({
@@ -39,7 +39,8 @@ const XLSXSheetRenderer = ({
       if(dataStore.semanticStrucutreInstance){
         console.log(dataStore.semanticStrucutreInstance[0])
         setHeader(dataStore.semanticStrucutreInstance[0]);
-        const initialData = dataStore.semanticStrucutreInstance.slice(1);
+        const initialData = dataStore.semanticStrucutreInstance;
+        console.log('structdatainstance')
         console.log(initialData);
         setTableData(initialData);
       }else{
@@ -109,48 +110,47 @@ const XLSXSheetRenderer = ({
     };
   }, []);
 //conditinally render the subtype menu
-  return (
-    <div className='table-wrap2'>
-    <div className='elementTitle2'>Structure Instance</div>
-      <table className='xlsx-table'
-      // {`xlsx-table ${isResizing ? 'resizable' : ''}`}
-      // onMouseDown={handleMouseDown}
-      >
-       <thead>
-       {dataStore.semanticStrucutreInstanceTaxonomy ?
+return (
+
+  <div className='balance-sheet'>
+    <div className='element-title'>Balance Sheet</div>
+    <table className='balance-sheet-table'>
+      <thead>
+        {dataStore.semanticStrucutreInstanceTaxonomy ? (
           <tr>
             {header.map((headerText, index) => (
-              <th key={index} contentEditable
-              onBlur={(e) => {
-                  handleHeaderChange(index, e.target.textContent);
-                }}>{headerText}</th>
+              <th key={index} contentEditable onBlur={(e) => handleHeaderChange(index, e.target.textContent)}>
+                {headerText}
+              </th>
             ))}
-          </tr> : <tr>null</tr>
-          }
-        </thead>
+          </tr>
+        ) : (
+          <tr><td>Empty Header</td></tr>
+        )}
+      </thead>
 
+      <tbody>
+        {dataStore.semanticStrucutreInstance ? tableData.map((row, rowIndex) => (
+          <tr key={rowIndex}>
+            {row.map((cell, cellIndex) => (
+              <td
+                key={cellIndex}
+                contentEditable
+                onMouseEnter={handleCellMouseEnter}
+                onMouseLeave={handleCellMouseLeave}
+                onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+              >
+                {cell}
+              </td>
+            ))}
+          </tr>
+        )) : (
+          <tr><td>No Data</td></tr>
+        )}
+      </tbody>
+    </table>
 
-  <tbody>
-    {dataStore.workbookXLSX ? tableData.map((row, rowIndex) => (
-      <tr key={rowIndex}>
-        {row.map((cell, cellIndex) => (
-          <td
-            key={cellIndex}
-            contentEditable
-            onMouseEnter={handleCellMouseEnter}
-            onMouseLeave={handleCellMouseLeave}
-            onBlur={(e) => {
-              handleCellChange(rowIndex, cellIndex, e.target.textContent);
-            }}
-          >
-            {cell}
-          </td>
-        ))}
-      </tr>
-    )): <tr><td>hello</td></tr>}
-  </tbody>
-      </table>
-      {isPopupVisible ? (
+    {isPopupVisible ? (
       <div
         className="popup-message"
         style={{
@@ -159,23 +159,25 @@ const XLSXSheetRenderer = ({
         }}
         ref={popupRef}
       >
-        Model Specifc and Cell Specifc PopUp Message Status System
+        Model-Specific and Cell-Specific Popup Message Status System
       </div>
-    ): <div></div>}
+    ) : null}
 
-      {tableData .length > 0 ?
-        <div className="buttons-wrap">
-        <button className="table-button" >//onClick={addRow}
+    {tableData.length > 0 ? (
+      <div className="buttons-wrap">
+        <button className="table-button" onClick={addRow}>
           Add Row
         </button>
-        <button className="table-button" >//onClick={addColumn}
+        <button className="table-button" onClick={addColumn}>
           Add Column
         </button>
-        </div>:
-        <div className="table-button">N/A</div>
-      }
       </div>
+    ) : (
+      <div className="table-button">N/A</div>
+    )}
+  </div>
   );
+
 };
 
 export default XLSXSheetRenderer;
