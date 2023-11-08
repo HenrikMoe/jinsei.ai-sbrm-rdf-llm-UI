@@ -113,10 +113,11 @@ const XLSXSheetRenderer = ({
   }, []);
 //conditinally render the subtype menu
 return (
-
+    <div className='structureInstanceWrap2'>
+  <div className="elementTitle5">Report Instances </div>
   <div className='balance-sheet'>
-    <div className='element-title'>Balance Sheet</div>
-    <table className='balance-sheet-table'>
+
+      <table className='balance-sheet-table'>
       <thead>
         {dataStore.semanticStrucutreInstanceTaxonomy ? (
           <tr>
@@ -177,6 +178,7 @@ return (
     ) : (
       <div className="table-button">N/A</div>
     )}
+  </div>
   </div>
   );
 

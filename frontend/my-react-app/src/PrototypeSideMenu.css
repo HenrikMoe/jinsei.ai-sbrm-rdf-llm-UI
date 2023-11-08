@@ -26,6 +26,10 @@
   margin-left: -215px;
 }
 
+.structureInstance{
+  margin-top: -80px;
+}
+
 .prototype-side-menu ul {
   list-style: none;
   padding: 0;
@@ -66,6 +70,11 @@
 .elementTitle{
   margin-top: 00px;
   margin-bottom: 80px
+}
+
+.elementTitle6{
+  margin-bottom: 40px;
+  font-size: 20px;
 }
 
 /* Add dark mode styles for the homepage */
