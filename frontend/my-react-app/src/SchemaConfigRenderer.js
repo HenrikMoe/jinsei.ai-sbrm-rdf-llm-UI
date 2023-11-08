@@ -162,20 +162,28 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
   const popupRef = useRef(null);
 
   const handleCellMouseEnter = (e) => {
-        const cell = e.target;
-        const cellRect = cell.getBoundingClientRect();
-  //
-  //   // Calculate the position for the popup message
-      const x = cellRect.left + cellRect.width / 2;
-        const y = cellRect.top; // Adjust as needed
-  //
-      setPopupPosition({ x, y });
-        setIsPopupVisible(true);
-   };
-  //
-  const handleCellMouseLeave = () => {
-    setIsPopupVisible(false);
-   };
+  const cell = e.target;
+  const cellRect = cell.getBoundingClientRect();
+
+  // Calculate the position for the popup message
+  const x = cellRect.left + cellRect.width / 2;
+  const y = cellRect.top + 150; // Adjust as needed
+
+  setPopupPosition({ x, y });
+  setIsPopupVisible(true);
+
+  // Add the green background class
+  cell.classList.add('green-background');
+};
+
+const handleCellMouseLeave = (e) => {
+  const cell = e.target;
+
+  // Remove the green background class
+  cell.classList.remove('green-background');
+
+  setIsPopupVisible(false);
+};
 
   useEffect(() => {
     // Add a listener to close the popup when clicking outside of it
@@ -193,17 +201,6 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
   }, []);
 
 
-  // const handleCellMouseEnter = (rowIndex, cellIndex) => {
-  //   const updatedVisibility = [...cellMenuVisibility];
-  //   updatedVisibility[rowIndex][cellIndex] = true;
-  //   setCellMenuVisibility(updatedVisibility);
-  // };
-  //
-  // const handleCellMouseLeave = (rowIndex, cellIndex) => {
-  //   const updatedVisibility = [...cellMenuVisibility];
-  //   updatedVisibility[rowIndex][cellIndex] = false;
-  //   setCellMenuVisibility(updatedVisibility);
-  // };
 
   const [cellMenuVisibility, setCellMenuVisibility] = useState([]);
 
@@ -268,8 +265,8 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
                 <td
                   key={cellIndex}
                   contentEditable
-                  // onMouseEnter={() => handleCellMouseEnter(rowIndex, cellIndex)}
-                  // onMouseLeave={() => handleCellMouseLeave(rowIndex, cellIndex)}
+                  onMouseEnter={handleCellMouseEnter}
+                  onMouseLeave={handleCellMouseLeave}
                   onBlur={(e) => {
                     handleCellChange(rowIndex, cellIndex, e.target.textContent);
                   }}
@@ -309,6 +306,18 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
         </tbody>
 
             </table>
+            {isPopupVisible ? (
+              <div
+                className="popup-message"
+                style={{
+                  top: `${popupPosition.y}px`,
+                  left: `${popupPosition.x}px`,
+                }}
+                ref={popupRef}
+              >
+                Model-Specific and Cell-Specific Popup Message Status System
+              </div>
+            ) : null}
             <button onClick={()=> addRow()}>Add Row</button>
           </div>
         ) : sheetTitle[0] === 'Rules' ? (
@@ -393,6 +402,18 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
           )): <tr><td>hello</td></tr>}
         </tbody>
             </table>
+            {isPopupVisible ? (
+              <div
+                className="popup-message"
+                style={{
+                  top: `${popupPosition.y}px`,
+                  left: `${popupPosition.x}px`,
+                }}
+                ref={popupRef}
+              >
+                Model-Specific and Cell-Specific Popup Message Status System
+              </div>
+            ) : null}
             <button onClick={()=> addRow()}>Add Row</button>
 
           </div>
@@ -470,6 +491,18 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
             )): <tr><td>hello</td></tr>}
           </tbody>
               </table>
+              {isPopupVisible ? (
+                <div
+                  className="popup-message"
+                  style={{
+                    top: `${popupPosition.y}px`,
+                    left: `${popupPosition.x}px`,
+                  }}
+                  ref={popupRef}
+                >
+                  Model-Specific and Cell-Specific Popup Message Status System
+                </div>
+              ) : null}
               <button onClick={()=> addRow()}>Add Row</button>
 
               </div>

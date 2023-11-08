@@ -80,12 +80,14 @@ const XLSXSheetRenderer = ({
   const popupRef = useRef(null);
 
   const handleCellMouseEnter = (e) => {
+    console.log('mouse entered')
+
     const cell = e.target;
     const cellRect = cell.getBoundingClientRect();
 
     // Calculate the position for the popup message
     const x = cellRect.left + cellRect.width / 2;
-    const y = cellRect.top; // Adjust as needed
+    const y = cellRect.top + 300; // Adjust as needed
 
     setPopupPosition({ x, y });
     setIsPopupVisible(true);
