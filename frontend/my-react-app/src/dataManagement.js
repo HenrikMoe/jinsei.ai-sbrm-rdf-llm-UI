@@ -263,7 +263,7 @@ const dataStore = {
   changeToolTipItems: ()=>{},
 
   //pipeline
-  pipelineProcesses: [['XBRL Transforation', 'XBRL Structure Instance Verification', 'Bundled XBRL Instance Write']],
+  pipelineProcesses: ['XBRL Transforation', 'XBRL Structure Instance Verification', 'Bundled XBRL Instance Write'],
 
 
   //deprecttaed?
