@@ -236,13 +236,12 @@ const handleCellMouseLeave = (e) => {
           <button className="ribbon-button" onClick={() => createSchemaElement()}>Create (Overide Schema Type or TypeSubType Config)</button>
           <button className="ribbon-button">Change Report Overlay (See Top Banner) </button>
           <button className="ribbon-button">Import Report Overlay (See Top Banner) </button>
-          </div>
-
-          <div className='subRibbon'>
           <button className="ribbon-button" data-subsheet="Facts" onClick={() => handleSubSheetSelect('Facts')}>Facts</button>
           <button className="ribbon-button" data-subsheet="Facts-Dimensions"   onClick={() => handleSubSheetSelect('Facts-Dimensions')}>Dimensions</button>
           <button className="ribbon-button" data-subsheet="Facts-Parenthetical"  onClick={() => handleSubSheetSelect('Facts-Parenthetical')}>Parenthetical</button>
           </div>
+
+        
           <div className='belowSubRibbon'>
           <table className='xlsx-table'
             >
@@ -332,10 +331,6 @@ const handleCellMouseLeave = (e) => {
           <button className="ribbon-button" onClick={() => createSchemaElement()}>Create (Overide Schema Type or TypeSubType Config)</button>
           <button className="ribbon-button">Change Report Overlay (See Top Banner) </button>
           <button className="ribbon-button">Import Report Overlay (See Top Banner) </button>
-          </div>
-
-
-          <div className='subRibbon'>
           <button className="ribbon-button" data-subsheet='Rules-Consistency' onClick={() => handleSubSheetSelect('Rules-Consistency')}>Consistency</button>
           <button className="ribbon-button" data-subsheet='Rules-RollForward' onClick={() => handleSubSheetSelect('Rules-RollForward')}>RollForward</button>
           <button className="ribbon-button" data-subsheet='Rules-MemberAggregation' onClick={() => handleSubSheetSelect('Rules-MemberAggregation')}>Member Aggregation</button>
@@ -343,6 +338,9 @@ const handleCellMouseLeave = (e) => {
           <button className="ribbon-button" data-subsheet='Rules-Variance' onClick={() => handleSubSheetSelect('Rules-Variance')}>Variance</button>
           <button className="ribbon-button" data-subsheet='Rules-Nonstandard' onClick={() => handleSubSheetSelect('Rules-Nonstandard')}>Nonstandard</button>
           </div>
+
+
+
           <table className='xlsx-table'
             >
              <thead>
