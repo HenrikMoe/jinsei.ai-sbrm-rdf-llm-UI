@@ -252,7 +252,7 @@ const dataStore = {
 
   semanticStrucutreInstance: [['Assets Rolled Up', '$50,000', 'blah']],
   initDefaultSemanticStrucutreInstance: ()=>{
-    dataStore.semanticStrucutreInstance = [['Assets Rolled Up', '$50,000']]
+    dataStore.semanticStrucutreInstance = [['Assets Rolled Up', '$50,000'], ['Liabilities Rolled Up', '$30,000'], ['Net Assets', '$20,000']]
   },
 
   clearStructure: ()=>{
