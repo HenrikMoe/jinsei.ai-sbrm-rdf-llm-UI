@@ -1,6 +1,6 @@
 .xlsx-table {
   margin-top: 30px;
-  border: 2px solid grey;
+  /* border: 2px solid grey; */
   top: 0;
   padding: 5px;
   display: inline-block;
@@ -9,6 +9,7 @@
   max-height: 300px;
   border-radius: 10px !important;
   overflow-x: auto;
+  background-color: #F8FAFC;
   border-collapse: separate;
   border-radius: 10px !important;
 }
@@ -16,6 +17,10 @@
 .elementTitle{
   margin-top: 100px;
   margin-bottom: -80px
+}
+
+.belowSubRibbon{
+  background-color: #F8FAFC;
 }
 
 .elementTitle2{
@@ -200,7 +205,7 @@
 .schemaRibbon {
   display: fixed;
   justify-content: space-between;
-  background-color: white;
+  background-color: #F8FAFC;
   color: white;
   padding: 10px;
   border-radius: 5px;

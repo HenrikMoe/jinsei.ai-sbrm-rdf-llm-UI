@@ -118,7 +118,8 @@
   margin-top: 125px;
   margin-left: 0px;
   margin-right: 5px;
-  border: 2px solid grey;
+  background-color: #F8FAFC;
+
   display: grid;
   width: 1878px;
   margin-bottom: -800px;
@@ -147,6 +148,7 @@
   box-sizing: border-box; /* Include padding in the width */
   border-radius: 0px !important;
   transform: scale(0.67);
+  background-color: #F8FAFC;
   width: 145%;
   transform-origin: 0 0;
 }

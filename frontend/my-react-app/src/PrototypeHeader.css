@@ -2,7 +2,7 @@
 .prototype-header {
   background-color: white;
   color: black;
-  border: 2px solid black; /* Set border style */
+  /* border: 2px solid black; /* Set border style */
   padding: 10px;
   display: flex;
   max-width: 1840px;
@@ -17,6 +17,7 @@
   left: 0;
   right: 0;
   z-index: 500;
+  background-color: #F8FAFC;
   width: 145%;
 }
 

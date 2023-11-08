@@ -167,7 +167,7 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
 
   // Calculate the position for the popup message
   const x = cellRect.left + cellRect.width / 2;
-  const y = cellRect.top + 150; // Adjust as needed
+  const y = cellRect.top + 350; // Adjust as needed
 
   setPopupPosition({ x, y });
   setIsPopupVisible(true);
@@ -242,6 +242,7 @@ const handleCellMouseLeave = (e) => {
           <button className="ribbon-button" data-subsheet="Facts-Dimensions"   onClick={() => handleSubSheetSelect('Facts-Dimensions')}>Dimensions</button>
           <button className="ribbon-button" data-subsheet="Facts-Parenthetical"  onClick={() => handleSubSheetSelect('Facts-Parenthetical')}>Parenthetical</button>
           </div>
+          <div className='belowSubRibbon'>
           <table className='xlsx-table'
             >
              <thead>
@@ -306,6 +307,7 @@ const handleCellMouseLeave = (e) => {
         </tbody>
 
             </table>
+            </div>
             {isPopupVisible ? (
               <div
                 className="popup-message"

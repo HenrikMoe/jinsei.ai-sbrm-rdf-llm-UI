@@ -63,7 +63,7 @@
 
 .selected {
   background-color: grey; /* Change to the desired grey color */
-  color: white; /* Text color for the selected item */
+  color: black; /* Text color for the selected item */
 }
 
 .elementTitle{
