@@ -115,6 +115,10 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
   }
 
   const handleCellChange = (rowIndex, cellIndex, value) => {
+    console.log('cellcontext')
+    console.log(value)
+    value = value.replace(/:Add RowDelete RowContext/g, '');
+
     const updatedData = tableData.map((row, i) =>
       i === rowIndex
         ? row.map((cell, j) => (j === cellIndex ? value : cell))
@@ -271,24 +275,33 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
                   }}
                 >
                 <div className='cellWrapper'>
-                  {cell}
-                  <div className={`unique-menu-container ${
+                <div
+                  className={`unique-menu-container ${
                     cellMenuVisibility[rowIndex] &&
-                cellMenuVisibility[rowIndex][cellIndex] ? 'unique-menu-show' : ''
-                    }`}>
+                    cellMenuVisibility[rowIndex][cellIndex] ? 'unique-menu-show' : ''
+                  }`}
+                >
                   <div className="unique-menu-button" onClick={() => toggleCellMenu(rowIndex, cellIndex)}>
-                    ::
+                    :
                   </div>
                   <div className="unique-popup-menu">
                     {/* Menu content and buttons go here */}
-                    <button>Add Row</button>
-                    <button>Delete Row</button>
-                    <button>Context</button>
-
+                    <button >Add Row</button>
+                    <button >Delete Row</button>
+                    <button >Context</button>
                     {/* Add more buttons as needed */}
                   </div>
                 </div>
+                <div
+                  className="cell-content"
+                  contentEditable
+                  onBlur={(e) => {
+                    handleCellChange(rowIndex, cellIndex, e.target.textContent);
+                  }}
+                >
+                  {cell}
                 </div>
+              </div>
               </td>
               ))}
             </tr>
@@ -347,21 +360,33 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
                   }}
                 >
                 <div className='cellWrapper'>
-                  {cell}
-                  <div className={`unique-menu-container ${showMenu ? 'unique-menu-show' : ''}`}>
-                  <div className="unique-menu-button" onClick={toggleMenu}>
-                    ::
+                <div
+                  className={`unique-menu-container ${
+                    cellMenuVisibility[rowIndex] &&
+                    cellMenuVisibility[rowIndex][cellIndex] ? 'unique-menu-show' : 'unique-menu-hide'
+                  }`}
+                >
+                  <div className="unique-menu-button" onClick={() => toggleCellMenu(rowIndex, cellIndex)}>
+                    :
                   </div>
                   <div className="unique-popup-menu">
                     {/* Menu content and buttons go here */}
-                    <button>Add Row</button>
-                    <button>Delete Row</button>
-                    <button>Context</button>
-
+                    <button >Add Row</button>
+                    <button >Delete Row</button>
+                    <button >Context</button>
                     {/* Add more buttons as needed */}
                   </div>
                 </div>
+                <div
+                  className="cell-content"
+                  contentEditable
+                  onBlur={(e) => {
+                    handleCellChange(rowIndex, cellIndex, e.target.textContent);
+                  }}
+                >
+                  {cell}
                 </div>
+              </div>
               </td>
               ))}
             </tr>
@@ -410,21 +435,35 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
                     }}
                   >
                   <div className='cellWrapper'>
-                    {cell}
-                    <div className={`unique-menu-container ${showMenu ? 'unique-menu-show' : ''}`}>
-                    <div className="unique-menu-button" onClick={toggleMenu}>
-                      ::
+                  <div
+                    className={`unique-menu-container ${
+                      cellMenuVisibility[rowIndex] &&
+                      cellMenuVisibility[rowIndex][cellIndex] ? 'unique-menu-show' : 'unique-menu-hide'
+                    }`}
+                  >
+                    <div className="unique-menu-button" onClick={() => toggleCellMenu(rowIndex, cellIndex)} >
+                      :
                     </div>
                     <div className="unique-popup-menu">
                       {/* Menu content and buttons go here */}
-                      <button>Add Row</button>
-                      <button>Delete Row</button>
-                      <button>Context</button>
-
+                      <button className='menu-button-cell'>Add Row</button>
+                      <button className='menu-button-cell'>Delete Row</button>
+                      <button className='menu-button-cell'>Context</button>
                       {/* Add more buttons as needed */}
                     </div>
                   </div>
+                  <div
+                    className="cell-content"
+                    contentEditable
+                    onBlur={(e) => {
+                      console.log('cellContext')
+                      console.log(e.target.textContent)
+                      handleCellChange(rowIndex, cellIndex, e.target.textContent);
+                    }}
+                  >
+                    {cell}
                   </div>
+                </div>
                 </td>
                 ))}
               </tr>
