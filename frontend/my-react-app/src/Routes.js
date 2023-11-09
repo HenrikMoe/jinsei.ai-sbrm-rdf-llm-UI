@@ -31,7 +31,7 @@ import XMLViewer16 from './XMLViewer16'
 import XMLViewer17 from './XMLViewer17';
 import XMLViewer18 from './XMLViewer18'
 import XMLViewer19 from './XMLViewer19'
-
+import API from './api'
 
 
 const AppRoutes = () => {
@@ -46,8 +46,8 @@ const AppRoutes = () => {
 
   const listLoginInfo = (info)=>{
     setUserInfo(info)
-    //ping api
-    
+    API.sendUserInfo(info)
+
   }
 
   return (

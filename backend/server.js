@@ -18,11 +18,7 @@ app.get('/api/some-route', (req, res) => {
   res.json({ message: 'This route does not require authentication.' });
 });
 
-app.get('/api/user-info', (req, res) => {
-  // Your route logic goes here
-  console.log()
-  res.json({ message: 'This route does not require authentication.' });
-});
+
 
 const { CHAT_KEY } = process.env;
 console.log(CHAT_KEY)
@@ -91,3 +87,38 @@ async function run() {
   }
 }
 run().catch(console.dir);
+
+app.post('/api/user-info', async (req, res) => {
+  try {
+    // Extract the data you want to write to the "admin" database from req.body
+    const { given_name, family_name, email, locale } = req.body; // Replace with actual keys
+
+    // Access the "admin" database
+    await client.connect();
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    const db = client.db('');
+
+    // Construct the document to be inserted into a specific collection
+    const document = {
+      key1: given_name, // Replace with actual field name
+      key2: family_name, // Replace with actual field name
+      key3: email, // Replace with actual field name
+      key4: locale, // Replace with actual field name
+
+    };
+
+    // Access a specific collection within the "admin" database
+    const collection = db.collection('userInfo'); // Replace with your collection name
+
+    // Insert the document into the collection
+    const result = await collection.insertOne(document);
+
+    console.log('Inserted a document with _id:', result.insertedId);
+
+    res.json({ message: 'Data written to the admin database successfully.' });
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'An error occurred while processing your request.' });
+  }
+});
