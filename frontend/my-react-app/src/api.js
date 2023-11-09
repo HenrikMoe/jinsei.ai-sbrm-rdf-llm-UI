@@ -1,19 +1,14 @@
 import axios from 'axios';
 let backendUrl;
 
-if (process.env.NODE_ENV === 'development') {
-  // Local development URL
-  backendUrl = 'http://localhost:3000/api'; // Replace with your local backend URL
-} else {
-  // Remote production URL
-  backendUrl = 'http://35.167.255.30:3000/api'; // Replace with your remote backend URL
-}
+const backendUrl = process.env.REACT_APP_API_BASE_URL || 'http://localhost:3000';
+
 
 const api = {
   sendUserInfo: (requestData) => {
     console.log(axios)
     return axios
-      .post(`${backendUrl}/user-info`, requestData) // Updated the URL to include backendUrl
+      .post(`${backendUrl}/api/user-info`, requestData) // Updated the URL to include backendUrl
       .then((response) => {
         // Handle the response data here
         return response.data;
