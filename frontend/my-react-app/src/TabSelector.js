@@ -58,7 +58,7 @@ const handleTabClick = (selection)=>{
   return (
 
     <div className={`prototype-header2 ${isDarkMode ? 'dark-mode' : ''}`}>
-    <div className='title9'>Report:</div>
+    <div className='title9'>Tab:</div>
 
       <div className='button-wrap3'>
       <div className='dropdown-button2' onClick={() => handleTabClick('Schema')}> Schema Config</div>

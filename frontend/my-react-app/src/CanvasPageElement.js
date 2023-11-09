@@ -8,7 +8,7 @@ const PrototypeSideMenu = ({ handlePipelineInstanceSelection, sheetTitles, onShe
   // <DeploymentTable />
 
  return (
-   <div className='balance-sheet'>
+   <div className='balance-sheet2'>
     <div>Canvas</div>
      </div>
    );

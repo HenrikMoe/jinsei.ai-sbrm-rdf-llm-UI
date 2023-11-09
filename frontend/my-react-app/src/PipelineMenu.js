@@ -107,6 +107,8 @@ const PrototypeSideMenu = ({ handlePipelineInstanceSelection, sheetTitles, onShe
         ref={resizeRef} // Reference to the resize area
       >
       </div>
+      <div className='elementTitle6'>Pipeline Taxonomy</div>
+
        <ul>
        <div className='sidemenu-title'> </div>
         {dataStore.pipelineProcesses ? dataStore.pipelineProcesses.map((title, index) => (

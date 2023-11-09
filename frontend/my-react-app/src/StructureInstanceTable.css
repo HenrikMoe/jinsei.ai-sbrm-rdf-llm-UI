@@ -5,10 +5,27 @@
   padding: 20px;
   width: 100%;
   max-width: 800px;
-  margin-top: 50px;
+  max-height: 400px;
+  overflow: auto;
+  margin-top: 0px;
   margin-left: 250px;
   border-radius: 10px;
 }
+
+
+.balance-sheet2 {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 400px;
+  overflow: auto;
+  margin-top: 100px;
+  margin-left: 250px;
+  border-radius: 10px;
+}
+
 
 /* CSS for the element title */
 .element-title {
@@ -19,8 +36,16 @@
 
 .elementTitle5{
   font-size: 20px;
+  margin-top: -15px;
   margin-bottom: 10px;
-  margin-left: 200px;
+  margin-left: 100px;
+}
+
+.elementTitle9{
+  font-size: 20px;
+  margin-top: 65px;
+  margin-bottom: 10px;
+  margin-left: 100px;
 }
 
 .structureInstanceWrap2{
