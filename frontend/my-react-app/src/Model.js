@@ -64,24 +64,28 @@ const Model = ({ updateForm, dataStore }) => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('Accounting Equation (Platinum)')}>
-            Accounting Equation (Platinum)
+          <div className="dropdown-item" onClick={() => handleModelSelect('Accounting Equation')}>
+            Accounting Equation
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('SFAC 6 (Platinum)')}>
-            SFAC 6 (Platinum)
+          <div className="dropdown-item" onClick={() => handleModelSelect('SFAC 6')}>
+            SFAC 6
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('SFAC 8 (Platinum)')}>
-            SFAC 8 (Platinum)
+          <div className="dropdown-item" onClick={() => handleModelSelect('SFAC 8')}>
+            SFAC 8
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('Common (Platinum)')}>
-            Common (Platinum)
+          <div className="dropdown-item" onClick={() => handleModelSelect('Common')}>
+            Common
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('MINI (Platinum)')}>
-            MINI (Platinum)
+          <div className="dropdown-item" onClick={() => handleModelSelect('MINI')}>
+            MINI
           </div>
-          <div className="dropdown-item" onClick={() => handleModelSelect('PROOF (Platinum)')}>
-            PROOF (Platinum)
+          <div className="dropdown-item" onClick={() => handleModelSelect('PROOF')}>
+            PROOF
           </div>
+          <div className="dropdown-item" onClick={() => handleModelSelect('PROOF')}>
+            AASB 1060
+          </div>
+
 
           <div className="dropdown-item" onClick={() => handleModelSelect('Local Report Scheme')}>
             Local Report Scheme

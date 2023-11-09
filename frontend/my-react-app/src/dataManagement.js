@@ -208,9 +208,10 @@ const dataStore = {
     // Convert JSON to an array of arrays
     console.log(model)
     var uri;
-    if(model === 'PROOF (Platinum)'){uri='PLATINUM-PROOF-REF.xlsx'}else if(model === 'Accounting Equation (Platinum)'){uri='ae-PLATINUM-import.xlsx'}
-    else if(model === 'MINI (Platinum)'){uri='PLATINUM-MINI.xlsx'}else if(model === 'SFAC 6 (Platinum)'){uri='PLATINUM-SFAC6.xlsx'}
-    else if(model === 'SFAC 8 (Platinum)'){uri='PLATINUM-SFAC8.xlsx'}else if(model === 'Common (Platinum)'){uri='PLATINUM-COMMON-REF.xlsx'}
+    if(model === 'PROOF'){uri='PLATINUM-PROOF-REF.xlsx'}else if(model === 'Accounting Equation'){uri='ae-PLATINUM-import.xlsx'}
+    else if(model === 'MINI'){uri='PLATINUM-MINI.xlsx'}else if(model === 'SFAC 6'){uri='PLATINUM-SFAC6.xlsx'}
+    else if(model === 'SFAC 8'){uri='PLATINUM-SFAC8.xlsx'}else if(model === 'Common'){uri='PLATINUM-COMMON-REF.xlsx'}
+    else if(model === 'AASB 1060'){uri='AASB-1060.xlsx'}
     const xlsxFilePath = `${process.env.PUBLIC_URL}/${uri}`;
     fetch(xlsxFilePath)
     .then((response) => response.arrayBuffer())
