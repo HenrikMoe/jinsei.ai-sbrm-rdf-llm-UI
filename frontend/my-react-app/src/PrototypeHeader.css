@@ -29,13 +29,13 @@
   border-bottom: 2px solid black;
   padding: 10px;
   display: flex;
-  max-width: 1840px;
+  max-width: 2040px;
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  margin-top: 250px;
+  margin-top: 260px;
   margin-bottom: 15px;
-  margin-left:27px;
+  margin-left:0px;
   margin-right:5px;
   top: 0;
   left: 0;
@@ -85,6 +85,11 @@
   margin: 5px;
   margin-top: 20px !important;
   display: flex;
+}
+
+.title9{
+  margin-left: 200px;
+  margin-right: -750px;
 }
 
 .dropdown-button {

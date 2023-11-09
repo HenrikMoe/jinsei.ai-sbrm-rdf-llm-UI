@@ -118,6 +118,11 @@ function Homepage() {
                                   navigate('/propertiesxsd')
                                 }
 
+                                // <button className={`lang ${isDarkMode ? 'dark-mode-text' : ''}`} onClick={() => changeLanguage('en')}>EN</button>
+                                // <button className={`lang ${isDarkMode ? 'dark-mode-text' : ''}`} onClick={() => changeLanguage('ja')}>JP</button>
+                                // <button className={`lang ${isDarkMode ? 'dark-mode-text' : ''}`} onClick={() => changeLanguage('de')}>DE</button>
+                                // <button className={`lang ${isDarkMode ? 'dark-mode-text' : ''}`} onClick={() => changeLanguage('fr')}>FR</button>
+
   return (
     <div className={`homepage-container ${isDarkMode ? 'dark-mode1' : ''}`}>
       <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
@@ -127,10 +132,9 @@ function Homepage() {
          Luciano
       </button>
       <div className={`langWrap ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        <button className={`lang ${isDarkMode ? 'dark-mode-text' : ''}`} onClick={() => changeLanguage('en')}>EN</button>
-        <button className={`lang ${isDarkMode ? 'dark-mode-text' : ''}`} onClick={() => changeLanguage('ja')}>JP</button>
-        <button className={`lang ${isDarkMode ? 'dark-mode-text' : ''}`} onClick={() => changeLanguage('de')}>DE</button>
-        <button className={`lang ${isDarkMode ? 'dark-mode-text' : ''}`} onClick={() => changeLanguage('fr')}>FR</button>
+      <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
+        {t('Delivering superior business reporting and transaction service hosting management.')}
+      </div>
       </div>
       <button onClick={handleTimelineClick} className={`timeline-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
         Corp Timeline

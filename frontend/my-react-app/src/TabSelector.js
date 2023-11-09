@@ -58,14 +58,14 @@ const handleTabClick = (selection)=>{
   return (
 
     <div className={`prototype-header2 ${isDarkMode ? 'dark-mode' : ''}`}>
+    <div className='title9'>Report:</div>
 
       <div className='button-wrap3'>
-      <div className='dropdown-button2' onClick={() => handleTabClick('Schema')}>Report Schema Config</div>
-      <div className='dropdown-button2' onClick={() => handleTabClick('Structure')}>Report Structure Instances</div>
+      <div className='dropdown-button2' onClick={() => handleTabClick('Schema')}> Schema Config</div>
+      <div className='dropdown-button2' onClick={() => handleTabClick('Structure')}> Structure Instances</div>
       <div className='dropdown-button2' onClick={() => handleTabClick('Pipeline')}>Pipeline and Process Management</div>
       <div className='dropdown-button2' onClick={() => handleTabClick('Canvas')}>Canvas Map</div>
       <div className='dropdown-button2' onClick={() => handleTabClick('Canvas')}> AI Summary </div>
-
       </div>
 
 
@@ -73,7 +73,7 @@ const handleTabClick = (selection)=>{
 
 
 
-      <div className='titlez'>Workspace</div>
+      <div className='title8'>Workspace</div>
 
 
     </div>
