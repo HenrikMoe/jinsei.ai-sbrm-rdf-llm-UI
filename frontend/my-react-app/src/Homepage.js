@@ -125,21 +125,29 @@ function Homepage() {
 
   return (
     <div className={`homepage-container ${isDarkMode ? 'dark-mode1' : ''}`}>
+
       <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
         {t('Global standards based business reporting pipelines.')}
       </div>
       <button onClick={handlePrototypeClick} className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
          Luciano
       </button>
-      <div className={`langWrap ${isDarkMode ? 'dark-mode-text' : ''}`}>
-      <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Delivering superior business reporting and transaction service hosting management.')}
+
+      <div className={`arriving-text2 ${isDarkMode ? 'dark-mode-text' : ''}`}>
+        {t('Global standards based transaction service hosting.')}
       </div>
+
+
+      <button className={`timeline-button2 ${isDarkMode ? 'dark-mode-button' : ''}`}>
+        Meu
+      </button>
+
+      <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
+        {t('Supporting XBRL, ACTUS. Learn more.')}
       </div>
       <button onClick={handleTimelineClick} className={`timeline-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
         Corp Timeline
       </button>
-
       <div style={{ marginTop: '100px'}}>
       <button onClick={handleXML1Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
         Seattle Method Zip

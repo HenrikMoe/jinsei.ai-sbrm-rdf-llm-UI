@@ -18,9 +18,16 @@
     transform-origin: 0 0;
   }
 
+  .socials{
+    height: 25px;
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 25px;
+  }
+
 
   .homepage-header {
-    background-color: rgba(18, 18, 18, 0.01);
+    background-color: #F8FAFC;
     color: white;
     position: fixed;
     top: 0;
@@ -63,6 +70,11 @@
     color: black;
     display: flex;
   align-items: center;
+  }
+
+  .title h1{
+    font-size: 32px;
+    margin-left: -40px;
   }
 
   @media (max-width: 767px) {
@@ -165,13 +177,18 @@
 
 .title5{
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 20px;
   color: black;
 }
 @media (max-width: 767px) {
   .title5 {
     display: none;
   }
+}
+
+.title16{
+  margin-left: 40px;
+  color: black;
 }
 
 .cornerWrap{
