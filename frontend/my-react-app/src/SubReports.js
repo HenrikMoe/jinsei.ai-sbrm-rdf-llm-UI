@@ -107,7 +107,7 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
         ref={resizeRef} // Reference to the resize area
       >
       </div>
-      <div className='elementTitle6'>Report Schema Taxonomy</div>
+      <div className='elementTitle6'>Report Model</div>
 
        <ul>
        <div className='sidemenu-title'> {dataStore.workbookXLSX ? xlsxTitle : null} </div>

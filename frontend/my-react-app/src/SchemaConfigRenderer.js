@@ -28,14 +28,21 @@ const XLSXSheetRenderer = ({
   //thi is good j need the render logic rite
   console.log(selectedSheetData)
   useEffect(() => {
-    if(selectedSheetData){
-      console.log(selectedSheetData)
-       const initialData = selectedSheetData;
-       setHeader(initialData[0]);
-       setTableData(initialData.slice(1));
+    if (selectedSheetData) {
+      const initialData = selectedSheetData;
 
+      // Find the maximum row length in the data
+      const maxRowLength = Math.max(...initialData.map(row => row.length));
+
+      // Fill shorter rows with empty spaces
+      const paddedData = initialData.map(row => (
+        row.length < maxRowLength ? [...row, ...Array(maxRowLength - row.length).fill('[empty]')] : row
+      ));
+
+      setHeader(paddedData[0]);
+      setTableData(paddedData.slice(1));
     }
-   }, [selectedSheetData]);
+  }, [selectedSheetData]);
 
 
   console.log('running on datastore change');
@@ -279,8 +286,8 @@ const handleCellMouseLeave = (e) => {
                     cellMenuVisibility[rowIndex][cellIndex] ? 'unique-menu-show' : ''
                   }`}
                 >
-                  <div className="unique-menu-button" onClick={() => toggleCellMenu(rowIndex, cellIndex)}>
-                    :
+                  <div className="unique-menu-button" contentEditable={false} onClick={() => toggleCellMenu(rowIndex, cellIndex)}>
+                    <span contentEditable={false}>:</span>
                   </div>
                   <div className="unique-popup-menu">
                     {/* Menu content and buttons go here */}
@@ -377,8 +384,8 @@ const handleCellMouseLeave = (e) => {
                     cellMenuVisibility[rowIndex][cellIndex] ? 'unique-menu-show' : 'unique-menu-hide'
                   }`}
                 >
-                  <div className="unique-menu-button" onClick={() => toggleCellMenu(rowIndex, cellIndex)}>
-                    :
+                  <div className="unique-menu-button" contentEditable={false} onClick={() => toggleCellMenu(rowIndex, cellIndex)}>
+                  <span contentEditable={false}>:</span>
                   </div>
                   <div className="unique-popup-menu">
                     {/* Menu content and buttons go here */}
@@ -465,8 +472,8 @@ const handleCellMouseLeave = (e) => {
                       cellMenuVisibility[rowIndex][cellIndex] ? 'unique-menu-show' : 'unique-menu-hide'
                     }`}
                   >
-                    <div className="unique-menu-button" onClick={() => toggleCellMenu(rowIndex, cellIndex)} >
-                      :
+                    <div className="unique-menu-button" contentEditable={false} onClick={() => toggleCellMenu(rowIndex, cellIndex)} >
+                    <span contentEditable={false}>:</span>
                     </div>
                     <div className="unique-popup-menu">
                       {/* Menu content and buttons go here */}

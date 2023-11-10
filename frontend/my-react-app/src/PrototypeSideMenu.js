@@ -117,7 +117,7 @@ const PrototypeSideMenu = ({  handleSchemaConfigSelection, sheetTitles, onSheetS
         ref={resizeRef} // Reference to the resize area
       >
       </div>
-      <div className='elementTitle'>Report Schema Taxonomy</div>
+      <div className='elementTitle'>Report Model</div>
        <ul>
        <div className='sidemenu-title'> </div>
         {dataStore.lucaSideMenu ? dataStore.lucaSideMenu.map((title, index) => (
