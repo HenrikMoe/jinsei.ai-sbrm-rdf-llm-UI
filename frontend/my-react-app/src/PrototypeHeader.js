@@ -37,7 +37,6 @@ console.log(onFileUpload)
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
       <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
 
-
       <div className='button-wrap2'>
         <div className='container'>
          <Projects /></div>
@@ -52,8 +51,6 @@ console.log(onFileUpload)
         <Upload />
       </div>
 
-
-
       <div className='button-wrap'>
       <div className='popup-container'>
       <div className='dropdown-button'>Share</div></div>
@@ -61,13 +58,7 @@ console.log(onFileUpload)
       <div className='dropdown-button'>New</div></div>
       </div>
 
-
-
-
-
-
       <div className='titlez'>Luciano - git:main | version 0.191</div>
-
 
     </div>
   );

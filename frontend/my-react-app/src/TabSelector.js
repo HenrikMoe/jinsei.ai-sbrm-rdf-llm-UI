@@ -65,7 +65,7 @@ const handleTabClick = (selection)=>{
       <div className='dropdown-button2' onClick={() => handleTabClick('Structure')}> Structures</div>
       <div className='dropdown-button2' onClick={() => handleTabClick('Pipeline')}>Pipeline and Process Management</div>
       <div className='dropdown-button2' onClick={() => handleTabClick('Canvas')}>Canvas Map</div>
-      <div className='dropdown-button2' onClick={() => handleTabClick('Canvas')}> AI Summary </div>
+      <div className='dropdown-button2' onClick={() => handleTabClick('AI')}> AI Summary </div>
       </div>
 
 

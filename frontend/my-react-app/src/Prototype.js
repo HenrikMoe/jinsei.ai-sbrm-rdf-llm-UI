@@ -19,6 +19,8 @@ import PipelineProcessPageElement from './PipelineProcessPageElement'
 import CanvasSideMenu from './CanvasSideMenu'
 import CanvasPageElement from './CanvasPageElement'
 import TabSelector from './TabSelector'
+import AISummary from './AISummary'
+import AISummarySideMenu from './AISummarySideMenu'
 
 function Prototype({listLoginInfo}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -230,6 +232,17 @@ function Prototype({listLoginInfo}) {
 
   }
 
+  const [aiSummarySheetSelected, setAiSummarySheetSelected] = useState(null)
+
+
+  const handleAISummarySheetSelection = (pipelineTitle) => {
+  //  setStructureInstanceSelected(true)
+    setAiSummarySheetSelected(true)
+    console.log(pipelineTitle)
+  //  setSchemaConfigSelected(false)
+
+  }
+
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -246,27 +259,36 @@ function Prototype({listLoginInfo}) {
       setCanvasSheetSelected(false)
       setPipelineSheetSelected(false)
       setSchemaConfigSelected(false)
+      setAiSummarySheetSelected(false)
     }
     else if(selection === 'Canvas'){
       setCanvasSheetSelected(true)
       setPipelineSheetSelected(false)
       setSchemaConfigSelected(false)
       setStructureInstanceSelected(false)
+      setAiSummarySheetSelected(false)
     }
     else if(selection === 'Schema'){
       setSchemaConfigSelected(true)
       setCanvasSheetSelected(false)
       setPipelineSheetSelected(false)
       setStructureInstanceSelected(false)
+      setAiSummarySheetSelected(false)
     }
     else if(selection === 'Pipeline'){
       setPipelineSheetSelected(true)
       setCanvasSheetSelected(false)
       setSchemaConfigSelected(false)
       setStructureInstanceSelected(false)
+      setAiSummarySheetSelected(false)
     }
-
-
+    else if(selection === 'AI'){
+      setPipelineSheetSelected(false)
+      setCanvasSheetSelected(false)
+      setSchemaConfigSelected(false)
+      setStructureInstanceSelected(false)
+      setAiSummarySheetSelected(true)
+    }
   }
 
   //<XLSXSheetRenderer  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
@@ -289,6 +311,8 @@ function Prototype({listLoginInfo}) {
           {pipelineSheetSelected ? <PipelineProcessPageElement /> : <div className='fillerClass'>f</div>}
           {canvasSheetSelected ? <CanvasSideMenu handleCanvasSheetSelection={handleCanvasSheetSelection} dataStore={dataStore}/>: <div className='fillerClass'>f</div>}
           {canvasSheetSelected ? <CanvasPageElement />: <div className='fillerClass'>f</div>}
+          {aiSummarySheetSelected ? <AISummarySideMenu handleAISummarySheetSelection={handleAISummarySheetSelection} dataStore={dataStore}/>: <div className='fillerClass'>f</div>}
+          {aiSummarySheetSelected ? <AISummary />: <div className='fillerClass'>f</div>}
         </div>
         </DataStoreProvider>
       ) : (
