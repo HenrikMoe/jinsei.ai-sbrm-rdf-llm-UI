@@ -39,9 +39,9 @@ const XLSXSheetRenderer = ({
 
       console.log(initialData)
 
-
-
-      const modifiedData = initialData.slice(1).map((row) => {
+      var modifiedData = null;
+      if(initialData.length !== 1000){
+        modifiedData = initialData.slice(1).map((row) => {
       //    // Ensure the row has the correct length
           const filledRow = new Array(maxRowLength).fill('[empty]');
       //
@@ -53,9 +53,14 @@ const XLSXSheetRenderer = ({
           return filledRow;
         });
 
-        setHeader(initialData[0]);
-        setTableData(modifiedData);
+      }
 
+        setHeader(initialData[0]);
+        if(modifiedData){
+          setTableData(modifiedData)
+        }else{
+          setTableData(initialData.slice(1))
+        }
     }
   }, [selectedSheetData]);
 
