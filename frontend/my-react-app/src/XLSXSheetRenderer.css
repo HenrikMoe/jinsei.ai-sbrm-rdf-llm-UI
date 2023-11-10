@@ -6,7 +6,8 @@
   display: inline-block;
   margin-left: 0px;
   max-width: 1500px;
-  max-height: 300px;
+  max-height: 460px;
+  margin-bottom: -100px;
   border-radius: 10px !important;
   overflow-x: auto;
   background-color: #F8FAFC;
@@ -14,6 +15,12 @@
   border-radius: 10px !important;
 }
 
+
+.addrowbutton{
+  background-color: lightslategrey;
+  color: black;
+  margin-top: 100px;
+}
 .elementTitle{
   margin-top: 100px;
   margin-bottom: -80px

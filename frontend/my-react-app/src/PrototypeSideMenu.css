@@ -3,7 +3,8 @@
   background-color: white;
   color: black;
   /* border: 2px solid black; /* Set border style */
-  height: 130%;
+  height: 630px;
+  margin-bottom: -200px;
   top: 0;
   left: 0;
   margin-left: -40px;
@@ -11,7 +12,7 @@
   bottom: 0;
   background-color: #F8FAFC;
   border-right: 2px solid lightslategrey;
-  z-index: 500;
+  z-index: -500;
   margin-top: 80px;
   width: 250px;
   padding: 20px;

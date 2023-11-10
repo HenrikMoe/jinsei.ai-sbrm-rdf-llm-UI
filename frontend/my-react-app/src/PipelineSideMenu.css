@@ -4,7 +4,8 @@
   background-color: white;
   color: black;
   /* border: 2px solid black; /* Set border style */
-  height: 130%;
+  height: 630px;
+  margin-bottom: -200px;
   top: 0;
   left: 0;
   margin-left: -40px;
@@ -22,11 +23,14 @@
   display: inline-block; /* Prevent vertical expansion */
 }
 
+
+
 .pipeline-side-menu2 {
   background-color: white;
   color: black;
   /* border: 2px solid black; /* Set border style */
-  height: 130%;
+  height: 630px;
+  margin-bottom: -200px;
   top: 0;
   left: 0;
   margin-left: -40px;
@@ -51,6 +55,11 @@
 }
 
 .pipeline-side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pipeline-side-menu2 ul {
   list-style: none;
   padding: 0;
 }

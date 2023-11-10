@@ -97,7 +97,7 @@ const PrototypeSideMenu = ({ handleCanvasSheetSelection, sheetTitles, onSheetSel
  return (
    <div className='pipelineInstance'>
      <div
-       className={`pipeline-side-menu ${isResizing ? 'resizing' : ''} ${
+       className={`pipeline-side-menu2 ${isResizing ? 'resizing' : ''} ${
          isDarkMode ? 'dark-mode' : ''
        }`}
      >
@@ -106,7 +106,7 @@ const PrototypeSideMenu = ({ handleCanvasSheetSelection, sheetTitles, onSheetSel
         ref={resizeRef} // Reference to the resize area
       >
       </div>
-      <div className='elementTitle8'>Map - Reports and Processes</div>
+      <div className='elementTitle6'>Operations Map</div>
 
        <ul>
        <div className='sidemenu-title'> </div>

@@ -7,6 +7,7 @@
   font-size: 16px; /* Adjust the font size as needed */
   margin-top: 00px;
   bottom: 0;
+  z-index: 999;
 }
 
 
@@ -14,5 +15,6 @@
   /* Your CSS styles for the element with id="root" go here */
   background-color: #F8FAFC;
   height: 100%;
+  margin-top: 00px;
   /* Add more styles as needed */
 }
