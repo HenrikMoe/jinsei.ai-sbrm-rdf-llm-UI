@@ -119,6 +119,7 @@ function Prototype({listLoginInfo}) {
     //   dataStore.overLaidModelWorkbook.Sheets[sheetTitle[0]],
     //   { header: 1 }
     // );, to setSelectedSheetData
+    console.log(dataStore.semanticWorkbookSheet)
     if (dataStore.semanticWorkbookSheet) {
       if (
         dataStore.semanticWorkbook &&
@@ -168,6 +169,7 @@ function Prototype({listLoginInfo}) {
         console.log(dataStore.semanticWorkbook.Sheets[sheetTitle[0]])
       }
     }
+    else{console.log('basdbasdf')}
   }
 
   const [selectedSubSheet, setSelectedSubSheet]= useState([])

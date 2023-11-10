@@ -25,8 +25,8 @@ const closeDropdown = () => {
 };
 
 const deleteFile = () =>{
-  dataStore.clearSemantic()
-  dataStore.clearStructure()
+  // dataStore.clearSemantic()
+  // dataStore.clearStructure()
 }
 
     useEffect(() => {

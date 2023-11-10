@@ -37,9 +37,25 @@ const XLSXSheetRenderer = ({
       console.log(maxRowLength);
 
 
+      console.log(initialData)
 
-      setHeader(initialData[0]);
-      setTableData(initialData.slice(1));
+
+
+      const modifiedData = initialData.slice(1).map((row) => {
+      //    // Ensure the row has the correct length
+          const filledRow = new Array(maxRowLength).fill('[empty]');
+      //
+      //    // Fill in the values from the original row
+          row.forEach((value, columnIndex) => {
+            filledRow[columnIndex] = value !== undefined ? value : '[empty]';
+          });
+      //
+          return filledRow;
+        });
+
+        setHeader(initialData[0]);
+        setTableData(modifiedData);
+
     }
   }, [selectedSheetData]);
 
