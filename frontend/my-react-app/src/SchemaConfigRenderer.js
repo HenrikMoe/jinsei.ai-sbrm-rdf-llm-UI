@@ -33,16 +33,17 @@ const XLSXSheetRenderer = ({
 
       // Find the maximum row length in the data
       const maxRowLength = Math.max(...initialData.map(row => row.length));
+      console.log('maxrowlength');
+      console.log(maxRowLength);
 
-      // Fill shorter rows with empty spaces
-      const paddedData = initialData.map(row => (
-        row.length < maxRowLength ? [...row, ...Array(maxRowLength - row.length).fill('[empty]')] : row
-      ));
 
-      setHeader(paddedData[0]);
-      setTableData(paddedData.slice(1));
+
+      setHeader(initialData[0]);
+      setTableData(initialData.slice(1));
     }
   }, [selectedSheetData]);
+
+
 
 
   console.log('running on datastore change');
@@ -272,14 +273,12 @@ const handleCellMouseLeave = (e) => {
               {row.map((cell, cellIndex) => (
                 <td
                   key={cellIndex}
-                  contentEditable
+
                   onMouseEnter={handleCellMouseEnter}
                   onMouseLeave={handleCellMouseLeave}
-                  onBlur={(e) => {
-                    handleCellChange(rowIndex, cellIndex, e.target.textContent);
-                  }}
+
                 >
-                <div className='cellWrapper'>
+                <div className='cellWrapper' contentEditable>
                 <div
                   className={`unique-menu-container ${
                     cellMenuVisibility[rowIndex] &&
@@ -370,12 +369,9 @@ const handleCellMouseLeave = (e) => {
               {row.map((cell, cellIndex) => (
                 <td
                   key={cellIndex}
-                  contentEditable
                   onMouseEnter={handleCellMouseEnter}
                   onMouseLeave={handleCellMouseLeave}
-                  onBlur={(e) => {
-                    handleCellChange(rowIndex, cellIndex, e.target.textContent);
-                  }}
+
                 >
                 <div className='cellWrapper'>
                 <div
@@ -458,12 +454,9 @@ const handleCellMouseLeave = (e) => {
                 {row.map((cell, cellIndex) => (
                   <td
                     key={cellIndex}
-                    contentEditable
                     onMouseEnter={handleCellMouseEnter}
                     onMouseLeave={handleCellMouseLeave}
-                    onBlur={(e) => {
-                      handleCellChange(rowIndex, cellIndex, e.target.textContent);
-                    }}
+
                   >
                   <div className='cellWrapper'>
                   <div
