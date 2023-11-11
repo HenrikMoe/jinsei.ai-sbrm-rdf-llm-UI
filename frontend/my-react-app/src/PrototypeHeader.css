@@ -74,6 +74,13 @@
   height: 80px;
 }
 
+.header-image:hover{
+  width: 80px;
+  opacity: .5;
+  height: 80px;
+}
+
+
 .button-wrap{
   display: flex;
   margin-left: -100px;
@@ -111,6 +118,18 @@
   padding: 10px !important;
   cursor: pointer;
   background-color: powderblue;
+  padding: 10px;
+  border-radius: 2px;
+  margin-left: 10px;
+  color: black;
+  display: flex;
+}
+
+.dropdown-button2:hover {
+  border: none;
+  padding: 10px !important;
+  cursor: pointer;
+  background-color: skyblue;
   padding: 10px;
   border-radius: 2px;
   margin-left: 10px;

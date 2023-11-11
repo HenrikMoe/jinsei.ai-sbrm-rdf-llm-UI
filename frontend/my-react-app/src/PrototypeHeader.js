@@ -35,7 +35,7 @@ console.log(onFileUpload)
   return (
 
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
-      <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
+      <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} to="/" src={image} alt="My Image" />
 
       <div className='button-wrap2'>
         <div className='container'>

@@ -112,12 +112,33 @@
   border-radius: 3px;
 }
 
+
+.pipeline-side-menu li:hover {
+  margin-bottom: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: floralwhite;
+  /* border: .5px solid black; /* Set border style */
+  border-radius: 3px;
+}
+
 .pipeline-side-menu3 li {
   margin-bottom: 10px;
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
   background-color: navajowhite;
+  /* border: .5px solid black; /* Set border style */
+  border-radius: 3px;
+}
+
+.pipeline-side-menu3 li:hover {
+  margin-bottom: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: floralwhite;
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }

@@ -46,6 +46,16 @@
   border-radius: 3px;
 }
 
+.prototype-side-menu li:hover {
+  margin-bottom: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: floralwhite;
+  /* border: .5px solid black; /* Set border style */
+  border-radius: 3px;
+}
+
 .sidemenu-title {
   margin-top: -15px;
   margin-bottom: 5px;
