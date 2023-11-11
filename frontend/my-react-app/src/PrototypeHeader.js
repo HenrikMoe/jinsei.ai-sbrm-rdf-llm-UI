@@ -58,7 +58,7 @@ console.log(onFileUpload)
       <div className='dropdown-button'>New</div></div>
       </div>
 
-      <div className='titlez'>Luciano - git:main | version 0.191</div>
+      <div className='titlez'>Luciano - git:main | version 0.194</div>
 
     </div>
   );
