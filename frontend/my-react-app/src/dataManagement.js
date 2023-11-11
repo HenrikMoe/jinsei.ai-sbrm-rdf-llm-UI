@@ -270,6 +270,9 @@ const dataStore = {
   //canvases
   canvases: ['Complete Canvas', 'Instances', 'Schemes + Instances', 'Pipelines + Schemes + Instances'],
 
+
+  ai: ['Q & A', 'Summary'], 
+
   //deprecttaed?
   deployedRenderings: null,
   changeDeployedRenderings: ()=>{},

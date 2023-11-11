@@ -9,7 +9,7 @@ const PrototypeSideMenu = ({ handlePipelineInstanceSelection, sheetTitles, onShe
 
  return (
 
-     <div className="elementTitle9">Report Schemas, Instances, Processes Map
+     <div className="elementTitle10">Maps
 
      <div className='balance-sheet2'>
 

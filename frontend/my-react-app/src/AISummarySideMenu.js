@@ -110,7 +110,7 @@ const PrototypeSideMenu = ({ handleAISummarySheetSelection, sheetTitles, onSheet
 
        <ul>
        <div className='sidemenu-title'> </div>
-        {dataStore.canvases ? dataStore.canvases.map((title, index) => (
+        {dataStore.ai ? dataStore.ai.map((title, index) => (
           <li
              key={title}
              contentEditable

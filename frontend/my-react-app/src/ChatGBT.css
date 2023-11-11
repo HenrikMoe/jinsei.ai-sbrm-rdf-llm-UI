@@ -4,7 +4,7 @@
 /* Container styles */
 .chat-container {
   max-width: 400px;
-  margin: 100px auto; /* For top and bottom margin and centering on desktop */
+  margin: 50px auto; /* For top and bottom margin and centering on desktop */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -24,6 +24,7 @@
 .chat-form {
   display: flex;
   flex-direction: column;
+  margin-right: 15px;
 }
 
 .chat-form label {
