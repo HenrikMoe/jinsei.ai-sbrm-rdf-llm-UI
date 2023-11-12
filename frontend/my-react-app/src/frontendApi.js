@@ -22,3 +22,44 @@ export const sendChatRequest = async (input) => {
     return 'An error occurred while processing your request.';
   }
 };
+
+
+export const gpt35turbo = async () => {
+  try {
+    console.log()
+    const result = await axios.post(
+      `${API_BASE_URL}/api/gpt35turbo`,
+      {
+        headers: {
+          'Content-Type': 'application/json', // Set the Content-Type header
+        },
+      }
+    );
+    console.log(result)
+    return result.data.text;
+  } catch (error) {
+    console.error(error);
+    return 'An error occurred while processing your request.';
+  }
+};
+
+
+
+export const gpt35turboTest2d = async () => {
+  try {
+    console.log()
+    const result = await axios.post(
+      `${API_BASE_URL}/api/gpt35turboTest2d`,
+      {
+        headers: {
+          'Content-Type': 'application/json', // Set the Content-Type header
+        },
+      }
+    );
+    console.log(result)
+    return result.data.text;
+  } catch (error) {
+    console.error(error);
+    return 'An error occurred while processing your request.';
+  }
+};
