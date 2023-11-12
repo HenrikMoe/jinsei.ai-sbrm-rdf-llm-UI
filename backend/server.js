@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors'); // Import the 'cors' middleware
 const app = express();
 const port = process.env.PORT || 3000; // You can change the port as needed
-const openai = require('openai');
+const OpenAI =require("openai");
 const axios = require('axios');
 
 
@@ -11,6 +11,8 @@ app.use(cors());
 const dotenv = require('dotenv');
 dotenv.config();
 app.use(express.json());
+
+
 
 // Define a route that doesn't require authentication
 app.get('/api/some-route', (req, res) => {
@@ -87,6 +89,207 @@ async function run() {
   }
 }
 run().catch(console.dir);
+
+
+
+const openai = new OpenAI();
+
+async function gpt35turboTest1() {
+  var string = 'what do i use this for?'
+  const completion = await openai.chat.completions.create({
+  messages: [{"role": "system", "content": "You are a helpful assistant to output JSON."},
+      {"role": "user", "content": "what do i use this for?"},
+      {"role": "assistant", "content": "Jinsei Luciano is for creating, using, and mangaging financial disclosure reports and report processes."},
+
+
+
+
+
+//fuck ton of model questions
+
+
+
+
+
+      {"role": "user", "content": string},
+      ],
+      model: "gpt-3.5-turbo-1106",
+       response_format: { type: "json_object" },
+});
+
+console.log(completion.choices[0]);
+  console.log(completion.choices[0].message.content);
+
+}
+
+var assistant;
+var thread;
+var run;
+var message;
+
+async function gpt35turboTest2a() {
+
+   assistant = await openai.beta.assistants.create({
+    name: "Jinsei Chat",
+    instructions: "You are an assistant in Jinsei Corp's products.",
+    tools: [{ type: "code_interpreter" }],
+    model: "gpt-4-1106-preview"
+  });
+
+}
+
+
+async function gpt35turboTest2b() {
+   thread = await openai.beta.threads.create();
+}
+
+
+async function gpt35turboTest2c() {
+   message = await openai.beta.threads.messages.create(
+    thread.id,
+    {
+      role: "user",
+      content: "What is Jinsei Luciano?"
+    }
+  );
+  console.log(message.data);
+
+}
+
+async function gpt35turboTest2d() {
+   run = await openai.beta.threads.runs.create(
+    thread.id,
+    {
+      assistant_id: assistant.id,
+      instructions: "Understand that Jinsei Luciano is a tool for creating, using, and mangaging financial disclosure reports and report processes. "
+    }
+  );
+}
+
+async function gpt35turboTest2e() {
+   run = await openai.beta.threads.runs.retrieve(
+    thread.id,
+    run.id
+  );
+  messages = await openai.beta.threads.messages.list(
+  thread.id
+);
+console.log(thread)
+try{
+  console.log(messages.data[0].content)
+  console.log(messages.data[1].content)
+}catch(e){console.log(e)}
+
+
+console.log(run)
+}
+
+
+
+app.post('/api/gpt35turbo', async (req, res) => {
+    console.log('ready for training')
+    gpt35turboTest1()
+    // await gpt35turboTest2a()
+    // await gpt35turboTest2b()
+    // await gpt35turboTest2c()
+    // await gpt35turboTest2d()
+  //  runConversation().then(console.log).catch(console.error);
+
+
+    res.json({ message: 'trainign time.' });
+});
+
+app.post('/api/gpt35turboTest2d', async (req, res) => {
+    console.log('ready for training')
+    //gpt35turboTest1()
+    gpt35turboTest2e()
+  //  runConversation().then(console.log).catch(console.error);
+
+
+    res.json({ message: 'trainign time.' });
+});
+
+
+
+// In production, this could be your backend API or an external API
+function getCurrentWeather(location, unit = "fahrenheit") {
+  if (location.toLowerCase().includes("tokyo")) {
+    return JSON.stringify({ location: "Tokyo", temperature: "10", unit: "celsius" });
+  } else if (location.toLowerCase().includes("san francisco")) {
+    return JSON.stringify({ location: "San Francisco", temperature: "72", unit: "fahrenheit" });
+  } else if (location.toLowerCase().includes("paris")) {
+    return JSON.stringify({ location: "Paris", temperature: "22", unit: "fahrenheit" });
+  } else {
+    return JSON.stringify({ location, temperature: "unknown" });
+  }
+}
+
+async function runConversation() {
+  // Step 1: send the conversation and available functions to the model
+  const messages = [
+    { role: "user", content: "What's the weather like in San Francisco, Tokyo, and Paris?" },
+  ];
+  const tools = [
+    {
+      type: "function",
+      function: {
+        name: "get_current_weather",
+        description: "Get the current weather in a given location",
+        parameters: {
+          type: "object",
+          properties: {
+            location: {
+              type: "string",
+              description: "The city and state, e.g. San Francisco, CA",
+            },
+            unit: { type: "string", enum: ["celsius", "fahrenheit"] },
+          },
+          required: ["location"],
+        },
+      },
+    },
+  ];
+
+
+  const response = await openai.chat.completions.create({
+    model: "gpt-3.5-turbo-1106",
+    messages: messages,
+    tools: tools,
+    tool_choice: "auto", // auto is default, but we'll be explicit
+  });
+  const responseMessage = response.choices[0].message;
+
+  // Step 2: check if the model wanted to call a function
+  const toolCalls = responseMessage.tool_calls;
+  if (responseMessage.tool_calls) {
+    // Step 3: call the function
+    // Note: the JSON response may not always be valid; be sure to handle errors
+    const availableFunctions = {
+      get_current_weather: getCurrentWeather,
+    }; // only one function in this example, but you can have multiple
+    messages.push(responseMessage); // extend conversation with assistant's reply
+    for (const toolCall of toolCalls) {
+      const functionName = toolCall.function.name;
+      const functionToCall = availableFunctions[functionName];
+      const functionArgs = JSON.parse(toolCall.function.arguments);
+      const functionResponse = functionToCall(
+        functionArgs.location,
+        functionArgs.unit
+      );
+      messages.push({
+        tool_call_id: toolCall.id,
+        role: "tool",
+        name: functionName,
+        content: functionResponse,
+      }); // extend conversation with function response
+    }
+    const secondResponse = await openai.chat.completions.create({
+      model: "gpt-3.5-turbo-1106",
+      messages: messages,
+    }); // get a new response from the model where it can see the function response
+    return secondResponse.choices;
+  }
+}
 
 app.post('/api/user-info', async (req, res) => {
   try {
