@@ -28,41 +28,46 @@ const XLSXSheetRenderer = ({
   //thi is good j need the render logic rite
   console.log(selectedSheetData)
   useEffect(() => {
+    console.log(selectedSheetData)
     if (selectedSheetData) {
-      const initialData = selectedSheetData;
-
-      // Find the maximum row length in the data
-      const maxRowLength = Math.max(...initialData.map(row => row.length));
-      console.log('maxrowlength');
-      console.log(maxRowLength);
+      if (selectedSheetData.length > 0){
 
 
-      console.log(initialData)
+          const initialData = selectedSheetData;
 
-      var modifiedData = null;
-      if(initialData.length !== 1000){
-        modifiedData = initialData.slice(1).map((row) => {
-      //    // Ensure the row has the correct length
-          const filledRow = new Array(maxRowLength).fill('[empty]');
-      //
-      //    // Fill in the values from the original row
-          row.forEach((value, columnIndex) => {
-            filledRow[columnIndex] = value !== undefined ? value : '[empty]';
-          });
-      //
-          return filledRow;
-        });
+          // Find the maximum row length in the data
+          const maxRowLength = Math.max(...initialData.map(row => row.length));
+          console.log('maxrowlength');
+          console.log(maxRowLength);
 
-      }
 
-        setHeader(initialData[0]);
-        if(modifiedData){
-          setTableData(modifiedData)
-        }else{
-          setTableData(initialData.slice(1))
-        }
-    }
-  }, [selectedSheetData]);
+          console.log(initialData)
+
+          var modifiedData = null;
+          if(initialData.length !== 1000){
+            modifiedData = initialData.slice(1).map((row) => {
+          //    // Ensure the row has the correct length
+              const filledRow = new Array(maxRowLength).fill('[empty]');
+          //
+          //    // Fill in the values from the original row
+              row.forEach((value, columnIndex) => {
+                filledRow[columnIndex] = value !== undefined ? value : '[empty]';
+              });
+          //
+              return filledRow;
+            });
+
+          }
+
+            setHeader(initialData[0]);
+            if(modifiedData){
+              setTableData(modifiedData)
+            }else{
+              setTableData(initialData.slice(1))
+            }
+          }
+    }else{console.log('intheelse')}
+  }, [selectedSheetData, sheetTitle]);
 
 
 
