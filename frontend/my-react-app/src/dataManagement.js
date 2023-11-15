@@ -21,13 +21,13 @@ const dataStore = {
   //facts and rules are first one
   defaultHeaders: {
     "Base Information": ['ReportElementName', 'ReferenceRole', 'Publisher', 'Name', 'ReportElementName', 'ReferenceRole', 'Publisher', 'Name'],
-    "Terms": ['Header1', 'Header2', 'Header3'],
-    "Labels": ['ReportElementName', 'ReferenceRole', 'Publisher', 'Name', 'ReportElementName', 'ReferenceRole', 'Publisher', 'Name'],
-    "References": ['Header1', 'Header2', 'Header3'],
-    "Structures": ['ReportElementName', 'ReferenceRole', 'Publisher', 'Name', 'ReportElementName', 'ReferenceRole', 'Publisher', 'Name'],
-    "Associations": ['Header1', 'Header2', 'Header3'],
-    "Rules": ['ReportElementName', 'ReferenceRole', 'Publisher', 'Name', 'ReportElementName', 'ReferenceRole', 'Publisher', 'Name'],
-    "Facts": ['Header1', 'Header2', 'Header3'],
+    "Terms": ['Prefix', 'ReportElementCategory', 'StandardLabel', 'ReportElementName', 'Datatype', 'CalendarPeriodType', 'BalanceType'],
+    "Labels": ['ReportElementName', 'Language', 'LabelRole', 'Label'],
+    "References": ['ReportElementName', 'ReferenceRole', 'Publisher', 'Name', 'Number', 'Paragraph', 'URI', 'URIDate', 'Sequence'],
+    "Structures": ['StructureIdentifier', 'StructureTitle', 'Sequence'],
+    "Associations": ['StructureType', 'StructureIdentifier', 'AssociationFromName', 'AssociationRole', 'AssociationRole', 'CalculationPolarity', 'PreferredLabelRole', 'Sequence'],
+    "Rules": ['RuleType', 'RuleCode', 'Rule', 'StructureIdentifier', 'ConceptAspect', 'Sequence', 'Commentary'],
+    "Facts": ['ReportingEntityAspect', 'CalendarPeriodAspect', 'ConceptAspect', 'FactValue', 'Units', 'Rounding', 'FactID', 'Sequence'],
   },
 
 
@@ -271,7 +271,7 @@ const dataStore = {
   canvases: ['Complete Canvas', 'Instances', 'Schemes + Instances', 'Pipelines + Schemes + Instances'],
 
 
-  ai: ['Q & A', 'Summary'], 
+  ai: ['Q & A', 'Summary'],
 
   //deprecttaed?
   deployedRenderings: null,
