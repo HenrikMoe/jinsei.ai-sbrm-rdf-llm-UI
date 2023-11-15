@@ -65,6 +65,10 @@ const XLSXSheetRenderer = ({
             }else{
               setTableData(initialData.slice(1))
             }
+          }else{
+            console.log('intheelse')
+            setHeader(dataStore.defaultHeaders[sheetTitle])
+            setTableData([['empty', 'emptt', "empty"]])
           }
     }else{console.log('intheelse')}
   }, [selectedSheetData, sheetTitle]);
