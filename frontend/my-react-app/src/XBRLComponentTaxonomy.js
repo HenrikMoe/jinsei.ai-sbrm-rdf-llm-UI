@@ -96,9 +96,9 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
 
  return (
    <div className='structureInstance'>
-    <div className='elementTitle'>Structure Instance</div>
+    <div className='elementTitle'>Structures</div>
      <div
-       className={`prototype-side-menu ${isResizing ? 'resizing' : ''} ${
+       className={`prototype-side-menu5 ${isResizing ? 'resizing' : ''} ${
          isDarkMode ? 'dark-mode' : ''
        }`}
      >
@@ -107,18 +107,18 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
         ref={resizeRef} // Reference to the resize area
       >
       </div>
-      <div className='elementTitle6'>Report Taxonomy</div>
+      <div className='elementTitle6'>Elements</div>
 
        <ul>
        <div className='sidemenu-title'> {dataStore.workbookXLSX ? xlsxTitle : null} </div>
-        {dataStore.semanticStrucutreInstanceTaxonomy ? dataStore.semanticStrucutreInstanceTaxonomy.map((title, index) => (
+        {dataStore.structureInstanceComponentExample ? dataStore.structureInstanceComponentExample.map((title, index) => (
           <li
              key={title}
              contentEditable
              className={`${isDarkMode ? 'dark-mode' : ''} ${title === selectedSheet && !schemaConfigSelected ? 'selected' : ''} ${
                index === 0 && isFirstSheetSelected ? 'selected' : '' // Highlight the first title
              }`}
-             onClick={() => handleStructureInstanceSelect(index, title)}
+            //onClick={() => handleStructureInstanceSelect(index, title)}
            >
              {title}
            </li>

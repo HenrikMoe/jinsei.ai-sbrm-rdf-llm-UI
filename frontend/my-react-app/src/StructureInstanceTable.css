@@ -4,11 +4,12 @@
   border: 1px solid #ccc;
   padding: 20px;
   width: 100%;
-  max-width: 800px;
-  max-height: 400px;
+  max-width: 1500px;
+  max-height: 800px;
   overflow: auto;
+  display: flex;
   margin-top: 40px;
-  margin-left: 250px;
+  margin-left: 50px;
   border-radius: 10px;
 }
 

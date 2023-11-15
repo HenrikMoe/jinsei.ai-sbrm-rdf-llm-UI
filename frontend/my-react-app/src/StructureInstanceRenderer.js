@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './StructureInstanceTable.css'; // Import your CSS file
 import Footer from './Footer';
+import XBRLComponentTaxonomy from './XBRLComponentTaxonomy'
 
 const XLSXSheetRenderer = ({
   increment,
@@ -116,7 +117,9 @@ return (
     <div className='structureInstanceWrap2'>
   <div className="elementTitle5">Report Instances </div>
   <div className='balance-sheet'>
-
+  <div>
+      <XBRLComponentTaxonomy dataStore={dataStore}/>
+      </div>
       <table className='balance-sheet-table'>
       <thead>
         {dataStore.semanticStrucutreInstanceTaxonomy ? (

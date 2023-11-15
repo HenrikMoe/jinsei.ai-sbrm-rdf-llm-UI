@@ -246,9 +246,11 @@ const dataStore = {
     dataStore.overLaidModelWorkbook = null
   },
 
+  structureInstanceComponentExample: ['100010 - Statement - INCOME STATEMENTS', '100020 - Statement - COMPREHENSIVE INCOME STATEMENTS', '100030 - COMPREHENSIVE INCOME STATEMENTS (Parenthetical)', '100040 - Statement - BALANCE SHEETS', '100050 - Statement - BALANCE SHEETS (Parenthetical)', '100060 - Statement - CASH FLOWS STATEMENTS', '100070 - Statement - STOCKHOLDERS EQUITY STATEMENTS' ],
+
   semanticStrucutreInstanceTaxonomy: null,
   initDefaultSemanticStrucutreInstanceTaxonomy: ()=>{
-    dataStore.semanticStrucutreInstanceTaxonomy = ['Balance Sheet', 'NetAssets', 'Income Statement']
+    dataStore.semanticStrucutreInstanceTaxonomy = ['Cover or Document', 'Statements', 'Notes Level 1', 'Policies', 'Notes Level 2', 'Notes Level 3 Tables', 'Notes Level 4 Detail', 'All Components', 'Flagged Components']
   },
 
   semanticStrucutreInstance: [['Assets Rolled Up', '$50,000', 'blah']],
