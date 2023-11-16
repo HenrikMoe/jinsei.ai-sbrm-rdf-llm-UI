@@ -5,7 +5,7 @@ import XLSXFileHandler from './XLSXFileHandler';
 import CSVFileHandler from './CSVFileHandler';
 import JSONfileHandler from './JSONfileHandler';
 
-const Model = ({ handleClearFalse, clear, sheetTitle, handleOverlaidSelection, updateForm, dataStore }) => {
+const Model = ({ handleOverlayChange, handleClearFalse, clear, sheetTitle, handleOverlaidSelection, updateForm, dataStore }) => {
   const { isDarkMode } = useDarkMode();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -39,7 +39,7 @@ const Model = ({ handleClearFalse, clear, sheetTitle, handleOverlaidSelection, u
     console.log('hooasdfads')
     console.log(dataStore.overlaidModelName)
     console.log(sheetTitle)
-
+    handleOverlayChange(model)
     if(dataStore.semanticWorkbookSheet){
       dataStore.updateSemanticWorkbookSheet(sheetTitle)
     }

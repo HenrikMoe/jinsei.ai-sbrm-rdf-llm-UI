@@ -156,7 +156,7 @@ function Prototype({listLoginInfo}) {
   console.log(sheetTitle)
   console.log(dataStore.semanticWorkbook)
 
-  // 
+  //
   // useEffect(() => {
   //   console.log('sematntioanosidf')
   //   console.log(dataStore.semanticWorkbook)
@@ -169,13 +169,33 @@ function Prototype({listLoginInfo}) {
   //      // Make sure to include any dependencies that
   //   }
   // }, [dataStore.semanticWorkbook]); // Add a
+  const [overlayChange, setOverlayChange] = useState('')
+
+  const handleOverlayChange = (model) =>{
+    setOverlayChange(model)
+    const selectedSheetData = XLSX.utils.sheet_to_json(
+          dataStore.semanticWorkbook.Sheets['BaseInformation'],
+          { header: 1 }
+        );
+    console.log('overlayasdal')
+
+    console.log(selectedSheetData)
+    setSelectedSheetData(selectedSheetData);
+  }
+
 
 
   useEffect(() => {
-    if(dataStore.semanticWorkbookSheet){
-    //  handleSchemaConfigSelection('BaseInformation')
-    }
-  }, [dataStore.overLaidModel]);
+      const selectedSheetData = XLSX.utils.sheet_to_json(
+            dataStore.semanticWorkbook.Sheets['BaseInformation'],
+            { header: 1 }
+          );
+      console.log('overlayasdal')
+
+      console.log(selectedSheetData)
+      setSelectedSheetData(selectedSheetData);
+      
+  }, [dataStore.semanticWorkbook]);
 
   const handleSchemaConfigSelection = (sheetTitle) => {
     setSchemaConfigSelected(true)
@@ -379,7 +399,7 @@ function Prototype({listLoginInfo}) {
         //pass a lot of vars to prototype header for each functionality
 
         <div className='content-grid'>
-          <PrototypeHeader sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} onFileUpload={handleXLSXUpload} dataStore={dataStore} />
+          <PrototypeHeader handleOverlayChange={handleOverlayChange} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} onFileUpload={handleXLSXUpload} dataStore={dataStore} />
           <TabSelector handleTabSelection={handleTabSelection} />
           {schemaConfigSelected ? <PrototypeSideMenu  overlaidModelName={overlaidModel} handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} sheetTitle={sheetTitle}  onSheetSelect={handleSheetSelect}  sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} /> : <div className='fillerClass'>f</div>}
           {schemaConfigSelected ? <SchemaConfigRenderer overlaidModelName={overlaidModel} dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} /> : <div className='fillerClass'>f</div>}

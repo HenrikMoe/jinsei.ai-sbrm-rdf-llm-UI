@@ -18,7 +18,7 @@ import ProcessModal from './ProcessModal'
 // <Upload onFileUpload={onFileUpload}/>
 // <Delete onFileUpload={onFileUpload} />
 
-const PrototypeHeader = ({sheetTitle, handleOverlaidSelection, onFileUpload, dataStore}) => {
+const PrototypeHeader = ({ handleOverlayChange, sheetTitle, handleOverlaidSelection, onFileUpload, dataStore}) => {
   const { isDarkMode } = useDarkMode();
   const [xlsxData, setXLSXData] = useState(null);
 console.log(onFileUpload)
@@ -53,7 +53,7 @@ const handleClearFalse = ()=>{
         </div>
 
         <div className='button-wrap'>
-        <Model  handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
+        <Model  handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
         <Popup onFileUpload={onFileUpload} />
         <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
         <Upload />
