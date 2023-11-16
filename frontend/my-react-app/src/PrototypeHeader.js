@@ -25,8 +25,12 @@ console.log(onFileUpload)
 
 const [clear, setClear] = useState(null);
 
-const handleClear = ()=>{
+const handleClearTrue = ()=>{
   setClear(true)
+}
+
+const handleClearFalse = ()=>{
+  setClear(false)
 }
 // <Transform />
 // <Pipeline />
@@ -49,9 +53,9 @@ const handleClear = ()=>{
         </div>
 
         <div className='button-wrap'>
-        <Model  clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
+        <Model  handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
         <Popup onFileUpload={onFileUpload} />
-        <Delete  handleClear={handleClear} dataStore={dataStore} />
+        <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
         <Upload />
       </div>
 

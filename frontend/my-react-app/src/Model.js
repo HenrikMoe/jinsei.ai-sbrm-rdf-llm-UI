@@ -5,7 +5,7 @@ import XLSXFileHandler from './XLSXFileHandler';
 import CSVFileHandler from './CSVFileHandler';
 import JSONfileHandler from './JSONfileHandler';
 
-const Model = ({ clear, sheetTitle, handleOverlaidSelection, updateForm, dataStore }) => {
+const Model = ({ handleClearFalse, clear, sheetTitle, handleOverlaidSelection, updateForm, dataStore }) => {
   const { isDarkMode } = useDarkMode();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -16,12 +16,7 @@ const Model = ({ clear, sheetTitle, handleOverlaidSelection, updateForm, dataSto
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedModel, setSelectedModel] = useState(''); // State to store the selected model
 
-  useEffect(() => {
-    if(selectedModel){
-      setSelectedModel('Local Report Scheme')
-    }
-  },[clear])
-  
+
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -31,7 +26,11 @@ const Model = ({ clear, sheetTitle, handleOverlaidSelection, updateForm, dataSto
     setIsDropdownOpen(false);
   };
 
+
+
   const handleModelSelect = (model) => {
+    handleClearFalse()
+
     setSelectedModel(model); // Set the selected model when an item is clicked
     closeDropdown(); // Close the dropdown
     console.log(model)
@@ -40,6 +39,7 @@ const Model = ({ clear, sheetTitle, handleOverlaidSelection, updateForm, dataSto
     console.log('hooasdfads')
     console.log(dataStore.overlaidModelName)
     console.log(sheetTitle)
+
     if(dataStore.semanticWorkbookSheet){
       dataStore.updateSemanticWorkbookSheet(sheetTitle)
     }
@@ -50,6 +50,13 @@ const Model = ({ clear, sheetTitle, handleOverlaidSelection, updateForm, dataSto
     //semanticWorkbook
     handleOverlaidSelection()
   };
+
+  useEffect(() => {
+    if(clear === true){
+      setSelectedModel('Local Report Scheme')
+    }
+  }, [clear]);
+
 
   useEffect(() => {
     const handleClickOutside = (event) => {

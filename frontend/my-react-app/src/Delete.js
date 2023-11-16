@@ -7,7 +7,7 @@ import CSVFileHandler from './CSVFileHandler'
 import JSONfileHandler from './JSONfileHandler'
 
 
-const Delete = ({ handleClear, onFileUpload, dataStore }) => {
+const Delete = ({ handleClearTrue, onFileUpload, dataStore }) => {
   const { isDarkMode } = useDarkMode();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -29,7 +29,7 @@ const deleteFile = () =>{
   // dataStore.clearStructure()
   console.log('delelting')
   dataStore.changeOverLaidModelDefault()
-  handleClear()
+  handleClearTrue()
 }
 
     useEffect(() => {
