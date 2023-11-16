@@ -3,7 +3,7 @@ import './PrototypeSideMenu.css'; // Import the CSS file for styling
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
 
-const PrototypeSideMenu = ({  handleSchemaConfigSelection, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet, schemaConfigSelected }) => {
+const PrototypeSideMenu = ({ sheetTitle, handleSchemaConfigSelection, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet, schemaConfigSelected }) => {
   const [isResizing, setIsResizing] = useState(false);
   const [initialWidth, setInitialWidth] = useState(200);
   const [initialHeight, setInitialHeight] = useState(400);
@@ -11,17 +11,31 @@ const PrototypeSideMenu = ({  handleSchemaConfigSelection, sheetTitles, onSheetS
   const [currentHeight, setCurrentHeight] = useState(initialHeight);
   const resizeBorderWidth = 35;
 
-  console.log('running on datastore change')
+
 
   const [selectedSheet, setSelectedSheet] = useState(null); // Track the selected sheet title
 
+  console.log(sheetTitle)
+
+  console.log('should be sheettile above me')
+
   const { isDarkMode } = useDarkMode();
-  console.log(dataStore)
+
 
 //depcerecated
   const [isFirstSheetSelected, setIsFirstSheetSelected] = useState(false); // Track if the first sheet is selected
   const resizeRef = useRef(null); // Reference to the resize area
 
+
+  useEffect(() => {
+      // Set the initial selected sheet when the component mounts
+      setSelectedSheet(sheetTitle);
+    }, []);
+
+    useEffect(() => {
+      // Update the selected sheet when the sheetTitle prop changes
+      setSelectedSheet(sheetTitle);
+    }, [sheetTitle]);
 
   useEffect(() => {
     const handleResize = (e) => {
@@ -88,6 +102,7 @@ const PrototypeSideMenu = ({  handleSchemaConfigSelection, sheetTitles, onSheetS
   const handleSchemaConfigSelect = (index, sheetTitle)=>{
     console.log('hello, changed schema')
     console.log(index, sheetTitle)
+
     handleSchemaConfigSelection(sheetTitle)
     setSelectedSheet(sheetTitle);
     // if(dataStore.overLaidModelSheet){
@@ -104,38 +119,33 @@ const PrototypeSideMenu = ({  handleSchemaConfigSelection, sheetTitles, onSheetS
    }
 
 
- return (
-   <div>
-
-     <div
-       className={`prototype-side-menu ${isResizing ? 'resizing' : ''} ${
-         isDarkMode ? 'dark-mode' : ''
-       }`}
-     >
-     <div
-        className="resize-handle"
-        ref={resizeRef} // Reference to the resize area
-      >
+   return (
+      <div>
+        <div
+          className={`prototype-side-menu ${isResizing ? 'resizing' : ''} ${isDarkMode ? 'dark-mode' : ''}`}
+        >
+          <div className="resize-handle" ref={resizeRef}></div>
+          <div className='elementTitle'>Report Model</div>
+          <ul>
+            <div className='sidemenu-title'></div>
+            {dataStore.lucaSideMenu ? dataStore.lucaSideMenu.map((title, index) => (
+              <li
+                key={title}
+                contentEditable
+                className={`${isDarkMode ? 'dark-mode' : ''} ${title === sheetTitle && schemaConfigSelected ? 'selected' : ''}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleSchemaConfigSelect(index, title)
+                }
+                }
+              >
+                {title}
+              </li>
+            )) : <li className='sidemenu-title'> Sheets </li>}
+          </ul>
+        </div>
       </div>
-      <div className='elementTitle'>Report Model</div>
-       <ul>
-       <div className='sidemenu-title'> </div>
-        {dataStore.lucaSideMenu ? dataStore.lucaSideMenu.map((title, index) => (
-          <li
-             key={title}
-             contentEditable
-             className={`${isDarkMode ? 'dark-mode' : ''} ${title === selectedSheet && schemaConfigSelected ? 'selected' : ''} ${
-               index === 0 && isFirstSheetSelected ? 'selected' : '' // Highlight the first title
-             }`}
-             onClick={() => handleSchemaConfigSelect(index, title)}
-           >
-             {title}
-           </li>
-         )): <li className='sidemenu-title'> Sheets </li> }
-       </ul>
-     </div>
-     </div>
-   );
-};
+    );
+  };
 
 export default PrototypeSideMenu;

@@ -50,8 +50,12 @@ console.log(onFileUpload)
 // <div className='dropdown-button'>New</div></div>
 // </div>
 
+const [tabClicked, setTabClicked] = useState(null);
+
+
 const handleTabClick = (selection)=>{
   handleTabSelection(selection)
+  setTabClicked(selection)
 }
 
 
@@ -61,8 +65,18 @@ const handleTabClick = (selection)=>{
     <div className='title9'>Tab:</div>
 
       <div className='button-wrap3'>
-      <div className='dropdown-button2' onClick={() => handleTabClick('AI')}>Co-Pilot Overview</div>
-      <div className='dropdown-button2' onClick={() => handleTabClick('Schema')}>Configuration</div>
+      <div
+       className={`dropdown-button2 ${tabClicked === 'AI' ? 'selected-tab' : ''}`}
+       onClick={() => handleTabClick('AI')}
+     >
+       Co-Pilot Overview
+     </div>
+     <div
+       className={`dropdown-button2 ${tabClicked === 'Schema' ? 'selected-tab' : ''}`}
+       onClick={() => handleTabClick('Schema')}
+     >
+       Configuration
+     </div>
       <div className='dropdown-button2' onClick={() => handleTabClick('Structure')}> Structures</div>
       <div className='dropdown-button2' onClick={() => handleTabClick('Pipeline')}>Pipeline and Process Management</div>
       <div className='dropdown-button2' onClick={() => handleTabClick('Canvas')}>Report Canvas</div>

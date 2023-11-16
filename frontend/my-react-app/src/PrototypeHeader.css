@@ -80,6 +80,10 @@
   height: 80px;
 }
 
+.selected-tab{
+  background-color: skyblue !important;
+}
+
 
 .button-wrap{
   display: flex;

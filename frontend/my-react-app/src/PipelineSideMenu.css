@@ -177,7 +177,7 @@
 }
 
 .selected {
-  background-color: grey; /* Change to the desired grey color */
+  background-color: skyblue !important; /* Change to the desired grey color */
   color: black; /* Text color for the selected item */
 }
 

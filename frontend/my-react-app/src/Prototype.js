@@ -69,10 +69,13 @@ function Prototype({listLoginInfo}) {
       // Set the selected sheet's data in the state
       setSelectedSheetData(selectedSheetData);
       console.log(selectedSheetData)
+
       //const selectedSheetDataManagmentSystem = XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 });
       //setSelectedXLSXDataTaxonomyItem(selectedSheetDataManagmentSystem)
     }
   };
+
+
 
 
 
@@ -111,11 +114,14 @@ function Prototype({listLoginInfo}) {
 
   const [count, setCount] = useState(0);
 
+  console.log('PrototypeChange')
+  console.log(sheetTitle)
 
   const handleSchemaConfigSelection = (sheetTitle) => {
     setSchemaConfigSelected(true)
     setStructureInstanceSelected(false)
     setSheetTitle(sheetTitle)
+    console.log(sheetTitle)
     //if datastore.semantic sheet
     //extract sheet data from ...XLSX.utils.sheet_to_json(
     //   dataStore.overLaidModelWorkbook.Sheets[sheetTitle[0]],
@@ -292,7 +298,8 @@ function Prototype({listLoginInfo}) {
   }
 
   //<XLSXSheetRenderer  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
-
+  console.log('shouldbesheettielbeo')
+  console.log(sheetTitle)
 
   return (
     <div className={`prototype-container ${isDarkMode ? 'dark-mode' : ''}`}>
@@ -303,7 +310,7 @@ function Prototype({listLoginInfo}) {
         <div className='content-grid'>
           <PrototypeHeader onFileUpload={handleXLSXUpload} dataStore={dataStore} />
           <TabSelector handleTabSelection={handleTabSelection} />
-          {schemaConfigSelected ? <PrototypeSideMenu  handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} /> : <div className='fillerClass'>f</div>}
+          {schemaConfigSelected ? <PrototypeSideMenu  handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} sheetTitle={sheetTitle}  onSheetSelect={handleSheetSelect}  sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} /> : <div className='fillerClass'>f</div>}
           {schemaConfigSelected ? <SchemaConfigRenderer dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} /> : <div className='fillerClass'>f</div>}
           {structureInstanceSelected ? <SubReports handleStructureInstanceSelection={handleStructureInstanceSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />: <div className='fillerClass'>f</div>}
           {structureInstanceSelected ? <StructureInstanceRenderer dataStore={dataStore}  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} /> : <div className='fillerClass'>filler</div>}
