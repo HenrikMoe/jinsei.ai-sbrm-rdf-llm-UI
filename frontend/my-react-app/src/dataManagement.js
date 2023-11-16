@@ -133,17 +133,19 @@ const dataStore = {
   //like changeoverlaid model
   semanticWorkbook: null,
   addSemanticWorkbook: (workbook) =>{
+    console.log('addinnewsemanticworkbook')
     dataStore.semanticWorkbook = workbook
+    console.log(dataStore.semanticWorkbook)
   },
 
-  updateSemanticWorkbookSheet: (sheetTitle)=>{
-    dataStore.semanticWorkbookSheet = dataStore.semanticWorkbook.Sheets[sheetTitle]
-  },
+
 
   //gets upadted evrey side menu select
   //probably init with base information
   semanticWorkbookSheet: null,
   updateSemanticWorkbookSheet: (sheetName)=>{
+    console.log(dataStore.semanticWorkbook)
+
     dataStore.semanticWorkbookSheet = XLSX.utils.sheet_to_json(dataStore.semanticWorkbook.Sheets[sheetName])
   },
 
@@ -184,6 +186,7 @@ const dataStore = {
        // Read the XLSX data and set the header and tableData states
        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
        console.log(workbook);
+
        dataStore.addOverLaidModelWorkbook(workbook)
        dataStore.addSemanticWorkbook(workbook)
        // Example: Read the first sheet from the workbook
@@ -219,13 +222,16 @@ const dataStore = {
       // Read the XLSX data and set the header and tableData states
       const workbook = XLSX.read(arrayBuffer, { type: 'array' });
       console.log(workbook);
+      console.log('asjdfhhkjsgfdjkaskd')
       dataStore.addOverLaidModelWorkbook(workbook)
       dataStore.addSemanticWorkbook(workbook)
+      console.log(dataStore.semanticWorkbook)
       // Example: Read the first sheet from the workbook
       const data = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], {
         header: 1,
       });
       console.log(data);
+      dataStore.updateSemanticWorkbookSheet(data)
       dataStore.updateOverLaidModelSheet('Terms')
       dataStore.updateSemanticWorkbookSheet('Terms')
       // You can perform further operations with the workbook and data here.
@@ -240,6 +246,12 @@ const dataStore = {
 
 
     //dataStore.overLaidModel = data //has to be a selected sheet
+  },
+
+  overlaidModelName: null,
+
+  changeOverLaidModelName: (model)=>{
+    dataStore.overlaidModelName = model
   },
 
   clearOverlaid: ()=>{

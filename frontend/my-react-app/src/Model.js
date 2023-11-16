@@ -5,14 +5,23 @@ import XLSXFileHandler from './XLSXFileHandler';
 import CSVFileHandler from './CSVFileHandler';
 import JSONfileHandler from './JSONfileHandler';
 
-const Model = ({ updateForm, dataStore }) => {
+const Model = ({ clear, sheetTitle, handleOverlaidSelection, updateForm, dataStore }) => {
   const { isDarkMode } = useDarkMode();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
+
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedModel, setSelectedModel] = useState(''); // State to store the selected model
+
+  useEffect(() => {
+    if(selectedModel){
+      setSelectedModel('Local Report Scheme')
+    }
+  },[clear])
+  
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -27,8 +36,19 @@ const Model = ({ updateForm, dataStore }) => {
     closeDropdown(); // Close the dropdown
     console.log(model)
     dataStore.changeOverLaidModel(model)
+    dataStore.changeOverLaidModelName(model)
+    console.log('hooasdfads')
+    console.log(dataStore.overlaidModelName)
+    console.log(sheetTitle)
+    if(dataStore.semanticWorkbookSheet){
+      dataStore.updateSemanticWorkbookSheet(sheetTitle)
+    }
+
     dataStore.initDefaultSemanticStrucutreInstanceTaxonomy()
     dataStore.initDefaultSemanticStrucutreInstance()
+
+    //semanticWorkbook
+    handleOverlaidSelection()
   };
 
   useEffect(() => {

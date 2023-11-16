@@ -3,6 +3,7 @@ import './XLSXSheetRenderer.css'; // Import your CSS file
 import Footer from './Footer';
 
 const XLSXSheetRenderer = ({
+  overlaidModelName,
   increment,
   sheetData,
   sheetTitles,
@@ -47,11 +48,11 @@ const XLSXSheetRenderer = ({
           if(initialData.length !== 1000){
             modifiedData = initialData.slice(1).map((row) => {
           //    // Ensure the row has the correct length
-              const filledRow = new Array(maxRowLength).fill('[empty]');
+              const filledRow = new Array(maxRowLength).fill('');
           //
           //    // Fill in the values from the original row
               row.forEach((value, columnIndex) => {
-                filledRow[columnIndex] = value !== undefined ? value : '[empty]';
+                filledRow[columnIndex] = value !== undefined ? value : '';
               });
           //
               return filledRow;
@@ -68,28 +69,45 @@ const XLSXSheetRenderer = ({
           }else{
             console.log('intheelse')
             setHeader(dataStore.defaultHeaders[sheetTitle])
-            setTableData([['empty', 'emptt', "empty"]])
+            setTableData([])
           }
     }else{console.log('intheelse')}
   }, [selectedSheetData, sheetTitle]);
 
+
+  useEffect(() => {
+    console.log('overlausinsadfasdf')
+    console.log(overlaidModelName)
+    //woohoo we have the new overlay name
+
+    // Update the selected sheet when the sheetTitle prop changes
+  }, [overlaidModelName]);
 
 
 
   console.log('running on datastore change');
 
   const addRow = () => {
-    const newRow = new Array(header.length).fill(' ');
+    const newRow = new Array(header.length).fill('~');
     //setTableData([...tableData, newRow]);
+    console.log('addingrowonooverlay')
+    console.log(newRow)
+    console.log(tableData)
+    if (tableData.length < 500) {
+      setTableData((prevTableData) => [...prevTableData, newRow], () => {
+        console.log(tableData);
+      });
+    } else {
+      setTableData([newRow], () => {
+        console.log(tableData);
+      });
+    }
 
-    const updatedDataWithNewRow = [...selectedSheetData, newRow];
 
-    setTableData(updatedDataWithNewRow)
-
-    // dataStore.updateSemanticSheetData(sheetTitle, updatedDataWithNewRow, header);
-    // if(sheetTitle[0] === 'Rules' || sheetTitle[0] === 'Facts'){
-    //   dataStore.updateSemanticSheetData(stateSubSheet, updatedDataWithNewRow, header);
-    // }
+    dataStore.updateSemanticSheetData(sheetTitle, tableData, header);
+    if(sheetTitle[0] === 'Rules' || sheetTitle[0] === 'Facts'){
+      dataStore.updateSemanticSheetData(stateSubSheet, tableData, header);
+    }
   };
 
   const addColumn = () => {
@@ -320,7 +338,7 @@ const handleCellMouseLeave = (e) => {
                   </div>
                   <div className="unique-popup-menu">
                     {/* Menu content and buttons go here */}
-                    <button >Add Row</button>
+                    <button onClick={addRow} >Add Row</button>
                     <button >Delete Row</button>
                     <button >Context</button>
                     {/* Add more buttons as needed */}
@@ -343,6 +361,7 @@ const handleCellMouseLeave = (e) => {
         </tbody>
 
             </table>
+            <button class='addrowButton' onClick={addRow} >Add Row</button>
             </div>
             {isPopupVisible ? (
               <div
@@ -415,7 +434,7 @@ const handleCellMouseLeave = (e) => {
                   </div>
                   <div className="unique-popup-menu">
                     {/* Menu content and buttons go here */}
-                    <button >Add Row</button>
+                    <button onClick={addRow}>Add Row</button>
                     <button >Delete Row</button>
                     <button >Context</button>
                     {/* Add more buttons as needed */}
@@ -437,6 +456,8 @@ const handleCellMouseLeave = (e) => {
           )): <tr><td>hello</td></tr>}
         </tbody>
             </table>
+            <button class='addrowButton' onClick={addRow} >Add Row</button>
+
             {isPopupVisible ? (
               <div
                 className="popup-message"
@@ -500,7 +521,7 @@ const handleCellMouseLeave = (e) => {
                     </div>
                     <div className="unique-popup-menu">
                       {/* Menu content and buttons go here */}
-                      <button className='menu-button-cell'>Add Row</button>
+                      <button onClick={addRow} className='menu-button-cell'>Add Row</button>
                       <button className='menu-button-cell'>Delete Row</button>
                       <button className='menu-button-cell'>Context</button>
                       {/* Add more buttons as needed */}
@@ -524,6 +545,8 @@ const handleCellMouseLeave = (e) => {
             )): <tr><td>hello</td></tr>}
           </tbody>
               </table>
+              <button class='addrowButton' onClick={addRow} >Add Row</button>
+
               {isPopupVisible ? (
                 <div
                   className="popup-message"

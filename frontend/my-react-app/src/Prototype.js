@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,  useEffect } from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import PrototypeHeader from './PrototypeHeader';
 import PrototypeSideMenu from './PrototypeSideMenu';
@@ -51,10 +51,24 @@ function Prototype({listLoginInfo}) {
   const [xlsxTitle, setxlsxTitle] = useState(null);
 
   const dataStore = useDataStore(); // Access dataStore from the context
-  console.log('DATASTORE')
-  console.log(dataStore)
 
-  //const runTogether
+  const [overlaidModel, setOverlaidModel] = useState(null);
+
+  console.log('overlaycurrent')
+  console.log(dataStore.overlaidModelName)
+
+  useEffect(() => {
+     console.log('DATASTORE');
+     console.log(dataStore);
+     setOverlaidModel(dataStore.overlaidModelName)
+
+     console.log('datastoreoverlaidmodelsheet');
+     console.log(dataStore.overlaidModelName);
+
+     // Your additional side effects or logic based on dataStore changes
+
+     // Make sure to include any dependencies that should trigger the effect
+   }, [dataStore]); // Add any additional dependencies if needed
 
 
   const handleSheetSelect = (selectedSheetTitle) => {
@@ -117,11 +131,58 @@ function Prototype({listLoginInfo}) {
   console.log('PrototypeChange')
   console.log(sheetTitle)
 
+  const handleOverlaidSelection = () =>{
+    console.log('boogieiewww')
+    console.log(dataStore.overlaidModelName)
+    setOverlaidModel(dataStore.overlaidModelName)
+    console.log(sheetTitle)
+
+    if(sheetTitle){
+    }
+    else{
+      console.log('settingsite')
+      setSheetTitle('Terms')
+    }
+    //update dataStore addSemanticWorkbook and updateSemanticWorkbookSheet
+
+
+    //handleSchemaConfigSelection(sheetTitle)
+
+
+  }
+
+
+
+  console.log(sheetTitle)
+  console.log(dataStore.semanticWorkbook)
+
+  // 
+  // useEffect(() => {
+  //   console.log('sematntioanosidf')
+  //   console.log(dataStore.semanticWorkbook)
+  //   if(dataStore.semanticWorkbook){
+  //     const selectedSheetData = XLSX.utils.sheet_to_json(
+  //       dataStore.semanticWorkbook.Sheets['BaseInformation'],
+  //       { header: 1 }
+  //     );
+  //     setSelectedSheetData(selectedSheetData);
+  //      // Make sure to include any dependencies that
+  //   }
+  // }, [dataStore.semanticWorkbook]); // Add a
+
+
+  useEffect(() => {
+    if(dataStore.semanticWorkbookSheet){
+    //  handleSchemaConfigSelection('BaseInformation')
+    }
+  }, [dataStore.overLaidModel]);
+
   const handleSchemaConfigSelection = (sheetTitle) => {
     setSchemaConfigSelected(true)
     setStructureInstanceSelected(false)
     setSheetTitle(sheetTitle)
     console.log(sheetTitle)
+    dataStore.updateSemanticWorkbookSheet(sheetTitle)
     //if datastore.semantic sheet
     //extract sheet data from ...XLSX.utils.sheet_to_json(
     //   dataStore.overLaidModelWorkbook.Sheets[sheetTitle[0]],
@@ -133,6 +194,16 @@ function Prototype({listLoginInfo}) {
         dataStore.semanticWorkbook &&
         dataStore.semanticWorkbook.Sheets
       ) {
+        if(!sheetTitle){
+          const selectedSheetData = XLSX.utils.sheet_to_json(
+            dataStore.semanticWorkbook.Sheets['BaseInformation'],
+            { header: 1 }
+          );
+          setSelectedSheetData(selectedSheetData);
+        }else{
+
+
+        console.log(sheetTitle)
         console.log(sheetTitle[0])
         if(sheetTitle[0] === 'Base Information'){
           const selectedSheetData = XLSX.utils.sheet_to_json(
@@ -170,7 +241,7 @@ function Prototype({listLoginInfo}) {
           console.log(selectedSheetData);
         }
 
-      } else {
+      }} else {
         // Handle the case where the selected sheet doesn't exist
         console.error('Selected sheet not found or is invalid.');
         console.log(dataStore.semanticWorkbook.Sheets)
@@ -300,18 +371,18 @@ function Prototype({listLoginInfo}) {
   //<XLSXSheetRenderer  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} />
   console.log('shouldbesheettielbeo')
   console.log(sheetTitle)
-
+//</DataStoreProvider>
   return (
     <div className={`prototype-container ${isDarkMode ? 'dark-mode' : ''}`}>
       {isAuthenticated ? (
         // Content for authenticated users
         //pass a lot of vars to prototype header for each functionality
-        <DataStoreProvider>
+
         <div className='content-grid'>
-          <PrototypeHeader onFileUpload={handleXLSXUpload} dataStore={dataStore} />
+          <PrototypeHeader sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} onFileUpload={handleXLSXUpload} dataStore={dataStore} />
           <TabSelector handleTabSelection={handleTabSelection} />
-          {schemaConfigSelected ? <PrototypeSideMenu  handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} sheetTitle={sheetTitle}  onSheetSelect={handleSheetSelect}  sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} /> : <div className='fillerClass'>f</div>}
-          {schemaConfigSelected ? <SchemaConfigRenderer dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} /> : <div className='fillerClass'>f</div>}
+          {schemaConfigSelected ? <PrototypeSideMenu  overlaidModelName={overlaidModel} handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} sheetTitle={sheetTitle}  onSheetSelect={handleSheetSelect}  sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} /> : <div className='fillerClass'>f</div>}
+          {schemaConfigSelected ? <SchemaConfigRenderer overlaidModelName={overlaidModel} dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} /> : <div className='fillerClass'>f</div>}
           {structureInstanceSelected ? <SubReports handleStructureInstanceSelection={handleStructureInstanceSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />: <div className='fillerClass'>f</div>}
           {structureInstanceSelected ? <StructureInstanceRenderer dataStore={dataStore}  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} /> : <div className='fillerClass'>filler</div>}
           {pipelineSheetSelected ? <PipelineMenu handlePipelineInstanceSelection={handlePipelineInstanceSelection} dataStore={dataStore}/>:<div className='fillerClass'>f</div>}
@@ -321,7 +392,7 @@ function Prototype({listLoginInfo}) {
           {aiSummarySheetSelected ? <AISummarySideMenu handleAISummarySheetSelection={handleAISummarySheetSelection} dataStore={dataStore}/>: <div className='fillerClass'>f</div>}
           {aiSummarySheetSelected ? <AISummary />: <div className='fillerClass'>f</div>}
         </div>
-        </DataStoreProvider>
+
       ) : (
         // Content for non-authenticated users
         <div>

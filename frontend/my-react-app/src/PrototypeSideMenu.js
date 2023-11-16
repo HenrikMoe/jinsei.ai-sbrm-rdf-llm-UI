@@ -3,7 +3,7 @@ import './PrototypeSideMenu.css'; // Import the CSS file for styling
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
 
-const PrototypeSideMenu = ({ sheetTitle, handleSchemaConfigSelection, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet, schemaConfigSelected }) => {
+const PrototypeSideMenu = ({ overlaidModelName, sheetTitle, handleSchemaConfigSelection, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet, schemaConfigSelected }) => {
   const [isResizing, setIsResizing] = useState(false);
   const [initialWidth, setInitialWidth] = useState(200);
   const [initialHeight, setInitialHeight] = useState(400);
@@ -36,6 +36,15 @@ const PrototypeSideMenu = ({ sheetTitle, handleSchemaConfigSelection, sheetTitle
       // Update the selected sheet when the sheetTitle prop changes
       setSelectedSheet(sheetTitle);
     }, [sheetTitle]);
+
+
+    useEffect(() => {
+      console.log('overlausin')
+      console.log(overlaidModelName)
+      //woohoo we have the new overlay name
+
+      // Update the selected sheet when the sheetTitle prop changes
+    }, [overlaidModelName]);
 
   useEffect(() => {
     const handleResize = (e) => {

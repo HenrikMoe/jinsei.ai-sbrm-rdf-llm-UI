@@ -6,7 +6,7 @@
   display: inline-block;
   margin-left: 0px;
   max-width: 1500px;
-  max-height: 460px;
+  max-height: 400px;
   margin-bottom: -100px;
   border-radius: 10px !important;
   overflow-x: auto;
@@ -20,6 +20,7 @@
   background-color: lightslategrey;
   color: black;
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 .elementTitle{
   margin-top: 100px;
@@ -233,6 +234,14 @@
   margin-top: 10px;
 }
 
+.addrowButton{
+  margin-top: 100px;
+  margin-left: 20px;
+  display: block;
+  margin-bottom: -100px;
+
+}
+
 .ribbon-button {
   background-color: white;
   border: 2px solid grey;
@@ -245,5 +254,5 @@
 }
 
 .ribbon-button:hover {
-  background-color: #007bff;
+  background-color: skyblue;
 }

@@ -18,12 +18,16 @@ import ProcessModal from './ProcessModal'
 // <Upload onFileUpload={onFileUpload}/>
 // <Delete onFileUpload={onFileUpload} />
 
-const PrototypeHeader = ({onFileUpload, dataStore}) => {
+const PrototypeHeader = ({sheetTitle, handleOverlaidSelection, onFileUpload, dataStore}) => {
   const { isDarkMode } = useDarkMode();
   const [xlsxData, setXLSXData] = useState(null);
 console.log(onFileUpload)
 
+const [clear, setClear] = useState(null);
 
+const handleClear = ()=>{
+  setClear(true)
+}
 // <Transform />
 // <Pipeline />
 
@@ -45,9 +49,9 @@ console.log(onFileUpload)
         </div>
 
         <div className='button-wrap'>
-        <Model  dataStore={dataStore}/>
+        <Model  clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
         <Popup onFileUpload={onFileUpload} />
-        <Delete  dataStore={dataStore} />
+        <Delete  handleClear={handleClear} dataStore={dataStore} />
         <Upload />
       </div>
 
@@ -58,7 +62,7 @@ console.log(onFileUpload)
       <div className='dropdown-button'>New</div></div>
       </div>
 
-      <div className='titlez'>Luciano - git:main | version 0.201</div>
+      <div className='titlez'>Luciano - git:main | version 0.205</div>
 
     </div>
   );
