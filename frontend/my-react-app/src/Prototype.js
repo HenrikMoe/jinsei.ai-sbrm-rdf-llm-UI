@@ -194,7 +194,7 @@ function Prototype({listLoginInfo}) {
 
       console.log(selectedSheetData)
       setSelectedSheetData(selectedSheetData);
-      
+
   }, [dataStore.semanticWorkbook]);
 
   const handleSchemaConfigSelection = (sheetTitle) => {
@@ -401,16 +401,16 @@ function Prototype({listLoginInfo}) {
         <div className='content-grid'>
           <PrototypeHeader handleOverlayChange={handleOverlayChange} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} onFileUpload={handleXLSXUpload} dataStore={dataStore} />
           <TabSelector handleTabSelection={handleTabSelection} />
-          {schemaConfigSelected ? <PrototypeSideMenu  overlaidModelName={overlaidModel} handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} sheetTitle={sheetTitle}  onSheetSelect={handleSheetSelect}  sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} /> : <div className='fillerClass'>f</div>}
-          {schemaConfigSelected ? <SchemaConfigRenderer overlaidModelName={overlaidModel} dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} /> : <div className='fillerClass'>f</div>}
-          {structureInstanceSelected ? <SubReports handleStructureInstanceSelection={handleStructureInstanceSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />: <div className='fillerClass'>f</div>}
+          {schemaConfigSelected ? <PrototypeSideMenu  overlaidModelName={overlaidModel} handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} sheetTitle={sheetTitle}  onSheetSelect={handleSheetSelect}  sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} /> : <div className='fillerClass'></div>}
+          {schemaConfigSelected ? <SchemaConfigRenderer overlaidModelName={overlaidModel} dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} /> : <div className='fillerClass'></div>}
+          {structureInstanceSelected ? <SubReports handleStructureInstanceSelection={handleStructureInstanceSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />: <div className='fillerClass'></div>}
           {structureInstanceSelected ? <StructureInstanceRenderer dataStore={dataStore}  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} /> : <div className='fillerClass'>filler</div>}
-          {pipelineSheetSelected ? <PipelineMenu handlePipelineInstanceSelection={handlePipelineInstanceSelection} dataStore={dataStore}/>:<div className='fillerClass'>f</div>}
-          {pipelineSheetSelected ? <PipelineProcessPageElement /> : <div className='fillerClass'>f</div>}
-          {canvasSheetSelected ? <CanvasSideMenu handleCanvasSheetSelection={handleCanvasSheetSelection} dataStore={dataStore}/>: <div className='fillerClass'>f</div>}
-          {canvasSheetSelected ? <CanvasPageElement />: <div className='fillerClass'>f</div>}
-          {aiSummarySheetSelected ? <AISummarySideMenu handleAISummarySheetSelection={handleAISummarySheetSelection} dataStore={dataStore}/>: <div className='fillerClass'>f</div>}
-          {aiSummarySheetSelected ? <AISummary />: <div className='fillerClass'>f</div>}
+          {pipelineSheetSelected ? <PipelineMenu handlePipelineInstanceSelection={handlePipelineInstanceSelection} dataStore={dataStore}/>:<div className='fillerClass'></div>}
+          {pipelineSheetSelected ? <PipelineProcessPageElement /> : <div className='fillerClass'></div>}
+          {canvasSheetSelected ? <CanvasSideMenu handleCanvasSheetSelection={handleCanvasSheetSelection} dataStore={dataStore}/>: <div className='fillerClass'></div>}
+          {canvasSheetSelected ? <CanvasPageElement />: <div className='fillerClass'></div>}
+          {aiSummarySheetSelected ? <AISummarySideMenu handleAISummarySheetSelection={handleAISummarySheetSelection} dataStore={dataStore}/>: <div className='fillerClass'></div>}
+          {aiSummarySheetSelected ? <AISummary />: <div className='fillerClass'></div>}
         </div>
 
       ) : (

@@ -278,7 +278,11 @@ const handleCellMouseLeave = (e) => {
   }, []);
 
 
-
+  const handleRowBlur = (rowIndex, event) => {
+    // Handle blur event for the entire row here
+    console.log(`Row ${rowIndex} blurred. Content: ${event.target.textContent}`);
+    // You can perform any additional actions needed when a row loses focus
+  };
   const [cellMenuVisibility, setCellMenuVisibility] = useState([]);
 
  // Initialize the cellMenuVisibility state based on the table data
@@ -338,7 +342,7 @@ const handleCellMouseLeave = (e) => {
 
         <tbody>
           {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
-            <tr key={rowIndex}>
+            <tr key={rowIndex} contentEditable onBlur={(e) => handleRowBlur(rowIndex, e)}>
               {row.map((cell, cellIndex) => (
                 <td
                   key={cellIndex}
@@ -435,7 +439,7 @@ const handleCellMouseLeave = (e) => {
 
         <tbody>
           {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
-            <tr key={rowIndex}>
+            <tr key={rowIndex} contentEditable onBlur={(e) => handleRowBlur(rowIndex, e)}>
               {row.map((cell, cellIndex) => (
                 <td
                   key={cellIndex}
@@ -522,7 +526,7 @@ const handleCellMouseLeave = (e) => {
 
           <tbody>
             {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
-              <tr key={rowIndex}>
+              <tr key={rowIndex} contentEditable onBlur={(e) => handleRowBlur(rowIndex, e)}>
                 {row.map((cell, cellIndex) => (
                   <td
                     key={cellIndex}
