@@ -257,7 +257,7 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
     setIsPopupVisible(true);
 
     // Add the green background class
-    cell.classList.add('green-background');
+    //cell.classList.add('green-background');
   };
 
 const [hoveredCell, setHoveredCell] = useState({ rowIndex: null, cellIndex: null });
@@ -272,6 +272,30 @@ const handleCellMouseLeave = (e) => {
 
   setIsPopupVisible(false);
 };
+
+//const popupRef = useRef();
+const [isPopupVisible2, setIsPopupVisible2] = useState(false);
+
+  useEffect(() => {
+    // Function to handle clicks outside of the popup
+    const handleClickOutside = (event) => {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        // Clicked outside the popup, close it
+        // Add logic to close your popup menu here
+        setIsPopupVisible2(false);
+
+        console.log('Clicked outside the popup, close it');
+      }
+    };
+
+    // Add event listener when the component mounts
+    document.addEventListener('click', handleClickOutside);
+
+    // Remove event listener when the component unmounts
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   useEffect(() => {
     // Add a listener to close the popup when clicking outside of it
@@ -551,7 +575,7 @@ const handleCellMouseLeave = (e) => {
             {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
               <tr key={rowIndex} >
                 {row.map((cell, cellIndex) => (
-                  <td
+                  <td style={{ backgroundColor: rowIndex % 2 === 0 ? '#F8FAFC' : '#f5f5f5' }}
                     key={cellIndex}
                     onMouseEnter={(e) => handleCellMouseEnter(e, rowIndex, cellIndex)}
                     onMouseLeave={handleCellMouseLeave}
@@ -567,7 +591,7 @@ const handleCellMouseLeave = (e) => {
                     <div className="unique-menu-button" contentEditable={false} onClick={() => toggleCellMenu(rowIndex, cellIndex)} >
                     <span contentEditable={false}>:</span>
                     </div>
-                    <div className="unique-popup-menu">
+                    <div className={`unique-popup-menu ${isPopupVisible ? 'visible' : 'hidden'}`} ref={popupRef}>
                       {/* Menu content and buttons go here */}
 
                       {header[cellIndex] === 'Code' && (
@@ -638,25 +662,53 @@ const handleCellMouseLeave = (e) => {
                                <button onClick={() => handleButtonClick('Concept')} className='menu-button-cell'>'Concept'</button>
                              )}
                              {header[cellIndex] === 'LabelRole' && (
-                                <button onClick={() => handleButtonClick('Standard')} className='menu-button-cell'>'Custom'</button>
+                                <button onClick={() => handleButtonClick('Standard')} className='menu-button-cell'>'Standard'</button>
                               )}
 
                               {header[cellIndex] === 'LabelRole' && (
-                                 <button onClick={() => handleButtonClick('PeriodStart')} className='menu-button-cell'>'Custom'</button>
+                                 <button onClick={() => handleButtonClick('PeriodStart')} className='menu-button-cell'>'PeriodStart'</button>
                                )}
 
 
                              {header[cellIndex] === 'LabelRole' && (
-                                <button onClick={() => handleButtonClick('PeriodEnd')} className='menu-button-cell'>'Custom'</button>
+                                <button onClick={() => handleButtonClick('PeriodEnd')} className='menu-button-cell'>'PeriodEnd'</button>
                               )}
 
                               {header[cellIndex] === 'LabelRole' && (
-                                 <button onClick={() => handleButtonClick('Documentation')} className='menu-button-cell'>'Custom'</button>
+                                 <button onClick={() => handleButtonClick('Documentation')} className='menu-button-cell'>'Documentation'</button>
                                )}
 
-                        {header[cellIndex] === 'Prefix' && (
-                           <button onClick={() => handleButtonClick('Custom')} className='menu-button-cell'>'Custom'</button>
+                               {header[cellIndex] === 'LabelRole' && (
+                                  <button onClick={() => handleButtonClick('Negated')} className='menu-button-cell'>'Negated'</button>
+                                )}
+
+                                {header[cellIndex] === 'LabelRole' && (
+                                     <button onClick={() => handleButtonClick('OriginallyStated')} className='menu-button-cell'>'OriginallyStated'</button>
+                                   )}
+                        {header[cellIndex] === 'LabelRole' && (
+                           <button onClick={() => handleButtonClick('Restated')} className='menu-button-cell'>'Restated'</button>
                          )}
+                         {header[cellIndex] === 'LabelRole' && (
+                            <button onClick={() => handleButtonClick('ExampleGuidance')} className='menu-button-cell'>'ExampleGuidance'</button>
+                          )}
+                          {header[cellIndex] === 'LabelRole' && (
+                             <button onClick={() => handleButtonClick('CommentaryGuidance')} className='menu-button-cell'>'CommentaryGuidance'</button>
+                           )}
+                           {header[cellIndex] === 'LabelRole' && (
+                              <button onClick={() => handleButtonClick('DefinitionGuidance')} className='menu-button-cell'>'DefinitionGuidance'</button>
+                            )}
+                            {header[cellIndex] === 'LabelRole' && (
+                               <button onClick={() => handleButtonClick('VerboseLabel')} className='menu-button-cell'>'VerboseLabel'</button>
+                             )}
+                             {header[cellIndex] === 'LabelRole' && (
+                                <button onClick={() => handleButtonClick('TerseLabel')} className='menu-button-cell'>'TerseLabel'</button>
+                              )}
+                              {header[cellIndex] === 'LabelRole' && (
+                                 <button onClick={() => handleButtonClick('TotalLabel')} className='menu-button-cell'>'TotalLabel'</button>
+                               )}
+                               {header[cellIndex] === 'LabelRole' && (
+                                  <button onClick={() => handleButtonClick('$OrigionallyStated')} className='menu-button-cell'>'$OrigionallyStated'</button>
+                                )}
 
                       <button onClick={addRow} className='menu-button-cell'>Insert Row</button>
                       <button onClick={() => deleteRow(rowIndex)} className='menu-button-cell'>Delete Row</button>
