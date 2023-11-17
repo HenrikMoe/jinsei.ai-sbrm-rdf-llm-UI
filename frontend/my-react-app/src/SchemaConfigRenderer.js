@@ -201,6 +201,16 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
         ? row.map((cell, j) => (j === cellIndex ? value : cell))
         : row
     );
+    dataStore.updateSemanticSheetData(sheetTitle, updatedData, header);
+    if(sheetTitle[0] === 'Rules' || sheetTitle[0] === 'Facts'){
+      dataStore.updateSemanticSheetData(stateSubSheet, updatedData, header);
+    }
+
+    console.log('weshouldbeihgipna')
+
+
+    //clear the overlaid
+    dataStore.clearOverlaid()
 
     setTableData(updatedData);
 
@@ -208,14 +218,8 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
     console.log('updatingsheettet')
     console.log(sheetTitle)
     console.log(stateSubSheet)
-    dataStore.updateSemanticSheetData(sheetTitle, updatedData, header);
-    if(sheetTitle[0] === 'Rules' || sheetTitle[0] === 'Facts'){
-      dataStore.updateSemanticSheetData(stateSubSheet, updatedData, header);
-    }
 
 
-    //clear the overlaid
-    dataStore.clearOverlaid()
   };
 
   const handleHeaderChange = (cellIndex, value) => {
@@ -238,23 +242,30 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
   const [popupPosition, setPopupPosition] = useState({ x: 0, y: 0 });
   const popupRef = useRef(null);
 
-  const handleCellMouseEnter = (e) => {
-  const cell = e.target;
-  const cellRect = cell.getBoundingClientRect();
+  const handleCellMouseEnter = (e, rowIndex, cellIndex) => {
+    const cell = e.target;
+    const cellRect = cell.getBoundingClientRect();
+    setHoveredCell({ rowIndex, cellIndex });
+    console.log('asdfasasdf')
+    console.log(rowIndex,cellIndex )
 
-  // Calculate the position for the popup message
-  const x = cellRect.left + cellRect.width / 2;
-  const y = cellRect.top - 250; // Adjust as needed
+    // Calculate the position for the popup message
+    const x = cellRect.left + cellRect.width / 2;
+    const y = cellRect.top - 250; // Adjust as needed
 
-  setPopupPosition({ x, y });
-  setIsPopupVisible(true);
+    setPopupPosition({ x, y });
+    setIsPopupVisible(true);
 
-  // Add the green background class
-  cell.classList.add('green-background');
-};
+    // Add the green background class
+    cell.classList.add('green-background');
+  };
+
+const [hoveredCell, setHoveredCell] = useState({ rowIndex: null, cellIndex: null });
+
 
 const handleCellMouseLeave = (e) => {
   const cell = e.target;
+  setHoveredCell({ rowIndex: null, cellIndex: null });
 
   // Remove the green background class
   cell.classList.remove('green-background');
@@ -304,6 +315,13 @@ const handleCellMouseLeave = (e) => {
    updatedVisibility[rowIndex][cellIndex] = !updatedVisibility[rowIndex][cellIndex];
    setCellMenuVisibility(updatedVisibility);
  };
+ const handleButtonClick = (buttonValue) => {
+    const updatedData = [...tableData];
+    updatedData[hoveredCell.rowIndex][hoveredCell.cellIndex] = buttonValue;
+    setTableData(updatedData);
+    // You may want to update dataStore or perform other actions as needed
+  };
+
 
 //conditinally render the subtype menu
   return (
@@ -342,7 +360,7 @@ const handleCellMouseLeave = (e) => {
 
         <tbody>
           {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
-            <tr key={rowIndex} contentEditable onBlur={(e) => handleRowBlur(rowIndex, e)}>
+            <tr key={rowIndex}  >
               {row.map((cell, cellIndex) => (
                 <td
                   key={cellIndex}
@@ -363,8 +381,9 @@ const handleCellMouseLeave = (e) => {
                   </div>
                   <div className="unique-popup-menu">
                     {/* Menu content and buttons go here */}
-                    <button onClick={addRow} >Add Row</button>
+                    <button onClick={addRow} >Insert Row</button>
                     <button onClick={() => deleteRow(rowIndex)}>Delete Row</button>
+
                     <button >Context</button>
                     {/* Add more buttons as needed */}
                   </div>
@@ -439,7 +458,7 @@ const handleCellMouseLeave = (e) => {
 
         <tbody>
           {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
-            <tr key={rowIndex} contentEditable onBlur={(e) => handleRowBlur(rowIndex, e)}>
+            <tr key={rowIndex} >
               {row.map((cell, cellIndex) => (
                 <td
                   key={cellIndex}
@@ -459,7 +478,7 @@ const handleCellMouseLeave = (e) => {
                   </div>
                   <div className="unique-popup-menu">
                     {/* Menu content and buttons go here */}
-                    <button onClick={addRow}>Add Row</button>
+                    <button onClick={addRow}>Insert Row</button>
                     <button onClick={() => deleteRow(rowIndex)}>Delete Row</button>
                     <button >Context</button>
                     {/* Add more buttons as needed */}
@@ -526,11 +545,11 @@ const handleCellMouseLeave = (e) => {
 
           <tbody>
             {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
-              <tr key={rowIndex} contentEditable onBlur={(e) => handleRowBlur(rowIndex, e)}>
+              <tr key={rowIndex} >
                 {row.map((cell, cellIndex) => (
                   <td
                     key={cellIndex}
-                    onMouseEnter={handleCellMouseEnter}
+                    onMouseEnter={(e) => handleCellMouseEnter(e, rowIndex, cellIndex)}
                     onMouseLeave={handleCellMouseLeave}
 
                   >
@@ -546,10 +565,13 @@ const handleCellMouseLeave = (e) => {
                     </div>
                     <div className="unique-popup-menu">
                       {/* Menu content and buttons go here */}
-                      <button onClick={addRow} className='menu-button-cell'>Add Row</button>
+                      <button onClick={addRow} className='menu-button-cell'>Insert Row</button>
                       <button onClick={() => deleteRow(rowIndex)} className='menu-button-cell'>Delete Row</button>
-                      <button className='menu-button-cell'>Context</button>
-                      {/* Add more buttons as needed */}
+
+                      {header[cellIndex] === 'ReportElementCategory' && (
+                         <button onClick={() => handleButtonClick('Member')} className='menu-button-cell'>Member</button>
+                       )}
+                                            {/* Add more buttons as needed */}
                     </div>
                   </div>
                   <div
