@@ -110,6 +110,27 @@ const XLSXSheetRenderer = ({
     }
   };
 
+  const deleteRow = (rowIndex) => {
+    const updatedData = [...tableData];
+
+    if (tableData.length < 500) {
+
+      updatedData.splice(rowIndex, 1);
+
+      setTableData(updatedData, () => {
+        console.log(tableData);
+      });
+    }
+
+      dataStore.updateSemanticSheetData(sheetTitle, updatedData, header);
+
+      if (sheetTitle[0] === 'Rules' || sheetTitle[0] === 'Facts') {
+        dataStore.updateSemanticSheetData(stateSubSheet, updatedData, header);
+      }
+
+  };
+
+
   const addColumn = () => {
     const newHeader = [...header, 'New Column'];
     setHeader(newHeader);
@@ -339,7 +360,7 @@ const handleCellMouseLeave = (e) => {
                   <div className="unique-popup-menu">
                     {/* Menu content and buttons go here */}
                     <button onClick={addRow} >Add Row</button>
-                    <button >Delete Row</button>
+                    <button onClick={() => deleteRow(rowIndex)}>Delete Row</button>
                     <button >Context</button>
                     {/* Add more buttons as needed */}
                   </div>
@@ -435,7 +456,7 @@ const handleCellMouseLeave = (e) => {
                   <div className="unique-popup-menu">
                     {/* Menu content and buttons go here */}
                     <button onClick={addRow}>Add Row</button>
-                    <button >Delete Row</button>
+                    <button onClick={() => deleteRow(rowIndex)}>Delete Row</button>
                     <button >Context</button>
                     {/* Add more buttons as needed */}
                   </div>
@@ -522,7 +543,7 @@ const handleCellMouseLeave = (e) => {
                     <div className="unique-popup-menu">
                       {/* Menu content and buttons go here */}
                       <button onClick={addRow} className='menu-button-cell'>Add Row</button>
-                      <button className='menu-button-cell'>Delete Row</button>
+                      <button onClick={() => deleteRow(rowIndex)} className='menu-button-cell'>Delete Row</button>
                       <button className='menu-button-cell'>Context</button>
                       {/* Add more buttons as needed */}
                     </div>
