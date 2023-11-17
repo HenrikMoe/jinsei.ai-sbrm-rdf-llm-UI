@@ -20,7 +20,7 @@ const dataStore = {
   },
   //facts and rules are first one
   defaultHeaders: {
-    "Base Information": ['ReportElementName', 'ReferenceRole', 'Publisher', 'Name', 'ReportElementName', 'ReferenceRole', 'Publisher', 'Name'],
+    "Base Information": ['ReportElementName', 'Taxonomy', 'ReferenceRole', 'Publisher', 'Name', 'ReportElementName', 'ReferenceRole', 'Publisher', 'Name'],
     "Terms": ['Prefix', 'ReportElementCategory', 'StandardLabel', 'ReportElementName', 'Datatype', 'CalendarPeriodType', 'BalanceType'],
     "Labels": ['ReportElementName', 'Language', 'LabelRole', 'Label'],
     "References": ['ReportElementName', 'ReferenceRole', 'Publisher', 'Name', 'Number', 'Paragraph', 'URI', 'URIDate', 'Sequence'],

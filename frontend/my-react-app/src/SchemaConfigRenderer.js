@@ -405,7 +405,8 @@ const handleCellMouseLeave = (e) => {
         </tbody>
 
             </table>
-            <button class='addrowButton' onClick={addRow} >Add Row</button>
+
+
             </div>
             {isPopupVisible ? (
               <div
@@ -500,7 +501,10 @@ const handleCellMouseLeave = (e) => {
           )): <tr><td>hello</td></tr>}
         </tbody>
             </table>
+            <div class='bottomButtonWrap'>
             <button class='addrowButton' onClick={addRow} >Add Row</button>
+            <button class='addrowButton'  >Publish Schema</button>
+            </div>
 
             {isPopupVisible ? (
               <div
@@ -565,12 +569,99 @@ const handleCellMouseLeave = (e) => {
                     </div>
                     <div className="unique-popup-menu">
                       {/* Menu content and buttons go here */}
+
+                      {header[cellIndex] === 'Code' && (
+                        <button onClick={() => handleButtonClick('Import')} className='menu-button-cell'>'Import'</button>
+                        )}
+
+                        {header[cellIndex] === 'Taxonomy' && (
+                          <button onClick={() => handleButtonClick('AASB 1060')} className='menu-button-cell'>'AASB 1060'</button>
+                          )}
+                          {header[cellIndex] === 'Taxonomy' && (
+                            <button onClick={() => handleButtonClick('Accounting Equation')} className='menu-button-cell'>'Accounting Equation'</button>
+                            )}
+
+                            {header[cellIndex] === 'Taxonomy' && (
+                              <button onClick={() => handleButtonClick('SFAC 6')} className='menu-button-cell'>'SFAC 6'</button>
+                              )}
+                              {header[cellIndex] === 'Taxonomy' && (
+                                <button onClick={() => handleButtonClick('SFAC 8')} className='menu-button-cell'>'SFAC 8'</button>
+                                )}
+                                {header[cellIndex] === 'Taxonomy' && (
+                                  <button onClick={() => handleButtonClick('Common')} className='menu-button-cell'>'Common'</button>
+                                  )}
+                                  {header[cellIndex] === 'Taxonomy' && (
+                                    <button onClick={() => handleButtonClick('MINI')} className='menu-button-cell'>'MINI'</button>
+                                    )}
+
+                                    {header[cellIndex] === 'Taxonomy' && (
+                                      <button onClick={() => handleButtonClick('PROOF')} className='menu-button-cell'>'PROOF'</button>
+                                      )}
+
+                        {header[cellIndex] === 'NamespacePrefix' && (
+                          <button onClick={() => handleButtonClick('Prefix')} className='menu-button-cell'>'Prefix'</button>
+                          )}
+
+                          {header[cellIndex] === 'DefaultLanguage' && (
+                            <button onClick={() => handleButtonClick('EN')} className='menu-button-cell'>'EN'</button>
+                            )}
+
+                            {header[cellIndex] === 'DefaultLanguage' && (
+                              <button onClick={() => handleButtonClick('FR')} className='menu-button-cell'>'FR'</button>
+                              )}
+
+                              {header[cellIndex] === 'DefaultLanguage' && (
+                                <button onClick={() => handleButtonClick('DE')} className='menu-button-cell'>'DE'</button>
+                                )}
+                                {header[cellIndex] === 'DefaultLanguage' && (
+                                  <button onClick={() => handleButtonClick('JP')} className='menu-button-cell'>'JP'</button>
+                                  )}
+
+
+
+                       {header[cellIndex] === 'ReportElementCategory' && (
+                          <button onClick={() => handleButtonClick('Hypercube')} className='menu-button-cell'>'Hypercube'</button>
+                        )}
+                        {header[cellIndex] === 'ReportElementCategory' && (
+                           <button onClick={() => handleButtonClick('Dimension')} className='menu-button-cell'>'Dimension'</button>
+                         )}
+                         {header[cellIndex] === 'ReportElementCategory' && (
+                            <button onClick={() => handleButtonClick('Member')} className='menu-button-cell'>'Member'</button>
+                          )}
+                          {header[cellIndex] === 'ReportElementCategory' && (
+                             <button onClick={() => handleButtonClick('LineItems')} className='menu-button-cell'>'LineItems'</button>
+                           )}
+                           {header[cellIndex] === 'ReportElementCategory' && (
+                              <button onClick={() => handleButtonClick('Abstract')} className='menu-button-cell'>'Abstract'</button>
+                            )}
+                            {header[cellIndex] === 'ReportElementCategory' && (
+                               <button onClick={() => handleButtonClick('Concept')} className='menu-button-cell'>'Concept'</button>
+                             )}
+                             {header[cellIndex] === 'LabelRole' && (
+                                <button onClick={() => handleButtonClick('Standard')} className='menu-button-cell'>'Custom'</button>
+                              )}
+
+                              {header[cellIndex] === 'LabelRole' && (
+                                 <button onClick={() => handleButtonClick('PeriodStart')} className='menu-button-cell'>'Custom'</button>
+                               )}
+
+
+                             {header[cellIndex] === 'LabelRole' && (
+                                <button onClick={() => handleButtonClick('PeriodEnd')} className='menu-button-cell'>'Custom'</button>
+                              )}
+
+                              {header[cellIndex] === 'LabelRole' && (
+                                 <button onClick={() => handleButtonClick('Documentation')} className='menu-button-cell'>'Custom'</button>
+                               )}
+
+                        {header[cellIndex] === 'Prefix' && (
+                           <button onClick={() => handleButtonClick('Custom')} className='menu-button-cell'>'Custom'</button>
+                         )}
+
                       <button onClick={addRow} className='menu-button-cell'>Insert Row</button>
                       <button onClick={() => deleteRow(rowIndex)} className='menu-button-cell'>Delete Row</button>
 
-                      {header[cellIndex] === 'ReportElementCategory' && (
-                         <button onClick={() => handleButtonClick('Member')} className='menu-button-cell'>Member</button>
-                       )}
+
                                             {/* Add more buttons as needed */}
                     </div>
                   </div>
@@ -592,7 +683,10 @@ const handleCellMouseLeave = (e) => {
             )): <tr><td>hello</td></tr>}
           </tbody>
               </table>
+              <div class='bottomButtonWrap'>
               <button class='addrowButton' onClick={addRow} >Add Row</button>
+              <button class='addrowButton'  >Publish Schema</button>
+              </div>
 
               {isPopupVisible ? (
                 <div

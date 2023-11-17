@@ -185,17 +185,17 @@ function Prototype({listLoginInfo}) {
 
 
 
-  useEffect(() => {
-      const selectedSheetData = XLSX.utils.sheet_to_json(
-            dataStore.semanticWorkbook.Sheets['BaseInformation'],
-            { header: 1 }
-          );
-      console.log('overlayasdal')
+  // useEffect(() => {
+  //     const selectedSheetData = XLSX.utils.sheet_to_json(
+  //           dataStore.semanticWorkbook.Sheets['BaseInformation'],
+  //           { header: 1 }
+  //         );
+  //     console.log('overlayasdal')
+  //
+  //     console.log(selectedSheetData)
+  //     setSelectedSheetData(selectedSheetData);
 
-      console.log(selectedSheetData)
-      setSelectedSheetData(selectedSheetData);
-
-  }, [dataStore.semanticWorkbook]);
+   //}, [dataStore.semanticWorkbook]);
 
   const handleSchemaConfigSelection = (sheetTitle) => {
     setSchemaConfigSelected(true)
