@@ -1,6 +1,8 @@
 .xlsx-table {
   margin-top: 30px;
-  /* border: 2px solid grey; */
+  border-bottom: 2px solid #3498db; /* Border color */
+  border-right: 2px solid #3498db; /* Border color */
+
   top: 0;
   padding: 5px;
   display: inline-block;
@@ -99,32 +101,41 @@
   transition: background-color 0.3s; /* Smooth background color transition */
 }
 
+/* Style for the menu button on hover */
 .unique-menu-button:hover {
   background-color: #e0e0e0; /* Hover background color */
 }
 
+/* Style for the popup menu */
 .unique-popup-menu {
   position: absolute;
   top: 100%; /* Position the menu below the cell */
   left: 0;
   overflow-y: auto;
   display: none; /* Initially, hide the menu */
-  background-color: #f5f5f5; /* Subtle background color */
-  border: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background color */
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
   border-radius: 5px;
   z-index: 99999;
   padding: 10px;
 }
 
+/* Center the buttons */
+
+/* Show the menu when .unique-show is applied to .unique-menu-container */
 .unique-menu-show .unique-popup-menu {
-  display: block; /* Show the menu when .unique-show is applied to .unique-menu-container */
-  z-index: 99999;
+  display: block;
 }
 
-.bottomButtonWrap{
+/* Style for the container of buttons at the bottom */
+.bottomButtonWrap {
   display: flex;
+  margin-top: 10px; /* Adjust as needed */
 }
-.unique-menu-hide .unique-popup-menu{
+
+/* Hide the menu when .unique-menu-hide is applied to .unique-menu-container */
+.unique-menu-hide .unique-popup-menu {
   display: none;
 }
 
@@ -133,10 +144,28 @@
   background-color: lightgoldenrodyellow;
 }
 
+.unique-popup-menu {
+  /* ... other styles ... */
+  text-align: center; /* Center the buttons */
+}
 
-.menu-button-cell{
+.menu-button-cell {
+  border: none;
   border-radius: 5px;
+  padding: 8px 12px; /* Adjust padding as needed */
   margin-top: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: black !important;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  font-size: 14px; /* Adjust font size as needed */
+  background-color: #4CAF50; /* Default background color */
+  color: #fff; /* Default text color */
+  display: inline-block; /* Ensure buttons are displayed in a line */
+}
+
+.menu-button-cell:hover {
+  background-color: #45a049; /* Hover background color */
 }
 
 
@@ -246,6 +275,27 @@
   margin-bottom: -100px;
 
 }
+
+.addrowButton {
+  margin-top: 120px;
+  margin-left: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50; /* Green color */
+  color: white;
+  margin-bottom: -100px;
+
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+  /* Additional styles on hover */
+  .addrowButton:hover {
+    background-color: #45a049; /* Darker green color on hover */
+  }
+
 
 .ribbon-button {
   background-color: white;
