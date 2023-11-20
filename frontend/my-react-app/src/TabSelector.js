@@ -1,5 +1,5 @@
 // PrototypeHeader.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './PrototypeHeader.css';
 import image from './favicon.png';
 import { useDarkMode } from './DarkModeContext';
@@ -58,6 +58,13 @@ const handleTabClick = (selection)=>{
   setTabClicked(selection)
 }
 
+useEffect(() => {
+  // Set the default tab to 'Configuration' if no tab has been selected
+  if (tabClicked === null) {
+    handleTabSelection('Schema');
+    setTabClicked('Schema');
+  }
+}, [tabClicked, handleTabSelection]);
 
   return (
 
