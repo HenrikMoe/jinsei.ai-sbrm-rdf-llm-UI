@@ -66,7 +66,7 @@ const handleClearFalse = ()=>{
       <div className='dropdown-button'>New</div></div>
       </div>
 
-      <div className='titlez'>Luciano - git:main | version 0.215</div>
+      <div className='titlez'>Luciano - git:main | version 0.217</div>
 
     </div>
   );

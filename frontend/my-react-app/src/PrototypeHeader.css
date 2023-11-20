@@ -126,12 +126,16 @@
   border-radius: 2px;
   margin-left: 10px;
   color: black;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+
   display: flex;
 }
 
 .dropdown-button2:hover {
   border: none;
   padding: 10px !important;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+
   cursor: pointer;
   background-color: skyblue;
   padding: 10px;

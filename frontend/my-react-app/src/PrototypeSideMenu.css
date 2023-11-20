@@ -16,6 +16,8 @@
   margin-top: 80px;
   width: 250px;
   padding: 20px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+
   overflow-y: auto;
   overflow-x: auto;
   transition: width 0.05s; /* Add a smooth transition effect for width changes */
@@ -75,6 +77,8 @@
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+
   background-color: floralwhite;
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
@@ -100,6 +104,7 @@
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
   background-color: floralwhite;
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;

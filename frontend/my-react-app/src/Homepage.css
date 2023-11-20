@@ -74,31 +74,68 @@
 
 /* Homepage.css */
 .prototype-button {
-  background-color: black;
-  color: white;
-  border-radius: 30px;
+  background-color: #aedff7; /* Soft pastel blue color */
+  color: black;
+  border-radius: 15px;
   font-size: 36px; /* Increase the font size to make it bigger */
-  border: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 0px solid black;
+  border-top: 0px solid black;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  padding: 50px 160px; /* Increase the padding to make it bigger */
+  display: block;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  margin: 20px auto; /* Center the button horizontally */
+  cursor: pointer;
+}
+
+.prototype-button:hover {
+  background-color: skyblue; /* Soft pastel blue color */
+  color: black;
+  border-radius: 15px;
+  font-size: 36px; /* Increase the font size to make it bigger */
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
   box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
   padding: 50px 160px; /* Increase the padding to make it bigger */
   display: block;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
   margin: 20px auto; /* Center the button horizontally */
   cursor: pointer;
 }
 
 /* Homepage.css */
 .timeline-button {
-  background-color: black;
-  color: white;
-  border-radius: 30px;
+  background-color: #aedff7; /* Soft pastel blue color */
+  color: black;
+  border-radius: 15px;
   font-size: 36px; /* Increase the font size to make it bigger */
-  border: 2px solid black;
-  box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 0px solid black;
+  border-top: 0px solid black;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
   padding: 50px 160px; /* Increase the padding to make it bigger */
   display: block;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
   margin: 20px auto; /* Center the button horizontally */
   margin-top: 50px;
   cursor: pointer;
+}
+
+
+.timeline-button:hover {
+  background-color: skyblue; /* Soft pastel blue color */
+  color: black;
+  border-radius: 15px;
+  font-size: 36px; /* Increase the font size to make it bigger */
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  padding: 50px 160px; /* Increase the padding to make it bigger */
+  display: block;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 }
 
 .timeline-button2 {

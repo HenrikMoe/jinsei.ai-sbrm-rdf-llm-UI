@@ -298,9 +298,11 @@
 
 
 .ribbon-button {
-  background-color: white;
+  background-color: #aedff7; /* Soft pastel blue color */
   border: 2px solid grey;
   color: black;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -310,4 +312,6 @@
 
 .ribbon-button:hover {
   background-color: skyblue;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+
 }
