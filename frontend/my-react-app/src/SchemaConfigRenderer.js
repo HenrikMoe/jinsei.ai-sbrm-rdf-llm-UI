@@ -48,11 +48,11 @@ const XLSXSheetRenderer = ({
           if(initialData.length !== 1000){
             modifiedData = initialData.slice(1).map((row) => {
           //    // Ensure the row has the correct length
-              const filledRow = new Array(maxRowLength).fill('~');
+              const filledRow = new Array(maxRowLength).fill('------');
           //
           //    // Fill in the values from the original row
               row.forEach((value, columnIndex) => {
-                filledRow[columnIndex] = value !== undefined ? value : '~';
+                filledRow[columnIndex] = value !== undefined ? value : '------';
               });
           //
               return filledRow;
@@ -88,7 +88,7 @@ const XLSXSheetRenderer = ({
   console.log('running on datastore change');
 
   const addRow = () => {
-    const newRow = new Array(header.length).fill('~');
+    const newRow = new Array(header.length).fill('------');
     //setTableData([...tableData, newRow]);
     console.log('addingrowonooverlay')
     console.log(newRow)
@@ -135,7 +135,7 @@ const XLSXSheetRenderer = ({
     const newHeader = [...header, 'New Column'];
     setHeader(newHeader);
 
-    const newData = tableData.map((row) => [...row, '~']);
+    const newData = tableData.map((row) => [...row, '------']);
     setTableData(newData);
   };
 
@@ -194,7 +194,7 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
   const handleCellChange = (rowIndex, cellIndex, value) => {
     console.log('cellcontext')
     console.log(value)
-    value = value.replace(/:Add RowDelete RowContext/g, '~');
+    value = value.replace(/:Add RowDelete RowContext/g, '------');
 
     const updatedData = tableData.map((row, i) =>
       i === rowIndex
