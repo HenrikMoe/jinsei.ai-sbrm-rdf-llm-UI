@@ -92,7 +92,7 @@ run().catch(console.dir);
 
 
 
-const openai = new OpenAI();
+const openai = new OpenAI({ apiKey: CHAT_KEY });
 
 async function gpt35turboTest1() {
   var string = 'what do i use this for?'
