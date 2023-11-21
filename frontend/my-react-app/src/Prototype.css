@@ -1,13 +1,15 @@
 .arrive-button {
   background-color: black;
   color: white;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size: 18px; /* Increase the font size to make it bigger */
   border: 2px solid black;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
-  padding: 25px 80px; /* Increase the padding to make it bigger */
+  padding: 45px 80px; /* Increase the padding to make it bigger */
   display: block;
-  margin: 20px auto; /* Center the button horizontally */
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
+  margin: 30px auto; /* Center the button horizontally */
   cursor: pointer;
 }
 
@@ -24,6 +26,21 @@
   }
 }
 
+
+.arrive-button:hover {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px; /* Increase the font size to make it bigger */
+  border: 2px solid black;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
+  box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  padding: 45px 80px; /* Increase the padding to make it bigger */
+  display: block;
+  margin: 30px auto; /* Center the button horizontally */
+  cursor: pointer;
+}
 
 .fillerClass{
   margin-top: -100px;
@@ -47,10 +64,27 @@
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Center the modal */
   background-color: white;
-  padding: 20px;
+  padding: 50px;
   border: 2px solid #333;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
+  max-width: 400px; /* Set the maximum width of the modal */
+}
+
+
+.modal2:hover {
+  position: fixed;
+  margin-top: 300px;
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the modal */
+  background-color: white;
+  padding: 50px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
   max-width: 400px; /* Set the maximum width of the modal */
 }
 
