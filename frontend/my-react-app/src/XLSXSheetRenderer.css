@@ -14,7 +14,15 @@
   overflow-x: auto;
   background-color: #F8FAFC;
   border-collapse: separate;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
   border-radius: 10px !important;
+}
+
+.xlsx-table:hover {
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
 }
 
 
@@ -266,6 +274,14 @@
   padding: 10px;
   border-radius: 5px;
   margin-top: 10px;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
+}
+
+.subRibbon:hover {
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
 }
 
 .addrowButton{
@@ -289,11 +305,16 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
 }
-  /* Additional styles on hover */
+
+
   .addrowButton:hover {
     background-color: #45a049; /* Darker green color on hover */
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+    transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
   }
 
 
