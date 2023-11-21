@@ -84,10 +84,18 @@ useEffect(() => {
      >
        Configuration
      </div>
-      <div className='dropdown-button2' onClick={() => handleTabClick('Structure')}> Structures</div>
-      <div className='dropdown-button2' onClick={() => handleTabClick('Pipeline')}>Pipeline and Process Management</div>
-      <div className='dropdown-button2' onClick={() => handleTabClick('Canvas')}>Report Canvas</div>
-      <div className='dropdown-button2' onClick={() => handleTabClick('Canvas')}>Map</div>
+      <div
+      className={`dropdown-button2 ${tabClicked === 'Structure' ? 'selected-tab' : ''}`}
+      onClick={() => handleTabClick('Structure')}> Structures</div>
+      <div
+      className={`dropdown-button2 ${tabClicked === 'Pipeline' ? 'selected-tab' : ''}`}
+      onClick={() => handleTabClick('Pipeline')}>Pipeline and Process Management</div>
+      <div
+      className={`dropdown-button2 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
+      onClick={() => handleTabClick('Canvas')}>Report Canvas</div>
+      <div
+      className={`dropdown-button2 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
+      onClick={() => handleTabClick('Canvas')}>Map</div>
       </div>
 
 

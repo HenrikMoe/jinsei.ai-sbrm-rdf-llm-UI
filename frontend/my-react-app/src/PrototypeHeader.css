@@ -18,6 +18,32 @@
   z-index: 500;
   background-color: #F8FAFC;
   width: 145%;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
+}
+
+.prototype-header:hover {
+  background-color: white;
+  color: black;
+  /* border: 2px solid black; /* Set border style */
+  padding: 10px;
+  display: flex;
+  max-width: 1840px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  margin-top: 150px;
+  margin-left:27px;
+  margin-right:5px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  background-color: #F8FAFC;
+  width: 145%;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 10px -10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the top left */
+
 }
 
 
@@ -39,6 +65,34 @@
   margin-right:5px;
   top: 0;
   left: 0;
+  right: 0;
+  background-color: #F8FAFC;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
+  width: 145%;
+}
+
+.prototype-header2:hover {
+  background-color: #F8FAFC;
+  color: black;
+  /* border: 2px solid black; /* Set border style */
+  border-top: 2px solid lightslategrey;
+  border-bottom: 2px solid lightslategrey;
+  padding: 10px;
+  display: flex;
+  max-width: 1890px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  margin-top: 260px;
+  margin-bottom: 15px;
+  margin-left:0px;
+  margin-right:5px;
+  top: 0;
+  left: 0;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+
   right: 0;
   background-color: #F8FAFC;
   width: 145%;

@@ -3,9 +3,8 @@
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   padding: 20px;
-  width: 100%;
-  max-width: 1500px;
-  max-height: 800px;
+  max-width: 1000px;
+  max-height: 500px;
   overflow: auto;
   display: flex;
   margin-top: 40px;
@@ -54,7 +53,7 @@
 .elementTitle11{
   font-size: 20px;
   margin-top: 65px;
-  margin-bottom: 10px;
+  margin-bottom: -50px;
   margin-left: 100px;
 }
 

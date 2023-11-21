@@ -163,6 +163,8 @@
   grid-gap: 20px; /* Add spacing between columns */
   align-items: start; /* Align items to the top of the grid */
   padding: 20px; /* Add padding as needed */
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
   box-sizing: border-box; /* Include padding in the width */
 }
   /* Apply media query to adapt the layout for smaller screens (e.g., max-width: 768px) */
@@ -170,6 +172,7 @@
     .content-grid {grid-template-columns: 1fr; /* Stack columns for smaller screens */
   }
 }
+
 
 
 
