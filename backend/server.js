@@ -293,35 +293,46 @@ async function runConversation() {
 
 app.post('/api/user-info', async (req, res) => {
   try {
-    // Extract the data you want to write to the "admin" database from req.body
-    const { given_name, family_name, email, locale } = req.body; // Replace with actual keys
+    console.log(req.body);
 
+    const { given_name, family_name, email, locale, nbf, exp } = req.body;
+
+    // Convert Unix timestamps to Date objects
+    const notBefore = new Date(nbf * 1000);
+    const expirationTime = new Date(exp * 1000);
+    console.log(notBefore, expirationTime)
     // Access the "admin" database
     await client.connect();
     await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-    const db = client.db('');
+    console.log("Connected to MongoDB!");
 
-    // Construct the document to be inserted into a specific collection
-    const document = {
-      key1: given_name, // Replace with actual field name
-      key2: family_name, // Replace with actual field name
-      key3: email, // Replace with actual field name
-      key4: locale, // Replace with actual field name
+    // Access a specific database within MongoDB
+    const db = client.db('your-database-name'); // Replace with your database name
 
-    };
-
-    // Access a specific collection within the "admin" database
+    // Access a specific collection within the database
     const collection = db.collection('userInfo'); // Replace with your collection name
+
+    // Construct the document to be inserted into the collection
+    const document = {
+      key1: given_name,
+      key2: family_name,
+      key3: email,
+      key4: locale,
+      key6: notBefore,
+      key7: expirationTime,
+    };
 
     // Insert the document into the collection
     const result = await collection.insertOne(document);
 
     console.log('Inserted a document with _id:', result.insertedId);
 
-    res.json({ message: 'Data written to the admin database successfully.' });
+    res.json({ message: 'Data written to the database successfully.' });
   } catch (error) {
     console.error('Error:', error);
     res.status(500).json({ error: 'An error occurred while processing your request.' });
+  } finally {
+    // Close the MongoDB connection
+    await client.close();
   }
 });
