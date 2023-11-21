@@ -153,7 +153,7 @@
   margin-top: 205px;
   margin-left: 0px;
   margin-right: 5px;
-  background-color: #F8FAFC;
+  background-color: lightgrey;
   display: grid;
   width: 1878px;
   margin-bottom: -1200px;
@@ -186,7 +186,7 @@
   border-radius: 0px !important;
   transform: scale(0.67);
   margin-bottom: -20px;
-  background-color: #F8FAFC;
-  width: 145%;
+  background-color: lightgrey;
+  width: 140%;
   transform-origin: 0 0;
 }

@@ -120,6 +120,7 @@
   color: #fff;
   font-weight: bold;
   padding: 10px 20px;
+  max-height: 50px;
   border: none;
   cursor: pointer;
   margin-right: 10px;

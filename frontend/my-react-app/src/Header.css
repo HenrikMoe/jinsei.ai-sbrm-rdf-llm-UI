@@ -13,7 +13,7 @@
     padding: 10px 20px;
     margin: 0;
     transition: opacity 0.5s; /* Transition the opacity property over 0.5 seconds */
-    width: 105%; /* Increase the width to compensate for the scaling */
+    width: 106%; /* Increase the width to compensate for the scaling */
     transform: scale(0.92);
     transform-origin: 0 0;
   }
