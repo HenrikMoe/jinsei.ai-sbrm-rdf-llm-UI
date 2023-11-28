@@ -133,12 +133,16 @@
 
 /* Show the menu when .unique-show is applied to .unique-menu-container */
 .unique-menu-show .unique-popup-menu {
-  display: block;
+  display: flex;
+  z-index: 999999;
+  overflow-y: visible;
+  margin-bottom: 5px;
 }
 
 /* Style for the container of buttons at the bottom */
 .bottomButtonWrap {
   display: flex;
+  margin-left: 5px;
   margin-top: 10px; /* Adjust as needed */
 }
 
@@ -162,6 +166,7 @@
   border-radius: 5px;
   padding: 8px 12px; /* Adjust padding as needed */
   margin-top: 5px;
+  margin-left: 5px;
   margin-bottom: 10px;
   cursor: pointer;
   color: black !important;
@@ -269,7 +274,6 @@
 .subRibbon{
   display: flex;
   justify-content: space-between;
-  background-color: #007bff;
   color: white;
   padding: 10px;
   border-radius: 5px;
@@ -336,11 +340,12 @@
   border: 2px solid grey;
   color: black;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
-
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   margin: 5px;
+  margin-top: 20px;
+  box-shadow: 5px 5px rgba(0,0,0,0.2);
   border-radius: 5px;
 }
 

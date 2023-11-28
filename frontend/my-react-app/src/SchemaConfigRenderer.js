@@ -390,8 +390,6 @@ const handleClearFalse = ()=>{
           <Delete />
           <Upload />
           <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
-          <button className="ribbon-button">Change Report Overlay  </button>
-          <button className="ribbon-button">Import Report Overlay </button>
         </div>
 
           <div className='subRibbon' >
@@ -493,18 +491,17 @@ const handleClearFalse = ()=>{
           <Popup />
           <Delete />
           <Upload />
+          <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
+
+        </div>
+
+          <div className='subRibbon' >
           <button className="ribbon-button" data-subsheet='Rules-Consistency' onClick={() => handleSubSheetSelect('Rules-Consistency')}>Consistency</button>
           <button className="ribbon-button" data-subsheet='Rules-RollForward' onClick={() => handleSubSheetSelect('Rules-RollForward')}>RollForward</button>
           <button className="ribbon-button" data-subsheet='Rules-MemberAggregation' onClick={() => handleSubSheetSelect('Rules-MemberAggregation')}>Member Aggregation</button>
           <button className="ribbon-button" data-subsheet='Rules-Adjustment' onClick={() => handleSubSheetSelect('Rules-Adjustment')}>Adjustment</button>
           <button className="ribbon-button" data-subsheet='Rules-Variance' onClick={() => handleSubSheetSelect('Rules-Variance')}>Variance</button>
           <button className="ribbon-button" data-subsheet='Rules-Nonstandard' onClick={() => handleSubSheetSelect('Rules-Nonstandard')}>Nonstandard</button>
-        </div>
-
-          <div className='subRibbon' >
-          <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
-          <button className="ribbon-button">Change Report Overlay  </button>
-          <button className="ribbon-button">Import Report Overlay </button>
           </div>
 
 
@@ -599,8 +596,6 @@ const handleClearFalse = ()=>{
             <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
             <Upload />
             <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
-            <button className="ribbon-button">Change Report Overlay  </button>
-            <button className="ribbon-button">Import Report Overlay </button>
           </div>
 
 
