@@ -89,7 +89,7 @@ useEffect(() => {
       onClick={() => handleTabClick('Structure')}> Structures</div>
       <div
       className={`dropdown-button2 ${tabClicked === 'Pipeline' ? 'selected-tab' : ''}`}
-      onClick={() => handleTabClick('Pipeline')}>Pipeline and Process Management</div>
+      onClick={() => handleTabClick('Pipeline')}>Process Management</div>
       <div
       className={`dropdown-button2 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
       onClick={() => handleTabClick('Canvas')}>Report Canvas</div>

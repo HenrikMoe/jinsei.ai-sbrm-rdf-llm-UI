@@ -293,7 +293,7 @@
 }
 
 .addrowButton {
-  margin-top: 120px;
+  margin-top: 90px;
   margin-left: 20px;
   display: inline-block;
   padding: 10px 20px;
@@ -307,6 +307,19 @@
   font-size: 16px;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 
+}
+
+
+.button-wrapAY{
+  margin-top: -50px;
+  display: flex;
+  margin-left: 100px;
+}
+
+.button-wrapAY2{
+  margin-top: 10px;
+  display: flex;
+  margin-left: 100px;
 }
 
 

@@ -40,6 +40,13 @@ const handleClearFalse = ()=>{
 // <ProcessModal />
 // <Modal />
 // </div>
+
+// <div className='button-wrap'>
+// <Model  handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
+// <Popup onFileUpload={onFileUpload} />
+// <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
+// <Upload />
+// </div>
   return (
 
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
@@ -52,21 +59,17 @@ const handleClearFalse = ()=>{
         <Files /></div>
         </div>
 
-        <div className='button-wrap'>
-        <Model  handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
-        <Popup onFileUpload={onFileUpload} />
-        <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
-        <Upload />
-      </div>
+
 
       <div className='button-wrap'>
       <div className='popup-container'>
       <div className='dropdown-button'>Share</div></div>
       <div className='popup-container'>
       <div className='dropdown-button'>New</div></div>
+      
       </div>
 
-      <div className='titlez'>Luciano - git:main | version 0.221</div>
+      <div className='titlez'>Luciano - git:main | version 0.225</div>
 
     </div>
   );

@@ -1,6 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './XLSXSheetRenderer.css'; // Import your CSS file
 import Footer from './Footer';
+import Popup from './Popup';
+import Upload from './Upload';
+import Delete from './Delete'
+import Project from './Project'
+import Transform from './Transform'
+import Pipeline from './Pipeline'
+import Files from './Files'
+import Projects from './Projects'
+import Model from './Model'
+import Modal from './Modal'
+import ProcessModal from './ProcessModal'
 
 const XLSXSheetRenderer = ({
   overlaidModelName,
@@ -15,6 +26,9 @@ const XLSXSheetRenderer = ({
   runTogether,
   handleSchemaSubConfigSelection,
   stateSubSheet,
+  handleOverlayChange,
+  handleOverlaidSelection,
+  onFileUpload,
 }) => {
   // Initialize tableData with an empty array
 
@@ -251,7 +265,7 @@ if(!dataStore.semanticWorkbookSheet){dataStore.changeOverLaidModelDefault()}
 
     // Calculate the position for the popup message
     const x = cellRect.left + cellRect.width / 2;
-    const y = cellRect.top - 250; // Adjust as needed
+    const y = cellRect.top - 100; // Adjust as needed
 
     setPopupPosition({ x, y });
     setIsPopupVisible(true);
@@ -346,19 +360,43 @@ const [isPopupVisible2, setIsPopupVisible2] = useState(false);
     // You may want to update dataStore or perform other actions as needed
   };
 
+  const [xlsxData, setXLSXData] = useState(null);
+console.log(onFileUpload)
 
-//conditinally render the subtype menu
+const [clear, setClear] = useState(null);
+
+const handleClearTrue = ()=>{
+  setClear(true)
+}
+
+const handleClearFalse = ()=>{
+  setClear(false)
+}
+
+//model passed objs ; handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}
+//popup ; onFileUpload={onFileUpload}
+//delete ;  handleClearTrue={handleClearTrue} dataStore={dataStore}
+
   return (
+
     <div className="table-wrap">
       {sheetTitle[0] === 'Facts' ? (
           <div className='schemaRibbon'>
           <div className="elementTitle2">Configure Schema </div>
 
-          <div className='subRibbon' >
-
+          <div className='button-wrapAY'>
+          <Model   />
+          <Popup />
+          <Delete />
+          <Upload />
           <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
           <button className="ribbon-button">Change Report Overlay  </button>
           <button className="ribbon-button">Import Report Overlay </button>
+        </div>
+
+          <div className='subRibbon' >
+
+
           <button className="ribbon-button" data-subsheet="Facts" onClick={() => handleSubSheetSelect('Facts')}>Facts</button>
           <button className="ribbon-button" data-subsheet="Facts-Dimensions"   onClick={() => handleSubSheetSelect('Facts-Dimensions')}>Dimensions</button>
           <button className="ribbon-button" data-subsheet="Facts-Parenthetical"  onClick={() => handleSubSheetSelect('Facts-Parenthetical')}>Parenthetical</button>
@@ -450,17 +488,23 @@ const [isPopupVisible2, setIsPopupVisible2] = useState(false);
           <div className='schemaRibbon'>
           <div className="elementTitle2">Configure Schema </div>
 
-
-          <div className='subRibbon' >
-          <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
-          <button className="ribbon-button">Change Report Overlay  </button>
-          <button className="ribbon-button">Import Report Overlay </button>
+          <div className='button-wrapAY'>
+          <Model   />
+          <Popup />
+          <Delete />
+          <Upload />
           <button className="ribbon-button" data-subsheet='Rules-Consistency' onClick={() => handleSubSheetSelect('Rules-Consistency')}>Consistency</button>
           <button className="ribbon-button" data-subsheet='Rules-RollForward' onClick={() => handleSubSheetSelect('Rules-RollForward')}>RollForward</button>
           <button className="ribbon-button" data-subsheet='Rules-MemberAggregation' onClick={() => handleSubSheetSelect('Rules-MemberAggregation')}>Member Aggregation</button>
           <button className="ribbon-button" data-subsheet='Rules-Adjustment' onClick={() => handleSubSheetSelect('Rules-Adjustment')}>Adjustment</button>
           <button className="ribbon-button" data-subsheet='Rules-Variance' onClick={() => handleSubSheetSelect('Rules-Variance')}>Variance</button>
           <button className="ribbon-button" data-subsheet='Rules-Nonstandard' onClick={() => handleSubSheetSelect('Rules-Nonstandard')}>Nonstandard</button>
+        </div>
+
+          <div className='subRibbon' >
+          <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
+          <button className="ribbon-button">Change Report Overlay  </button>
+          <button className="ribbon-button">Import Report Overlay </button>
           </div>
 
 
@@ -549,11 +593,17 @@ const [isPopupVisible2, setIsPopupVisible2] = useState(false);
             {/* Top ribbon with three buttons */}
             <div className="elementTitle2">Configure Schema </div>
 
-            <div className='subRibbon'>
+            <div className='button-wrapAY'>
+            <Model  handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
+            <Popup onFileUpload={onFileUpload} />
+            <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
+            <Upload />
             <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
             <button className="ribbon-button">Change Report Overlay  </button>
             <button className="ribbon-button">Import Report Overlay </button>
-            </div>
+          </div>
+
+
 
             {dataStore.semanticWorkbookSheet ?  <div> <table className='xlsx-table'
               >
