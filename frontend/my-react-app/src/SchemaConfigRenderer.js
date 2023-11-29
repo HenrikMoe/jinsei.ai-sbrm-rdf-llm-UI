@@ -373,6 +373,21 @@ const handleClearFalse = ()=>{
   setClear(false)
 }
 
+
+const [isModal, setIsModal] = useState(false);
+
+const setIsModalOn =()=>{
+  setIsModal(true)
+}
+
+const setModalOff =()=>{
+  setIsModal(false)
+}
+
+console.log('isModal')
+
+console.log(isModal)
+
 //model passed objs ; handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}
 //popup ; onFileUpload={onFileUpload}
 //delete ;  handleClearTrue={handleClearTrue} dataStore={dataStore}
@@ -590,8 +605,12 @@ const handleClearFalse = ()=>{
             {/* Top ribbon with three buttons */}
             <div className="elementTitle2">Configure Schema </div>
 
+            {isModal? <Modal setModalOff={setModalOff} isModal={isModal}/> : <div></div>}
+
+
+
             <div className='button-wrapAY'>
-            <Model  handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
+            <Model  setIsModal={setIsModalOn} handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
             <Popup onFileUpload={onFileUpload} />
             <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
             <Upload />

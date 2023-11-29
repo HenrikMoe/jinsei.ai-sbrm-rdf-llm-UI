@@ -4,8 +4,9 @@ import { useDarkMode } from './DarkModeContext';
 import XLSXFileHandler from './XLSXFileHandler';
 import CSVFileHandler from './CSVFileHandler';
 import JSONfileHandler from './JSONfileHandler';
+import Modal from './Modal'
 
-const Model = ({ handleOverlayChange, handleClearFalse, clear, sheetTitle, handleOverlaidSelection, updateForm, dataStore }) => {
+const Model = ({ handleOverlayChange, handleClearFalse, clear, sheetTitle, handleOverlaidSelection, updateForm, dataStore, setIsModal }) => {
   const { isDarkMode } = useDarkMode();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -25,6 +26,8 @@ const Model = ({ handleOverlayChange, handleClearFalse, clear, sheetTitle, handl
   const closeDropdown = () => {
     setIsDropdownOpen(false);
   };
+
+
 
 
 
@@ -49,13 +52,18 @@ const Model = ({ handleOverlayChange, handleClearFalse, clear, sheetTitle, handl
 
     //semanticWorkbook
     handleOverlaidSelection()
+
+    setIsModal()
   };
+
 
   useEffect(() => {
     if(clear === true){
       setSelectedModel('Local Report Scheme')
     }
   }, [clear]);
+
+
 
 
   useEffect(() => {

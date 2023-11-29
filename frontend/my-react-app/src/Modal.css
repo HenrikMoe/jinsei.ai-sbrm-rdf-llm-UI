@@ -1,6 +1,6 @@
 /* Modal.css */
 .modal-container {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -53,6 +53,7 @@
 
 .modal-content {
   padding: 20px;
+  color: black;
   /* Add any styles you want for the content here */
 }
 

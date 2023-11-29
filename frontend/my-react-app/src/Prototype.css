@@ -90,7 +90,7 @@
 
 /* Add styling for the modal */
 .modal {
-  position: fixed;
+  position: block;
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Center the modal */
@@ -98,6 +98,10 @@
   padding: 20px;
   border: 2px solid #333;
   border-radius: 5px;
+  margin-top: 200px;
+  margin-left: 0px;
+  height: 300px;
+  z-index: 9999999;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   max-width: 400px; /* Set the maximum width of the modal */
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Modal.css';
 
-const Modal = () => {
+const Modal = ({setModalOff, isModal}) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const modalRef = useRef(null);
 
@@ -11,6 +11,7 @@ const Modal = () => {
 
   const closeModal = () => {
     setModalOpen(false);
+    setModalOff()
   };
 
   useEffect(() => {
@@ -33,18 +34,15 @@ const Modal = () => {
   }, [isModalOpen]);
 
   return (
-    <div className="popup-container">
-      <button onClick={openModal} className="dropdown-button">
-        Summary
-      </button>
-      {isModalOpen && (
+    <div >
+
+      {isModal && (
         <div className="modal" >
           <button onClick={closeModal} className="close-button">
             X
           </button>
           <div className="modal-content">
-            {/* Your summary page content goes here */}
-            {/* You can add a lot of content, and it will be scrollable */}
+          This is where we select what ovelray things to import into the model
           </div>
         </div>
       )}
