@@ -596,6 +596,8 @@ const handleClearFalse = ()=>{
             <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
             <Upload />
             <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
+            <button className="ribbon-button" onClick={() => createSchemaElement()}>View Report</button>
+
           </div>
 
 
