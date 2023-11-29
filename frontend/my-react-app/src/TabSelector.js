@@ -86,7 +86,7 @@ useEffect(() => {
      </div>
       <div
       className={`dropdown-button2 ${tabClicked === 'Structure' ? 'selected-tab' : ''}`}
-      onClick={() => handleTabClick('Structure')}> Structures</div>
+      onClick={() => handleTabClick('Structure')}>  Report</div>
       <div
       className={`dropdown-button2 ${tabClicked === 'Pipeline' ? 'selected-tab' : ''}`}
       onClick={() => handleTabClick('Pipeline')}>Process Management</div>

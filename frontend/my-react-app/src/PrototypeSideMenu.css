@@ -64,7 +64,7 @@
   border-right: 2px solid lightslategrey;
   z-index: -500;
   margin-top: 5px;
-  width: 250px;
+  width: 300px;
   padding: 20px;
   overflow-y: auto;
   overflow-x: auto;
@@ -72,10 +72,52 @@
   display: inline-block; /* Prevent vertical expansion */
 }
 
+.prototype-side-menu5 .additional-button {
+  margin-top: 10px; /* Adjust as needed */
+  margin-top: 50px;
+  margin-left: 10px; /* Adjust as needed */
+  background-color: #3498db; /* Example background color */
+  color: #fff; /* Example text color */
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.prototype-side-menu5 .additional-button:hover {
+  background-color: #2980b9; /* Example hover background color */
+}
 
 .structureInstanceWrap{
   margin-top: 00px;
   margin-left: -215px;
+}
+
+.reportHeader{
+  display: block;
+  padding-right: 10px;
+  border-right: 1px solid black;
+  margin-left: 10px;
+  font-size: 1.2em;
+  justify-content: center; /* Horizontal centering */
+align-items: center; /* Vertical centering */
+
+  text-align: center;
+
+}
+
+.reportHeaderWrapper{
+  display: flex;
+  text-align: center;
+  margin-top: 10px;
+  justify-content: center; /* Horizontal centering */
+align-items: center; /* Vertical centering */
+
+  margin-bottom: 20px;
+}
+
+.reportWrap{
+  display: block;
+width: 1400px;
 }
 
 .structureInstance{
@@ -109,6 +151,8 @@
   border-radius: 3px;
 }
 
+
+
 .prototype-side-menu5 ul {
   list-style: none;
   padding: 0;
@@ -135,6 +179,10 @@
   border-radius: 3px;
 }
 
+.easy{
+  display: flex;
+  margin-left: 10px;
+}
 
 .sidemenu-title {
   margin-top: -15px;
@@ -165,6 +213,9 @@
 
 .elementTitle6{
   margin-bottom: 40px;
+  margin-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid black;
   font-size: 20px;
 }
 

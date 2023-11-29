@@ -107,11 +107,11 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
         ref={resizeRef} // Reference to the resize area
       >
       </div>
-      <div className='elementTitle6'>Report Taxonomy</div>
+      <div className='elementTitle6'>Report Model</div>
 
        <ul>
        <div className='sidemenu-title'> {dataStore.workbookXLSX ? xlsxTitle : null} </div>
-        {dataStore.semanticStrucutreInstanceTaxonomy ? dataStore.semanticStrucutreInstanceTaxonomy.map((title, index) => (
+        {dataStore.lucaSideMenu ? dataStore.lucaSideMenu.map((title, index) => (
           <li
              key={title}
              contentEditable

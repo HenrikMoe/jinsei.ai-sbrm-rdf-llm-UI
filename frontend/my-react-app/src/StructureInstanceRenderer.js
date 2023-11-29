@@ -115,11 +115,34 @@ const XLSXSheetRenderer = ({
 //conditinally render the subtype menu
 return (
     <div className='structureInstanceWrap2'>
-  <div className="elementTitle5">Report Instances </div>
+  <div className="elementTitle5">Report Viewing and Editing </div>
   <div className='balance-sheet'>
   <div>
       <XBRLComponentTaxonomy dataStore={dataStore}/>
       </div>
+
+      <div className='reportWrap'>
+
+      <div className='reportHeaderWrapper'>
+      <div className='reportHeader'>Rendering</div>
+      <div className='reportHeader'>Model</div>
+      <div className='reportHeader'>Fact Table</div>
+      <div className='reportHeader'>Rules</div>
+      <div className='reportHeader'>Verification</div>
+      <div className='reportHeader'>Report Elements</div>
+      </div>
+
+      <div className='reportHeaderWrapper'>
+      <div className='reportHeader'>Import</div>
+      <div className='reportHeader'>Export</div>
+      <div className='reportHeader'>FullScreen</div>
+      <div className='reportHeader'>Attach to Process</div>
+      <div className='reportHeader'>View</div>
+
+
+
+      </div>
+
       <table className='balance-sheet-table'>
       <thead>
         {dataStore.semanticStrucutreInstanceTaxonomy ? (
@@ -155,6 +178,19 @@ return (
         )}
       </tbody>
     </table>
+    {tableData.length > 0 ? (
+      <div className="buttons-wrap">
+        <button className="table-button" onClick={addRow}>
+          Add Row
+        </button>
+        <button className="table-button" onClick={addColumn}>
+          Add Column
+        </button>
+      </div>
+    ) : (
+      <div className="table-button">N/A</div>
+    )}
+      </div>
 
     {isPopupVisible ? (
       <div
@@ -169,18 +205,7 @@ return (
       </div>
     ) : null}
 
-    {tableData.length > 0 ? (
-      <div className="buttons-wrap">
-        <button className="table-button" onClick={addRow}>
-          Add Row
-        </button>
-        <button className="table-button" onClick={addColumn}>
-          Add Column
-        </button>
-      </div>
-    ) : (
-      <div className="table-button">N/A</div>
-    )}
+
   </div>
   </div>
   );

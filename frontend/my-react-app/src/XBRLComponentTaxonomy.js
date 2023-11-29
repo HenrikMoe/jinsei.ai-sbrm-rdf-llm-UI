@@ -92,8 +92,13 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
    const handleTitleChange = (index, title, titleChange) => {
     dataStore.updateDataTaxonomyXLSX(index, titleChange)
    }
+   const [isButtonVisible, setIsButtonVisible] = useState(false);
 
-
+   // {isButtonVisible && (
+   //   <button className='additional-button'>
+   //     Additional Button
+   //   </button>
+   // )}
  return (
    <div className='structureInstance'>
     <div className='elementTitle'>Structures</div>
@@ -107,23 +112,51 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
         ref={resizeRef} // Reference to the resize area
       >
       </div>
-      <div className='elementTitle6'>Elements</div>
 
-       <ul>
-       <div className='sidemenu-title'> {dataStore.workbookXLSX ? xlsxTitle : null} </div>
-        {dataStore.structureInstanceComponentExample ? dataStore.structureInstanceComponentExample.map((title, index) => (
-          <li
-             key={title}
-             contentEditable
-             className={`${isDarkMode ? 'dark-mode' : ''} ${title === selectedSheet && !schemaConfigSelected ? 'selected' : ''} ${
-               index === 0 && isFirstSheetSelected ? 'selected' : '' // Highlight the first title
-             }`}
-            //onClick={() => handleStructureInstanceSelect(index, title)}
-           >
-             {title}
-           </li>
-         )): <li className='sidemenu-title'> Sheets </li> }
-       </ul>
+      <div className='easy'>
+      <div className='elementTitle6'>Tree</div>
+      <div className='elementTitle6'>Details</div>
+      <div className='elementTitle6'>Agendas</div>
+      </div>
+
+      <div className='easy'>
+      <div className='elementTitle6'>Networks: 14</div>
+      <div className='elementTitle6'>Type Sort ^</div>
+      </div>
+
+      <ul>
+        <div className='sidemenu-title'>
+          {dataStore.workbookXLSX ? xlsxTitle : null}
+        </div>
+        {dataStore.structureInstanceComponentExample
+          ? dataStore.structureInstanceComponentExample.map(
+              (title, index) => (
+                <li
+                  key={title}
+                  contentEditable
+                  className={`${
+                    isDarkMode ? 'dark-mode' : ''
+                  } ${title === selectedSheet &&
+                  !schemaConfigSelected
+                    ? 'selected'
+                    : ''} ${
+                    index === 0 && isFirstSheetSelected
+                      ? 'selected'
+                      : ''
+                  }`}
+                  onClick={() => {
+                    // handleStructureInstanceSelect(index, title);
+                    setIsButtonVisible(true);
+                  }}
+                >
+                  {title}
+
+                </li>
+              )
+            )
+          : <li className='sidemenu-title'> Sheets </li>}
+      </ul>
+
      </div>
      </div>
    );
