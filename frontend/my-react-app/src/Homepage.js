@@ -127,14 +127,14 @@ function Homepage() {
     <div className={`homepage-container ${isDarkMode ? 'dark-mode1' : ''}`}>
 
       <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Global standards based business reporting pipelines.')}
+        {t('Standards based disclosure reporting pipelines.')}
       </div>
       <button onClick={handlePrototypeClick} className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
          Luciano
       </button>
 
       <div className={`arriving-text2 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Global standards based transaction service hosting.')}
+        {t('Transaction service hosting solutions.')}
       </div>
 
 
