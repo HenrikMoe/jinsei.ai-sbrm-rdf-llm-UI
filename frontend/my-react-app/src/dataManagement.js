@@ -285,7 +285,7 @@ const dataStore = {
   canvases: ['Complete Canvas', 'Instances', 'Schemes + Instances', 'Pipelines + Schemes + Instances'],
 
 
-  ai: ['Q & A', 'Summary'],
+  ai: ['Co-Pilot Q & A', 'Summary', 'Notifications'],
 
   //deprecttaed?
   deployedRenderings: null,

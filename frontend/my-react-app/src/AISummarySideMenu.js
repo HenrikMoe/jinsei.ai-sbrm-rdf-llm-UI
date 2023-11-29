@@ -106,7 +106,7 @@ const PrototypeSideMenu = ({ handleAISummarySheetSelection, sheetTitles, onSheet
         ref={resizeRef} // Reference to the resize area
       >
       </div>
-      <div className='elementTitle6'>Co-Pilot</div>
+      <div className='elementTitle6'></div>
 
        <ul>
        <div className='sidemenu-title'> </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Modal.css';
 
-const Modal = ({setModalOff, isModal}) => {
+const Modal = ({setModalOff, isModal, exportStatus, setExportFalse }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const modalRef = useRef(null);
 
@@ -11,7 +11,11 @@ const Modal = ({setModalOff, isModal}) => {
 
   const closeModal = () => {
     setModalOpen(false);
-    setModalOff()
+    if(setModalOff){
+      setModalOff()
+    }else{
+      setExportFalse()
+    }
   };
 
   useEffect(() => {
@@ -37,6 +41,16 @@ const Modal = ({setModalOff, isModal}) => {
     <div >
 
       {isModal && (
+        <div className="modal" >
+          <button onClick={closeModal} className="close-button">
+            X
+          </button>
+          <div className="modal-content">
+          This is where we select what ovelray things to import into the model
+          </div>
+        </div>
+      )}
+      {exportStatus && (
         <div className="modal" >
           <button onClick={closeModal} className="close-button">
             X
