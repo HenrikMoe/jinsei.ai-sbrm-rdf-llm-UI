@@ -134,7 +134,7 @@ function Homepage() {
       </button>
 
       <div className={`arriving-text2 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Global standards based transaction service hosting.')}
+        {t('Transaction service hosting.')}
       </div>
 
 

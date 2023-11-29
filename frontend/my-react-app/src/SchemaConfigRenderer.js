@@ -613,9 +613,8 @@ console.log(isModal)
             <Model  setIsModal={setIsModalOn} handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
             <Popup onFileUpload={onFileUpload} />
             <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
-            <Upload />
             <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
-            <button className="ribbon-button" onClick={() => createSchemaElement()}>View Report</button>
+            <button className="ribbon-button" onClick={() => createSchemaElement()}>Report</button>
 
           </div>
 
