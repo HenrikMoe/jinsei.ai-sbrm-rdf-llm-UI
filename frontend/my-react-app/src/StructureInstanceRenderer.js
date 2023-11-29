@@ -116,9 +116,11 @@ const XLSXSheetRenderer = ({
 return (
     <div className='structureInstanceWrap2'>
   <div className="elementTitle5">Report Viewing and Editing </div>
+
+  <div className='reportWraper'>
+  <XBRLComponentTaxonomy dataStore={dataStore}/>
   <div className='balance-sheet'>
   <div>
-      <XBRLComponentTaxonomy dataStore={dataStore}/>
       </div>
 
       <div className='reportWrap'>
@@ -207,6 +209,8 @@ return (
 
 
   </div>
+  </div>
+
   </div>
   );
 

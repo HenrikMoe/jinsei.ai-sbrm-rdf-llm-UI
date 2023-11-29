@@ -76,7 +76,7 @@ useEffect(() => {
        className={`dropdown-button2 ${tabClicked === 'AI' ? 'selected-tab' : ''}`}
        onClick={() => handleTabClick('AI')}
      >
-       Co-Pilot Overview
+       State Summary
      </div>
      <div
        className={`dropdown-button2 ${tabClicked === 'Schema' ? 'selected-tab' : ''}`}
@@ -92,10 +92,13 @@ useEffect(() => {
       onClick={() => handleTabClick('Pipeline')}>Process Management</div>
       <div
       className={`dropdown-button2 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
-      onClick={() => handleTabClick('Canvas')}>Report Canvas</div>
+      onClick={() => handleTabClick('Canvas')}>Canvas Map</div>
       <div
       className={`dropdown-button2 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
-      onClick={() => handleTabClick('Canvas')}>Map</div>
+      onClick={() => handleTabClick('Canvas')}>Publish</div>
+      <div
+      className={`dropdown-button2 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
+      onClick={() => handleTabClick('Canvas')}>Documentation</div>
       </div>
 
 

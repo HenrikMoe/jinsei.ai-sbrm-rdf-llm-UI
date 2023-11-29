@@ -54,18 +54,19 @@
   color: black;
   /* border: 2px solid black; /* Set border style */
   height: 630px;
-  margin-bottom: -200px;
+  margin-bottom:-600px;
   top: 0;
   left: 0;
-  margin-left: 0px;
+  margin-left: 50px;
   margin-right: 15px;
   bottom: 0;
   background-color: #F8FAFC;
   border-right: 2px solid lightslategrey;
   z-index: -500;
-  margin-top: 5px;
+  margin-top: 25px;
   width: 300px;
   padding: 20px;
+  max-height: 550px;
   overflow-y: auto;
   overflow-x: auto;
   transition: width 0.05s; /* Add a smooth transition effect for width changes */
@@ -117,7 +118,7 @@ align-items: center; /* Vertical centering */
 
 .reportWrap{
   display: block;
-width: 1400px;
+width: 1050px;
 }
 
 .structureInstance{

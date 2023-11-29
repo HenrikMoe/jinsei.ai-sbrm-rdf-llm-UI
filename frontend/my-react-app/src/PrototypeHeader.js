@@ -63,10 +63,12 @@ const handleClearFalse = ()=>{
 
       <div className='button-wrap'>
       <div className='popup-container'>
+      <div className='dropdown-button'>Records</div></div>
+      <div className='popup-container'>
       <div className='dropdown-button'>Share</div></div>
       <div className='popup-container'>
       <div className='dropdown-button'>New</div></div>
-      
+
       </div>
 
       <div className='titlez'>Luciano - git:main | version 0.225</div>
