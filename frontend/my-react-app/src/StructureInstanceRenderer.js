@@ -232,6 +232,18 @@ return (
     padding: '10px'
   }}>Report Elements</div>
   </div>
+
+  {isRendering ? <div>
+    <div className='reportHeaderWrapper'>
+      <div className='reportHeader'>Import</div>
+      <div className='reportHeader'>Export</div>
+      <div className='reportHeader'>FullScreen</div>
+      <div className='reportHeader'>Attach to Process</div>
+      <div className='reportHeader'>View</div>
+      </div>
+    </div> : <div></div>}
+
+
   <div className='balance-sheet'>
   <div>
       </div>
@@ -242,13 +254,7 @@ return (
 
 
       {isRendering ? <div>
-          <div className='reportHeaderWrapper'>
-      <div className='reportHeader'>Import</div>
-      <div className='reportHeader'>Export</div>
-      <div className='reportHeader'>FullScreen</div>
-      <div className='reportHeader'>Attach to Process</div>
-      <div className='reportHeader'>View</div>
-      </div>
+
 
       <table className='balance-sheet-table'>
       <thead>
@@ -318,7 +324,7 @@ return (
 
 
       <tbody>
-        {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+        {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
           <tr key={rowIndex}>
 
             {row.map((cell, cellIndex) => (
@@ -334,7 +340,7 @@ return (
 
             ))}
 
-            {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+            {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
               <td
                 key={cellIndex}
                 contentEditable
@@ -358,7 +364,7 @@ return (
 
 
       <tbody>
-        {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+        {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
           <tr key={rowIndex}>
 
             {row.map((cell, cellIndex) => (

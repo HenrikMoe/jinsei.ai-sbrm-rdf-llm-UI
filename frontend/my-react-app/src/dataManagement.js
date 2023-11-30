@@ -276,6 +276,17 @@ const dataStore = {
     [['0'],['0']],
 ],
 
+assetRollUpReportDataExample2: [
+  [['Liabilities and Equity [Roll Up]'], ['Liabilities [Roll Up]'], ['Current Liabilities'], ['Noncurrent Liabilities']],
+  [[' '],[' ']],
+  [['0'],['0']],
+],
+
+assetRollUpReportDataExample3: [
+  [['Equity [Roll Up]'], ['Equity Attributable To Controlling Interests'], ['Equity Attributable to Noncontrolling Interests']],
+  [[' '],[' ']],
+  [['0'],['0']],
+],
 
   clearStructure: ()=>{
       dataStore.semanticStrucutreInstanceTaxonomy = null

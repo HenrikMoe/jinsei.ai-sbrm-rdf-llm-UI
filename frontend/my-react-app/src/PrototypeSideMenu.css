@@ -132,13 +132,17 @@ align-items: center; /* Vertical centering */
 
 }
 
+.renderingHeader{
+  background: white;
+  padding: 5px;
+}
+
 .reportHeaderWrapper{
   display: flex;
   text-align: center;
   margin-top: 10px;
   justify-content: center; /* Horizontal centering */
 align-items: center; /* Vertical centering */
-
   margin-bottom: 20px;
 }
 
