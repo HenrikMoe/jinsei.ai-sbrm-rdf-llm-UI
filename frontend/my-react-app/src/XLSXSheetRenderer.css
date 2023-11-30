@@ -288,6 +288,14 @@
 
 }
 
+.associationsTreeWrap{
+  display: flex
+}
+
+.associationsTree{
+  display: block
+}
+
 .addrowButton{
   margin-top: 100px;
   margin-left: 20px;

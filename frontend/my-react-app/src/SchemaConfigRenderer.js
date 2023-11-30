@@ -12,6 +12,8 @@ import Projects from './Projects'
 import Model from './Model'
 import Modal from './Modal'
 import ProcessModal from './ProcessModal'
+import XBRLComponentTaxonomy2 from './XBRLComponentTaxonomy2'
+
 
 const XLSXSheetRenderer = ({
   overlaidModelName,
@@ -585,6 +587,114 @@ console.log(isModal)
             <button class='addrowButton' onClick={addRow} >Add Row</button>
             <button class='addrowButton'  >Publish Schema</button>
             </div>
+
+            {isPopupVisible ? (
+              <div
+                className="popup-message"
+                style={{
+                  top: `${popupPosition.y}px`,
+                  left: `${popupPosition.x}px`,
+                }}
+                ref={popupRef}
+              >
+                Model-Specific and Cell-Specific Popup Message Status System
+              </div>
+            ) : null}
+
+          </div>
+        ) : sheetTitle[0] === 'Associations' ? (
+          <div className='schemaRibbon'>
+          <div className="elementTitle2">Configure Schema </div>
+
+          <div className='button-wrapAY'>
+          <Model   />
+          <Popup />
+          <Delete />
+          <Upload />
+          <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
+
+        </div>
+
+
+
+        <div className='associationsTreeWrap'>
+          <div className='associationsTree'>
+          <XBRLComponentTaxonomy2 dataStore={dataStore}/>
+          </div>
+
+          <div className='associationsTree'>
+          <table className='xlsx-table' style={{ width: '1100px' }}
+            >
+             <thead>
+             {dataStore.semanticWorkbookSheet ?
+                <tr>
+                  {header.map((headerText, index) => (
+                    <th key={index} contentEditable
+                    onBlur={(e) => {
+                        handleHeaderChange(index, e.target.textContent);
+                      }}>{headerText}</th>
+                  ))}
+                </tr> : <tr><td>hello</td></tr>
+                }
+              </thead>
+
+
+        <tbody>
+          {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
+            <tr key={rowIndex} >
+              {row.map((cell, cellIndex) => (
+                <td
+                  key={cellIndex}
+                  onMouseEnter={handleCellMouseEnter}
+                  onMouseLeave={handleCellMouseLeave}
+
+                >
+                <div className='cellWrapper'>
+                <div
+                  className={`unique-menu-container ${
+                    cellMenuVisibility[rowIndex] &&
+                    cellMenuVisibility[rowIndex][cellIndex] ? 'unique-menu-show' : 'unique-menu-hide'
+                  }`}
+                >
+                  <div className="unique-menu-button" contentEditable={false} onClick={() => toggleCellMenu(rowIndex, cellIndex)}>
+                  <span contentEditable={false}>:</span>
+                  </div>
+                  <div className="unique-popup-menu">
+                    {/* Menu content and buttons go here */}
+                    <button onClick={addRow}>Insert Row</button>
+                    <button onClick={() => deleteRow(rowIndex)}>Delete Row</button>
+                    <button >Context</button>
+                    {/* Add more buttons as needed */}
+                  </div>
+                </div>
+                <div
+                  className="cell-content"
+                  contentEditable
+                  onBlur={(e) => {
+                    handleCellChange(rowIndex, cellIndex, e.target.textContent);
+                  }}
+                >
+                  {cell}
+                </div>
+              </div>
+              </td>
+              ))}
+            </tr>
+          )): <tr><td>hello</td></tr>}
+        </tbody>
+            </table>
+
+            <div class='bottomButtonWrap'>
+            <button class='addrowButton' onClick={addRow} >Add Row</button>
+            <button class='addrowButton'  >Publish Schema</button>
+            </div>
+
+            </div>
+
+
+          </div>
+
+
 
             {isPopupVisible ? (
               <div
