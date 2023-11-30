@@ -99,6 +99,30 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
    //     Additional Button
    //   </button>
    // )}
+   const [isTree, setIsTree] = useState(false);
+   const [isDetails, setIsDetails] = useState(false);
+   const [isAgendas, setIsAgendas] = useState(false);
+
+   const handleIsTree = ()=>{
+     setIsTree(true)
+     setIsDetails(false)
+     setIsAgendas(false)
+   }
+
+   const handleIsDetails = ()=>{
+     setIsTree(false)
+     setIsDetails(true)
+     setIsAgendas(false)
+   }
+
+   const handleIsAgendas = ()=>{
+     setIsTree(false)
+     setIsDetails(false)
+     setIsAgendas(true)
+   }
+
+
+
  return (
    <div className='structureInstance'>
     <div className='elementTitle'>Structures</div>
@@ -114,12 +138,12 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
       </div>
 
       <div className='easy'>
-      <div className='elementTitle6'>Tree</div>
-      <div className='elementTitle6'>Details</div>
-      <div className='elementTitle6'>Agendas</div>
+      <div className='elementTitle6' onClick={()=>handleIsTree()}>Tree</div>
+      <div className='elementTitle6' onClick={()=>handleIsDetails()}>Details</div>
+      <div className='elementTitle6' onClick={()=>handleIsAgendas()}>Agendas</div>
       </div>
 
-      <div className='easy'>
+      {isTree ? <div><div className='easy'>
       <div className='elementTitle6'>Networks: 14</div>
       <div className='elementTitle6'>Type Sort ^</div>
       </div>
@@ -155,7 +179,85 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
               )
             )
           : <li className='sidemenu-title'> Sheets </li>}
-      </ul>
+      </ul></div>: <div></div>}
+
+      {isDetails ? <div><div className='easy'>
+
+      </div>
+
+      <ul>
+        <div className='sidemenu-title'>
+          {dataStore.workbookXLSX ? xlsxTitle : null}
+        </div>
+        {dataStore.structureInstanceComponentExample
+          ? dataStore.structureInstanceComponentExample.map(
+              (title, index) => (
+                <li
+                  key={title}
+                  contentEditable
+                  className={`${
+                    isDarkMode ? 'dark-mode' : ''
+                  } ${title === selectedSheet &&
+                  !schemaConfigSelected
+                    ? 'selected'
+                    : ''} ${
+                    index === 0 && isFirstSheetSelected
+                      ? 'selected'
+                      : ''
+                  }`}
+                  onClick={() => {
+                    // handleStructureInstanceSelect(index, title);
+                    setIsButtonVisible(true);
+                  }}
+                >
+                  {title}
+
+                </li>
+              )
+            )
+          : <li className='sidemenu-title'> Sheets </li>}
+      </ul></div>: <div></div>}
+
+      {isAgendas ? <div><div className='easy'>
+      <div className='elementTitle6'>Agendas</div>
+      </div>
+
+      <ul>
+        <div className='sidemenu-title'>
+          {dataStore.workbookXLSX ? xlsxTitle : null}
+        </div>
+        {dataStore.structureInstanceComponentExample
+          ? dataStore.structureInstanceComponentExample.map(
+              (title, index) => (
+                <li
+                  key={title}
+                  contentEditable
+                  className={`${
+                    isDarkMode ? 'dark-mode' : ''
+                  } ${title === selectedSheet &&
+                  !schemaConfigSelected
+                    ? 'selected'
+                    : ''} ${
+                    index === 0 && isFirstSheetSelected
+                      ? 'selected'
+                      : ''
+                  }`}
+                  onClick={() => {
+                    // handleStructureInstanceSelect(index, title);
+                    setIsButtonVisible(true);
+                  }}
+                >
+                  {title}
+
+                </li>
+              )
+            )
+          : <li className='sidemenu-title'> Sheets </li>}
+      </ul></div>: <div></div>}
+
+
+
+
 
      </div>
      </div>
