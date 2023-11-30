@@ -189,12 +189,42 @@ return (
       <div className='reportWrap'>
 
       <div className='reportHeaderWrapper'>
-      <div className='reportHeader' onClick={()=>handleIsRendering()}>Rendering</div>
-      <div className='reportHeader' onClick={()=>handleIsModel()}>Model</div>
-      <div className='reportHeader' onClick={()=>handleIsFactTable()}>Fact Table</div>
-      <div className='reportHeader' onClick={()=>handleIsRules()}>Rules</div>
-      <div className='reportHeader' onClick={()=>handleIsVerification()}>Verification</div>
-      <div className='reportHeader' onClick={()=>handleIsReportElements()}>Report Elements</div>
+      <div
+        className='reportHeader'
+        onClick={() => handleIsRendering()}
+        style={{
+          backgroundColor: isRendering ? 'lightgreen' : 'initial',
+          padding: '10px'
+        }}
+      >
+         Rendering
+      </div>
+      <div className='reportHeader'
+      onClick={()=>handleIsModel()}
+      style={{
+        backgroundColor: isModel ? 'lightgreen' : 'initial',
+        padding: '10px'
+      }}>Model</div>
+      <div className='reportHeader' onClick={()=>handleIsFactTable()}
+      style={{
+        backgroundColor: isFactTable ? 'lightgreen' : 'initial',
+        padding: '10px'
+      }}>Fact Table</div>
+      <div className='reportHeader' onClick={()=>handleIsRules()}
+      style={{
+        backgroundColor: isRules ? 'lightgreen' : 'initial',
+        padding: '10px'
+      }}>Rules</div>
+      <div className='reportHeader' onClick={()=>handleIsVerification()}
+      style={{
+        backgroundColor: isVerification ? 'lightgreen' : 'initial',
+        padding: '10px'
+      }}>Verification</div>
+      <div className='reportHeader' onClick={()=>handleIsReportElements()}
+      style={{
+        backgroundColor: isReportElements ? 'lightgreen' : 'initial',
+        padding: '10px'
+      }}>Report Elements</div>
       </div>
 
 
@@ -209,9 +239,9 @@ return (
 
       <table className='balance-sheet-table'>
       <thead>
-        {dataStore.semanticStrucutreInstanceTaxonomy ? (
+        {dataStore.semanticStrucutreInstance ? (
           <tr>
-            {header.map((headerText, index) => (
+            {dataStore.semanticStrucutreInstance.map((headerText, index) => (
               <th key={index} contentEditable onBlur={(e) => handleHeaderChange(index, e.target.textContent)}>
                 {headerText}
               </th>
@@ -223,7 +253,7 @@ return (
       </thead>
 
       <tbody>
-        {dataStore.semanticStrucutreInstance ? tableData.map((row, rowIndex) => (
+        {dataStore.semanticStrucutreInstance ? dataStore.semanticStrucutreInstance.map((row, rowIndex) => (
           <tr key={rowIndex}>
             {row.map((cell, cellIndex) => (
               <td
@@ -260,8 +290,9 @@ return (
     {isModel ? <div>
 
 
-  
+
   {tableData.length > 0 ? (
+
     <div className="buttons-wrap">
       <button className="table-button" onClick={addRow}>
         Add Row
@@ -270,6 +301,7 @@ return (
         Add Column
       </button>
     </div>
+
   ) : (
     <div className="table-button">N/A</div>
   )}

@@ -258,14 +258,14 @@ const dataStore = {
     dataStore.overLaidModelWorkbook = null
   },
 
-  structureInstanceComponentExample: ['100010 - Statement - INCOME STATEMENTS', '100020 - Statement - COMPREHENSIVE INCOME STATEMENTS', '100030 - COMPREHENSIVE INCOME STATEMENTS (Parenthetical)', '100040 - Statement - BALANCE SHEETS', '100050 - Statement - BALANCE SHEETS (Parenthetical)', '100060 - Statement - CASH FLOWS STATEMENTS', '100070 - Statement - STOCKHOLDERS EQUITY STATEMENTS' ],
+  structureInstanceComponentExample: ['{HyperCube} Balance Sheet', '{HyperCube} Net Assets', '{HyperCube} Income Statement', '{HyperCube} Income Statement Alternative', '{HyperCube}  ', '{HyperCube} Comperhensive Income', '{HyperCube} Cash Flow', '{HyperCube} Prior Period Errors', '{HyperCube} Prior Period Errors (Alternative)', '{HyperCube} Changes In Equity', '{HyperCube} Policies', '{HyperCube} Variance Analysis', '{HyperCube} Segnment Revenues', '{HyperCube} Stock Plan Activity', '{HyperCube} Financial Highlights' ],
 
   semanticStrucutreInstanceTaxonomy: null,
   initDefaultSemanticStrucutreInstanceTaxonomy: ()=>{
     dataStore.semanticStrucutreInstanceTaxonomy = ['Cover or Document', 'Statements', 'Notes Level 1', 'Policies', 'Notes Level 2', 'Notes Level 3 Tables', 'Notes Level 4 Detail', 'All Components', 'Flagged Components']
   },
 
-  semanticStrucutreInstance: [['Assets Rolled Up', '$50,000', 'blah']],
+  semanticStrucutreInstance: [['Assets Rolled Up'], ['$50,000'], ['blah']],
   initDefaultSemanticStrucutreInstance: ()=>{
     dataStore.semanticStrucutreInstance = [['Assets Rolled Up', '$50,000'], ['Liabilities Rolled Up', '$30,000'], ['Net Assets', '$20,000']]
   },

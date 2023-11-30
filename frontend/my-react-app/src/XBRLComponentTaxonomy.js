@@ -138,9 +138,22 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
       </div>
 
       <div className='easy'>
-      <div className='elementTitle6' onClick={()=>handleIsTree()}>Tree</div>
-      <div className='elementTitle6' onClick={()=>handleIsDetails()}>Details</div>
-      <div className='elementTitle6' onClick={()=>handleIsAgendas()}>Agendas</div>
+      <div className='elementTitle6'
+      style={{
+        backgroundColor: isTree ? 'lightgreen' : 'initial',
+        padding: '10px'
+      }}
+      onClick={()=>handleIsTree()}>Tree</div>
+      <div className='elementTitle6' onClick={()=>handleIsDetails()}
+      style={{
+        backgroundColor: isDetails ? 'lightgreen' : 'initial',
+        padding: '10px'
+      }}>Details</div>
+      <div className='elementTitle6' onClick={()=>handleIsAgendas()}
+      style={{
+        backgroundColor: isAgendas ? 'lightgreen' : 'initial',
+        padding: '10px'
+      }}>Agendas</div>
       </div>
 
       {isTree ? <div><div className='easy'>
@@ -185,38 +198,7 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
 
       </div>
 
-      <ul>
-        <div className='sidemenu-title'>
-          {dataStore.workbookXLSX ? xlsxTitle : null}
-        </div>
-        {dataStore.structureInstanceComponentExample
-          ? dataStore.structureInstanceComponentExample.map(
-              (title, index) => (
-                <li
-                  key={title}
-                  contentEditable
-                  className={`${
-                    isDarkMode ? 'dark-mode' : ''
-                  } ${title === selectedSheet &&
-                  !schemaConfigSelected
-                    ? 'selected'
-                    : ''} ${
-                    index === 0 && isFirstSheetSelected
-                      ? 'selected'
-                      : ''
-                  }`}
-                  onClick={() => {
-                    // handleStructureInstanceSelect(index, title);
-                    setIsButtonVisible(true);
-                  }}
-                >
-                  {title}
-
-                </li>
-              )
-            )
-          : <li className='sidemenu-title'> Sheets </li>}
-      </ul></div>: <div></div>}
+      </div>: <div></div>}
 
       {isAgendas ? <div><div className='easy'>
       <div className='elementTitle6'>Agendas</div>
