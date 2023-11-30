@@ -113,6 +113,69 @@ const XLSXSheetRenderer = ({
     };
   }, []);
 //conditinally render the subtype menu
+
+const [isRendering, setIsRendering] = useState(false);
+const [isModel, setIsModel] = useState(false);
+const [isFactTable, setIsFactTable] = useState(false);
+const [isRules, setIsRules] = useState(false);
+const [isVerification, setIsVerification] = useState(false);
+const [isReportElements, setIsReportElements] = useState(false);
+
+
+const handleIsRendering = ()=>{
+  setIsRendering(true)
+  setIsModel(false)
+  setIsFactTable(false)
+  setIsReportElements(false)
+  setIsVerification(false)
+  setIsRules(false)
+}
+
+const handleIsModel = ()=>{
+  setIsRendering(false)
+  setIsModel(true)
+  setIsFactTable(false)
+  setIsReportElements(false)
+  setIsVerification(false)
+  setIsRules(false)
+}
+
+const handleIsFactTable = ()=>{
+  setIsRendering(false)
+  setIsModel(false)
+  setIsFactTable(true)
+  setIsReportElements(false)
+  setIsVerification(false)
+  setIsRules(false)
+}
+
+const handleIsRules = ()=>{
+  setIsRendering(false)
+  setIsModel(false)
+  setIsFactTable(false)
+  setIsReportElements(false)
+  setIsVerification(false)
+  setIsRules(true)
+}
+const handleIsVerification = ()=>{
+  setIsRendering(false)
+  setIsModel(false)
+  setIsFactTable(false)
+  setIsReportElements(false)
+  setIsVerification(true)
+  setIsRules(false)
+}
+const handleIsReportElements = ()=>{
+  setIsRendering(false)
+  setIsModel(false)
+  setIsFactTable(false)
+  setIsReportElements(true)
+  setIsVerification(false)
+  setIsRules(false)
+}
+
+
+
 return (
     <div className='structureInstanceWrap2'>
   <div className="elementTitle5">Report Viewing and Editing </div>
@@ -126,23 +189,22 @@ return (
       <div className='reportWrap'>
 
       <div className='reportHeaderWrapper'>
-      <div className='reportHeader'>Rendering</div>
-      <div className='reportHeader'>Model</div>
-      <div className='reportHeader'>Fact Table</div>
-      <div className='reportHeader'>Rules</div>
-      <div className='reportHeader'>Verification</div>
-      <div className='reportHeader'>Report Elements</div>
+      <div className='reportHeader' onClick={()=>handleIsRendering()}>Rendering</div>
+      <div className='reportHeader' onClick={()=>handleIsModel()}>Model</div>
+      <div className='reportHeader' onClick={()=>handleIsFactTable()}>Fact Table</div>
+      <div className='reportHeader' onClick={()=>handleIsRules()}>Rules</div>
+      <div className='reportHeader' onClick={()=>handleIsVerification()}>Verification</div>
+      <div className='reportHeader' onClick={()=>handleIsReportElements()}>Report Elements</div>
       </div>
 
-      <div className='reportHeaderWrapper'>
+
+      {isRendering ? <div>
+          <div className='reportHeaderWrapper'>
       <div className='reportHeader'>Import</div>
       <div className='reportHeader'>Export</div>
       <div className='reportHeader'>FullScreen</div>
       <div className='reportHeader'>Attach to Process</div>
       <div className='reportHeader'>View</div>
-
-
-
       </div>
 
       <table className='balance-sheet-table'>
@@ -192,6 +254,28 @@ return (
     ) : (
       <div className="table-button">N/A</div>
     )}
+    </div> : <div></div>}
+
+
+    {isModel ? <div>
+
+
+  
+  {tableData.length > 0 ? (
+    <div className="buttons-wrap">
+      <button className="table-button" onClick={addRow}>
+        Add Row
+      </button>
+      <button className="table-button" onClick={addColumn}>
+        Add Column
+      </button>
+    </div>
+  ) : (
+    <div className="table-button">N/A</div>
+  )}
+  </div> : <div></div>}
+
+
       </div>
 
     {isPopupVisible ? (
