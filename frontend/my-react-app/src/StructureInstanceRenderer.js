@@ -176,6 +176,18 @@ const handleIsReportElements = ()=>{
 
 
 
+// {dataStore.semanticStrucutreInstance ? (
+//   <tr>
+//     {dataStore.semanticStrucutreInstance.map((headerText, index) => (
+//       <th key={index} contentEditable onBlur={(e) => handleHeaderChange(index, e.target.textContent)}>
+//         {headerText}
+//       </th>
+//     ))}
+//   </tr>
+// ) : (
+//   <tr><td>Empty Header</td></tr>
+// )}
+
 return (
     <div className='structureInstanceWrap2'>
   <div className="elementTitle5">Report Viewing and Editing </div>
@@ -239,22 +251,35 @@ return (
 
       <table className='balance-sheet-table'>
       <thead>
-        {dataStore.semanticStrucutreInstance ? (
-          <tr>
-            {dataStore.semanticStrucutreInstance.map((headerText, index) => (
-              <th key={index} contentEditable onBlur={(e) => handleHeaderChange(index, e.target.textContent)}>
-                {headerText}
-              </th>
-            ))}
-          </tr>
-        ) : (
-          <tr><td>Empty Header</td></tr>
-        )}
+        <tr>
+          <th>Reporting Entity [Aspect]	</th>
+          <td>GH259400TOMPUOLS65II | http://standards.iso.org/iso/17442</td>
+        </tr>
+        <tr>
+          <th>Unit [Aspect]	</th>
+          <td>iso4217:USD</td>
+        </tr>
+      </thead>
+      </table>
+
+      <table className='balance-sheet-table'>
+      <thead>
+      <tr>
+        <th></th>
+        <td>Period Aspect</td>
+      </tr>
+      <tr>
+        <th>Concept [Aspect]</th>
+        <td>2022-12-31</td>
+        <td>2021-12-31</td>
+
+      </tr>
       </thead>
 
       <tbody>
-        {dataStore.semanticStrucutreInstance ? dataStore.semanticStrucutreInstance.map((row, rowIndex) => (
+        {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
           <tr key={rowIndex}>
+
             {row.map((cell, cellIndex) => (
               <td
                 key={cellIndex}
@@ -263,14 +288,33 @@ return (
                 onMouseLeave={handleCellMouseLeave}
                 onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
               >
-                {cell}
+              {cell}
               </td>
+
             ))}
+
+            {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+              <td
+                key={cellIndex}
+                contentEditable
+                onMouseEnter={handleCellMouseEnter}
+                onMouseLeave={handleCellMouseLeave}
+                onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+              >
+              {cell}
+              </td>
+            ))
+            }
+
+          
+
+
           </tr>
         )) : (
           <tr><td>No Data</td></tr>
         )}
       </tbody>
+
     </table>
     {tableData.length > 0 ? (
       <div className="buttons-wrap">

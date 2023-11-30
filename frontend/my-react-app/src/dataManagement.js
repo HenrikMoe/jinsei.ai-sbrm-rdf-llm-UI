@@ -265,10 +265,17 @@ const dataStore = {
     dataStore.semanticStrucutreInstanceTaxonomy = ['Cover or Document', 'Statements', 'Notes Level 1', 'Policies', 'Notes Level 2', 'Notes Level 3 Tables', 'Notes Level 4 Detail', 'All Components', 'Flagged Components']
   },
 
-  semanticStrucutreInstance: [['Assets Rolled Up'], ['$50,000'], ['blah']],
+  semanticStrucutreInstance: [['Assets [Roll Up]'], ['Current Assets'], ['Noncurrent Assets']],
   initDefaultSemanticStrucutreInstance: ()=>{
     dataStore.semanticStrucutreInstance = [['Assets Rolled Up', '$50,000'], ['Liabilities Rolled Up', '$30,000'], ['Net Assets', '$20,000']]
   },
+
+  assetRollUpReportDataExample1: [
+    [['Assets [Roll Up]'], ['Current Assets'], ['Noncurrent Assets']],
+    [[' '],[' ']],
+    [['0'],['0']],
+],
+
 
   clearStructure: ()=>{
       dataStore.semanticStrucutreInstanceTaxonomy = null
