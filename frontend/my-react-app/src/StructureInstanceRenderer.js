@@ -194,50 +194,51 @@ return (
 
   <div className='reportWraper'>
   <XBRLComponentTaxonomy dataStore={dataStore}/>
+  <div className='reportHeaderWrapper'>
+  <div
+    className='reportHeader'
+    onClick={() => handleIsRendering()}
+    style={{
+      backgroundColor: isRendering ? 'lightgreen' : 'initial',
+      padding: '10px'
+    }}
+  >
+     Rendering
+  </div>
+  <div className='reportHeader'
+  onClick={()=>handleIsModel()}
+  style={{
+    backgroundColor: isModel ? 'lightgreen' : 'initial',
+    padding: '10px'
+  }}>Model</div>
+  <div className='reportHeader' onClick={()=>handleIsFactTable()}
+  style={{
+    backgroundColor: isFactTable ? 'lightgreen' : 'initial',
+    padding: '10px'
+  }}>Fact Table</div>
+  <div className='reportHeader' onClick={()=>handleIsRules()}
+  style={{
+    backgroundColor: isRules ? 'lightgreen' : 'initial',
+    padding: '10px'
+  }}>Rules</div>
+  <div className='reportHeader' onClick={()=>handleIsVerification()}
+  style={{
+    backgroundColor: isVerification ? 'lightgreen' : 'initial',
+    padding: '10px'
+  }}>Verification</div>
+  <div className='reportHeader' onClick={()=>handleIsReportElements()}
+  style={{
+    backgroundColor: isReportElements ? 'lightgreen' : 'initial',
+    padding: '10px'
+  }}>Report Elements</div>
+  </div>
   <div className='balance-sheet'>
   <div>
       </div>
 
       <div className='reportWrap'>
 
-      <div className='reportHeaderWrapper'>
-      <div
-        className='reportHeader'
-        onClick={() => handleIsRendering()}
-        style={{
-          backgroundColor: isRendering ? 'lightgreen' : 'initial',
-          padding: '10px'
-        }}
-      >
-         Rendering
-      </div>
-      <div className='reportHeader'
-      onClick={()=>handleIsModel()}
-      style={{
-        backgroundColor: isModel ? 'lightgreen' : 'initial',
-        padding: '10px'
-      }}>Model</div>
-      <div className='reportHeader' onClick={()=>handleIsFactTable()}
-      style={{
-        backgroundColor: isFactTable ? 'lightgreen' : 'initial',
-        padding: '10px'
-      }}>Fact Table</div>
-      <div className='reportHeader' onClick={()=>handleIsRules()}
-      style={{
-        backgroundColor: isRules ? 'lightgreen' : 'initial',
-        padding: '10px'
-      }}>Rules</div>
-      <div className='reportHeader' onClick={()=>handleIsVerification()}
-      style={{
-        backgroundColor: isVerification ? 'lightgreen' : 'initial',
-        padding: '10px'
-      }}>Verification</div>
-      <div className='reportHeader' onClick={()=>handleIsReportElements()}
-      style={{
-        backgroundColor: isReportElements ? 'lightgreen' : 'initial',
-        padding: '10px'
-      }}>Report Elements</div>
-      </div>
+
 
 
       {isRendering ? <div>
@@ -305,15 +306,105 @@ return (
               </td>
             ))
             }
-
-          
-
-
           </tr>
         )) : (
           <tr><td>No Data</td></tr>
         )}
       </tbody>
+
+      <tbody>
+        <tr><th>Assets</th></tr>
+      </tbody>
+
+
+      <tbody>
+        {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+          <tr key={rowIndex}>
+
+            {row.map((cell, cellIndex) => (
+              <td
+                key={cellIndex}
+                contentEditable
+                onMouseEnter={handleCellMouseEnter}
+                onMouseLeave={handleCellMouseLeave}
+                onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+              >
+              {cell}
+              </td>
+
+            ))}
+
+            {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+              <td
+                key={cellIndex}
+                contentEditable
+                onMouseEnter={handleCellMouseEnter}
+                onMouseLeave={handleCellMouseLeave}
+                onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+              >
+              {cell}
+              </td>
+            ))
+            }
+          </tr>
+        )) : (
+          <tr><td>No Data</td></tr>
+        )}
+      </tbody>
+
+      <tbody>
+        <tr><th>Liabilities</th></tr>
+      </tbody>
+
+
+      <tbody>
+        {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+          <tr key={rowIndex}>
+
+            {row.map((cell, cellIndex) => (
+              <td
+                key={cellIndex}
+                contentEditable
+                onMouseEnter={handleCellMouseEnter}
+                onMouseLeave={handleCellMouseLeave}
+                onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+              >
+              {cell}
+              </td>
+
+            ))}
+
+            {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+              <td
+                key={cellIndex}
+                contentEditable
+                onMouseEnter={handleCellMouseEnter}
+                onMouseLeave={handleCellMouseLeave}
+                onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+              >
+              {cell}
+              </td>
+            ))
+            }
+          </tr>
+        )) : (
+          <tr><td>No Data</td></tr>
+        )}
+
+      </tbody>
+
+      <tbody>
+        <tr><th>Equity</th><td> </td><td> </td></tr>
+      </tbody>
+
+      <tbody>
+        <tr><th>Liabilities and Equity</th><td> </td></tr>
+      </tbody>
+
+
+
+
+
 
     </table>
     {tableData.length > 0 ? (
