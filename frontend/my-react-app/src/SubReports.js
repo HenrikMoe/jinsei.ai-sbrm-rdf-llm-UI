@@ -98,7 +98,7 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
    <div className='structureInstance'>
     <div className='elementTitle'>Structure Instance</div>
      <div
-       className={`prototype-side-menu ${isResizing ? 'resizing' : ''} ${
+       className={`prototype-side-menu8 ${isResizing ? 'resizing' : ''} ${
          isDarkMode ? 'dark-mode' : ''
        }`}
      >
