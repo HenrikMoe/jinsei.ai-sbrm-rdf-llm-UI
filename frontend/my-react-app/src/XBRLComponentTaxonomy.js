@@ -140,18 +140,18 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
       <div className='easy'>
       <div className='elementTitle6'
       style={{
-        backgroundColor: isTree ? 'lightgreen' : 'initial',
+        color: isTree ? 'blue' : 'initial',
         padding: '10px'
       }}
       onClick={()=>handleIsTree()}>Tree</div>
       <div className='elementTitle6' onClick={()=>handleIsDetails()}
       style={{
-        backgroundColor: isDetails ? 'lightgreen' : 'initial',
+        color: isDetails ? 'blue' : 'initial',
         padding: '10px'
       }}>Details</div>
       <div className='elementTitle6' onClick={()=>handleIsAgendas()}
       style={{
-        backgroundColor: isAgendas ? 'lightgreen' : 'initial',
+        color: isAgendas ? 'blue' : 'initial',
         padding: '10px'
       }}>Agendas</div>
       </div>

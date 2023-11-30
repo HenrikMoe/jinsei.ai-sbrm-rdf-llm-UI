@@ -199,7 +199,7 @@ return (
     className='reportHeader'
     onClick={() => handleIsRendering()}
     style={{
-      backgroundColor: isRendering ? 'lightgreen' : 'initial',
+      color: isRendering ? 'blue' : 'initial',
       padding: '10px'
     }}
   >
@@ -208,27 +208,27 @@ return (
   <div className='reportHeader'
   onClick={()=>handleIsModel()}
   style={{
-    backgroundColor: isModel ? 'lightgreen' : 'initial',
+    color: isModel ? 'blue' : 'initial',
     padding: '10px'
   }}>Model</div>
   <div className='reportHeader' onClick={()=>handleIsFactTable()}
   style={{
-    backgroundColor: isFactTable ? 'lightgreen' : 'initial',
+    color: isFactTable ? 'blue' : 'initial',
     padding: '10px'
   }}>Fact Table</div>
   <div className='reportHeader' onClick={()=>handleIsRules()}
   style={{
-    backgroundColor: isRules ? 'lightgreen' : 'initial',
+    color: isRules ? 'blue' : 'initial',
     padding: '10px'
   }}>Rules</div>
   <div className='reportHeader' onClick={()=>handleIsVerification()}
   style={{
-    backgroundColor: isVerification ? 'lightgreen' : 'initial',
+    color: isVerification ? 'blue' : 'initial',
     padding: '10px'
   }}>Verification</div>
   <div className='reportHeader' onClick={()=>handleIsReportElements()}
   style={{
-    backgroundColor: isReportElements ? 'lightgreen' : 'initial',
+    color: isReportElements ? 'blue' : 'initial',
     padding: '10px'
   }}>Report Elements</div>
   </div>

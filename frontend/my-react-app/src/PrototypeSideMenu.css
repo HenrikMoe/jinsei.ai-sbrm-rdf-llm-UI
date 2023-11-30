@@ -208,14 +208,23 @@
 
 .reportHeader{
   display: block;
-  padding-right: 10px;
   border-right: 1px solid black;
   margin-left: 10px;
   font-size: 1.2em;
+  padding: 5px;
+
   justify-content: center; /* Horizontal centering */
 align-items: center; /* Vertical centering */
+transition: background-color 0.3s ease; /* Smooth transition on hover */
 
   text-align: center;
+
+}
+
+.reportHeader:hover{
+  background-color: lightgreen;
+  padding: 5px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
 
 }
 
@@ -366,7 +375,16 @@ width: 1050px;
   padding-right: 10px;
   border-right: 1px solid black;
   font-size: 20px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+
 }
+
+.elementTitle6:hover{
+  background-color: lightgreen;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+
+}
+
 
 /* Add dark mode styles for the homepage */
 .dark-mode {
