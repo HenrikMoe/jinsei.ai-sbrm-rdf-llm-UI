@@ -623,7 +623,7 @@ console.log(isModal)
           </div>
 
           <div className='associationsTree'>
-          <table className='xlsx-table' style={{ width: '1100px' }}
+          <table className='xlsx-table' style={{ width: '1200px' }}
             >
              <thead>
              {dataStore.semanticWorkbookSheet ?
