@@ -240,6 +240,8 @@ return (
       <div className='reportHeader'>FullScreen</div>
       <div className='reportHeader'>Attach to Process</div>
       <div className='reportHeader'>View</div>
+      <div className='reportHeader'>Auto Save</div>
+
       </div>
     </div> : <div></div>}
 
