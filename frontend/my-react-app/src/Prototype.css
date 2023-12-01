@@ -48,12 +48,24 @@
   margin-left: 200px;
 }
 
-/* Add this CSS to your stylesheet */
+.checkboxWrap{
+  margin-left: 40px;
+  font-size: 1.2em;
+  display: relative;
+}
 
+/* Add this CSS to your stylesheet */
+.modalTitle{
+  color: black;
+  font-size: 1.2em;
+
+  margin-bottom: 20px;
+}
 /* Style the modal content */
 .modal-content {
   background-color: white;
   padding: 20px;
+  display: flex;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -99,11 +111,12 @@
   border: 2px solid #333;
   border-radius: 5px;
   margin-top: 200px;
-  margin-left: 0px;
+  margin-left: 50px;
   height: 300px;
   z-index: 9999999;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  max-width: 400px; /* Set the maximum width of the modal */
+  width: 1200px;
+  max-width: 1200px; /* Set the maximum width of the modal */
 }
 
 /* Style the modal's title (h2) */

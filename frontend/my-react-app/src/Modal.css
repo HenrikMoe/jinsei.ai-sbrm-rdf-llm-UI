@@ -18,6 +18,7 @@
   position: fixed;
   top: 50px;
   left: 50px;
+  width: 800px;
   right: 50px;
   bottom: 50px;
   background: white;
@@ -54,6 +55,7 @@
 .modal-content {
   padding: 20px;
   color: black;
+  display: flex;
   /* Add any styles you want for the content here */
 }
 

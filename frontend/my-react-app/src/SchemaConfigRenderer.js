@@ -715,7 +715,7 @@ console.log(isModal)
             {/* Top ribbon with three buttons */}
             <div className="elementTitle2">Configure Schema </div>
 
-            {isModal? <Modal setModalOff={setModalOff} isModal={isModal}/> : <div></div>}
+            {isModal ? <Modal setModalOff={setModalOff} isModal={isModal}/> : <div></div>}
 
 
 
