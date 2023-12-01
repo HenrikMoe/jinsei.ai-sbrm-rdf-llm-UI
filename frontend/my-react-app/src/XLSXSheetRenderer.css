@@ -26,14 +26,18 @@
 }
 
 
+.processTablesWrapper{
+  display: flex;
+  margin-left: 500px;
+}
+
 .xlsx-table2 {
-  margin-top: 30px;
+  margin-top: 00px;
   border-bottom: 2px solid #3498db; /* Border color */
   border-right: 2px solid #3498db; /* Border color */
   top: 0;
   padding: 5px;
-  display: inline-block;
-  margin-left:500px;
+  margin-left:20px;
   max-width: 1500px;
   max-height: 400px;
   margin-bottom: -100px;

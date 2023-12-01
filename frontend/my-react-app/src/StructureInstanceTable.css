@@ -31,6 +31,13 @@
   margin-top: 100px;
   margin-left: 250px;
   border-radius: 10px;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
+}
+
+.balance-sheet2:hover {
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 

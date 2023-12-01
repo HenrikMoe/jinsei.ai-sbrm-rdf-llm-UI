@@ -269,18 +269,40 @@ return (
     </div> : <div></div>}
 
     {isAttachToProcess ? <div>
-      <table className='xlsx-table2'>
-      <tr><th><td>Report ID</td><td>Ab Co BalanceSheet</td></th></tr>
+      <div className='reportHeaderWrapper'>
+        <div className='reportHeader'>Import</div>
+        <div className='reportHeader'>Export</div>
+        <div className='reportHeader'>FullScreen</div>
+        <div className='reportHeader' onClick={()=>handleIsReportElements()}
+        style={{
+          color: isAttachToProcess ? 'blue' : 'initial',
+          padding: '10px'
+        }} onClick={()=>handleAttachToProcessTab()}>Attach to Process</div>
+        <div className='reportHeader'>View</div>
+        <div className='reportHeader'>Auto Save</div>
 
+        </div>
+
+      <div className='processTablesWrapper'>
+      <table className='xlsx-table2'>
+      <tr><th><td>Report ID</td></th><th><td>Ab Co BalanceSheet</td></th></tr>
       <tr><td>Process ID</td><td>URI View and Edit Deployment</td></tr>
       <tr><td>Domain</td><td>abco.co/report/BalanceSheet</td></tr>
       <tr><td>Credentials</td><td>AuthLinkConfig1</td></tr>
       <tr><td>TTL</td><td>80000000</td></tr>
-
-
-
-
       </table>
+
+      <table className='xlsx-table2'>
+      <tr><th><td>Report ID</td></th><th><td>Ab Co BalanceSheet</td></th></tr>
+      <tr><td>Process ID</td><td>XBRL Verification</td></tr>
+      <tr><td>Domain</td><td>abco.co/report/BalanceSheet.xbri</td></tr>
+      <tr><td>Credentials</td><td></td></tr>
+      <tr><td>TTL</td><td>80000000</td></tr>
+      </table>
+
+      </div>
+
+
       </div> : <div></div>}
 
 
