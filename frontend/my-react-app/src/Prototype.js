@@ -394,14 +394,7 @@ function Prototype({listLoginInfo}) {
   console.log('shouldbesheettielbeo')
   console.log(sheetTitle)
 
-  const [exportStatus, setExportStatus] = useState('false')
-  const setExportTrue = ()=>{
-    setExportStatus(true)
-  }
 
-  const setExportFalse = ()=>{
-    setExportStatus(false)
-  }
 
 //</DataStoreProvider>
   return (
@@ -411,7 +404,7 @@ function Prototype({listLoginInfo}) {
         //pass a lot of vars to prototype header for each functionality
 
         <div className='content-grid'>
-          <PrototypeHeader setExportFalse={setExportFalse} setExportTrue={setExportTrue} handleOverlayChange={handleOverlayChange} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} onFileUpload={handleXLSXUpload} dataStore={dataStore} />
+          <PrototypeHeader handleOverlayChange={handleOverlayChange} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} onFileUpload={handleXLSXUpload} dataStore={dataStore} />
           <TabSelector handleTabSelection={handleTabSelection} />
           {schemaConfigSelected ? <PrototypeSideMenu  overlaidModelName={overlaidModel} handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} sheetTitle={sheetTitle}  onSheetSelect={handleSheetSelect}  sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} /> : <div className='fillerClass'></div>}
           {schemaConfigSelected ? <SchemaConfigRenderer handleOverlayChange={handleOverlayChange} handleOverlaidSelection={handleOverlaidSelection} onFileUpload={handleXLSXUpload}  overlaidModelName={overlaidModel} dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} /> : <div className='fillerClass'></div>}
@@ -423,14 +416,13 @@ function Prototype({listLoginInfo}) {
           {canvasSheetSelected ? <CanvasPageElement />: <div className='fillerClass'></div>}
           {aiSummarySheetSelected ? <AISummarySideMenu handleAISummarySheetSelection={handleAISummarySheetSelection} dataStore={dataStore}/>: <div className='fillerClass'></div>}
           {aiSummarySheetSelected ? <AISummary />: <div className='fillerClass'></div>}
-          {exportStatus ? <Modal setExportFalse={setExportFalse} exportStatus={exportStatus}/> : <div></div>}
         </div>
 
       ) : (
         // Content for non-authenticated users
         <div>
           {isModalOpen && (
-            <div className={`modal ${isDarkMode ? 'dark-mode' : ''}`}>
+            <div className={`modal7 ${isDarkMode ? 'dark-mode' : ''}`}>
               <h2 className={isDarkMode ? 'dark-mode-text' : ''}>Login with Google</h2>
               <GoogleLogin
                 onSuccess={(credentialResponse) => {

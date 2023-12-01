@@ -88,7 +88,7 @@
   border-radius: 10px;
   display: flex;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
-  z-index: 99999;
+  z-index: 9;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
 
 }

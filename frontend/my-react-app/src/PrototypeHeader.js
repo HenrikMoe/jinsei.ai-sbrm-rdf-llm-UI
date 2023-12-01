@@ -18,7 +18,7 @@ import ProcessModal from './ProcessModal'
 // <Upload onFileUpload={onFileUpload}/>
 // <Delete onFileUpload={onFileUpload} />
 
-const PrototypeHeader = ({ setExportFalse, setExportTrue, handleOverlayChange, sheetTitle, handleOverlaidSelection, onFileUpload, dataStore}) => {
+const PrototypeHeader = ({ handleOverlayChange, sheetTitle, handleOverlaidSelection, onFileUpload, dataStore}) => {
   const { isDarkMode } = useDarkMode();
   const [xlsxData, setXLSXData] = useState(null);
 console.log(onFileUpload)
@@ -35,7 +35,14 @@ const handleClearFalse = ()=>{
 }
 // <Transform />
 // <Pipeline />
+const [exportStatus, setExportStatus] = useState(null)
+const setExportTrue = ()=>{
+  setExportStatus(true)
+}
 
+const setExportFalse = ()=>{
+  setExportStatus(false)
+}
 
 
 const handleExportTrue =()=>{
@@ -79,7 +86,8 @@ const handleExportTrue =()=>{
 
       </div>
 
-      <div className='titlez'>Luciano - git:main | version 0.250</div>
+      <div className='titlez'>Luciano - git:main | version 0.254</div>
+      {exportStatus ? <Modal setExportFalse={setExportFalse} exportStatus={exportStatus}/> : <div></div>}
 
     </div>
   );

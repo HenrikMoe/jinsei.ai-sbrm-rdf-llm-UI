@@ -110,13 +110,43 @@
   padding: 20px;
   border: 2px solid #333;
   border-radius: 5px;
-  margin-top: 200px;
+  margin-top: 250px;
   margin-left: 50px;
-  height: 300px;
-  z-index: 9999999;
+  height: 400px;
+  z-index: 9999999 !important;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 1200px;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
   max-width: 1200px; /* Set the maximum width of the modal */
+}
+
+.modal7 {
+  position: block;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the modal */
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  margin-left: 850px;
+  margin-top: 500px;
+  height: 300px;
+  z-index: 9999999 !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  max-width: 1200px; /* Set the maximum width of the modal */
+}
+
+.modal:hover{
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+}
+
+.modal7:hover{
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
 }
 
 /* Style the modal's title (h2) */

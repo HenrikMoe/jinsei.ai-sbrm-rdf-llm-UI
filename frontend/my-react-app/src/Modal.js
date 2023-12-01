@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Modal.css';
-import XBRLComponentTaxonomy from './XBRLComponentTaxonomy'
+import XBRLComponentTaxonomy from './XBRLComponentNetwork'
 
 
 const Modal = ({setModalOff, isModal, exportStatus, setExportFalse }) => {
@@ -50,7 +50,8 @@ const Modal = ({setModalOff, isModal, exportStatus, setExportFalse }) => {
           <button onClick={closeModal} className="close-button">
             X
           </button>
-          <div className='modalTitle'>Selected: [SFAC 6] | Select Elements:</div>
+          <div className='modalTitle'>Selected: [SFAC 6] </div>
+          <div  className='modalTitle'> Select Elements:</div>
           <div className="modal-content">
 
           <div className='checkboxWrap'>
