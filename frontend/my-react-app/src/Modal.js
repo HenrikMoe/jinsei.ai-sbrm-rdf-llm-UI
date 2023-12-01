@@ -3,7 +3,7 @@ import './Modal.css';
 import XBRLComponentTaxonomy from './XBRLComponentNetwork'
 
 
-const Modal = ({setModalOff, isModal, exportStatus, setExportFalse }) => {
+const Modal = ({isPublish, setModalOff, isModal, exportStatus, setExportFalse, setPublishOff }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const modalRef = useRef(null);
 
@@ -15,8 +15,14 @@ const Modal = ({setModalOff, isModal, exportStatus, setExportFalse }) => {
     setModalOpen(false);
     if(setModalOff){
       setModalOff()
-    }else{
+
+    }
+    else if(setExportFalse){
+
       setExportFalse()
+    }
+    else if(setPublishOff){
+      setPublishOff()
     }
   };
 
@@ -144,6 +150,16 @@ const Modal = ({setModalOff, isModal, exportStatus, setExportFalse }) => {
         </div>
       )}
 
+      {isPublish && (
+        <div className="modal" >
+          <button onClick={closeModal} className="close-button">
+            X
+          </button>
+          <div className="modal-content">
+          This is where we select what ovelray things to import into the model
+          </div>
+        </div>
+      )}
 
       {exportStatus && (
         <div className="modal" >

@@ -386,9 +386,20 @@ const setModalOff =()=>{
   setIsModal(false)
 }
 
+const setPublishOff =()=>{
+  setIsPublish(false)
+}
+
 console.log('isModal')
 
 console.log(isModal)
+
+
+const [isPublish, setIsPublish] = useState(false);
+
+const handleIsPublish = () =>{
+  setIsPublish(true)
+}
 
 //model passed objs ; handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}
 //popup ; onFileUpload={onFileUpload}
@@ -723,8 +734,10 @@ console.log(isModal)
             <Model  setIsModal={setIsModalOn} handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
             <Popup onFileUpload={onFileUpload} />
             <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
-            <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
+            <button className="ribbon-button" onClick={() => handleIsPublish(true)}>Publish Overlay</button>
             <button className="ribbon-button" onClick={() => createSchemaElement()}>Report</button>
+
+            {isPublish ? <Modal setPublishOff={setPublishOff} isPublish={isPublish}/>: <div></div>}
 
           </div>
 
