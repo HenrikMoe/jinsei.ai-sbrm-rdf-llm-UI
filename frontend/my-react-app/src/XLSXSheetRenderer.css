@@ -26,6 +26,33 @@
 }
 
 
+.xlsx-table2 {
+  margin-top: 30px;
+  border-bottom: 2px solid #3498db; /* Border color */
+  border-right: 2px solid #3498db; /* Border color */
+  top: 0;
+  padding: 5px;
+  display: inline-block;
+  margin-left:500px;
+  max-width: 1500px;
+  max-height: 400px;
+  margin-bottom: -100px;
+  border-radius: 10px !important;
+  overflow-x: auto;
+  background-color: #F8FAFC;
+  border-collapse: separate;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
+  border-radius: 10px !important;
+}
+
+.xlsx-table2:hover {
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
+}
+
+
 .addrowbutton{
   background-color: lightslategrey;
   color: black;
@@ -61,6 +88,25 @@
 }
 
 .xlsx-table.resizable .resize-handle {
+  /* Styling for the resizing handle */
+  position: absolute;
+  width: 8px; /* Adjust the handle width as needed */
+  height: 100%;
+  color: black;
+  top: 0;
+  right: -4px; /* Half of the handle width, so it stays outside the table */
+  cursor: col-resize; /* Cursor style for resizing */
+  z-index: 1; /* Ensure the handle is above the table content */
+  background-color: #ddd; /* Handle color */
+}
+
+
+.xlsx-table2.resizable {
+  /* Your existing CSS styles for the resizable table */
+  position: relative; /* Add this to enable absolute positioning for resizing handle */
+}
+
+.xlsx-table2.resizable .resize-handle {
   /* Styling for the resizing handle */
   position: absolute;
   width: 8px; /* Adjust the handle width as needed */
@@ -215,6 +261,34 @@
 }
 
 .xlsx-table td[contentEditable="true"]:focus {
+  outline: none;
+  border: 1px solid #007bff;
+  color: black;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+
+}
+
+
+.xlsx-table2 th, .xlsx-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  color: black;
+  text-align: left;
+}
+
+.xlsx-table2 th {
+  background-color: #f0f0f0;
+  color: black;
+  font-weight: bold;
+}
+
+.xlsx-table2 td {
+  background-color: #ffffff;
+
+}
+
+.xlsx-table2 td[contentEditable="true"]:focus {
   outline: none;
   border: 1px solid #007bff;
   color: black;

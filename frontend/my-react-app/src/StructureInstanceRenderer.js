@@ -88,7 +88,7 @@ const XLSXSheetRenderer = ({
 
     // Calculate the position for the popup message
     const x = cellRect.left + cellRect.width / 2;
-    const y = cellRect.top + 300; // Adjust as needed
+    const y = cellRect.top - 150; // Adjust as needed
 
     setPopupPosition({ x, y });
     setIsPopupVisible(true);
@@ -120,6 +120,7 @@ const [isFactTable, setIsFactTable] = useState(false);
 const [isRules, setIsRules] = useState(false);
 const [isVerification, setIsVerification] = useState(false);
 const [isReportElements, setIsReportElements] = useState(false);
+const [isAttachToProcess, setIsAttachToProcess] = useState(false);
 
 
 const handleIsRendering = ()=>{
@@ -129,6 +130,8 @@ const handleIsRendering = ()=>{
   setIsReportElements(false)
   setIsVerification(false)
   setIsRules(false)
+  setIsAttachToProcess(false)
+
 }
 
 const handleIsModel = ()=>{
@@ -138,6 +141,8 @@ const handleIsModel = ()=>{
   setIsReportElements(false)
   setIsVerification(false)
   setIsRules(false)
+  setIsAttachToProcess(false)
+
 }
 
 const handleIsFactTable = ()=>{
@@ -147,6 +152,8 @@ const handleIsFactTable = ()=>{
   setIsReportElements(false)
   setIsVerification(false)
   setIsRules(false)
+  setIsAttachToProcess(false)
+
 }
 
 const handleIsRules = ()=>{
@@ -156,6 +163,8 @@ const handleIsRules = ()=>{
   setIsReportElements(false)
   setIsVerification(false)
   setIsRules(true)
+  setIsAttachToProcess(false)
+
 }
 const handleIsVerification = ()=>{
   setIsRendering(false)
@@ -164,6 +173,8 @@ const handleIsVerification = ()=>{
   setIsReportElements(false)
   setIsVerification(true)
   setIsRules(false)
+  setIsAttachToProcess(false)
+
 }
 const handleIsReportElements = ()=>{
   setIsRendering(false)
@@ -172,8 +183,20 @@ const handleIsReportElements = ()=>{
   setIsReportElements(true)
   setIsVerification(false)
   setIsRules(false)
+  setIsAttachToProcess(false)
+
 }
 
+
+const handleAttachToProcessTab = ()=>{
+  setIsRendering(false)
+  setIsModel(false)
+  setIsFactTable(false)
+  setIsReportElements(false)
+  setIsVerification(false)
+  setIsRules(false)
+  setIsAttachToProcess(true)
+}
 
 
 // {dataStore.semanticStrucutreInstance ? (
@@ -238,25 +261,36 @@ return (
       <div className='reportHeader'>Import</div>
       <div className='reportHeader'>Export</div>
       <div className='reportHeader'>FullScreen</div>
-      <div className='reportHeader'>Attach to Process</div>
+      <div className='reportHeader' onClick={()=>handleAttachToProcessTab()}>Attach to Process</div>
       <div className='reportHeader'>View</div>
       <div className='reportHeader'>Auto Save</div>
 
       </div>
     </div> : <div></div>}
 
+    {isAttachToProcess ? <div>
+      <table className='xlsx-table2'>
+      <tr><th><td>Report ID</td><td>Ab Co BalanceSheet</td></th></tr>
 
-  <div className='balance-sheet'>
-  <div>
-      </div>
+      <tr><td>Process ID</td><td>URI View and Edit Deployment</td></tr>
+      <tr><td>Domain</td><td>abco.co/report/BalanceSheet</td></tr>
+      <tr><td>Credentials</td><td>AuthLinkConfig1</td></tr>
+      <tr><td>TTL</td><td>80000000</td></tr>
 
-      <div className='reportWrap'>
+
+
+
+      </table>
+      </div> : <div></div>}
+
 
 
 
 
       {isRendering ? <div>
 
+        <div className='balance-sheet'>
+        <div className='reportWrap'>
 
       <table className='balance-sheet-table'>
       <thead>
@@ -409,11 +443,6 @@ return (
         <tr><th>Liabilities and Equity</th><td> </td></tr>
       </tbody>
 
-
-
-
-
-
     </table>
     {tableData.length > 0 ? (
       <div className="buttons-wrap">
@@ -427,11 +456,16 @@ return (
     ) : (
       <div className="table-button">N/A</div>
     )}
+    </div>
+    </div>
+
+
     </div> : <div></div>}
 
 
     {isModel ? <div>
-
+      <div className='balance-sheet'>
+      <div className='reportWrap'>
                 <table className='xlsx-table'
                   >
                    <thead>
@@ -494,6 +528,9 @@ return (
                   <button class='addrowButton'  >Publish Schema</button>
                   </div>
 
+                  </div>
+                  </div>
+
 
   {tableData.length > 0 ? (
 
@@ -528,8 +565,7 @@ return (
     ) : null}
 
 
-  </div>
-  </div>
+
 
   </div>
   );

@@ -79,7 +79,7 @@ const handleExportTrue =()=>{
 
       </div>
 
-      <div className='titlez'>Luciano - git:main | version 0.249</div>
+      <div className='titlez'>Luciano - git:main | version 0.250</div>
 
     </div>
   );
