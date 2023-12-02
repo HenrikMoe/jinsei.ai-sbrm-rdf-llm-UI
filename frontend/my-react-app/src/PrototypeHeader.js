@@ -82,11 +82,11 @@ const handleExportTrue =()=>{
       <div className='popup-container'>
       <div className='dropdown-button'>New</div></div>
       <div className='popup-container'>
-      <div className='dropdown-button' onClick={()=> handleExportTrue()}>Export</div></div>
+      <div className='dropdown-button' onClick={()=> handleExportTrue()}>Export/Generate</div></div>
 
       </div>
 
-      <div className='titlez'>Luciano - git:main | version 0.254</div>
+      <div className='titlez'>Luciano - git:main | version 0.263</div>
       {exportStatus ? <Modal setExportFalse={setExportFalse} exportStatus={exportStatus}/> : <div></div>}
 
     </div>

@@ -48,6 +48,13 @@ const Modal = ({isPublish, setModalOff, isModal, exportStatus, setExportFalse, s
     };
   }, [isModalOpen]);
 
+
+  const [isXBRLSelected, setIsXBRLSelected] = useState(false)
+
+  const handleXbrlSelect = ()=>{
+    setIsXBRLSelected(true)
+  }
+
   return (
     <div >
 
@@ -177,13 +184,66 @@ const Modal = ({isPublish, setModalOff, isModal, exportStatus, setExportFalse, s
       )}
 
 
+
+
       {exportStatus && (
         <div className="modal" >
           <button onClick={closeModal} className="close-button">
             X
           </button>
           <div className="modal-content">
-            Export shiz           </div>
+              Export Formats and Generative Processes:       </div>
+          <div className="modal-content" onClick={()=>handleXbrlSelect()}>
+            XBRL        </div>
+            <div className="modal-content">
+              XBRLi       </div>
+              <div className="modal-content">
+                  HTML       </div>
+            <div className="modal-content">
+              XLSX (Report Only)        </div>
+              <div className="modal-content">
+                XLSX (Report Model Only)        </div>
+                <div className="modal-content">
+                    XLSX (Report and Report Model)       </div>
+            <div className="modal-content">
+              JSON (Report Only)        </div>
+              <div className="modal-content">
+                JSON (Report Model Only)        </div>
+                <div className="modal-content">
+                    JSON (Report and Report Model)       </div>
+          <div className="modal-content">
+              PDF       </div>
+              <div className="modal-content">
+                  DOCX       </div>
+        </div>
+      )}
+
+      {isXBRLSelected &&(
+        <div className="modal" >
+        <button onClick={closeModal} className="close-button">
+          X
+        </button>
+
+        <div>
+        <div>
+        <div className="modal-content">
+            Generate XSD     </div>
+            <div className="modal-content">
+                Generate LAB     </div>
+        <div className="modal-content">
+            Generate REF     </div>
+
+            <div className="modal-content">
+                Download All     </div>
+
+                <div className="modal-content">
+                Generate Processes    </div>
+        </div>
+
+        <div>
+        </div>
+        </div>
+
         </div>
       )}
     </div>
