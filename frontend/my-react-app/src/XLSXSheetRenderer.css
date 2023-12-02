@@ -6,8 +6,8 @@
   top: 0;
   padding: 5px;
   display: inline-block;
-  margin-left: 0px;
-  max-width: 1500px;
+  margin-left: -40px;
+  max-width: 1600px;
   max-height: 400px;
   margin-bottom: -100px;
   border-radius: 10px !important;
@@ -256,7 +256,7 @@
 .xlsx-table th {
   background-color: #f0f0f0;
   color: black;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .xlsx-table td {
@@ -277,6 +277,8 @@
 .xlsx-table2 th, .xlsx-table td {
   border: 1px solid #ccc;
   padding: 8px;
+  font-size: 1.1em;
+  font-weight: 350;
   color: black;
   text-align: left;
 }

@@ -75,6 +75,16 @@ const XLSXSheetRenderer = ({
             });
 
           }
+          else if(initialData.length === 1000){
+            console.log('check')
+            modifiedData = initialData[1]
+
+            console.log(modifiedData)
+
+          }
+
+          console.log(modifiedData)
+
 
             setHeader(initialData[0]);
             if(modifiedData){
@@ -920,7 +930,7 @@ const handleIsPublish = () =>{
                 </td>
                 ))}
               </tr>
-            )): <tr><td>hello</td></tr>}
+            )): <tr><td>hello</td><td>hello</td><td>hello</td><td>hello</td></tr>}
           </tbody>
               </table>
               <div class='bottomButtonWrap'>
@@ -943,7 +953,7 @@ const handleIsPublish = () =>{
 
 
               </div>
-              : <div>null</div>}
+              : <div><table className='xlsx-table'><tr><td>Welcome</td></tr></table></div>}
 
 
           </div>
