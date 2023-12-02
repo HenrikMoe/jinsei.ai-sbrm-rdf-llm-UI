@@ -411,6 +411,10 @@ const handleIsPublish = () =>{
   setIsPublish(true)
 }
 
+console.log('helpasdf')
+console.log(tableData)
+console.log(sheetTitle)
+
 //model passed objs ; handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}
 //popup ; onFileUpload={onFileUpload}
 //delete ;  handleClearTrue={handleClearTrue} dataStore={dataStore}
@@ -462,6 +466,7 @@ const handleIsPublish = () =>{
               {row.map((cell, cellIndex) => (
                 <td
                   key={cellIndex}
+                  style={{ backgroundColor: rowIndex % 2 === 0 ? '#F8FAFC' : '#f5f5f5' }}
 
                   onMouseEnter={handleCellMouseEnter}
                   onMouseLeave={handleCellMouseLeave}
@@ -568,6 +573,7 @@ const handleIsPublish = () =>{
                   key={cellIndex}
                   onMouseEnter={handleCellMouseEnter}
                   onMouseLeave={handleCellMouseLeave}
+                  style={{ backgroundColor: rowIndex % 2 === 0 ? '#F8FAFC' : '#f5f5f5' }}
 
                 >
                 <div className='cellWrapper'>
@@ -668,7 +674,7 @@ const handleIsPublish = () =>{
                   key={cellIndex}
                   onMouseEnter={handleCellMouseEnter}
                   onMouseLeave={handleCellMouseLeave}
-
+                  style={{ backgroundColor: rowIndex % 2 === 0 ? '#F8FAFC' : '#f5f5f5' }}
                 >
                 <div className='cellWrapper'>
                 <div
@@ -773,7 +779,10 @@ const handleIsPublish = () =>{
             {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
               <tr key={rowIndex} >
                 {row.map((cell, cellIndex) => (
-                  <td style={{ backgroundColor: rowIndex % 2 === 0 ? '#F8FAFC' : '#f5f5f5' }}
+                  <td   style={{
+    backgroundColor: rowIndex % 2 === 0 ? '#F8FAFC' : '#f5f5f5',
+    fontWeight: sheetTitle[0] === 'Terms' ? 250 : 'normal', // Set font-weight to 250 if sheetTitle is 'Terms'
+  }}
                     key={cellIndex}
                     onMouseEnter={(e) => handleCellMouseEnter(e, rowIndex, cellIndex)}
                     onMouseLeave={handleCellMouseLeave}

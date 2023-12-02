@@ -257,6 +257,8 @@
   border: 1px solid #ccc;
   padding: 8px;
   color: black;
+  font-weight: 350;
+
   text-align: left;
 }
 
@@ -293,7 +295,7 @@
 .xlsx-table2 th {
   background-color: #f0f0f0;
   color: black;
-  font-weight: bold;
+  font-weight: 350;
 }
 
 .xlsx-table2 td {
