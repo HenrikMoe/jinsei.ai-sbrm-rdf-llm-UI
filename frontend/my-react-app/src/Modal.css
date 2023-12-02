@@ -129,7 +129,7 @@
 
 .open .dropdown-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-right: 20px;
   z-index: 99999;
   margin-top: 55px;
@@ -182,11 +182,18 @@
   color: black;
   margin-top: 5px;
   padding-left: 5px;
+  margin-left: 5px;
   padding-right: 5px;
   padding-top: 5px;
+  display: block;
   padding-bottom: 5px;
 }
 
+.button-space2{
+  display: flex;
+  margin-left: 5px;
+
+}
 
 .dropdown-item2{
   background: lightblue;

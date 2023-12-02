@@ -53,7 +53,9 @@ const deleteFile = () =>{
         Clear &or;
       </button>
       <div className="dropdown-content">
+        <div className="dropdown-item" onClick={deleteFile}>Clear This Sheet</div>
         <div className="dropdown-item" onClick={deleteFile}>Clear Workspace</div>
+
         {/* Add other dropdown items here */}
       </div>
     </div>
