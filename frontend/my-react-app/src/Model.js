@@ -102,7 +102,7 @@ const Model = ({ handleOverlayChange, handleClearFalse, clear, sheetTitle, handl
             />
           </div>
           {selectedModel ? (
-            <div className="dropdown-item2" onClick={() => handleOverlaidWizardSelect()}>View {selectedModel} Overlay Settings</div>
+            <div className="dropdown-item2" onClick={() => handleOverlaidWizardSelect()}>View {selectedModel} Settings</div>
           ) : (
             <div></div>
           )}
@@ -130,7 +130,7 @@ const Model = ({ handleOverlayChange, handleClearFalse, clear, sheetTitle, handl
 
 
           <div className="dropdown-item" onClick={() => handleModelSelect('Local Report Scheme')}>
-            Local Report Scheme
+            Local Scheme
           </div>
           {/* Add other dropdown items here */}
         </div>
