@@ -156,10 +156,11 @@ const Modal = ({isPublish, setModalOff, isModal, exportStatus, setExportFalse, s
             X
           </button>
           <div className="modal-content">
-          This is where we select what ovelray things to import into the model
+            Publsihing things
           </div>
         </div>
       )}
+
 
       {exportStatus && (
         <div className="modal" >
@@ -167,8 +168,7 @@ const Modal = ({isPublish, setModalOff, isModal, exportStatus, setExportFalse, s
             X
           </button>
           <div className="modal-content">
-          This is where we select what ovelray things to import into the model
-          </div>
+            Export shiz           </div>
         </div>
       )}
     </div>
