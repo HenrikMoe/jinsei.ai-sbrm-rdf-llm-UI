@@ -29,17 +29,18 @@ const XLSXFileHandler = ({ onFileUpload, closeDropdown }) => {
   };
 
   return (
-    <div className="button">
+    <div className='button-space2'>
 
+    <label htmlFor="fileInput" style={{ cursor: 'pointer' }} className='dropdown-item'>
+       XBRL
+      </label>
       <input
-        id="fileInput"
-        type="file"
-        accept=".xlsx"
-        style={{ display: 'none' }}
-        onChange={handleFileSelect}
-        ref={fileInputRef}
+      id="fileInput"
+      type="file"
+      accept=".xlsx"
+      style={{ display: 'none' }}
+      onChange={handleFileSelect}
       />
-      <button className="dropdown-item" htmlFor="fileInput" style={{ cursor: 'pointer' }} onClick={triggerFileInput}>XLSX</button>
     </div>
   );
 };

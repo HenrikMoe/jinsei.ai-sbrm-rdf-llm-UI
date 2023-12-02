@@ -44,12 +44,19 @@ const Popup = ({ onFileUpload }) => {
         Import &or;
       </button>
       <div className="dropdown-content">
+        <div className='button-space2'>This Sheet</div>
         <XBRLFilesHandler onFileUpload={onFileUpload} />
         <XLSXFileHandler closeDropdown={closeDropdown} onFileUpload={onFileUpload} />
         <CSVFileHandler onFileUpload={onFileUpload} />
         <JSONfileHandler onFileUpload={onFileUpload} />
         {/* Add other dropdown items here */}
+        <div className='button-space2'>All Sheets</div>
+        <XBRLFilesHandler onFileUpload={onFileUpload} />
+        <XLSXFileHandler closeDropdown={closeDropdown} onFileUpload={onFileUpload} />
+        <CSVFileHandler onFileUpload={onFileUpload} />
+        <JSONfileHandler onFileUpload={onFileUpload} />
       </div>
+
     </div>
     </div>
   );

@@ -29,7 +29,9 @@ const Model = ({ handleOverlayChange, handleClearFalse, clear, sheetTitle, handl
 
 
 
-
+  const handleOverlaidWizardSelect = () =>{
+    setIsModal()
+  }
 
   const handleModelSelect = (model) => {
     handleClearFalse()
@@ -85,7 +87,7 @@ const Model = ({ handleOverlayChange, handleClearFalse, clear, sheetTitle, handl
       <div ref={dropdownRef} className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
         <button className="dropdown-button" onClick={toggleDropdown}>
         {selectedModel ? (
-          <div>{selectedModel} &or;</div>
+          <div>Overlaid: {selectedModel} &or;</div>
         ) : (
           <div>Overlay Reporting Schemes &or;</div>
         )}
@@ -99,6 +101,11 @@ const Model = ({ handleOverlayChange, handleClearFalse, clear, sheetTitle, handl
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
+          {selectedModel ? (
+            <div className="dropdown-item2" onClick={() => handleOverlaidWizardSelect()}>View {selectedModel} Overlay Settings</div>
+          ) : (
+            <div></div>
+          )}
           <div className="dropdown-item" onClick={() => handleModelSelect('Accounting Equation')}>
             Accounting Equation
           </div>
