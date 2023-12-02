@@ -114,7 +114,7 @@ const XLSXSheetRenderer = ({
   }, []);
 //conditinally render the subtype menu
 
-const [isRendering, setIsRendering] = useState(false);
+const [isRendering, setIsRendering] = useState(true);
 const [isModel, setIsModel] = useState(false);
 const [isFactTable, setIsFactTable] = useState(false);
 const [isRules, setIsRules] = useState(false);

@@ -99,7 +99,7 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
    //     Additional Button
    //   </button>
    // )}
-   const [isTree, setIsTree] = useState(false);
+   const [isTree, setIsTree] = useState(true);
    const [isDetails, setIsDetails] = useState(false);
    const [isAgendas, setIsAgendas] = useState(false);
 

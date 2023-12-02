@@ -31,6 +31,13 @@
   margin-left: 500px;
 }
 
+
+.processTablesWrapper2{
+  display: flex;
+  margin-left: 100px;
+  transform: scale(0.8); /* Zoom out by 67% */
+}
+
 .xlsx-table2 {
   margin-top: 00px;
   border-bottom: 2px solid #3498db; /* Border color */
