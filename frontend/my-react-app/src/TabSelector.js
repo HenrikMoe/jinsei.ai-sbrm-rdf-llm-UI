@@ -18,7 +18,7 @@ import ProcessModal from './ProcessModal'
 // <Upload onFileUpload={onFileUpload}/>
 // <Delete onFileUpload={onFileUpload} />
 
-const PrototypeHeader = ({onFileUpload, dataStore, handleTabSelection}) => {
+const PrototypeHeader = ({onFileUpload, dataStore, handleTabSelection, structureInstanceSelected}) => {
   const { isDarkMode } = useDarkMode();
   const [xlsxData, setXLSXData] = useState(null);
 console.log(onFileUpload)
@@ -52,6 +52,13 @@ console.log(onFileUpload)
 
 const [tabClicked, setTabClicked] = useState(null);
 
+
+useEffect(() => {
+  // Set the default tab to 'Configuration' if no tab has been selected
+  if (structureInstanceSelected) {
+    setTabClicked('Structure')
+  }
+}, [structureInstanceSelected]);
 
 const handleTabClick = (selection)=>{
   handleTabSelection(selection)
