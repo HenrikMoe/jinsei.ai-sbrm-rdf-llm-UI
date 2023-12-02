@@ -30,11 +30,10 @@ const PrototypeSideMenu = ({ handle, sheetTitles, onSheetSelect, sheetData, xlsx
 
      <div className='balance-sheet2'>
 
-        <div>Co-pilot Q & A</div>
-        <div>Current LLM: </div>
-        <div>Upload File</div>
+        <div className="elementTitle9">Co-pilot Q & A</div>
+        <div className="elementTitle9">Current LLM: PlaceHolder </div>
         <form className="chat-form" onSubmit={handleSubmit}>
-          <label htmlFor="input">GBT3.5turbo:</label>
+          <label htmlFor="input">Test Prompt Trained Zone 1:</label>
           <input
             type="text"
             id="input"
@@ -43,7 +42,7 @@ const PrototypeSideMenu = ({ handle, sheetTitles, onSheetSelect, sheetData, xlsx
           <button type="submit">Go</button>
         </form>
         <form className="chat-form" onSubmit={handleSubmit2}>
-          <label htmlFor="input">GBT3.5turbo:</label>
+          <label htmlFor="input">Test Chat Zone 2:</label>
           <input
             type="text"
             id="input"
@@ -51,10 +50,7 @@ const PrototypeSideMenu = ({ handle, sheetTitles, onSheetSelect, sheetData, xlsx
           />
           <button type="submit">Go</button>
         </form>
-        <div>Use Overlay</div>
-        <div> “Is proof:Assets part of the balance sheet”</div>
-        <div>Use Overlay</div>
-        <div>“Please give me a list of the specializations of “proof:NetCashFlow”.</div>
+      
         <ChatGBT />
        </div>
        </div>
