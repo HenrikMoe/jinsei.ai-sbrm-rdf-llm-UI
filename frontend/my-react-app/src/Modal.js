@@ -156,8 +156,23 @@ const Modal = ({isPublish, setModalOff, isModal, exportStatus, setExportFalse, s
             X
           </button>
           <div className="modal-content">
-            Publsihing things
+          <div className='checkboxWrap'>
+          <div>Publish Model Standard</div>
           </div>
+          </div>
+          <div className="modal-content">
+          <div className='checkboxWrap'>
+          <table className='xlsx-table'>
+          <tr><td>Model Name:</td><td>AbCoQuarterlyDisclosureSet</td></tr>
+          <tr><td>License Key:</td><td>adc3...10f</td></tr>
+          <tr><td>Authenticated Licensees:</td><td>LicenseesObject</td></tr>
+
+          </table>
+          <button>Publish To Jinsei</button>
+
+          </div>
+          </div>
+
         </div>
       )}
 
