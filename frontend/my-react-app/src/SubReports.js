@@ -3,7 +3,7 @@ import './PrototypeSideMenu.css'; // Import the CSS file for styling
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
 
-const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet, schemaConfigSelected }) => {
+const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet, schemaConfigSelected, handleTabSelection }) => {
   const [isResizing, setIsResizing] = useState(false);
   const [initialWidth, setInitialWidth] = useState(200);
   const [initialHeight, setInitialHeight] = useState(400);
@@ -83,10 +83,14 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
    };
 
    const handleStructureInstanceSelect = (index, structTitle) =>{
+     console.log('asdflkj')
      console.log(structTitle)
      setSelectedSheet(structTitle);
      console.log(selectedSheet)
      handleStructureInstanceSelection(structTitle)
+     //somehow change the tab to configuration
+     handleTabSelection('Schema')
+
    }
 
    const handleTitleChange = (index, title, titleChange) => {
