@@ -118,6 +118,15 @@ function Homepage() {
                                   navigate('/propertiesxsd')
                                 }
 
+      const youtubeLink = 'https://youtu.be/raVPHTartEc'; // Replace with your actual YouTube link
+
+ const handlePrototypeClick2 = () => {
+   // Handle the button click action
+   // For example, you might want to open the YouTube video in a new tab or perform some other action.
+   window.open(youtubeLink, '_blank');
+ };
+
+
                                 // <button className={`lang ${isDarkMode ? 'dark-mode-text' : ''}`} onClick={() => changeLanguage('en')}>EN</button>
                                 // <button className={`lang ${isDarkMode ? 'dark-mode-text' : ''}`} onClick={() => changeLanguage('ja')}>JP</button>
                                 // <button className={`lang ${isDarkMode ? 'dark-mode-text' : ''}`} onClick={() => changeLanguage('de')}>DE</button>
@@ -127,11 +136,29 @@ function Homepage() {
     <div className={`homepage-container ${isDarkMode ? 'dark-mode1' : ''}`}>
 
       <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Global standards based business reporting pipelines.')}
+        {t('Standards based business reporting pipelines.')}
       </div>
+
+
       <button onClick={handlePrototypeClick} className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
          Luciano
       </button>
+      
+        <div >
+          {youtubeLink && (
+            <iframe
+              width="460"
+              className="iframe-container2"
+              height="215"
+              src="https://www.youtube.com/embed/raVPHTartEc"
+              title="YouTube Video"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          )}
+        </div>
+
+
 
       <div className={`arriving-text2 ${isDarkMode ? 'dark-mode-text' : ''}`}>
         {t('Transaction service hosting.')}

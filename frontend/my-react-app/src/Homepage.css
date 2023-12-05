@@ -2,7 +2,9 @@
   text-align: center;
   padding: 20px;
   margin-top: 50px;
-  background-color: lightgrey;
+  background-size: 30%; /* Adjust the percentage as needed for the desired zoom level */
+  background-color: #001522;
+  /* background-image: url('./backgroundImageHomepage.png'); /* Corrected syntax with url() */
 }
 /* Media query for mobile devices */
   @media (max-width: 768px) {
@@ -45,6 +47,7 @@
   letter-spacing: 2px; /* Adjust letter spacing as needed */
   margin-top: 150px;
   margin-bottom: 100px;
+  color: white;
 }
 @media (max-width: 767px) {
   .arriving-text {
@@ -63,6 +66,7 @@
   letter-spacing: 2px; /* Adjust letter spacing as needed */
   margin-top: 100px;
   margin-bottom: 00px;
+  color: white;
 }
 @media (max-width: 767px) {
   .arriving-text2 {
@@ -82,7 +86,6 @@
   border-bottom: 2px solid black;
   border-left: 0px solid black;
   border-top: 0px solid black;
-  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
   padding: 50px 160px; /* Increase the padding to make it bigger */
   display: block;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
@@ -97,7 +100,7 @@
   font-size: 36px; /* Increase the font size to make it bigger */
   border-right: 2px solid black;
   border-bottom: 2px solid black;
-  box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  box-shadow: 20px 20px 0 rgba(255, 255, 255, 0.2); /* Light gray shadow */
   padding: 50px 160px; /* Increase the padding to make it bigger */
   display: block;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
@@ -124,6 +127,30 @@
   cursor: pointer;
 }
 
+
+.iframe-container{
+  justify-content: center;
+  max-width: 460px;
+
+  display: flex;
+}
+
+.iframe-container2{
+  max-width: 800px;
+  max-height: 500px;
+  margin: 0px auto;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
+  margin-top: 100px;
+
+  display: block;
+}
+
+.iframe-container2:hover{
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 25px 25px 0 rgba(255, 255, 255, 0.2); /* Light gray shadow */
+
+}
 
 .timeline-button:hover {
   background-color: skyblue; /* Soft pastel blue color */
