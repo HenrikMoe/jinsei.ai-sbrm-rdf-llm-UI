@@ -136,14 +136,14 @@ function Homepage() {
     <div className={`homepage-container ${isDarkMode ? 'dark-mode1' : ''}`}>
 
       <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Standards based business reporting pipelines.')}
+        {t('Standards based business reporting processes.')}
       </div>
 
 
       <button onClick={handlePrototypeClick} className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
          Luciano
       </button>
-      
+
         <div >
           {youtubeLink && (
             <iframe

@@ -314,6 +314,7 @@ width: 1050px;
 .prototype-side-menu5 li {
   margin-bottom: 10px;
   font-size: 20px;
+  font-weight: 250;
   cursor: pointer;
   padding: 10px;
   background-color: navajowhite;
@@ -335,6 +336,7 @@ width: 1050px;
 .easy{
   display: flex;
   margin-left: 10px;
+  font-weight: 250;
 }
 
 .easy2{
