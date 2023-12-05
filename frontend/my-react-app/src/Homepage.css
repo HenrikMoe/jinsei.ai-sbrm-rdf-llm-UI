@@ -159,7 +159,7 @@
   font-size: 36px; /* Increase the font size to make it bigger */
   border-right: 2px solid black;
   border-bottom: 2px solid black;
-  box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  box-shadow: 20px 20px 0 rgba(255, 255, 255, 0.2); /* Light gray shadow */
   padding: 50px 160px; /* Increase the padding to make it bigger */
   display: block;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
