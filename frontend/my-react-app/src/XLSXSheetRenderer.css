@@ -35,6 +35,7 @@
 .processTablesWrapper2{
   display: flex;
   margin-left: 100px;
+  margin-top: 0px;
   transform: scale(0.8); /* Zoom out by 67% */
 }
 

@@ -11,6 +11,7 @@ const PrototypeSideMenu = ({ handlePipelineInstanceSelection, sheetTitles, onShe
    <div className="elementTitle11">
 
 <div className='processTablesWrapper4'>
+  <div className='elementTitle18'>Process Management</div>
    <div className='processTablesWrapper2'>
    <table className='xlsx-table2'>
    <tr><th><td>Report ID</td></th><th><td>Ab Co BalanceSheet</td></th></tr>
