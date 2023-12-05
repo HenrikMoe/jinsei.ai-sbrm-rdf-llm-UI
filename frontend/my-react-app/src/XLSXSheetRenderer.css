@@ -38,6 +38,21 @@
   transform: scale(0.8); /* Zoom out by 67% */
 }
 
+
+.processTablesWrapper3{
+  display: flex;
+  margin-top: 80px;
+  margin-left: 100px;
+  transform: scale(0.8); /* Zoom out by 67% */
+}
+
+
+.processTablesWrapper4{
+  display: block;
+  margin-top: 80px;
+  margin-left: 00px;
+  transform: scale(1.0); /* Zoom out by 67% */
+}
 .xlsx-table2 {
   margin-top: 00px;
   border-bottom: 2px solid #3498db; /* Border color */
@@ -45,7 +60,7 @@
   top: 0;
   padding: 5px;
   margin-left:20px;
-  max-width: 1500px;
+  max-width: 120px;
   max-height: 400px;
   margin-bottom: -100px;
   border-radius: 10px !important;
@@ -62,6 +77,8 @@
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 
 }
+
+
 
 
 .addrowbutton{
@@ -83,8 +100,9 @@
 
 .elementTitle2{
   margin-top: -10px;
-  font-size: 20px;
-  margin-bottom: 40px;
+  font-size: 22px;
+  margin-bottom: 30px;
+  margin-left: 1200px;
   color: black;
 }
 
@@ -413,7 +431,7 @@
 
 
 .button-wrapAY{
-  margin-top: -50px;
+  margin-top: -80px;
   display: flex;
   margin-left: 100px;
 }

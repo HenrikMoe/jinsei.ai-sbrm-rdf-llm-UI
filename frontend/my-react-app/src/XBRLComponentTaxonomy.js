@@ -125,7 +125,7 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
 
  return (
    <div className='structureInstance'>
-    <div className='elementTitle'>Structures</div>
+    <div className='elementTitle'></div>
      <div
        className={`prototype-side-menu5 ${isResizing ? 'resizing' : ''} ${
          isDarkMode ? 'dark-mode' : ''
