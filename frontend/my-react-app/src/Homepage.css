@@ -58,6 +58,25 @@
 }
 
 
+.arriving-text5 {
+  font-size: 22px; /* Adjust the font size as needed */
+  text-transform: uppercase; /* Convert text to uppercase */
+  font-weight: bold;
+  text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.3); /* Add text shadow for a shadow effect */
+  letter-spacing: 2px; /* Adjust letter spacing as needed */
+  margin-top: 150px;
+  margin-bottom: 100px;
+  color: white;
+}
+@media (max-width: 767px) {
+  .arriving-text {
+    margin-right: 0px;
+    margin-left: -5px;
+
+  }
+}
+
+
 .arriving-text2 {
   font-size: 36px; /* Adjust the font size as needed */
   text-transform: uppercase; /* Convert text to uppercase */
@@ -239,9 +258,11 @@
   }
 
   .prototype-button,
-  .timeline-button {
+  .timeline-button,
+  .timeline-button2 {
     font-size: 20px; /* Further decrease font size for mobile */
     padding: 15px 30px; /* Adjust padding for mobile */
     box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Smaller shadow for mobile */
   }
+
 }

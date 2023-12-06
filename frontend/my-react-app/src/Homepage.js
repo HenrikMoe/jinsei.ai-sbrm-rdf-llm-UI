@@ -140,6 +140,14 @@ function Homepage() {
       </div>
 
 
+      <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
+        {t('Jinsei-Luciano provides an intuitive interface for business professionals for creating financial information services. ')}
+      </div>
+
+      <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
+        {t('Seamless, multi-formatted financial disclosure processes leveraging Jinsei.ai’s data aggregations and standard report model suites.')}
+      </div>
+
       <button onClick={handlePrototypeClick} className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
          Luciano
       </button>
@@ -157,7 +165,6 @@ function Homepage() {
             ></iframe>
           )}
         </div>
-
 
 
       <div className={`arriving-text2 ${isDarkMode ? 'dark-mode-text' : ''}`}>
