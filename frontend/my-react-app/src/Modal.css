@@ -109,6 +109,36 @@
 
 }
 
+.dropdown-button4 {
+  color: black;
+  border: none;
+  padding: 15px !important;
+  cursor: pointer;
+  background-color: blanchedalmond; /* Soft pastel blue color */
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  z-index: 9;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+
+}
+
+.dropdown-button4:hover {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  padding: 15px !important;
+  cursor: pointer;
+  background-color: grey;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  z-index: 99999;
+
+}
+
 
 .dropdown-content {
   display: none;

@@ -49,7 +49,7 @@ const deleteFile = () =>{
   return (
     <div className={`popup-container ${isDarkMode ? 'dark-mode' : ''}`}>
     <div ref={dropdownRef} className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
-      <button className="dropdown-button" onClick={toggleDropdown}>
+      <button className="dropdown-button4" onClick={toggleDropdown}>
         Clear &or;
       </button>
       <div className="dropdown-content">
