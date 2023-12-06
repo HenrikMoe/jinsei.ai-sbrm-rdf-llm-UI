@@ -177,7 +177,7 @@ function Homepage() {
       </button>
 
       <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Supporting XBRL, ACTUS. Learn more.')}
+        {t('XBRL, Disclosure and Ontology Process Pairing.')}
       </div>
       <button onClick={handleTimelineClick} className={`timeline-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
         Corp Timeline
