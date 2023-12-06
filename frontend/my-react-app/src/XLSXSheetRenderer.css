@@ -434,7 +434,7 @@
 .button-wrapAY{
   margin-top: -80px;
   display: flex;
-  margin-left: 100px;
+  margin-left: 00px;
 }
 
 .button-wrapAY2{
@@ -453,9 +453,10 @@
 
 
 .ribbon-button {
-  background-color: blanchedalmond; /* Soft pastel blue color */
+  background-color: #001522; /* Soft pastel blue color */
   border: 2px solid grey;
-  color: black;
+  color: white;
+  font-size: 18px;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
   border: none;
   padding: 10px 20px;

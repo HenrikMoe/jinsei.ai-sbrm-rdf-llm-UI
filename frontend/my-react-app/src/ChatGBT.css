@@ -24,6 +24,7 @@
 .chat-form {
   display: flex;
   flex-direction: column;
+  color: black;
   margin-right: 15px;
 }
 

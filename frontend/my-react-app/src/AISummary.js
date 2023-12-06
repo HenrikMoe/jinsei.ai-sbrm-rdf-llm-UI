@@ -26,7 +26,7 @@ const PrototypeSideMenu = ({ handle, sheetTitles, onSheetSelect, sheetData, xlsx
 
  return (
 
-     <div className="elementTitle9">AI Q & A
+     <div className="elementTitle19">AI Q & A
 
      <div className='balance-sheet2'>
 
@@ -50,7 +50,7 @@ const PrototypeSideMenu = ({ handle, sheetTitles, onSheetSelect, sheetData, xlsx
           />
           <button type="submit">Go</button>
         </form>
-      
+
         <ChatGBT />
        </div>
        </div>

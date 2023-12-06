@@ -110,14 +110,15 @@
 }
 
 .dropdown-button4 {
-  color: black;
+  color: white;
   border: none;
   padding: 15px !important;
   cursor: pointer;
-  background-color: blanchedalmond; /* Soft pastel blue color */
+  background-color: #001522;
+  font-size: 18px;
   border-radius: 10px;
   display: flex;
-  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  box-shadow: 5px 5px #003366;
   z-index: 9;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
 
