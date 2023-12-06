@@ -15,12 +15,13 @@
   background-color: #F8FAFC;
   border-collapse: separate;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
 
   border-radius: 10px !important;
 }
 
 .xlsx-table:hover {
-  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
+  box-shadow: 20px 20px 0 #003366; /* Add a shadow to the right and bottom */
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 
 }
@@ -219,7 +220,7 @@
 .bottomButtonWrap {
   display: flex;
   margin-left: 5px;
-  margin-top: 10px; /* Adjust as needed */
+  margin-top: 50px; /* Adjust as needed */
 }
 
 /* Hide the menu when .unique-menu-hide is applied to .unique-menu-container */
@@ -418,7 +419,7 @@
   margin-left: 20px;
   display: inline-block;
   padding: 10px 20px;
-  background-color: #4caf50; /* Green color */
+  background-color: #556B2F; /* Green color */
   color: white;
   margin-bottom: -100px;
 
@@ -427,6 +428,7 @@
   cursor: pointer;
   font-size: 16px;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 5px 5px 0 #003366; /* Add a shadow to the right and bottom */
 
 }
 
@@ -446,7 +448,7 @@
 
   .addrowButton:hover {
     background-color: #45a049; /* Darker green color on hover */
-    box-shadow: 5px 5px 0 #003366; /* Add a shadow to the right and bottom */
+    box-shadow: 15px 15px #003366; /* Add a shadow to the right and bottom */
     transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 
   }

@@ -149,6 +149,8 @@
   margin-bottom: 10px;
   font-size: 16px;
   cursor: pointer;
+  background-color: #556B2F; /* Green color */
+
   padding: 2px;
   border: .5px solid black; /* Set border style */
   border-radius: 3px;
@@ -157,9 +159,10 @@
 .pipeline-side-menu li {
   margin-bottom: 10px;
   font-size: 20px;
+  background-color: #556B2F; /* Green color */
+
   cursor: pointer;
   padding: 10px;
-  background-color: navajowhite;
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }
@@ -180,7 +183,7 @@
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
-  background-color: navajowhite;
+  background-color: #556B2F; /* Green color */
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }
@@ -201,7 +204,7 @@
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
-  background-color: navajowhite;
+  background-color: #556B2F; /* Green color */
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }

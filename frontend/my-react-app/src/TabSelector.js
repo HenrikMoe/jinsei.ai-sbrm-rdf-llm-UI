@@ -81,12 +81,17 @@ useEffect(() => {
   }
 }, [tabClicked, handleTabSelection]);
 
+// <div className='title9'>Tab:</div>
+// <div className='title8'>Workspace</div>
+
+
+
   return (
 
     <div className={`prototype-header2 ${isDarkMode ? 'dark-mode' : ''}`}>
-    <div className='title9'>Tab:</div>
-
       <div className='button-wrap3'>
+      <div className='title9'>Control Center:</div>
+
       <div
        className={`dropdown-button2 ${tabClicked === 'AI' ? 'selected-tab' : ''}`}
        onClick={() => handleTabClick('AI')}
@@ -121,7 +126,6 @@ useEffect(() => {
 
 
 
-      <div className='title8'>Workspace</div>
 
 
     </div>

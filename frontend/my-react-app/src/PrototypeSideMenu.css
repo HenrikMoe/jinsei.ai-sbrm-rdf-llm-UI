@@ -37,7 +37,7 @@
   background-color: #F8FAFC;
   border-right: 2px solid lightslategrey;
   z-index: -800;
-  margin-top: 70px;
+  margin-top: 76px;
   width: 250px;
   padding: 20px;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
@@ -75,7 +75,7 @@
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
-  background-color: navajowhite;
+  background-color: #556B2F; /* Green color */
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }
@@ -208,8 +208,10 @@
 
 .reportHeader{
   display: block;
-  border-right: 1px solid black;
-  margin-left: 10px;
+  border-right: 1px solid white;
+  
+  padding-left: 5px;
+  padding-right: 5px;
   font-size: 1.2em;
   padding: 5px;
   color: white;
@@ -262,7 +264,9 @@ width: 1050px;
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
-  background-color: navajowhite;
+  color: black;
+  margin-left: 0px;
+  background-color: #556B2F; /* Green color */
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }
@@ -318,7 +322,7 @@ width: 1050px;
   font-weight: 250;
   cursor: pointer;
   padding: 10px;
-  background-color: navajowhite;
+  background-color: #556B2F; /* Green color */
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }

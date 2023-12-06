@@ -80,11 +80,11 @@
 }
 
 .dropdown-button {
-  color: black;
+  color: white;
   border: none;
   padding: 15px !important;
   cursor: pointer;
-  background-color: #aedff7; /* Soft pastel blue color */
+  background-color: #001522; /* Soft pastel blue color */
   border-radius: 10px;
   display: flex;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
