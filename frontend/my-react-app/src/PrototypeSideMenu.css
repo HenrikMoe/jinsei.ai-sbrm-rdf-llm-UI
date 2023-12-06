@@ -75,7 +75,8 @@
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
-  background-color: #556B2F; /* Green color */
+  background-color: #F8FAFC;
+  border-bottom: 1px solid black;
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }
@@ -85,8 +86,9 @@
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
+  color: white;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
-  background-color: floralwhite;
+  background-color: #556B2F; /* Green color */
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }
@@ -209,7 +211,7 @@
 .reportHeader{
   display: block;
   border-right: 1px solid white;
-  
+
   padding-left: 5px;
   padding-right: 5px;
   font-size: 1.2em;
@@ -266,7 +268,8 @@ width: 1050px;
   padding: 10px;
   color: black;
   margin-left: 0px;
-  background-color: #556B2F; /* Green color */
+  border-bottom: 1px solid black;
+  background-color: #F8FAFC;
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }
@@ -274,11 +277,12 @@ width: 1050px;
 .prototype-side-menu li:hover {
   margin-bottom: 10px;
   font-size: 20px;
+  background-color: #556B2F; /* Green color */
+  color: white;
   cursor: pointer;
   padding: 10px;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
 
-  background-color: floralwhite;
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }
@@ -293,9 +297,9 @@ width: 1050px;
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
-  background-color: navajowhite;
+  border-bottom: 1px solid black;
+  background-color: #F8FAFC;
   /* border: .5px solid black; /* Set border style */
-  border-radius: 3px;
 }
 
 .prototype-side-menu6 li:hover {
@@ -303,8 +307,9 @@ width: 1050px;
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
+  color: white;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
-  background-color: floralwhite;
+  background-color: #556B2F; /* Green color */
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }
@@ -322,7 +327,8 @@ width: 1050px;
   font-weight: 250;
   cursor: pointer;
   padding: 10px;
-  background-color: #556B2F; /* Green color */
+  background-color: #F8FAFC;
+  border-bottom: 1px solid black;
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }
@@ -330,10 +336,11 @@ width: 1050px;
 .prototype-side-menu5 li:hover {
   margin-bottom: 10px;
   font-size: 20px;
+  color: white;
   cursor: pointer;
   padding: 10px;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
-  background-color: floralwhite;
+  background-color: #556B2F; /* Green color */
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }

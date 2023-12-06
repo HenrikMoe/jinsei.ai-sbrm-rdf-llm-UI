@@ -78,7 +78,7 @@
 
 /* Homepage.css */
 .prototype-button {
-  background-color: #aedff7; /* Soft pastel blue color */
+  background-color: #556B2F; /* Green color */
   color: black;
   border-radius: 15px;
   font-size: 36px; /* Increase the font size to make it bigger */
@@ -94,7 +94,7 @@
 }
 
 .prototype-button:hover {
-  background-color: skyblue; /* Soft pastel blue color */
+  background-color: #556B2F; /* Green color */
   color: black;
   border-radius: 15px;
   font-size: 36px; /* Increase the font size to make it bigger */
@@ -110,7 +110,7 @@
 
 /* Homepage.css */
 .timeline-button {
-  background-color: #aedff7; /* Soft pastel blue color */
+  background-color: #556B2F; /* Green color */
   color: black;
   border-radius: 15px;
   font-size: 36px; /* Increase the font size to make it bigger */
@@ -153,7 +153,7 @@
 }
 
 .timeline-button:hover {
-  background-color: skyblue; /* Soft pastel blue color */
+  background-color: #556B2F; /* Green color */
   color: black;
   border-radius: 15px;
   font-size: 36px; /* Increase the font size to make it bigger */
