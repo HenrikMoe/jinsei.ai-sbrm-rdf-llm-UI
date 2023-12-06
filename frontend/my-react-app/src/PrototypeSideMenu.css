@@ -49,7 +49,7 @@
 
 .prototype-side-menu8:hover {
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
 }
 
 
@@ -111,7 +111,7 @@
   width: 250px;
   padding: 20px;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 
   overflow-y: auto;
@@ -146,13 +146,13 @@
 }
 
 .prototype-side-menu5:hover {
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 
 }
 
 .prototype-side-menu6:hover {
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 
 }
@@ -212,6 +212,7 @@
   margin-left: 10px;
   font-size: 1.2em;
   padding: 5px;
+  color: white;
 
   justify-content: center; /* Horizontal centering */
 align-items: center; /* Vertical centering */

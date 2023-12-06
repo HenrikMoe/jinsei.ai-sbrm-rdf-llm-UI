@@ -10,12 +10,13 @@
   align-items: center;
   position: absolute;
   margin-top: 125px;
-  margin-right:5px;
+  margin-right:0px;
   padding-top: 20px;
   padding-right: 37px;
   top: 0;
   left: 0;
   right: 0;
+  border-right: solid white 0px;
 
   padding-bottom: 50px;
   z-index: 500;
@@ -72,7 +73,7 @@
   top: 0;
   left: 0;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
-  box-shadow: 250px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  box-shadow: 290px 10px 0 #003366; /* Add a shadow to the right and bottom */
 
   right: 0;
   background-color: #F8FAFC;
@@ -94,7 +95,7 @@
   padding: 10px;
   border-radius: 10px;
   color: white;
-  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  box-shadow: 5px 5px 0 #003366; /* Add a shadow to the right and bottom */
   margin-right: 00px;
   margin-top: 15px !important;
 }
@@ -150,7 +151,7 @@
   border-radius: 10px;
   color: white;
   display: flex;
-  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  box-shadow: 5px 5px 0 #003366; /* Add a shadow to the right and bottom */
 }
 
 .dropdown-button2 {

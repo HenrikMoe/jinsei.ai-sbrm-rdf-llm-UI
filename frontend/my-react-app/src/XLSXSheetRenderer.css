@@ -20,7 +20,7 @@
 }
 
 .xlsx-table:hover {
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 
 }
@@ -74,7 +74,7 @@
 }
 
 .xlsx-table2:hover {
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 
 }
@@ -104,7 +104,7 @@
   font-size: 22px;
   margin-bottom: 30px;
   margin-left: 1200px;
-  color: black;
+  color: white;
 }
 
 .selected-button {
@@ -297,7 +297,7 @@
   border: 1px solid #007bff;
   color: black;
   background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 5px #003366;
 
 }
 
@@ -328,7 +328,7 @@
   border: 1px solid #007bff;
   color: black;
   background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 5px #003366;
 
 }
 
@@ -373,7 +373,7 @@
 .schemaRibbon {
   display: fixed;
   justify-content: space-between;
-  background-color: lightgrey;
+  background-color: #001522;
   color: white;
   padding: 10px;
   border-radius: 5px;
@@ -392,7 +392,7 @@
 }
 
 .subRibbon:hover {
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 
 }
@@ -446,7 +446,7 @@
 
   .addrowButton:hover {
     background-color: #45a049; /* Darker green color on hover */
-    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to the right and bottom */
+    box-shadow: 5px 5px 0 #003366; /* Add a shadow to the right and bottom */
     transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 
   }
@@ -462,7 +462,7 @@
   cursor: pointer;
   margin: 5px;
   margin-top: 20px;
-  box-shadow: 5px 5px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px #003366;
   border-radius: 5px;
 }
 

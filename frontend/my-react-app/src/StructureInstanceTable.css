@@ -16,7 +16,7 @@
 
 .balance-sheet:hover {
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 0 #003366;
 }
 
 
@@ -51,6 +51,7 @@
 
 .elementTitle5{
   font-size: 22px;
+  color: white;
   margin-top: -15px;
   margin-bottom: 10px;
   margin-left: 1300px;
@@ -66,7 +67,7 @@
 .elementTitle18{
   margin-left: 1400px;
   font-size: 22px;
-
+  color: white;
   margin-top: -70px;
 }
 

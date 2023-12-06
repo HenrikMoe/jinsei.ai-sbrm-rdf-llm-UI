@@ -222,7 +222,7 @@ return (
     className='reportHeader'
     onClick={() => handleIsRendering()}
     style={{
-      color: isRendering ? 'blue' : 'initial',
+      color: isRendering ? 'blue' : 'white',
       padding: '10px'
     }}
   >
@@ -231,27 +231,27 @@ return (
   <div className='reportHeader'
   onClick={()=>handleIsModel()}
   style={{
-    color: isModel ? 'blue' : 'initial',
+    color: isModel ? 'blue' : 'white',
     padding: '10px'
   }}>Model</div>
   <div className='reportHeader' onClick={()=>handleIsFactTable()}
   style={{
-    color: isFactTable ? 'blue' : 'initial',
+    color: isFactTable ? 'blue' : 'white',
     padding: '10px'
   }}>Fact Table</div>
   <div className='reportHeader' onClick={()=>handleIsRules()}
   style={{
-    color: isRules ? 'blue' : 'initial',
+    color: isRules ? 'blue' : 'white',
     padding: '10px'
   }}>Rules</div>
   <div className='reportHeader' onClick={()=>handleIsVerification()}
   style={{
-    color: isVerification ? 'blue' : 'initial',
+    color: isVerification ? 'blue' : 'white',
     padding: '10px'
   }}>Verification</div>
   <div className='reportHeader' onClick={()=>handleIsReportElements()}
   style={{
-    color: isReportElements ? 'blue' : 'initial',
+    color: isReportElements ? 'blue' : 'white',
     padding: '10px'
   }}>Report Elements</div>
   </div>
@@ -275,7 +275,7 @@ return (
         <div className='reportHeader'>FullScreen</div>
         <div className='reportHeader' onClick={()=>handleIsReportElements()}
         style={{
-          color: isAttachToProcess ? 'blue' : 'initial',
+          color: isAttachToProcess ? 'blue' : 'white',
           padding: '10px'
         }} onClick={()=>handleAttachToProcessTab()}>Attach to Process</div>
         <div className='reportHeader'>View</div>
