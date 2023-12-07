@@ -54,6 +54,8 @@ const XLSXSheetRenderer = ({
     }
   }, [sheetData]);
 
+
+
   const handleCellChange = (rowIndex, cellIndex, value) => {
     const updatedData = tableData.map((row, i) =>
       i === rowIndex
@@ -121,6 +123,115 @@ const [isRules, setIsRules] = useState(false);
 const [isVerification, setIsVerification] = useState(false);
 const [isReportElements, setIsReportElements] = useState(false);
 const [isAttachToProcess, setIsAttachToProcess] = useState(false);
+
+useEffect(() => {
+  if (isModel) {
+    console.log('sheetdata xlsx render initing ');
+  //  console.log('header' + sheetData[0]);
+    if(dataStore.isModelInstance){
+      console.log(dataStore.isModelInstance[0])
+      setHeader(dataStore.isModelInstance);
+      const initialData = dataStore.isModelInstance;
+      console.log('structdatainstance')
+      console.log(initialData);
+      setTableData(initialData);
+    }else{
+      setHeader(sheetData[0]);
+      const initialData = sheetData.slice(1);
+      console.log(initialData);
+      setTableData(initialData);
+    }
+
+  }
+}, [isModel]);
+
+
+useEffect(() => {
+  if (isFactTable) {
+    console.log('sheetdata xlsx render initing ');
+  //  console.log('header' + sheetData[0]);
+    if(dataStore.isFactTable){
+      console.log(dataStore.isFactTable[0])
+      setHeader(dataStore.isFactTable);
+      const initialData = dataStore.isFactTable;
+      console.log('structdatainstance')
+      console.log(initialData);
+      setTableData(initialData);
+    }else{
+      setHeader(sheetData[0]);
+      const initialData = sheetData.slice(1);
+      console.log(initialData);
+      setTableData(initialData);
+    }
+
+  }
+}, [isFactTable]);
+
+useEffect(() => {
+  if (isRules) {
+    console.log('rulerle ');
+  //  console.log('header' + sheetData[0]);
+    if(dataStore.isRules){
+      console.log(dataStore.isRules[0])
+      setHeader(dataStore.isRules);
+      const initialData = dataStore.isRules;
+      console.log('structdatainstance')
+      console.log(initialData);
+      setTableData(initialData);
+    }else{
+      setHeader(sheetData[0]);
+      const initialData = sheetData.slice(1);
+      console.log(initialData);
+      setTableData(initialData);
+    }
+
+  }
+}, [isRules]);
+
+
+useEffect(() => {
+  if (isVerification) {
+    console.log('rulerle ');
+  //  console.log('header' + sheetData[0]);
+    if(dataStore.isVerification){
+      console.log(dataStore.isVerification[0])
+      setHeader(dataStore.isVerification);
+      const initialData = dataStore.isVerification;
+      console.log('structdatainstance')
+      console.log(initialData);
+      setTableData(initialData);
+    }else{
+      setHeader(sheetData[0]);
+      const initialData = sheetData.slice(1);
+      console.log(initialData);
+      setTableData(initialData);
+    }
+
+  }
+}, [isVerification]);
+
+
+useEffect(() => {
+  if (isReportElements) {
+    console.log('rulerle ');
+  //  console.log('header' + sheetData[0]);
+    if(dataStore.isReportElements){
+      console.log(dataStore.isReportElements[0])
+      setHeader(dataStore.isReportElements);
+      const initialData = dataStore.isReportElements;
+      console.log('structdatainstance')
+      console.log(initialData);
+      setTableData(initialData);
+    }else{
+      setHeader(sheetData[0]);
+      const initialData = sheetData.slice(1);
+      console.log(initialData);
+      setTableData(initialData);
+    }
+
+  }
+}, [isReportElements]);
+
 
 
 const handleIsRendering = ()=>{
@@ -839,7 +950,7 @@ return (
       )}
     </tbody>
 
-    
+
         <tbody>
           <tr><th>Net Assets</th><td> </td><td> </td></tr>
         </tbody>
@@ -3202,8 +3313,7 @@ return (
               </tbody>
                   </table>
                   <div class='bottomButtonWrap'>
-                  <button class='addrowButton' onClick={addRow} >Add Row</button>
-                  <button class='addrowButton'  >Publish Schema</button>
+
                   </div>
 
                   </div>

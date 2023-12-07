@@ -265,6 +265,13 @@ const dataStore = {
     dataStore.semanticStrucutreInstanceTaxonomy = ['Cover or Document', 'Statements', 'Notes Level 1', 'Policies', 'Notes Level 2', 'Notes Level 3 Tables', 'Notes Level 4 Detail', 'All Components', 'Flagged Components']
   },
 
+  isModelInstance: [['isModelthing'], ['Current Assets'], ['Noncurrent Assets']],
+  isFactTable: [['ReportingEntityAspect'], ['CalendarPeriodAspect'], ['Concept'], ['FactValue'], ['Units'], ['Rounding'], ['ParentheticalExplantions'], ['Sequence']],
+  isRules: [['Rule Type'], ['Rule Code'], ['Rule'], ['Concept'], ['Structure Identifier']],
+
+  isVerification: [['Rule Type'], ['Expression'], ['Period'], ['Structure Identifier'], ['Result']],
+
+  isReportElements: [['Label'], ['Category'], ['Period'], ['Balance'], ['Name']],
   semanticStrucutreInstance: [['Assets [Roll Up]'], ['Current Assets'], ['Noncurrent Assets']],
   initDefaultSemanticStrucutreInstance: ()=>{
     dataStore.semanticStrucutreInstance = [['Assets Rolled Up', '$50,000'], ['Liabilities Rolled Up', '$30,000'], ['Net Assets', '$20,000']]
