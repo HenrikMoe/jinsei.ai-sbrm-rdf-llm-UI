@@ -122,6 +122,8 @@ const PrototypeSideMenu = ({ setStrucutreComponentItem, handleStructureInstanceS
    }
 
 
+   const [selectedButton, setSelectedButton] = useState(null);
+
 
 
  return (
@@ -178,6 +180,15 @@ const PrototypeSideMenu = ({ setStrucutreComponentItem, handleStructureInstanceS
                 <li
                   key={title}
                   contentEditable
+
+                     style={{
+                backgroundColor:
+                  selectedButton === title ? '#556B2F' : 'inherit',
+                  color:
+                    selectedButton === title ? 'white' : 'inherit',
+                padding: selectedButton === title ? '5px' : '5px',
+
+              }}
                   className={`${
                     isDarkMode ? 'dark-mode' : ''
                   } ${title === selectedSheet && !schemaConfigSelected
@@ -190,6 +201,8 @@ const PrototypeSideMenu = ({ setStrucutreComponentItem, handleStructureInstanceS
                   onClick={() => {
                     // handleStructureInstanceSelect(index, title);
                     setIsButtonVisible(true);
+                    setSelectedButton(title);
+
                     setStrucutreComponentItem(title)
                   }}
                 >
