@@ -233,7 +233,7 @@ function Homepage() {
 </div>
 
 <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Seamless, multi-formatted financial disclosure processes leveraging Jinsei.ai’s data aggregations and standard report model suites.')}
+  {t('Experience seamless, multi-formatted disclosure, mapping, and service process management leveraging Jinsei.ai’s standards based financial report and ontology model suites.')}
 </div>
      </div>
 
@@ -258,17 +258,8 @@ function Homepage() {
         </div>
 
 
-      <div className={`arriving-text2 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Transaction service hosting.')}
-      </div>
-
-
-      <button className={`timeline-button2 ${isDarkMode ? 'dark-mode-button' : ''}`}>
-        Meu
-      </button>
-
-      <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('XBRL, Disclosure and Ontology Process Pairing.')}
+      <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
+        {t('Product model standards leveraged from Object Management Group (OMG), xbrlUS, ACTUS, FIBO, and more.')}
       </div>
       <button onClick={handleTimelineClick} className={`timeline-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
         Corp Timeline
