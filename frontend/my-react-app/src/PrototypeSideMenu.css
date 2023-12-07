@@ -227,7 +227,8 @@ transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
 .reportHeader:hover{
-  background-color: lightgreen;
+  background-color: #556B2F; /* Green color */
+  color: white !important;
   padding: 5px;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
 
@@ -396,6 +397,11 @@ width: 1050px;
   color: black; /* Text color for the selected item */
 }
 
+.selected2 {
+  background-color: #556B2F; /* Green color */
+  color: white; /* Text color for the selected item */
+}
+
 .elementTitle{
   margin-top: 00px;
   margin-bottom: 80px
@@ -412,7 +418,8 @@ width: 1050px;
 }
 
 .elementTitle6:hover{
-  background-color: lightgreen;
+  background-color: #556B2F; /* Green color */
+  color: white !important;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
 
 }

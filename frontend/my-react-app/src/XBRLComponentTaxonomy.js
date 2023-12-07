@@ -3,7 +3,7 @@ import './PrototypeSideMenu.css'; // Import the CSS file for styling
 import { useDarkMode } from './DarkModeContext'; // Import the DarkModeContext
 
 
-const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet, schemaConfigSelected }) => {
+const PrototypeSideMenu = ({ setStrucutreComponentItem, handleStructureInstanceSelection, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet, schemaConfigSelected }) => {
   const [isResizing, setIsResizing] = useState(false);
   const [initialWidth, setInitialWidth] = useState(200);
   const [initialHeight, setInitialHeight] = useState(400);
@@ -123,6 +123,7 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
 
 
 
+
  return (
    <div className='structureInstance'>
     <div className='elementTitle'></div>
@@ -179,17 +180,17 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
                   contentEditable
                   className={`${
                     isDarkMode ? 'dark-mode' : ''
-                  } ${title === selectedSheet &&
-                  !schemaConfigSelected
-                    ? 'selected'
+                  } ${title === selectedSheet && !schemaConfigSelected
+                    ? 'selected2'
                     : ''} ${
                     index === 0 && isFirstSheetSelected
-                      ? 'selected'
+                      ? 'selected2'
                       : ''
                   }`}
                   onClick={() => {
                     // handleStructureInstanceSelect(index, title);
                     setIsButtonVisible(true);
+                    setStrucutreComponentItem(title)
                   }}
                 >
                   {title}

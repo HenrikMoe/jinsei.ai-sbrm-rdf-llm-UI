@@ -210,19 +210,310 @@ const handleAttachToProcessTab = ()=>{
 // ) : (
 //   <tr><td>Empty Header</td></tr>
 // )}
+const [isSFAC6Component1, setIsSFAC6Component1] = useState(true)
+const [isSFAC6Component2, setIsSFAC6Component2] = useState(false)
+const [isSFAC6Component3, setIsSFAC6Component3] = useState(false)
+const [isSFAC6Component4, setIsSFAC6Component4] = useState(false)
+const [isSFAC6Component5, setIsSFAC6Component5] = useState(false)
+const [isSFAC6Component6, setIsSFAC6Component6] = useState(false)
+const [isSFAC6Component7, setIsSFAC6Component7] = useState(false)
+const [isSFAC6Component8, setIsSFAC6Component8] = useState(false)
+const [isSFAC6Component9, setIsSFAC6Component9] = useState(false)
+const [isSFAC6Component10, setIsSFAC6Component10] = useState(false)
+const [isSFAC6Component11, setIsSFAC6Component11] = useState(false)
+const [isSFAC6Component12, setIsSFAC6Component12] = useState(false)
+const [isSFAC6Component13, setIsSFAC6Component13] = useState(false)
+const [isSFAC6Component14, setIsSFAC6Component14] = useState(false)
+const [isSFAC6Component15, setIsSFAC6Component15] = useState(false)
+
+
+
+const setStrucutreComponentItem = (title)=>{
+  if(title==='{HyperCube} Balance Sheet'){
+    setIsSFAC6Component1(true)
+    setIsSFAC6Component2(false)
+    setIsSFAC6Component3(false)
+    setIsSFAC6Component4(false)
+    setIsSFAC6Component5(false)
+    setIsSFAC6Component6(false)
+    setIsSFAC6Component7(false)
+    setIsSFAC6Component8(false)
+    setIsSFAC6Component9(false)
+    setIsSFAC6Component10(false)
+    setIsSFAC6Component11(false)
+    setIsSFAC6Component12(false)
+    setIsSFAC6Component13(false)
+    setIsSFAC6Component14(false)
+    setIsSFAC6Component15(false)
+
+  }
+  else if(title==='{HyperCube} Net Assets'){
+    setIsSFAC6Component1(false)
+    setIsSFAC6Component2(true)
+    setIsSFAC6Component3(false)
+    setIsSFAC6Component4(false)
+    setIsSFAC6Component5(false)
+    setIsSFAC6Component6(false)
+    setIsSFAC6Component7(false)
+    setIsSFAC6Component8(false)
+    setIsSFAC6Component9(false)
+    setIsSFAC6Component10(false)
+    setIsSFAC6Component11(false)
+    setIsSFAC6Component12(false)
+    setIsSFAC6Component13(false)
+    setIsSFAC6Component14(false)
+    setIsSFAC6Component15(false)
+
+  }
+  else if(title==='{HyperCube} Income Statement'){
+    setIsSFAC6Component1(false)
+    setIsSFAC6Component2(false)
+    setIsSFAC6Component3(true)
+    setIsSFAC6Component4(false)
+    setIsSFAC6Component5(false)
+    setIsSFAC6Component6(false)
+    setIsSFAC6Component7(false)
+    setIsSFAC6Component8(false)
+    setIsSFAC6Component9(false)
+    setIsSFAC6Component10(false)
+    setIsSFAC6Component11(false)
+    setIsSFAC6Component12(false)
+    setIsSFAC6Component13(false)
+    setIsSFAC6Component14(false)
+    setIsSFAC6Component15(false)
+
+  }
+  else if(title==='{HyperCube} Income Statement Alternative'){
+    setIsSFAC6Component1(false)
+    setIsSFAC6Component2(false)
+    setIsSFAC6Component3(false)
+    setIsSFAC6Component4(true)
+    setIsSFAC6Component5(false)
+    setIsSFAC6Component6(false)
+    setIsSFAC6Component7(false)
+    setIsSFAC6Component8(false)
+    setIsSFAC6Component9(false)
+    setIsSFAC6Component10(false)
+    setIsSFAC6Component11(false)
+    setIsSFAC6Component12(false)
+    setIsSFAC6Component13(false)
+    setIsSFAC6Component14(false)
+    setIsSFAC6Component15(false)
+
+  }
+  else if(title==='{HyperCube}'){
+    setIsSFAC6Component1(false)
+    setIsSFAC6Component2(false)
+    setIsSFAC6Component3(false)
+    setIsSFAC6Component4(false)
+    setIsSFAC6Component5(true)
+    setIsSFAC6Component6(false)
+    setIsSFAC6Component7(false)
+    setIsSFAC6Component8(false)
+    setIsSFAC6Component9(false)
+    setIsSFAC6Component10(false)
+    setIsSFAC6Component11(false)
+    setIsSFAC6Component12(false)
+    setIsSFAC6Component13(false)
+    setIsSFAC6Component14(false)
+    setIsSFAC6Component15(false)
+
+  }
+  else if(title==='{HyperCube} Comperhensive Income'){
+    setIsSFAC6Component1(false)
+    setIsSFAC6Component2(false)
+    setIsSFAC6Component3(false)
+    setIsSFAC6Component4(false)
+    setIsSFAC6Component5(false)
+    setIsSFAC6Component6(true)
+    setIsSFAC6Component7(false)
+    setIsSFAC6Component8(false)
+    setIsSFAC6Component9(false)
+    setIsSFAC6Component10(false)
+    setIsSFAC6Component11(false)
+    setIsSFAC6Component12(false)
+    setIsSFAC6Component13(false)
+    setIsSFAC6Component14(false)
+    setIsSFAC6Component15(false)
+
+  }
+  else if(title==='{HyperCube} Cash Flow'){
+    setIsSFAC6Component1(false)
+    setIsSFAC6Component2(false)
+    setIsSFAC6Component3(false)
+    setIsSFAC6Component4(false)
+    setIsSFAC6Component5(false)
+    setIsSFAC6Component6(false)
+    setIsSFAC6Component7(true)
+    setIsSFAC6Component8(false)
+    setIsSFAC6Component9(false)
+    setIsSFAC6Component10(false)
+    setIsSFAC6Component11(false)
+    setIsSFAC6Component12(false)
+    setIsSFAC6Component13(false)
+    setIsSFAC6Component14(false)
+    setIsSFAC6Component15(false)
+
+  }
+  else if(title==='{HyperCube} Prior Period Errors'){
+    setIsSFAC6Component1(false)
+    setIsSFAC6Component2(false)
+    setIsSFAC6Component3(false)
+    setIsSFAC6Component4(false)
+    setIsSFAC6Component5(false)
+    setIsSFAC6Component6(false)
+    setIsSFAC6Component7(false)
+    setIsSFAC6Component8(true)
+    setIsSFAC6Component9(false)
+    setIsSFAC6Component10(false)
+    setIsSFAC6Component11(false)
+    setIsSFAC6Component12(false)
+    setIsSFAC6Component13(false)
+    setIsSFAC6Component14(false)
+    setIsSFAC6Component15(false)
+
+  }
+  else if(title==='{HyperCube} Prior Period Errors (Alternative)'){
+    setIsSFAC6Component1(false)
+    setIsSFAC6Component2(false)
+    setIsSFAC6Component3(false)
+    setIsSFAC6Component4(false)
+    setIsSFAC6Component5(false)
+    setIsSFAC6Component6(false)
+    setIsSFAC6Component7(false)
+    setIsSFAC6Component8(false)
+    setIsSFAC6Component9(true)
+    setIsSFAC6Component10(false)
+    setIsSFAC6Component11(false)
+    setIsSFAC6Component12(false)
+    setIsSFAC6Component13(false)
+    setIsSFAC6Component14(false)
+    setIsSFAC6Component15(false)
+
+  }
+  else if(title==='{HyperCube} Changes In Equity'){
+    setIsSFAC6Component1(false)
+    setIsSFAC6Component2(false)
+    setIsSFAC6Component3(false)
+    setIsSFAC6Component4(false)
+    setIsSFAC6Component5(false)
+    setIsSFAC6Component6(false)
+    setIsSFAC6Component7(false)
+    setIsSFAC6Component8(false)
+    setIsSFAC6Component9(false)
+    setIsSFAC6Component10(true)
+    setIsSFAC6Component11(false)
+    setIsSFAC6Component12(false)
+    setIsSFAC6Component13(false)
+    setIsSFAC6Component14(false)
+    setIsSFAC6Component15(false)
+
+  }
+  else if(title==='{HyperCube} Policies'){
+    setIsSFAC6Component1(false)
+    setIsSFAC6Component2(false)
+    setIsSFAC6Component3(false)
+    setIsSFAC6Component4(false)
+    setIsSFAC6Component5(false)
+    setIsSFAC6Component6(false)
+    setIsSFAC6Component7(false)
+    setIsSFAC6Component8(false)
+    setIsSFAC6Component9(false)
+    setIsSFAC6Component10(false)
+    setIsSFAC6Component11(true)
+    setIsSFAC6Component12(false)
+    setIsSFAC6Component13(false)
+    setIsSFAC6Component14(false)
+    setIsSFAC6Component15(false)
+
+  }
+  else if(title==='{HyperCube} Variance Analysis'){
+    setIsSFAC6Component1(false)
+    setIsSFAC6Component2(false)
+    setIsSFAC6Component3(false)
+    setIsSFAC6Component4(false)
+    setIsSFAC6Component5(false)
+    setIsSFAC6Component6(false)
+    setIsSFAC6Component7(false)
+    setIsSFAC6Component8(false)
+    setIsSFAC6Component9(false)
+    setIsSFAC6Component10(false)
+    setIsSFAC6Component11(false)
+    setIsSFAC6Component12(true)
+    setIsSFAC6Component13(false)
+    setIsSFAC6Component14(false)
+    setIsSFAC6Component15(false)
+
+  }
+  else if(title==='{HyperCube} Segnment Revenues'){
+    setIsSFAC6Component1(false)
+    setIsSFAC6Component2(false)
+    setIsSFAC6Component3(false)
+    setIsSFAC6Component4(false)
+    setIsSFAC6Component5(false)
+    setIsSFAC6Component6(false)
+    setIsSFAC6Component7(false)
+    setIsSFAC6Component8(false)
+    setIsSFAC6Component9(false)
+    setIsSFAC6Component10(false)
+    setIsSFAC6Component11(false)
+    setIsSFAC6Component12(false)
+    setIsSFAC6Component13(true)
+    setIsSFAC6Component14(false)
+    setIsSFAC6Component15(false)
+
+  }
+  else if(title==='{HyperCube} Stock Plan Activity'){
+    setIsSFAC6Component1(true)
+    setIsSFAC6Component2(false)
+    setIsSFAC6Component3(false)
+    setIsSFAC6Component4(false)
+    setIsSFAC6Component5(false)
+    setIsSFAC6Component6(false)
+    setIsSFAC6Component7(false)
+    setIsSFAC6Component8(false)
+    setIsSFAC6Component9(false)
+    setIsSFAC6Component10(false)
+    setIsSFAC6Component11(false)
+    setIsSFAC6Component12(false)
+    setIsSFAC6Component13(false)
+    setIsSFAC6Component14(true)
+    setIsSFAC6Component15(false)
+
+  }
+  else if(title==='{HyperCube} Financial Highlights'){
+    setIsSFAC6Component1(false)
+    setIsSFAC6Component2(false)
+    setIsSFAC6Component3(false)
+    setIsSFAC6Component4(false)
+    setIsSFAC6Component5(false)
+    setIsSFAC6Component6(false)
+    setIsSFAC6Component7(false)
+    setIsSFAC6Component8(false)
+    setIsSFAC6Component9(false)
+    setIsSFAC6Component10(false)
+    setIsSFAC6Component11(false)
+    setIsSFAC6Component12(false)
+    setIsSFAC6Component13(false)
+    setIsSFAC6Component14(false)
+    setIsSFAC6Component15(true)
+
+  }
+}
+
 
 return (
     <div className='structureInstanceWrap2'>
   <div className="elementTitle5">Report Viewing and Editing </div>
 
   <div className='reportWraper'>
-  <XBRLComponentTaxonomy dataStore={dataStore}/>
+  <XBRLComponentTaxonomy dataStore={dataStore} setStrucutreComponentItem={setStrucutreComponentItem} />
   <div className='reportHeaderWrapper'>
   <div
     className='reportHeader'
     onClick={() => handleIsRendering()}
     style={{
-      color: isRendering ? 'blue' : 'white',
+      color: isRendering ? '#556B2F' : 'white',
       padding: '10px'
     }}
   >
@@ -263,7 +554,7 @@ return (
       <div className='reportHeader'>FullScreen</div>
       <div className='reportHeader' onClick={()=>handleAttachToProcessTab()}>Attach to Process</div>
       <div className='reportHeader'>View</div>
-      <div className='reportHeader'>Auto Save</div>
+      <div className='reportHeader'>Overlay XBRi</div>
 
       </div>
     </div> : <div></div>}
@@ -306,7 +597,7 @@ return (
       </div> : <div></div>}
 
 
-      {isRendering ? <div>
+      {isRendering&&isSFAC6Component1 ? <div>
 
         <div className='balance-sheet'>
         <div className='reportWrap'>
@@ -480,6 +771,8 @@ return (
 
 
     </div> : <div></div>}
+
+      {isRendering&&isSFAC6Component1 ? <div></div>:<div></div>}
 
 
     {isModel ? <div>
