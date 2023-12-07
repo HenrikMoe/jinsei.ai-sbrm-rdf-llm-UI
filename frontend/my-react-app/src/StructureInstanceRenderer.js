@@ -3308,6 +3308,348 @@ return (
   </div> : <div></div>}
 
 
+
+  {isFactTable ? <div>
+    <div className='balance-sheet'>
+    <div className='reportWrap'>
+              <table className='xlsx-table4'
+                >
+                 <thead>
+                 {dataStore.semanticWorkbookSheet ?
+                    <tr>
+                      {header.map((headerText, index) => (
+                        <th key={index} contentEditable
+                        onBlur={(e) => {
+                            handleHeaderChange(index, e.target.textContent);
+                          }}>{headerText}</th>
+                      ))}
+                    </tr> : <tr><td>hello</td></tr>
+                    }
+                  </thead>
+
+
+            <tbody>
+              {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
+                <tr key={rowIndex} >
+                  {row.map((cell, cellIndex) => (
+                    <td
+                      key={cellIndex}
+                      onMouseEnter={handleCellMouseEnter}
+                      onMouseLeave={handleCellMouseLeave}
+
+                    >
+                    <div className='cellWrapper'>
+                    <div
+
+                    >
+                      <div className="unique-menu-button" contentEditable={false} >
+                      <span contentEditable={false}>:</span>
+                      </div>
+                      <div className="unique-popup-menu">
+                        {/* Menu content and buttons go here */}
+                        <button onClick={addRow}>Insert Row</button>
+                        <button >Delete Row</button>
+                        <button >Context</button>
+                        {/* Add more buttons as needed */}
+                      </div>
+                    </div>
+                    <div
+                      className="cell-content"
+                      contentEditable
+                      onBlur={(e) => {
+                        handleCellChange(rowIndex, cellIndex, e.target.textContent);
+                      }}
+                    >
+                      {cell}
+                    </div>
+                  </div>
+                  </td>
+                  ))}
+                </tr>
+              )): <tr><td>hello</td></tr>}
+            </tbody>
+                </table>
+                <div class='bottomButtonWrap'>
+                <button class='addrowButton' onClick={addRow} >Add Row</button>
+                <button class='addrowButton'  >Publish Schema</button>
+                </div>
+
+                </div>
+                </div>
+
+
+{tableData.length > 0 ? (
+
+  <div className="buttons-wrap">
+    <button className="table-button" onClick={addRow}>
+      Add Row
+    </button>
+    <button className="table-button" onClick={addColumn}>
+      Add Column
+    </button>
+  </div>
+
+) : (
+  <div className="table-button">N/A</div>
+)}
+</div> : <div></div>}
+
+{isRules ? <div>
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+            <table className='xlsx-table4'
+              >
+               <thead>
+               {dataStore.semanticWorkbookSheet ?
+                  <tr>
+                    {header.map((headerText, index) => (
+                      <th key={index} contentEditable
+                      onBlur={(e) => {
+                          handleHeaderChange(index, e.target.textContent);
+                        }}>{headerText}</th>
+                    ))}
+                  </tr> : <tr><td>hello</td></tr>
+                  }
+                </thead>
+
+
+          <tbody>
+            {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
+              <tr key={rowIndex} >
+                {row.map((cell, cellIndex) => (
+                  <td
+                    key={cellIndex}
+                    onMouseEnter={handleCellMouseEnter}
+                    onMouseLeave={handleCellMouseLeave}
+
+                  >
+                  <div className='cellWrapper'>
+                  <div
+
+                  >
+                    <div className="unique-menu-button" contentEditable={false} >
+                    <span contentEditable={false}>:</span>
+                    </div>
+                    <div className="unique-popup-menu">
+                      {/* Menu content and buttons go here */}
+                      <button onClick={addRow}>Insert Row</button>
+                      <button >Delete Row</button>
+                      <button >Context</button>
+                      {/* Add more buttons as needed */}
+                    </div>
+                  </div>
+                  <div
+                    className="cell-content"
+                    contentEditable
+                    onBlur={(e) => {
+                      handleCellChange(rowIndex, cellIndex, e.target.textContent);
+                    }}
+                  >
+                    {cell}
+                  </div>
+                </div>
+                </td>
+                ))}
+              </tr>
+            )): <tr><td>hello</td></tr>}
+          </tbody>
+              </table>
+              <div class='bottomButtonWrap'>
+              <button class='addrowButton' onClick={addRow} >Add Row</button>
+              <button class='addrowButton'  >Publish Schema</button>
+              </div>
+
+              </div>
+              </div>
+
+
+{tableData.length > 0 ? (
+
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+
+) : (
+<div className="table-button">N/A</div>
+)}
+</div> : <div></div>}
+
+{isVerification ? <div>
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+            <table className='xlsx-table4'
+              >
+               <thead>
+               {dataStore.semanticWorkbookSheet ?
+                  <tr>
+                    {header.map((headerText, index) => (
+                      <th key={index} contentEditable
+                      onBlur={(e) => {
+                          handleHeaderChange(index, e.target.textContent);
+                        }}>{headerText}</th>
+                    ))}
+                  </tr> : <tr><td>hello</td></tr>
+                  }
+                </thead>
+
+
+          <tbody>
+            {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
+              <tr key={rowIndex} >
+                {row.map((cell, cellIndex) => (
+                  <td
+                    key={cellIndex}
+                    onMouseEnter={handleCellMouseEnter}
+                    onMouseLeave={handleCellMouseLeave}
+
+                  >
+                  <div className='cellWrapper'>
+                  <div
+
+                  >
+                    <div className="unique-menu-button" contentEditable={false} >
+                    <span contentEditable={false}>:</span>
+                    </div>
+                    <div className="unique-popup-menu">
+                      {/* Menu content and buttons go here */}
+                      <button onClick={addRow}>Insert Row</button>
+                      <button >Delete Row</button>
+                      <button >Context</button>
+                      {/* Add more buttons as needed */}
+                    </div>
+                  </div>
+                  <div
+                    className="cell-content"
+                    contentEditable
+                    onBlur={(e) => {
+                      handleCellChange(rowIndex, cellIndex, e.target.textContent);
+                    }}
+                  >
+                    {cell}
+                  </div>
+                </div>
+                </td>
+                ))}
+              </tr>
+            )): <tr><td>hello</td></tr>}
+          </tbody>
+              </table>
+              <div class='bottomButtonWrap'>
+              <button class='addrowButton' onClick={addRow} >Add Row</button>
+              <button class='addrowButton'  >Publish Schema</button>
+              </div>
+
+              </div>
+              </div>
+
+
+{tableData.length > 0 ? (
+
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+
+) : (
+<div className="table-button">N/A</div>
+)}
+</div> : <div></div>}
+
+{isReportElements ? <div>
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+            <table className='xlsx-table4'
+              >
+               <thead>
+               {dataStore.semanticWorkbookSheet ?
+                  <tr>
+                    {header.map((headerText, index) => (
+                      <th key={index} contentEditable
+                      onBlur={(e) => {
+                          handleHeaderChange(index, e.target.textContent);
+                        }}>{headerText}</th>
+                    ))}
+                  </tr> : <tr><td>hello</td></tr>
+                  }
+                </thead>
+
+
+          <tbody>
+            {dataStore.semanticWorkbookSheet ? tableData.map((row, rowIndex) => (
+              <tr key={rowIndex} >
+                {row.map((cell, cellIndex) => (
+                  <td
+                    key={cellIndex}
+                    onMouseEnter={handleCellMouseEnter}
+                    onMouseLeave={handleCellMouseLeave}
+
+                  >
+                  <div className='cellWrapper'>
+                  <div
+
+                  >
+                    <div className="unique-menu-button" contentEditable={false} >
+                    <span contentEditable={false}>:</span>
+                    </div>
+                    <div className="unique-popup-menu">
+                      {/* Menu content and buttons go here */}
+                      <button onClick={addRow}>Insert Row</button>
+                      <button >Delete Row</button>
+                      <button >Context</button>
+                      {/* Add more buttons as needed */}
+                    </div>
+                  </div>
+                  <div
+                    className="cell-content"
+                    contentEditable
+                    onBlur={(e) => {
+                      handleCellChange(rowIndex, cellIndex, e.target.textContent);
+                    }}
+                  >
+                    {cell}
+                  </div>
+                </div>
+                </td>
+                ))}
+              </tr>
+            )): <tr><td>hello</td></tr>}
+          </tbody>
+              </table>
+              <div class='bottomButtonWrap'>
+              <button class='addrowButton' onClick={addRow} >Add Row</button>
+              <button class='addrowButton'  >Publish Schema</button>
+              </div>
+
+              </div>
+              </div>
+
+
+{tableData.length > 0 ? (
+
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+
+) : (
+<div className="table-button">N/A</div>
+)}
+</div> : <div></div>}
+
+
       </div>
 
     {isPopupVisible ? (

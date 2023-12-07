@@ -355,7 +355,7 @@ width: 1050px;
 .easy{
   display: flex;
   font-size: 20px;
-  border-bottom: 1px dashed black;
+  border-bottom: 1px solid black;
   padding: 5px;
   margin-left: 10px;
   font-weight: 250;

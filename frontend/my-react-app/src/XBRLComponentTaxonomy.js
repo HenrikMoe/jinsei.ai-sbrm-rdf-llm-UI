@@ -166,7 +166,7 @@ const PrototypeSideMenu = ({ setStrucutreComponentItem, handleStructureInstanceS
       </div>
 
       {isTree ? <div><div className='easy'>
-      <div className='elementTitle6'>Networks: 14</div>
+      <div className='elementTitle6'>Networks: 15</div>
       <div className='elementTitle6'>Type Sort ^</div>
       </div>
 
