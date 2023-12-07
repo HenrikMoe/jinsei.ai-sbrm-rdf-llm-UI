@@ -336,6 +336,7 @@ width: 1050px;
   font-weight: 250;
   cursor: pointer;
   padding: 10px;
+
   background-color: #F8FAFC;
   border-bottom: 1px solid black;
   /* border: .5px solid black; /* Set border style */
@@ -345,11 +346,11 @@ width: 1050px;
 .prototype-side-menu5 li:hover {
   margin-bottom: 10px;
   font-size: 20px;
-  color: white;
+  color: white !important;
   cursor: pointer;
   padding: 10px;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
-  background-color: #556B2F; /* Green color */
+  background-color: #556B2F !important; /* Green color */
   /* border: .5px solid black; /* Set border style */
   border-radius: 3px;
 }
