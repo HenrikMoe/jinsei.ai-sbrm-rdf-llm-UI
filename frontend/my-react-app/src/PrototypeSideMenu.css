@@ -126,14 +126,16 @@
   color: black;
   /* border: 2px solid black; /* Set border style */
   height: 630px;
-  margin-bottom:-570px;
+  margin-bottom:-590px;
   left: 0;
-  margin-left: 50px;
+  margin-left: 80px;
   margin-right: 15px;
   bottom: 0;
   border-radius: 10px;
   background-color: #F8FAFC;
-  border-right: 2px solid lightslategrey;
+  border-right: 2px solid white;
+  border: 2px solid white;
+
   z-index: -500;
   margin-top: 0px;
   width: 300px;

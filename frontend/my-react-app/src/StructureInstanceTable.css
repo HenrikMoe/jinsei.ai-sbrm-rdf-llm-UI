@@ -8,7 +8,9 @@
   overflow: auto;
   display: block;
   margin-top: 0px;
-  margin-left: 450px;
+  border: 2px solid white;
+
+  margin-left: 470px;
   border-radius: 10px;
   margin-bottom: -80px;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */

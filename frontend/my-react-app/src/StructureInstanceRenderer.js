@@ -805,46 +805,6 @@ return (
     </thead>
 
     <tbody>
-      {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
-        <tr key={rowIndex}>
-
-          {row.map((cell, cellIndex) => (
-            <td
-              key={cellIndex}
-              contentEditable
-              onMouseEnter={handleCellMouseEnter}
-              onMouseLeave={handleCellMouseLeave}
-              onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
-            >
-            {cell}
-            </td>
-
-          ))}
-
-          {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
-            <td
-              key={cellIndex}
-              contentEditable
-              onMouseEnter={handleCellMouseEnter}
-              onMouseLeave={handleCellMouseLeave}
-              onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
-            >
-            {cell}
-            </td>
-          ))
-          }
-        </tr>
-      )) : (
-        <tr><td>No Data</td></tr>
-      )}
-    </tbody>
-
-    <tbody>
-      <tr><th>Assets</th></tr>
-    </tbody>
-
-
-    <tbody>
       {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
         <tr key={rowIndex}>
 
@@ -879,54 +839,13 @@ return (
       )}
     </tbody>
 
-    <tbody>
-      <tr><th>Liabilities</th></tr>
-    </tbody>
+    
+        <tbody>
+          <tr><th>Net Assets</th><td> </td><td> </td></tr>
+        </tbody>
 
 
-    <tbody>
-      {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
-        <tr key={rowIndex}>
 
-          {row.map((cell, cellIndex) => (
-            <td
-              key={cellIndex}
-              contentEditable
-              onMouseEnter={handleCellMouseEnter}
-              onMouseLeave={handleCellMouseLeave}
-              onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
-            >
-            {cell}
-            </td>
-
-          ))}
-
-          {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
-            <td
-              key={cellIndex}
-              contentEditable
-              onMouseEnter={handleCellMouseEnter}
-              onMouseLeave={handleCellMouseLeave}
-              onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
-            >
-            {cell}
-            </td>
-          ))
-          }
-        </tr>
-      )) : (
-        <tr><td>No Data</td></tr>
-      )}
-
-    </tbody>
-
-    <tbody>
-      <tr><th>Equity</th><td> </td><td> </td></tr>
-    </tbody>
-
-    <tbody>
-      <tr><th>Liabilities and Equity</th><td> </td></tr>
-    </tbody>
 
   </table>
   {tableData.length > 0 ? (

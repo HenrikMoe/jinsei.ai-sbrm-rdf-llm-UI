@@ -277,8 +277,8 @@ const dataStore = {
 ],
 
 assetRollUpReportDataExample2: [
-  [['Liabilities and Equity [Roll Up]'], ['Liabilities [Roll Up]'], ['Current Liabilities'], ['Noncurrent Liabilities']],
-  [[' '],[' ']],
+  [['Net Assets [Roll Up]	'], ['Assets'], ['Liabilities']],
+  [[' '],[' '],],
   [['0'],['0']],
 ],
 
