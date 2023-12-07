@@ -140,7 +140,9 @@
 
 /* CSS for the buttons wrap */
 .buttons-wrap {
-  margin-top: 20px;
+  margin-top: 0px;
+  margin-left: 500px;
+
 }
 
 /* CSS for table buttons */

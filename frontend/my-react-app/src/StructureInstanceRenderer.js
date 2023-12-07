@@ -522,27 +522,27 @@ return (
   <div className='reportHeader'
   onClick={()=>handleIsModel()}
   style={{
-    color: isModel ? 'blue' : 'white',
+    color: isModel ? '#556B2F' : 'white',
     padding: '10px'
   }}>Model</div>
   <div className='reportHeader' onClick={()=>handleIsFactTable()}
   style={{
-    color: isFactTable ? 'blue' : 'white',
+    color: isFactTable ? '#556B2F' : 'white',
     padding: '10px'
   }}>Fact Table</div>
   <div className='reportHeader' onClick={()=>handleIsRules()}
   style={{
-    color: isRules ? 'blue' : 'white',
+    color: isRules ? '#556B2F' : 'white',
     padding: '10px'
   }}>Rules</div>
   <div className='reportHeader' onClick={()=>handleIsVerification()}
   style={{
-    color: isVerification ? 'blue' : 'white',
+    color: isVerification ? '#556B2F' : 'white',
     padding: '10px'
   }}>Verification</div>
   <div className='reportHeader' onClick={()=>handleIsReportElements()}
   style={{
-    color: isReportElements ? 'blue' : 'white',
+    color: isReportElements ? '#556B2F' : 'white',
     padding: '10px'
   }}>Report Elements</div>
   </div>
@@ -772,13 +772,2460 @@ return (
 
     </div> : <div></div>}
 
-      {isRendering&&isSFAC6Component1 ? <div></div>:<div></div>}
+    {isRendering&&isSFAC6Component2 ? <div>
 
+      <div className='balance-sheet'>
+      <div className='reportWrap'>
+
+    <table className='balance-sheet-table'>
+    <thead>
+      <tr>
+        <th>Reporting Entity [Aspect]	</th>
+        <td>GH259400TOMPUOLS66II | http://standards.iso.org/iso/17443</td>
+      </tr>
+      <tr>
+        <th>Unit [Aspect]	</th>
+        <td>iso4218:USD</td>
+      </tr>
+    </thead>
+    </table>
+
+    <table className='balance-sheet-table'>
+    <thead>
+    <tr>
+      <th></th>
+      <td>Period Aspect</td>
+    </tr>
+    <tr>
+      <th>Concept [Aspect]</th>
+      <td>2022-12-31</td>
+      <td>2021-12-31</td>
+
+    </tr>
+    </thead>
+
+    <tbody>
+      {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+        <tr key={rowIndex}>
+
+          {row.map((cell, cellIndex) => (
+            <td
+              key={cellIndex}
+              contentEditable
+              onMouseEnter={handleCellMouseEnter}
+              onMouseLeave={handleCellMouseLeave}
+              onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+            >
+            {cell}
+            </td>
+
+          ))}
+
+          {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+            <td
+              key={cellIndex}
+              contentEditable
+              onMouseEnter={handleCellMouseEnter}
+              onMouseLeave={handleCellMouseLeave}
+              onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+            >
+            {cell}
+            </td>
+          ))
+          }
+        </tr>
+      )) : (
+        <tr><td>No Data</td></tr>
+      )}
+    </tbody>
+
+    <tbody>
+      <tr><th>Assets</th></tr>
+    </tbody>
+
+
+    <tbody>
+      {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
+        <tr key={rowIndex}>
+
+          {row.map((cell, cellIndex) => (
+            <td
+              key={cellIndex}
+              contentEditable
+              onMouseEnter={handleCellMouseEnter}
+              onMouseLeave={handleCellMouseLeave}
+              onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+            >
+            {cell}
+            </td>
+
+          ))}
+
+          {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
+            <td
+              key={cellIndex}
+              contentEditable
+              onMouseEnter={handleCellMouseEnter}
+              onMouseLeave={handleCellMouseLeave}
+              onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+            >
+            {cell}
+            </td>
+          ))
+          }
+        </tr>
+      )) : (
+        <tr><td>No Data</td></tr>
+      )}
+    </tbody>
+
+    <tbody>
+      <tr><th>Liabilities</th></tr>
+    </tbody>
+
+
+    <tbody>
+      {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
+        <tr key={rowIndex}>
+
+          {row.map((cell, cellIndex) => (
+            <td
+              key={cellIndex}
+              contentEditable
+              onMouseEnter={handleCellMouseEnter}
+              onMouseLeave={handleCellMouseLeave}
+              onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+            >
+            {cell}
+            </td>
+
+          ))}
+
+          {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+            <td
+              key={cellIndex}
+              contentEditable
+              onMouseEnter={handleCellMouseEnter}
+              onMouseLeave={handleCellMouseLeave}
+              onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+            >
+            {cell}
+            </td>
+          ))
+          }
+        </tr>
+      )) : (
+        <tr><td>No Data</td></tr>
+      )}
+
+    </tbody>
+
+    <tbody>
+      <tr><th>Equity</th><td> </td><td> </td></tr>
+    </tbody>
+
+    <tbody>
+      <tr><th>Liabilities and Equity</th><td> </td></tr>
+    </tbody>
+
+  </table>
+  {tableData.length > 0 ? (
+    <div className="buttons-wrap">
+      <button className="table-button" onClick={addRow}>
+        Add Row
+      </button>
+      <button className="table-button" onClick={addColumn}>
+        Add Column
+      </button>
+    </div>
+  ) : (
+    <div className="table-button">N/A</div>
+  )}
+  </div>
+  </div>
+
+
+  </div> : <div></div>}
+
+  {isRendering&&isSFAC6Component3 ? <div>
+
+    <div className='balance-sheet'>
+    <div className='reportWrap'>
+
+  <table className='balance-sheet-table'>
+  <thead>
+    <tr>
+      <th>Reporting Entity [Aspect]	</th>
+      <td>GH259400TOMPUOLS66II | http://standards.iso.org/iso/17443</td>
+    </tr>
+    <tr>
+      <th>Unit [Aspect]	</th>
+      <td>iso4218:USD</td>
+    </tr>
+  </thead>
+  </table>
+
+  <table className='balance-sheet-table'>
+  <thead>
+  <tr>
+    <th></th>
+    <td>Period Aspect</td>
+  </tr>
+  <tr>
+    <th>Concept [Aspect]</th>
+    <td>2022-12-31</td>
+    <td>2021-12-31</td>
+
+  </tr>
+  </thead>
+
+  <tbody>
+    {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+      <tr key={rowIndex}>
+
+        {row.map((cell, cellIndex) => (
+          <td
+            key={cellIndex}
+            contentEditable
+            onMouseEnter={handleCellMouseEnter}
+            onMouseLeave={handleCellMouseLeave}
+            onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+          >
+          {cell}
+          </td>
+
+        ))}
+
+        {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+          <td
+            key={cellIndex}
+            contentEditable
+            onMouseEnter={handleCellMouseEnter}
+            onMouseLeave={handleCellMouseLeave}
+            onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+          >
+          {cell}
+          </td>
+        ))
+        }
+      </tr>
+    )) : (
+      <tr><td>No Data</td></tr>
+    )}
+  </tbody>
+
+  <tbody>
+    <tr><th>Assets</th></tr>
+  </tbody>
+
+
+  <tbody>
+    {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
+      <tr key={rowIndex}>
+
+        {row.map((cell, cellIndex) => (
+          <td
+            key={cellIndex}
+            contentEditable
+            onMouseEnter={handleCellMouseEnter}
+            onMouseLeave={handleCellMouseLeave}
+            onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+          >
+          {cell}
+          </td>
+
+        ))}
+
+        {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
+          <td
+            key={cellIndex}
+            contentEditable
+            onMouseEnter={handleCellMouseEnter}
+            onMouseLeave={handleCellMouseLeave}
+            onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+          >
+          {cell}
+          </td>
+        ))
+        }
+      </tr>
+    )) : (
+      <tr><td>No Data</td></tr>
+    )}
+  </tbody>
+
+  <tbody>
+    <tr><th>Liabilities</th></tr>
+  </tbody>
+
+
+  <tbody>
+    {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
+      <tr key={rowIndex}>
+
+        {row.map((cell, cellIndex) => (
+          <td
+            key={cellIndex}
+            contentEditable
+            onMouseEnter={handleCellMouseEnter}
+            onMouseLeave={handleCellMouseLeave}
+            onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+          >
+          {cell}
+          </td>
+
+        ))}
+
+        {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+          <td
+            key={cellIndex}
+            contentEditable
+            onMouseEnter={handleCellMouseEnter}
+            onMouseLeave={handleCellMouseLeave}
+            onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+          >
+          {cell}
+          </td>
+        ))
+        }
+      </tr>
+    )) : (
+      <tr><td>No Data</td></tr>
+    )}
+
+  </tbody>
+
+  <tbody>
+    <tr><th>Equity</th><td> </td><td> </td></tr>
+  </tbody>
+
+  <tbody>
+    <tr><th>Liabilities and Equity</th><td> </td></tr>
+  </tbody>
+
+</table>
+{tableData.length > 0 ? (
+  <div className="buttons-wrap">
+    <button className="table-button" onClick={addRow}>
+      Add Row
+    </button>
+    <button className="table-button" onClick={addColumn}>
+      Add Column
+    </button>
+  </div>
+) : (
+  <div className="table-button">N/A</div>
+)}
+</div>
+</div>
+
+
+</div> : <div></div>}
+
+{isRendering&&isSFAC6Component4 ? <div>
+
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+
+<table className='balance-sheet-table'>
+<thead>
+  <tr>
+    <th>Reporting Entity [Aspect]	</th>
+    <td>GH259400TOMPUOLS66II | http://standards.iso.org/iso/17443</td>
+  </tr>
+  <tr>
+    <th>Unit [Aspect]	</th>
+    <td>iso4218:USD</td>
+  </tr>
+</thead>
+</table>
+
+<table className='balance-sheet-table'>
+<thead>
+<tr>
+  <th></th>
+  <td>Period Aspect</td>
+</tr>
+<tr>
+  <th>Concept [Aspect]</th>
+  <td>2022-12-31</td>
+  <td>2021-12-31</td>
+
+</tr>
+</thead>
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Assets</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+
+</tbody>
+
+<tbody>
+  <tr><th>Equity</th><td> </td><td> </td></tr>
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities and Equity</th><td> </td></tr>
+</tbody>
+
+</table>
+{tableData.length > 0 ? (
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+) : (
+<div className="table-button">N/A</div>
+)}
+</div>
+</div>
+
+
+</div> : <div></div>}
+
+{isRendering&&isSFAC6Component5 ? <div>
+
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+
+<table className='balance-sheet-table'>
+<thead>
+  <tr>
+    <th>Reporting Entity [Aspect]	</th>
+    <td>GH259400TOMPUOLS66II | http://standards.iso.org/iso/17443</td>
+  </tr>
+  <tr>
+    <th>Unit [Aspect]	</th>
+    <td>iso4218:USD</td>
+  </tr>
+</thead>
+</table>
+
+<table className='balance-sheet-table'>
+<thead>
+<tr>
+  <th></th>
+  <td>Period Aspect</td>
+</tr>
+<tr>
+  <th>Concept [Aspect]</th>
+  <td>2022-12-31</td>
+  <td>2021-12-31</td>
+
+</tr>
+</thead>
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Assets</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+
+</tbody>
+
+<tbody>
+  <tr><th>Equity</th><td> </td><td> </td></tr>
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities and Equity</th><td> </td></tr>
+</tbody>
+
+</table>
+{tableData.length > 0 ? (
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+) : (
+<div className="table-button">N/A</div>
+)}
+</div>
+</div>
+
+
+</div> : <div></div>}
+
+{isRendering&&isSFAC6Component6 ? <div>
+
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+
+<table className='balance-sheet-table'>
+<thead>
+  <tr>
+    <th>Reporting Entity [Aspect]	</th>
+    <td>GH259400TOMPUOLS66II | http://standards.iso.org/iso/17443</td>
+  </tr>
+  <tr>
+    <th>Unit [Aspect]	</th>
+    <td>iso4218:USD</td>
+  </tr>
+</thead>
+</table>
+
+<table className='balance-sheet-table'>
+<thead>
+<tr>
+  <th></th>
+  <td>Period Aspect</td>
+</tr>
+<tr>
+  <th>Concept [Aspect]</th>
+  <td>2022-12-31</td>
+  <td>2021-12-31</td>
+
+</tr>
+</thead>
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Assets</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+
+</tbody>
+
+<tbody>
+  <tr><th>Equity</th><td> </td><td> </td></tr>
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities and Equity</th><td> </td></tr>
+</tbody>
+
+</table>
+{tableData.length > 0 ? (
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+) : (
+<div className="table-button">N/A</div>
+)}
+</div>
+</div>
+
+
+</div> : <div></div>}
+
+{isRendering&&isSFAC6Component7 ? <div>
+
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+
+<table className='balance-sheet-table'>
+<thead>
+  <tr>
+    <th>Reporting Entity [Aspect]	</th>
+    <td>GH259400TOMPUOLS66II | http://standards.iso.org/iso/17443</td>
+  </tr>
+  <tr>
+    <th>Unit [Aspect]	</th>
+    <td>iso4218:USD</td>
+  </tr>
+</thead>
+</table>
+
+<table className='balance-sheet-table'>
+<thead>
+<tr>
+  <th></th>
+  <td>Period Aspect</td>
+</tr>
+<tr>
+  <th>Concept [Aspect]</th>
+  <td>2022-12-31</td>
+  <td>2021-12-31</td>
+
+</tr>
+</thead>
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Assets</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+
+</tbody>
+
+<tbody>
+  <tr><th>Equity</th><td> </td><td> </td></tr>
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities and Equity</th><td> </td></tr>
+</tbody>
+
+</table>
+{tableData.length > 0 ? (
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+) : (
+<div className="table-button">N/A</div>
+)}
+</div>
+</div>
+
+
+</div> : <div></div>}
+
+{isRendering&&isSFAC6Component8 ? <div>
+
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+
+<table className='balance-sheet-table'>
+<thead>
+  <tr>
+    <th>Reporting Entity [Aspect]	</th>
+    <td>GH259400TOMPUOLS66II | http://standards.iso.org/iso/17443</td>
+  </tr>
+  <tr>
+    <th>Unit [Aspect]	</th>
+    <td>iso4218:USD</td>
+  </tr>
+</thead>
+</table>
+
+<table className='balance-sheet-table'>
+<thead>
+<tr>
+  <th></th>
+  <td>Period Aspect</td>
+</tr>
+<tr>
+  <th>Concept [Aspect]</th>
+  <td>2022-12-31</td>
+  <td>2021-12-31</td>
+
+</tr>
+</thead>
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Assets</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+
+</tbody>
+
+<tbody>
+  <tr><th>Equity</th><td> </td><td> </td></tr>
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities and Equity</th><td> </td></tr>
+</tbody>
+
+</table>
+{tableData.length > 0 ? (
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+) : (
+<div className="table-button">N/A</div>
+)}
+</div>
+</div>
+
+
+</div> : <div></div>}
+
+{isRendering&&isSFAC6Component9 ? <div>
+
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+
+<table className='balance-sheet-table'>
+<thead>
+  <tr>
+    <th>Reporting Entity [Aspect]	</th>
+    <td>GH259400TOMPUOLS66II | http://standards.iso.org/iso/17443</td>
+  </tr>
+  <tr>
+    <th>Unit [Aspect]	</th>
+    <td>iso4218:USD</td>
+  </tr>
+</thead>
+</table>
+
+<table className='balance-sheet-table'>
+<thead>
+<tr>
+  <th></th>
+  <td>Period Aspect</td>
+</tr>
+<tr>
+  <th>Concept [Aspect]</th>
+  <td>2022-12-31</td>
+  <td>2021-12-31</td>
+
+</tr>
+</thead>
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Assets</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+
+</tbody>
+
+<tbody>
+  <tr><th>Equity</th><td> </td><td> </td></tr>
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities and Equity</th><td> </td></tr>
+</tbody>
+
+</table>
+{tableData.length > 0 ? (
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+) : (
+<div className="table-button">N/A</div>
+)}
+</div>
+</div>
+
+
+</div> : <div></div>}
+
+{isRendering&&isSFAC6Component10 ? <div>
+
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+
+<table className='balance-sheet-table'>
+<thead>
+  <tr>
+    <th>Reporting Entity [Aspect]	</th>
+    <td>GH259400TOMPUOLS66II | http://standards.iso.org/iso/17443</td>
+  </tr>
+  <tr>
+    <th>Unit [Aspect]	</th>
+    <td>iso4218:USD</td>
+  </tr>
+</thead>
+</table>
+
+<table className='balance-sheet-table'>
+<thead>
+<tr>
+  <th></th>
+  <td>Period Aspect</td>
+</tr>
+<tr>
+  <th>Concept [Aspect]</th>
+  <td>2022-12-31</td>
+  <td>2021-12-31</td>
+
+</tr>
+</thead>
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Assets</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+
+</tbody>
+
+<tbody>
+  <tr><th>Equity</th><td> </td><td> </td></tr>
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities and Equity</th><td> </td></tr>
+</tbody>
+
+</table>
+{tableData.length > 0 ? (
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+) : (
+<div className="table-button">N/A</div>
+)}
+</div>
+</div>
+
+
+</div> : <div></div>}
+
+{isRendering&&isSFAC6Component11 ? <div>
+
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+
+<table className='balance-sheet-table'>
+<thead>
+  <tr>
+    <th>Reporting Entity [Aspect]	</th>
+    <td>GH259400TOMPUOLS66II | http://standards.iso.org/iso/17443</td>
+  </tr>
+  <tr>
+    <th>Unit [Aspect]	</th>
+    <td>iso4218:USD</td>
+  </tr>
+</thead>
+</table>
+
+<table className='balance-sheet-table'>
+<thead>
+<tr>
+  <th></th>
+  <td>Period Aspect</td>
+</tr>
+<tr>
+  <th>Concept [Aspect]</th>
+  <td>2022-12-31</td>
+  <td>2021-12-31</td>
+
+</tr>
+</thead>
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Assets</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+
+</tbody>
+
+<tbody>
+  <tr><th>Equity</th><td> </td><td> </td></tr>
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities and Equity</th><td> </td></tr>
+</tbody>
+
+</table>
+{tableData.length > 0 ? (
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+) : (
+<div className="table-button">N/A</div>
+)}
+</div>
+</div>
+
+
+</div> : <div></div>}
+
+{isRendering&&isSFAC6Component12 ? <div>
+
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+
+<table className='balance-sheet-table'>
+<thead>
+  <tr>
+    <th>Reporting Entity [Aspect]	</th>
+    <td>GH259400TOMPUOLS66II | http://standards.iso.org/iso/17443</td>
+  </tr>
+  <tr>
+    <th>Unit [Aspect]	</th>
+    <td>iso4218:USD</td>
+  </tr>
+</thead>
+</table>
+
+<table className='balance-sheet-table'>
+<thead>
+<tr>
+  <th></th>
+  <td>Period Aspect</td>
+</tr>
+<tr>
+  <th>Concept [Aspect]</th>
+  <td>2022-12-31</td>
+  <td>2021-12-31</td>
+
+</tr>
+</thead>
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Assets</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+
+</tbody>
+
+<tbody>
+  <tr><th>Equity</th><td> </td><td> </td></tr>
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities and Equity</th><td> </td></tr>
+</tbody>
+
+</table>
+{tableData.length > 0 ? (
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+) : (
+<div className="table-button">N/A</div>
+)}
+</div>
+</div>
+
+
+</div> : <div></div>}
+
+{isRendering&&isSFAC6Component13 ? <div>
+
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+
+<table className='balance-sheet-table'>
+<thead>
+  <tr>
+    <th>Reporting Entity [Aspect]	</th>
+    <td>GH259400TOMPUOLS66II | http://standards.iso.org/iso/17443</td>
+  </tr>
+  <tr>
+    <th>Unit [Aspect]	</th>
+    <td>iso4218:USD</td>
+  </tr>
+</thead>
+</table>
+
+<table className='balance-sheet-table'>
+<thead>
+<tr>
+  <th></th>
+  <td>Period Aspect</td>
+</tr>
+<tr>
+  <th>Concept [Aspect]</th>
+  <td>2022-12-31</td>
+  <td>2021-12-31</td>
+
+</tr>
+</thead>
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Assets</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+
+</tbody>
+
+<tbody>
+  <tr><th>Equity</th><td> </td><td> </td></tr>
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities and Equity</th><td> </td></tr>
+</tbody>
+
+</table>
+{tableData.length > 0 ? (
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+) : (
+<div className="table-button">N/A</div>
+)}
+</div>
+</div>
+
+
+</div> : <div></div>}
+
+{isRendering&&isSFAC6Component14 ? <div>
+
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+
+<table className='balance-sheet-table'>
+<thead>
+  <tr>
+    <th>Reporting Entity [Aspect]	</th>
+    <td>GH259400TOMPUOLS66II | http://standards.iso.org/iso/17443</td>
+  </tr>
+  <tr>
+    <th>Unit [Aspect]	</th>
+    <td>iso4218:USD</td>
+  </tr>
+</thead>
+</table>
+
+<table className='balance-sheet-table'>
+<thead>
+<tr>
+  <th></th>
+  <td>Period Aspect</td>
+</tr>
+<tr>
+  <th>Concept [Aspect]</th>
+  <td>2022-12-31</td>
+  <td>2021-12-31</td>
+
+</tr>
+</thead>
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Assets</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+
+</tbody>
+
+<tbody>
+  <tr><th>Equity</th><td> </td><td> </td></tr>
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities and Equity</th><td> </td></tr>
+</tbody>
+
+</table>
+{tableData.length > 0 ? (
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+) : (
+<div className="table-button">N/A</div>
+)}
+</div>
+</div>
+
+
+</div> : <div></div>}
+
+{isRendering&&isSFAC6Component15 ? <div>
+
+  <div className='balance-sheet'>
+  <div className='reportWrap'>
+
+<table className='balance-sheet-table'>
+<thead>
+  <tr>
+    <th>Reporting Entity [Aspect]	</th>
+    <td>GH259400TOMPUOLS66II | http://standards.iso.org/iso/17443</td>
+  </tr>
+  <tr>
+    <th>Unit [Aspect]	</th>
+    <td>iso4218:USD</td>
+  </tr>
+</thead>
+</table>
+
+<table className='balance-sheet-table'>
+<thead>
+<tr>
+  <th></th>
+  <td>Period Aspect</td>
+</tr>
+<tr>
+  <th>Concept [Aspect]</th>
+  <td>2022-12-31</td>
+  <td>2021-12-31</td>
+
+</tr>
+</thead>
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample1 ? dataStore.assetRollUpReportDataExample1[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Assets</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample2 ? dataStore.assetRollUpReportDataExample2[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample2[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities</th></tr>
+</tbody>
+
+
+<tbody>
+  {dataStore.assetRollUpReportDataExample3 ? dataStore.assetRollUpReportDataExample3[0].map((row, rowIndex) => (
+    <tr key={rowIndex}>
+
+      {row.map((cell, cellIndex) => (
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+
+      ))}
+
+      {dataStore.assetRollUpReportDataExample1[1].map((cell, cellIndex)=>(
+        <td
+          key={cellIndex}
+          contentEditable
+          onMouseEnter={handleCellMouseEnter}
+          onMouseLeave={handleCellMouseLeave}
+          onBlur={(e) => handleCellChange(rowIndex, cellIndex, e.target.textContent)}
+        >
+        {cell}
+        </td>
+      ))
+      }
+    </tr>
+  )) : (
+    <tr><td>No Data</td></tr>
+  )}
+
+</tbody>
+
+<tbody>
+  <tr><th>Equity</th><td> </td><td> </td></tr>
+</tbody>
+
+<tbody>
+  <tr><th>Liabilities and Equity</th><td> </td></tr>
+</tbody>
+
+</table>
+{tableData.length > 0 ? (
+<div className="buttons-wrap">
+  <button className="table-button" onClick={addRow}>
+    Add Row
+  </button>
+  <button className="table-button" onClick={addColumn}>
+    Add Column
+  </button>
+</div>
+) : (
+<div className="table-button">N/A</div>
+)}
+</div>
+</div>
+
+
+</div> : <div></div>}
 
     {isModel ? <div>
       <div className='balance-sheet'>
       <div className='reportWrap'>
-                <table className='xlsx-table'
+                <table className='xlsx-table4'
                   >
                    <thead>
                    {dataStore.semanticWorkbookSheet ?

@@ -143,7 +143,7 @@ const PrototypeSideMenu = ({ setStrucutreComponentItem, handleStructureInstanceS
       <div className='easy'>
       <div className='elementTitle6'
       style={{
-        color: isTree ? 'blue' : 'initial',
+        color: isTree ? '#556B2F' : 'initial',
         padding: '10px',
         fontWeight: 250, // Set font-weight to 250 if sheetTitle is 'Terms'
 
@@ -151,14 +151,14 @@ const PrototypeSideMenu = ({ setStrucutreComponentItem, handleStructureInstanceS
       onClick={()=>handleIsTree()}>Tree</div>
       <div className='elementTitle6' onClick={()=>handleIsDetails()}
       style={{
-        color: isDetails ? 'blue' : 'initial',
+        color: isDetails ? '#556B2F' : 'initial',
         padding: '10px',
       fontWeight: 250, // Set font-weight to 250 if sheetTitle is 'Terms'
 
       }}>Details</div>
       <div className='elementTitle6' onClick={()=>handleIsAgendas()}
       style={{
-        color: isAgendas ? 'blue' : 'initial',
+        color: isAgendas ? '#556B2F' : 'initial',
         padding: '10px',
         fontWeight: 250, // Set font-weight to 250 if sheetTitle is 'Terms'
 
