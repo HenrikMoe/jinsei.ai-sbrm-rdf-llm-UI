@@ -200,8 +200,20 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
           : <li className='sidemenu-title'> Sheets </li>}
       </ul></div>: <div></div>}
 
-      {isDetails ? <div><div className='easy'>
-
+      {isDetails ? <div className='easyWrap'><div className='easy3'>
+        XBRi/XBRL Tag:
+      </div>
+      <div className='easy'>
+        Type: Asset:items
+      </div>
+      <div className='easy'>
+        FactValue: 50
+      </div>
+      <div className='easy'>
+        Identifier: A1HC70M
+      </div>
+      <div className='easy'>
+        Currency: US
       </div>
 
       </div>: <div></div>}

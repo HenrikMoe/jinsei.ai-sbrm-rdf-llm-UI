@@ -306,9 +306,6 @@ return (
       </div> : <div></div>}
 
 
-
-
-
       {isRendering ? <div>
 
         <div className='balance-sheet'>

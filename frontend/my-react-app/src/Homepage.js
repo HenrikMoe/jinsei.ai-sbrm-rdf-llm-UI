@@ -182,11 +182,6 @@ function Homepage() {
       <button onClick={handleTimelineClick} className={`timeline-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
         Corp Timeline
       </button>
-      <div style={{ marginTop: '100px'}}>
-      <button onClick={handleXML1Click} className={`lang ${isDarkMode ? 'dark-mode-button' : ''}`}>
-        Seattle Method Zip
-      </button>
-      </div>
 
     </div>
   );
