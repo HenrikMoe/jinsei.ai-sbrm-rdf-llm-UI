@@ -258,7 +258,7 @@ const dataStore = {
     dataStore.overLaidModelWorkbook = null
   },
 
-  structureInstanceComponentExample: ['{HyperCube} Balance Sheet', '{HyperCube} Net Assets', '{HyperCube} Income Statement', '{HyperCube} Income Statement Alternative', '{HyperCube}  ', '{HyperCube} Comperhensive Income', '{HyperCube} Cash Flow', '{HyperCube} Prior Period Errors', '{HyperCube} Prior Period Errors (Alternative)', '{HyperCube} Changes In Equity', '{HyperCube} Policies', '{HyperCube} Variance Analysis', '{HyperCube} Segnment Revenues', '{HyperCube} Stock Plan Activity', '{HyperCube} Financial Highlights' ],
+  structureInstanceComponentExample: ['01 - {HyperCube} Balance Sheet', '02 - {HyperCube} Net Assets', '03 - {HyperCube} Income Statement', '04 - {HyperCube} Income Statement Alternative', '05 - {HyperCube} Comperhensive Income', '06 - {HyperCube} Cash Flow', '07 - {HyperCube} Prior Period Errors', '08 - {HyperCube} Prior Period Errors (Alternative)', '09 - {HyperCube} Changes In Equity', '10 - {HyperCube} Policies', '12 - {HyperCube} Variance Analysis', '12 - {HyperCube} Segnment Revenues', '13 - {HyperCube} Stock Plan Activity', '14 - {HyperCube} Financial Highlights' ],
 
   semanticStrucutreInstanceTaxonomy: null,
   initDefaultSemanticStrucutreInstanceTaxonomy: ()=>{
@@ -290,7 +290,73 @@ assetRollUpReportDataExample2: [
 ],
 
 assetRollUpReportDataExample3: [
+  [['Comprehensive Income [Roll Up]	'], ['Revenues	'], ['(Expenses)	'], ['Gains	'], ['(Losses)	'], ['Net Income	']],
+  [[' '],[' ']],
+  [['0'],['0']],
+],
+
+assetRollUpReportDataExample4: [
+  [['Comprehensive Income [Roll Up]'], ['Income from Normal Activities of Entity'], ['Income from Peripheral or Incidental Transactions of Entity	']],
+  [[' '],[' ']],
+  [['0'],['0']],
+],
+
+assetRollUpReportDataExample5: [
+  [['Comprehensive Income [Roll Up]	'], ['Net Income	'], ['Other Comprehensive Income	'],],
+  [[' '],[' ']],
+  [['0'],['0']],
+],
+
+assetRollUpReportDataExample6: [
+  [['Net Cash Flow [Roll Up]	'], ['Net Cash Flow Operating Activities	'], ['Net Cash Flow Investing Activities	'], ['Net Cash Flow Financing Activities	'],['Net Cash Flow	'], ['Assets Roll Forward [Roll Up]	'], ['Assets, Beginning Balance	'], ['Net Cash Flow	'], ['Assets, Ending Balance	']],
+  [[' '],[' ']],
+  [['0'],['0']],
+],
+
+assetRollUpReportDataExample7: [
+  [['Prior Period Errors [Adjustment]		'], ['Equity, Origionally Stated	'], ['Changes in Accounting Policy	'], ['Correction of an Error	'], ['Equity, Restated	']],
+  [[' '],[' ']],
+  [['0'],['0']],
+],
+
+assetRollUpReportDataExample8: [
   [['Equity [Roll Up]'], ['Equity Attributable To Controlling Interests'], ['Equity Attributable to Noncontrolling Interests']],
+  [[' '],[' ']],
+  [['0'],['0']],
+],
+
+assetRollUpReportDataExample9: [
+  [['Changes in Equity [Roll Forward]		'], ['Equity, Beginning Balance		'], ['Comprehensive Income	'], ['Investments by Owners	'], ['(Distributions to Owners)	'],['Equity, Ending Balance	']],
+  [[' '],[' ']],
+  [['0'],['0']],
+],
+
+assetRollUpReportDataExample10: [
+  [['Basis of Reporting [Text Block]		'], ['Nature of Operations [Text Block]		'], ['Revenue Recognition Policy [Text Block]	'], ],
+  [[' '],[' ']],
+  [['0'],['0']],
+],
+
+assetRollUpReportDataExample11: [
+  [['Variance Analysis [Roll Up]			'], ['Revenues		'], ['(Expenses)		'], ['Gains	'], ['(Losses)	'], ['Net Income	']],
+  [[' '],[' ']],
+  [['0'],['0']],
+],
+
+assetRollUpReportDataExample12: [
+  [['Segment Revenues [Set]			'], ['Revenues		'], ],
+  [[' '],[' ']],
+  [['0'],['0']],
+],
+
+assetRollUpReportDataExample13: [
+  [['Weighted Average Grant Date Fair Value [Roll Forward Info]		'], ['Nonvested Fair Value, Beginning Balance			'], ['Granted	'], ['Vested	'], ['Forfeited	'], ['Nonvested Fair Value, Ending Balance		']],
+  [[' '],[' ']],
+  [['0'],['0']],
+],
+
+assetRollUpReportDataExample14: [
+  [['Financial Highlights [Set]	'], ['Revenues	'], ['Comprehensive Income	'], ['Distributions to Owners		'], ],
   [[' '],[' ']],
   [['0'],['0']],
 ],
