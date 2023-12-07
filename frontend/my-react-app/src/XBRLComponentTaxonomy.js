@@ -233,41 +233,11 @@ const PrototypeSideMenu = ({ setStrucutreComponentItem, handleStructureInstanceS
       </div>: <div></div>}
 
       {isAgendas ? <div><div className='easy'>
-      <div className='elementTitle6'>Agendas</div>
-      </div>
 
-      <ul>
-        <div className='sidemenu-title'>
-          {dataStore.workbookXLSX ? xlsxTitle : null}
+        <div className='elementTitle6'>Agendas</div>
         </div>
-        {dataStore.structureInstanceComponentExample
-          ? dataStore.structureInstanceComponentExample.map(
-              (title, index) => (
-                <li
-                  key={title}
-                  contentEditable
-                  className={`${
-                    isDarkMode ? 'dark-mode' : ''
-                  } ${title === selectedSheet &&
-                  !schemaConfigSelected
-                    ? 'selected'
-                    : ''} ${
-                    index === 0 && isFirstSheetSelected
-                      ? 'selected'
-                      : ''
-                  }`}
-                  onClick={() => {
-                    // handleStructureInstanceSelect(index, title);
-                    setIsButtonVisible(true);
-                  }}
-                >
-                  {title}
 
-                </li>
-              )
-            )
-          : <li className='sidemenu-title'> Sheets </li>}
-      </ul></div>: <div></div>}
+      </div>: <div></div>}
 
 
 

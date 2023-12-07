@@ -229,7 +229,7 @@ function Homepage() {
 
 
 <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Jinsei-Luciano provides an intuitive interface for business professionals for creating financial information services. ')}
+  {t('Jinsei-Luciano provides an intuitive interface for professionals managing financial information services. ')}
 </div>
 
 <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
@@ -240,7 +240,7 @@ function Homepage() {
 
 
       <button onClick={handlePrototypeClick} className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         Luciano
+         [Demo] Luciano
       </button>
 
         <div >

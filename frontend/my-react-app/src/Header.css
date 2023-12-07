@@ -16,6 +16,8 @@
     width: 106%; /* Increase the width to compensate for the scaling */
     transform: scale(0.92);
     transform-origin: 0 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+
   }
 
   .socials{
@@ -214,13 +216,13 @@
 .header.hidden {
   visibility: hidden; /* Hide the element without affecting layout */
   opacity: 0; /* Set opacity to 0 when hidden */
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 /* Add styles for dark mode */
 .dark-mode {
   background-color: #333; /* Replace with your dark mode background color */
   color: #fff; /* Replace with your dark mode text color */
-
   border-color: white;
 
 }
