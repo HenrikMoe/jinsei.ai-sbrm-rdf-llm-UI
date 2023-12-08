@@ -5,23 +5,20 @@
   /* border: 2px solid black; /* Set border style */
   padding: 10px;
   display: flex;
-  max-width: 1860px;
+  width: 106%;
   justify-content: space-between;
   align-items: center;
   position: absolute;
   margin-top: 125px;
   margin-right:0px;
   padding-top: 20px;
-  padding-right: 37px;
   top: 0;
   left: 0;
   right: 0;
-  border-right: solid white 1.5px;
 
   padding-bottom: 20px;
   z-index: 500;
   background-color: #F8FAFC;
-  width: 145%;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 
 }
