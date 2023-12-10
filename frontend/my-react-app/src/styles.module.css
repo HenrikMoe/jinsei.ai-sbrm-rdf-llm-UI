@@ -20,6 +20,20 @@
   padding-top: 56.25%;
 }
 
+@media (max-width: 767px) {
+  .container__inner::before {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container__inner{
+    margin-top: 70px;
+  }
+}
+
+
+
 .img__container {
   overflow: hidden;
   position: absolute;

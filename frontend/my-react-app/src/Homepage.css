@@ -171,6 +171,15 @@
   display: block;
 }
 
+@media (max-width: 767px) {
+  .iframe-container2 {
+    margin-top: 400px;
+    margin-left: -5px;
+
+  }
+}
+
+
 .iframe-container2:hover{
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
   box-shadow: 25px 25px 0 rgba(255, 255, 255, 0.2); /* Light gray shadow */
