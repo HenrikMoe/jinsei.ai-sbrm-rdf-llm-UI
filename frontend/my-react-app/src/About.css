@@ -1,8 +1,25 @@
 /* About.css */
 .center-div {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 100px;
+  margin-bottom: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+}
+
+
+.aboutJinsei{
+
+  color: white;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .center-div {
+    margin-right: 20px;
+    margin-left: 20px;
+
+  }
 }
