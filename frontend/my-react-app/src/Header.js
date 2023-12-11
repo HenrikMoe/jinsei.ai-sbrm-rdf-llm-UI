@@ -109,7 +109,7 @@ const Header = ({ currentRoute, userInfo }) => {
             href={button.url}
             onClick={closeMenu}
             className="button"
-            target="_blank"
+            target={button.label === 'About' || button.label === 'Timeline' ? '' : '_blank'}
             key={button.label}
           >
             {button.label}
