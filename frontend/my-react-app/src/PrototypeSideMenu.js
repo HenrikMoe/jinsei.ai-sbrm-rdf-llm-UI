@@ -140,7 +140,6 @@ const PrototypeSideMenu = ({ overlaidModelName, sheetTitle, handleSchemaConfigSe
             {dataStore.lucaSideMenu ? dataStore.lucaSideMenu.map((title, index) => (
               <li
                 key={title}
-                contentEditable
                 className={`${isDarkMode ? 'dark-mode' : ''} ${title === sheetTitle && schemaConfigSelected ? 'selected' : ''}`}
                 onClick={(e) => {
                   e.stopPropagation();

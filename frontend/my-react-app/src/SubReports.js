@@ -118,7 +118,6 @@ const PrototypeSideMenu = ({ handleStructureInstanceSelection, sheetTitles, onSh
         {dataStore.lucaSideMenu ? dataStore.lucaSideMenu.map((title, index) => (
           <li
              key={title}
-             contentEditable
              className={`${isDarkMode ? 'dark-mode' : ''} ${title === selectedSheet && !schemaConfigSelected ? 'selected' : ''} ${
                index === 0 && isFirstSheetSelected ? 'selected' : '' // Highlight the first title
              }`}
