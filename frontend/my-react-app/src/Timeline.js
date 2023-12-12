@@ -9,7 +9,7 @@ const Timeline = () => {
 
   return (
       <div className={`content ${isDarkMode ? 'dark-mode' : ''}`}>
-        <div className={`timeline-title ${isDarkMode ? 'dark-mode' : ''}`}>B2B Timeline</div>
+        <div className={`timeline-title ${isDarkMode ? 'dark-mode' : ''}`}>Jinsei Corp Product Timeline</div>
         <div className="button-container">
         <Link to="/prototype" className="dark-button">
           Luciano
@@ -35,7 +35,7 @@ const Timeline = () => {
             target="_blank"
             className="dark-button"
           >
-            Full Jinsei Studio Specs
+            Specs
           </a>
         </div>
       </div>
