@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import './StructureInstanceTable.css'; // Import your CSS file
 import Footer from './Footer';
 import XBRLComponentTaxonomy from './XBRLComponentTaxonomy'
+import Modal from './Modal'
+
+
 
 const XLSXSheetRenderer = ({
   increment,
@@ -718,13 +721,24 @@ const setStrucutreComponentItem = (title)=>{
   }
 }
 
+const [exportStatus, setExportStatus] = useState(null)
+const setExportTrue = ()=>{
+  setExportStatus(true)
+}
+
+const setExportFalse = ()=>{
+  setExportStatus(false)
+}
 
 
-
+const handleExportTrue =()=>{
+  setExportTrue()
+}
 
 return (
     <div className='structureInstanceWrap2'>
   <div className="elementTitle5">Report Viewing and Editing </div>
+  {exportStatus ? <Modal setExportFalse={setExportFalse} exportStatus={exportStatus}/> : <div></div>}
 
   <div className='reportWraper'>
   <XBRLComponentTaxonomy dataStore={dataStore} setStrucutreComponentItem={setStrucutreComponentItem} />
@@ -770,7 +784,7 @@ return (
   {isRendering ? <div>
     <div className='reportHeaderWrapper'>
       <div className='reportHeader'>Import</div>
-      <div className='reportHeader'>Export</div>
+      <div className='reportHeader' onClick={()=> handleExportTrue()}>Export</div>
       <div className='reportHeader'>FullScreen</div>
       <div className='reportHeader' onClick={()=>handleAttachToProcessTab()}>Attach to Process</div>
       <div className='reportHeader'>View</div>
