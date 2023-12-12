@@ -13,7 +13,7 @@ import Model from './Model'
 import Modal from './Modal'
 import ProcessModal from './ProcessModal'
 import XBRLComponentTaxonomy2 from './XBRLComponentTaxonomy2'
-
+import ImportModal from './ImportModalReportScheme'
 
 const XLSXSheetRenderer = ({
   overlaidModelName,
@@ -421,6 +421,18 @@ const handleTabClick = (selection)=>{
   //setTabClicked(selection)
 }
 
+const [importStatus, setImportStatus] = useState(null)
+const setImportTrue = ()=>{
+  setImportStatus(true)
+}
+
+const setImportFalse = ()=>{
+  setImportStatus(false)
+}
+
+const handleImportTrue =()=>{
+  setImportTrue()
+}
 //model passed objs ; handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}
 //popup ; onFileUpload={onFileUpload}
 //delete ;  handleClearTrue={handleClearTrue} dataStore={dataStore}
@@ -750,11 +762,12 @@ const handleTabClick = (selection)=>{
 
             {isModal ? <Modal setModalOff={setModalOff} isModal={isModal}/> : <div></div>}
 
+            {importStatus ? <ImportModal setImportFalse={setImportFalse} importStatus={importStatus}/> : <div></div>}
 
 
             <div className='button-wrapAY'>
             <Model  setIsModal={setIsModalOn} handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
-            <Popup onFileUpload={onFileUpload} />
+            <button className="ribbon-button" onClick={()=> handleImportTrue()}>Import</button>
             <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
             <button className="ribbon-button" onClick={() => handleIsPublish(true)}>Publish Overlay</button>
             <button className="ribbon-button" onClick={() => handleTabClick('Structure')}>Report</button>

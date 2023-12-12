@@ -3,6 +3,7 @@ import './StructureInstanceTable.css'; // Import your CSS file
 import Footer from './Footer';
 import XBRLComponentTaxonomy from './XBRLComponentTaxonomy'
 import Modal from './Modal'
+import ImportModal from './ImportModalHypercube'
 
 
 
@@ -735,10 +736,24 @@ const handleExportTrue =()=>{
   setExportTrue()
 }
 
+const [importStatus, setImportStatus] = useState(null)
+const setImportTrue = ()=>{
+  setImportStatus(true)
+}
+
+const setImportFalse = ()=>{
+  setImportStatus(false)
+}
+
+const handleImportTrue =()=>{
+  setImportTrue()
+}
+
 return (
     <div className='structureInstanceWrap2'>
   <div className="elementTitle5">Report Viewing and Editing </div>
   {exportStatus ? <Modal setExportFalse={setExportFalse} exportStatus={exportStatus}/> : <div></div>}
+  {importStatus ? <ImportModal setImportFalse={setImportFalse} importStatus={importStatus}/> : <div></div>}
 
   <div className='reportWraper'>
   <XBRLComponentTaxonomy dataStore={dataStore} setStrucutreComponentItem={setStrucutreComponentItem} />
@@ -783,9 +798,8 @@ return (
 
   {isRendering ? <div>
     <div className='reportHeaderWrapper'>
-      <div className='reportHeader'>Import</div>
+      <div className='reportHeader' onClick={()=> handleImportTrue()}>Import</div>
       <div className='reportHeader' onClick={()=> handleExportTrue()}>Export</div>
-      <div className='reportHeader'>FullScreen</div>
       <div className='reportHeader' onClick={()=>handleAttachToProcessTab()}>Attach to Process</div>
       <div className='reportHeader'>View</div>
       <div className='reportHeader'>Overlay XBRi</div>
@@ -795,16 +809,15 @@ return (
 
     {isAttachToProcess ? <div>
       <div className='reportHeaderWrapper'>
-        <div className='reportHeader'>Import</div>
-        <div className='reportHeader'>Export</div>
-        <div className='reportHeader'>FullScreen</div>
+        <div className='reportHeader' onClick={()=> handleImportTrue()}>Import</div>
+        <div className='reportHeader' onClick={()=> handleExportTrue()}>Export</div>
         <div className='reportHeader' onClick={()=>handleIsReportElements()}
         style={{
           color: isAttachToProcess ? 'blue' : 'white',
           padding: '10px'
         }} onClick={()=>handleAttachToProcessTab()}>Attach to Process</div>
         <div className='reportHeader'>View</div>
-        <div className='reportHeader'>Auto Save</div>
+        <div className='reportHeader'>Overlay XBRL</div>
 
         </div>
 
