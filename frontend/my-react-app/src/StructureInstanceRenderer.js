@@ -355,6 +355,16 @@ const setStrucutreComponentItem = (title)=>{
     setIsSFAC6Component13(false)
     setIsSFAC6Component14(false)
 
+    setIsRendering(true)
+    setIsAttachToProcess(false)
+    setIsModel(false)
+    setIsFactTable(false)
+    setIsRules(false)
+    setIsVerification(false)
+    setIsReportElements(false)
+
+
+
   }
   else if(title==='02 - {HyperCube} Net Assets'){
     setIsSFAC6Component1(false)
@@ -371,6 +381,16 @@ const setStrucutreComponentItem = (title)=>{
     setIsSFAC6Component12(false)
     setIsSFAC6Component13(false)
     setIsSFAC6Component14(false)
+
+    setIsRendering(true)
+    setIsAttachToProcess(false)
+    setIsModel(false)
+    setIsFactTable(false)
+    setIsRules(false)
+    setIsVerification(false)
+    setIsReportElements(false)
+
+
 
   }
   else if(title==='03 - {HyperCube} Income Statement'){
@@ -389,6 +409,16 @@ const setStrucutreComponentItem = (title)=>{
     setIsSFAC6Component13(false)
     setIsSFAC6Component14(false)
 
+    setIsRendering(true)
+    setIsAttachToProcess(false)
+    setIsModel(false)
+    setIsFactTable(false)
+    setIsRules(false)
+    setIsVerification(false)
+    setIsReportElements(false)
+
+
+
   }
   else if(title==='04 - {HyperCube} Income Statement Alternative'){
     setIsSFAC6Component1(false)
@@ -405,6 +435,16 @@ const setStrucutreComponentItem = (title)=>{
     setIsSFAC6Component12(false)
     setIsSFAC6Component13(false)
     setIsSFAC6Component14(false)
+
+    setIsRendering(true)
+    setIsAttachToProcess(false)
+    setIsModel(false)
+    setIsFactTable(false)
+    setIsRules(false)
+    setIsVerification(false)
+    setIsReportElements(false)
+
+
 
   }
 
@@ -424,6 +464,16 @@ const setStrucutreComponentItem = (title)=>{
     setIsSFAC6Component13(false)
     setIsSFAC6Component14(false)
 
+    setIsRendering(true)
+    setIsAttachToProcess(false)
+    setIsModel(false)
+    setIsFactTable(false)
+    setIsRules(false)
+    setIsVerification(false)
+    setIsReportElements(false)
+
+
+
   }
   else if(title==='06 - {HyperCube} Cash Flow'){
     setIsSFAC6Component1(false)
@@ -440,6 +490,15 @@ const setStrucutreComponentItem = (title)=>{
     setIsSFAC6Component12(false)
     setIsSFAC6Component13(false)
     setIsSFAC6Component14(false)
+
+    setIsRendering(true)
+    setIsAttachToProcess(false)
+    setIsModel(false)
+    setIsFactTable(false)
+    setIsRules(false)
+    setIsVerification(false)
+    setIsReportElements(false)
+
 
   }
   else if(title==='07 - {HyperCube} Prior Period Errors'){
@@ -458,6 +517,16 @@ const setStrucutreComponentItem = (title)=>{
     setIsSFAC6Component13(false)
     setIsSFAC6Component14(false)
 
+    setIsRendering(true)
+    setIsAttachToProcess(false)
+    setIsModel(false)
+    setIsFactTable(false)
+    setIsRules(false)
+    setIsVerification(false)
+    setIsReportElements(false)
+
+
+
   }
   else if(title==='08 - {HyperCube} Prior Period Errors (Alternative)'){
     setIsSFAC6Component1(false)
@@ -474,6 +543,16 @@ const setStrucutreComponentItem = (title)=>{
     setIsSFAC6Component12(false)
     setIsSFAC6Component13(false)
     setIsSFAC6Component14(false)
+
+    setIsRendering(true)
+    setIsAttachToProcess(false)
+    setIsModel(false)
+    setIsFactTable(false)
+    setIsRules(false)
+    setIsVerification(false)
+    setIsReportElements(false)
+
+
 
   }
   else if(title==='09 - {HyperCube} Changes In Equity'){
@@ -492,6 +571,16 @@ const setStrucutreComponentItem = (title)=>{
     setIsSFAC6Component13(false)
     setIsSFAC6Component14(false)
 
+    setIsRendering(true)
+    setIsAttachToProcess(false)
+    setIsModel(false)
+    setIsFactTable(false)
+    setIsRules(false)
+    setIsVerification(false)
+    setIsReportElements(false)
+
+
+
   }
   else if(title==='10 - {HyperCube} Policies'){
     setIsSFAC6Component1(false)
@@ -508,6 +597,16 @@ const setStrucutreComponentItem = (title)=>{
     setIsSFAC6Component12(false)
     setIsSFAC6Component13(false)
     setIsSFAC6Component14(false)
+
+    setIsRendering(true)
+    setIsAttachToProcess(false)
+    setIsModel(false)
+    setIsFactTable(false)
+    setIsRules(false)
+    setIsVerification(false)
+    setIsReportElements(false)
+
+
 
   }
   else if(title==='11 - {HyperCube} Variance Analysis'){
@@ -526,6 +625,16 @@ const setStrucutreComponentItem = (title)=>{
     setIsSFAC6Component13(false)
     setIsSFAC6Component14(false)
 
+    setIsRendering(true)
+    setIsAttachToProcess(false)
+    setIsModel(false)
+    setIsFactTable(false)
+    setIsRules(false)
+    setIsVerification(false)
+    setIsReportElements(false)
+
+
+
   }
   else if(title==='12 - {HyperCube} Segnment Revenues'){
     setIsSFAC6Component1(false)
@@ -542,6 +651,16 @@ const setStrucutreComponentItem = (title)=>{
     setIsSFAC6Component12(true)
     setIsSFAC6Component13(false)
     setIsSFAC6Component14(false)
+
+    setIsRendering(true)
+    setIsAttachToProcess(false)
+    setIsModel(false)
+    setIsFactTable(false)
+    setIsRules(false)
+    setIsVerification(false)
+    setIsReportElements(false)
+
+
 
   }
   else if(title==='13 - {HyperCube} Stock Plan Activity'){
@@ -560,6 +679,16 @@ const setStrucutreComponentItem = (title)=>{
     setIsSFAC6Component13(true)
     setIsSFAC6Component14(false)
 
+    setIsRendering(true)
+    setIsAttachToProcess(false)
+    setIsModel(false)
+    setIsFactTable(false)
+    setIsRules(false)
+    setIsVerification(false)
+    setIsReportElements(false)
+
+
+
   }
   else if(title==='14 - {HyperCube} Financial Highlights'){
     setIsSFAC6Component1(false)
@@ -577,8 +706,20 @@ const setStrucutreComponentItem = (title)=>{
     setIsSFAC6Component13(false)
     setIsSFAC6Component14(true)
 
+    setIsRendering(true)
+    setIsAttachToProcess(false)
+    setIsModel(false)
+    setIsFactTable(false)
+    setIsRules(false)
+    setIsVerification(false)
+    setIsReportElements(false)
+
+
   }
 }
+
+
+
 
 
 return (

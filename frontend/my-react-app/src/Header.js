@@ -12,7 +12,7 @@ const Header = ({ currentRoute, userInfo }) => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   const sourceButtons = [
-    { label: 'About', url: 'https://jinsei.ai/about' },
+    { label: 'About', url: '/about' },
     { label: 'Timeline', url: 'https://jinsei.ai/timeline' },
     { label: 'X/Twitter', url: 'https://twitter.com/jinseicorp' },
     { label: 'White-Paper', url: 'https://docs.google.com/document/d/1m_ZNJheDIbt9JHsljOIoZ6awDcaWswWgvlRDGKK3vSE/edit?usp=sharing' },

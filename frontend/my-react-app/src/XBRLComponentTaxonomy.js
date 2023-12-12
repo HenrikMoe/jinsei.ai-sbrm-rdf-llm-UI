@@ -179,7 +179,6 @@ const PrototypeSideMenu = ({ setStrucutreComponentItem, handleStructureInstanceS
               (title, index) => (
                 <li
                   key={title}
-                  contentEditable
 
                      style={{
                 backgroundColor:
