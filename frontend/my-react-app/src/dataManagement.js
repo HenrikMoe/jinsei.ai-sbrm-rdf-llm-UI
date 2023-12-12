@@ -145,7 +145,7 @@ const dataStore = {
   semanticWorkbookSheet: null,
   updateSemanticWorkbookSheet: (sheetName)=>{
     console.log(dataStore.semanticWorkbook)
-
+    
     dataStore.semanticWorkbookSheet = XLSX.utils.sheet_to_json(dataStore.semanticWorkbook.Sheets[sheetName])
   },
 
@@ -168,12 +168,14 @@ const dataStore = {
   overLaidModelSheet: null,
   updateOverLaidModelSheet: (sheetName)=>{
     console.log('updating overlaid model sheet')
+    console.log(dataStore.overLaidModelWorkbook)
     dataStore.overLaidModelSheet = XLSX.utils.sheet_to_json(dataStore.overLaidModelWorkbook.Sheets[sheetName])
   },
 
   overLaidModelWorkbook: null,
   addOverLaidModelWorkbook: (workbook) => {
-     dataStore.overLaidModelWorkbook = workbook;
+    dataStore.overLaidModelWorkbook = workbook;
+    dataStore.updateOverLaidModelSheet('Base Information')
    },
 
   changeOverLaidModelDefault: ()=>{
@@ -194,8 +196,8 @@ const dataStore = {
          header: 1,
        });
        console.log(data);
-       dataStore.updateOverLaidModelSheet('Terms')
-       dataStore.updateSemanticWorkbookSheet('Terms')
+       dataStore.updateOverLaidModelSheet('Base Information')
+       dataStore.updateSemanticWorkbookSheet('Base Information')
        // You can perform further operations with the workbook and data here.
      })
      .catch((error) => {
@@ -222,6 +224,7 @@ const dataStore = {
       // Read the XLSX data and set the header and tableData states
       const workbook = XLSX.read(arrayBuffer, { type: 'array' });
       console.log(workbook);
+      console.log('yeasdfl;')
       console.log('asjdfhhkjsgfdjkaskd')
       dataStore.addOverLaidModelWorkbook(workbook)
       dataStore.addSemanticWorkbook(workbook)
@@ -232,9 +235,11 @@ const dataStore = {
       });
       console.log(data);
       dataStore.updateSemanticWorkbookSheet(data)
+    })
+    .then(()=>{
+      console.log('klsdfkhskdjhfk')
       dataStore.updateOverLaidModelSheet('Terms')
       dataStore.updateSemanticWorkbookSheet('Terms')
-      // You can perform further operations with the workbook and data here.
     })
     .catch((error) => {
       console.error('Error importing XLSX file:', error);

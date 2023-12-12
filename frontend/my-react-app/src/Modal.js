@@ -3,7 +3,7 @@ import './Modal.css';
 import XBRLComponentTaxonomy from './XBRLComponentNetwork'
 
 
-const Modal = ({isPublish, setModalOff, isModal, exportStatus, setExportFalse, setPublishOff }) => {
+const Modal = ({dataStore, handleSchemaConfigSelection, isPublish, setModalOff, isModal, exportStatus, setExportFalse, setPublishOff }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const modalRef = useRef(null);
 
@@ -24,6 +24,7 @@ const Modal = ({isPublish, setModalOff, isModal, exportStatus, setExportFalse, s
     else if(setPublishOff){
       setPublishOff()
     }
+    handleSchemaConfigSelection()
   };
 
   const [isTermsChecked, setIsTermsChecked] = useState(false);
@@ -60,10 +61,10 @@ const Modal = ({isPublish, setModalOff, isModal, exportStatus, setExportFalse, s
 
       {isModal && (
         <div className="modal" >
-          <button onClick={closeModal} className="close-button">
+          <button onClick={closeModal}  className="close-button">
             X
           </button>
-          <div className='modalTitle'>Selected: [SFAC 6] </div>
+          <div className='modalTitle'>Selected: [{dataStore.overlaidModelName}] </div>
           <div  className='modalTitle'> Select Elements:</div>
           <div className="modal-content">
 

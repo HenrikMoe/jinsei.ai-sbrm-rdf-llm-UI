@@ -6,13 +6,15 @@ import CSVFileHandler from './CSVFileHandler';
 import JSONfileHandler from './JSONfileHandler';
 import Modal from './Modal'
 
-const Model = ({ handleOverlayChange, handleClearFalse, clear, sheetTitle, handleOverlaidSelection, updateForm, dataStore, setIsModal }) => {
+const Model = ({  handleSheetSelect, handleOverlayChange, handleClearFalse, clear, sheetTitle, handleOverlaidSelection, updateForm, dataStore, setIsModal, setFlipContentFalse, handleSchemaConfigSelection }) => {
   const { isDarkMode } = useDarkMode();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
 
+  console.log('modelofbaseinformation')
+  console.log(handleSheetSelect)
 
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedModel, setSelectedModel] = useState(''); // State to store the selected model
@@ -38,11 +40,19 @@ const Model = ({ handleOverlayChange, handleClearFalse, clear, sheetTitle, handl
 
     setSelectedModel(model); // Set the selected model when an item is clicked
     closeDropdown(); // Close the dropdown
+    console.log('yooooo')
     console.log(model)
     dataStore.changeOverLaidModel(model)
+    //overlaid model is activated, everything up to 236 runs
+    //overlaidModelWorkbook.sheets undefined
+
     dataStore.changeOverLaidModelName(model)
-    console.log('hooasdfads')
+    dataStore.updateOverLaidModelSheet('Terms')
+
     console.log(dataStore.overlaidModelName)
+    console.log(dataStore.overLaidModelWorkbook)
+    console.log(dataStore.overLaidModelSheet)
+
     console.log(sheetTitle)
     handleOverlayChange(model)
     if(dataStore.semanticWorkbookSheet){
@@ -54,8 +64,13 @@ const Model = ({ handleOverlayChange, handleClearFalse, clear, sheetTitle, handl
 
     //semanticWorkbook
     handleOverlaidSelection()
-
+    console.log('beforethepointineedit')
+    console.log(dataStore.overLaidModelSheet)
+    dataStore.updateOverLaidModelSheet('Terms')
+    //handleSheetSelect('Terms')
     setIsModal()
+  //  handleSchemaConfigSelection()
+
   };
 
 

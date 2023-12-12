@@ -32,6 +32,8 @@ const XLSXSheetRenderer = ({
   handleOverlaidSelection,
   onFileUpload,
   handleTabSelection,
+  handleSheetSelect,
+  handleSchemaConfigSelection
 }) => {
   // Initialize tableData with an empty array
 
@@ -44,8 +46,11 @@ const XLSXSheetRenderer = ({
   const [header, setHeader] = useState([]);
 
   //thi is good j need the render logic rite
+  console.log('thisisnotgood')
   console.log(selectedSheetData)
+
   useEffect(() => {
+    console.log('hiasdfaaaa')
     console.log(selectedSheetData)
     if (selectedSheetData) {
       if (selectedSheetData.length > 0){
@@ -100,6 +105,8 @@ const XLSXSheetRenderer = ({
           }
     }else{console.log('intheelse')}
   }, [selectedSheetData, sheetTitle]);
+
+
 
 
   useEffect(() => {
@@ -433,19 +440,45 @@ const setImportFalse = ()=>{
 const handleImportTrue =()=>{
   setImportTrue()
 }
+
+
+const [flipContent, setFlipContent] = useState(true)
+const setFlipContentTrue = ()=>{
+  setFlipContent(true)
+}
+
+const setFlipContentFalse = ()=>{
+  setFlipContent(false)
+}
+
+const handleFlipContentTrue =()=>{
+  setFlipContentTrue()
+}
+
+const handleFlipContentFalse =()=>{
+  setFlipContentFalse()
+}
+
+console.log('titanssoldthebag')
+console.log(tableData)
 //model passed objs ; handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}
 //popup ; onFileUpload={onFileUpload}
 //delete ;  handleClearTrue={handleClearTrue} dataStore={dataStore}
 
-  return (
 
-    <div className="table-wrap">
+
+
+
+  return (
+    <div>
+
+ <div className="table-wrap">
       {sheetTitle[0] === 'Facts' ? (
           <div className='schemaRibbon'>
           <div className="elementTitle2">Configure Schema </div>
 
           <div className='button-wrapAY'>
-          <Model   />
+          <Model  handleFlipContentTrue={handleFlipContentTrue} flipContent={flipContent} setFlipContentFalse={setFlipContentFalse} />
           <Popup />
           <Delete />
           <Upload />
@@ -548,7 +581,7 @@ const handleImportTrue =()=>{
           <div className="elementTitle2">Configure Schema </div>
 
           <div className='button-wrapAY'>
-          <Model   />
+          <Model  handleFlipContentTrue={handleFlipContentTrue} flipContent={flipContent} setFlipContentFalse={setFlipContentFalse} />
           <Popup />
           <Delete />
           <Upload />
@@ -652,7 +685,7 @@ const handleImportTrue =()=>{
           <div className="elementTitle2">Configure Schema </div>
 
           <div className='button-wrapAY'>
-          <Model   />
+          <Model  handleFlipContentTrue={handleFlipContentTrue} flipContent={flipContent} setFlipContentFalse={setFlipContentFalse} />
           <Popup />
           <Delete />
           <Upload />
@@ -760,19 +793,19 @@ const handleImportTrue =()=>{
             {/* Top ribbon with three buttons */}
             <div className="elementTitle2">Configure Schema </div>
 
-            {isModal ? <Modal setModalOff={setModalOff} isModal={isModal}/> : <div></div>}
+            {isModal ? <Modal dataStore={dataStore} handleSchemaConfigSelection={handleSchemaConfigSelection} setModalOff={setModalOff} isModal={isModal}/> : <div></div>}
 
             {importStatus ? <ImportModal setImportFalse={setImportFalse} importStatus={importStatus}/> : <div></div>}
 
 
             <div className='button-wrapAY'>
-            <Model  setIsModal={setIsModalOn} handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
+            <Model handleSchemaConfigSelection={handleSchemaConfigSelection} handleSheetSelect={handleSheetSelect} handleFlipContentTrue={handleFlipContentTrue} flipContent={flipContent} setFlipContentFalse={setFlipContentFalse} setIsModal={setIsModalOn} handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
             <button className="ribbon-button" onClick={()=> handleImportTrue()}>Import</button>
             <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
             <button className="ribbon-button" onClick={() => handleIsPublish(true)}>Publish Overlay</button>
             <button className="ribbon-button" onClick={() => handleTabClick('Structure')}>Report</button>
 
-            {isPublish ? <Modal setPublishOff={setPublishOff} isPublish={isPublish}/>: <div></div>}
+            {isPublish ? <Modal handleSchemaConfigSelection={handleSchemaConfigSelection} setPublishOff={setPublishOff} isPublish={isPublish}/>: <div></div>}
 
           </div>
 
@@ -982,8 +1015,9 @@ const handleImportTrue =()=>{
           </div>
         )}
 
-
       {/* Rest of your component */}
+    </div>
+
     </div>
   );
 };

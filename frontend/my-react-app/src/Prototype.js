@@ -74,11 +74,15 @@ function Prototype({listLoginInfo}) {
 
 
   const handleSheetSelect = (selectedSheetTitle) => {
+
     if (dataStore.overLaidModelSheet) {
       // Find the data of the selected sheet in the workbook
       //this is now showing the dited title
       console.log('newTitleDone')
       console.log(selectedSheetTitle)
+      console.log(dataStore.overLaidModelSheet)
+      console.log('newTitleDone')
+
       const selectedSheetData = XLSX.utils.sheet_to_json(dataStore.overLaidModelSheet.Sheets[selectedSheetTitle], { header: 1 });
 
       console.log(XLSX.utils.sheet_to_json(dataStore.overLaidModelSheet.Sheets[selectedSheetTitle], { header: 1 }))
@@ -90,6 +94,27 @@ function Prototype({listLoginInfo}) {
       //setSelectedXLSXDataTaxonomyItem(selectedSheetDataManagmentSystem)
     }
   };
+  //
+  // useEffect(()=>{
+  //   if(dataStore.overLaidModelSheet){
+  //     if (dataStore.overLaidModelSheet.length > 2) {
+  //       // Find the data of the selected sheet in the workbook
+  //       //this is now showing the dited title
+  //       console.log('nahtitanasd')
+  //       console.log(dataStore.overLaidModelSheet)
+  //
+  //       const selectedSheetData = dataStore.overLaidModelSheet
+  //
+  //       // Set the selected sheet's data in the state
+  //       setSelectedSheetData(selectedSheetData);
+  //       console.log(selectedSheetData)
+  //
+  //       //const selectedSheetDataManagmentSystem = XLSX.utils.sheet_to_json(dataStore.workbook.Sheets[selectedSheetTitle], { header: 1 });
+  //       //setSelectedXLSXDataTaxonomyItem(selectedSheetDataManagmentSystem)
+  //     }
+  //   }
+  //
+  // }, [dataStore.overLaidModelSheet])
 
 
 
@@ -147,10 +172,6 @@ function Prototype({listLoginInfo}) {
     }
     //update dataStore addSemanticWorkbook and updateSemanticWorkbookSheet
 
-
-    //handleSchemaConfigSelection(sheetTitle)
-
-
   }
 
 
@@ -198,6 +219,7 @@ function Prototype({listLoginInfo}) {
   //     setSelectedSheetData(selectedSheetData);
 
    //}, [dataStore.semanticWorkbook]);
+
 
   const handleSchemaConfigSelection = (sheetTitle) => {
     setSchemaConfigSelected(true)
@@ -272,6 +294,12 @@ function Prototype({listLoginInfo}) {
     }
     else{console.log('basdbasdf')}
   }
+
+ useEffect(()=>{
+  //  handleSchemaConfigSelection()
+console.log('hasidfasdfssss')
+}, [handleSheetSelect])
+
 
   const [selectedSubSheet, setSelectedSubSheet]= useState([])
 //viewing semanticworkbook with subsheet
@@ -407,7 +435,7 @@ function Prototype({listLoginInfo}) {
           <PrototypeHeader handleOverlayChange={handleOverlayChange} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} onFileUpload={handleXLSXUpload} dataStore={dataStore} />
           <TabSelector handleTabSelection={handleTabSelection} structureInstanceSelected={structureInstanceSelected} schemaConfigSelected={schemaConfigSelected} />
           {schemaConfigSelected ? <PrototypeSideMenu  overlaidModelName={overlaidModel} handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} sheetTitle={sheetTitle}  onSheetSelect={handleSheetSelect}  sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} /> : <div className='fillerClass'></div>}
-          {schemaConfigSelected ? <SchemaConfigRenderer handleTabSelection={handleTabSelection} handleOverlayChange={handleOverlayChange} handleOverlaidSelection={handleOverlaidSelection} onFileUpload={handleXLSXUpload}  overlaidModelName={overlaidModel} dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} /> : <div className='fillerClass'></div>}
+          {schemaConfigSelected ? <SchemaConfigRenderer handleSchemaConfigSelection={handleSchemaConfigSelection} handleSheetSelect={handleSheetSelect} handleTabSelection={handleTabSelection} handleOverlayChange={handleOverlayChange} handleOverlaidSelection={handleOverlaidSelection} onFileUpload={handleXLSXUpload}  overlaidModelName={overlaidModel} dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} /> : <div className='fillerClass'></div>}
           {structureInstanceSelected ? <SubReports handleTabSelection={handleTabSelection}handleStructureInstanceSelection={handleStructureInstanceSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />: <div className='fillerClass'></div>}
           {structureInstanceSelected ? <StructureInstanceRenderer dataStore={dataStore}  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} /> : <div className='fillerClass'>filler</div>}
           {pipelineSheetSelected ? <PipelineMenu handlePipelineInstanceSelection={handlePipelineInstanceSelection} dataStore={dataStore}/>:<div className='fillerClass'></div>}
