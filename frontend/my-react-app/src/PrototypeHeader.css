@@ -33,7 +33,6 @@
   border-bottom: 2px solid lightslategrey;
   padding: 10px;
   display: flex;
-  max-width: 1890px;
   justify-content: space-between;
   align-items: center;
   position: absolute;
@@ -46,7 +45,7 @@
   right: 0;
   background-color: #001522;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
-  width: 145%;
+  width: 105%;
 }
 
 .prototype-header2:hover {
@@ -55,7 +54,6 @@
   border-bottom: 2px solid lightslategrey;
   padding: 10px;
   display: flex;
-  max-width: 1890px;
   justify-content: space-between;
   align-items: center;
   position: absolute;
@@ -69,7 +67,7 @@
   box-shadow: 20px 10px 0 #003366; /* Add a shadow to the right and bottom */
   right: 0;
   background-color: #001522;
-  width: 145%;
+  width: 104%;
 }
 
 

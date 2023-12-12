@@ -4,6 +4,7 @@ import Footer from './Footer';
 import XBRLComponentTaxonomy from './XBRLComponentTaxonomy'
 import Modal from './Modal'
 import ImportModal from './ImportModalHypercube'
+import Modal2 from './Modal2'
 
 
 
@@ -752,7 +753,7 @@ const handleImportTrue =()=>{
 return (
     <div className='structureInstanceWrap2'>
   <div className="elementTitle5">Report Viewing and Editing </div>
-  {exportStatus ? <Modal setExportFalse={setExportFalse} exportStatus={exportStatus}/> : <div></div>}
+  {exportStatus ? <Modal2 setExportFalse={setExportFalse} exportStatus={exportStatus}/> : <div></div>}
   {importStatus ? <ImportModal setImportFalse={setImportFalse} importStatus={importStatus}/> : <div></div>}
 
   <div className='reportWraper'>
