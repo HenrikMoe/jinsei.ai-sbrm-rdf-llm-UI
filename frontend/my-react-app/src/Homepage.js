@@ -259,7 +259,7 @@ function Homepage() {
 
 
       <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Product model standards leveraged from Object Management Group (OMG), xbrl US, ACTUS, FIBO, and more.')}
+        {t('Product model standards leveraged from Object Management Group (OMG), xbrl US, ACTUS, FIBO, LEI and more.')}
       </div>
       <button onClick={handleTimelineClick} className={`timeline-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
         Corp Timeline
