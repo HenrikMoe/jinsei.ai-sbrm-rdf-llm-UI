@@ -112,7 +112,7 @@ useEffect(() => {
       onClick={() => handleTabClick('Pipeline')}>Process Management</div>
       <div
       className={`dropdown-button2 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
-      onClick={() => handleTabClick('Canvas')}>Canvas Map</div>
+      onClick={() => handleTabClick('Canvas')}>Ontologies</div>
       <div
       className={`dropdown-button2 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
       onClick={() => handleTabClick('Canvas')}>Publish</div>

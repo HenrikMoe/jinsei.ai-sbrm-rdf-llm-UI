@@ -13,8 +13,18 @@ const PrototypeSideMenu = ({ handlePipelineInstanceSelection, sheetTitles, onShe
 
      <div className='balance-sheet2'>
 
-        <div>Canvas</div>
-       </div>
+
+    <div className='notes'>Ontology Upoad </div>
+    <div className='notes'>Model: LEI  </div>
+    <div className='notes'>Model: Fibo </div>
+    <div className='notes'>Model: ACTUS </div>
+
+    <div className='notes'>Element: ACTUS </div>
+
+
+    <div className='notes2'>Konva of revenue operations, basically product terms sheets with quantity data. Multi-brnach companies - the ai will train to aggreagate the product and quantity functions of revenue for these companies and likewise with costs into the standard visualization. </div>
+   </div>
+
        </div>
    );
 };

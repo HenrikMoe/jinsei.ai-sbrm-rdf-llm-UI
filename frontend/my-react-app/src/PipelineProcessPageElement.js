@@ -14,12 +14,12 @@ const PrototypeSideMenu = ({ handlePipelineInstanceSelection, sheetTitles, onShe
   <div className='elementTitle18'>Process Management</div>
    <div className='processTablesWrapper2'>
    <table className='xlsx-table2'>
-   <tr><th><td>Report ID</td></th><th><td>Ab Co BalanceSheet</td></th></tr>
-   <tr><td>Process ID</td><td>URI View and Edit Deployment</td></tr>
-   <tr><td>Domain</td><td>abco.co/report/BalanceSheet</td></tr>
-   <tr><td>Credentials</td><td>AuthLinkConfig1</td></tr>
-   <tr><td>TTL</td><td>80000000</td></tr>
-   </table>
+ <tr><th><td>Report ID</td></th><th><td>EDGAR PULL</td></th></tr>
+ <tr><td>Process ID</td><td>EDGARURI:abCo@SEC</td></tr>
+ <tr><td>Analysis</td><td>Revenue to Stock Projections[cited]</td></tr>
+ <tr><td>Credentials</td><td>TraderGroup</td></tr>
+ <tr><td>TTL</td><td>80000000</td></tr>
+ </table>
 
    <table className='xlsx-table2'>
    <tr><th><td>Report ID</td></th><th><td>Ab Co BalanceSheet</td></th></tr>

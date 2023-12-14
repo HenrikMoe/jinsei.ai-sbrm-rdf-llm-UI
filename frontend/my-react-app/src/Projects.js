@@ -19,7 +19,7 @@ const Projects = ({ updateForm }) => {
 
   const dropdownRef = useRef(null);
 
-  const [org, setOrg] = useState('AB Co'); // Initial title
+  const [org, setOrg] = useState('ABCo. Quarterly'); // Initial title
 
   const handleOrgChange = (event) => {
     setOrg(event.target.value);
