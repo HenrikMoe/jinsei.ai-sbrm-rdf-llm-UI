@@ -36,6 +36,7 @@ const Model = ({  handleSheetSelect, handleOverlayChange, handleClearFalse, clea
   }
 
   const handleModelSelect = (model) => {
+    
     handleClearFalse()
 
     setSelectedModel(model); // Set the selected model when an item is clicked

@@ -461,6 +461,12 @@ const handleFlipContentFalse =()=>{
 
 console.log('titanssoldthebag')
 console.log(tableData)
+
+if(tableData){
+  if(tableData.length < 1){
+    addRow()
+  }
+}
 //model passed objs ; handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}
 //popup ; onFileUpload={onFileUpload}
 //delete ;  handleClearTrue={handleClearTrue} dataStore={dataStore}

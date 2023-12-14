@@ -145,7 +145,7 @@ const dataStore = {
   semanticWorkbookSheet: null,
   updateSemanticWorkbookSheet: (sheetName)=>{
     console.log(dataStore.semanticWorkbook)
-    
+
     dataStore.semanticWorkbookSheet = XLSX.utils.sheet_to_json(dataStore.semanticWorkbook.Sheets[sheetName])
   },
 
@@ -168,8 +168,11 @@ const dataStore = {
   overLaidModelSheet: null,
   updateOverLaidModelSheet: (sheetName)=>{
     console.log('updating overlaid model sheet')
-    console.log(dataStore.overLaidModelWorkbook)
-    dataStore.overLaidModelSheet = XLSX.utils.sheet_to_json(dataStore.overLaidModelWorkbook.Sheets[sheetName])
+    if(dataStore.overLaidModelWorkbook){
+      console.log(dataStore.overLaidModelWorkbook)
+      dataStore.overLaidModelSheet = XLSX.utils.sheet_to_json(dataStore.overLaidModelWorkbook.Sheets[sheetName])
+    }
+
   },
 
   overLaidModelWorkbook: null,
