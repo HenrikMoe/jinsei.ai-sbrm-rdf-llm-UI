@@ -92,33 +92,55 @@ useEffect(() => {
       <div className='button-wrap3'>
       <div className='title9'>Control Center:</div>
 
-      <div
-       className={`dropdown-button2 ${tabClicked === 'AI' ? 'selected-tab' : ''}`}
+     <div
+       className={`dropdown-button9 ${tabClicked === 'AI' ? 'selected-tab' : ''}`}
        onClick={() => handleTabClick('AI')}
      >
        State Summary
      </div>
+     <div className="button-group">
+
      <div
-       className={`dropdown-button2 ${tabClicked === 'Schema' ? 'selected-tab' : ''}`}
+       className={`dropdown-button3 ${tabClicked === 'Schema' ? 'selected-tab' : ''}`}
        onClick={() => handleTabClick('Schema')}
      >
        Configuration
      </div>
-      <div
-      className={`dropdown-button2 ${tabClicked === 'Structure' ? 'selected-tab' : ''}`}
-      onClick={() => handleTabClick('Structure')}>  Report</div>
-      <div
-      className={`dropdown-button2 ${tabClicked === 'Pipeline' ? 'selected-tab' : ''}`}
-      onClick={() => handleTabClick('Pipeline')}>Process Management</div>
-      <div
-      className={`dropdown-button2 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
-      onClick={() => handleTabClick('Canvas')}>Ontologies</div>
-      <div
-      className={`dropdown-button2 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
-      onClick={() => handleTabClick('Canvas')}>Publish</div>
-      <div
-      className={`dropdown-button2 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
-      onClick={() => handleTabClick('Canvas')}>Documentation</div>
+     <div
+       className={`dropdown-button2 ${tabClicked === 'Structure' ? 'selected-tab' : ''}`}
+       onClick={() => handleTabClick('Structure')}
+     >
+       Report
+     </div>
+   </div>
+
+   <div
+     className={`dropdown-button8 ${tabClicked === 'Pipeline' ? 'selected-tab' : ''}`}
+     onClick={() => handleTabClick('Pipeline')}
+   >
+     Process Management
+   </div>
+   <div className="button-group2">
+
+   <div
+     className={`dropdown-button3 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
+     onClick={() => handleTabClick('Canvas')}
+   >
+     Ontologies
+   </div>
+   </div>
+   <div
+     className={`dropdown-button8 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
+     onClick={() => handleTabClick('Canvas')}
+   >
+     Publish
+   </div>
+   <div
+     className={`dropdown-button2 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
+     onClick={() => handleTabClick('Canvas')}
+   >
+     Documentation
+   </div>
       </div>
 
 

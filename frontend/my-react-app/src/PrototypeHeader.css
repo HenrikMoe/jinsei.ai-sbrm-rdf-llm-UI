@@ -152,10 +152,10 @@
   cursor: pointer;
   background-color: #556B2F; /* Green color */
   padding: 10px;
-  border-radius: 2px;
+  border-radius: 5px;
   margin-left: 10px;
   color: white;
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  transition: background-color 0.5s ease; /* Smooth transition on hover */
 
   display: flex;
 }
@@ -163,17 +163,98 @@
 .dropdown-button2:hover {
   border: none;
   padding: 10px !important;
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  transition: background-color 0.5s ease; /* Smooth transition on hover */
 
   cursor: pointer;
   background-color: skyblue;
   padding: 10px;
-  border-radius: 2px;
   margin-left: 10px;
   color: black;
   display: flex;
 }
 
+
+.dropdown-button3 {
+  border: none;
+  padding: 10px !important;
+  cursor: pointer;
+  background-color: #556B2F; /* Green color */
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 0px;
+  color: white;
+  transition: background-color 0.5s ease; /* Smooth transition on hover */
+
+  display: flex;
+}
+
+.dropdown-button3:hover {
+  border: none;
+  padding: 10px !important;
+  transition: background-color 0.5s ease; /* Smooth transition on hover */
+
+  cursor: pointer;
+  background-color: skyblue;
+  padding: 10px;
+  margin-left: 0px;
+  color: black;
+  display: flex;
+}
+
+
+.dropdown-button8 {
+  border: none;
+  padding: 10px !important;
+  cursor: pointer;
+  background-color: #556B2F; /* Green color */
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: white;
+  transition: background-color 0.5s ease; /* Smooth transition on hover */
+
+  display: flex;
+}
+
+.dropdown-button8:hover {
+  border: none;
+  padding: 10px !important;
+  transition: background-color 0.5s ease; /* Smooth transition on hover */
+
+  cursor: pointer;
+  background-color: skyblue;
+  padding: 10px;
+  color: black;
+  display: flex;
+}
+
+.dropdown-button9 {
+  border: none;
+  padding: 10px !important;
+  cursor: pointer;
+  background-color: #556B2F; /* Green color */
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+  color: white;
+  transition: background-color 0.5s ease; /* Smooth transition on hover */
+
+  display: flex;
+}
+
+.dropdown-button9:hover {
+  border: none;
+  padding: 10px !important;
+  transition: background-color 0.5s ease; /* Smooth transition on hover */
+
+  cursor: pointer;
+  background-color: skyblue;
+  padding: 10px;
+  color: black;
+  display: flex;
+}
 .button-wrap2{
   display: flex;
   margin-left: -170px;
@@ -200,6 +281,24 @@
   display: flex;
 }
 
+.button-group {
+  margin-right: 20px; /* Adjust as needed */
+  display: flex;
+  padding: 5px;
+
+  border: .8px solid #556B2F; /* Green color */
+  border-radius: 8px; /* Adjust as needed for rounded corners */
+}
+
+.button-group2 {
+  margin-right: 20px; /* Adjust as needed */
+  display: flex;
+  padding: 5px;
+
+  border: .8px solid #556B2F; /* Green color */
+  border-radius: 8px; /* Adjust as needed for rounded corners */
+
+}
 .title-input{
   margin-top: 25px;
  height: 25px;

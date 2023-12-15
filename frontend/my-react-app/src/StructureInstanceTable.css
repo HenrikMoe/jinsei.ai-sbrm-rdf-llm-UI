@@ -85,6 +85,7 @@
   margin-left: 200px;
   display: flex;
   margin-top: 40px;
+  position: static;
   margin-bottom: 30px;
 }
 .notes4{
