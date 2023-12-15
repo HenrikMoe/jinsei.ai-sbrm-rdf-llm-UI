@@ -14,6 +14,7 @@ import Modal from './Modal'
 import ProcessModal from './ProcessModal'
 import XBRLComponentTaxonomy2 from './XBRLComponentTaxonomy2'
 import ImportModal from './ImportModalReportScheme'
+import PublishModal from './PublishModal'
 
 const XLSXSheetRenderer = ({
   overlaidModelName,
@@ -811,7 +812,7 @@ if(tableData){
             <button className="ribbon-button" onClick={() => handleIsPublish(true)}>Publish Overlay</button>
             <button className="ribbon-button" onClick={() => handleTabClick('Structure')}>Report</button>
 
-            {isPublish ? <Modal handleSchemaConfigSelection={handleSchemaConfigSelection} setPublishOff={setPublishOff} isPublish={isPublish}/>: <div></div>}
+            {isPublish ? <PublishModal handleSchemaConfigSelection={handleSchemaConfigSelection} setPublishOff={setPublishOff} isPublish={isPublish}/>: <div></div>}
 
           </div>
 

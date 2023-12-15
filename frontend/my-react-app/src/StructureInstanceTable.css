@@ -93,6 +93,22 @@
   background-color: #ffffff;
   transition: background-color 0.4s ease;
   padding: 5px;
+  box-shadow: 5px 5px 0 #003366; /* Add a shadow to the right and bottom */
+
+  border-radius: 5px;
+
+}
+
+.notes6{
+  color: black;
+  margin-left: 300px;
+  margin-top: 100px;
+  font-size: 20px;
+  background-color: #ffffff;
+  transition: background-color 0.4s ease;
+  padding: 5px;
+  box-shadow: 5px 5px 0 #003366; /* Add a shadow to the right and bottom */
+
   border-radius: 5px;
 
 }
@@ -135,6 +151,15 @@
 }
 
 .notes4:hover{
+  color: white;
+  margin-left: 10px;
+  background-color: #556B2F; /* Green color */
+  transition: background-color 0.4s ease;
+
+}
+
+
+.notes6:hover{
   color: white;
   margin-left: 10px;
   background-color: #556B2F; /* Green color */

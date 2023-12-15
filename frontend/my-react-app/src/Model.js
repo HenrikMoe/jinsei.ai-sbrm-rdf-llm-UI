@@ -36,7 +36,7 @@ const Model = ({  handleSheetSelect, handleOverlayChange, handleClearFalse, clea
   }
 
   const handleModelSelect = (model) => {
-    
+
     handleClearFalse()
 
     setSelectedModel(model); // Set the selected model when an item is clicked
@@ -123,25 +123,25 @@ const Model = ({  handleSheetSelect, handleOverlayChange, handleClearFalse, clea
             <div></div>
           )}
           <div className="dropdown-item" onClick={() => handleModelSelect('Accounting Equation')}>
-            Accounting Equation
+            Accounting Equation - SBRM (OMG)
           </div>
           <div className="dropdown-item" onClick={() => handleModelSelect('SFAC 6')}>
-            SFAC 6
+            SFAC 6 - SBRM (OMG)
           </div>
           <div className="dropdown-item" onClick={() => handleModelSelect('SFAC 8')}>
-            SFAC 8
+             SFAC 8 - SBRM (OMG)
           </div>
           <div className="dropdown-item" onClick={() => handleModelSelect('Common')}>
-            Common
+            Common - SBRM (OMG)
           </div>
           <div className="dropdown-item" onClick={() => handleModelSelect('MINI')}>
-            MINI
+            MINI - SBRM (OMG)
           </div>
           <div className="dropdown-item" onClick={() => handleModelSelect('PROOF')}>
-            PROOF
+          PROOF - SBRM (OMG)
           </div>
           <div className="dropdown-item" onClick={() => handleModelSelect('PROOF')}>
-            AASB 1060
+            ASB 1060 - SBRM (OMG)
           </div>
 
 

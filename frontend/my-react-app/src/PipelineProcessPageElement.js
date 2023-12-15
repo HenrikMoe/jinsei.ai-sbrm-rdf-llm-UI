@@ -31,22 +31,22 @@ const setDeploymentOff = () =>{
   {isDeployment ?   <div className='processHeaderwrap'>
   <div   className='notes5'
 
-  >Deployment Processes</div>
+  >External Processes</div>
   <div   className='notes5'
 
   > Go To: </div><div   className='notes4'
   onClick={() => setDeploymentOff()}
-  >Analysis</div></div>:<div></div>}
+  >Internal</div></div>:<div></div>}
 
 {isAnalysis ?   <div className='processHeaderwrap'>
 <div   className='notes5'
->Analysis Processes</div><div   className='notes5'
+>Internal Processes</div><div   className='notes5'
 
 > Go To: </div><div   className='notes4'
 onClick={() => setAnalysisOff()}
->Deployments</div></div>:<div></div>}
+>External</div></div>:<div></div>}
 
-{isDeployment ?  <div className='processTablesWrapper3'>
+{isDeployment ?  <div className='processTablesWrapper6'>
 <table className='xlsx-table2'>
   <tr><th><td>Process ID</td></th><th><td>BalanceSheet Deployment AbCo</td></th></tr>
   <tr><td>Report ID</td><td>Net Assets Hypercube</td></tr>
@@ -57,7 +57,18 @@ onClick={() => setAnalysisOff()}
   <div className='processButtonWrap'>
   <button className='processButton'>Report</button>
   <button  className='processButton'>Pause</button>
-  <button  className='processButton'>Archive</button> </div></div> : <div></div>}
+  <button  className='processButton'>Archive</button> </div>
+  <table className='xlsx-table2'>
+    <tr><th><td>Process ID</td></th><th><td>AbCo - SFAC 6 SBRM (OMG) SEC Submission</td></th></tr>
+    <tr><td>Report ID</td><td>All HyperCubes</td></tr>
+    <tr><td>Domain</td><td>abco.co/report/BalanceSheet.xbri</td></tr>
+    <tr><td>Credentials</td><td></td></tr>
+    <tr><td>TTL</td><td>80000000</td></tr>
+    </table>
+    <div className='processButtonWrap'>
+    <button className='processButton'>Report</button>
+    <button  className='processButton'>Archive</button> </div>
+    </div> : <div></div>}
 
   {isAnalysis ?   <div className='processTablesWrapper5'>
 
@@ -103,7 +114,7 @@ onClick={() => setAnalysisOff()}
 
      </div>: <div></div>}
 
-
+<button className='notes6'>Create Process</button>
 
 
 

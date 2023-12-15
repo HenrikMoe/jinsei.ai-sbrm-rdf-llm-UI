@@ -77,6 +77,15 @@
   transform: scale(0.8); /* Zoom out by 67% */
 }
 
+.processButton2{
+  color: black;
+  font-size: 18px;
+  margin-top: 100px;
+  margin-left: 200px;
+  box-shadow: 5px 5px 0 #003366; /* Add a shadow to the right and bottom */
+
+}
+
 .processTablesWrapper5{
   display: flex;
   margin-top: 0px;
@@ -85,6 +94,15 @@
   margin-left: 0px;
   transform: scale(0.8); /* Zoom out by 67% */
 }
+.processTablesWrapper6{
+  display: flex;
+  margin-top: 0px;
+
+  padding-bottom: 10px;
+  margin-left: 40px;
+  transform: scale(0.8); /* Zoom out by 67% */
+}
+
 
 
 
