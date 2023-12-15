@@ -3,7 +3,7 @@ import './Modal.css';
 import XBRLComponentTaxonomy from './XBRLComponentNetwork'
 
 
-const Modal = ({dataStore, handleSchemaConfigSelection, isPublish, setModalOff, isModal, exportStatus, setExportFalse, setPublishOff }) => {
+const Modal = ({dataStore, handleSchemaConfigSelection2, isPublish, setModalOff, isModal, exportStatus, setExportFalse, setPublishOff }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const modalRef = useRef(null);
 
@@ -24,7 +24,7 @@ const Modal = ({dataStore, handleSchemaConfigSelection, isPublish, setModalOff, 
     else if(setPublishOff){
       setPublishOff()
     }
-    handleSchemaConfigSelection()
+    handleSchemaConfigSelection2()
   };
 
   const [isTermsChecked, setIsTermsChecked] = useState(false);

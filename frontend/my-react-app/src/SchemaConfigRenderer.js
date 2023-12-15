@@ -34,7 +34,8 @@ const XLSXSheetRenderer = ({
   onFileUpload,
   handleTabSelection,
   handleSheetSelect,
-  handleSchemaConfigSelection
+  handleSchemaConfigSelection,
+  handleSchemaConfigSelection2,
 }) => {
   // Initialize tableData with an empty array
 
@@ -800,7 +801,7 @@ if(tableData){
             {/* Top ribbon with three buttons */}
             <div className="elementTitle2">Configure Schema </div>
 
-            {isModal ? <Modal dataStore={dataStore} handleSchemaConfigSelection={handleSchemaConfigSelection} setModalOff={setModalOff} isModal={isModal}/> : <div></div>}
+            {isModal ? <Modal dataStore={dataStore} handleSchemaConfigSelection2={handleSchemaConfigSelection2} setModalOff={setModalOff} isModal={isModal}/> : <div></div>}
 
             {importStatus ? <ImportModal setImportFalse={setImportFalse} importStatus={importStatus}/> : <div></div>}
 

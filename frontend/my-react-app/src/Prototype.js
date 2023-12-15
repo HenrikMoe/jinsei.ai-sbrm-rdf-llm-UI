@@ -219,8 +219,14 @@ function Prototype({listLoginInfo}) {
   //     setSelectedSheetData(selectedSheetData);
 
    //}, [dataStore.semanticWorkbook]);
-
-
+   const handleSchemaConfigSelection2 = (sheetTitle) => {
+     const selectedSheetData = XLSX.utils.sheet_to_json(
+       dataStore.semanticWorkbook.Sheets['BaseInformation'],
+       { header: 1 }
+     );
+     console.log('newSheetyo')
+     setSelectedSheetData(selectedSheetData);
+}
   const handleSchemaConfigSelection = (sheetTitle) => {
     setSchemaConfigSelected(true)
     setStructureInstanceSelected(false)
@@ -435,7 +441,7 @@ console.log('hasidfasdfssss')
           <PrototypeHeader handleOverlayChange={handleOverlayChange} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} onFileUpload={handleXLSXUpload} dataStore={dataStore} />
           <TabSelector handleTabSelection={handleTabSelection} structureInstanceSelected={structureInstanceSelected} schemaConfigSelected={schemaConfigSelected} />
           {schemaConfigSelected ? <PrototypeSideMenu  overlaidModelName={overlaidModel} handleSchemaConfigSelection={handleSchemaConfigSelection} sheetTitles={sheetTitles} sheetTitle={sheetTitle}  onSheetSelect={handleSheetSelect}  sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} /> : <div className='fillerClass'></div>}
-          {schemaConfigSelected ? <SchemaConfigRenderer handleSchemaConfigSelection={handleSchemaConfigSelection} handleSheetSelect={handleSheetSelect} handleTabSelection={handleTabSelection} handleOverlayChange={handleOverlayChange} handleOverlaidSelection={handleOverlaidSelection} onFileUpload={handleXLSXUpload}  overlaidModelName={overlaidModel} dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} /> : <div className='fillerClass'></div>}
+          {schemaConfigSelected ? <SchemaConfigRenderer handleSchemaConfigSelection2={handleSchemaConfigSelection2} handleSchemaConfigSelection={handleSchemaConfigSelection} handleSheetSelect={handleSheetSelect} handleTabSelection={handleTabSelection} handleOverlayChange={handleOverlayChange} handleOverlaidSelection={handleOverlaidSelection} onFileUpload={handleXLSXUpload}  overlaidModelName={overlaidModel} dataStore={dataStore} sheetTitle={sheetTitle} selectedSheetData={selectedSheetData} handleSchemaSubConfigSelection={handleSchemaSubConfigSelection} stateSubSheet={selectedSubSheet} /> : <div className='fillerClass'></div>}
           {structureInstanceSelected ? <SubReports handleTabSelection={handleTabSelection}handleStructureInstanceSelection={handleStructureInstanceSelection} sheetTitles={sheetTitles} onSheetSelect={handleSheetSelect} sheetTitle={xlsxTitle} sheetData={selectedSheetData} xlsxTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet} handleSelectedSheet={handleSelectedSheet} schemaConfigSelected={schemaConfigSelected} />: <div className='fillerClass'></div>}
           {structureInstanceSelected ? <StructureInstanceRenderer dataStore={dataStore}  sheetData={selectedSheetData} sheetTitle={sheetTitle} sheetTitle={xlsxTitle} dataStore={dataStore} selectedSheet={selectedSheet}  handleSelectedSheet={handleSelectedSheet} /> : <div className='fillerClass'>filler</div>}
           {pipelineSheetSelected ? <PipelineMenu handlePipelineInstanceSelection={handlePipelineInstanceSelection} dataStore={dataStore}/>:<div className='fillerClass'></div>}
