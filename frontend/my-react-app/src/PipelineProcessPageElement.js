@@ -56,6 +56,8 @@ onClick={() => setAnalysisOff()}
   </table>
   <div className='processButtonWrap'>
   <button className='processButton'>Report</button>
+  <button className='processButton'>Visit</button>
+
   <button  className='processButton'>Pause</button>
   <button  className='processButton'>Archive</button> </div>
   <table className='xlsx-table2'>
@@ -73,7 +75,7 @@ onClick={() => setAnalysisOff()}
   {isAnalysis ?   <div className='processTablesWrapper5'>
 
     <table className='xlsx-table2'>
-    <tr><th><td>Process ID</td></th><th><td>BalanceSheet Verfiication AbCo</td></th></tr>
+    <tr><th><td>Process ID</td></th><th><td>PROOF - SBRM (OMG) Report Set Verfiication AbCo</td></th></tr>
     <tr><td>Report ID</td><td>Report Logic Verification</td></tr>
     <tr><td>Analysis</td><td>Report model rules with facts verification.</td></tr>
     <tr><td>Domain</td><td>abco.co/report/BalanceSheet.xbri</td></tr>
@@ -103,6 +105,8 @@ onClick={() => setAnalysisOff()}
      <tr><td>Report ID</td><td>EDGAR:abCo@SEC</td></tr>
      <tr><td>Domain</td><td>abco.co/report/BalanceSheet.xbri</td></tr>
      <tr><td>Analysis</td><td>Risk With Energy Change Shock Tests</td></tr>
+     <tr><td>Parameters</td><td>FIBO, ACTUS</td></tr>
+
      <tr><td>Credentials</td><td></td></tr>
      <tr><td>TTL</td><td>80000000</td></tr>
      </table>
