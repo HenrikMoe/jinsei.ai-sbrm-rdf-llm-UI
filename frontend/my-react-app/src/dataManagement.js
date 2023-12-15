@@ -377,7 +377,7 @@ assetRollUpReportDataExample14: [
   changeToolTipItems: ()=>{},
 
   //pipeline
-  pipelineProcesses: ['XBRL Transformation', 'XBRL Structure Instance Verification', 'Bundled XBRL Instance Write'],
+  pipelineProcesses: ['HyperCube 1', 'HyperCube 2', 'HyperCube 3'],
 
 
   //canvases

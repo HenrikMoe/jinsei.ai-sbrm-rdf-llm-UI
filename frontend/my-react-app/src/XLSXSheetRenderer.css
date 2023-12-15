@@ -63,17 +63,29 @@
 .processTablesWrapper2{
   display: flex;
   margin-left: 100px;
-  margin-top: 0px;
+  margin-top: 50px;
   transform: scale(0.8); /* Zoom out by 67% */
 }
 
 
 .processTablesWrapper3{
   display: flex;
-  margin-top: 80px;
+  margin-top: 0px;
+
+  padding-bottom: 10px;
   margin-left: 100px;
   transform: scale(0.8); /* Zoom out by 67% */
 }
+
+.processTablesWrapper5{
+  display: flex;
+  margin-top: 0px;
+
+  padding-bottom: 10px;
+  margin-left: 0px;
+  transform: scale(0.8); /* Zoom out by 67% */
+}
+
 
 
 .processTablesWrapper4{
@@ -97,12 +109,13 @@
   background-color: #F8FAFC;
   border-collapse: separate;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
 
   border-radius: 10px !important;
 }
 
 .xlsx-table2:hover {
-  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
+  box-shadow: 15px 15px 0 #003366; /* Add a shadow to the right and bottom */
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 
 }

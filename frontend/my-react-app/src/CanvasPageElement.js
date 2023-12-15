@@ -9,7 +9,7 @@ const PrototypeSideMenu = ({ handlePipelineInstanceSelection, sheetTitles, onShe
 
  return (
 
-     <div className="elementTitle10">Maps
+     <div className="elementTitle10">Maps:
 
      <div className='ontologyheader'>
      <div className='notes'>Ontology Upoad </div>

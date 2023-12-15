@@ -74,16 +74,78 @@
 }
 
 .elementTitle18{
-  margin-left: 1400px;
+  margin-left: 1500px;
   font-size: 22px;
   color: white;
   margin-top: -70px;
 }
 
 
+.processHeaderwrap{
+  margin-left: 200px;
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.notes4{
+  color: black;
+  margin-left: 10px;
+  background-color: #ffffff;
+  transition: background-color 0.4s ease;
+  padding: 5px;
+  border-radius: 5px;
+
+}
+
+.notes5{
+  color: white;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+  padding: 5px;
+  border-radius: 5px;
+
+}
+
+.processButtonWrap{
+  display: flex;
+  margin-left: 5px;
+  padding: 5px;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.processButton{
+  font-size: 19px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  color: black;
+  margin-left: 2px;
+  background-color: #ffffff;
+  transition: background-color 0.4s ease;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 #003366;
+
+}
+
+.processButton:hover{
+  color: white;
+  background-color: #556B2F; /* Green color */
+  transition: background-color 0.4s ease;
+}
+
+.notes4:hover{
+  color: white;
+  margin-left: 10px;
+  background-color: #556B2F; /* Green color */
+  transition: background-color 0.4s ease;
+
+}
+
+
 .elementTitle11{
   font-size: 20px;
-  margin-top: 65px;
+  margin-top:15px;
   margin-bottom: -50px;
   margin-left: -100px;
 }
