@@ -4,6 +4,8 @@ import './PrototypeHeader.css';
 import image from './favicon.png';
 import { useDarkMode } from './DarkModeContext';
 import Popup from './Popup';
+import { Link } from 'react-router-dom';
+
 import Upload from './Upload';
 import Delete from './Delete'
 import Project from './Project'
@@ -12,7 +14,7 @@ import Pipeline from './Pipeline'
 import Files from './Files'
 import Projects from './Projects'
 import Model from './Model'
-import Modal from './Modal'
+import ExportModal from './ExportModal'
 import ProcessModal from './ProcessModal'
 //<Project onFileUpload={onFileUpload}/>
 // <Upload onFileUpload={onFileUpload}/>
@@ -63,8 +65,9 @@ const handleExportTrue =()=>{
   return (
 
     <div className={`prototype-header ${isDarkMode ? 'dark-mode' : ''}`}>
-      <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} to="/" src={image} alt="My Image" />
-
+    <Link to="/" >
+    <img className={`header-image ${isDarkMode ? 'dark-mode' : ''}`} src={image} alt="My Image" />
+  </Link>
       <div className='button-wrap2'>
         <div className='container'>
          <Projects /></div>
@@ -87,7 +90,7 @@ const handleExportTrue =()=>{
       </div>
 
       <div className='titlez'>Luciano - git:main | version 0.325</div>
-      {exportStatus ? <Modal setExportFalse={setExportFalse} exportStatus={exportStatus}/> : <div></div>}
+      {exportStatus ? <ExportModal setExportFalse={setExportFalse} exportStatus={exportStatus}/> : <div></div>}
 
     </div>
   );

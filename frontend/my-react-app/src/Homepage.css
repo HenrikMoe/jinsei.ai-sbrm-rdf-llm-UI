@@ -161,6 +161,7 @@
 
   margin: 20px auto; /* Center the button horizontally */
   margin-top: 100px;
+  margin-bottom: 100px;
   cursor: pointer;
 }
 
