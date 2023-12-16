@@ -224,46 +224,61 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Standards based business reporting processes.')}
+  {t('Standards based business reporting and analysis processes.')}
+</div>
+
+  </div>
+
+
+<div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
+  {t('Jinsei.ai-Luciano prototypes hundreds of intuitive experiences for professionals managing financial information. ')}
+</div>
+
+<div className="timelinePosition">
+  <iframe
+    src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1X7czOi6_A1kLPb24lBL4zvj6n8RFiDaG-QrPFtSyJy0&font=Default&lang=en&initial_zoom=.5&height=600"
+    height="500"
+    webkitallowfullscreen
+    mozallowfullscreen
+    allowfullscreen
+    frameBorder="0"
+  ></iframe>
 </div>
 
 
-<div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Jinsei-Luciano provides an intuitive interface for professionals managing financial information services. ')}
-</div>
 
-<div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Experience seamless, multi-formatted disclosure, mapping, and service process management leveraging Jinsei.ai’s standards based financial report and ontology model suites.')}
-</div>
-     </div>
-
-
-
-      <button onClick={handlePrototypeClick} className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         [Demo] Luciano
-      </button>
-
-        <div >
-          {youtubeLink && (
-            <iframe
-              width="460"
-              className="iframe-container2"
-              height="215"
-              src="https://www.youtube.com/embed/ykjsjG2S2_g?si=IVe4zAXhYM1BQHQM"
-              title="YouTube Video"
-              frameBorder="0"
-              allowFullScreen
-            ></iframe>
-          )}
-        </div>
+    <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
+      {t('Leverage multiple standards for financial disclosures, business ontology mapping and shock tests.')}
+    </div>
 
 
       <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
         {t('Product model standards leveraged from Object Management Group (OMG), xbrl US, ACTUS, FIBO, LEI and more.')}
       </div>
-      <button onClick={handleTimelineClick} className={`timeline-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
-        Corp Timeline
-      </button>
+
+
+      <div>
+        {youtubeLink && (
+          <iframe
+            width="460"
+            className="iframe-container2"
+            height="215"
+            src="https://www.youtube.com/embed/ykjsjG2S2_g?si=IVe4zAXhYM1BQHQM"
+            title="YouTube Video"
+            frameBorder="0"
+            allowFullScreen
+          ></iframe>
+        )}
+      </div>
+
+
+       <button onClick={handlePrototypeClick} className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
+          [Demo] Luciano
+       </button>
+
+
+
+
 
     </div>
   );

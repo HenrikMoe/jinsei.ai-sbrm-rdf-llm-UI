@@ -14,7 +14,7 @@ const Timeline = () => {
         <Link to="/prototype" className="dark-button">
           Luciano
         </Link>
-          <a className="dark-button">
+          <a className="dark-button2">
             Contact: henrik@jinsei.ai
           </a>
 
@@ -35,7 +35,7 @@ const Timeline = () => {
             target="_blank"
             className="dark-button"
           >
-            Specs
+            Additional Product Spec Information
           </a>
         </div>
       </div>
