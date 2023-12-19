@@ -94,3 +94,12 @@
   background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
   padding: 20px; /* Add padding for better visibility */
 }
+
+
+@media (max-width: 767px) {
+  .overlayContainer {
+    margin-top: -400px;
+    
+
+  }
+}
