@@ -145,6 +145,8 @@ function Homepage() {
 
         const IMAGES = [
         'https://images.squarespace-cdn.com/content/v1/5c77350965a707ed1710a1bc/1592330659753-70M66LGEPXFTQ8S716MX/Generative+Art+by+Mark+Stock+-+Gyre+35700.jpg',
+        'https://images.squarespace-cdn.com/content/v1/5c77350965a707ed1710a1bc/1592330659753-70M66LGEPXFTQ8S716MX/Generative+Art+by+Mark+Stock+-+Gyre+35700.jpg',
+
       ]
 
 
@@ -224,14 +226,14 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Standards based business reporting and analysis processes.')}
+  {t('Standards based financial business reporting processes.')}
 </div>
 
   </div>
 
 
 <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Jinsei.ai-Luciano prototypes hundreds of intuitive experiences for professionals managing financial information. ')}
+  {t('Jinsei.ai-Luciano prototypes hundreds of experiences for managing financial information. ')}
 </div>
 
 <div className="timelinePosition">
