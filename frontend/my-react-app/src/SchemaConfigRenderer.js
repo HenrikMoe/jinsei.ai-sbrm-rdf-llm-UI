@@ -466,7 +466,10 @@ console.log(tableData)
 
 if(tableData){
   if(tableData.length < 1){
-    addRow()
+    if(header){
+      addRow()
+
+    }
   }
 }
 //model passed objs ; handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}
