@@ -9,7 +9,7 @@ const About = () => {
       Jinsei Corporation (Jinsei.ai) develops products centered around empowering standardized financial information models across multiple business domains.
       </div>
       <div className='aboutJinsei'>
-      Intuitive interfaces and APIs across Jinsei Corp's product suite enable businesses to create and manage standards based accounting reports, machine readable plus logic verification report processes, as well as business ontology visualizations and analytics.
+      Interfaces and APIs across Jinsei Corp's product suite enable businesses to create and manage standards based accounting reports, logical verification report processes, business ontology visualizations and analytics.
       </div>
       <div className='aboutJinsei'>
       Disclsoure models from US GAAP, IFRS, SEC's XBRL, and SBRM are available in Jinsei.ai's Luciano.
@@ -19,7 +19,7 @@ const About = () => {
       </div>
       <div className='aboutJinsei'>
       Document upload LLM's and GPT Bot assisted contextual inforamtion is available throughout every process in Jinsei Corp's products.  </div>
-      <div className='aboutJinsei'>
+      <div className='aboutJinsei2'>
       Contact Henrik Moe at henrik@jinsei.ai.
       </div>
 

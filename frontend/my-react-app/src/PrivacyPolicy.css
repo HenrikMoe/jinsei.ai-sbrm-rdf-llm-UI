@@ -1,11 +1,11 @@
 /* PrivacyPolicy.css */
 .center-div {
-  text-align: center;
+  text-align: left;
   margin-top: 100px;
   margin-bottom: 200px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 
 }
 

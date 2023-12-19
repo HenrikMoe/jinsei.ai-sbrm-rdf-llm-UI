@@ -105,15 +105,15 @@ const Header = ({ currentRoute, userInfo }) => {
           ✕
         </span>
         {sourceButtons.map((button) => (
-          <a
-            href={button.url}
-            onClick={closeMenu}
-            className="button"
-            target={button.label === 'About' || button.label === 'Timeline' ? '' : '_blank'}
-            key={button.label}
-          >
-            {button.label}
-          </a>
+          <Link
+    to={button.url}
+    onClick={closeMenu}
+    className="button"
+    target={button.label === 'About' || button.label === 'Timeline' ? '' : '_blank'}
+    key={button.label}
+  >
+    {button.label}
+  </Link>
         ))}
         <button className="button" onClick={toggleDarkMode}>
          {isDarkMode ? 'Light' : 'Dark'}
