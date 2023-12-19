@@ -226,7 +226,7 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Standards based financial business reporting processes.')}
+  {t('Standards based financial reporting and analysis processes.')}
 </div>
 
   </div>
