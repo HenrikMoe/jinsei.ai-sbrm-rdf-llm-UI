@@ -386,6 +386,10 @@ console.log('hasidfasdfssss')
     listLoginInfo(info)
   };
 
+  const [documentationSelected, setDocumentationSelected] = useState(null)
+  const [marketPlaceSelected, setMarketPlaceSelected] = useState(null)
+
+
   const handleTabSelection= (selection) =>{
     if(selection === 'Structure'){
       setStructureInstanceSelected(true)
@@ -393,6 +397,8 @@ console.log('hasidfasdfssss')
       setPipelineSheetSelected(false)
       setSchemaConfigSelected(false)
       setAiSummarySheetSelected(false)
+      setMarketPlaceSelected(false)
+      setDocumentationSelected(false)
     }
     else if(selection === 'Canvas'){
       setCanvasSheetSelected(true)
@@ -400,6 +406,8 @@ console.log('hasidfasdfssss')
       setSchemaConfigSelected(false)
       setStructureInstanceSelected(false)
       setAiSummarySheetSelected(false)
+      setMarketPlaceSelected(false)
+      setDocumentationSelected(false)
     }
     else if(selection === 'Schema'){
       setSchemaConfigSelected(true)
@@ -407,6 +415,8 @@ console.log('hasidfasdfssss')
       setPipelineSheetSelected(false)
       setStructureInstanceSelected(false)
       setAiSummarySheetSelected(false)
+      setMarketPlaceSelected(false)
+      setDocumentationSelected(false)
     }
     else if(selection === 'Pipeline'){
       setPipelineSheetSelected(true)
@@ -414,6 +424,8 @@ console.log('hasidfasdfssss')
       setSchemaConfigSelected(false)
       setStructureInstanceSelected(false)
       setAiSummarySheetSelected(false)
+      setMarketPlaceSelected(false)
+      setDocumentationSelected(false)
     }
     else if(selection === 'AI'){
       setPipelineSheetSelected(false)
@@ -421,6 +433,28 @@ console.log('hasidfasdfssss')
       setSchemaConfigSelected(false)
       setStructureInstanceSelected(false)
       setAiSummarySheetSelected(true)
+      setMarketPlaceSelected(false)
+      setDocumentationSelected(false)
+    }
+    else if(selection === 'Documentation'){
+      setPipelineSheetSelected(false)
+      setCanvasSheetSelected(false)
+      setSchemaConfigSelected(false)
+      setStructureInstanceSelected(false)
+      setAiSummarySheetSelected(false)
+      setDocumentationSelected(true)
+      setMarketPlaceSelected(false)
+
+    }
+    else if(selection === 'MarketPlace'){
+      setPipelineSheetSelected(false)
+      setCanvasSheetSelected(false)
+      setSchemaConfigSelected(false)
+      setStructureInstanceSelected(false)
+      setAiSummarySheetSelected(false)
+      setMarketPlaceSelected(true)
+      setDocumentationSelected(false)
+
     }
   }
 

@@ -130,14 +130,14 @@ useEffect(() => {
    </div>
    </div>
    <div
-     className={`dropdown-button8 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
-     onClick={() => handleTabClick('Canvas')}
+     className={`dropdown-button8 ${tabClicked === 'MarketPlace' ? 'selected-tab' : ''}`}
+     onClick={() => handleTabClick('MarketPlace')}
    >
-     Publish
+     MarketPlace
    </div>
    <div
-     className={`dropdown-button2 ${tabClicked === 'Canvas' ? 'selected-tab' : ''}`}
-     onClick={() => handleTabClick('Canvas')}
+     className={`dropdown-button2 ${tabClicked === 'Documentation' ? 'selected-tab' : ''}`}
+     onClick={() => handleTabClick('Documentation')}
    >
      Documentation
    </div>
