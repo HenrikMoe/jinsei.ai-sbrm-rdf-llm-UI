@@ -37,7 +37,7 @@
   max-height: 450px;
   overflow: auto;
   margin-top: 50px;
-  margin-left: 0px;
+  margin-left: -15px;
   border-radius: 10px;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 

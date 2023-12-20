@@ -26,9 +26,9 @@ const PrototypeSideMenu = ({ summaryLogSheet, handle, sheetTitles, onSheetSelect
 
  return (
 
-     <div className="elementTitle19">State Summary
+     <div>
 
-     {summaryLogSheet ? <div className='balance-sheet3'>
+     {summaryLogSheet ? <div className="elementTitle19">Notifications<div className='balance-sheet3'>
       <table className='xlsx-table6'>
       <tr><th><td>1</td><td>test</td><td>test</td><td>test</td><td>test</td><td>test</td><td><div className='table-button2'>Test</div></td></th></tr>
       <tr><th><td>2</td><td>test</td><td>test</td><td>test</td><td>test</td><td>test</td><td><div className='table-button2'>Test</div></td></th></tr>
@@ -37,8 +37,8 @@ const PrototypeSideMenu = ({ summaryLogSheet, handle, sheetTitles, onSheetSelect
       <tr><th><td>5</td><td>test</td><td>test</td><td>test</td><td>test</td><td>test</td><td><div className='table-button2'>Test</div></td></th></tr>
       </table>
 
-     </div>:
-
+     </div></div>:
+<div className="elementTitle19">State Summary
      <div className='stateSummaryWrap'>
      <div className='balance-sheet2'>
         <div className="elementTitle9">Co-pilot Q & A</div>
@@ -135,7 +135,7 @@ const PrototypeSideMenu = ({ summaryLogSheet, handle, sheetTitles, onSheetSelect
 
        </div>
        </div>
-       </div>}
+       </div> </div>}
 
 
        </div>
