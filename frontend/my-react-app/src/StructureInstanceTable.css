@@ -74,11 +74,11 @@
   padding: 20px;
   width: 100%;
 
-  max-width: 800px;
+  max-width: 1050px;
   max-height: 500px;
   overflow: auto;
   margin-top: 50px;
-  margin-left: 400px;
+  margin-left: 410px;
   border-radius: 10px;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
 
@@ -98,6 +98,26 @@
   display: flex;
 }
 
+.status-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 200px; /* Set the maximum width to 100px */
+  border-right: 1px solid black; /* Add a right border */
+  padding: 5px;
+
+}
+
+.elementTitle20 {
+  font-size: 16px;
+  color: black;
+  max-width: 200px; /* Set the maximum width to 100px */
+  padding: 5px;
+  margin: 25px 0 10px;
+  word-wrap: break-word; /* Allow the text to wrap within the width */
+}
+
 
 
 /* CSS for the element title */
@@ -110,10 +130,13 @@
 .elementTitle19{
   font-size: 20px;
   color: white;
+
   margin-top: 25px;
   margin-bottom: 10px;
   margin-left: 100px;
 }
+
+
 .elementTitle5{
   font-size: 22px;
   color: white;
@@ -335,6 +358,23 @@
 
 /* CSS for the "N/A" button */
 .table-button.table-button-na {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.table-button2 {
+  background-color: #0074cc;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  max-height: 50px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* CSS for the "N/A" button */
+.table-button2.table-button2-na {
   background-color: #ccc;
   cursor: not-allowed;
 }

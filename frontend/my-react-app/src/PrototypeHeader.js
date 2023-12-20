@@ -89,7 +89,7 @@ const handleExportTrue =()=>{
 
       </div>
 
-      <div className='titlez'>Luciano - git:main | version 0.325</div>
+      <div className='titlez'>Luciano - git:main | version 0.339</div>
       {exportStatus ? <ExportModal setExportFalse={setExportFalse} exportStatus={exportStatus}/> : <div></div>}
 
     </div>

@@ -66,8 +66,73 @@ const PrototypeSideMenu = ({ summaryLogSheet, handle, sheetTitles, onSheetSelect
        </div>
        <div className='balance-sheet4'>
        <div className='element-status-wrap'>
+
+       <div className='status-element'>
+       <div className='elementTitle20'>TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest</div>
        <img className='statusImage' src={`${process.env.PUBLIC_URL}/notWorkingStatus.png`} />
+       <div className='elementTitle20'>Test</div>
+       <div className='elementTitle20'>Test</div>
+
+       </div>
+
+       <div className='status-element'>
+       <div className='elementTitle20'>test</div>
+
        <img className='statusImage' src={`${process.env.PUBLIC_URL}/workingStatus1.png`} />
+       <div className='elementTitle20'>Test</div>
+       <div className='elementTitle20'>Test</div>
+       <div className='table-button2'>Test</div>
+      </div>
+      <div className='status-element'>
+      <div className='elementTitle20'>TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest</div>
+      <img className='statusImage' src={`${process.env.PUBLIC_URL}/notWorkingStatus.png`} />
+      <div className='elementTitle20'>Test</div>
+      <div className='elementTitle20'>Test</div>
+
+      </div>
+
+      <div className='status-element'>
+      <div className='elementTitle20'>test</div>
+
+      <img className='statusImage' src={`${process.env.PUBLIC_URL}/workingStatus1.png`} />
+      <div className='elementTitle20'>Test</div>
+      <div className='elementTitle20'>Test</div>
+      <div className='table-button2'>Test</div>
+     </div>
+     <div className='status-element'>
+     <div className='elementTitle20'>TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest</div>
+     <img className='statusImage' src={`${process.env.PUBLIC_URL}/notWorkingStatus.png`} />
+     <div className='elementTitle20'>Test</div>
+     <div className='elementTitle20'>Test</div>
+
+     </div>
+
+     <div className='status-element'>
+     <div className='elementTitle20'>test</div>
+
+     <img className='statusImage' src={`${process.env.PUBLIC_URL}/workingStatus1.png`} />
+     <div className='elementTitle20'>Test</div>
+     <div className='elementTitle20'>Test</div>
+     <div className='table-button2'>Test</div>
+    </div>
+
+    <div className='status-element'>
+    <div className='elementTitle20'>TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest</div>
+    <img className='statusImage' src={`${process.env.PUBLIC_URL}/notWorkingStatus.png`} />
+    <div className='elementTitle20'>Test</div>
+    <div className='elementTitle20'>Test</div>
+
+    </div>
+
+    <div className='status-element'>
+    <div className='elementTitle20'>test</div>
+
+    <img className='statusImage' src={`${process.env.PUBLIC_URL}/workingStatus1.png`} />
+    <div className='elementTitle20'>Test</div>
+    <div className='elementTitle20'>Test</div>
+    <div className='table-button2'>Test</div>
+   </div>
+
        </div>
        </div>
        </div>}
