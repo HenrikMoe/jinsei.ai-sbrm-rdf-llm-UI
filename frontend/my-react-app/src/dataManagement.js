@@ -384,7 +384,7 @@ assetRollUpReportDataExample14: [
   canvases: ['Complete Canvas', 'Instances', 'Schemes + Instances', 'Pipelines + Schemes + Instances'],
 
 
-  ai: ['Co-Pilot Q & A', 'Summary', 'Notifications'],
+  ai: ['State Summary', 'Notification Log'],
 
   //deprecttaed?
   deployedRenderings: null,

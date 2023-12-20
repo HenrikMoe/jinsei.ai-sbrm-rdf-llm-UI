@@ -6,7 +6,7 @@ import ChatGBT from './ChatGBT'
 import { gpt35turbo, gpt35turboTest2d } from './frontendApi'; // Import the frontend API
 
 
-const PrototypeSideMenu = ({ handle, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet, schemaConfigSelected }) => {
+const PrototypeSideMenu = ({ summaryLogSheet, handle, sheetTitles, onSheetSelect, sheetData, xlsxTitle, dataStore, handleSelectedSheet, schemaConfigSelected }) => {
 
   // <DeploymentTable />
 
@@ -28,7 +28,7 @@ const PrototypeSideMenu = ({ handle, sheetTitles, onSheetSelect, sheetData, xlsx
 
      <div className="elementTitle19">AI Q & A
 
-     <div className='balance-sheet2'>
+     {summaryLogSheet ? <div></div>:<div className='balance-sheet2'>
 
         <div className="elementTitle9">Co-pilot Q & A</div>
         <div className="elementTitle9">Current LLM: PlaceHolder </div>
@@ -52,7 +52,9 @@ const PrototypeSideMenu = ({ handle, sheetTitles, onSheetSelect, sheetData, xlsx
         </form>
 
         <ChatGBT />
-       </div>
+       </div>}
+
+
        </div>
    );
 };

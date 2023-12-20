@@ -366,11 +366,21 @@ console.log('hasidfasdfssss')
   }
 
   const [aiSummarySheetSelected, setAiSummarySheetSelected] = useState(null)
+  const [summaryLogSheet, setSummaryLogSheet] = useState(null)
+
 
 
   const handleAISummarySheetSelection = (pipelineTitle) => {
   //  setStructureInstanceSelected(true)
-    setAiSummarySheetSelected(true)
+    if(pipelineTitle === 'State Summary'){
+      setAiSummarySheetSelected(true)
+      setSummaryLogSheet(false)
+
+    }else{
+      setSummaryLogSheet(true)
+      //setAiSummarySheetSelected(false)
+
+    }
     console.log(pipelineTitle)
   //  setSchemaConfigSelected(false)
 
@@ -483,7 +493,7 @@ console.log('hasidfasdfssss')
           {canvasSheetSelected ? <CanvasSideMenu handleCanvasSheetSelection={handleCanvasSheetSelection} dataStore={dataStore}/>: <div className='fillerClass'></div>}
           {canvasSheetSelected ? <CanvasPageElement />: <div className='fillerClass'></div>}
           {aiSummarySheetSelected ? <AISummarySideMenu handleAISummarySheetSelection={handleAISummarySheetSelection} dataStore={dataStore}/>: <div className='fillerClass'></div>}
-          {aiSummarySheetSelected ? <AISummary />: <div className='fillerClass'></div>}
+          {aiSummarySheetSelected ? <AISummary summaryLogSheet={summaryLogSheet}/>: <div className='fillerClass'></div>}
         </div>
 
       ) : (
