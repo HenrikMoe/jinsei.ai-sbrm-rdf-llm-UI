@@ -29,6 +29,7 @@ const deleteFile = () =>{
   // dataStore.clearStructure()
   console.log('delelting')
   dataStore.changeOverLaidModelDefault()
+  dataStore.overlaidModelName = null
   handleClearTrue()
 }
 

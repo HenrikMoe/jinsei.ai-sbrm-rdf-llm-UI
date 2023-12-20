@@ -102,8 +102,8 @@ const Model = ({  handleSheetSelect, handleOverlayChange, handleClearFalse, clea
     <div className={`popup-container ${isDarkMode ? 'dark-mode' : ''}`}>
       <div ref={dropdownRef} className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
         <button className="dropdown-button4" onClick={toggleDropdown}>
-        {selectedModel ? (
-          <div>Overlaid: {selectedModel} &or;</div>
+        {dataStore.overlaidModelName ? (
+          <div>Overlaid: {dataStore.overlaidModelName} &or;</div>
         ) : (
           <div>Overlay Reporting Schemes &or;</div>
         )}
