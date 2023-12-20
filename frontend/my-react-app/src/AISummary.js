@@ -65,7 +65,10 @@ const PrototypeSideMenu = ({ summaryLogSheet, handle, sheetTitles, onSheetSelect
         <ChatGBT />
        </div>
        <div className='balance-sheet4'>
-
+       <div className='element-status-wrap'>
+       <img className='statusImage' src={`${process.env.PUBLIC_URL}/notWorkingStatus.png`} />
+       <img className='statusImage' src={`${process.env.PUBLIC_URL}/workingStatus1.png`} />
+       </div>
        </div>
        </div>}
 
