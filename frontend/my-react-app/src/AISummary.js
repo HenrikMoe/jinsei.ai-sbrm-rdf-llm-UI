@@ -30,11 +30,11 @@ const PrototypeSideMenu = ({ summaryLogSheet, handle, sheetTitles, onSheetSelect
 
      {summaryLogSheet ? <div className='balance-sheet3'>
       <table className='xlsx-table6'>
-      <tr><th><td>test</td><td>test</td><td>test</td></th></tr>
-      <tr><th><td>test</td><td>test</td><td>test</td></th></tr>
-      <tr><th><td>test</td><td>test</td><td>test</td></th></tr>
-      <tr><th><td>test</td><td>test</td><td>test</td></th></tr>
-      <tr><th><td>test</td><td>test</td><td>test</td></th></tr>
+      <tr><th><td>1</td><td>test</td><td>test</td><td>test</td><td>test</td><td>test</td><td><div className='table-button2'>Test</div></td></th></tr>
+      <tr><th><td>2</td><td>test</td><td>test</td><td>test</td><td>test</td><td>test</td><td><div className='table-button2'>Test</div></td></th></tr>
+      <tr><th><td>3</td><td>test</td><td>test</td><td>test</td><td>test</td><td>test</td><td><div className='table-button2'>Test</div></td></th></tr>
+      <tr><th><td>4</td><td>test</td><td>test</td><td>test</td><td>test</td><td>test</td><td><div className='table-button2'>Test</div></td></th></tr>
+      <tr><th><td>5</td><td>test</td><td>test</td><td>test</td><td>test</td><td>test</td><td><div className='table-button2'>Test</div></td></th></tr>
       </table>
 
      </div>:

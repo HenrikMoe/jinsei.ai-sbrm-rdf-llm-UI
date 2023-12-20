@@ -96,11 +96,14 @@ const PrototypeSideMenu = ({ handleAISummarySheetSelection, sheetTitles, onSheet
 
  return (
    <div className='pipelineInstance'>
+
      <div
        className={`pipeline-side-menu3 ${isResizing ? 'resizing' : ''} ${
          isDarkMode ? 'dark-mode' : ''
        }`}
      >
+     <div className='elementTitle21'>AI + Logic File Status</div>
+
      <div
         className="resize-handle"
         ref={resizeRef} // Reference to the resize area
