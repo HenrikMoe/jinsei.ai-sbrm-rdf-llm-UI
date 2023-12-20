@@ -26,6 +26,33 @@
 
 }
 
+.xlsx-table6 {
+  margin-top: 0px;
+  border-bottom: 2px solid #3498db; /* Border color */
+  border-right: 2px solid #3498db; /* Border color */
+  top: 0;
+  padding: 5px;
+  display: inline-block;
+  margin-left: 0px;
+  max-width: 1600px;
+  max-height: 400px;
+  margin-bottom: 00px;
+  border-radius: 10px !important;
+  overflow-x: auto;
+  background-color: #F8FAFC;
+  border-collapse: separate;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
+
+  border-radius: 10px !important;
+}
+
+.xlsx-table6:hover {
+  box-shadow: 20px 20px 0 #003366; /* Add a shadow to the right and bottom */
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+
+}
+
 .xlsx-table4 {
   margin-top: 0px;
   border-bottom: 2px solid #3498db; /* Border color */
@@ -420,6 +447,37 @@
   box-shadow: 0 0 5px #003366;
 
 }
+
+
+.xlsx-table6 th, .xlsx-table6 td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  color: black;
+  font-weight: 350;
+  text-align: left;
+}
+
+.xlsx-table6 th {
+  background-color: #f0f0f0;
+  color: black;
+  font-weight: normal;
+}
+
+.xlsx-table6 td {
+  background-color: #ffffff;
+
+}
+
+.xlsx-table6 td[contentEditable="true"]:focus {
+  outline: none;
+  border: 1px solid #007bff;
+  color: black;
+  background-color: #fff;
+  box-shadow: 0 0 5px #003366;
+
+}
+
+
 
 .table-button {
   background-color: #007bff;

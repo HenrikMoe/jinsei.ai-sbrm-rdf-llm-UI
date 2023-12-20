@@ -26,10 +26,21 @@ const PrototypeSideMenu = ({ summaryLogSheet, handle, sheetTitles, onSheetSelect
 
  return (
 
-     <div className="elementTitle19">AI Q & A
+     <div className="elementTitle19">State Summary
 
-     {summaryLogSheet ? <div></div>:<div className='balance-sheet2'>
+     {summaryLogSheet ? <div className='balance-sheet3'>
+      <table className='xlsx-table6'>
+      <tr><th><td>test</td><td>test</td><td>test</td></th></tr>
+      <tr><th><td>test</td><td>test</td><td>test</td></th></tr>
+      <tr><th><td>test</td><td>test</td><td>test</td></th></tr>
+      <tr><th><td>test</td><td>test</td><td>test</td></th></tr>
+      <tr><th><td>test</td><td>test</td><td>test</td></th></tr>
+      </table>
 
+     </div>:
+
+     <div className='stateSummaryWrap'>
+     <div className='balance-sheet2'>
         <div className="elementTitle9">Co-pilot Q & A</div>
         <div className="elementTitle9">Current LLM: PlaceHolder </div>
         <form className="chat-form" onSubmit={handleSubmit}>
@@ -52,6 +63,10 @@ const PrototypeSideMenu = ({ summaryLogSheet, handle, sheetTitles, onSheetSelect
         </form>
 
         <ChatGBT />
+       </div>
+       <div className='balance-sheet4'>
+
+       </div>
        </div>}
 
 
