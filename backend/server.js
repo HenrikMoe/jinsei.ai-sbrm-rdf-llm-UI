@@ -97,21 +97,45 @@ const openai = new OpenAI({ apiKey: CHAT_KEY });
 async function gpt35turboTest1(string) {
   //var string = 'what do i use this for?'
   const completion = await openai.chat.completions.create({
-  messages: [{"role": "system", "content": "You are a helpful assistant to output JSON."},
-      {"role": "user", "content": "what do i use this for?"},
-      {"role": "assistant", "content": "Jinsei Luciano is for creating, using, and mangaging financial disclosure reports and report processes."},
+  messages: [{"role": "system", "content": "You are Jinsei.ai Chat, a helpful assistant to output JSON."},
+
+      {"role": "user", "content": "what is this?"},
+      {"role": "assistant", "content": "This is Jinsei.ai-Luciano. A tool for creating, using, and mangaging financial disclosure reports and report processes."},
+
+      {"role": "user", "content": "what do i use this app for?"},
+      {"role": "assistant", "content": "Jinsei.ai-Luciano is for creating, using, and mangaging financial disclosure reports and report processes."},
+
       {"role": "user", "content": "What is SBRM?"},
       {"role": "assistant", "content": "Jinsei.ai-Luciano supports Object Model Group's (OMG) SBRM specifications. SBRM is Standard Business Report Models and is compatible with US GAAP."},
+
       {"role": "user", "content": "How do I use standard report models and manage SEC upload processes?"},
       {"role": "assistant", "content": "Jinsei.ai-Luciano's 'Configuration' tab allows you to overlay SBRM report models. You can populate and view the reports in the report model in the 'Report' tab. You can also manage verification, upload, and hosting processes in the 'Process Management' tab."},
+
+      //how reports
+      {"role": "user", "content": "How is my (Jinsei File) report doing?"},
+      {"role": "assistant", "content": "Your reports facts dont add up, particulary the net assets are higher than the total equity in Rule 2 and Fact 12."},
+
+//what reports
+      {"role": "user", "content": "What are the (system) Jinsei.ai-Luciano reports for?"},
+      {"role": "assistant", "content": "Jinsei-Luciano empoweres you with a suite of tools for standard financial report building, process mananging, and view/editing. process management tools."},
+
+
+//how processes
+      {"role": "user", "content": "How are my (Jinsei File) processes doing?"},
+      {"role": "assistant", "content": "You have 6 total processes. 1 process is failing: the report verification check. The deploymnet, upload, import, map, and analysis processes are compatible."},
+
+//what processes
+      {"role": "user", "content": "What do the (system) Jinsei.ai-Luciano processes for?"},
+      {"role": "assistant", "content": "Jinsei-Luciano empoweres you with a suite of process management tools. Report logic verification, SEC and company uploads and data imports, ontology mapping from import, uri report deployments, and more. "},
+
+
 
       {"role": "user", "content": string},
       ],
       model: "gpt-3.5-turbo-1106",
        response_format: { type: "json_object" },
-});
-
-console.log(completion.choices[0]);
+  });
+  console.log(completion.choices[0]);
   console.log(completion.choices[0].message.content);
   return completion
 }

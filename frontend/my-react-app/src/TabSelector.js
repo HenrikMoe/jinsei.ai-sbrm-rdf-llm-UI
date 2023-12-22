@@ -96,7 +96,7 @@ useEffect(() => {
        className={`dropdown-button9 ${tabClicked === 'AI' ? 'selected-tab' : ''}`}
        onClick={() => handleTabClick('AI')}
      >
-       State Summary
+       AI State Summary
      </div>
      <div className="button-group">
 
