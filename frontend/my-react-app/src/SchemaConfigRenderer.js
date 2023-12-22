@@ -487,13 +487,19 @@ if(tableData){
       {sheetTitle[0] === 'Facts' ? (
           <div className='schemaRibbon'>
           <div className="elementTitle2">Configure Schema </div>
+          {isModal ? <Modal dataStore={dataStore} handleSchemaConfigSelection2={handleSchemaConfigSelection2} setModalOff={setModalOff} isModal={isModal}/> : <div></div>}
+
+          {importStatus ? <ImportModal setImportFalse={setImportFalse} importStatus={importStatus}/> : <div></div>}
 
           <div className='button-wrapAY'>
-          <Model  handleFlipContentTrue={handleFlipContentTrue} flipContent={flipContent} setFlipContentFalse={setFlipContentFalse} />
-          <Popup />
-          <Delete />
-          <Upload />
-          <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
+          <Model handleSchemaConfigSelection={handleSchemaConfigSelection} handleSheetSelect={handleSheetSelect} handleFlipContentTrue={handleFlipContentTrue} flipContent={flipContent} setFlipContentFalse={setFlipContentFalse} setIsModal={setIsModalOn} handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
+          <button className="ribbon-button" onClick={()=> handleImportTrue()}>Import</button>
+          <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
+          <button className="ribbon-button" onClick={() => handleIsPublish(true)}>Publish Overlay</button>
+          <button className="ribbon-button" onClick={() => handleTabClick('Structure')}>Report</button>
+
+          {isPublish ? <PublishModal handleSchemaConfigSelection={handleSchemaConfigSelection} setPublishOff={setPublishOff} isPublish={isPublish}/>: <div></div>}
+
         </div>
 
           <div className='subRibbon' >
@@ -590,13 +596,19 @@ if(tableData){
         ) : sheetTitle[0] === 'Rules' ? (
           <div className='schemaRibbon'>
           <div className="elementTitle2">Configure Schema </div>
+          {isModal ? <Modal dataStore={dataStore} handleSchemaConfigSelection2={handleSchemaConfigSelection2} setModalOff={setModalOff} isModal={isModal}/> : <div></div>}
+
+          {importStatus ? <ImportModal setImportFalse={setImportFalse} importStatus={importStatus}/> : <div></div>}
+
 
           <div className='button-wrapAY'>
-          <Model  handleFlipContentTrue={handleFlipContentTrue} flipContent={flipContent} setFlipContentFalse={setFlipContentFalse} />
-          <Popup />
-          <Delete />
-          <Upload />
-          <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
+          <Model handleSchemaConfigSelection={handleSchemaConfigSelection} handleSheetSelect={handleSheetSelect} handleFlipContentTrue={handleFlipContentTrue} flipContent={flipContent} setFlipContentFalse={setFlipContentFalse} setIsModal={setIsModalOn} handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
+          <button className="ribbon-button" onClick={()=> handleImportTrue()}>Import</button>
+          <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
+          <button className="ribbon-button" onClick={() => handleIsPublish(true)}>Publish Overlay</button>
+          <button className="ribbon-button" onClick={() => handleTabClick('Structure')}>Report</button>
+
+          {isPublish ? <PublishModal handleSchemaConfigSelection={handleSchemaConfigSelection} setPublishOff={setPublishOff} isPublish={isPublish}/>: <div></div>}
 
         </div>
 
@@ -695,12 +707,19 @@ if(tableData){
           <div className='schemaRibbon'>
           <div className="elementTitle2">Configure Schema </div>
 
+          {isModal ? <Modal dataStore={dataStore} handleSchemaConfigSelection2={handleSchemaConfigSelection2} setModalOff={setModalOff} isModal={isModal}/> : <div></div>}
+
+          {importStatus ? <ImportModal setImportFalse={setImportFalse} importStatus={importStatus}/> : <div></div>}
+
+
           <div className='button-wrapAY'>
-          <Model  handleFlipContentTrue={handleFlipContentTrue} flipContent={flipContent} setFlipContentFalse={setFlipContentFalse} />
-          <Popup />
-          <Delete />
-          <Upload />
-          <button className="ribbon-button" onClick={() => createSchemaElement()}>Publish Overlay</button>
+          <Model handleSchemaConfigSelection={handleSchemaConfigSelection} handleSheetSelect={handleSheetSelect} handleFlipContentTrue={handleFlipContentTrue} flipContent={flipContent} setFlipContentFalse={setFlipContentFalse} setIsModal={setIsModalOn} handleOverlayChange={handleOverlayChange} handleClearFalse={handleClearFalse} clear={clear} sheetTitle={sheetTitle} handleOverlaidSelection={handleOverlaidSelection} dataStore={dataStore}/>
+          <button className="ribbon-button" onClick={()=> handleImportTrue()}>Import</button>
+          <Delete  handleClearTrue={handleClearTrue} dataStore={dataStore} />
+          <button className="ribbon-button" onClick={() => handleIsPublish(true)}>Publish Overlay</button>
+          <button className="ribbon-button" onClick={() => handleTabClick('Structure')}>Report</button>
+
+          {isPublish ? <PublishModal handleSchemaConfigSelection={handleSchemaConfigSelection} setPublishOff={setPublishOff} isPublish={isPublish}/>: <div></div>}
 
         </div>
 

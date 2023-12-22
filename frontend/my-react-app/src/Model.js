@@ -50,9 +50,9 @@ const Model = ({  handleSheetSelect, handleOverlayChange, handleClearFalse, clea
     dataStore.changeOverLaidModelName(model)
     dataStore.updateOverLaidModelSheet('Terms')
 
-    console.log(dataStore.overlaidModelName)
-    console.log(dataStore.overLaidModelWorkbook)
-    console.log(dataStore.overLaidModelSheet)
+    // console.log(dataStore.overlaidModelName)
+    // console.log(dataStore.overLaidModelWorkbook)
+    // console.log(dataStore.overLaidModelSheet)
 
     console.log(sheetTitle)
     handleOverlayChange(model)
