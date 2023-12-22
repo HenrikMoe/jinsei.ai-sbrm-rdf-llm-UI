@@ -27,19 +27,21 @@ export const sendChatRequest = async (input) => {
 };
 
 
-export const gpt35turbo = async () => {
+export const gpt35turbo = async (userInput) => {
   try {
     console.log()
     const result = await axios.post(
       `${API_BASE_URL}/api/gpt35turbo`,
       {
+        userInput: userInput,
+
         headers: {
           'Content-Type': 'application/json', // Set the Content-Type header
         },
       }
     );
     console.log(result)
-    return result.data.text;
+    return result;
   } catch (error) {
     console.error(error);
     return 'An error occurred while processing your request.';

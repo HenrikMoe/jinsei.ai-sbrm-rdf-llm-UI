@@ -94,22 +94,16 @@ run().catch(console.dir);
 
 const openai = new OpenAI({ apiKey: CHAT_KEY });
 
-async function gpt35turboTest1() {
-  var string = 'what do i use this for?'
+async function gpt35turboTest1(string) {
+  //var string = 'what do i use this for?'
   const completion = await openai.chat.completions.create({
   messages: [{"role": "system", "content": "You are a helpful assistant to output JSON."},
       {"role": "user", "content": "what do i use this for?"},
       {"role": "assistant", "content": "Jinsei Luciano is for creating, using, and mangaging financial disclosure reports and report processes."},
-
-
-
-
-
-//fuck ton of model questions
-
-
-
-
+      {"role": "user", "content": "What is SBRM?"},
+      {"role": "assistant", "content": "Jinsei.ai-Luciano supports Object Model Group's (OMG) SBRM specifications. SBRM is Standard Business Report Models and is compatible with US GAAP."},
+      {"role": "user", "content": "How do I use standard report models and manage SEC upload processes?"},
+      {"role": "assistant", "content": "Jinsei.ai-Luciano's 'Configuration' tab allows you to overlay SBRM report models. You can populate and view the reports in the report model in the 'Report' tab. You can also manage verification, upload, and hosting processes in the 'Process Management' tab."},
 
       {"role": "user", "content": string},
       ],
@@ -119,7 +113,7 @@ async function gpt35turboTest1() {
 
 console.log(completion.choices[0]);
   console.log(completion.choices[0].message.content);
-
+  return completion
 }
 
 var assistant;
@@ -187,8 +181,8 @@ console.log(run)
 
 
 app.post('/api/gpt35turbo', async (req, res) => {
-    console.log('ready for training')
-    gpt35turboTest1()
+    console.log(req.body.userInput)
+    const response = await gpt35turboTest1(req.body.userInput)
     // await gpt35turboTest2a()
     // await gpt35turboTest2b()
     // await gpt35turboTest2c()
@@ -196,7 +190,7 @@ app.post('/api/gpt35turbo', async (req, res) => {
   //  runConversation().then(console.log).catch(console.error);
 
 
-    res.json({ message: 'trainign time.' });
+    res.json(response);
 });
 
 app.post('/api/gpt35turboTest2d', async (req, res) => {
