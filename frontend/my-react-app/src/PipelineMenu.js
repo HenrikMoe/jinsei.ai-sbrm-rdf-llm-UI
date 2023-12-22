@@ -107,7 +107,7 @@ const PrototypeSideMenu = ({ handlePipelineInstanceSelection, sheetTitles, onShe
         ref={resizeRef} // Reference to the resize area
       >
       </div>
-      <div className='elementTitle6'>Analysis Taxonomy</div>
+      <div className='elementTitle25'>Process Taxonomy</div>
 
        <ul>
        <div className='sidemenu-title'> </div>

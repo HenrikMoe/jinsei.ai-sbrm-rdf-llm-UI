@@ -139,8 +139,10 @@ const PrototypeSideMenu = ({ setStrucutreComponentItem, handleStructureInstanceS
         ref={resizeRef} // Reference to the resize area
       >
       </div>
+      <div className='elementTitle25'>Report Instance</div>
 
       <div className='easy'>
+
       <div className='elementTitle6'
       style={{
         color: isTree ? '#556B2F' : 'initial',

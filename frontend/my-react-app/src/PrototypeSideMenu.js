@@ -134,7 +134,7 @@ const PrototypeSideMenu = ({ overlaidModelName, sheetTitle, handleSchemaConfigSe
           className={`prototype-side-menu ${isResizing ? 'resizing' : ''} ${isDarkMode ? 'dark-mode' : ''}`}
         >
           <div className="resize-handle" ref={resizeRef}></div>
-          <div className='elementTitle'>Report Model</div>
+          <div className='elementTitle25'>Report Model</div>
           <ul>
             <div className='sidemenu-title'></div>
             {dataStore.lucaSideMenu ? dataStore.lucaSideMenu.map((title, index) => (

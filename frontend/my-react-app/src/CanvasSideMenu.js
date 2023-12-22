@@ -106,7 +106,7 @@ const PrototypeSideMenu = ({ handleCanvasSheetSelection, sheetTitles, onSheetSel
         ref={resizeRef} // Reference to the resize area
       >
       </div>
-      <div className='elementTitle6'>Operations Map</div>
+      <div className='elementTitle25'>Operations Map</div>
 
        <ul>
        <div className='sidemenu-title'> </div>
