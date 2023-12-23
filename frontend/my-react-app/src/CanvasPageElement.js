@@ -23,6 +23,12 @@ const PrototypeSideMenu = ({ handlePipelineInstanceSelection, sheetTitles, onShe
 
      <div className='notes'>Model: ACTUS </div>
      <div className='notes'> <input type="checkbox" /></div>
+
+    <div className='notes'>Model: RDF </div>
+    <div className='notes'> <input type="checkbox" /></div>
+
+
+
      <div className='elementDetailWrap'>
      <div className='notes2'>Element Details:</div>
 
@@ -38,6 +44,9 @@ const PrototypeSideMenu = ({ handlePipelineInstanceSelection, sheetTitles, onShe
      <div className='notes2'> Flow<input type="checkbox" /></div>
 
      <div className='notes3'>LEI Role: [role] </div>
+     <div className='notes2'> Flow<input type="checkbox" /></div>
+
+     <div className='notes3'>RDF Role: [role] </div>
      <div className='notes2'> Flow<input type="checkbox" /></div>
 
      </div>

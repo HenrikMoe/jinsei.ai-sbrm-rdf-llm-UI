@@ -323,6 +323,15 @@
   padding: 10 10;
 }
 
+@media (max-width: 768px) {
+  .prototype-button:hover {
+    box-shadow: 10px 10px 0 rgba(255, 255, 255, 0.2); /* Light gray shadow */
+    display: block;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions into a single property */
+    cursor: pointer;
+  }
+}
+
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .button {
