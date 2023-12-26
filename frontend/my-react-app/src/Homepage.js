@@ -250,12 +250,12 @@ function Homepage() {
 
 
     <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-      {t('Leverage multiple standards for financial disclosures, business ontology mapping and shock tests.')}
+      {t('API and GUI financial disclosure management, business ontology mapping and shock tests.')}
     </div>
 
 
       <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Product model standards leveraged from Object Management Group (OMG), xbrl US, ACTUS, FIBO, LEI and more.')}
+        {t('Partnering with groups leveraging xbrl, ACTUS, SBRM, FIBO, LEI and other leading business financial modeling standards.')}
       </div>
 
 
