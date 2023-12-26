@@ -226,14 +226,14 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Standards based financial reporting and analysis processes.')}
+  {t('Deep fintech integration with standardized financial models.')}
 </div>
 
   </div>
 
 
 <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Jinsei.ai-Luciano prototypes hundreds of experiences for managing financial information. ')}
+  {t('Innovative license bootstrapping with LLM training and threading specialization.')}
 </div>
 
 <div className="timelinePosition">
@@ -250,7 +250,7 @@ function Homepage() {
 
 
     <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-      {t('Multi-threaded ai chat and document cleaning LLMs. ')}
+      {t('Jinsei.ai-Luciano prototypes independent IP with hundreds of financial management use cases.')}
     </div>
 
 
