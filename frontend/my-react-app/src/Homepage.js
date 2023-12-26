@@ -255,7 +255,7 @@ function Homepage() {
 
 
       <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Partnering with groups interested or actively leveraging xbrl, ACTUS, SBRM, FIBO, LEI and more leading business financial modeling standards.')}
+        {t('Partnering with groups interested or actively leveraging xbrl, ACTUS, SBRM, FIBO, LEI and more leading financial modeling standards.')}
       </div>
 
 
