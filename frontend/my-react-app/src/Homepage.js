@@ -250,12 +250,12 @@ function Homepage() {
 
 
     <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-      {t('API and GUI financial disclosure management, business ontology mapping and shock tests.')}
+      {t('Multi-threaded ai chat and document cleaning LLMs. ')}
     </div>
 
 
       <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Partnering with groups leveraging xbrl, ACTUS, SBRM, FIBO, LEI and other leading business financial modeling standards.')}
+        {t('Partnering with groups interested or actively leveraging xbrl, ACTUS, SBRM, FIBO, LEI and more leading business financial modeling standards.')}
       </div>
 
 
