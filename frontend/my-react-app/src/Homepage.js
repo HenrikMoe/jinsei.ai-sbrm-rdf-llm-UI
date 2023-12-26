@@ -233,7 +233,7 @@ function Homepage() {
 
 
 <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Innovative license bootstrapping with LLM training and threading specialization.')}
+  {t('Innovative license bootstrapping with LLM threading and training specialization.')}
 </div>
 
 <div className="timelinePosition">
@@ -250,12 +250,12 @@ function Homepage() {
 
 
     <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-      {t('Jinsei.ai-Luciano prototypes independent IP with hundreds of financial management use cases.')}
+      {t('Partnering with groups interested or actively leveraging xbrl, ACTUS, SBRM, FIBO, LEI and more financial modeling standards.')}
     </div>
 
 
       <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Partnering with groups interested or actively leveraging xbrl, ACTUS, SBRM, FIBO, LEI and more leading financial modeling standards.')}
+        {t('Jinsei.ai-Luciano prototypes independent IP with hundreds of financial management use cases.')}
       </div>
 
 
