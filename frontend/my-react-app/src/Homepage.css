@@ -114,7 +114,8 @@
   .arriving-text5 {
     margin-right: 0px;
     margin-left: -5px;
-    margin-bottom: -250px;
+    margin-top: 100px;
+    margin-bottom: -50px;
 
   }
 }
@@ -124,7 +125,7 @@
   font-weight: bold;
   text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.3); /* Add text shadow for a shadow effect */
   letter-spacing: 2px; /* Adjust letter spacing as needed */
-  margin-top: 0px;
+  margin-top: 100px;
   margin-bottom: 100px;
   color: white;
 }
@@ -231,7 +232,7 @@
 
 @media (max-width: 767px) {
   .iframe-container2 {
-    margin-top: 400px;
+    margin-top: 100px;
     margin-left: -5px;
 
   }
@@ -322,6 +323,66 @@
   display: flex;
   padding: 10 10;
 }
+.iconWrap1{
+  display: flex;
+  padding-left: 0px;
+  justify-content: center;
+}
+
+.iconWrap2{
+  display: flex;
+  padding-left: 0px;
+  justify-content: center;
+}
+
+.icon1wrap{
+  padding-top: 100px;
+  margin-left: 100px;
+  width: 150px;
+}
+.icon2wrap{
+  padding-top: 100px;
+  margin-left: 00px;
+  width: 150px;
+}
+
+@media (max-width: 767px) {
+  .icon1wrap {
+    margin-right: 0px;
+    width: 80px;
+    margin-top: 50px;
+
+
+  }
+}
+
+@media (max-width: 767px) {
+  .icon2wrap {
+    margin-top: 50px;
+    margin-left: -5px;
+    width: 80px;
+
+  }
+}
+
+
+
+.firstConent{
+  background-color: darksalmon;
+  padding: 10px;
+  padding-bottom: 150px;
+}
+
+@media (max-width: 767px) {
+  .firstConent {
+    margin-top: 100px;
+    margin-right: 0px;
+    margin-bottom: 100px;
+    margin-left: -5px;
+
+  }
+}
+
 
 @media (max-width: 768px) {
   .prototype-button:hover {

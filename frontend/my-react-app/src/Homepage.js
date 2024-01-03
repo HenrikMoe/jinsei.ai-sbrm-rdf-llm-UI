@@ -231,9 +231,14 @@ function Homepage() {
 
   </div>
 
-
+<div className='firstConent'>
+<div className='iconWrap1'>
+<div><img className='icon2wrap' src={`${process.env.PUBLIC_URL}/partner.png`}/></div>
+<div><img className='icon1wrap' src={`${process.env.PUBLIC_URL}/document.png`}/></div>
+</div>
 <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Innovative license bootstrapping with LLM threading and training specialization.')}
+  {t('Innovative license bootstrapping specialized in LLM threading and training.')}
+</div>
 </div>
 
 <div className="timelinePosition">
@@ -248,14 +253,20 @@ function Homepage() {
 </div>
 
 
-
+<div className='firstConent'>
+<div className='iconWrap2'>
+<div><img className='icon2wrap' src={`${process.env.PUBLIC_URL}/manage.png`}/></div>
+<div><img className='icon1wrap' src={`${process.env.PUBLIC_URL}/connection.png`}/></div>
+</div>
     <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-      {t('Partnering with groups interested or actively leveraging xbrl, ACTUS, SBRM, FIBO, LEI and more financial modeling standards.')}
+      {t('Partnering with groups actively leveraging xbrl, ACTUS, SBRM, FIBO, LEI and more financial modeling standards.')}
     </div>
 
 
       <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
         {t('Jinsei.ai-Luciano prototypes independent IP with hundreds of financial management use cases.')}
+      </div>
+
       </div>
 
 
