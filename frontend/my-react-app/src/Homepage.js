@@ -226,7 +226,7 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Deep fintech integration with standardized financial models.')}
+  {t('Fintech integration with standardized financial models.')}
 </div>
 
   </div>
