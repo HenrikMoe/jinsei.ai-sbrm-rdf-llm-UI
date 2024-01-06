@@ -11,6 +11,8 @@ import Footer from './Footer'; // Replace with the actual path to your Footer co
 import { DarkModeProvider } from './DarkModeContext';
 import { DataStoreProvider } from './DataStore'; // Import the DataStoreProvider
 import ChatGBT from './ChatGBT';
+import QuantexaJinsei from './Jinsei-Quantexa';
+
 
 import XMLViewer from './XMLViewer';
 import XMLViewer2 from './XMLViewer2'
@@ -62,6 +64,7 @@ const AppRoutes = () => {
         <Route path="/tos" element={<TermsOfService />} /> {/* Add TermsOfService component */}
         <Route path="/timeline" element={<Timeline />} /> {/* Add TermsOfService component */}
         <Route path="/about" element={<About />} /> {/* Add TermsOfService component */}
+        <Route path="/quantexa-jinsei" element={<QuantexaJinsei />} /> {/* Add TermsOfService component */}
 
         <Route path="/cmxsd" element={<XMLViewer />} /> {/* Add TermsOfService component */}
         <Route path="/report-parts-rules-defxml" element={<XMLViewer2 />} /> {/* Add TermsOfService component */}
