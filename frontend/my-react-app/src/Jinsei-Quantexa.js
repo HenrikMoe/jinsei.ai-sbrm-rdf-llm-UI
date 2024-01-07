@@ -34,9 +34,7 @@ const About = () => {
       <a href='#Groups'>Groups</a>
       </div>
 
-      <div className='tocItem'>
-      <a href='#Projects'>Projects</a>
-      </div>
+
 
       <div className='tocItem'>
       <a href='#RiskManagement'>Risk Management</a>
@@ -54,6 +52,10 @@ const About = () => {
       <a href='#Exits'>Exits</a>
       </div>
 
+      <div className='tocItem'>
+      <a href='#Products'>Products</a>
+      </div>
+
       <h2 className='topicTitle' id='Intro'>
 Intro
       </h2>
@@ -61,9 +63,9 @@ Intro
       Vertical talk, ai specialization products, rolling implementations and products
       </div>
 
-      <div className='topicTitle' id='Groups'>
+      <h2 className='topicTitle' id='Groups'>
       Groups
-      </div>
+      </h2>
       <div className='aboutJinsei2'>
       SBRM:
       AuditChain Labs
@@ -71,9 +73,9 @@ Intro
       Oxford Semantics, DFRNT
       </div>
 
-      <div className='topicTitle' id='RiskManagement'>
+      <h2 className='topicTitle' id='RiskManagement'>
       Risk Management
-      </div>
+      </h2>
       <div className='aboutJinsei2'>
       Distribution for them, roll over shares
     Rollover equity refers to a scenario where the existing shareholders of a target company (the company being acquired) are offered the opportunity to exchange their shares for equity ownership in the acquiring company or the newly combined entity that results from the transaction
@@ -84,9 +86,9 @@ Intro
 
       </div>
 
-      <div className='topicTitle' id='Novelty'>
+      <h2 className='topicTitle' id='Novelty'>
 Novelty
-      </div>
+      </h2>
       <div className='aboutJinsei2'>
       quantexa gets a 1 year exclusivity on jinsei Ip when the product lands in the vertical
     whats auditchain’s vertical like? any? - for jason
@@ -94,9 +96,9 @@ Novelty
 
       </div>
 
-      <div className='topicTitle' id='Transactions'>
+      <h2 className='topicTitle' id='Transactions'>
 Transactions
-      </div>
+      </h2>
       <div className='aboutJinsei2'>
       Transaction scenarios for each product vertical
     Jinsei-Quantexa-Auditchain
@@ -105,9 +107,9 @@ Transactions
     Multiple product entities are available here with rolling equity
       </div>
 
-      <div className='topicTitle' id='Exits'>
+      <h2 className='topicTitle' id='Exits'>
       Exits
-      </div>
+      </h2>
       <div className='aboutJinsei2'>
       exit plan for them
 Exit by performance after 1 year from a vertical completion. Exit by distributor license via Quantexa, NAIC for next scale.
@@ -125,21 +127,44 @@ theres no risk for them
 exclsuistivty after product landings
       </div>
 
-      <div className='topicTitle' id='Products'>
+      <h2 className='topicTitle' id='Products'>
       Products
+      </h2>
+      <div className='productTitle'>
+      1 Triple Based Process Deployment
       </div>
-      <div className='aboutJinsei2'>
-      1 Process Deployment UI Management
+      <div className='productSubTitle'>
+      SpreadSheet UI Deployment
+      </div>
+      <div className='productSubTitle'>
+      Payment System Integration
+      </div>
 
-    2 FormSheet Model Population
+      <div className='productTitle'>
+    2 FormSheet RDF Model Population
+</div>
+
+<div className='productTitle'>
 
     3 FormSheet Upload To Model AI Processing
+    </div>
+
+    <div className='productTitle'>
 
     4 Logical Auditing Processes: AuditChain Paccioli Integration
+    </div>
+
+    <div className='productTitle'>
 
     5 Entity and Infliction Graph Canvas
+    </div>
+
+    <div className='productTitle'>
 
     6  Contextual Chat Assistance
+    </div>
+
+    <div className='productSubTitle'>
 
     vertical support
     Rolling implementations and products
@@ -147,9 +172,8 @@ exclsuistivty after product landings
     canvas, model library, ai docuementation, chat
     auditchain-jinsei ai modules + luca + luciano sbrm and more reporting software for quantexa vertical
     Ontology libraries from oxford semantics and dfrnt + jinsei.ai + api/ui distribution
-      </div>
 
-
+</div>
 
 
 

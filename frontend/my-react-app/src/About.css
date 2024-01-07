@@ -28,6 +28,24 @@
   display: block;
 }
 
+.productTitle{
+  color: #333; /* Off-black color #333*/
+  margin-bottom: 100px;
+  margin-right: 20px;
+  margin-left: 40px;
+  text-align: left !important; /* Align text to the left */
+  display: block;
+}
+
+.productSubTitle{
+  color: #333; /* Off-black color #333*/
+  margin-bottom: 100px;
+  margin-right: 20px;
+  margin-left: 40px;
+  text-align: left !important; /* Align text to the left */
+  display: block;
+}
+
 .tradeSecretTitle{
   color: #333; /* Off-black color #333*/
   margin-bottom: 10px;
