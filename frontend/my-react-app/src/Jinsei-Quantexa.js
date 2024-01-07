@@ -4,7 +4,7 @@ import './About.css'; // Import the CSS file
 const About = () => {
   return (
     <div className="center-div">
-      <h1 className='aboutJinsei'>Jinsei.ai Quantexa Partnership</h1>
+      <h1 className='aboutJinsei'>Quantexa-Jinsei.ai  Partnership</h1>
       <div className='aboutJinsei'>
       Author: Henrik Moe
       </div>
@@ -18,13 +18,13 @@ const About = () => {
       </div>
 
       <div className='aboutJinsei'>
-      <a href='https://www.congress.gov/bill/114th-congress/senate-bill/1890'>Trade Secrets</a>
+      <a href='https://www.congress.gov/bill/114th-congress/senate-bill/1890'>Resource</a>
 
       </div>
 
-      <div className='tocTitle'>
+      <h3 className='tocTitle'>
       Contents:
-      </div>
+      </h3>
 
       <div className='tocItem'>
       <a href='#Intro'>Intro</a>
@@ -69,8 +69,7 @@ Intro
       <div className='aboutJinsei2'>
       SBRM:
       AuditChain Labs
-      Analytics:
-      Oxford Semantics, DFRNT
+
       </div>
 
       <h2 className='topicTitle' id='RiskManagement'>
@@ -84,6 +83,9 @@ Intro
     strucutre so multiple companies can enter for different product niches like iris and oxford and
     Entity solution introduced here
 
+    ok so what does all these groups together look like? rolling partnership sandbox? auditchain with quantexa, oxford/dfrnt for maybe mapx
+i think focusing on auditchain quantexa and making it so i can leave and take it naic      rolling equity with a transaction fee towards research and implementation budget
+
       </div>
 
       <h2 className='topicTitle' id='Novelty'>
@@ -93,18 +95,25 @@ Novelty
       quantexa gets a 1 year exclusivity on jinsei Ip when the product lands in the vertical
     whats auditchain’s vertical like? any? - for jason
 
+    making sure i can take this shit over to the naic
+
 
       </div>
 
       <h2 className='topicTitle' id='Transactions'>
-Transactions
+Transaction
       </h2>
       <div className='aboutJinsei2'>
+      Two part (Triple part?) transaction where the first transactin is the acquistion of rollover equity and the second is distribution licensing upon vertical deployment per the novelty constraint
       Transaction scenarios for each product vertical
     Jinsei-Quantexa-Auditchain
-    Jinsei-Quantexa-OxfordSemantics-DFRNT
+transaction for each entrerprise client for quantexa? no but this is lisecnse transaction?
+     rolling equity
 
-    Multiple product entities are available here with rolling equity
+     Incentive from the next jinsei corp transaction with an enterprise distributor takes %25 licensing fee cut
+
+
+     rolling equity with a transaction fee towards research and implementation budget
       </div>
 
       <h2 className='topicTitle' id='Exits'>
@@ -112,7 +121,7 @@ Transactions
       </h2>
       <div className='aboutJinsei2'>
       exit plan for them
-Exit by performance after 1 year from a vertical completion. Exit by distributor license via Quantexa, NAIC for next scale.
+Exit by the next enterprise vertical integration after 1 year from a vertical completion. Exit by distributor license via Quantexa, NAIC for next scale.
 novelty and protection
 client numbers and revenue data will help articulate the levearge of jinsei.ai’s ai products and report leveraging
 risk for risk roll over shares of their company for my company
@@ -130,9 +139,9 @@ exclsuistivty after product landings
       <h2 className='topicTitle' id='Products'>
       Products
       </h2>
-      <div className='productTitle'>
+      <h3 className='productTitle'>
       1 Triple Based Process Deployment
-      </div>
+      </h3>
       <div className='productSubTitle'>
       SpreadSheet UI Deployment
       </div>
@@ -140,29 +149,29 @@ exclsuistivty after product landings
       Payment System Integration
       </div>
 
-      <div className='productTitle'>
-    2 FormSheet RDF Model Population
-</div>
+      <h3 className='productTitle'>
+    2 FormSheet To SBRM Population
+</h3>
 
-<div className='productTitle'>
+<h3 className='productTitle'>
 
     3 FormSheet Upload To Model AI Processing
-    </div>
+    </h3>
 
-    <div className='productTitle'>
+    <h3 className='productTitle'>
 
     4 Logical Auditing Processes: AuditChain Paccioli Integration
-    </div>
+    </h3>
 
-    <div className='productTitle'>
+    <h3 className='productTitle'>
 
     5 Entity and Infliction Graph Canvas
-    </div>
+    </h3>
 
-    <div className='productTitle'>
+    <h3 className='productTitle'>
 
     6  Contextual Chat Assistance
-    </div>
+    </h3>
 
     <div className='productSubTitle'>
 
@@ -174,6 +183,45 @@ exclsuistivty after product landings
     Ontology libraries from oxford semantics and dfrnt + jinsei.ai + api/ui distribution
 
 </div>
+
+    <h2 className='topicTitle' id='Appendix'>
+    Appendix A: Research and Implementation Budget
+    </h2>
+
+    <div >
+    <table className='xlsx-tablez'>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Number</th>
+        <th>DateRange</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Vertical Research</td>
+        <td>number</td>
+        <td>DateRange</td>
+
+      </tr>
+      <tr>
+        <td>Integration Development</td>
+        <td>number</td>
+        <td>DateRange</td>
+
+      </tr>
+      <tr>
+        <td>SubItem: 1</td>
+        <td>number</td>
+        <td>DateRange</td>
+
+      </tr>
+    </tbody>
+  </table>
+    </div>
+
+
 
 
 

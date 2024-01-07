@@ -21,7 +21,7 @@
 
 .aboutJinsei2 {
   color: #333; /* Off-black color #333*/
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   margin-right: 20px;
   margin-left: 40px;
   text-align: left !important; /* Align text to the left */
@@ -30,7 +30,7 @@
 
 .productTitle{
   color: #333; /* Off-black color #333*/
-  margin-bottom: 100px;
+  margin-bottom: 10px;
   margin-right: 20px;
   margin-left: 40px;
   text-align: left !important; /* Align text to the left */
@@ -39,9 +39,9 @@
 
 .productSubTitle{
   color: #333; /* Off-black color #333*/
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   margin-right: 20px;
-  margin-left: 40px;
+  margin-left: 60px;
   text-align: left !important; /* Align text to the left */
   display: block;
 }
@@ -90,4 +90,61 @@
     margin-left: 20px;
 
   }
+}
+
+
+.xlsx-tablez {
+  margin-top: 30px;
+  border-bottom: 2px solid #3498db; /* Border color */
+  border-right: 2px solid #3498db; /* Border color */
+
+  top: 0;
+  padding: 5px;
+  margin-left: 120px;
+  max-width: 1500px;
+  max-height: 400px;
+  margin-bottom: 100px;
+  border-radius: 10px !important;
+  overflow-x: auto;
+  background-color: #F8FAFC;
+  border-collapse: separate;
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 5px 5px 0 #003366; /* Add a shadow to the right and bottom */
+
+  border-radius: 5px !important;
+}
+
+.xlsx-tablez:hover {
+  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+
+.xlsx-tablez th, .xlsx-tablez td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  color: black;
+  font-weight: 350;
+
+  text-align: left;
+}
+
+.xlsx-tablez th {
+  background-color: #f0f0f0;
+  color: black;
+  font-weight: normal;
+}
+
+.xlsx-tablez td {
+  background-color: #ffffff;
+
+}
+
+.xlsx-tablez td[contentEditable="true"]:focus {
+  outline: none;
+  border: 1px solid #007bff;
+  color: black;
+  background-color: #fff;
+  box-shadow: 0 0 5px #003366;
+
 }
