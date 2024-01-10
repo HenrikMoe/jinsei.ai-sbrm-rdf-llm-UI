@@ -50,11 +50,21 @@ const About = () => {
       <a href='#Liabilities'>Liabilities</a>
       </div>
       <div className='tocItem'>
-      <a href='#RiskManagement'>Risk Management</a>
+      <a href='#RiskManagement'>Risk Alignment</a>
+      </div>
+      <div className='tocItem'>
+      <a href='#Management'>Venture Management</a>
       </div>
       <div className='tocItem'>
       <a href='#Products'>Solutions</a>
       </div>
+      <div className='tocItem'>
+      <a href='#Agreement'>Agreement</a>
+      </div>
+      <div className='tocItem'>
+      <a href='#Appendix'>Appendix A: Research and Implementation Budget</a>
+      </div>
+
 
       <h2 className='topicTitle' id='Intro'>
 Intro
@@ -134,12 +144,7 @@ Intro
      iframe google sheet
 
      </div>
-     <div className="xlsxView">
 
-     <iframe className="sheetView"     style={{ width: '100%', height: '300px' }} // Set the desired height as well
- src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT7Mt7PQiFLmEeJD3NpDoHJwqj3mKPc59blDG3GsNidKujiSVNV1HIPSSBbgQhyMP2WwW0elH0HUCpr/pubhtml?widget=true&amp;headers=false"></iframe>
-
-     </div>
      <div className='aboutJinsei2'>
 
      one or two classes of intetrest llc within the sheet
@@ -226,8 +231,9 @@ Intro
       quantexa gets a 1 year exclusivity on jinsei Ip when the solution lands in the vertical
     </div>
     <div className='aboutJinsei2'>
-        whats auditchain’s vertical like? any? - for jason
+        Confidentiality
         </div>
+
     <div className='aboutJinsei2'>
         making sure i can take this shit over to the naic
           </div>
@@ -255,7 +261,7 @@ Intro
 
 
       <h2 className='topicTitle' id='RiskManagement'>
-      Risk Management
+      Risk Alignment
       </h2>
       <div className='aboutJinsei2'>
       Risk alignment
@@ -298,6 +304,25 @@ Intro
       <div className='aboutJinsei2'>
       who would cover those costs
 
+      </div>
+
+      <h2 className='topicTitle' id='Management'>
+      Venture Management
+      </h2>
+      <div className='aboutJinsei2'>
+      meeting minutes
+      </div>
+
+      <div className='aboutJinsei2'>
+      board meetings
+      </div>
+
+      <div className='aboutJinsei2'>
+      financial disclosures
+      </div>
+
+      <div className='aboutJinsei2'>
+      operations maangement
       </div>
 
 
@@ -343,6 +368,19 @@ Intro
     Ontology libraries from oxford semantics and dfrnt + jinsei.ai + api/ui distribution
 
     </div>
+
+
+    <h2 className='topicTitle' id='Agreement'>
+    Agreement
+    </h2>
+    <div className='aboutJinsei2'>
+    can structure so that it becomes binding upon Board approval within a
+  specified time and/or subject to signing a definitive agreement
+  acceptable to both parties. In the context of the former approach note
+  all the requirements set out in the preceding paragraph as regards
+  approvals, etc.
+  </div>
+
 
     <h2 className='topicTitle' id='Appendix'>
     Appendix A: Research and Implementation Budget
