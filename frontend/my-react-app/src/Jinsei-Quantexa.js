@@ -60,13 +60,16 @@ const About = () => {
 Intro
       </h2>
       <div className='aboutJinsei2'>
+      hello quantexa hello tim and susan! howdyfellas butters From the landdddd
       Vertical talk, low risk vertical integration project that scales in licensing revenue
       </div>
-            <div className='aboutJinsei2'>
-      Entity Description
-            </div>
-            <div className='aboutJinsei2'>
-      ai specialization solutions, luciano luca paccioli
+      <div className='aboutJinsei2'>
+      Entity Description sbrm vertical market fit
+      how is this good for Quantexa
+
+      </div>
+      <div className='aboutJinsei2'>
+      SBRM ai specialization solutions, luciano luca paccioli
       </div>
       <div className='aboutJinsei2'>
       rolling implementations and
@@ -78,6 +81,10 @@ Intro
 
       Opening offices in Melbourne and Singapore helped to drive growth in the APAC region, making up almost 20% of total revenue.
             </div>
+
+            <div className='aboutJinsei2'>
+          larry burd, and this is where we discuss how sbrm is a great product for vertcial integration
+                  </div>
 
         <h2 className='topicTitle' id='Groups'>
       Groups
@@ -91,9 +98,7 @@ Intro
       <h2 className='topicTitle' id='Transactions'>
     Terms/Transaction
       </h2>
-      <div className='aboutJinsei2'>
-      Two part (Triple part?) transaction where the first transactin is the acquistion of rollover equity and the second is distribution licensing upon vertical deployment per the novelty constraint
-      </div>
+
 
       <div className='aboutJinsei2'>
       Transaction scenarios for each solution vertical
@@ -126,11 +131,18 @@ Intro
      <div className='aboutJinsei2'>
 
      jv termsheet
-     </div>
+     iframe google sheet
 
+     </div>
+     <div className="xlsxView">
+
+     <iframe className="sheetView"     style={{ width: '100%', height: '300px' }} // Set the desired height as well
+ src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT7Mt7PQiFLmEeJD3NpDoHJwqj3mKPc59blDG3GsNidKujiSVNV1HIPSSBbgQhyMP2WwW0elH0HUCpr/pubhtml?widget=true&amp;headers=false"></iframe>
+
+     </div>
      <div className='aboutJinsei2'>
 
-     one or two classes of intetrest llc
+     one or two classes of intetrest llc within the sheet
      </div>
 
      <div className='aboutJinsei2'>
@@ -141,6 +153,19 @@ Intro
      <div className='aboutJinsei2'>
 
      strucuture of entity
+     <ul className="bulletedList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+     </div>
+
+     <div className='aboutJinsei2'>
+     Two part (Triple part?) transaction where the first transactin is the acquistion of rollover equity and the second is distribution licensing upon vertical deployment per the novelty constraint
+     </div>
+
+     <div className='aboutJinsei2'>
+     the license agreemenet details for the landed phase
      </div>
 
 
@@ -240,6 +265,10 @@ Intro
       </div>
       <div className='aboutJinsei2'>
     Rollover equity refers to a scenario where the existing shareholders of a target company (the company being acquired) are offered the opportunity to exchange their shares for equity ownership in the acquiring company or the newly combined entity that results from the transaction
+      </div>
+
+      <div className='aboutJinsei2'>
+      Aligning the risk and default liabitlities amongst the three organizations. Algining the re-investment interests of related ip.
       </div>
       <div className='aboutJinsei2'>
           jinsei-quantexa corp shares to quantexa - for some shares in quantexa

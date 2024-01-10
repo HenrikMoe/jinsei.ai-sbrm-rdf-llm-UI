@@ -148,3 +148,58 @@
   box-shadow: 0 0 5px #003366;
 
 }
+
+.xlsxView{
+  margin-left: 10px;
+  margin-top: -100px;
+  width: 820px;
+  margin-bottom: 50px;
+
+}
+
+.sheetView:hover {
+  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+@media (max-width: 767px) {
+  .xlsxView {
+    width: 250px;
+    margin-left: 20px;
+
+  }
+}
+
+.sheetView{
+  margin-left: 20px;
+  width: 320px;
+  box-shadow: 5px 5px 0 #003366; /* Add a shadow to the right and bottom */
+
+  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+@media (max-width: 767px) {
+  .xlsx-tablez {
+    width: 320px;
+    margin-left: 20px;
+
+  }
+}
+
+@media (max-width: 767px) {
+  .sheetView {
+    width: 320px;
+    margin-left: 20px;
+
+  }
+}
+
+.bulletedList {
+  margin-left: 20px;
+}
+
+.bulletedList div {
+  margin-bottom: 5px;
+  list-style: disc; /* Use 'disc' for filled circles, 'circle' for empty circles, or 'square' for squares */
+  color: black; /* Set the color for the bullet */
+}
