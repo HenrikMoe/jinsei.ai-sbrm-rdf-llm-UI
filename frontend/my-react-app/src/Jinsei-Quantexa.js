@@ -132,54 +132,93 @@ JV Introduction
       AuditChain Labs AG[ref]
       </div>
 
-      <h1 className='topicTitle' id='Transactions'>
+      <h2 className='topicTitle' id='Transactions'>
     Terms
-      </h1>
-
-
+      </h2>
       <div className='aboutJinsei2'>
-      Transaction scenarios for each solution vertical
+      Quantexa are to fund the research and development budget in exchange for exclusive vertical licensing rights.
       </div>
 
       <div className='aboutJinsei2'>
+      The QJA SBRM+AI solution will be licensed to Quantexa from the JV on a schedule defined below. Quantexa then re-licenses the solution suite to its enterprise clients.
+      </div>
 
-    Jinsei-Quantexa-Auditchain LLC - location tbd
+      <div className='aboutJinsei2'>
+    QJA SBRM+AI solution development responsibility falls under the JV.
+     </div>
+
+     <div className='aboutJinsei2'>
+     The co-venturers are offered the following rolling equity in Quantexa-Jinsei-Auditchain LLC:
+     </div>
+     <ul className='aboutJinsei2'>
+     Quantexa: 40%
+     </ul>
+     <ul className='aboutJinsei2'>
+     Jinsei: 35%
+     </ul>
+     <ul className='aboutJinsei2'>
+     Auditchain: 25%
+     </ul>
+
+
+
+
+      <div className='aboutJinsei2'>
+      The sandbox is defined as the development and software IP of the co-ventureres licensed from the co-venturers upon the ratification of the JV.
+      </div>
+
+      <div className='aboutJinsei2'>
+      The sandbox includes:
+      </div>
+      <div className='bulletedList'>
+    Jinsei.ai:
+      </div>
+      <ul className="bulletedList">
+            <li>Luciano UI</li>
+             <li>Luciano-Chat 0.0</li>
+             <li>Luciano-CleanAI 0.0</li>
+             <li>Luciano-Engine 0.0</li>
+     </ul>
+
+     <div className='bulletedList'>
+   Auditchain Labs AG:
+     </div>
+
+     <ul className="bulletedList">
+           <li>Luca UI</li>
+            <li>Luca Engine</li>
+            <li>Paccioli App</li>
+    </ul>
+
+    <div className='bulletedList'>
+  Quantexa:
     </div>
 
-    <div className='aboutJinsei2'>
+    <ul className="bulletedList">
+    <li>Insert Here</li>
 
+ </ul>
+
+
+
+
+      <div className='aboutJinsei2'>
+      license is not terminable upon landing and sucessful operations within vertical until end of the license termsheets
+      </div>
+
+      <div className='aboutJinsei2'>
+  include terms for the license in the google sheet using the revenue metrics of quantexa? guesssing how much a product like this can sell for
+      </div>
+    <div className='aboutJinsei2'>
     transaction for each entrerprise client for quantexa? no but this is lisecnse transaction?
     </div>
 
     <div className='aboutJinsei2'>
-
-  non-exclsuive properitery licensing with auditchain (SBRM) and quantexa (vertical) and jinsei.ai (deep-context and hands on vertical integration)
-    </div>
-
-    <div className='aboutJinsei2'>
-
 cross territory versions of the Solutions
     </div>
 
-    <div className='aboutJinsei2'>
-after all the vertical forwarding talk,
-talk about how updates to the software go right into quantexa's verstical no problem
-   </div>
    <div className='aboutJinsei2'>
 the novelty clause will say this but jinsei.ai can use technological ip with other partners otuside of SBRM scope.   </div>
-
-    <div className='aboutJinsei2'>
-    rolling equity
-    </div>
-
-    <div className='aboutJinsei2'>
-    license is not terminable upon landing and sucessful operations within vertical until end of the license termsheets
-
-    </div>
-
-    <div className='aboutJinsei2'>
-include terms for the license in the google sheet using the revenue metrics of quantexa? guesssing how much a product like this can sell for
-    </div>
 
     <div className="xlsxView">
     <iframe className="sheetView"     style={{ width: '100%', height: '300px' }} // Set the desired height as well
@@ -189,9 +228,7 @@ src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT7Mt7PQiFLmEeJD3NpDoHJwqj3
 <div className='aboutJinsei2'>
 how can license be terminated</div>
 
-    <div className='aboutJinsei2'>
-    resources from each group
-    </div>
+
 
     <div className='aboutJinsei2'>
 Non compete within this domain to ther quantexa projects a similar project
@@ -277,9 +314,10 @@ tag-along rights with unstaisfactory perfromance from one of the co ventrueers f
 
      <div className='aboutJinsei2'>
 
-     strucuture of entity
+     strucuture of entity - LLC JV
      <ul className="bulletedList">
-      <li>Item 1</li>
+      <li>    Jinsei-Quantexa-Auditchain LLC - location tbd
+</li>
       <li>Item 2</li>
       <li>Item 3</li>
     </ul>
