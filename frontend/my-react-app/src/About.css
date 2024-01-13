@@ -9,6 +9,10 @@
 
 }
 
+.pageAlillef{
+  margin-left:60px;
+  margin-right: 60px;
+}
 
 .aboutJinsei {
   color: #333; /* Off-black color #333*/
@@ -73,12 +77,21 @@
   display: block;
 }
 
+.tocItem1{
+  color: #333; /* Off-black color #333*/
+  margin-bottom:40px;
+  margin-right: 20px;
+  margin-left: 60px;
+  text-align: left !important; /* Align text to the left */
+  display: block;
+}
+
 .topicTitle{
   color: #333; /* Off-black color #333*/
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   margin-right: 20px;
   margin-left: 40px;
-  margin-top: 50px;
+  margin-top: 0px;
   text-align: left !important; /* Align text to the left */
   display: block;
 }
@@ -149,6 +162,30 @@
 
 }
 
+
+
+.aboutJinsei3 {
+  color: #333; /* Off-black color #333*/
+  margin-bottom: 50px;
+  margin-right: 20px;
+  margin-top:30px;
+
+  margin-left: 40px;
+  text-align: left !important; /* Align text to the left */
+  display: block;
+}
+
+.aboutJinsei4 {
+  color: #333; /* Off-black color #333*/
+  margin-bottom: 5px;
+  margin-right: 20px;
+  margin-top:30px;
+
+  margin-left: 40px;
+  text-align: left !important; /* Align text to the left */
+  display: block;
+}
+
 .xlsxView{
   margin-left: 10px;
   margin-top: -100px;
@@ -196,10 +233,16 @@
 
 .bulletedList {
   margin-left: 60px;
+  margin-bottom: 40px;
 }
 
 .bulletedList div {
   margin-bottom: 5px;
+  list-style: disc; /* Use 'disc' for filled circles, 'circle' for empty circles, or 'square' for squares */
+  color: black; /* Set the color for the bullet */
+}
+.bulletedList li {
+  margin-bottom: 20px;
   list-style: disc; /* Use 'disc' for filled circles, 'circle' for empty circles, or 'square' for squares */
   color: black; /* Set the color for the bullet */
 }

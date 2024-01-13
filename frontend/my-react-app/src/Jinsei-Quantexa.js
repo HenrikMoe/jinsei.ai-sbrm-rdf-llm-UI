@@ -23,9 +23,15 @@ const About = () => {
   //
   // Opening offices in Melbourne and Singapore helped to drive growth in the APAC region, making up almost 20% of total revenue.
 
+//   <div className='aboutJinsei2'>
+//     bottom line evaluation in the scope of assets on books increasing Quantexa's value for next round of investment
+// </div>
+
+
   return (
     <div className="center-div">
-      <h1 className='aboutJinsei'>Quantexa, AuditChain Labs, Jinsei.ai - Joint Venture</h1>
+    <div className='pageAlillef'>
+      <h1 className='aboutJinsei'>Quantexa, Jinsei.ai, AuditChain Labs - Joint Venture</h1>
       <div className='aboutJinsei'>
       Author: Henrik Moe
       </div>
@@ -45,11 +51,11 @@ const About = () => {
       </div>
 
       <div className='tocItem'>
-      <a href='#Groups'>Joint Venturers</a>
+      <a href='#Groups'>Co-Venturers</a>
       </div>
 
       <div className='tocItem'>
-      <a href='#Transactions'>Terms</a>
+      <a href='#Transactions'>Venture Details</a>
       </div>
 
       <div className='tocItem'>
@@ -70,13 +76,17 @@ const About = () => {
       <a href='#Management'>Venture Management</a>
       </div>
       <div className='tocItem'>
+      <a href='#AddtionalTerms'>Additional Terms</a>
+      </div>
+      <div className='tocItem'>
       <a href='#Products'>Solutions</a>
       </div>
       <div className='tocItem'>
-      <a href='#Agreement'>Agreement</a>
-      </div>
-      <div className='tocItem'>
       <a href='#Appendix'>Research and Implementation Budget</a>
+      </div>
+
+      <div className='tocItem1'>
+      <a href='#Agreement'>Agreement</a>
       </div>
 
 
@@ -84,10 +94,10 @@ const About = () => {
 JV Introduction
       </h2>
       <div className='aboutJinsei2'>
-      The main directive of this joint venture (JV) is to research, develop and distribute Quantexa-Jinsei.ai-Auditchain's (QJA) SBRM+AI vertical solution software.
+      The main directive of this joint venture (JV) is to research, develop and distribute Quantexa-Jinsei.ai-Auditchain's (QJA) Standard Business Report Models [ref] with Artificial Intelligence[ref] (SBRM+AI) vertical solution software.
       </div>
       <div className='aboutJinsei2'>
-      The new software will be developed leveraging technology and IP[ref] previously developed by the joint venturers as well as introducing original solutions through collaborative development.
+      The new software will be developed leveraging technology and IP[ref] previously developed by the co-venturers as well as introducing original solutions through collaborative development.
       </div>
       <div className='aboutJinsei2'>
       Quantexa-Jinsei.ai-Auditchain's (QJA) SBRM+AI solution suite is designed to be licensable to Quantexa's enterpirse partners, enabling scalable revenue for Quantexa with a fixed licensing schedule for the the JV.
@@ -106,20 +116,20 @@ JV Introduction
       QJA SBRM+AI from Quantexa will support ESMA, APAC, and SEC accounting standards, making it a perfect fit for Quantexa's growing global enterpirse market[ref].
         </div>
       <div className='aboutJinsei2'>
-      Auditchain's Luca and Paccioli[ref] and Jinsei.ai's Luciano[ref] projects are some simple examples of technologies brought to the JV by Jinsei and Auditchain.
+      Auditchain's Luca, Paccioli[ref] applications along with Jinsei.ai's Luciano[ref] projects are technologies licensed to the JV by Jinsei and Auditchain.
       </div>
       <div className='aboutJinsei2'>
-      The enterprise distribution mission as a planned activity and main directive
+      Maximum enterprise distribution amongst Quantexa's market base is the ultimate mission of this JV and is achieved through licensing terms that align Jinsei.ai and AuditChain's profit risk to the scalable performance of the project.
       </div>
       <div className='aboutJinsei2'>
 
-      The JV's cutting edge financial disclosure solutions coupled with its distribution mission through Quantexa's enterprise partners make Quantexa-Jinsei-Auditchain (QJA) LLC a strong asset.
+      The co-venturers' cutting edge financial disclosure solutions coupled with a distribution package through Quantexa's enterprise partners make Quantexa-Jinsei-Auditchain (QJA) JV a valuable asset within Quantexa's business.
 
       </div>
 
 
         <h2 className='topicTitle' id='Groups'>
-      Joint Venturers
+      Co-Venturers
       </h2>
 
       <div className='aboutJinsei2'>
@@ -133,360 +143,172 @@ JV Introduction
       </div>
 
       <h2 className='topicTitle' id='Transactions'>
-    Terms
+    Venture Details
       </h2>
       <div className='aboutJinsei2'>
-      Quantexa are to fund the research and development budget in exchange for exclusive vertical licensing rights.
+      Quantexa is required to fund the research and development budget.
       </div>
 
       <div className='aboutJinsei2'>
-      The QJA SBRM+AI solution will be licensed to Quantexa from the JV on a schedule defined below. Quantexa then re-licenses the solution suite to its enterprise clients.
+      The QJA SBRM+AI solution will be licensed to Quantexa from the JV on a schedule defined below subject to revision and approval by the board after ratification of this document.
       </div>
 
       <div className='aboutJinsei2'>
-    QJA SBRM+AI solution development responsibility falls under the JV.
+    QJA SBRM+AI solution development and implementation responsibility is with the JV and Quantexa.
      </div>
-
      <div className='aboutJinsei2'>
-     The co-venturers are offered the following rolling equity in Quantexa-Jinsei-Auditchain LLC:
+     The prupose of the sandbox is to develop Quantexa solution suite vertical integrations of Jinsei.ai+Auditchain Labs SBRM+AI solutions.
      </div>
-     <ul className='aboutJinsei2'>
-     Quantexa: 40%
-     </ul>
-     <ul className='aboutJinsei2'>
-     Jinsei: 35%
-     </ul>
-     <ul className='aboutJinsei2'>
-     Auditchain: 25%
-     </ul>
+       <div className='aboutJinsei2'>
+       The sandbox is defined as QJA SBRM+AI solution development and implementation.
+       </div>
 
+       <div className='aboutJinsei2'>
+       The sandbox includes licensing of previously developed software:
+       </div>
+       <div className='bulletedList'>
+     Jinsei.ai:
+       </div>
+       <ul className="bulletedList">
+             <li>Luciano UI</li>
+              <li>Luciano-Chat </li>
+              <li>Luciano-CleanAI </li>
+              <li>Luciano-Engine </li>
+      </ul>
 
-
-
-      <div className='aboutJinsei2'>
-      The sandbox is defined as the development and software IP of the co-ventureres licensed from the co-venturers upon the ratification of the JV.
-      </div>
-
-      <div className='aboutJinsei2'>
-      The sandbox includes:
-      </div>
       <div className='bulletedList'>
-    Jinsei.ai:
+    Auditchain Labs AG:
       </div>
+
       <ul className="bulletedList">
-            <li>Luciano UI</li>
-             <li>Luciano-Chat 0.0</li>
-             <li>Luciano-CleanAI 0.0</li>
-             <li>Luciano-Engine 0.0</li>
+            <li>Luca UI</li>
+             <li>Luca Engine</li>
+             <li>Paccioli App</li>
      </ul>
 
      <div className='bulletedList'>
-   Auditchain Labs AG:
+   Quantexa:
      </div>
 
      <ul className="bulletedList">
-           <li>Luca UI</li>
-            <li>Luca Engine</li>
-            <li>Paccioli App</li>
+     <li>Insert Here</li>
+
+  </ul>
+
+     <div className='aboutJinsei4'>
+     The joint venture will be an LLC incorporated in CA or Delaware.  Jinsei-Quantexa-Auditchain LLC - CA or DE.
+
+     </div>
+     <ul className="bulletedList">
+      <li>IRS ID: </li>
+      <li>SoS ID: </li>
+    </ul>
+     <div className='aboutJinsei2'>
+     Co-venturers will own one LLC equity type.
+    </div>
+     <div className='aboutJinsei4'>
+     The co-venturers will hold the following equity in Quantexa-Jinsei-Auditchain LLC:
+     </div>
+     <ul className="bulletedList">
+      <li> Quantexa: 40%</li>
+      <li>Jinsei.ai: 35% </li>
+      <li>Auditchain: 25% </li>
     </ul>
 
-    <div className='bulletedList'>
-  Quantexa:
-    </div>
-
-    <ul className="bulletedList">
-    <li>Insert Here</li>
-
- </ul>
 
 
 
 
-      <div className='aboutJinsei2'>
-      license is not terminable upon landing and sucessful operations within vertical until end of the license termsheets
-      </div>
-
-      <div className='aboutJinsei2'>
-  include terms for the license in the google sheet using the revenue metrics of quantexa? guesssing how much a product like this can sell for
-      </div>
-    <div className='aboutJinsei2'>
-    transaction for each entrerprise client for quantexa? no but this is lisecnse transaction?
-    </div>
-
-    <div className='aboutJinsei2'>
-cross territory versions of the Solutions
-    </div>
-
-   <div className='aboutJinsei2'>
-the novelty clause will say this but jinsei.ai can use technological ip with other partners otuside of SBRM scope.   </div>
-
+ <div className='aboutJinsei2'>
+ QJA SBRM+AI license term sheet:
+ </div>
     <div className="xlsxView">
     <iframe className="sheetView"     style={{ width: '100%', height: '300px' }} // Set the desired height as well
 src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT7Mt7PQiFLmEeJD3NpDoHJwqj3mKPc59blDG3GsNidKujiSVNV1HIPSSBbgQhyMP2WwW0elH0HUCpr/pubhtml?widget=true&amp;headers=false"></iframe>
 </div>
 
+
+<h2 className='topicTitle' id='Novelty'>
+Novelty & Reinvestment
+</h2>
 <div className='aboutJinsei2'>
-how can license be terminated</div>
-
-
-
-    <div className='aboutJinsei2'>
-Non compete within this domain to ther quantexa projects a similar project
-    </div>
-
-    <div className='aboutJinsei2'>
-jinsei corp with other competitors to Quantexa
-    </div>
-
-    <div className='aboutJinsei2'>
-share restrictions like who can be transfered ownserhip of
-    </div>
-
-    <div className='aboutJinsei2'>
-share restrictions are ok for affiliates - for example affiliates in the corproate chain of quantexa, auditchian, and jinsei
-    </div>
-
-
-    <div className='aboutJinsei2'>
-    ability for the officers to recommend resources
-    </div>
-
-    <div className='aboutJinsei2'>
-    ability for the board to vote on commiting reoruces
-    </div>
-
-    <div className='aboutJinsei2'>
-exits/termination rights for jisnei corp     </div>
-
+Quantexa holds a 1 year exclusivity right on the QJA SBRM+AI IP upon the solution landing in the vertical and creating revenue.
+</div>
 <div className='aboutJinsei2'>
-a non default unstafistaroy project development exit clause protecting jisnei corp      </div>
-
+After 1 year, Jinsei Corporation and Auditchain Labs can form more SBRM+AI vertical alliances - without any Quantexa IP.
+</div>
 <div className='aboutJinsei2'>
-quantexa liquidating ownership rights clause and a fee
+Quantexa can issue a request for information from any other Jinsei or Auditchain project for the purpose of checking for illegal use of its IP and vice versa.
+The co-venturers can use technology resources agnositc to Quantexa enterprise data like graph engines and UI applications with other partners outside of SBRM scope during the exclsuistivty period of Quantexa QJA SBRM+AI. For example, Jinsei Corp may utilize elements of the QJA engine and frontend services for a ACTUS or FIBO RDF based analytics project for another enterprise distributor.
+</div>
+<div className='aboutJinsei2'>
+All propriterty software licened to Quantexa-Jinsei-Auditchain will remain confidential and any breach of confidentiality may result in legal action.
 </div>
 
 <div className='aboutJinsei2'>
-put rights for the groups/parties in the jv - quidproquo rite with quantexa as a majority jv member
-</div>
+After 1 year of integration of QJA SBRM+AI, a % of licensing fee distributions are required to be re-invested in board approved QJA interests. For example, Jinsei Corp subsidiaries like QJA that support future or SBRM+AI Quantexa-licensed solution interests. QJA will acquire equity in the subsidiary project(s) through this process.
+  </div>
+  <div className='aboutJinsei2'>
+  The JV's SBRM+AI license schedule is not terminable upon sucessful implementation within Quantexa's client vertical until the end of the license termsheet.
+  </div>
 
-<div className='aboutJinsei2'>
-a right of first refusal is a right of the non-selling party to require the selling
-co-venturer to sell its interest in the JV to the non-selling co-venturer under
-the terms of a third party offer that the selling co-venturer is otherwise
-prepared to accept</div>
-
-<div className='aboutJinsei2'>
-right to tag-along for one co-venturerer to anothers sale </div>
-
-<div className='aboutJinsei2'>
-tag-along rights with unstaisfactory perfromance from one of the co ventrueers for one co-venturerer to anothers sale </div>
-
+<h2 className='topicTitle' id='Exits'>
+Distributions
+</h2>
     <div className='aboutJinsei2'>
+      JV licensing revenue distributions to co-venturers are permitted after operating and reinvestment schedule costs are paid on an annual basis.
+  </div>
+        <div className='aboutJinsei2'>
+  Option equity offers will be available to the JV for Jinsei Corp lead SBRM+AI and RDF analytics solutions for enterprise distributors.
+  </div>
 
-     Incentive from the next jinsei corp transaction with an enterprise distributor takes %25 licensing fee cut
-     </div>
-
-     <div className='aboutJinsei2'>
-
-     rolling equity with a transaction fee towards research and implementation budget
-     </div>
-
-     <div className='aboutJinsei2'>
-
-    jv terms all here
-     </div>
-
-     <div className='aboutJinsei2'>
-
-    scope of business
-     </div>
-
-
-     <div className='aboutJinsei2'>
-
-     one or two classes of intetrest llc within the sheet
-     </div>
-
-     <div className='aboutJinsei2'>
-
-     secutiries issued desrciption
-     </div>
-
-     <div className='aboutJinsei2'>
-
-     strucuture of entity - LLC JV
-     <ul className="bulletedList">
-      <li>    Jinsei-Quantexa-Auditchain LLC - location tbd
-</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-    </ul>
-     </div>
-
-     <div className='aboutJinsei2'>
-     Two part (Triple part?) transaction where the first transactin is the acquistion of rollover equity and the second is distribution licensing upon vertical deployment per the novelty constraint
-     </div>
-
-     <div className='aboutJinsei2'>
-     the license agreemenet details for the landed phase
-     </div>
-
-
-  <h2 className='topicTitle' id='Exits'>
-  Distributions
-  </h2>
-      <div className='aboutJinsei2'>
-          exit plan for them
-    </div>
-          <div className='aboutJinsei2'>
-
-    Exit by the next enterprise vertical integration after 1 year from a vertical completion. Exit by distributor license via Quantexa, NAIC for next scale.
-    </div>
-      <div className='aboutJinsei2'>
-    novelty and protection
-    </div>
-      <div className='aboutJinsei2'>
-    client numbers and revenue data will help articulate the levearge of jinsei.ai’s ai solutions and report leveraging
-    </div>
-      <div className='aboutJinsei2'>risk for risk roll over shares of their company for my company
-    must reduce risk after first cash flow
-    </div>
-      <div className='aboutJinsei2'>
-    exit for early investors
-    </div>
-      <div className='aboutJinsei2'>
-    select soltuions
-    </div>
-      <div className='aboutJinsei2'>
-    select one bunny
-    </div>
-      <div className='aboutJinsei2'>
-    the information i need is marketing data
-    </div>
-      <div className='aboutJinsei2'>
-    disappating risk in the corporation
-    </div>
-      <div className='aboutJinsei2'>
-    theyve got the distrubution i have the solutions
-    </div>
-      <div className='aboutJinsei2'>
-    theres no risk for them
-    </div>
-      <div className='aboutJinsei2'>
-    exclsuistivty after solution landings
-    </div>
-    <div className='aboutJinsei2'>
-
-    consideratin in exachange for each memeber contribution
-
-          </div>
-
-
-        <h2 className='topicTitle' id='Novelty'>
-  Novelty
-        </h2>
-      <div className='aboutJinsei2'>
-      quantexa gets a 1 year exclusivity on jinsei Ip when the solution lands in the vertical
-    </div>
-    <div className='aboutJinsei2'>
-        Confidentiality
-        </div>
-
-    <div className='aboutJinsei2'>
-        making sure i can take this shit over to the naic
-          </div>
 
 
     <h2 className='topicTitle' id='Liabilities'>
     Liabilities
     </h2>
-      <div className='aboutJinsei2'>
-      who would be responsible for what\
-      </div>
-      <div className='aboutJinsei2'>
-      projected costs of jv
-      </div>
-      <div className='aboutJinsei2'>
-      who would cover those costs
-      </div>
-      <div className='aboutJinsei2'>
-      quantexa’s resoruces ???
-      </div>
-      <div className='aboutJinsei2'>
-      whos contributing what
-      </div>
 
-
+      <div className='aboutJinsei2'>
+      QJA (JV)'s Quantexa license can be terminated if by the end of the research and development phase, the project has failed to meet development milestones.  </div>
+      <div className='aboutJinsei2'>
+      The JV's non-compete term after sucessful vertical implementation of SBRM+AI solutions is 1 year.
+        </div>
+        <div className='aboutJinsei2'>
+          The board may vote on an insurance solution to prevent against cases of insolvency.
+        </div>
 
     <h2 className='topicTitle' id='RiskManagement'>
     Risk Alignment
     </h2>
       <div className='aboutJinsei2'>
-      Risk alignment
-      </div>
+    To align profit risk, QJA's licensing schedule with Quantexa must pass milestones that reflect scalability accomplishments of the JV to optimize returns.
+    </div>
       <div className='aboutJinsei2'>
-      Distribution for them, roll over shares
-      </div>
-      <div className='aboutJinsei2'>
-    Rollover equity refers to a scenario where the existing shareholders of a target company (the company being acquired) are offered the opportunity to exchange their shares for equity ownership in the acquiring company or the newly combined entity that results from the transaction
-      </div>
+i think somtheing about the put and call rite here      </div>
 
-      <div className='aboutJinsei2'>
-      Aligning the risk and default liabitlities amongst the three organizations. Algining the re-investment interests of related ip.
-      </div>
-      <div className='aboutJinsei2'>
-          jinsei-quantexa corp shares to quantexa - for some shares in quantexa
-      </div>
-
-      <div className='aboutJinsei2'>
-          insurance and who is liable
-      </div>
-      <div className='aboutJinsei2'>
-          to auditchain labs then contginetn that on a roll over with quantexa?
-      </div>
-      <div className='aboutJinsei2'>
-          strucutre so multiple companies can enter for different solution niches like iris and oxford and
-      </div>
-      <div className='aboutJinsei2'>
-          Entity solution introduced here
-      </div>
-      <div className='aboutJinsei2'>
-          ok so what does all these groups together look like? rolling partnership sandbox? auditchain with quantexa, oxford/dfrnt for maybe mapx
-      </div>
-      <div className='aboutJinsei2'>
-      i think focusing on auditchain quantexa and making it so i can leave and take it naic      rolling equity with a transaction fee towards research and implementation budget
-      </div>
-      <div className='aboutJinsei2'>
-      protection for venturerer
-      </div>
-      <div className='aboutJinsei2'>
-
-      Liability clause liability in the event of cash running
-      </div>
-      <div className='aboutJinsei2'>
-      panel of represtnatives for the board
-      </div>
-      <div className='aboutJinsei2'>
-      who would cover those costs
-
-      </div>
 
       <h2 className='topicTitle' id='Management'>
       Venture Management
       </h2>
       <div className='aboutJinsei2'>
-      meeting minutes
+      meeting minutes      board meetings frequency and the quorum - reveiing the business plan and development budget for example
+
       </div>
       <div className='aboutJinsei2'>
-      board itself, board memeber responsibiltities, voting
+      panel of represtnatives for the board
       </div>
-
+      <div className='aboutJinsei2'>
+      board itself managment type and shareholders type, board member responsibiltities, voting
+      </div>
+      <div className='aboutJinsei2'>
+  ability for board to act over facetime </div>
       <div className='aboutJinsei2'>
       process for developing apporiving and updating the business plan and budget
       </div>
       <div className='aboutJinsei2'>
-          audits
+      financial disclosures and frequency/audits
       </div>
+
       <div className='aboutJinsei2'>
           permitted access to books and records of doing business
       </div>
@@ -495,63 +317,65 @@ tag-along rights with unstaisfactory perfromance from one of the co ventrueers f
       </div>
 
       <div className='aboutJinsei2'>
-      board meetings frequency and the quorum - reveiing the business plan and development budget for example
+    Requiring board consent:
       </div>
-
-      <div className='aboutJinsei2'>
-ability for board to act over facetime </div>
-
-      <div className='aboutJinsei2'>
-      financial disclosures and frequency
-      </div>
-
-      <div className='aboutJinsei2'>
-      requring board consent: approval of annual business and budget plan
-      </div>
-
-      <div className='aboutJinsei2'>
-      requring board consent: transactions outside the normal scope of the business plan
-      </div>
-
-      <div className='aboutJinsei2'>
-      requring board consent: admission of new co-venturers
-      </div>
-
-      <div className='aboutJinsei2'>
-      requring board consent: change to jv terms
-      </div>
-
-
-      <div className='aboutJinsei2'>
-      requring board consent: any transfer of ownership interests including in jv subsidiaries
-      </div>
-
-      <div className='aboutJinsei2'>
-      requring board consent: change in management officers
-      </div>
-
-      <div className='aboutJinsei2'>
-      requring board consent: election of a management board
-      </div>
-
-
-
-
-      <div className='aboutJinsei2'>
-      requring board consent: insolvency related actions
-      </div>
-
+      <ul className="bulletedList">
+       <li>Approval of annual business and budget plan.</li>
+       <li>Transactions outside the normal scope of the business plan.</li>
+       <li>Admission of new co-venturers. </li>
+       <li>Change to jv terms. </li>
+       <li>Any transfer of ownership interests including in jv subsidiaries.</li>
+       <li>Change in management officers. </li>
+       <li> Election of a management board.</li>
+       <li> Insolvency related actions.</li>
+     </ul>
       <div className='aboutJinsei2'>
       operations maangement and other responsibillites in the busienss plan
       </div>
-
       <div className='aboutJinsei2'>
       authority to remove officers by majority vote
       </div>
-
       <div className='aboutJinsei2'>
-post closing project ip requirmeents      </div>
+      Post licensing term IP movement and ownership closing project ip requirmeents.     </div>
 
+<h2 className='topicTitle' id='AddtionalTerms'>
+Additional Terms
+</h2>
+  <div className='aboutJinsei2'>
+Share restrictions like who can be transfered ownserhip of
+  </div>
+  <div className='aboutJinsei2'>
+Share restrictions are ok for affiliates - for example affiliates in the corproate chain of quantexa, auditchian, and jinsei
+  </div>
+  <div className='aboutJinsei2'>
+  Ability for the officers to recommend resources
+  </div>
+  <div className='aboutJinsei2'>
+  Ability for the board to vote on commiting reoruces
+  </div>
+  <div className='aboutJinsei2'>
+Exits/termination rights for jisnei corp
+</div>
+<div className='aboutJinsei2'>
+A non default unstafistaroy project development exit clause protecting jisnei corp      </div>
+<div className='aboutJinsei2'>
+Quantexa liquidating ownership rights clause and a fee
+</div>
+<div className='aboutJinsei2'>
+Put rights for the groups/parties in the jv - quidproquo rite with quantexa as a majority jv member
+</div>
+<div className='aboutJinsei2'>
+  Strucutre so multiple companies can enter for different solution niches like iris and oxford and
+</div>
+<div className='aboutJinsei2'>
+A right of first refusal is a right of the non-selling party to require the selling
+co-venturer to sell its interest in the JV to the non-selling co-venturer under
+the terms of a third party offer that the selling co-venturer is otherwise
+prepared to accept</div>
+<div className='aboutJinsei2'>
+Tight to tag-along for one co-venturerer to anothers sale </div>
+<div className='aboutJinsei2'>
+Tag-along rights with unstaisfactory perfromance from one of the co ventrueers for one co-venturerer to anothers sale </div>
 
       <h2 className='topicTitle' id='Products'>
       Solutions
@@ -586,30 +410,13 @@ post closing project ip requirmeents      </div>
     </h3>
 
     <div className='productSubTitle'>
-
     vertical support
     Rolling implementations and products
     mermaid, react, api, xule, xbrl,  process management
     canvas, model library, ai docuementation, chat
     auditchain-jinsei ai modules + luca + luciano sbrm and more reporting software for quantexa vertical
     Ontology libraries from oxford semantics and dfrnt + jinsei.ai + api/ui distribution
-
     </div>
-
-
-    <h2 className='topicTitle' id='Agreement'>
-    Agreement
-    </h2>
-    <div className='aboutJinsei2'>
-    can structure so that it becomes binding upon Board approval within a
-  specified time and/or subject to signing a definitive agreement
-  acceptable to both parties. In the context of the former approach note
-  all the requirements set out in the preceding paragraph as regards
-  approvals, etc.
-  </div>
-
-
-
     <h2 className='topicTitle' id='Appendix'>
     Research and Implementation Budget
     </h2>
@@ -621,17 +428,16 @@ post closing project ip requirmeents      </div>
       <div className='aboutJinsei2'>
     terms for if the budget is not approved- does it go upchain in quantexa?
     </div>
-
     <div className='aboutJinsei2'>
   liabitlities if out of money? how much you get dropped for from the jv?
   </div>
     <div className='productSubTitle'>
-
     operating budget
     operating capital contribution
     docuementation integration
-
-
+  </div>
+  <div className='aboutJinsei2'>
+cross territory versions of the Solutions
   </div>
     <table className='xlsx-tablez'>
     <thead>
@@ -639,36 +445,42 @@ post closing project ip requirmeents      </div>
         <th>Item</th>
         <th>Number</th>
         <th>DateRange</th>
-
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Vertical Research</td>
-        <td>number</td>
-        <td>DateRange</td>
-
+        <td>$25,000</td>
+        <td>Feb/March-April/May</td>
       </tr>
       <tr>
         <td>Integration Development</td>
         <td>number</td>
         <td>DateRange</td>
-
       </tr>
       <tr>
         <td>SubItem: 1</td>
         <td>number</td>
         <td>DateRange</td>
-
       </tr>
     </tbody>
   </table>
+
     </div>
-
-
-
-
-
+    <h2 className='topicTitle' id='Agreement'>
+    Agreement
+    </h2>
+    <div className='aboutJinsei2'>
+    Vertical research is instantly payable.
+  </div>
+    <div className='aboutJinsei2'>
+    can structure so that it becomes binding upon Board approval within a
+  specified time and/or subject to signing a definitive agreement
+  acceptable to both parties. In the context of the former approach note
+  all the requirements set out in the preceding paragraph as regards
+  approvals, etc.
+  </div>
+    </div>
     </div>
   );
 };
