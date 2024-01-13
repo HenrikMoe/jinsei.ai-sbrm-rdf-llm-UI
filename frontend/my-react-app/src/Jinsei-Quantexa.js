@@ -89,6 +89,12 @@ const About = () => {
       <a href='#Agreement'>Agreement</a>
       </div>
 
+      <div className="summaryBox">
+          <h2>JV Summary</h2>
+          <p>
+            This joint venture develops and distributes SBRM+AI solutions to Quantexa enterprise solutions.
+          </p>
+        </div>
 
       <h2 className='topicTitle' id='Intro'>
 JV Introduction
