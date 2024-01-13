@@ -220,7 +220,7 @@
 @media (max-width: 767px) {
   .xlsxView {
     width: 250px;
-    margin-left: 20px;
+    margin-left: -20px;
 
   }
 }
@@ -235,15 +235,15 @@
 
 @media (max-width: 767px) {
   .xlsx-tablez {
-    width: 320px;
-    margin-left: 20px;
+    width: 220px;
+    margin-left: -50px;
 
   }
 }
 
 @media (max-width: 767px) {
   .sheetView {
-    width: 320px;
+    width: 220px;
     margin-left: 20px;
 
   }
