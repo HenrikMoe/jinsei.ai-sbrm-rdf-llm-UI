@@ -211,8 +211,8 @@ JV Introduction
      </div>
      <ul className="bulletedList">
       <li> Quantexa: 40%</li>
-      <li>Jinsei.ai: 35% </li>
-      <li>Auditchain: 25% </li>
+      <li>Jinsei.ai: 40% </li>
+      <li>Auditchain: 20% </li>
     </ul>
 
 
@@ -283,60 +283,60 @@ Distributions
       <div className='aboutJinsei2'>
     To align profit risk, QJA's licensing schedule with Quantexa must pass milestones that reflect scalability accomplishments of the JV to optimize returns.
     </div>
-      <div className='aboutJinsei2'>
-i think somtheing about the put and call rite here      </div>
 
 
       <h2 className='topicTitle' id='Management'>
       Venture Management
       </h2>
       <div className='aboutJinsei2'>
-      meeting minutes      board meetings frequency and the quorum - reveiing the business plan and development budget for example
+      The board of directors meets monthly.
 
       </div>
       <div className='aboutJinsei2'>
-      panel of represtnatives for the board
+      The board is composed of representatives from each co-venturer.
       </div>
       <div className='aboutJinsei2'>
-      board itself managment type and shareholders type, board member responsibiltities, voting
+      Board memebers are required to attend monthly board meetings and order exectutive action in the JV's interest.
       </div>
       <div className='aboutJinsei2'>
-  ability for board to act over facetime </div>
+      The board's meeting minutes are logged from recorded zoom or other facetime call.</div>
       <div className='aboutJinsei2'>
-      process for developing apporiving and updating the business plan and budget
-      </div>
+      Board Agenda:</div>
       <div className='aboutJinsei2'>
-      financial disclosures and frequency/audits
+      <ul className="bulletedList">
+      <li>The board opens by evalating the development of QJA's solutions.</li>
+      <li>The business plan is reflected on in the context of the development report.</li>
+      <li>Improvements to the business plan are suggested.</li>
+      <li>Reviewed business plans are authorized for implementation.</li>
+      <li>Proposed changes to the business plan are ordered to be arranged for board review and approval in the next meeting.</li>
+
+      </ul>
+
       </div>
 
       <div className='aboutJinsei2'>
-          permitted access to books and records of doing business
+      Financial dislosures are avaliable during the development evaluation of the board meeting. Otherwise, yearly finanicla disclosures will be made for tax purposes. QJA serves any co-venturers' affiliates requests for financial information about the JV's operations.
       </div>
       <div className='aboutJinsei2'>
-      partner vs managiner authority
-      </div>
-
-      <div className='aboutJinsei2'>
-    Requiring board consent:
+    Requiring Board Consent:
       </div>
       <ul className="bulletedList">
        <li>Approval of annual business and budget plan.</li>
        <li>Transactions outside the normal scope of the business plan.</li>
        <li>Admission of new co-venturers. </li>
-       <li>Change to jv terms. </li>
-       <li>Any transfer of ownership interests including in jv subsidiaries.</li>
+       <li>Changes to JV terms. </li>
+       <li>Any transfer of ownership interests in the JV including in JV subsidiaries.</li>
        <li>Change in management officers. </li>
        <li> Election of a management board.</li>
        <li> Insolvency related actions.</li>
      </ul>
+
       <div className='aboutJinsei2'>
-      operations maangement and other responsibillites in the busienss plan
+      Managers have operational authority unless partners remove the manager from office by board approval.
       </div>
+
       <div className='aboutJinsei2'>
-      authority to remove officers by majority vote
-      </div>
-      <div className='aboutJinsei2'>
-      Post licensing term IP movement and ownership closing project ip requirmeents.     </div>
+      Jinsei Corp will retain AI models, engine, and UI elements of the sandbox after the expiration of the licensing term.  </div>
 
 <h2 className='topicTitle' id='AddtionalTerms'>
 Additional Terms
@@ -423,21 +423,15 @@ Tag-along rights with unstaisfactory perfromance from one of the co ventrueers f
 
     <div >
     <div className='aboutJinsei2'>
-  terms for who pays the budget quantexa
+  Quantexa approved budget.
   </div>
-      <div className='aboutJinsei2'>
-    terms for if the budget is not approved- does it go upchain in quantexa?
-    </div>
+
     <div className='aboutJinsei2'>
-  liabitlities if out of money? how much you get dropped for from the jv?
+  If the JV's operations run over budget, what insurance plan is installed by the board to prevent insolvency?
   </div>
-    <div className='productSubTitle'>
-    operating budget
-    operating capital contribution
-    docuementation integration
-  </div>
+
   <div className='aboutJinsei2'>
-cross territory versions of the Solutions
+Cross territory versions of the QJA solutions are made on enterprise client demand and will be incorpated into the development budget at that time.
   </div>
     <table className='xlsx-tablez'>
     <thead>
@@ -459,7 +453,7 @@ cross territory versions of the Solutions
         <td>DateRange</td>
       </tr>
       <tr>
-        <td>SubItem: 1</td>
+        <td>Documentation</td>
         <td>number</td>
         <td>DateRange</td>
       </tr>
@@ -471,14 +465,10 @@ cross territory versions of the Solutions
     Agreement
     </h2>
     <div className='aboutJinsei2'>
-    Vertical research is instantly payable.
+    Upon the ratification of this JV by the co-venturers the Research and Implementation Budget is issued.
   </div>
     <div className='aboutJinsei2'>
-    can structure so that it becomes binding upon Board approval within a
-  specified time and/or subject to signing a definitive agreement
-  acceptable to both parties. In the context of the former approach note
-  all the requirements set out in the preceding paragraph as regards
-  approvals, etc.
+    This term sheet is editable. Email henrik@jinsei.ai
   </div>
     </div>
     </div>
