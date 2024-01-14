@@ -31,7 +31,7 @@ const About = () => {
   return (
     <div className="center-div">
     <div className='pageAlillef'>
-      <h1 className='aboutJinsei'>Quantexa, Jinsei.ai, AuditChain Labs - Joint Venture</h1>
+      <h1 className='aboutJinsei'>Quantexa, Jinsei.ai, AuditChain Labs - Joint Venture (JV)</h1>
       <div className='aboutJinsei'>
       Author: Henrik Moe
       </div>
@@ -40,6 +40,12 @@ const About = () => {
       Copyright 2024
       </div>
 
+      <div className="summaryBox">
+          <h2>JV Summary</h2>
+          <p>
+            This joint venture develops and distributes SBRM+AI solutions to Quantexa enterprise partners.
+          </p>
+        </div>
 
 
       <h3 className='tocTitle'>
@@ -89,18 +95,12 @@ const About = () => {
       <a href='#Agreement'>Agreement</a>
       </div>
 
-      <div className="summaryBox">
-          <h2>JV Summary</h2>
-          <p>
-            This joint venture develops and distributes SBRM+AI solutions to Quantexa enterprise partners.
-          </p>
-        </div>
 
       <h2 className='topicTitle' id='Intro'>
 JV Introduction
       </h2>
       <div className='aboutJinsei2'>
-      The main directive of this joint venture (JV) is to research, develop and distribute Quantexa-Jinsei.ai-Auditchain's (QJA) Standard Business Report Models [<a href='https://www.omg.org/hot-topics/standard-business-report-model.htm'>ref</a>] with Artificial Intelligence[ref] (SBRM+AI) vertical solution software to Quantexa's enterprise market.
+      The main directive of this joint venture is to research, develop and distribute Quantexa-Jinsei.ai-Auditchain's (QJA) Standard Business Report Models [<a href='https://www.omg.org/hot-topics/standard-business-report-model.htm'>ref</a>] with Artificial Intelligence[ref] (SBRM+AI) vertical solution software to Quantexa's enterprise market.
       </div>
       <div className='aboutJinsei2'>
       The new software will be developed leveraging technology and IP[ref] previously developed by the co-venturers, including AuditChain's Object Management Group SBRM UI and Jinsei.ai's GPT and knowledge based reporting LLMs. The JV will introduce original solutions through collaborative development.
