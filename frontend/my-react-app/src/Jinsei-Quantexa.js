@@ -92,7 +92,7 @@ const About = () => {
       <div className="summaryBox">
           <h2>JV Summary</h2>
           <p>
-            This joint venture develops and distributes SBRM+AI solutions to Quantexa enterprise solutions.
+            This joint venture develops and distributes SBRM+AI solutions to Quantexa enterprise partners.
           </p>
         </div>
 
@@ -100,10 +100,10 @@ const About = () => {
 JV Introduction
       </h2>
       <div className='aboutJinsei2'>
-      The main directive of this joint venture (JV) is to research, develop and distribute Quantexa-Jinsei.ai-Auditchain's (QJA) Standard Business Report Models [ref] with Artificial Intelligence[ref] (SBRM+AI) vertical solution software to Quantexa's enterprise market.
+      The main directive of this joint venture (JV) is to research, develop and distribute Quantexa-Jinsei.ai-Auditchain's (QJA) Standard Business Report Models [<a href='https://www.omg.org/hot-topics/standard-business-report-model.htm'>ref</a>] with Artificial Intelligence[ref] (SBRM+AI) vertical solution software to Quantexa's enterprise market.
       </div>
       <div className='aboutJinsei2'>
-      The new software will be developed leveraging technology and IP[ref] previously developed by the co-venturers, such as AuditChain's Object Management Group SBRM and Jinsei.ai's chat and knowledge based reporting LLMs, while introducing original solutions through collaborative development.
+      The new software will be developed leveraging technology and IP[ref] previously developed by the co-venturers, including AuditChain's Object Management Group SBRM UI and Jinsei.ai's GPT and knowledge based reporting LLMs. The JV will introduce original solutions through collaborative development.
       </div>
       <div className='aboutJinsei2'>
       Quantexa-Jinsei.ai-Auditchain's (QJA) SBRM+AI solution suite is designed to be licensable to Quantexa's enterpirse partners, enabling scalable revenue for Quantexa with a fixed licensing schedule for the the JV.
@@ -116,19 +116,19 @@ JV Introduction
       For example, an enterprise's audit team will be empowered with tools that shred hundreds of hours off their work schedule. Clients will be able to remove whole entities from the process of uploading their financial disclsoures with the SEC.
       </div>
       <div className='aboutJinsei2'>
-      Given the benefits of financial disclsoure for economic empowerment and activity[ref], alongside Congress's demand for Financial Data Transparency[FDTA Act], modern standardized disclosure tool suite assets are growing in value.
+      Given the benefits of financial disclsoure for economic empowerment and activity[ref], alongside Congress's demand for Financial Data Transparency [<a href='https://www.congress.gov/bill/117th-congress/senate-bill/4295'>FDTA Act</a>], modern standardized disclosure tool suite assets are growing in value.
       </div>
       <div className='aboutJinsei2'>
       QJA SBRM+AI from Quantexa will support ESMA, APAC, and SEC accounting standards, making it a perfect fit for Quantexa's growing global enterpirse market[ref].
         </div>
       <div className='aboutJinsei2'>
-      Auditchain's Luca and Paccioli[ref] applications along with Jinsei.ai's Luciano[ref] project are technologies licensed by the JV in exchange for equity in the JV.
+      Auditchain's Luca and Paccioli[ref] applications along with Jinsei.ai's Luciano[ref] project are technologies licensed to QJA in exchange for equity in the JV.
       </div>
       <div className='aboutJinsei2'>
-      Maximum enterprise distribution amongst Quantexa's market base is the ultimate mission of this JV. It is achieved through licensing terms that align Jinsei.ai and AuditChain's profit risk to the scalable performance Quantexa derives from the project.
+      Maximum enterprise distribution amongst Quantexa's market base is the ultimate mission of this JV. It is achieved via licensing terms that align Jinsei.ai and AuditChain's profit risk to the scalable performance Quantexa derives from the project.
       </div>
       <div className='aboutJinsei2'>
-    Jinsei.ai and Auditchain's cutting edge financial disclosure solutions coupled with a distribution package through Quantexa's enterprise partners make Quantexa-Jinsei-Auditchain (QJA) JV a valuable asset within Quantexa's business.
+    Jinsei.ai and Auditchain's cutting edge financial disclosure solutions coupled with Quantexa's enterprise partners as a distribution package make the Quantexa-Jinsei-Auditchain (QJA) JV a valuable asset within Quantexa Corporation.
       </div>
 
 
@@ -137,13 +137,13 @@ JV Introduction
       </h2>
 
       <div className='aboutJinsei2'>
-      Quantexa Corporation[ref]
+      Quantexa Corporation [<a href='https://quantexa.com'>ref</a>]
       </div>
       <div className='aboutJinsei2'>
-      Jinsei Corporation[ref]
+      Jinsei Corporation [<a href='https://jinsei.ai'>ref</a>]
       </div>
       <div className='aboutJinsei2'>
-      AuditChain Labs AG[ref]
+      AuditChain Labs AG [<a href='https://auditchain.finance/'>ref</a>]
       </div>
 
       <h2 className='topicTitle' id='Transactions'>
@@ -154,20 +154,20 @@ JV Introduction
       </div>
 
       <div className='aboutJinsei2'>
-      The QJA SBRM+AI solution will be licensed to Quantexa from the JV on a schedule defined below subject to revision and approval by the board after ratification of this document.
+      The QJA SBRM+AI solution will be licensed to Quantexa from the JV on a schedule defined below, subject to revision and approval by the board after ratification of this document.
       </div>
 
       <div className='aboutJinsei2'>
     QJA SBRM+AI solution development and implementation responsibility is with the JV and Quantexa.
      </div>
      <div className='aboutJinsei2'>
-     The prupose of the sandbox is to develop Quantexa solution suite vertical integrations of Jinsei.ai+Auditchain Labs SBRM+AI solutions.
+     The sandbox is defined as QJA SBRM+AI solution development and implementation environments.
+     </div>
+     <div className='aboutJinsei2'>
+     The prupose of the sandbox is to develop Quantexa vertical solutions from Jinsei.ai+Auditchain Labs SBRM+AI and other[ref] technology.
      </div>
        <div className='aboutJinsei2'>
-       The sandbox is defined as QJA SBRM+AI solution development and implementation.
-       </div>
-       <div className='aboutJinsei2'>
-       The sandbox includes leveraging each of the co-venturers human resources and development teams.
+       The sandbox will leverage each of the co-venturers human resources and development teams.
        </div>
        <div className='aboutJinsei2'>
        The sandbox includes licensing of previously developed software:
@@ -262,10 +262,10 @@ After 1 year of integration of QJA SBRM+AI, a % of licensing fee distributions a
 Distributions
 </h2>
     <div className='aboutJinsei2'>
-      JV licensing revenue distributions to co-venturers are permitted after operating and reinvestment schedule costs are paid on an annual basis.
+      The JV's licensing revenue distributions will be issued to co-venturers after operating and reinvestment schedule costs are paid on an annual basis.
   </div>
         <div className='aboutJinsei2'>
-  Option equity offers will be available to the JV for Jinsei Corp lead SBRM+AI and RDF analytics solutions for enterprise distributors.
+  Option equity offers will be available to the JV for Jinsei Corp lead SBRM+AI and RDF analytics solutions with other enterprise distributors.
   </div>
 
 
@@ -388,7 +388,7 @@ Each co-venturer has a right to tag-along to another parties' sale of JV equity.
       Solutions
       </h2>
       <h3 className='productTitle'>
-      1 Triple-Based Canvas and Walkthrough Report Process Management
+      1 Triple-Based[ref] Canvas + Walkthrough Report Process Management
       </h3>
       <div className='productSubTitle'>
       SpreadSheet UI Deployment
@@ -396,33 +396,23 @@ Each co-venturer has a right to tag-along to another parties' sale of JV equity.
       <div className='productSubTitle'>
        System Integration
       </div>
-
-      <h3 className='productTitle'>
-    2 FormSheet To SBRM Population
-    </h3>
-
     <h3 className='productTitle'>
-
-    3 FormSheet Upload To Model AI Processing
+    2 FormSheet Upload To SBRM Model AI Processing
     </h3>
-
     <h3 className='productTitle'>
-
-    4 Logical Auditing Processes: AuditChain Paccioli Integration
+    3 HardCoded Auditing Programs: AuditChain Paccioli Integration
     </h3>
-
     <h3 className='productTitle'>
-
-    5 Contextual Chat Assistance
+    4 Contextual Chat Assistance
     </h3>
 
     <div className='productSubTitle'>
     vertical support
     Rolling implementations and products
-    mermaid, react, api, xule, xbrl,  process management
-    canvas, model library, ai docuementation, chat
-    auditchain-jinsei ai modules + luca + luciano sbrm and more reporting software for quantexa vertical
-    Ontology libraries from oxford semantics and dfrnt + jinsei.ai + api/ui distribution
+    Mermaid, React, RDF, API Rest + Graph, Xule, xbrl,  process management
+    sheet + canvas UI, model library, LLM documentation, Chat GPT
+    jinsei.ai modules + luca + luciano sbrm UI and engine reporting software for quantexa vertical.
+    Ontology engines from oxford semantics and dfrnt
     </div>
     <h2 className='topicTitle' id='Appendix'>
     Research and Implementation Budget
@@ -430,15 +420,15 @@ Each co-venturer has a right to tag-along to another parties' sale of JV equity.
 
     <div >
     <div className='aboutJinsei2'>
-  Quantexa approved budget.
+  Quantexa and QJA board approved budget.
   </div>
 
     <div className='aboutJinsei2'>
-  If the JV's operations run over budget, what insurance plan is installed by the board to prevent insolvency?
+  An insurance package for budget exhaustion will be ordered before operations.
   </div>
 
   <div className='aboutJinsei2'>
-Cross territory versions of the QJA solutions are made on enterprise client demand and will be incorpated into the development budget at that time.
+Cross territory versions of the QJA solutions are made on enterprise client demand and will be incorpated into the development budget at a later time.
   </div>
     <table className='xlsx-tablez'>
     <thead>
@@ -475,7 +465,7 @@ Cross territory versions of the QJA solutions are made on enterprise client dema
     Upon the ratification of this JV by the co-venturers the Research and Implementation Budget is issued.
   </div>
     <div className='aboutJinsei2'>
-    This term sheet is editable. Email henrik@jinsei.ai
+    Suggest. Email: henrik@jinsei.ai
   </div>
     </div>
     </div>
