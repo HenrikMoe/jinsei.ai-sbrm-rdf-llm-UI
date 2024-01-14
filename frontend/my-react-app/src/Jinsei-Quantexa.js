@@ -100,35 +100,36 @@ const About = () => {
 JV Introduction
       </h2>
       <div className='aboutJinsei2'>
-      The main directive of this joint venture is to research, develop and distribute Quantexa-Jinsei.ai-Auditchain's (QJA) Standard Business Report Models [<a href='https://www.omg.org/hot-topics/standard-business-report-model.htm'>ref</a>] with Artificial Intelligence[ref] (SBRM+AI) vertical solution software to Quantexa's enterprise market.
+      The main directive of this joint venture
+       is to research, develop and distribute Quantexa-Jinsei.ai-Auditchain's (QJA) Standard Business Report Models [<a href='https://www.omg.org/hot-topics/standard-business-report-model.htm'>ref</a>] with Artificial Intelligence [<a href='https://github.com/HenrikMoe/jinsei-ai-reports'>ref</a>] (SBRM+AI) vertical solution software to Quantexa's enterprise market.
       </div>
       <div className='aboutJinsei2'>
-      The new software will be developed leveraging technology and IP[ref] previously developed by the co-venturers, including AuditChain's Object Management Group SBRM UI and Jinsei.ai's GPT and knowledge based reporting LLMs. The JV will introduce original solutions through collaborative development.
+      The new software will be developed leveraging technology and IP[ref] previously developed by the co-venturers, including AuditChain's model agnostic Luca UI and Jinsei.ai's GPT and knowledge based reporting LLMs. The JV will introduce original solutions through collaborative development.
       </div>
       <div className='aboutJinsei2'>
       Quantexa-Jinsei.ai-Auditchain's (QJA) SBRM+AI solution suite is designed to be licensable to Quantexa's enterpirse partners, enabling scalable revenue for Quantexa with a fixed licensing schedule for the the JV.
       </div>
       <div className='aboutJinsei2'>
-      The scope of the JV's responsibilties include research, development, and implementation of the solution suite with Quantexa's client product offering.
+      The scope of the JV's responsibilties include research, development, and implementation of the solution suite within Quantexa's client services.
       </div>
       <div className='aboutJinsei2'>
-      Enterprises within Quantexa's client base can extract major advantages from licensing QJA SBRM+AI from Quantexa.
+      Quantexa's enterprises client base can extract major advantages from licensing QJA SBRM+AI from Quantexa.
       For example, an enterprise's audit team will be empowered with tools that shred hundreds of hours off their work schedule. Clients will be able to remove whole entities from the process of uploading their financial disclsoures with the SEC.
       </div>
       <div className='aboutJinsei2'>
       Given the benefits of financial disclsoure for economic empowerment and activity[ref], alongside Congress's demand for Financial Data Transparency [<a href='https://www.congress.gov/bill/117th-congress/senate-bill/4295'>FDTA Act</a>], modern standardized disclosure tool suite assets are growing in value.
       </div>
       <div className='aboutJinsei2'>
-      QJA SBRM+AI from Quantexa will support ESMA, APAC, and SEC accounting standards, making it a perfect fit for Quantexa's growing global enterpirse market[ref].
+      QJA SBRM+AI from Quantexa will support custom triple-based [<a href='https://www.oxfordsemantic.tech/faqs/what-is-a-triple'>ref</a>] reporting models other than SBRM, including accounting standards from the ESMA, APAC, and the SEC. Making QJA a great fit for Quantexa's growing global enterpirse market[ref].
         </div>
+      <div className='aboutJinsei2'>
+      The ultimate mission of this JV is to achieve maximum enterprise distribution amongst Quantexa's market base. This is encouraged by JV licensing terms that align Jinsei.ai and AuditChain's profit risk to the scalable performance Quantexa derives from the project.
+      </div>
       <div className='aboutJinsei2'>
       Auditchain's Luca and Paccioli[ref] applications along with Jinsei.ai's Luciano[ref] project are technologies licensed to QJA in exchange for equity in the JV.
       </div>
       <div className='aboutJinsei2'>
-      Maximum enterprise distribution amongst Quantexa's market base is the ultimate mission of this JV. It is achieved via licensing terms that align Jinsei.ai and AuditChain's profit risk to the scalable performance Quantexa derives from the project.
-      </div>
-      <div className='aboutJinsei2'>
-    Jinsei.ai and Auditchain's cutting edge financial disclosure solutions coupled with Quantexa's enterprise partners as a distribution package make the Quantexa-Jinsei-Auditchain (QJA) JV a valuable asset within Quantexa Corporation.
+    Jinsei.ai and Auditchain's cutting edge financial disclosure solutions coupled with Quantexa's enterprise partners for distribution make the Quantexa-Jinsei-Auditchain (QJA) JV a valuable asset within Quantexa Corporation.
       </div>
 
 
@@ -154,11 +155,11 @@ JV Introduction
       </div>
 
       <div className='aboutJinsei2'>
-      The QJA SBRM+AI solution will be licensed to Quantexa from the JV on a schedule defined below, subject to revision and approval by the board after ratification of this document.
+      The QJA SBRM+AI solution will be licensed to Quantexa from the JV on a schedule defined below, subject to revision and approval by the board after the ratification of this document.
       </div>
 
       <div className='aboutJinsei2'>
-    QJA SBRM+AI solution development and implementation responsibility is with the JV and Quantexa.
+     The JV and all co-venturers are responsible for QJA SBRM+AI solution development and implementation.
      </div>
      <div className='aboutJinsei2'>
      The sandbox is defined as QJA SBRM+AI solution development and implementation environments.
@@ -202,7 +203,7 @@ JV Introduction
   </ul>
 
      <div className='aboutJinsei4'>
-     The joint venture will be an LLC incorporated in CA or Delaware.  Jinsei-Quantexa-Auditchain LLC - CA or DE.
+     The joint venture will be an LLC incorporated in CA or DE.
 
      </div>
      <ul className="bulletedList">
@@ -210,7 +211,7 @@ JV Introduction
       <li>SoS ID: </li>
     </ul>
      <div className='aboutJinsei2'>
-     Co-venturers will own one LLC equity type.
+     Co-venturers will own one equity type.
     </div>
      <div className='aboutJinsei4'>
      The co-venturers will hold the following equity in Quantexa-Jinsei-Auditchain LLC:
@@ -226,7 +227,7 @@ JV Introduction
 
 
  <div className='aboutJinsei2'>
- QJA SBRM+AI license term sheet:
+ QJA SBRM+AI software license term sheet:
  </div>
     <div className="xlsxView">
     <iframe className="sheetView"     style={{ width: '100%', height: '300px' }} // Set the desired height as well
@@ -252,7 +253,7 @@ All propriterty software licened to Quantexa-Jinsei-Auditchain will remain confi
 </div>
 
 <div className='aboutJinsei2'>
-After 1 year of integration of QJA SBRM+AI, a % of licensing fee distributions are required to be re-invested in board approved QJA interests. For example, Jinsei Corp subsidiaries like QJA that support future or SBRM+AI Quantexa-licensed solution interests. QJA will acquire equity in the subsidiary project(s) through this process.
+After 1 year of integration of QJA SBRM+AI, a % of licensing fee distributions are required to be re-invested in QJA interests. For example, co-venturer subsidiaries supporting similar or integratable business process management use cases.
   </div>
   <div className='aboutJinsei2'>
   The JV's SBRM+AI license schedule is not terminable upon sucessful implementation within Quantexa's client vertical until the end of the license termsheet.
@@ -262,7 +263,7 @@ After 1 year of integration of QJA SBRM+AI, a % of licensing fee distributions a
 Distributions
 </h2>
     <div className='aboutJinsei2'>
-      The JV's licensing revenue distributions will be issued to co-venturers after operating and reinvestment schedule costs are paid on an annual basis.
+      The JV's licensing revenue distributions will be issued to co-venturers after operating and reinvestment schedule costs are paid annually.
   </div>
         <div className='aboutJinsei2'>
   Option equity offers will be available to the JV for Jinsei Corp lead SBRM+AI and RDF analytics solutions with other enterprise distributors.
