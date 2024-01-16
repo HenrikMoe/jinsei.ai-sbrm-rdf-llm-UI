@@ -51,7 +51,7 @@ const AppRoutes = () => {
     API.sendUserInfo(info)
 
   }
-
+//        <Route path="/quantexa-jinsei-auditchain" element={<QuantexaJinsei />} /> {/* Add TermsOfService component */}
   return (
     <div>
     <DarkModeProvider>
@@ -64,7 +64,6 @@ const AppRoutes = () => {
         <Route path="/tos" element={<TermsOfService />} /> {/* Add TermsOfService component */}
         <Route path="/timeline" element={<Timeline />} /> {/* Add TermsOfService component */}
         <Route path="/about" element={<About />} /> {/* Add TermsOfService component */}
-        <Route path="/quantexa-jinsei-auditchain" element={<QuantexaJinsei />} /> {/* Add TermsOfService component */}
 
         <Route path="/cmxsd" element={<XMLViewer />} /> {/* Add TermsOfService component */}
         <Route path="/report-parts-rules-defxml" element={<XMLViewer2 />} /> {/* Add TermsOfService component */}
