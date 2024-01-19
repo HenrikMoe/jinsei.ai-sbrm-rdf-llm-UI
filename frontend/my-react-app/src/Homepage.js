@@ -226,7 +226,7 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Fintech integration with standardized financial models.')}
+  {t('Optimize your business with ai-powered standardized financial disclosure and analysis.')}
 </div>
 
   </div>
@@ -259,12 +259,12 @@ function Homepage() {
 <div><img className='icon1wrap' src={`${process.env.PUBLIC_URL}/connection.png`}/></div>
 </div>
     <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-      {t('Partnering with groups actively leveraging xbrl, ACTUS, SBRM, FIBO, LEI and more financial modeling standards.')}
+      {t('Actively leveraging inline and traditional xbrl, SBRM (OMG), US Gaap, IFRS, ACTUS, FIBO, LEI, RDF and more modeling standards.')}
     </div>
 
 
       <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Jinsei.ai-Luciano prototypes independent IP with hundreds of financial management use cases.')}
+        {t('Jinsei.ai-Luciano prototypes proprietary IP with hundreds of financial management use cases.')}
       </div>
 
       </div>

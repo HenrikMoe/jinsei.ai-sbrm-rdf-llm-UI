@@ -14,9 +14,9 @@ const Header = ({ currentRoute, userInfo }) => {
   const sourceButtons = [
     { label: 'About', url: '/about' },
     { label: 'Timeline', url: 'https://jinsei.ai/timeline' },
-    { label: 'X/Twitter', url: 'https://twitter.com/jinseicorp' },
-    { label: 'White-Paper', url: 'https://docs.google.com/document/d/1m_ZNJheDIbt9JHsljOIoZ6awDcaWswWgvlRDGKK3vSE/edit?usp=sharing' },
-    { label: 'Deck', url: 'https://drive.google.com/file/d/1JrjXCzGImy7K36S9duByjM5D7a4xpgCq/view?usp=sharing' },
+    { label: 'X', url: 'https://twitter.com/jinseicorp' },
+    // { label: 'White-Paper', url: 'https://docs.google.com/document/d/1m_ZNJheDIbt9JHsljOIoZ6awDcaWswWgvlRDGKK3vSE/edit?usp=sharing' },
+    // { label: 'Deck', url: 'https://drive.google.com/file/d/1JrjXCzGImy7K36S9duByjM5D7a4xpgCq/view?usp=sharing' },
     { label: 'GitHub', url: 'https://github.com/jinsei-ai/' },
     { label: 'Privacy', url: 'https://jinsei.ai/privacy' },
     { label: 'Service', url: 'https://jinsei.ai/tos' },
