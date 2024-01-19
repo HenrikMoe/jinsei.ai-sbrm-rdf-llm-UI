@@ -226,7 +226,7 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Optimize your business with ai-powered standardized financial disclosure and analysis.')}
+  {t('Optimize your business with ai-assisted disclosure, analysis, and hosting management. Enabling modern data standards.')}
 </div>
 
   </div>
@@ -236,8 +236,13 @@ function Homepage() {
 <div><img className='icon2wrap' src={`${process.env.PUBLIC_URL}/partner.png`}/></div>
 <div><img className='icon1wrap' src={`${process.env.PUBLIC_URL}/document.png`}/></div>
 </div>
-<div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Innovative license bootstrapping specialized in LLM threading and training.')}
+
+<div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
+  {t('Actively leveraging xbrl, SBRM (OMG), US Gaap, IFRS, ACTUS, FIBO, LEI, RDF and more modeling standards.')}
+</div>
+
+<div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
+  {t('Open source AI achitecture and data. Multi-formatted APIs and web clients ready for integration with your system. Contact >>> henrik@jinsei.ai')}
 </div>
 </div>
 
@@ -258,14 +263,15 @@ function Homepage() {
 <div><img className='icon2wrap' src={`${process.env.PUBLIC_URL}/manage.png`}/></div>
 <div><img className='icon1wrap' src={`${process.env.PUBLIC_URL}/connection.png`}/></div>
 </div>
-    <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-      {t('Actively leveraging inline and traditional xbrl, SBRM (OMG), US Gaap, IFRS, ACTUS, FIBO, LEI, RDF and more modeling standards.')}
+
+<div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
+  {t('Jinsei.ai-Luciano prototypes proprietary IP with hundreds of financial management use cases.')}
+</div>
+
+    <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
+      {t('Utilize open LLM libraries including document cleaning and deep-context-GPT user experiences.')}
     </div>
 
-
-      <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Jinsei.ai-Luciano prototypes proprietary IP with hundreds of financial management use cases.')}
-      </div>
 
       </div>
 
