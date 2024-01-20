@@ -226,7 +226,7 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Optimize your business with ai-assisted disclosure, analysis, and hosting management. Enabling modern data standards.')}
+  {t('Optimize your business with ai-assisted financial disclosures, analysis, and hosting.')}
 </div>
 
   </div>
