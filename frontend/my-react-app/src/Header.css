@@ -105,21 +105,21 @@
     transition: left 0.3s ease-in-out; /* Change "right" to "left" */
     z-index: 1000;
     border-radius: 7px;
-    height: 320px; /* Adjust the height to your preference */
+    height: 260px; /* Adjust the height to your preference */
 
   }
 
   /* Set height to 28% on desktop screens */
   @media (min-width: 768px) {
     .menu-container {
-      height: 320px; /* Adjust the height to your preference */
+      height: 270px; /* Adjust the height to your preference */
     }
   }
 
   /* Set height to 20% on mobile screens */
   @media (max-width: 767px) {
     .menu-container {
-      height: 420px; /* Adjust the height to your preference */
+      height: 360px; /* Adjust the height to your preference */
     }
   }
 

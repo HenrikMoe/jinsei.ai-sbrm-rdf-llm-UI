@@ -22,6 +22,10 @@ const Header = ({ currentRoute, userInfo }) => {
     { label: 'Service', url: 'https://jinsei.ai/tos' },
   ];
 
+ //  <button className="button" onClick={toggleDarkMode}>
+ //   {isDarkMode ? 'Light' : 'Dark'}
+ // </button>
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -115,9 +119,7 @@ const Header = ({ currentRoute, userInfo }) => {
     {button.label}
   </Link>
         ))}
-        <button className="button" onClick={toggleDarkMode}>
-         {isDarkMode ? 'Light' : 'Dark'}
-       </button>
+
       </div>
     </div>
 
