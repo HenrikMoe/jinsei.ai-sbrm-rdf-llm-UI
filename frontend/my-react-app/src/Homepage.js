@@ -226,7 +226,7 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Optimize your business with ai-assisted financial disclosures, analysis, and hosting.')}
+  {t('Building financial disclosure infrastructure for the 21st century.')}
 </div>
 
   </div>
@@ -238,11 +238,11 @@ function Homepage() {
 </div>
 
 <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Actively leveraging xbrl, SBRM (OMG), US Gaap, IFRS, ACTUS, FIBO, LEI, RDF and more modeling standards.')}
+  {t('Empowering custom xbrl reporting models, including SBRM (OMG), US Gaap, and IFRS.')}
 </div>
 
 <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Open source AI achitecture and data. Multi-formatted APIs and web clients ready for integration with your system. Contact >>> henrik@jinsei.ai')}
+  {t('Elegantly supporting other RDF triple type ontology models like ACTUS, FIBO, and LEI. ')}
 </div>
 </div>
 
@@ -265,11 +265,11 @@ function Homepage() {
 </div>
 
 <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Jinsei.ai-Luciano prototypes proprietary IP with hundreds of financial management use cases.')}
+  {t('Jinsei.ai builds open-source and proprietary tools for managing disclosure and business processes.')}
 </div>
 
     <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-      {t('Utilize open LLM libraries including document cleaning and deep-context-GPT user experiences.')}
+      {t('Featuring open LLM libraries with document cleaning and deep-context-GPT dialogue.')}
     </div>
 
 
