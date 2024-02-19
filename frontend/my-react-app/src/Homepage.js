@@ -291,9 +291,9 @@ function Homepage() {
       </div>
 
 
-       <button onClick={handlePrototypeClick} className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
-          [Demo] Luciano
-       </button>
+      <button className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
+         henrik@jinsei.ai - reachout
+      </button>
 
 
 
@@ -305,6 +305,9 @@ function Homepage() {
 
 export default Homepage;
 
+<button onClick={handlePrototypeClick} className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
+   [Demo] Luciano
+</button>
 
 // <div style={{ marginTop: '100px', marginLeft: '40px',  marginRight: '40px'}}>
 // <h1>Seattle Method</h1>
