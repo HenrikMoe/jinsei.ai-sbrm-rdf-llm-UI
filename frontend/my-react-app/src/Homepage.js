@@ -170,7 +170,7 @@ function Homepage() {
           },
           exitBeforeEnter: true,
           config: {
-            duration: 8000,
+            duration: 29000,
           },
           delay: 1000,
           ref: springApi,
@@ -286,7 +286,7 @@ function Homepage() {
         )}
       </div>
       <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Supporting additional ERP data capture to taxonomy LLMs. ACTUS and FIBO enterprise risk analysis. ')}
+        {t('Supporting additional ERP taxonomy capture LLMs. ACTUS and FIBO enterprise risk analysis. ')}
       </div>
 
       <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
