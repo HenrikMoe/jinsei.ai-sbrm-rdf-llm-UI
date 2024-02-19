@@ -15,7 +15,6 @@ import {
 } from '@react-spring/web'
 import styles from './styles.module.css'
 
-
 function Homepage() {
   const navigate = useNavigate(); // Initialize the navigate function
   const { t, i18n } = useTranslation();
@@ -226,24 +225,25 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Building financial disclosure infrastructure for the 21st century.')}
+  {t('Financial disclosure infrastructure for the 21st century.')}
 </div>
 
   </div>
 
 <div className='firstConent'>
 <div className='iconWrap1'>
-<div><img className='icon2wrap' src={`${process.env.PUBLIC_URL}/partner.png`}/></div>
+<div><img className='icon2wrap' src={`${process.env.PUBLIC_URL}/factory-2-128.png`}/></div>
+<div><img className='icon1wrap' src={`${process.env.PUBLIC_URL}/arrow-31-128.png`}/></div>
 <div><img className='icon1wrap' src={`${process.env.PUBLIC_URL}/document.png`}/></div>
 </div>
 
 <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Empowering custom xbrl reporting models, including SBRM (OMG), US Gaap, and IFRS.')}
+  {t('Jinsei.ai distributes tools for pipelining ERP data into report taxonomy elements.')}
+</div>
 </div>
 
-<div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Supporting other RDF triple type ontology models like ACTUS, FIBO, and LEI. ')}
-</div>
+<div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
+  {t('Immediately improve accounitng and audit vertical performance.')}
 </div>
 
 <div className="timelinePosition">
@@ -265,16 +265,12 @@ function Homepage() {
 </div>
 
 <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Jinsei.ai builds open-source and proprietary tools for managing disclosure and business processes.')}
+  {t('Transform data into multiple xbrl reporting models, including SBRM (OMG), 2024 US Gaap and IFRS.')}
 </div>
-
-    <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-      {t('Featuring open LLM libraries with document cleaning and deep-context-GPT dialogue.')}
-    </div>
-
-
       </div>
-
+      <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
+        {t('ERP data cleaning proccesses with open LLMs and context-trained GPT4 co-pilot assistants.')}
+      </div>
 
       <div>
         {youtubeLink && (
@@ -289,10 +285,12 @@ function Homepage() {
           ></iframe>
         )}
       </div>
-
+      <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
+        {t('Supporting additional ERP data capture to taxonomy LLMs. ACTUS and FIBO enterprise risk analysis. ')}
+      </div>
 
       <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
-        henrik@jinsei.ai - reach out
+        henrik@jinsei.ai - Reach Out
       </a>
 
 

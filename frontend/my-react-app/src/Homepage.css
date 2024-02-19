@@ -73,7 +73,7 @@
   text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.3); /* Add text shadow for a shadow effect */
   letter-spacing: 2px; /* Adjust letter spacing as needed */
   margin-top: 50px;
-  margin-bottom: 00px;
+  margin-bottom: 50px;
   color: white;
 }
 @media (max-width: 767px) {
@@ -119,7 +119,7 @@
     margin-right: 0px;
     margin-left: -5px;
     margin-top: 100px;
-    margin-bottom: -50px;
+    margin-bottom: 50px;
 
   }
 }
@@ -171,10 +171,10 @@
   border-bottom: 2px solid black;
   border-left: 0px solid black;
   border-top: 0px solid black;
-  padding: 50px 100px; /* Increase the padding to make it bigger */
+  padding: 50px 50px; /* Increase the padding to make it bigger */
   display: block;
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions into a single property */
-
+  width: 60%;
   margin: 20px auto; /* Center the button horizontally */
   margin-top: 100px;
   margin-bottom: 100px;
@@ -190,8 +190,9 @@
   border-right: 2px solid black;
   border-bottom: 2px solid black;
   box-shadow: 20px 20px 0 rgba(255, 255, 255, 0.2); /* Light gray shadow */
-  padding: 50px 100px; /* Increase the padding to make it bigger */
+  padding: 50px 50px; /* Increase the padding to make it bigger */
   display: block;
+  width: 60%;
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions into a single property */
   cursor: pointer;
 }
@@ -355,6 +356,7 @@
     margin-right: 0px;
     width: 80px;
     margin-top: 50px;
+    display: none;
 
 
   }
@@ -374,14 +376,14 @@
 .firstConent{
   background-color: darksalmon;
   padding: 10px;
-  padding-bottom: 150px;
+  padding-bottom: 10px;
 }
 
 @media (max-width: 767px) {
   .firstConent {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-right: 0px;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
     margin-left: -5px;
 
   }
@@ -408,8 +410,9 @@
   .timeline-button,
   .timeline-button2 {
     font-size: 20px; /* Further decrease font size for mobile */
-    padding: 15px 30px; /* Adjust padding for mobile */
+    padding: 15px 10px; /* Adjust padding for mobile */
     box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2); /* Smaller shadow for mobile */
+    width: 80%;
   }
 
 }
