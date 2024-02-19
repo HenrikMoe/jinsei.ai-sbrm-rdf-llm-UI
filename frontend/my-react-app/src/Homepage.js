@@ -242,7 +242,7 @@ function Homepage() {
 </div>
 
 <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Elegantly supporting other RDF triple type ontology models like ACTUS, FIBO, and LEI. ')}
+  {t('Supporting other RDF triple type ontology models like ACTUS, FIBO, and LEI. ')}
 </div>
 </div>
 
@@ -291,9 +291,9 @@ function Homepage() {
       </div>
 
 
-      <button className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
-         henrik@jinsei.ai - reachout
-      </button>
+      <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
+        henrik@jinsei.ai - reach out
+      </a>
 
 
 
