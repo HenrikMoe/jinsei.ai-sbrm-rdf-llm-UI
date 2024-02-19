@@ -41,7 +41,7 @@ const AppRoutes = () => {
 
 
   useEffect(() => {
-    document.title = 'Jinsei.ai - Standards Based Taxonomy GUI'; // Change this title
+    document.title = 'Jinsei.ai - AI ERP Taxonomy Capture and Process Management'; // Change this title
   }, []);
 
   const [userInfo, setUserInfo] = useState(null)
