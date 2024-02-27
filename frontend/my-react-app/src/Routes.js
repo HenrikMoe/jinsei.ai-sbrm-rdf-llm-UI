@@ -41,8 +41,9 @@ const AppRoutes = () => {
 
 
   useEffect(() => {
-    document.title = 'Jinsei.ai - AI ERP Taxonomy Capture and Process Management'; // Change this title
+    document.title = 'AI Powered Equity & Enterprise Data Mapping for Analysis & Reports'; // Change this title
   }, []);
+
 
   const [userInfo, setUserInfo] = useState(null)
 

@@ -225,7 +225,7 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Financial disclosure infrastructure for the 21st century.')}
+  {t('Disclosure infrastructure for the 21st century.')}
 </div>
 
   </div>
@@ -238,12 +238,12 @@ function Homepage() {
 </div>
 
 <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Jinsei.ai distributes tools for pipelining ERP data into report taxonomy elements.')}
+  {t('Relating enterprise and private equity data to report elements for hundreds of reporting pipelines.')}
 </div>
 </div>
 
 <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Immediately improve accounitng and audit vertical performance.')}
+  {t('Improve accounitng and audit performance.')}
 </div>
 
 <div className="timelinePosition">
@@ -265,11 +265,11 @@ function Homepage() {
 </div>
 
 <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Transform data into multiple xbrl reporting models, including SBRM (OMG), 2024 US Gaap and IFRS.')}
+  {t('End-to-end authority solutions. Transform into hundreds of formats.')}
 </div>
       </div>
       <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('ERP data cleaning proccesses with open LLMs and context-trained GPT4 co-pilot assistants.')}
+        {t('GPT-4 assistants with report variance knowledge.')}
       </div>
 
       <div>
@@ -286,11 +286,11 @@ function Homepage() {
         )}
       </div>
       <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Supporting additional ERP taxonomy capture LLMs. ACTUS and FIBO enterprise risk analysis. ')}
+        {t('Contact for an engine demo. ')}
       </div>
 
       <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
-        henrik@jinsei.ai - Reach Out
+        Partnerships/Demo
       </a>
 
 
