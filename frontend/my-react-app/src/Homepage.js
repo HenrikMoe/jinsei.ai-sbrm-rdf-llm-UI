@@ -225,7 +225,7 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Disclosure infrastructure for the 21st century.')}
+  {t('Disclosure data infrastructure for the 21st century.')}
 </div>
 
   </div>
@@ -238,13 +238,15 @@ function Homepage() {
 </div>
 
 <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Relating enterprise and private equity data to report elements for hundreds of reporting pipelines.')}
+  {t('Relating enterprise and private equity data to report elements for hundreds of reporting taxonomies.')}
 </div>
 </div>
 
 <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Improve accounitng and audit performance.')}
+  {t('Plug in Jinsei.ai to immediately improve accounitng, audit, and analysis performance.')}
 </div>
+
+
 
 <div className="timelinePosition">
   <iframe
@@ -265,7 +267,7 @@ function Homepage() {
 </div>
 
 <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('End-to-end authority solutions. Transform into hundreds of formats.')}
+  {t('End-to-end authority solutions. Transform data into dozens of formats.')}
 </div>
       </div>
       <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
@@ -286,11 +288,11 @@ function Homepage() {
         )}
       </div>
       <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Contact for an engine demo. ')}
+        {t('Contact for a demo. ')}
       </div>
 
       <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
-        Partnerships/Demo
+        Demo & Partnerships
       </a>
 
 

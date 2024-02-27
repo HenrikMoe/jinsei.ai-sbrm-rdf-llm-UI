@@ -41,7 +41,7 @@ const AppRoutes = () => {
 
 
   useEffect(() => {
-    document.title = 'AI Powered Equity & Enterprise Data Mapping for Analysis & Reports'; // Change this title
+    document.title = 'Automate Equity & Enterprise Data Mapping For Reports & Analysis With AI.'; // Change this title
   }, []);
 
 
