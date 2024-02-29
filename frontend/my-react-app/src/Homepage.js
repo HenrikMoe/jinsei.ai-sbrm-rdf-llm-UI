@@ -225,7 +225,7 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Disclosure data infrastructure for the 21st century.')}
+  {t('Siloed LLM data infrastructure for enterprise reporting and analysis.')}
 </div>
 
   </div>
@@ -243,7 +243,7 @@ function Homepage() {
 </div>
 
 <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Plug in Jinsei.ai to immediately improve accounitng, audit, and analysis performance.')}
+  {t('Plug in Jinsei.ai to improve accounitng, audit, and analysis performance.')}
 </div>
 
 
@@ -288,11 +288,11 @@ function Homepage() {
         )}
       </div>
       <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Contact for a demo. ')}
+        {t('Contact for a Jinsei.ai demo and data diagnosis. ')}
       </div>
 
       <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
-        Demo & Partnerships
+        Reach Out
       </a>
 
 
