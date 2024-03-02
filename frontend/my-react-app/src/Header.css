@@ -52,11 +52,12 @@
     color: black;
     text-decoration: none;
     font-size: 16px;
+
     padding: 10px 5px; /* Adjust the vertical and horizontal padding */
     display: block; /* Display buttons as block elements */
     margin-bottom: 5px; /* Reduce the vertical margin */
     background-color: transparent; /* Set the background to be transparent */
-    border: none; /* Remove the border */
+    border-bottom: 1px black solid; /* Remove the border */
   }
 
   .title {
@@ -105,20 +106,31 @@
     transition: left 0.3s ease-in-out; /* Change "right" to "left" */
     z-index: 1000;
     border-radius: 7px;
-    height: 280px; /* Adjust the height to your preference */
+    height: 265px; /* Adjust the height to your preference */
 
   }
 
   /* Set height to 20% on mobile screens */
   @media (max-width: 767px) {
     .menu-container {
-      height: 380px; /* Adjust the height to your preference */
+      height: 375px; /* Adjust the height to your preference */
     }
   }
 
   .menu-container.open {
-    left: 0; /* Change "right" to "left" to bring the menu in from the left when open */
+    border: 2px navy solid;
+    left: 500px; /* Change "right" to "left" to bring the menu in from the left when open */
+    top: 100px;
   }
+
+  @media (max-width: 767px) {
+    .menu-container.open {
+      left: 70px; /* Change "right" to "left" to bring the menu in from the left when open */
+      top: 100px;
+    }
+  }
+
+
 
 .menu-button {
   color: black;
