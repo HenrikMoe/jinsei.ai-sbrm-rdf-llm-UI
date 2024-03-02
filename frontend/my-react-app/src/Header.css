@@ -49,7 +49,7 @@
   }
 
   .button {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 16px;
     padding: 10px 5px; /* Adjust the vertical and horizontal padding */
@@ -99,27 +99,27 @@
   .menu-container {
     position: fixed;
     top: 5px; /* Adjust for the header height */
-    left: -120px; /* Start menu off-screen to the left */
-    width: 120px; /* Adjust the width as needed */
-    background-color: rgba(18, 18, 18, 0.9);
+    left: -220px; /* Start menu off-screen to the left */
+    width: 220px; /* Adjust the width as needed */
+    background-color: white;
     transition: left 0.3s ease-in-out; /* Change "right" to "left" */
     z-index: 1000;
     border-radius: 7px;
-    height: 260px; /* Adjust the height to your preference */
+    height: 280px; /* Adjust the height to your preference */
 
   }
 
   /* Set height to 28% on desktop screens */
   @media (min-width: 768px) {
     .menu-container {
-      height: 270px; /* Adjust the height to your preference */
+      height: 280px; /* Adjust the height to your preference */
     }
   }
 
   /* Set height to 20% on mobile screens */
   @media (max-width: 767px) {
     .menu-container {
-      height: 360px; /* Adjust the height to your preference */
+      height: 280px; /* Adjust the height to your preference */
     }
   }
 
@@ -197,6 +197,18 @@
   display: flex;
 }
 
+.button8 {
+  color: black;
+  font-size: 20px; /* Further decrease font size for smaller screens */
+  padding: 15px 30px; /* Adjust padding for smaller screens */
+}
+
+@media (max-width: 768px) {
+  .button8 {
+    font-size: 20px; /* Further decrease font size for smaller screens */
+    padding: 15px 30px; /* Adjust padding for smaller screens */
+  }
+}
 @media (max-width: 768px) {
   .cornerWrap {
     padding: 8px 16px; /* Adjust padding for smaller screens */
