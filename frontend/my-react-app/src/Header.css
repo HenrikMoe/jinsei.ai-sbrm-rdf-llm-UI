@@ -113,7 +113,7 @@
   /* Set height to 20% on mobile screens */
   @media (max-width: 767px) {
     .menu-container {
-      height: 375px; /* Adjust the height to your preference */
+      height: 380px; /* Adjust the height to your preference */
     }
   }
 
