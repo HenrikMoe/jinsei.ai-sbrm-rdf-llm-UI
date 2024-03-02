@@ -112,14 +112,14 @@
   /* Set height to 28% on desktop screens */
   @media (min-width: 768px) {
     .menu-container {
-      height: 280px; /* Adjust the height to your preference */
+      height: 380px; /* Adjust the height to your preference */
     }
   }
 
   /* Set height to 20% on mobile screens */
   @media (max-width: 767px) {
     .menu-container {
-      height: 280px; /* Adjust the height to your preference */
+      height: 380px; /* Adjust the height to your preference */
     }
   }
 
