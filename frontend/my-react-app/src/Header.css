@@ -113,7 +113,7 @@
   /* Set height to 20% on mobile screens */
   @media (max-width: 767px) {
     .menu-container {
-      height: 385px; /* Adjust the height to your preference */
+      height: 400px; /* Adjust the height to your preference */
     }
   }
 
@@ -126,7 +126,7 @@
   @media (max-width: 767px) {
     .menu-container.open {
       left: 0px; /* Change "right" to "left" to bring the menu in from the left when open */
-      top: 100px;
+      top: 105px;
     }
   }
 
