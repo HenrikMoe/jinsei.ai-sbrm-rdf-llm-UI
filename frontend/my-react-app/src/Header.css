@@ -125,7 +125,7 @@
 
   @media (max-width: 767px) {
     .menu-container.open {
-      left: 70px; /* Change "right" to "left" to bring the menu in from the left when open */
+      left: 0px; /* Change "right" to "left" to bring the menu in from the left when open */
       top: 100px;
     }
   }
