@@ -12,8 +12,8 @@ const Header = ({ currentRoute, userInfo }) => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   const sourceButtons = [
-    { label: 'About', url: '/about' },
-    { label: 'Timeline', url: 'https://jinsei.ai/timeline' },
+    { label: 'About Jinsei.ai', url: '/about' },
+    { label: 'Consulting Timeline', url: 'https://jinsei.ai/timeline' },
     // { label: 'White-Paper', url: 'https://docs.google.com/document/d/1m_ZNJheDIbt9JHsljOIoZ6awDcaWswWgvlRDGKK3vSE/edit?usp=sharing' },
     // { label: 'Deck', url: 'https://drive.google.com/file/d/1JrjXCzGImy7K36S9duByjM5D7a4xpgCq/view?usp=sharing' },
       { label: 'Architecture White Paper', url: 'https://pdfhost.io/v/OYsngYykU_PTBO_TECHs_CryptoCount_AI_APP_TRANSACTION_TO_ACCOUNTING_ENTRIES' },
