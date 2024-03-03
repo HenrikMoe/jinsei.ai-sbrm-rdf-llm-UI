@@ -103,7 +103,7 @@
     left: -220px; /* Start menu off-screen to the left */
     width: 220px; /* Adjust the width as needed */
     background-color: white;
-    transition: left 0.3s ease-in-out; /* Change "right" to "left" */
+    transition: left 0.4s ease-in-out; /* Change "right" to "left" */
     z-index: 1000;
     border-radius: 7px;
     height: 265px; /* Adjust the height to your preference */
@@ -119,8 +119,8 @@
 
   .menu-container.open {
     border: 2px navy solid;
-    left: 500px; /* Change "right" to "left" to bring the menu in from the left when open */
-    top: 100px;
+    left: 00px; /* Change "right" to "left" to bring the menu in from the left when open */
+    top: 105px;
   }
 
   @media (max-width: 767px) {
