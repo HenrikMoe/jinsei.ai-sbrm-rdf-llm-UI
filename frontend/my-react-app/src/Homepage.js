@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Homepage.css'; // Import the CSS file for styling
 import { useTranslation } from 'react-i18next';
 import { useDarkMode } from './DarkModeContext';
+import axios from 'axios';
+
 // import ParticlesAnimation from './ParticlesAnimation';
 import {
   useSpringRef,
@@ -20,7 +22,45 @@ function Homepage() {
   const { t, i18n } = useTranslation();
 
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const pdfUrl = `${process.env.PUBLIC_URL}/Jinsei-ai.pdf`;
+   const pdfFileName = 'Jinsei-ai.pdf';
 
+  const DownloadButton = ({ pdfUrl, pdfFileName }) => {
+    const handleDownload = async () => {
+      try {
+        // Fetch the PDF file
+        const response = await axios.get(pdfUrl, {
+          responseType: 'blob',
+        });
+
+        // Create a Blob from the response data
+        const blob = new Blob([response.data], { type: 'application/pdf' });
+
+        // Create a download link
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', pdfFileName);
+
+        // Append the link to the document
+        document.body.appendChild(link);
+
+        // Trigger the click event on the link
+        link.click();
+
+        // Remove the link from the document
+        document.body.removeChild(link);
+      } catch (error) {
+        console.error('Error downloading PDF:', error);
+      }
+    };
+
+    return (
+      <button className={`prototype-buttonw ${isDarkMode ? 'dark-mode-button' : ''}`} onClick={handleDownload}>
+        Download Use Case
+      </button>
+    );
+  };
 
   const handleClick = async () => {
     try {
@@ -225,7 +265,8 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Siloed LLM data infrastructure for enterprise reporting and analysis.')}
+  {t('Nerual network infrastructure for ERP tracking, reporting and analysis.')}
+   <DownloadButton pdfUrl={pdfUrl} pdfFileName={pdfFileName} />
 </div>
 
   </div>
