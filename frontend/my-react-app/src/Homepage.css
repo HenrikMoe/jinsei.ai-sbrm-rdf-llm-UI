@@ -78,6 +78,7 @@
 }
 @media (max-width: 767px) {
   .arriving-text {
+    margin-top: -200px;
     margin-right: 0px;
     margin-left: -5px;
 
