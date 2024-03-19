@@ -329,7 +329,7 @@ function Homepage() {
         )}
       </div>
       <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Contact for a Jinsei.ai demo and data diagnosis. ')}
+        {t('Contact Jinsei.ai for a demo and data diagnosis. ')}
       </div>
 
       <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>

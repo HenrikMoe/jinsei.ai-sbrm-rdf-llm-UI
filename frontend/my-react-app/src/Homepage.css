@@ -167,12 +167,12 @@
   background-color: lightcyan; /* Green color */
   color: black;
   border-radius: 15px;
-  font-size: 36px; /* Increase the font size to make it bigger */
+  font-size: 20px; /* Increase the font size to make it bigger */
   border-right: 2px solid black;
   border-bottom: 2px solid black;
   border-left: 0px solid black;
   border-top: 0px solid black;
-  padding: 50px 50px; /* Increase the padding to make it bigger */
+  padding: 10px 10px; /* Increase the padding to make it bigger */
   display: block;
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions into a single property */
   width: 60%;
@@ -187,11 +187,9 @@
   color: white;
 
   border-radius: 15px;
-  font-size: 36px; /* Increase the font size to make it bigger */
   border-right: 2px solid black;
   border-bottom: 2px solid black;
   box-shadow: 20px 20px 0 rgba(255, 255, 255, 0.2); /* Light gray shadow */
-  padding: 50px 50px; /* Increase the padding to make it bigger */
   display: block;
   width: 60%;
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions into a single property */
@@ -423,12 +421,12 @@
  background-color: lightcyan; /* Green color */
  color: black;
  border-radius: 15px;
- font-size: 36px; /* Increase the font size to make it bigger */
+ font-size: 20px; /* Increase the font size to make it bigger */
  border-right: 2px solid black;
  border-bottom: 2px solid black;
  border-left: 0px solid black;
  border-top: 0px solid black;
- padding: 20px 20px; /* Increase the padding to make it bigger */
+ padding: 10px 10px; /* Increase the padding to make it bigger */
  display: block;
  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions into a single property */
  width: 60%;
@@ -443,11 +441,9 @@
  color: white;
 
  border-radius: 15px;
- font-size: 36px; /* Increase the font size to make it bigger */
  border-right: 2px solid black;
  border-bottom: 2px solid black;
  box-shadow: 15px 15px 0 rgba(255, 255, 255, 0.2); /* Light gray shadow */
- padding: 20px 20px; /* Increase the padding to make it bigger */
  display: block;
  width: 60%;
  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions into a single property */

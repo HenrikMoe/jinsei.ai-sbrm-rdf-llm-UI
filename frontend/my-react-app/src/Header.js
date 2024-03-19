@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './Header.css'; // Import the CSS file that contains your styles
 import { Link } from 'react-router-dom';
 import { useDarkMode } from './DarkModeContext';
+import axios from 'axios';
+
 
 const Header = ({ currentRoute, userInfo }) => {
   const [title] = useState('My Header');
@@ -10,13 +12,52 @@ const Header = ({ currentRoute, userInfo }) => {
   const [scrollY, setScrollY] = useState(0);
 
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const pdfUrl = `${process.env.PUBLIC_URL}/PTBO TECH's CryptoCount AI APP - TRANSACTION TO ACCOUNTING ENTRIES.pdf`;
+  const pdfFileName = 'Jinsei-ai-Applied-Engine.pdf';
+
+  const DownloadButton = ({ pdfUrl, pdfFileName }) => {
+    const handleDownload = async () => {
+      try {
+        // Fetch the PDF file
+        const response = await axios.get(pdfUrl, {
+          responseType: 'blob',
+        });
+
+        // Create a Blob from the response data
+        const blob = new Blob([response.data], { type: 'application/pdf' });
+
+        // Create a download link
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', pdfFileName);
+
+        // Append the link to the document
+        document.body.appendChild(link);
+
+        // Trigger the click event on the link
+        link.click();
+
+        // Remove the link from the document
+        document.body.removeChild(link);
+      } catch (error) {
+        console.error('Error downloading PDF:', error);
+      }
+    };
+
+    return (
+      <div onClick={handleDownload} className="button">
+        Architecture White-Paper
+      </div>
+    );
+  };
 
   const sourceButtons = [
     { label: 'About Jinsei.ai', url: '/about' },
     { label: 'Consulting Timeline', url: 'https://jinsei.ai/timeline' },
     // { label: 'White-Paper', url: 'https://docs.google.com/document/d/1m_ZNJheDIbt9JHsljOIoZ6awDcaWswWgvlRDGKK3vSE/edit?usp=sharing' },
     // { label: 'Deck', url: 'https://drive.google.com/file/d/1JrjXCzGImy7K36S9duByjM5D7a4xpgCq/view?usp=sharing' },
-      { label: 'Architecture White Paper', url: 'https://pdfhost.io/v/OYsngYykU_PTBO_TECHs_CryptoCount_AI_APP_TRANSACTION_TO_ACCOUNTING_ENTRIES' },
+    { label: 'Architecture White-Paper', pdfUrl: pdfUrl, pdfFileName: pdfFileName }, // Pass PDF URL and file name as props
     { label: 'GitHub', url: 'https://github.com/jinsei-ai/' },
     { label: 'Privacy', url: 'https://jinsei.ai/privacy' },
     { label: 'Service', url: 'https://jinsei.ai/tos' },
@@ -33,6 +74,7 @@ const Header = ({ currentRoute, userInfo }) => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
 
 
   // Add an event listener to the entire document
@@ -109,17 +151,21 @@ const Header = ({ currentRoute, userInfo }) => {
           ✕
         </span>
         {sourceButtons.map((button) => (
-          <Link
-    to={button.url}
-    onClick={closeMenu}
-    className="button"
-    target={button.label === 'About' || button.label === 'Timeline' ? '' : '_blank'}
-    key={button.label}
-  >
-    {button.label}
-  </Link>
-        ))}
-
+            <React.Fragment key={button.label}>
+              {button.pdfUrl ? ( // If PDF URL is provided, render DownloadButton
+                <DownloadButton pdfUrl={button.pdfUrl} pdfFileName={button.pdfFileName} />
+              ) : (
+                <Link
+                  to={button.url}
+                  onClick={closeMenu}
+                  className="button"
+                  target={button.label === 'About' || button.label === 'Timeline' ? '' : '_blank'}
+                >
+                  {button.label}
+                </Link>
+              )}
+            </React.Fragment>
+          ))}
       </div>
     </div>
 
