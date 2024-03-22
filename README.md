@@ -9,5 +9,5 @@ https://github.com/HenrikMoe/jinsei.ai-sbrm-rdf-llm-UI/blob/main/backend/server.
 ### Declaritve TS SpreadSheet UI: 
 https://github.com/HenrikMoe/jinsei.ai-sbrm-rdf-llm-UI/blob/main/frontend/my-react-app/src/dataManagement.js
 
-### Copyright 2024 property of Jinsei Corporation
+#### Copyright 2024 Jinsei Corp
  
