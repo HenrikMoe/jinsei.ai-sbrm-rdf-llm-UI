@@ -6,7 +6,7 @@ https://github.com/HenrikMoe/jinsei.ai-sbrm-rdf-llm-UI/blob/main/backend/matrixC
 ### TS Boilerplate Prompt (content) Training: 
 https://github.com/HenrikMoe/jinsei.ai-sbrm-rdf-llm-UI/blob/main/backend/server.js
 
-### Declaritve TS SpreadSheet Intetrface: 
+### Declaritve TS SpreadSheet UI: 
 https://github.com/HenrikMoe/jinsei.ai-sbrm-rdf-llm-UI/blob/main/frontend/my-react-app/src/dataManagement.js
 
 ### Copyright 2024 property of Jinsei Corporation
