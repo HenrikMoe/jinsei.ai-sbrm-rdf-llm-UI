@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Homepage.css'; // Import the CSS file for styling
 import { useTranslation } from 'react-i18next';
 import { useDarkMode } from './DarkModeContext';
+
 import axios from 'axios';
 
 // import ParticlesAnimation from './ParticlesAnimation';
