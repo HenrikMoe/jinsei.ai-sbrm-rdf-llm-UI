@@ -13,6 +13,7 @@ import { DataStoreProvider } from './DataStore'; // Import the DataStoreProvider
 import ChatGBT from './ChatGBT';
 import QuantexaJinsei from './Jinsei-Quantexa';
 
+import Shipyard from './ShipyardServices';
 
 import XMLViewer from './XMLViewer';
 import XMLViewer2 from './XMLViewer2'
@@ -85,6 +86,7 @@ const AppRoutes = () => {
         <Route path="/model-structure-types-rules-defxml" element={<XMLViewer17 />} /> {/* Add TermsOfService component */}
         <Route path="/properties-rules-defxml" element={<XMLViewer18 />} /> {/* Add TermsOfService component */}
         <Route path="/propertiesxsd" element={<XMLViewer19 />} /> {/* Add TermsOfService component */}
+        <Route path="/shipyard" element={<Shipyard />} />
 
 
 
