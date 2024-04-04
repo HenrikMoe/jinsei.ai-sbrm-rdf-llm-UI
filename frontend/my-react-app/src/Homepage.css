@@ -162,6 +162,38 @@
   }
 }
 
+.prototype-button2 {
+  background-color: lightcyan; /* Green color */
+  color: black;
+  border-radius: 15px;
+  font-size: 14px; /* Increase the font size to make it bigger */
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 0px solid black;
+  border-top: 0px solid black;
+  padding: 10px 10px; /* Increase the padding to make it bigger */
+  display: block;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions into a single property */
+  width: 20%;
+  margin: 20px auto; /* Center the button horizontally */
+  margin-top: 30px;
+  margin-bottom: 00px;
+  cursor: pointer;
+}
+
+.prototype-button2:hover {
+  background-color: #556B2F; /* Green color */
+  color: white;
+
+  border-radius: 15px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  box-shadow: 20px 20px 0 rgba(255, 255, 255, 0.2); /* Light gray shadow */
+  display: block;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions into a single property */
+  cursor: pointer;
+}
+
 /* Homepage.css */
 .prototype-button {
   background-color: lightcyan; /* Green color */
@@ -398,6 +430,15 @@
   }
 }
 
+
+@media (max-width: 768px) {
+  .prototype-button2:hover {
+    box-shadow: 10px 10px 0 rgba(255, 255, 255, 0.2); /* Light gray shadow */
+    display: block;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions into a single property */
+    cursor: pointer;
+  }
+}
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .button {
@@ -406,6 +447,7 @@
   }
 
   .prototype-button,
+  .prototype-button2,
   .timeline-button,
   .timeline-button2 {
     font-size: 20px; /* Further decrease font size for mobile */
@@ -429,9 +471,9 @@
  padding: 10px 10px; /* Increase the padding to make it bigger */
  display: block;
  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions into a single property */
- width: 60%;
+ width: 40%;
  margin: 20px auto; /* Center the button horizontally */
- margin-top: 10px;
+ margin-top: 40px;
  margin-bottom: 10px;
  cursor: pointer;
 }
@@ -445,7 +487,6 @@
  border-bottom: 2px solid black;
  box-shadow: 15px 15px 0 rgba(255, 255, 255, 0.2); /* Light gray shadow */
  display: block;
- width: 60%;
  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions into a single property */
  cursor: pointer;
 }

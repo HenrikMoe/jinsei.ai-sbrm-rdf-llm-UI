@@ -266,9 +266,13 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Nerual network infrastructure for ERP tracking, reporting and analysis.')}
+  {t('Is your enterprise ready for new data?')}
    <DownloadButton pdfUrl={pdfUrl} pdfFileName={pdfFileName} />
+   <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button2 ${isDarkMode ? 'dark-mode-button' : ''}`}>
+     Let's Build
+   </a>
 </div>
+
 
   </div>
 
@@ -280,12 +284,12 @@ function Homepage() {
 </div>
 
 <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Relating enterprise and private equity data to report elements for hundreds of reporting taxonomies.')}
+  {t('Automate data digestion to win in the 21st century. ')}
 </div>
 </div>
 
 <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Plug in Jinsei.ai to improve accounitng, audit, and analysis performance.')}
+  {t('Jinsei.ai automates data transformation. Delivering intelligent insights, transpranecy and performance.')}
 </div>
 
 
@@ -309,11 +313,12 @@ function Homepage() {
 </div>
 
 <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('End-to-end authority solutions. Transform data into dozens of formats.')}
+  {t('AI data transformation and intelligent infrastructure. ')}
 </div>
       </div>
       <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('GPT-4 assistants with report variance knowledge.')}
+        {t('Let Jinsei.ai carve new paths to prosperity for your business.')}
+
       </div>
 
       <div>
@@ -329,11 +334,9 @@ function Homepage() {
           ></iframe>
         )}
       </div>
-      <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-        {t('Contact Jinsei.ai for a demo and data diagnosis. ')}
-      </div>
 
-      <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button ${isDarkMode ? 'dark-mode-button' : ''}`}>
+
+      <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button2 ${isDarkMode ? 'dark-mode-button' : ''}`}>
         Reach Out
       </a>
 
