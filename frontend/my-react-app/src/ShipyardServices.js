@@ -5,7 +5,7 @@ const ShipyardServices = () => {
   const aiServices = [
     {
       title: 'Shipyard Client Facing: GPT Data Element Extraction & Compilation Service for Shipyard Campaign Reports',
-      description: 'Description: Assitant that can be asked for ROI reports and live KPI figures for an ongoing campaign.',
+      description: 'Description: Assistant that can be asked for ROI reports and live KPI figures for an ongoing campaign.',
       trainingData: 'Training Data: Sample training data for Chat GPT Database Element Extraction & Report Compilation Service.',
       intakeData: 'Intake Data: Sample intake data for Chat GPT Database Element Extraction & Report Compilation Service.',
       performanceData: 'Performance Data: Sample performance data for Chat GPT Database Element Extraction & Report Compilation Service.',
@@ -13,7 +13,7 @@ const ShipyardServices = () => {
     },
     {
       title: 'Shipyard Internal Facing: GPT Data Element Extraction & Compilation Service for Shipyard Campaign Reports',
-      description: 'Description: Assitant that can be asked for ROI reports and live KPI figures for an ongoing campaign.',
+      description: 'Description: Assistant that can be asked for ROI reports and live KPI figures for an ongoing campaign.',
       trainingData: 'Training Data: Sample training data for Chat GPT Database Element Extraction & Report Compilation Service.',
       intakeData: 'Intake Data: Sample intake data for Chat GPT Database Element Extraction & Report Compilation Service.',
       performanceData: 'Performance Data: Sample performance data for Chat GPT Database Element Extraction & Report Compilation Service.',
