@@ -284,7 +284,7 @@ function Homepage() {
 </div>
 
 <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Automate data digestion to win in the 21st century. ')}
+  {t('Automate data digestion & win in the 21st century. ')}
 </div>
 </div>
 
