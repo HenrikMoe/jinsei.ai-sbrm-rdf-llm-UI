@@ -289,7 +289,7 @@ function Homepage() {
 </div>
 
 <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Jinsei.ai automates data transformation. Delivering intelligent insights, transpranecy and performance.')}
+  {t('Jinsei.ai automates data transformation. Delivering intelligent insights, transparency and performance.')}
 </div>
 
 
