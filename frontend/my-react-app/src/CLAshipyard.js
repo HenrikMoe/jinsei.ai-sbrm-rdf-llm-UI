@@ -3,29 +3,22 @@ import { useMediaQuery } from 'usehooks-ts'
 
 const ShipyardServices = () => {
   const aiServices = [
+
     {
-      title: 'Shipyard Client Facing: GPT Data Element Extraction & Compilation Service for Shipyard Media Campaign Reports',
-      description: 'Description: Assistant that can be asked for ROI reports and live KPI figures for an ongoing campaign.',
-      trainingData: 'Training Data: Sample training data for Chat GPT Database Element Extraction & Report Compilation Service.',
-      intakeData: 'Intake Data: Sample intake data for Chat GPT Database Element Extraction & Report Compilation Service.',
-      performanceData: 'Performance Data: Sample performance data for Chat GPT Database Element Extraction & Report Compilation Service.',
-      integrationNotes: 'Integration Notes: Sample integration notes for Chat GPT Database Element Extraction & Report Compilation Service.',
+      title: 'Multi-SpreadSheet Data Formatting Automation',
+      description: 'Description: Sequence-to-Sequence TF JAX service for automating multi-spreadsheet content position format standardization.',
+      trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into CLA tool suite.',
     },
     {
-      title: 'Shipyard Internal Facing: GPT Data Element Extraction & Compilation Service for Shipyard Media Campaign Reports',
-      description: 'Description: Assistant that can be asked for ROI reports and live KPI figures for an ongoing campaign.',
-      trainingData: 'Training Data: Sample training data for Chat GPT Database Element Extraction & Report Compilation Service.',
-      intakeData: 'Intake Data: Sample intake data for Chat GPT Database Element Extraction & Report Compilation Service.',
-      performanceData: 'Performance Data: Sample performance data for Chat GPT Database Element Extraction & Report Compilation Service.',
+      title: 'Pixel Turbocharged: Access validation and automated formatting for mutliple spreadsheets.',
+      description: 'Description: Assistant can take multiple file uploads and output the data to the CLA tool suite in a standardized format.',
+      trainingData: 'Training Data: Sample training data for Database Element Extraction & Report Compilation Service.',
+      intakeData: 'Intake Data: Sample intake data for Database Element Extraction & Report Compilation Service.',
+      performanceData: 'Performance Data: Upload multiple files within Pixel chat and have them automtically formatted and synced with the CLA tool suite. ',
       integrationNotes: 'Integration Notes: Sample integration notes for Chat GPT Database Element Extraction & Report Compilation Service.',
-    },
-    {
-      title: 'Data Sequence-to-Sequence Transformer',
-      description: 'Description: PY JAX service for automating excel data digestion given a database interface program.',
-      trainingData: 'Training Data: Sample training data for XML/CSV Sequence-to-Sequence Sheets Transformer.',
-      intakeData: 'Intake Data: Sample intake data for XML/CSV Sequence-to-Sequence Sheets Transformer.',
-      performanceData: 'Performance Data: Sample performance data for XML/CSV Sequence-to-Sequence Sheets Transformer.',
-      integrationNotes: 'Integration Notes: Sample integration notes for XML/CSV Sequence-to-Sequence Sheets Transformer.',
     },
   ];
 
@@ -58,9 +51,9 @@ const ShipyardServices = () => {
       }}>
         {selectedService ? (<div></div>) : (
           <div style={{marginTop: isRowBased ? '0px' : '-50px', display: 'fixed'}}>
-            <h1 style={{ color: 'tan', marginLeft: isRowBased ? '50px' : '-40px', marginTop: isRowBased ? '0px' : '100px',}}>Shipyard + Jinsei.ai Services</h1>
-            <h3 style={{ color: 'tan' , marginLeft: isRowBased ? '50px' : '-40px', }}>Various data mapping and automation services with chat assistants.</h3>
-            <a href="https://github.com/HenrikMoe/Shipyard-Jinsei.ai/blob/main/README.md" target="_blank" rel="noopener noreferrer">
+            <h1 style={{ color: 'tan', marginLeft: isRowBased ? '50px' : '-40px', marginTop: isRowBased ? '0px' : '100px',}}>Supercharged Automation With Pixel + Jinsei.ai </h1>
+            <h3 style={{ color: 'tan' , marginLeft: isRowBased ? '50px' : '-40px', }}>Spreadsheet data mapping and automation services with the Pixel assistant.</h3>
+            <a href="https://github.com/HenrikMoe/PixelCLA-ShipyardJinsei/blob/main/README.md" target="_blank" rel="noopener noreferrer">
               <button style={{
                 backgroundColor: '#24292e',
                 color: '#fff',
@@ -73,7 +66,7 @@ const ShipyardServices = () => {
                 textDecoration: 'none',
               }}>GitHub</button>
             </a>
-            <a href="mailto:henrik@jinsei.ai?subject=Shipyard + Jinsei.ai" target="_blank" rel="noopener noreferrer">
+            <a href="mailto:henrik@jinsei.ai?subject=CLA/PIXEL + Jinsei.ai" target="_blank" rel="noopener noreferrer">
               <button style={{
                 backgroundColor: '#24292e',
                 color: '#fff',

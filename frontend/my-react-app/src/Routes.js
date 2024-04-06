@@ -12,7 +12,7 @@ import { DarkModeProvider } from './DarkModeContext';
 import { DataStoreProvider } from './DataStore'; // Import the DataStoreProvider
 import ChatGBT from './ChatGBT';
 import QuantexaJinsei from './Jinsei-Quantexa';
-
+import Pixel from './CLAshipyard'
 import Shipyard from './ShipyardServices';
 
 import XMLViewer from './XMLViewer';
@@ -87,6 +87,7 @@ const AppRoutes = () => {
         <Route path="/properties-rules-defxml" element={<XMLViewer18 />} /> {/* Add TermsOfService component */}
         <Route path="/propertiesxsd" element={<XMLViewer19 />} /> {/* Add TermsOfService component */}
         <Route path="/shipyard" element={<Shipyard />} />
+        <Route path="/CLA-Pixel-Shipyard" element={<Pixel />} />
 
 
 
