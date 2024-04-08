@@ -24,6 +24,7 @@ const ShipyardServices = () => {
 
   const [selectedService, setSelectedService] = useState(null);
   const isRowBased = useMediaQuery('(min-width: 500px)');
+  const isMobileMode = useMediaQuery('(max-width: 768px)');
 
   const handleClick = (service) => {
     setSelectedService(service);
@@ -49,40 +50,66 @@ const ShipyardServices = () => {
           marginRight: '30px',
         }
       }}>
-        {selectedService ? (<div></div>) : (
-          <div style={{marginTop: isRowBased ? '0px' : '-50px', display: 'fixed'}}>
-            <h1 style={{ color: 'tan', marginLeft: isRowBased ? '50px' : '-40px', marginTop: isRowBased ? '0px' : '100px',}}>Supercharged Automation With Pixel + Jinsei.ai </h1>
-            <h3 style={{ color: 'tan' , marginLeft: isRowBased ? '50px' : '-40px', }}>Spreadsheet data mapping and automation services with the Pixel assistant.</h3>
-            <a href="https://github.com/HenrikMoe/PixelCLA-ShipyardJinsei/blob/main/README.md" target="_blank" rel="noopener noreferrer">
-              <button style={{
-                backgroundColor: '#24292e',
-                color: '#fff',
-                padding: '10px 20px',
-                border: 'none',
-                marginLeft: '60px',
 
-                borderRadius: '5px',
-                cursor: 'pointer',
-                textDecoration: 'none',
-              }}>GitHub</button>
-            </a>
-            <a href="mailto:henrik@jinsei.ai?subject=CLA/PIXEL + Jinsei.ai" target="_blank" rel="noopener noreferrer">
-              <button style={{
-                backgroundColor: '#24292e',
-                color: '#fff',
-                marginLeft: '10px',
-                padding: '10px 20px',
-                border: 'none',
-                marginTop: '5px',
+      {selectedService ? (
+  <div></div>
+) : (
+  <div style={{
+    marginTop: isRowBased ? '0px' : '-50px',
+    display: 'flex',
+    marginLeft: '-40px',
+    flexDirection: 'column',
+    alignItems: 'center', // Center the content horizontally
+    position: 'relative', // Ensure relative positioning
+    zIndex: 1, // Ensure the h1 is above the blue background
+  }}>
+    <h1 style={{
+      color: 'tan',
+      marginLeft: isRowBased ? '50px' : '0', // Adjusted marginLeft property for h1
+      marginTop: isRowBased ? (isMobileMode ? '50px' : '100px') : '100px', // Adjusted marginTop property for h1
+      textAlign: 'center', // Center the text horizontally
+    }}>
+      Supercharged Automation With Pixel + Jinsei.ai
+    </h1>
+    <h3 style={{
+      color: 'tan',
+      marginLeft: isRowBased ? '50px' : '0', // Adjusted marginLeft property for h3
+      textAlign: 'center', // Center the text horizontally
+    }}>
+      Spreadsheet data mapping and automation services. Feauturing high powered upgrades to CLA's Pixel assistant.
+    </h3>
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+    }}>
+      <a href="https://github.com/HenrikMoe/PixelCLA-ShipyardJinsei/blob/main" target="_blank" rel="noopener noreferrer">
+        <button style={{
+          backgroundColor: '#24292e',
+          color: '#fff',
+          padding: '10px 20px',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          textDecoration: 'none',
+          marginRight: '10px' // Adjust margin right as needed
+        }}>GitHub</button>
+      </a>
+      <a href="mailto:henrik@jinsei.ai?subject=CLA/PIXEL + Jinsei.ai" target="_blank" rel="noopener noreferrer">
+        <button style={{
+          backgroundColor: '#24292e',
+          color: '#fff',
+          padding: '10px 20px',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          textDecoration: 'none',
+        }}>Email</button>
+      </a>
+    </div>
+  </div>
+)}
 
-                borderRadius: '5px',
-                cursor: 'pointer',
-                textDecoration: 'none',
-                marginRight: '10px' // Adjust margin right as needed
-              }}>Email</button>
-            </a>
-          </div>
-        )}
+
       </div>
       <div style={{
         marginTop: '150px',

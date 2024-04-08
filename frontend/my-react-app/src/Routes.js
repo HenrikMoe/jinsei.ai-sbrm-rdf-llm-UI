@@ -14,7 +14,7 @@ import ChatGBT from './ChatGBT';
 import QuantexaJinsei from './Jinsei-Quantexa';
 import Pixel from './CLAshipyard'
 import Shipyard from './ShipyardServices';
-
+import BakerTilly from './BakerTillyJinsei'
 import XMLViewer from './XMLViewer';
 import XMLViewer2 from './XMLViewer2'
 import XMLViewer3 from './XMLViewer3';
@@ -86,8 +86,9 @@ const AppRoutes = () => {
         <Route path="/model-structure-types-rules-defxml" element={<XMLViewer17 />} /> {/* Add TermsOfService component */}
         <Route path="/properties-rules-defxml" element={<XMLViewer18 />} /> {/* Add TermsOfService component */}
         <Route path="/propertiesxsd" element={<XMLViewer19 />} /> {/* Add TermsOfService component */}
-        <Route path="/shipyard" element={<Shipyard />} />
+        <Route path="/Shipyard" element={<Shipyard />} />
         <Route path="/CLA-Pixel-Shipyard" element={<Pixel />} />
+        <Route path="/BakerTilly" element={<BakerTilly />} />
 
 
 

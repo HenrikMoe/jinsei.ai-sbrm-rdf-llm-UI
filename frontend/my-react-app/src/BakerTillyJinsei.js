@@ -1,31 +1,23 @@
 import React, { useState } from 'react';
-import { useMediaQuery } from 'usehooks-ts'
+import { useMediaQuery } from 'usehooks-ts';
 
 const ShipyardServices = () => {
   const aiServices = [
     {
-      title: 'Shipyard Client Facing: GPT Data Element Extraction & Compilation Service for Shipyard Media Campaign Reports',
-      description: 'Description: Assistant that can be asked for ROI reports and live KPI figures for an ongoing campaign.',
-      trainingData: 'Training Data: Sample training data for Chat GPT Database Element Extraction & Report Compilation Service.',
-      intakeData: 'Intake Data: Sample intake data for Chat GPT Database Element Extraction & Report Compilation Service.',
-      performanceData: 'Performance Data: Sample performance data for Chat GPT Database Element Extraction & Report Compilation Service.',
-      integrationNotes: 'Integration Notes: Sample integration notes for Chat GPT Database Element Extraction & Report Compilation Service.',
+      title: 'Multi-SpreadSheet Data Formatting Automation',
+      description: 'Description: Sequence-to-Sequence TF JAX service for automating multi-spreadsheet content position format standardization.',
+      trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
     },
     {
-      title: 'Shipyard Internal Facing: GPT Data Element Extraction & Compilation Service for Shipyard Media Campaign Reports',
-      description: 'Description: Assistant that can be asked for ROI reports and live KPI figures for an ongoing campaign.',
-      trainingData: 'Training Data: Sample training data for Chat GPT Database Element Extraction & Report Compilation Service.',
-      intakeData: 'Intake Data: Sample intake data for Chat GPT Database Element Extraction & Report Compilation Service.',
-      performanceData: 'Performance Data: Sample performance data for Chat GPT Database Element Extraction & Report Compilation Service.',
+      title: 'Turbocharged Chat Assistant: Access validation and automated formatting for mutliple spreadsheets.',
+      description: 'Description: Assistant can take multiple file uploads and output the data to the Baker Tilly tool suite in a standardized format.',
+      trainingData: 'Training Data: Sample training data for Database Element Extraction & Report Compilation Service.',
+      intakeData: 'Intake Data: Sample intake data for Database Element Extraction & Report Compilation Service.',
+      performanceData: 'Performance Data: Upload multiple files within chat and have them automtically formatted and synced with the Baker Tilly tool suite. ',
       integrationNotes: 'Integration Notes: Sample integration notes for Chat GPT Database Element Extraction & Report Compilation Service.',
-    },
-    {
-      title: 'Data Sequence-to-Sequence Transformer',
-      description: 'Description: PY JAX service for automating excel data digestion given a database interface program.',
-      trainingData: 'Training Data: Sample training data for XML/CSV Sequence-to-Sequence Sheets Transformer.',
-      intakeData: 'Intake Data: Sample intake data for XML/CSV Sequence-to-Sequence Sheets Transformer.',
-      performanceData: 'Performance Data: Sample performance data for XML/CSV Sequence-to-Sequence Sheets Transformer.',
-      integrationNotes: 'Integration Notes: Sample integration notes for XML/CSV Sequence-to-Sequence Sheets Transformer.',
     },
   ];
 
@@ -45,10 +37,9 @@ const ShipyardServices = () => {
     <div style={{
       display: isRowBased ? 'flex' : 'column',
       justifyContent: 'center',
-
     }}>
       <div style={{
-        marginTop: '150px',
+        marginTop: isMobileMode ? '-50px' : '150px',
         marginBottom: '150px',
         marginLeft: '100px',
         marginRight: '50px',
@@ -57,7 +48,6 @@ const ShipyardServices = () => {
           marginRight: '30px',
         }
       }}>
-
       {selectedService ? (
   <div></div>
 ) : (
@@ -73,23 +63,23 @@ const ShipyardServices = () => {
     <h1 style={{
       color: 'tan',
       marginLeft: isRowBased ? '50px' : '0', // Adjusted marginLeft property for h1
-      marginTop: isRowBased ? (isMobileMode ? '50px' : '100px') : '100px', // Adjusted marginTop property for h1
+      marginTop: isRowBased ? (isMobileMode ? '50px' : '100px') : '200px', // Adjusted marginTop property for h1
       textAlign: 'center', // Center the text horizontally
     }}>
-      Shipyard KPI Transparency + Jinsei.ai
+      Supercharged Automation With Baker Tilly + Jinsei.ai
     </h1>
     <h3 style={{
       color: 'tan',
       marginLeft: isRowBased ? '50px' : '0', // Adjusted marginLeft property for h3
       textAlign: 'center', // Center the text horizontally
     }}>
-      Data automation services with chat assistants for campaign media KPI reports.
+      Spreadsheet data mapping and automation services with the Baker Tilly chat assistant.
     </h3>
     <div style={{
       display: 'flex',
       justifyContent: 'center',
     }}>
-      <a href="https://github.com/HenrikMoe/Shipyard-Jinsei.ai/blob/main" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/HenrikMoe/BakerTilly-Jinsei.ai/tree/main" target="_blank" rel="noopener noreferrer">
         <button style={{
           backgroundColor: '#24292e',
           color: '#fff',
@@ -101,7 +91,7 @@ const ShipyardServices = () => {
           marginRight: '10px' // Adjust margin right as needed
         }}>GitHub</button>
       </a>
-      <a href="mailto:henrik@jinsei.ai?subject=Shipyard + Jinsei.ai" target="_blank" rel="noopener noreferrer">
+      <a href="mailto:henrik@jinsei.ai?subject=Baker Tilly + Jinsei.ai" target="_blank" rel="noopener noreferrer">
         <button style={{
           backgroundColor: '#24292e',
           color: '#fff',
@@ -118,7 +108,7 @@ const ShipyardServices = () => {
 
       </div>
       <div style={{
-        marginTop: '150px',
+        marginTop: isMobileMode ? '-50px' : '150px',
         marginBottom: '150px',
         marginRight: '100px',
         width: isRowBased ? '600px' : '80%',
