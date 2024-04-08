@@ -112,11 +112,14 @@ const ShipyardServices = () => {
         marginBottom: '150px',
         marginRight: '100px',
         width: isRowBased ? '600px' : '80%',
+        flexDirection: isMobileMode ? 'column': '',
+        alignItems: isMobileMode ? 'center': '', // Center the content horizontally
+        position: isMobileMode ? 'relative': '',
         display: 'grid',
+        marginLeft: isMobileMode ? '50px' : '00px',
         gridTemplateColumns: isRowBased ? '1fr 1fr' : '1fr',
         gap: '20px',
       }}>
-
         {selectedService ? (
           <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: isRowBased ? '600px' : '100%', }}>
             <button style={{
@@ -127,6 +130,7 @@ const ShipyardServices = () => {
               borderRadius: '5px',
               cursor: 'pointer',
               textDecoration: 'none',
+              marginTop: isMobileMode ? '50px' : '00px',
 
             }} onClick={handleBack}>Back</button>
             <h2>{selectedService.title}</h2>
@@ -145,7 +149,6 @@ const ShipyardServices = () => {
               borderRadius: '8px',
               cursor: 'pointer',
               marginRight: '0px',
-              marginLeft: isRowBased ? '0px' : '70px'
             }} onClick={() => handleClick(service)}>
               <h3>{service.title}</h3>
               <p>{service.description}</p>

@@ -48,7 +48,7 @@ const ShipyardServices = () => {
 
     }}>
       <div style={{
-        marginTop: '150px',
+        marginTop: isMobileMode ? '-50px' : '150px',
         marginBottom: '150px',
         marginLeft: '100px',
         marginRight: '50px',
@@ -73,7 +73,7 @@ const ShipyardServices = () => {
     <h1 style={{
       color: 'tan',
       marginLeft: isRowBased ? '50px' : '0', // Adjusted marginLeft property for h1
-      marginTop: isRowBased ? (isMobileMode ? '50px' : '100px') : '100px', // Adjusted marginTop property for h1
+      marginTop: isRowBased ? (isMobileMode ? '50px' : '100px') : '200px', // Adjusted marginTop property for h1
       textAlign: 'center', // Center the text horizontally
     }}>
       Shipyard KPI Transparency + Jinsei.ai
@@ -118,17 +118,21 @@ const ShipyardServices = () => {
 
       </div>
       <div style={{
-        marginTop: '150px',
+        marginTop: isMobileMode ? '-50px' : '150px',
         marginBottom: '150px',
         marginRight: '100px',
         width: isRowBased ? '600px' : '80%',
+        flexDirection: isMobileMode ? 'column': '',
+        alignItems: isMobileMode ? 'center': '', // Center the content horizontally
+        position: isMobileMode ? 'relative': '',
         display: 'grid',
+        marginLeft: isMobileMode ? '50px' : '00px',
         gridTemplateColumns: isRowBased ? '1fr 1fr' : '1fr',
         gap: '20px',
       }}>
 
         {selectedService ? (
-          <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: isRowBased ? '600px' : '100%', }}>
+          <div style={{ color: 'tan', marginTop: isMobileMode ? '-20px' : '00px', marginBottom: '150px', width: isRowBased ? '600px' : '100%', }}>
             <button style={{
               backgroundColor: '#24292e',
               color: '#fff',
@@ -137,6 +141,7 @@ const ShipyardServices = () => {
               borderRadius: '5px',
               cursor: 'pointer',
               textDecoration: 'none',
+              marginTop: isMobileMode ? '50px' : '00px',
 
             }} onClick={handleBack}>Back</button>
             <h2>{selectedService.title}</h2>
@@ -155,7 +160,6 @@ const ShipyardServices = () => {
               borderRadius: '8px',
               cursor: 'pointer',
               marginRight: '0px',
-              marginLeft: isRowBased ? '0px' : '70px'
             }} onClick={() => handleClick(service)}>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
