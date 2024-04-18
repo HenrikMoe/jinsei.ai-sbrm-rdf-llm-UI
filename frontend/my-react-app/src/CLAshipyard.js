@@ -6,16 +6,15 @@ const ShipyardServices = () => {
 
     {
       title: 'Multi-SpreadSheet Data Formatting Automation',
-      description: 'Description: Sequence-to-Sequence TF JAX service for automating multi-spreadsheet content position format standardization.',
+      description: "Description: Sequence-to-Sequence TF JAX service for automating multi-spreadsheet content's positional format.",
       trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       integrationNotes: 'Integration Notes: Standardized data format for integration into CLA tool suite.',
     },
     {
-      title: 'CLA GPT Turbocharged: Validation and automated formatting for mutliple spreadsheets.',
-      description: 'Description: Assistant can take multiple file uploads and output the data to the CLA tool suite in a standardized format.',
-      trainingData: 'Training Data: Sample training data for Database Element Extraction & Report Compilation Service.',
+      title: 'CLA GPT Turbocharged: Validation and automated formatting for spreadsheet use cases.',
+      description: 'Description: Assistant fields file uploads and outputs the data into the CLA tool suite. Extending the pre-exisitng GPT services.',
       intakeData: 'Intake Data: Sample intake data for Database Element Extraction & Report Compilation Service.',
       performanceData: 'Performance Data: Upload multiple files within CLA GPT chat and have them automtically formatted and synced with the CLA tool suite. ',
       integrationNotes: 'Integration Notes: Sample integration notes for Chat GPT Database Element Extraction & Report Compilation Service.',
@@ -23,7 +22,6 @@ const ShipyardServices = () => {
     {
       title: 'Blockchain Investing Gains On-Chain Data Audit',
       description: 'Description: Audit with bank statements and on chain data for verification of trading gains.',
-      trainingData: 'Training Data: Sample training data for Database Element Extraction & Report Compilation Service.',
       intakeData: 'Intake Data: Sample intake data for Database Element Extraction & Report Compilation Service.',
       performanceData: 'Performance Data: Upload multiple files within CLA GPT chat and have them automtically formatted and synced with the CLA tool suite. ',
       integrationNotes: 'Integration Notes: delivered with chat service and through the CLA data interface',
@@ -147,8 +145,10 @@ const ShipyardServices = () => {
 
 
             }} onClick={handleBack}>Back</button>
-            <h2>{selectedService.title}</h2>
+            <h2 style={{color: 'white'}}>{selectedService.title}</h2>
             <p>{selectedService.description}</p>
+            <p style={{color: 'white'}}>Details</p>
+
             <p>{selectedService.trainingData}</p>
             <p>{selectedService.intakeData}</p>
             <p>{selectedService.performanceData}</p>
