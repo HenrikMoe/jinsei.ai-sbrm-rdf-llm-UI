@@ -5,19 +5,27 @@ const ShipyardServices = () => {
   const aiServices = [
     {
       title: 'Multi-SpreadSheet Data Formatting Automation',
-      description: 'Description: Sequence-to-Sequence TF JAX service for automating multi-spreadsheet content position format standardization.',
+      description: "Description: Sequence-to-Sequence TF JAX service for automating multi-spreadsheet content's positional format.",
       trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
     },
     {
-      title: 'Turbocharged Chat Assistant: Access validation and automated formatting for mutliple spreadsheets.',
-      description: 'Description: Assistant can take multiple file uploads and output the data to the Baker Tilly tool suite in a standardized format.',
+      title: 'Baker Tilly GPT Turbocharged: Validation and automated formatting for spreadsheet use cases.',
+      description: 'Description: Assistant fields file uploads and outputs the data into the Baker Tilly tool suite. Extending the pre-exisitng GPT services.',
       trainingData: 'Training Data: Sample training data for Database Element Extraction & Report Compilation Service.',
       intakeData: 'Intake Data: Sample intake data for Database Element Extraction & Report Compilation Service.',
-      performanceData: 'Performance Data: Upload multiple files within chat and have them automtically formatted and synced with the Baker Tilly tool suite. ',
+      performanceData: 'Performance Data: Upload multiple files within Baker Tilly GPT chat and have them automtically formatted and synced with the Baker Tilly tool suite. ',
       integrationNotes: 'Integration Notes: Sample integration notes for Chat GPT Database Element Extraction & Report Compilation Service.',
+    },
+    {
+      title: 'Blockchain Investing Gains On-Chain Data Audit',
+      description: 'Description: Audit with bank statements and on chain data for verification of trading gains.',
+      trainingData: 'Training Data: Sample training data for Database Element Extraction & Report Compilation Service.',
+      intakeData: 'Intake Data: Sample intake data for Database Element Extraction & Report Compilation Service.',
+      performanceData: 'Performance Data: Upload multiple files within Baker Tilly GPT chat and have them automtically formatted and synced with the Baker Tilly tool suite. ',
+      integrationNotes: 'Integration Notes: delivered with chat service and through the Baker Tilly data interface',
     },
   ];
 
@@ -61,7 +69,7 @@ const ShipyardServices = () => {
     zIndex: 1, // Ensure the h1 is above the blue background
   }}>
     <h1 style={{
-      color: 'tan',
+      color: 'white',
       marginLeft: isRowBased ? '50px' : '0', // Adjusted marginLeft property for h1
       marginTop: isRowBased ? (isMobileMode ? '50px' : '100px') : '200px', // Adjusted marginTop property for h1
       textAlign: 'center', // Center the text horizontally
@@ -133,8 +141,9 @@ const ShipyardServices = () => {
               marginTop: isMobileMode ? '50px' : '00px',
 
             }} onClick={handleBack}>Back</button>
-            <h2>{selectedService.title}</h2>
+            <h2 style={{color: 'white'}}>{selectedService.title}</h2>
             <p>{selectedService.description}</p>
+            <p style={{color: 'white'}}>Details</p>
             <p>{selectedService.trainingData}</p>
             <p>{selectedService.intakeData}</p>
             <p>{selectedService.performanceData}</p>
@@ -150,7 +159,7 @@ const ShipyardServices = () => {
               cursor: 'pointer',
               marginRight: '0px',
             }} onClick={() => handleClick(service)}>
-              <h3>{service.title}</h3>
+              <h3 style={{color: 'white'}}>{service.title}</h3>
               <p>{service.description}</p>
             </div>
           ))
