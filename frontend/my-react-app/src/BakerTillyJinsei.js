@@ -74,7 +74,7 @@ const ShipyardServices = () => {
       marginTop: isRowBased ? (isMobileMode ? '50px' : '100px') : '200px', // Adjusted marginTop property for h1
       textAlign: 'center', // Center the text horizontally
     }}>
-      Supercharged Automation With Baker Tilly + Jinsei.ai
+      Turbocharged Baker Tilly Chat & Automation with Jinsei.ai
     </h1>
     <h3 style={{
       color: 'tan',
