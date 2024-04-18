@@ -35,7 +35,7 @@ import XMLViewer17 from './XMLViewer17';
 import XMLViewer18 from './XMLViewer18'
 import XMLViewer19 from './XMLViewer19'
 import API from './api'
-
+import Intuit from './Intuit'
 
 const AppRoutes = () => {
   const location = useLocation(); // Get the current location
@@ -87,9 +87,9 @@ const AppRoutes = () => {
         <Route path="/properties-rules-defxml" element={<XMLViewer18 />} /> {/* Add TermsOfService component */}
         <Route path="/propertiesxsd" element={<XMLViewer19 />} /> {/* Add TermsOfService component */}
         <Route path="/Shipyard" element={<Shipyard />} />
-        <Route path="/CLA-Pixel-Shipyard" element={<Pixel />} />
+        <Route path="/CLA" element={<Pixel />} />
         <Route path="/BakerTilly" element={<BakerTilly />} />
-
+        <Route path="/Intuit" element={<Intuit />} />
 
 
       </Routes>

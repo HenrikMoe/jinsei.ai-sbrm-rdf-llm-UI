@@ -10,14 +10,14 @@ const ShipyardServices = () => {
       trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      integrationNotes: 'Integration Notes: Standardized data format for integration into CLA tool suite.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Intuit tool suite.',
     },
     {
-      title: 'CLA GPT Turbocharged: Validation and automated formatting for mutliple spreadsheets.',
-      description: 'Description: Assistant can take multiple file uploads and output the data to the CLA tool suite in a standardized format.',
+      title: 'Intuit GPT Turbocharged: Validation and automated formatting for mutliple spreadsheets.',
+      description: 'Description: Assistant can take multiple file uploads and output the data to the Intuit tool suite in a standardized format.',
       trainingData: 'Training Data: Sample training data for Database Element Extraction & Report Compilation Service.',
       intakeData: 'Intake Data: Sample intake data for Database Element Extraction & Report Compilation Service.',
-      performanceData: 'Performance Data: Upload multiple files within CLA GPT chat and have them automtically formatted and synced with the CLA tool suite. ',
+      performanceData: 'Performance Data: Upload multiple files within Intuit GPT chat and have them automtically formatted and synced with the Intuit tool suite. ',
       integrationNotes: 'Integration Notes: Sample integration notes for Chat GPT Database Element Extraction & Report Compilation Service.',
     },
     {
@@ -25,8 +25,8 @@ const ShipyardServices = () => {
       description: 'Description: Audit with bank statements and on chain data for verification of trading gains.',
       trainingData: 'Training Data: Sample training data for Database Element Extraction & Report Compilation Service.',
       intakeData: 'Intake Data: Sample intake data for Database Element Extraction & Report Compilation Service.',
-      performanceData: 'Performance Data: Upload multiple files within CLA GPT chat and have them automtically formatted and synced with the CLA tool suite. ',
-      integrationNotes: 'Integration Notes: delivered with chat service and through the CLA data interface',
+      performanceData: 'Performance Data: Upload multiple files within Intuit GPT chat and have them automtically formatted and synced with the Intuit tool suite. ',
+      integrationNotes: 'Integration Notes: delivered with chat service and through the Intuit data interface',
     },
   ];
 
@@ -77,20 +77,20 @@ const ShipyardServices = () => {
       marginTop: isRowBased ? (isMobileMode ? '50px' : '100px') : '200px', // Adjusted marginTop property for h1
       textAlign: 'center', // Center the text horizontally
     }}>
-      Turbocharged CLA Chat & Automation with Jinsei.ai
+      Turbocharged Intuit Chat & Automation with Jinsei.ai
     </h1>
     <h3 style={{
       color: 'tan',
       marginLeft: isRowBased ? '50px' : '0', // Adjusted marginLeft property for h3
       textAlign: 'center', // Center the text horizontally
     }}>
-      Spreadsheet data mapping and automation services. Feauturing high powered upgrades to CLA's GPT assistant.
+      Spreadsheet data mapping and automation services. Feauturing high powered upgrades to Intuit's GPT assistant.
     </h3>
     <div style={{
       display: 'flex',
       justifyContent: 'center',
     }}>
-      <a href="https://github.com/HenrikMoe/CLA-Jinsei.ai/tree/main" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/HenrikMoe/Intuit-Jinsei.ai" target="_blank" rel="noopener noreferrer">
         <button style={{
           backgroundColor: '#24292e',
           color: '#fff',
@@ -102,7 +102,7 @@ const ShipyardServices = () => {
           marginRight: '10px' // Adjust margin right as needed
         }}>GitHub</button>
       </a>
-      <a href="mailto:henrik@jinsei.ai?subject=CLA + Jinsei.ai" target="_blank" rel="noopener noreferrer">
+      <a href="mailto:henrik@jinsei.ai?subject=Intuit + Jinsei.ai" target="_blank" rel="noopener noreferrer">
         <button style={{
           backgroundColor: '#24292e',
           color: '#fff',
