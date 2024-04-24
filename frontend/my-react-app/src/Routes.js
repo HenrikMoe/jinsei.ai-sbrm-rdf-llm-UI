@@ -36,6 +36,7 @@ import XMLViewer18 from './XMLViewer18'
 import XMLViewer19 from './XMLViewer19'
 import API from './api'
 import Intuit from './Intuit'
+import SVA from './SVA'
 
 const AppRoutes = () => {
   const location = useLocation(); // Get the current location
@@ -90,6 +91,7 @@ const AppRoutes = () => {
         <Route path="/CLA" element={<Pixel />} />
         <Route path="/BakerTilly" element={<BakerTilly />} />
         <Route path="/Intuit" element={<Intuit />} />
+        <Route path="/SVA" element={<SVA />} />
 
 
       </Routes>

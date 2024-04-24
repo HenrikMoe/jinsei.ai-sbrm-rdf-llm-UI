@@ -84,7 +84,7 @@ const ShipyardServices = () => {
       marginLeft: isRowBased ? '50px' : '0', // Adjusted marginLeft property for h3
       textAlign: 'center', // Center the text horizontally
     }}>
-      Spreadsheet data mapping and automation services. Feauturing high powered upgrades to Intuit's GPT assistant.
+    Spreadsheet data mapping and automation services with Intuit chat assistant, SaaS for existing tool suite integration.
     </h3>
     <div style={{
       display: 'flex',

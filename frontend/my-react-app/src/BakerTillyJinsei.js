@@ -81,7 +81,7 @@ const ShipyardServices = () => {
       marginLeft: isRowBased ? '50px' : '0', // Adjusted marginLeft property for h3
       textAlign: 'center', // Center the text horizontally
     }}>
-      Spreadsheet data mapping and automation services with the Baker Tilly chat assistant.
+    Spreadsheet data mapping and automation services with Baker Tilly chat assistant, SaaS for existing tool suite integration.
     </h3>
     <div style={{
       display: 'flex',
