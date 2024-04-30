@@ -58,7 +58,7 @@ const Header = ({ currentRoute, userInfo }) => {
     // { label: 'White-Paper', url: 'https://docs.google.com/document/d/1m_ZNJheDIbt9JHsljOIoZ6awDcaWswWgvlRDGKK3vSE/edit?usp=sharing' },
     // { label: 'Deck', url: 'https://drive.google.com/file/d/1JrjXCzGImy7K36S9duByjM5D7a4xpgCq/view?usp=sharing' },
     { label: 'Architecture White-Paper', pdfUrl: pdfUrl, pdfFileName: pdfFileName }, // Pass PDF URL and file name as props
-    { label: 'GitHub', url: 'https://github.com/jinsei-ai/' },
+    { label: 'GitHub', url: 'https://github.com/HenrikMoe' },
     { label: 'Privacy', url: 'https://jinsei.ai/privacy' },
     { label: 'Service', url: 'https://jinsei.ai/tos' },
   ];
