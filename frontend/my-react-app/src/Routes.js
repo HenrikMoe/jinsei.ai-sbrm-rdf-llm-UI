@@ -37,6 +37,7 @@ import XMLViewer19 from './XMLViewer19'
 import API from './api'
 import Intuit from './Intuit'
 import SVA from './SVA'
+import APIParent from './APIUIComponents/APIUIParent'
 
 const AppRoutes = () => {
   const location = useLocation(); // Get the current location
@@ -92,6 +93,8 @@ const AppRoutes = () => {
         <Route path="/BakerTilly" element={<BakerTilly />} />
         <Route path="/Intuit" element={<Intuit />} />
         <Route path="/SVA" element={<SVA />} />
+        <Route path="/JinseiAI-API" element={<APIParent />} />
+
 
 
       </Routes>
