@@ -5,15 +5,63 @@ import EndPointDataPreview from './APIUIChild';
 import EndPointDataView from './APIUIChild'; // Assuming you meant './APIUIChild'
 
 const JinseiAPIEndpoints = () => {
-  const aiServices = [
+  const SyntaxServices = [
     {
-      title: 'Multi-SpreadSheet Data Formatting Automation',
-      description: "Description: Sequence-to-Sequence TF JAX service for automating multi-spreadsheet content's positional format.",
+      title: 'SBRM - OMG',
+      description: "Description: populate SBRM with aspects and facts.",
       trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
     },
+    {
+      title: 'MiCa ViCa',
+      description: "Description: populate euro web3 asset tracking filing specs' aspects and facts, via ixbrl whitepapers.",
+      trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'ACTUS',
+      description: "Description: all encompassing financial product modeler (about 100 of every fin product today)",
+      trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'P.E. Stuff',
+      description: "Description: 10 K 10 Q P.E stuff",
+      trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+
+
+
+  ];
+
+    const AuthorityServices = [
+      {
+        title: 'SEC EDGAR API',
+        description: "Upload filings, retrieve filings",
+        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+      },
+      {
+        title: 'EURO',
+        description: "Upload filings, retrieve filings",
+        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+      },
+
+
     // Add more services as needed
   ];
 
@@ -136,7 +184,9 @@ const JinseiAPIEndpoints = () => {
               <p>{selectedService.integrationNotes}</p>
             </div>
           ) : (
-            aiServices.map((service, index) => (
+            <div>
+            <h2 style={{ color: 'white' }}>Syntax Services</h2>
+            {SyntaxServices.map((service, index) => (
               <div key={index} style={{
                 color: 'tan',
                 border: '1px solid #ccc',
@@ -148,7 +198,23 @@ const JinseiAPIEndpoints = () => {
                 <h3 style={{ color: 'white' }}>{service.title}</h3>
                 <p>{service.description}</p>
               </div>
-            ))
+            ))}
+            <h2 style={{ color: 'white', marginTop: '50px' }}>Authority Services</h2>
+            {AuthorityServices.map((service, index) => (
+              <div key={index} style={{
+                color: 'tan',
+                border: '1px solid #ccc',
+                padding: '20px',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                marginRight: '0px',
+              }} onClick={() => handleClick(service)}>
+                <h3 style={{ color: 'white' }}>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+            ))}
+          </div>
+
           )}
         </div>
       </div>
