@@ -93,7 +93,7 @@ const AppRoutes = () => {
         <Route path="/BakerTilly" element={<BakerTilly />} />
         <Route path="/Intuit" element={<Intuit />} />
         <Route path="/SVA" element={<SVA />} />
-        <Route path="/JinseiAI-API" element={<APIParent />} />
+        <Route path="/Jinsei.AI-API" element={<APIParent />} />
 
 
 
