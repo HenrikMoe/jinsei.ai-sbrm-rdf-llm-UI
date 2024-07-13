@@ -8,7 +8,10 @@ import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRou
 import Routes from './Routes'; // Import the Routes component
 import { AuthenticationProvider } from './AuthenticationContext'; // Import the context provider
 import './i18n'; // Your i18next configuration file
-
+import { setChonkyDefaults } from 'chonky';
+import { ChonkyIconFA } from 'chonky-icon-fontawesome';
+// Somewhere in your `index.ts`:
+setChonkyDefaults({ iconComponent: ChonkyIconFA });
 
 const port = process.env.PORT || 80;
 const host = process.env.HOST || '0.0.0.0';

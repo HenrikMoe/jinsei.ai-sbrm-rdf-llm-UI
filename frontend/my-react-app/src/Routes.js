@@ -38,6 +38,8 @@ import API from './api'
 import Intuit from './Intuit'
 import SVA from './SVA'
 import APIParent from './APIUIComponents/APIUIParent'
+import FileBrowser from './reportBrowserUI/Chonky'
+import AdvancedChonky from './reportBrowserUI/ChonkyAdvanced'
 
 const AppRoutes = () => {
   const location = useLocation(); // Get the current location
@@ -94,8 +96,8 @@ const AppRoutes = () => {
         <Route path="/Intuit" element={<Intuit />} />
         <Route path="/SVA" element={<SVA />} />
         <Route path="/Jinsei.AI-API" element={<APIParent />} />
-
-
+        <Route path="/ReportBrowser" element={<FileBrowser />} />
+        <Route path="/AdvancedChonky" element={<AdvancedChonky />} />
 
       </Routes>
 
