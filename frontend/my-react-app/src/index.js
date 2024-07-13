@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import { HashRouter as Router } from 'react-router-dom'; // Import BrowserRouter
+import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
 import Routes from './Routes'; // Import the Routes component
 import { AuthenticationProvider } from './AuthenticationContext'; // Import the context provider
 import './i18n'; // Your i18next configuration file

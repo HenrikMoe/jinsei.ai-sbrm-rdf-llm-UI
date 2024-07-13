@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'; // Import useEffect
-import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom'; // Import necessary components and hooks
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'; // Import necessary components and hooks
 
 import Header from './Header'; // Import the Header component
 import Homepage from './Homepage';
@@ -41,7 +41,7 @@ import SVA from './SVA'
 import APIParent from './APIUIComponents/APIUIParent'
 import FileBrowser from './reportBrowserUI/Chonky' 
 
-import VFSBrowser from './reportBrowserUI/ChonkyAdvanced.tsx'
+import VFSBrowser from './reportBrowserUI/FileBrowser'
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 

@@ -1,0 +1,26 @@
+.file-browser-page {
+  display: flex;
+  height: 100vh;
+}
+
+.resizable-left-panel {
+  position: relative;
+  flex: 1;
+  border-right: 1px solid #ccc;
+}
+
+.handle {
+  position: relative;
+  right: -5px;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  cursor: col-resize;
+}
+
+.right-side {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  overflow: auto;
+}
