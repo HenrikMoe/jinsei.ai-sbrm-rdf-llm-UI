@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'; // Import useEffect
-import { Routes, Route, Outlet, useLocation } from 'react-router-dom'; // Import Outlet
+import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom'; // Import necessary components and hooks
+
 import Header from './Header'; // Import the Header component
 import Homepage from './Homepage';
 import Prototype from './Prototype';
@@ -38,11 +39,15 @@ import API from './api'
 import Intuit from './Intuit'
 import SVA from './SVA'
 import APIParent from './APIUIComponents/APIUIParent'
-import FileBrowser from './reportBrowserUI/Chonky'
-import AdvancedChonky from './reportBrowserUI/ChonkyAdvanced'
+import FileBrowser from './reportBrowserUI/Chonky' 
+
+import VFSBrowser from './reportBrowserUI/ChonkyAdvanced.tsx'
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+
 
 const AppRoutes = () => {
-  const location = useLocation(); // Get the current location
+  //const location = useLocation(); // Get the current location
 
 
   useEffect(() => {
@@ -62,7 +67,10 @@ const AppRoutes = () => {
     <div>
     <DarkModeProvider>
     <DataStoreProvider>
-      <Header currentRoute={location.pathname} userInfo={userInfo}/> {/* Include the Header component */}
+     <DndProvider backend={HTML5Backend}> 
+
+    {/* currentRoute={location.pathname}  */}
+      <Header  userInfo={userInfo}/> {/* Include the Header component */}
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/prototype" element={<Prototype listLoginInfo={listLoginInfo}/>} />
@@ -97,13 +105,16 @@ const AppRoutes = () => {
         <Route path="/SVA" element={<SVA />} />
         <Route path="/Jinsei.AI-API" element={<APIParent />} />
         <Route path="/ReportBrowser" element={<FileBrowser />} />
-        <Route path="/AdvancedChonky" element={<AdvancedChonky />} />
+        <Route path="/AdvancedChonky" element={<VFSBrowser />} />
 
       </Routes>
 
       <Footer /> {/* Include the Header component */}
+
+       </DndProvider> 
       </DataStoreProvider>
     </DarkModeProvider>
+
     </div>
   );
 };
