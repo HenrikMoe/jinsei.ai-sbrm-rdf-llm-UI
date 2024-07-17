@@ -9,7 +9,7 @@ import {
     FullFileBrowser,
 } from 'chonky';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import DemoFsMap from './demoFileSystemObj.json';
+import DemoFsMap from './chonkySubPackViewerConfig.json';
 import { setChonkyDefaults } from 'chonky';
 setChonkyDefaults({
     disableDragAndDrop: true,
@@ -307,7 +307,7 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
                 Reset file map
             </button>
             
-            <div style={{ height: '400px', marginTop: '100px' }}>
+            <div style={{ height: '400px', marginTop: '10px' }}>
                 <FullFileBrowser
                     files={files}
                     folderChain={folderChain}

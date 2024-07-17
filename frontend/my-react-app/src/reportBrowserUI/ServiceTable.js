@@ -7,7 +7,7 @@ const createData = (name, description) => {
 };
 
 const rows = [
-  createData('Service 1', 'Description of Service 1'),
+  createData('myservice1', 'End to End k1: bank statements to filing'),
   createData('Service 2', 'Description of Service 2'),
   createData('Service 3', 'Description of Service 3'),
 ];
@@ -22,8 +22,8 @@ const ServicesTable = () => {
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Name</TableCell>
-            <TableCell>Description</TableCell>
+            <TableCell>Full Services</TableCell>
+            <TableCell>Your assembled Jinsei.ai subpackage services</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

@@ -31,10 +31,11 @@ const FileBrowserPage = () => {
       className="file-browser-page"
       style={{
         display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gridTemplateRows: '1fr 1fr',
-        height: '100vh',
+        gridTemplateColumns: '1fr 2fr',
+        gridTemplateRows: '1fr 2fr', // Top row is half the height of the bottom row
+        height: 'calc(100vh - 100px)', // Adjust height to fit within viewport
         gap: '10px',
+        marginTop: '100px',
         padding: '10px',
       }}
     >
@@ -81,6 +82,7 @@ const FileBrowserPage = () => {
           border: '1px solid #ccc',
           padding: '10px',
           overflow: 'auto',
+          color: 'white'
         }}
       >
         <h2>Right Side Content</h2>
