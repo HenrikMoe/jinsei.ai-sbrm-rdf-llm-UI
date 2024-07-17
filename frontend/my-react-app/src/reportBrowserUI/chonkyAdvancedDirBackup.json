@@ -3,7 +3,7 @@
     "fileMap": {
       "qwerty123456": {
         "id": "qwerty123456",
-        "name": "my-k1-bankStatementTransformer",
+        "name": "Subservices and produced report packages",
         "isDir": true,
         "childrenIds": [
           "e598a85f843c",
@@ -21,7 +21,7 @@
       },
       "e598a85f843c": {
         "id": "e598a85f843c",
-        "name": "K1-XBRi-Report-AccountManagerName",
+        "name": "K1XBRi-Report-AccountManagerName",
         "isDir": true,
         "modDate": "2020-10-24T17:48:39.866Z",
         "childrenIds": [
@@ -1315,7 +1315,7 @@
       },
       "002705459ca4": {
         "id": "002705459ca4",
-        "name": "myBankStatementTransformers",
+        "name": "Empty folder",
         "isDir": true,
         "modDate": "2020-07-18T22:27:23.864Z",
         "childrenIds": [],
@@ -1324,7 +1324,7 @@
       },
       "a9fd7c8a04db": {
         "id": "a9fd7c8a04db",
-        "name": "myBankStatementTransformers",
+        "name": "15 nested folders",
         "isDir": true,
         "modDate": "2020-06-27T13:32:07.253Z",
         "childrenIds": [

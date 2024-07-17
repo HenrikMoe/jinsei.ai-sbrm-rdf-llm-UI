@@ -4,6 +4,7 @@ import VFSBrowser from './ChonkyAdvanced.tsx'; // Assuming this is where you've 
 import { Resizable } from 'react-resizable';
 import ServiceSubpackChonk from './TheServiceSubpackListingsChonky.tsx'
 import ServiceTable from './ServiceTable.js'
+import Prototype from '../Prototype.js'
 
 const ResizableLeftPanel = ({ width, onResize }) => (
   <Resizable
@@ -19,7 +20,7 @@ const ResizableLeftPanel = ({ width, onResize }) => (
   </Resizable>
 );
 
-const FileBrowserPage = () => {
+const FileBrowserPage = (listLoginInfo) => {
   const [leftPanelWidth, setLeftPanelWidth] = useState(400);
 
   const onResize = (event, { size }) => {
@@ -85,9 +86,8 @@ const FileBrowserPage = () => {
           color: 'white'
         }}
       >
-        <h2>Right Side Content</h2>
-        <p>This is where additional content can go.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        {/* <Prototype listLoginInfo={listLoginInfo}/> */}
+        <div>a</div>
       </div>
     </div>
   );
