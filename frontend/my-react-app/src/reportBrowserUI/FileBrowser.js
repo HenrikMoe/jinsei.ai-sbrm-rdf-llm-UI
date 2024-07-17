@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import VFSBrowser from './ChonkyAdvanced.tsx'; // Assuming this is where you've defined VFSBrowser
 import { Resizable } from 'react-resizable';
+import ServiceSubpackChonk from './TheServiceSubpackListingsChonky.tsx'
+import ServiceTable from './ServiceTable.js'
 
 const ResizableLeftPanel = ({ width, onResize }) => (
   <Resizable
@@ -25,16 +27,64 @@ const FileBrowserPage = () => {
   };
 
   return (
-    <div className="file-browser-page" style={{ display: 'flex', height: '100vh' }}>
-      {/* Left side with resizable VFSBrowser */}
-      <ResizableLeftPanel width={leftPanelWidth} onResize={onResize} />
-      
-      {/* Right side */}
-      <div className="right-side" style={{ flex: 1, padding: '20px', backgroundColor: '#f0f0f0', overflow: 'auto' }}>
-        {/* Placeholder content on the right side */}
+    <div
+      className="file-browser-page"
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gridTemplateRows: '1fr 1fr',
+        height: '100vh',
+        gap: '10px',
+        padding: '10px',
+      }}
+    >
+      {/* Top left: ServiceSubpackChonk */}
+      <div
+        className="service-subpack-chonk"
+        style={{
+          border: '1px solid #ccc',
+          padding: '10px',
+          overflow: 'auto',
+        }}
+      >
+        <ServiceSubpackChonk />
+      </div>
+
+      {/* Top right: ServiceTable */}
+      <div
+        className="service-table"
+        style={{
+          border: '1px solid #ccc',
+          padding: '10px',
+          overflow: 'auto',
+        }}
+      >
+        <ServiceTable />
+      </div>
+
+      {/* Bottom left: VFSBrowser */}
+      <div
+        className="vfs-browser"
+        style={{
+          border: '1px solid #ccc',
+          padding: '10px',
+          overflow: 'auto',
+        }}
+      >
+        <VFSBrowser style={{ height: '100%' }} />
+      </div>
+
+      {/* Bottom right: Placeholder content */}
+      <div
+        className="right-side-content"
+        style={{
+          border: '1px solid #ccc',
+          padding: '10px',
+          overflow: 'auto',
+        }}
+      >
         <h2>Right Side Content</h2>
         <p>This is where additional content can go.</p>
-        <p>You can drag the divider to resize the left side dynamically.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import { FullFileBrowser } from 'chonky';
 
-
 const MyFileBrowser = () => {
     const files = [
         { id: 'lht', name: 'Projects', isDir: true },

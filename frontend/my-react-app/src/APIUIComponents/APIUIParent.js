@@ -185,7 +185,7 @@ const JinseiAPIEndpoints = () => {
             </div>
           ) : (
             <div>
-            <h2 style={{ color: 'white' }}>Syntax Services</h2>
+            <h2 style={{ color: 'white' }}>Transformer Services</h2>
             {SyntaxServices.map((service, index) => (
               <div key={index} style={{
                 color: 'tan',
