@@ -416,8 +416,9 @@
 
 /* CSS for table cells */
 .balance-sheet-table td {
-  border: 1px solid #ccc;
+  border: 1px solid black;
   padding: 8px;
+  color: black;
   text-align: right;
 }
 

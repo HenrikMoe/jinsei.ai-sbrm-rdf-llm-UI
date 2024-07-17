@@ -5,6 +5,9 @@ import { Resizable } from 'react-resizable';
 import ServiceSubpackChonk from './TheServiceSubpackListingsChonky.tsx'
 import ServiceTable from './ServiceTable.js'
 import Prototype from '../Prototype.js'
+import { AuthenticationProvider } from '../AuthenticationContext'; // Import the context provider
+import { DarkModeProvider } from '../DarkModeContext';
+import { DataStoreProvider } from '../DataStore'; // Import the DataStoreProvider
 
 const ResizableLeftPanel = ({ width, onResize }) => (
   <Resizable
@@ -86,8 +89,17 @@ const FileBrowserPage = (listLoginInfo) => {
           color: 'white'
         }}
       >
-        {/* <Prototype listLoginInfo={listLoginInfo}/> */}
-        <div>a</div>
+            <AuthenticationProvider>
+            <DataStoreProvider>
+            <DarkModeProvider>
+
+            <Prototype listLoginInfo={listLoginInfo}/> 
+            </DarkModeProvider>
+            </DataStoreProvider>
+            </AuthenticationProvider>
+
+
+       
       </div>
     </div>
   );
