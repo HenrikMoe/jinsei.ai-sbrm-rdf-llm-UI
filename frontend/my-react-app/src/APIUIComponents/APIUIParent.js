@@ -38,7 +38,14 @@ const JinseiAPIEndpoints = () => {
       performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
     },
-
+    {
+      title: 'Capitlization',
+      description: "Description: IFRS 38 cap rules, cap analysis",
+      trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
 
 
   ];
@@ -79,8 +86,10 @@ const JinseiAPIEndpoints = () => {
 
   return (
     <div style={{
-      display: isRowBased ? 'flex' : 'column',
+      display: 'flex',
+      flexDirection: isRowBased ? 'row' : 'column',
       justifyContent: 'center',
+      alignItems: 'flex-start',
     }}>
       <div style={{
         marginTop: isMobileMode ? '-50px' : '150px',
@@ -117,7 +126,7 @@ const JinseiAPIEndpoints = () => {
               marginLeft: isRowBased ? '50px' : '0', // Adjusted marginLeft property for h3
               textAlign: 'center', // Center the text horizontally
             }}>
-              Ze fleet
+              Jinsei.ai transformer endpoints and authority services. For use in your Jinsei.ai services.
             </h3>
             <div style={{
               display: 'flex',
@@ -153,14 +162,14 @@ const JinseiAPIEndpoints = () => {
         <div style={{
           marginTop: isMobileMode ? '-50px' : '150px',
           marginBottom: '150px',
-          marginRight: '100px',
-          width: isRowBased ? '600px' : '80%',
+          marginRight: '50px',
+          width: isRowBased ? '800px' : '80%',
           flexDirection: isMobileMode ? 'column' : '',
           alignItems: isMobileMode ? 'center' : '', // Center the content horizontally
           position: isMobileMode ? 'relative' : '',
           display: 'grid',
           marginLeft: isMobileMode ? '50px' : '0px',
-          gridTemplateColumns: isRowBased ? '1fr 1fr' : '1fr',
+          gridTemplateColumns: isRowBased ? '1fr' : '1fr',
           gap: '20px',
         }}>
           {selectedService ? (
@@ -184,41 +193,54 @@ const JinseiAPIEndpoints = () => {
               <p>{selectedService.integrationNotes}</p>
             </div>
           ) : (
-            <div>
-            <h2 style={{ color: 'white' }}>Transformer Services</h2>
-            {SyntaxServices.map((service, index) => (
-              <div key={index} style={{
-                color: 'tan',
-                border: '1px solid #ccc',
-                padding: '20px',
-                borderRadius: '8px',
-                cursor: 'pointer',
-                marginRight: '0px',
-              }} onClick={() => handleClick(service)}>
-                <h3 style={{ color: 'white' }}>{service.title}</h3>
-                <p>{service.description}</p>
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              width: '100%',
+              gap: '20px',
+            }}>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: isRowBased ? '1fr 1fr' : '1fr',
+                gap: '20px',
+              }}>
+                <div>
+                  <h2 style={{ color: 'white' }}>Transformer Services</h2>
+                  {SyntaxServices.map((service, index) => (
+                    <div key={index} style={{
+                      color: 'tan',
+                      border: '1px solid #ccc',
+                      padding: '20px',
+                      borderRadius: '8px',
+                      cursor: 'pointer',
+                      marginTop: '10px'
+                    }} onClick={() => handleClick(service)}>
+                      <h3 style={{ color: 'white' }}>{service.title}</h3>
+                      <p>{service.description}</p>
+                    </div>
+                  ))}
+                </div>
+                <div>
+                  <h2 style={{ color: 'white', marginLeft: isRowBased ? '90px' : '',}}>Authority Services</h2>
+                  {AuthorityServices.map((service, index) => (
+                    <div key={index} style={{
+                      color: 'tan',
+                      border: '1px solid #ccc',
+                      padding: '20px',
+                      borderRadius: '8px',
+                      cursor: 'pointer',
+                      marginTop: '10px',
+                      marginLeft: isRowBased ? '80px' : '', }} onClick={() => handleClick(service)}>
+                      <h3 style={{ color: 'white' }}>{service.title}</h3>
+                      <p>{service.description}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
-            <h2 style={{ color: 'white', marginTop: '50px' }}>Authority Services</h2>
-            {AuthorityServices.map((service, index) => (
-              <div key={index} style={{
-                color: 'tan',
-                border: '1px solid #ccc',
-                padding: '20px',
-                borderRadius: '8px',
-                cursor: 'pointer',
-                marginRight: '0px',
-              }} onClick={() => handleClick(service)}>
-                <h3 style={{ color: 'white' }}>{service.title}</h3>
-                <p>{service.description}</p>
-              </div>
-            ))}
-          </div>
-
+            </div>
           )}
         </div>
       </div>
-
     </div>
   );
 };
