@@ -14,7 +14,7 @@ const JinseiAPIEndpoints = () => {
       //start with statements, lists statement apis which you like add to cart, then they show up in the service builder bottom right part and you connect ur enterprise iam
       // then you click like done and it takes you back and then you click on the right side which is analysis function transformers
       // then it lists the ifrs 38 cap reveiwing functions that analysts use and you add those to ur cart too and then configure them in the service pipeline bottom right part like the statement part.
-      
+
       //statement sheets - project lisitngs one xlsx file, project listings multiple files thru authed query,
       // mapping transformer per analysis function given data files
       trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
@@ -84,6 +84,7 @@ const JinseiAPIEndpoints = () => {
   const isRowBased = useMediaQuery('(min-width: 500px)');
   const isMobileMode = useMediaQuery('(max-width: 768px)');
 
+
   const handleClick = (service) => {
     setSelectedService(service);
   };
@@ -91,6 +92,18 @@ const JinseiAPIEndpoints = () => {
   const handleBack = () => {
     setSelectedService(null);
   };
+
+  const [selectedSubServiceLevel1, setSelectedSubServiceLevel1] = useState(null);
+
+  const handleSubServiceLevel1Click = (service) => {
+    setSelectedSubServiceLevel1(service)
+  }
+
+  const handleSubServiceLevel1Back = () => {
+    setSelectedSubServiceLevel1(null)
+  }
+
+
 
   return (
     <div style={{
@@ -195,6 +208,47 @@ const JinseiAPIEndpoints = () => {
               <h2 style={{ color: 'white' }}>{selectedService.title}</h2>
               <p>{selectedService.description}</p>
               <p style={{ color: 'white' }}>Details</p>
+              <div style={{
+                marginTop: isMobileMode ? '-50px' : '150px',
+                marginBottom: '150px',
+                marginRight: '50px',
+                width: isRowBased ? '800px' : '80%',
+                flexDirection: isMobileMode ? 'column' : '',
+                alignItems: isMobileMode ? 'center' : '', // Center the content horizontally
+                position: isMobileMode ? 'relative' : '',
+                display: 'grid',
+                marginLeft: isMobileMode ? '50px' : '0px',
+                gridTemplateColumns: isRowBased ? '1fr' : '1fr',
+                gap: '20px',
+              }}>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: isRowBased ? '1fr 1fr' : '1fr',
+                gap: '20px',
+              }}>
+              <div style={{
+                color: 'tan',
+                border: '1px solid #ccc',
+                padding: '20px',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                marginTop: '10px'
+              }} onClick={() => handleSubServiceLevel1Click('service')}> 
+              <h3 style={{ color: 'white' }}>Sheet Transformers</h3>
+               </div>
+               <div style={{
+                 color: 'tan',
+                 border: '1px solid #ccc',
+                 padding: '20px',
+                 borderRadius: '8px',
+                 cursor: 'pointer',
+                 marginTop: '10px'
+               }}>
+               <h3 style={{ color: 'white' }}>Analysis Functions</h3>
+                </div>
+              </div>
+
+              </div>
               <p>{selectedService.trainingData}</p>
               <p>{selectedService.intakeData}</p>
               <p>{selectedService.performanceData}</p>
