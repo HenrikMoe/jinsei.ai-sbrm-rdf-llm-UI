@@ -122,7 +122,7 @@ const JinseiAPIEndpoints = () => {
           marginRight: '30px',
         }
       }}>
-        {selectedService ? (
+        {selectedService || selectedSubServiceLevel1 ? (
           <div></div>
         ) : (
           <div style={{
@@ -193,7 +193,66 @@ const JinseiAPIEndpoints = () => {
           gridTemplateColumns: isRowBased ? '1fr' : '1fr',
           gap: '20px',
         }}>
-          {selectedService ? (
+        {selectedSubServiceLevel1 ? (  <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: isRowBased ? '600px' : '100%', }}>
+            <button style={{
+              backgroundColor: '#24292e',
+              color: '#fff',
+              padding: '10px 20px',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              textDecoration: 'none',
+              marginTop: isMobileMode ? '50px' : '0px',
+            }} onClick={handleSubServiceLevel1Back}>Back</button>
+            <h2 style={{ color: 'white' }}>SUBSERVICES OF ENDPOINT PACK REDO ARRAY VARS HERE</h2>
+            <p>{selectedService.description}</p>
+            <p style={{ color: 'white' }}>Details</p>
+            <div style={{
+              marginTop: isMobileMode ? '-50px' : '150px',
+              marginBottom: '150px',
+              marginRight: '50px',
+              width: isRowBased ? '800px' : '80%',
+              flexDirection: isMobileMode ? 'column' : '',
+              alignItems: isMobileMode ? 'center' : '', // Center the content horizontally
+              position: isMobileMode ? 'relative' : '',
+              display: 'grid',
+              marginLeft: isMobileMode ? '50px' : '0px',
+              gridTemplateColumns: isRowBased ? '1fr' : '1fr',
+              gap: '20px',
+            }}>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: isRowBased ? '1fr 1fr' : '1fr',
+              gap: '20px',
+            }}>
+            <div style={{
+              color: 'tan',
+              border: '1px solid #ccc',
+              padding: '20px',
+              borderRadius: '8px',
+              cursor: 'pointer',
+              marginTop: '10px'
+            }} onClick={() => handleSubServiceLevel1Click('service')}>
+            <h3 style={{ color: 'white' }}>Sheet Transformers</h3>
+             </div>
+             <div style={{
+               color: 'tan',
+               border: '1px solid #ccc',
+               padding: '20px',
+               borderRadius: '8px',
+               cursor: 'pointer',
+               marginTop: '10px'
+             }}>
+             <h3 style={{ color: 'white' }}>Analysis Functions</h3>
+              </div>
+            </div>
+
+            </div>
+            <p>{selectedService.trainingData}</p>
+            <p>{selectedService.intakeData}</p>
+            <p>{selectedService.performanceData}</p>
+            <p>{selectedService.integrationNotes}</p>
+          </div>): (  <div>{selectedService ? (
             <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: isRowBased ? '600px' : '100%', }}>
               <button style={{
                 backgroundColor: '#24292e',
@@ -233,7 +292,7 @@ const JinseiAPIEndpoints = () => {
                 borderRadius: '8px',
                 cursor: 'pointer',
                 marginTop: '10px'
-              }} onClick={() => handleSubServiceLevel1Click('service')}> 
+              }} onClick={() => handleSubServiceLevel1Click('service')}>
               <h3 style={{ color: 'white' }}>Sheet Transformers</h3>
                </div>
                <div style={{
@@ -300,7 +359,9 @@ const JinseiAPIEndpoints = () => {
                 </div>
               </div>
             </div>
-          )}
+          )}</div>
+        )}
+
         </div>
       </div>
     </div>
