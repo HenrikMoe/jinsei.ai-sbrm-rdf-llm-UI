@@ -104,6 +104,18 @@ const JinseiAPIEndpoints = () => {
   }
 
 
+  const [selectedSubServiceLevel2, setSelectedSubServiceLevel2] = useState(null);
+
+  const handleSubServiceLevel2Click = (service) => {
+    setSelectedSubServiceLevel2(service)
+  }
+
+  const handleSubServiceLevel2Back = () => {
+    setSelectedSubServiceLevel2(null)
+  }
+
+
+
 
   return (
     <div style={{
