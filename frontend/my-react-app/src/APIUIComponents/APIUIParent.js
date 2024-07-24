@@ -262,6 +262,7 @@ const JinseiAPIEndpoints = () => {
              <h3 style={{ color: 'white' }}>Analysis Functions</h3>
               </div>
             </div>
+            <div style={{ color: 'white' }}>list </div>
             <FileViewerHim />
 
             </div>
