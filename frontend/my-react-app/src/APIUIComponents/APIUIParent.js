@@ -5,82 +5,10 @@ import EndPointDataPreview from './APIUIChild';
 import EndPointDataView from './APIUIChild'; // Assuming you meant './APIUIChild'
 //move this into the ui childs
 import FileViewerHim from './FileViewer';
+import { SyntaxServices, AuthorityServices, SheetTransformersPE } from './Services'; // Import the services
 
 const JinseiAPIEndpoints = () => {
-  const SyntaxServices = [
-    {
-      title: 'Capitlization',
-      description: "Description: IFRS 38 cap rules, cap analysis",
-      //show user the statement sheets they need to config and the analysis func they are using.
-      //show like build a endpoint - build your endpoint with statements and analysis transformers
-      //start with statements, lists statement apis which you like add to cart, then they show up in the service builder bottom right part and you connect ur enterprise iam
-      // then you click like done and it takes you back and then you click on the right side which is analysis function transformers
-      // then it lists the ifrs 38 cap reveiwing functions that analysts use and you add those to ur cart too and then configure them in the service pipeline bottom right part like the statement part.
-
-      //statement sheets - project lisitngs one xlsx file, project listings multiple files thru authed query,
-      // mapping transformer per analysis function given data files
-      trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-    },
-    {
-      title: 'SBRM - OMG',
-      description: "Description: populate SBRM with aspects and facts.",
-      trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-    },
-    {
-      title: 'MiCa ViCa',
-      description: "Description: populate euro web3 asset tracking filing specs' aspects and facts, via ixbrl whitepapers.",
-      trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-    },
-    {
-      title: 'ACTUS',
-      description: "Description: all encompassing financial product modeler (about 100 of every fin product today)",
-      trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-    },
-    {
-      title: 'Private Equity',
-      description: "Description: K1, LEI, 10 K 10 Q ; P.E stuff",
-      trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-    },
-
-
-  ];
-
-    const AuthorityServices = [
-      {
-        title: 'SEC EDGAR API',
-        description: "Upload filings, retrieve filings",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'EURO',
-        description: "Upload filings, retrieve filings",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-
-
-    // Add more services as needed
-  ];
+  
 
   const [selectedService, setSelectedService] = useState(null);
   const isRowBased = useMediaQuery('(min-width: 500px)');
@@ -285,6 +213,7 @@ const JinseiAPIEndpoints = () => {
                   marginTop: isMobileMode ? '50px' : '0px',
                 }} onClick={handleSubServiceLevel1Back}>Back</button>
                 <h2 style={{ color: 'white' }}>External Statement Transformers</h2>
+                
                 <p>{selectedService.description}</p>
                 <p style={{ color: 'white' }}>Details</p>
                 <div style={{
@@ -305,6 +234,19 @@ const JinseiAPIEndpoints = () => {
                   gridTemplateColumns: isRowBased ? '1fr 1fr' : '1fr',
                   gap: '20px',
                 }}>
+                     {SheetTransformersPE.map((service, index) => (
+                        <div key={index} style={{
+                          color: 'tan',
+                          border: '1px solid #ccc',
+                          padding: '20px',
+                          borderRadius: '8px',
+                          cursor: 'pointer',
+                          marginTop: '10px'
+                        }} onClick={() => handleClick(service)}>
+                          <h3 style={{ color: 'white' }}>{service.title}</h3>
+                          <p>{service.description}</p>
+                        </div>
+                      ))}
                 <div style={{
                   color: 'tan',
                   border: '1px solid #ccc',
@@ -323,7 +265,7 @@ const JinseiAPIEndpoints = () => {
                    cursor: 'pointer',
                    marginTop: '10px'
                  }} onClick={() => handleSubServiceLevel2Click('service')}>
-                 <h3 style={{ color: 'white' }}>(this is an analysis function so needs to be redone arrays here) Entity Cash Flow Statements [jinsei standard format] to K1 Report Pack [authority standard format]</h3>
+                 <h3 style={{ color: 'white' }}>(this is an analysis function so needs to be redone arrays here) Entity Cash Flow Statements [jinsei standard format] to K1 Report Pack [Deloitte]</h3>
                   </div>
                   <div style={{
                     color: 'tan',
@@ -422,6 +364,7 @@ const JinseiAPIEndpoints = () => {
                     cursor: 'pointer',
                     marginTop: '10px'
                   }} onClick={() => handleSubServiceLevel1Click('service')}>
+                    
                   <h3 style={{ color: 'white' }}>Sheet Transformers</h3>
                    </div>
                    <div style={{
