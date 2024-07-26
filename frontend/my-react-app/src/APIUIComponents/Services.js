@@ -84,7 +84,7 @@ export const SyntaxServices = [
 
   export const AnalysisTransformersPE = [
     {
-        title: ' Entity Cash Flow Statements [jinsei standard format] to K1 Report Pack [Deloitte]',
+        title: 'K1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
         description: "Upload filings, retrieve filings",
         trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
         intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
@@ -93,6 +93,47 @@ export const SyntaxServices = [
       },
       {
         title: 'ay',
+        description: "Upload filings, retrieve filings",
+        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+      },
+  ]
+
+
+
+  export const AnalysisTransformersCapitilization = [
+    {
+        title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
+        description: "Upload filings, retrieve filings",
+        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+      },
+      {
+        title: 'ay',
+        description: "Upload filings, retrieve filings",
+        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+      },
+  ]
+
+
+  export const SheetTransformersCapitilization = [
+    {
+        title: 'Trans amer Bank Account Transactions [Wells Fago] to Entity Cash Flow Statement [jinsei standard format]',
+        description: "Upload filings, retrieve filings",
+        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+      },
+      {
+        title: 'sheet',
         description: "Upload filings, retrieve filings",
         trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
         intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',

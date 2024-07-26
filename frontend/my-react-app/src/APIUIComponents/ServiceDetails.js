@@ -1,13 +1,19 @@
 import React from 'react';
 import FileViewerHim from './FileViewer';
-import { AnalysisTransformersPE, SheetTransformersPE } from './Services'; // Import the services
+import { AnalysisTransformersPE, SheetTransformersPE, SheetTransformersCapitilization, AnalysisTransformersCapitilization } from './Services'; // Import the services
 
 const ServiceDetails = ({ selectedService, selectedSubServiceLevel1, selectedSubServiceLevel2, onBack, onSubServiceLevel1Click, onSubServiceLevel2Click }) => {
   const getSubServices = () => {
-    if (selectedSubServiceLevel1 === 'sheettransformer') {
+    if (selectedSubServiceLevel1 === 'sheettransformer' && selectedService.title === 'Private Equity') {
       return SheetTransformersPE;
-    } else if (selectedSubServiceLevel1 === 'analysisfunctions') {
+    } else if (selectedSubServiceLevel1 === 'analysisfunctions' && selectedService.title === 'Private Equity') {
       return AnalysisTransformersPE;
+    }
+    else if (selectedSubServiceLevel1 === 'sheettransformer' && selectedService.title === 'Capitlization') {
+        return SheetTransformersCapitilization;
+      }
+    else if (selectedSubServiceLevel1 === 'analysisfunctions' && selectedService.title === 'Capitlization') {
+    return AnalysisTransformersCapitilization;
     }
     return [];
   };
@@ -71,7 +77,7 @@ const ServiceDetails = ({ selectedService, selectedSubServiceLevel1, selectedSub
           <p style={{ color: 'white' }}>Details</p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
             <div style={{ color: 'tan', border: '1px solid #ccc', padding: '20px', borderRadius: '8px', cursor: 'pointer', marginTop: '10px' }} onClick={() => onSubServiceLevel1Click('sheettransformer')}>
-              <h3 style={{ color: 'white' }}>Sheet Transformers</h3>
+              <h3 style={{ color: 'white' }}>Format Transformers</h3>
             </div>
             <div style={{ color: 'tan', border: '1px solid #ccc', padding: '20px', borderRadius: '8px', cursor: 'pointer', marginTop: '10px' }} onClick={() => onSubServiceLevel1Click('analysisfunctions')}>
               <h3 style={{ color: 'white' }}>Analysis Functions</h3>
