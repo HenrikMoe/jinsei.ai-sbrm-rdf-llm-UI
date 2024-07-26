@@ -41,7 +41,7 @@ const JinseiAPIEndpoints = () => {
         ) : (
           <div style={{ marginTop: isRowBased ? '0px' : '-50px', display: 'flex', marginLeft: '-40px', flexDirection: 'column', alignItems: 'center', position: 'relative', zIndex: 1 }}>
             <h1 style={{ color: 'white', marginLeft: isRowBased ? '50px' : '0', marginTop: isRowBased ? (isMobileMode ? '50px' : '100px') : '200px', textAlign: 'center' }}>
-              Jinsei.ai API Endpoints
+              Jinsei.ai API
             </h1>
             <h3 style={{ color: 'tan', marginLeft: isRowBased ? '50px' : '0', textAlign: 'center' }}>
               Jinsei.ai transformer endpoints and authority services. For use in your Jinsei.ai services.

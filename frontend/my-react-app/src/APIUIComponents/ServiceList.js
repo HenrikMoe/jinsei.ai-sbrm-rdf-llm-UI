@@ -18,7 +18,7 @@ const ServiceList = ({ SyntaxServices, AuthorityServices, onServiceClick }) => {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
         <div>
           <h3 style={{ color: 'tan' }}>ERP Transformers</h3>
-          <div style={{ border: '1px solid #ccc', padding: '20px', borderRadius: '8px', color: 'tan' }}>
+          <div style={{ padding: '20px', color: 'tan' }}>
             <ul style={{ listStyleType: 'none', padding: 0 }}>
               {SyntaxServices.map((service, index) => (
                 <h3
@@ -35,7 +35,7 @@ const ServiceList = ({ SyntaxServices, AuthorityServices, onServiceClick }) => {
 
         <div>
           <h3 style={{ color: 'tan' }}>Authority Transformers</h3>
-          <div style={{ border: '1px solid #ccc', padding: '20px', borderRadius: '8px', color: 'tan' }}>
+          <div style={{ padding: '20px',  color: 'tan' }}>
             <ul style={{ listStyleType: 'none', padding: 0 }}>
               {AuthorityServices.map((service, index) => (
                 <h3
