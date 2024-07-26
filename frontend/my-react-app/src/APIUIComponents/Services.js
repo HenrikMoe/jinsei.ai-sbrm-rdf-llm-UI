@@ -146,6 +146,7 @@ export const SyntaxServices = [
   export const CreateTransformer = [
     {
         title: 'create title here',
+        type: 'createTransformer',
         description: "Upload filings, retrieve filings",
         trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
         intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
