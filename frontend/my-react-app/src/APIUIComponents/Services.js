@@ -130,7 +130,7 @@ export const SyntaxServices = [
         trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
         intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
         performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+        integrationNotes: '120 users, 3,400 instantiations',
       },
       {
         title: 'sheet',
@@ -139,5 +139,17 @@ export const SyntaxServices = [
         intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
         performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
         integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+      },
+  ]
+
+
+  export const CreateTransformer = [
+    {
+        title: 'create title here',
+        description: "Upload filings, retrieve filings",
+        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+        integrationNotes: '120 users, 3,400 instantiations',
       },
   ]

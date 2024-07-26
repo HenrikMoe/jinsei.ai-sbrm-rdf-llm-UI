@@ -1,6 +1,6 @@
 import React from 'react';
 import FileViewerHim from './FileViewer';
-import { AnalysisTransformersPE, SheetTransformersPE, SheetTransformersCapitilization, AnalysisTransformersCapitilization } from './Services'; // Import the services
+import { AnalysisTransformersPE, SheetTransformersPE, SheetTransformersCapitilization, AnalysisTransformersCapitilization, CreateTransformer } from './Services'; // Import the services
 
 const ServiceDetails = ({ selectedService, selectedSubServiceLevel1, selectedSubServiceLevel2, onBack, onSubServiceLevel1Click, onSubServiceLevel2Click }) => {
   const getSubServices = () => {
@@ -20,9 +20,9 @@ const ServiceDetails = ({ selectedService, selectedSubServiceLevel1, selectedSub
 
   const getTitle = () => {
     if (selectedSubServiceLevel1 === 'sheettransformer') {
-      return 'Sheet Transformers';
+      return `${selectedService.title} -> Format Transformers`;
     } else if (selectedSubServiceLevel1 === 'analysisfunctions') {
-      return 'Analysis Functions';
+      return `${selectedService.title} -> Analysis Transformers`;
     }
     return 'Sub Services';
   };
@@ -34,7 +34,8 @@ const ServiceDetails = ({ selectedService, selectedSubServiceLevel1, selectedSub
       {selectedSubServiceLevel2 ? (
         //map the selected endpoint // make selected endpoint a thing from 
         <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: '100%' }}>
-          <h2 style={{ color: 'white' }}>{selectedSubServiceLevel2.title}</h2>
+          <h2 style={{ color: 'white' }}>{getTitle()} </h2>
+          <h2 style={{ color: 'white' }}> -&gt; {selectedSubServiceLevel2.title}</h2>
           <p>{selectedSubServiceLevel2.description}</p>
           <p style={{ color: 'white' }}>Details</p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px' }}>
@@ -43,7 +44,7 @@ const ServiceDetails = ({ selectedService, selectedSubServiceLevel1, selectedSub
             </div>
             <div style={{ color: 'tan', border: '1px solid #ccc', padding: '20px', borderRadius: '8px', cursor: 'pointer', marginTop: '10px' }}>
               <FileViewerHim />
-              <h3 style={{ color: 'white' }}>Analysis Functions</h3>
+              <h3 style={{ color: 'white' }}>wrong i think Analysis Functions</h3>
             </div>
           </div>
           <div style={{ color: 'white' }}>list</div>
@@ -57,12 +58,17 @@ const ServiceDetails = ({ selectedService, selectedSubServiceLevel1, selectedSub
         <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: '100%' }}>
           <h2 style={{ color: 'white' }}>{getTitle()}</h2>
           <p>{selectedService.description}</p>
-          <p style={{ color: 'white' }}>Details</p>
+          <button 
+            onClick={() => onSubServiceLevel2Click(CreateTransformer[0])}
+          style={{ backgroundColor: '#24292e', color: '#fff', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer', textDecoration: 'none' }}>Create Transformer</button>
+          <p style={{ color: 'white' }}>Public Transformers:</p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
             {getSubServices().map((service, index) => (
-              <div key={index} style={{ color: 'tan', border: '1px solid #ccc', padding: '20px', borderRadius: '8px', cursor: 'pointer', marginTop: '10px' }} onClick={() => onSubServiceLevel2Click(service)}>
+              <div key={index} style={{ color: 'tan', border: '1px solid #ccc', padding: '20px', borderRadius: '8px', cursor: 'pointer', marginTop: '10px' }} 
+              onClick={() => onSubServiceLevel2Click(service)}>
                 <h3 style={{ color: 'white' }}>{service.title}</h3>
                 <p>{service.description}</p>
+                <p>{service.integrationNotes}</p>
               </div>
             ))}
           </div>
@@ -81,7 +87,7 @@ const ServiceDetails = ({ selectedService, selectedSubServiceLevel1, selectedSub
               <h3 style={{ color: 'white' }}>Format Transformers</h3>
             </div>
             <div style={{ color: 'tan', border: '1px solid #ccc', padding: '20px', borderRadius: '8px', cursor: 'pointer', marginTop: '10px' }} onClick={() => onSubServiceLevel1Click('analysisfunctions')}>
-              <h3 style={{ color: 'white' }}>Analysis Functions</h3>
+              <h3 style={{ color: 'white' }}>Analysis Transformers</h3>
             </div>
           </div>
           <p>{selectedService.trainingData}</p>
