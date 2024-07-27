@@ -192,37 +192,104 @@ const ServiceDetails = ({
           </div>
             </div>
           ) : (
+            <div>
+      <div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(9, 1fr)',
+  gap: '20px',
+  marginTop: '20px',
+  marginBottom: '20px',
+  padding: '20px',
+  border: '1px solid #ccc',
+  borderRadius: '8px',
+  backgroundColor: '#333'
+}}>
+  <div style={{
+    color: 'white',
+    border: '1px solid #666',
+    borderRadius: '5px',
+    padding: '10px',
+    textAlign: 'center'
+  }}>
+    Popularity: 2nd
+  </div>
+  <div style={{
+    color: 'white',
+    border: '1px solid #666',
+    borderRadius: '5px',
+    padding: '10px',
+    textAlign: 'center'
+  }}>
+    Issues: 8
+  </div>
+  <div style={{
+    color: 'white',
+    border: '1px solid #666',
+    borderRadius: '5px',
+    padding: '10px',
+    textAlign: 'center'
+  }}>
+    Contributors: 15
+  </div>
+  <div style={{
+    color: 'white',
+    border: '1px solid #666',
+    borderRadius: '5px',
+    padding: '10px',
+    textAlign: 'center'
+  }}>
+    Performance
+  </div>
+  <div style={{
+    color: 'white',
+    border: '1px solid #666',
+    borderRadius: '5px',
+    padding: '10px',
+    textAlign: 'center'
+  }}>
+    TrainingData
+  </div>
+  <div style={{
+    color: 'white',
+    border: '1px solid #666',
+    borderRadius: '5px',
+    padding: '10px',
+    textAlign: 'center'
+  }}>
+    Related
+  </div>
+  <div style={{
+    color: 'white',
+    border: '1px solid #666',
+    borderRadius: '5px',
+    padding: '10px',
+    textAlign: 'center'
+  }}>
+    IAM
+  </div>
+  <div style={{
+    color: 'white',
+    border: '1px solid #666',
+    borderRadius: '5px',
+    padding: '10px',
+    textAlign: 'center'
+  }}>
+    Source
+  </div>
+  <div style={{
+    color: 'white',
+    border: '1px solid #666',
+    borderRadius: '5px',
+    padding: '10px',
+    textAlign: 'center'
+  }}>
+    Images/CI/CD
+  </div>
+</div>
+
+            
             <div style={{ display: 'grid', gridTemplateColumns: '3fr 3fr', gap: '20px' }}>
-              <div>
-                <h3 style={{ color: 'white' }}>Input Training Data Preview</h3>
-                <div
-                  style={{
-                    color: 'tan',
-                    border: '1px solid #ccc',
-                    padding: '20px',
-                    borderRadius: '8px',
-                    cursor: 'pointer',
-                    marginTop: '10px'
-                  }}
-                >
-                  <FileViewerHim />
-                </div>
-              </div>
-              <div>
-                <h3 style={{ color: 'white' }}>Output Training Data Preview</h3>
-                <div
-                  style={{
-                    color: 'tan',
-                    border: '1px solid #ccc',
-                    padding: '20px',
-                    borderRadius: '8px',
-                    cursor: 'pointer',
-                    marginTop: '10px'
-                  }}
-                >
-                  <FileViewerHim />
-                </div>
-              </div>
+             
               <div>
           <p>this is your published ai or within your eneterprise iam pack permissioned to train</p>
           </div>
@@ -241,6 +308,21 @@ const ServiceDetails = ({
             }}
           >
             Update AI Training
+          </button>
+          <button
+            style={{
+              marginTop: '20px',
+              marginLeft: '10px',
+              backgroundColor: '#24292e',
+              color: '#fff',
+              padding: '10px 20px',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              textDecoration: 'none'
+            }}
+          >
+            Update IAM
           </button>
           </div>
 
@@ -285,6 +367,37 @@ const ServiceDetails = ({
              Endpoint Redocly Documentation
           </button>
           </div>
+          <div>
+                <h3 style={{ color: 'white' }}>Input Training Data Preview</h3>
+                <div
+                  style={{
+                    color: 'tan',
+                    border: '1px solid #ccc',
+                    padding: '20px',
+                    borderRadius: '8px',
+                    cursor: 'pointer',
+                    marginTop: '10px'
+                  }}
+                >
+                  <FileViewerHim />
+                </div>
+              </div>
+              <div>
+                <h3 style={{ color: 'white' }}>Output Training Data Preview</h3>
+                <div
+                  style={{
+                    color: 'tan',
+                    border: '1px solid #ccc',
+                    padding: '20px',
+                    borderRadius: '8px',
+                    cursor: 'pointer',
+                    marginTop: '10px'
+                  }}
+                >
+                  <FileViewerHim />
+                </div>
+              </div>
+            </div>
             </div>
           )}
           
