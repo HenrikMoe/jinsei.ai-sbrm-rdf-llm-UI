@@ -210,13 +210,13 @@ const modalStyles = {
   content: {
     right: 'auto',
     bottom: 'auto',
-    marginRight: '-50%',
+    // marginRight: '-50%',
     padding: '20px',
     borderRadius: '10px',
     backgroundColor: 'black',
     overflowX: 'hidden',
     overflowY: 'auto',
-    width: '800px',
+    width: '90%',
     maxHeight: '90vh', // Make sure modal doesn't exceed viewport height
     textAlign: 'center',
   },

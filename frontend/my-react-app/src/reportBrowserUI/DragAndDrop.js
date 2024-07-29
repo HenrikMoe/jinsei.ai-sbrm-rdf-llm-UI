@@ -29,7 +29,7 @@ const App = () => {
         </button>
       </div>
       <div style={styles.cellBottomLeft}>
-        <button style={styles.button} onClick={() => openModal('This is the bottom left modal')}>
+        <button style={styles.button} onClick={() => openModal('Inputs: SOOOOOO much stuff here thinky')}>
           Input Config
         </button>
       </div>
