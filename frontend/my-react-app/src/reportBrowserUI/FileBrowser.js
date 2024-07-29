@@ -8,6 +8,11 @@ import Prototype from '../Prototype.js'
 import { AuthenticationProvider } from '../AuthenticationContext'; // Import the context provider
 import { DarkModeProvider } from '../DarkModeContext';
 import { DataStoreProvider } from '../DataStore'; // Import the DataStoreProvider
+import DragAndDrop from './DragAndDrop.js'
+import DragAndDrop2 from './DragAndDrop2.js'
+import DragAndDrop3 from './DragAndDrop3.js'
+
+
 
 const ResizableLeftPanel = ({ width, onResize }) => (
   <Resizable
@@ -89,6 +94,45 @@ const FileBrowserPage = (listLoginInfo) => {
           color: 'white'
         }}
       >
+
+        <h3 style={{
+            color: 'white'
+
+          }}>My Service 1</h3>
+          <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr',
+            gridTemplateRows: '1fr 1fr',
+            marginLeft: '10px',
+            transform: 'scale(0.67)',
+            transformOrigin: 'top left',
+
+          }}>
+            <div style={{
+            color: 'white',
+            marginTop:'150px',
+            marginLeft: '20px',
+          }}> {'>>>'} </div>
+          <DragAndDrop />
+          <div style={{
+            color: 'white',
+            marginTop:'150px',
+            marginLeft: '20px',
+          }}> {'>>>'}  </div>
+          <DragAndDrop2 />
+          <div style={{
+            color: 'white',
+            marginTop:'150px',
+            marginLeft: '20px',
+
+          }}> {'>>>'} </div>
+          <DragAndDrop3 />
+
+          </div>
+           
+
+
             <AuthenticationProvider>
             <DataStoreProvider>
             <DarkModeProvider>
@@ -97,7 +141,7 @@ const FileBrowserPage = (listLoginInfo) => {
             </DarkModeProvider>
             </DataStoreProvider>
             </AuthenticationProvider>
-
+            
 
        
       </div>
