@@ -11,7 +11,10 @@ import { DataStoreProvider } from '../DataStore'; // Import the DataStoreProvide
 import DragAndDrop from './DragAndDrop.js'
 import DragAndDrop2 from './DragAndDrop2.js'
 import DragAndDrop3 from './DragAndDrop3.js'
+import Modal from 'react-modal';
+import APIUI from '../APIUIComponents/APIUIParent.js'
 
+Modal.setAppElement('#root');
 
 
 const ResizableLeftPanel = ({ width, onResize }) => (
@@ -33,6 +36,19 @@ const FileBrowserPage = (listLoginInfo) => {
 
   const onResize = (event, { size }) => {
     setLeftPanelWidth(size.width);
+  };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState('');
+
+  const openModal = (content) => {
+    setModalContent(content);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setModalContent('');
   };
 
   return (
@@ -57,6 +73,7 @@ const FileBrowserPage = (listLoginInfo) => {
           overflow: 'auto',
         }}
       >
+        <button onClick={() => openModal(<APIUI />)}>Add Subservice</button>
         <ServiceSubpackChonk />
       </div>
 
@@ -95,10 +112,31 @@ const FileBrowserPage = (listLoginInfo) => {
         }}
       >
 
+        <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gridTemplateRows: '1fr 1fr',
+            marginLeft: '10px',
+            transform: 'scale(0.87)',
+            transformOrigin: 'top left',
+          }}>
         <h3 style={{
             color: 'white'
 
-          }}>My Service 1</h3>
+          }}>My Service 1   </h3>
+          <h3 style={{
+            color: 'white'
+
+          }}>Status: Active  <button>Manage</button>
+</h3>
+        </div>
+
+       <h3 style={{
+            color: 'white',
+            marginTop: '-40px',
+            transform: 'scale(0.67)',
+            transformOrigin: 'top left',
+          }}>Process SubServices</h3>
           <div
           style={{
             display: 'grid',
@@ -145,8 +183,64 @@ const FileBrowserPage = (listLoginInfo) => {
 
        
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Modal"
+        style={modalStyles}
+      >
+        <h2>Modal Content</h2>
+        <p>{modalContent}</p>
+        <button onClick={closeModal} style={styles.button}>Close Modal</button>
+      </Modal>
     </div>
   );
+};
+
+const styles = {
+ 
+
+  text: {
+    margin: 0,
+    fontSize: '16px',
+  },
+  closeButton: {
+    background: 'red',
+    color: 'white',
+    border: 'none',
+    borderRadius: '5px',
+    padding: '10px',
+    cursor: 'pointer',
+  },
+  button: {
+    background: 'blue',
+    color: 'white',
+    border: 'none',
+    borderRadius: '5px',
+    padding: '10px',
+    cursor: 'pointer',
+  },
+};
+
+
+const modalStyles = {
+  overflow: 'hideen',
+  content: {
+    // top: '50%',
+    // left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    // transform: 'translate(-50%, -50%)',
+    padding: '20px',
+    borderRadius: '10px',
+    backgroundColor: 'black',
+    overflowX: 'auto',
+    overflowY: 'auto',
+    width: '800px',
+    height: '2000px',
+    textAlign: 'center',
+  },
 };
 
 ReactDOM.render(<FileBrowserPage />, document.getElementById('root'));

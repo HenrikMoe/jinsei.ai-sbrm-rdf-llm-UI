@@ -30,12 +30,12 @@ const App = () => {
       </div>
       <div style={styles.cellBottomLeft}>
         <button style={styles.button} onClick={() => openModal('This is the bottom left modal')}>
-          Input
+          Input Config
         </button>
       </div>
       <div style={styles.cellBottomRight}>
         <button style={styles.button} onClick={() => openModal('This is the bottom right modal')}>
-          Output
+          Output Config
         </button>
       </div>
 

@@ -21,7 +21,7 @@ const App = () => {
   return (
     <div style={styles.gridContainer}>
       <div style={styles.cellTopLeft}>
-        <p style={styles.text}>K1 Report Package Deloitte to Deloitte SEC Filing Service </p>
+        <p style={styles.text}>K1 Report Package Deloitte to Deloitte SEC Filing Service <button>open pack</button></p>
       </div>
       <div style={styles.cellTopRight}>
         <button style={styles.closeButton} onClick={() => openModal('This is the X modal')}>
@@ -30,12 +30,12 @@ const App = () => {
       </div>
       <div style={styles.cellBottomLeft}>
         <button style={styles.button} onClick={() => openModal('This is the bottom left modal')}>
-          Input
+          Input Config
         </button>
       </div>
       <div style={styles.cellBottomRight}>
         <button style={styles.button} onClick={() => openModal('This is the bottom right modal')}>
-          Output
+          Output Config
         </button>
       </div>
 
