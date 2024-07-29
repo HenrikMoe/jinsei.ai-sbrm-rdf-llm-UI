@@ -16,7 +16,6 @@ import APIUI from '../APIUIComponents/APIUIParent.js'
 
 Modal.setAppElement('#root');
 
-
 const ResizableLeftPanel = ({ width, onResize }) => (
   <Resizable
     width={width}
@@ -39,7 +38,7 @@ const FileBrowserPage = (listLoginInfo) => {
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState('');
+  const [modalContent, setModalContent] = useState(null);
 
   const openModal = (content) => {
     setModalContent(content);
@@ -48,7 +47,7 @@ const FileBrowserPage = (listLoginInfo) => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setModalContent('');
+    setModalContent(null);
   };
 
   return (
@@ -111,7 +110,6 @@ const FileBrowserPage = (listLoginInfo) => {
           color: 'white'
         }}
       >
-
         <div style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
@@ -120,24 +118,17 @@ const FileBrowserPage = (listLoginInfo) => {
             transform: 'scale(0.87)',
             transformOrigin: 'top left',
           }}>
-        <h3 style={{
-            color: 'white'
-
-          }}>My Service 1   </h3>
-          <h3 style={{
-            color: 'white'
-
-          }}>Status: Active  <button>Manage</button>
-</h3>
+          <h3 style={{ color: 'white' }}>My Service 1</h3>
+          <h3 style={{ color: 'white' }}>Status: Active <button>Manage</button></h3>
         </div>
 
-       <h3 style={{
+        <h3 style={{
             color: 'white',
             marginTop: '-40px',
             transform: 'scale(0.67)',
             transformOrigin: 'top left',
           }}>Process SubServices</h3>
-          <div
+        <div
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr',
@@ -145,44 +136,37 @@ const FileBrowserPage = (listLoginInfo) => {
             marginLeft: '10px',
             transform: 'scale(0.67)',
             transformOrigin: 'top left',
-
-          }}>
-            <div style={{
+          }}
+        >
+          <div style={{
             color: 'white',
-            marginTop:'150px',
+            marginTop: '150px',
             marginLeft: '20px',
           }}> {'>>>'} </div>
           <DragAndDrop />
           <div style={{
             color: 'white',
-            marginTop:'150px',
+            marginTop: '150px',
             marginLeft: '20px',
-          }}> {'>>>'}  </div>
+          }}> {'>>>'} </div>
           <DragAndDrop2 />
           <div style={{
             color: 'white',
-            marginTop:'150px',
+            marginTop: '150px',
             marginLeft: '20px',
-
           }}> {'>>>'} </div>
           <DragAndDrop3 />
+        </div>
 
-          </div>
-           
-
-
-            <AuthenticationProvider>
-            <DataStoreProvider>
+        <AuthenticationProvider>
+          <DataStoreProvider>
             <DarkModeProvider>
-
-            <Prototype listLoginInfo={listLoginInfo}/> 
+              <Prototype listLoginInfo={listLoginInfo} />
             </DarkModeProvider>
-            </DataStoreProvider>
-            </AuthenticationProvider>
-            
-
-       
+          </DataStoreProvider>
+        </AuthenticationProvider>
       </div>
+
       <Modal
         isOpen={isModalOpen}
         onRequestClose={closeModal}
@@ -190,7 +174,9 @@ const FileBrowserPage = (listLoginInfo) => {
         style={modalStyles}
       >
         <h2>Modal Content</h2>
-        <p>{modalContent}</p>
+        <div style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
+          {modalContent}
+        </div>
         <button onClick={closeModal} style={styles.button}>Close Modal</button>
       </Modal>
     </div>
@@ -198,8 +184,6 @@ const FileBrowserPage = (listLoginInfo) => {
 };
 
 const styles = {
- 
-
   text: {
     margin: 0,
     fontSize: '16px',
@@ -222,23 +206,18 @@ const styles = {
   },
 };
 
-
 const modalStyles = {
-  overflow: 'hideen',
   content: {
-    // top: '50%',
-    // left: '50%',
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    // transform: 'translate(-50%, -50%)',
     padding: '20px',
     borderRadius: '10px',
     backgroundColor: 'black',
-    overflowX: 'auto',
+    overflowX: 'hidden',
     overflowY: 'auto',
     width: '800px',
-    height: '2000px',
+    maxHeight: '90vh', // Make sure modal doesn't exceed viewport height
     textAlign: 'center',
   },
 };

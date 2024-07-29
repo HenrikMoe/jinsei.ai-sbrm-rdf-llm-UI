@@ -27,7 +27,7 @@ const JinseiAPIEndpoints = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: isRowBased ? 'row' : 'column', justifyContent: 'center', alignItems: 'flex-start' }}>
+    <div style={{ display: 'flex', overflowY: 'auto', flexDirection: isRowBased ? 'row' : 'column', justifyContent: 'center', alignItems: 'flex-start' }}>
       <div style={{ marginTop: isMobileMode ? '-50px' : '150px', marginBottom: '150px', marginLeft: '100px', marginRight: '50px', '@media (max-width: 768px)': { marginLeft: '30px', marginRight: '30px' } }}>
         {selectedService || selectedSubServiceLevel1 || selectedSubServiceLevel2 ? (
           <ServiceDetails
