@@ -2,9 +2,9 @@ import React from 'react';
 
 // Define arrays of dummy values
 const dummyValues = [
-  'File URI', 'Uri', 'IAM', 'packageiam', 'call at',
-  '00:00 monthly', 'Grape', 'Honeydew', 'Ivy', 'Jackfruit',
-  'Kiwi', 'Lemon', 'Mango', 'Nectarine', 'Orange',
+  'File URI', 'https://wellsfargo.com/asdfjjfdbsbajs', 'call at',
+  '00:00 monthly', 'req type', 'get', 'IAM', 'packageiam',
+
   
 ];
 
@@ -21,13 +21,15 @@ const shuffleArray = (array) => {
 
 const RandomGrid = () => {
   const rows = 8;
-  const columns = 4;
+  const columns = 2;
   const totalCells = rows * columns;
 
   // Create a shuffled version of the dummy values array
   const gridItems = dummyValues
 
   return (
+    <div>
+        <h3>Input Config</h3>
     <div style={styles.gridContainer}>
       {gridItems.map((value, index) => (
         <div key={index} style={styles.gridItem}>
@@ -35,13 +37,15 @@ const RandomGrid = () => {
         </div>
       ))}
     </div>
+    </div>
+
   );
 };
 
 const styles = {
   gridContainer: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridTemplateColumns: 'repeat(2, 1fr)',
     gridTemplateRows: 'repeat(8, auto)',
     gap: '10px',
     padding: '10px',

@@ -47,7 +47,6 @@ const App = () => {
         contentLabel="Modal"
         style={modalStyles}
       >
-        <h2>Modal Content</h2>
         <p>{modalContent}</p>
         <button onClick={closeModal} style={styles.button}>Close Modal</button>
       </Modal>

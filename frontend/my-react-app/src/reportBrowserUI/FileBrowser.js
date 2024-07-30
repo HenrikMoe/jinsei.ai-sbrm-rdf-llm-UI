@@ -173,7 +173,6 @@ const FileBrowserPage = (listLoginInfo) => {
         contentLabel="Modal"
         style={modalStyles}
       >
-        <h2>Modal Content</h2>
         <div style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
           {modalContent}
         </div>
