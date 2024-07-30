@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-
+import InputConfig from './InputConfig.js'
+import CheckMark from './CheckMark.js'
 Modal.setAppElement('#root');
 
 const App = () => {
@@ -29,9 +30,10 @@ const App = () => {
         </button>
       </div>
       <div style={styles.cellBottomLeft}>
-        <button style={styles.button} onClick={() => openModal('Inputs: SOOOOOO much stuff here thinky')}>
+        <button style={styles.button} onClick={() => openModal(<InputConfig/>)}>
           Input Config
         </button>
+        <CheckMark/>
       </div>
       <div style={styles.cellBottomRight}>
         <button style={styles.button} onClick={() => openModal('This is the bottom right modal')}>

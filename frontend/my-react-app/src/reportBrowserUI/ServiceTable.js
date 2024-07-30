@@ -26,6 +26,8 @@ const ServicesTable = () => {
             <TableCell>Your assembled Jinsei.ai subpackage services</TableCell>
           </TableRow>
         </TableHead>
+        </Table>
+        <Table aria-label="simple table">
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.name} hover onClick={() => handleRowClick(row)} style={{ cursor: 'pointer' }}>
