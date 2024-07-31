@@ -1,5 +1,7 @@
 import React from 'react';
 import FileViewerHim from './FileViewer';
+import Spinner from '../Spinner.js'
+
 import {
   AnalysisTransformersPE,
   SheetTransformersPE,
@@ -189,6 +191,8 @@ const ServiceDetails = ({
           >
              Create AI
           </button>
+          <Spinner/>
+
           </div>
             </div>
           ) : (
