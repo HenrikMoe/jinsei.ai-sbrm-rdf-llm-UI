@@ -1,0 +1,12 @@
+:root {
+    --chonk-bg-primary: #333;
+    --chonk-bg-secondary: #444;
+    --chonk-bg-hover: #555;
+    --chonk-bg-selected: #666;
+    --chonk-bg-hover-selected: #777;
+    --chonk-bg-toolbar: #222;
+    --chonk-text-light: #fff;
+    --chonk-text-dark: #ccc;
+    --chonk-border: #444;
+    --chonk-border-dark: #333;
+}

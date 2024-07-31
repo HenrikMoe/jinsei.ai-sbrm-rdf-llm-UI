@@ -49,13 +49,14 @@ const SearchBar = () => {
   };
 
   const inputProps = {
-    placeholder: 'Type a fruit name',
+    placeholder: 'Search for a transformer service',
     value,
     onChange,
   };
 
   return (
     <Autosuggest
+      
       suggestions={suggestionsList}
       onSuggestionsFetchRequested={onSuggestionsFetchRequested}
       onSuggestionsClearRequested={onSuggestionsClearRequested}

@@ -3,6 +3,7 @@ import { useMediaQuery } from 'usehooks-ts';
 import ServiceDetails from './ServiceDetails';
 import ServiceList from './ServiceList';
 import { SyntaxServices, AuthorityServices } from './Services'; // Import the services
+import SearchBar from './SearchBar'
 
 const JinseiAPIEndpoints = () => {
   const [selectedService, setSelectedService] = useState(null);
@@ -39,6 +40,8 @@ const JinseiAPIEndpoints = () => {
             onSubServiceLevel2Click={handleSubServiceLevel2Click}
           />
         ) : (
+          <div>
+
           <div style={{ marginTop: isRowBased ? '0px' : '-50px', display: 'flex', marginLeft: '-40px', flexDirection: 'column', alignItems: 'center', position: 'relative', zIndex: 1 }}>
             <h1 style={{ color: 'white', marginLeft: isRowBased ? '50px' : '0', marginTop: isRowBased ? (isMobileMode ? '50px' : '100px') : '200px', textAlign: 'center' }}>
               Jinsei.ai API
@@ -55,6 +58,8 @@ const JinseiAPIEndpoints = () => {
               </a>
             </div>
           </div>
+                      <SearchBar />
+            </div>
         )}
 
         {!selectedService && !selectedSubServiceLevel1 && !selectedSubServiceLevel2 && (
