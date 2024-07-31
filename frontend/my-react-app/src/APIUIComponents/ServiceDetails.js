@@ -1,6 +1,7 @@
 import React from 'react';
 import FileViewerHim from './FileViewer';
 import Spinner from '../Spinner.js'
+import FileUploader from './FileUploader.js'
 
 import {
   AnalysisTransformersPE,
@@ -79,19 +80,8 @@ const ServiceDetails = ({
                   }}
                 >
                   <h3 style={{ color: 'white' }}>initial CSV, XLSX, JSON, or other format</h3>
-                  <button
-                    style={{
-                      backgroundColor: '#24292e',
-                      color: '#fff',
-                      padding: '10px 20px',
-                      border: 'none',
-                      borderRadius: '5px',
-                      cursor: 'pointer',
-                      textDecoration: 'none'
-                    }}
-                  >
-                    Upload
-                  </button>
+               
+                  <FileUploader />
                 </div>
               </div>
               <div>
@@ -106,20 +96,9 @@ const ServiceDetails = ({
                     marginTop: '10px'
                   }}
                 >
-                  <h3 style={{ color: 'white' }}>final transformation CSV, XLSX, JSON, or other format</h3>
-                  <button
-                    style={{
-                      backgroundColor: '#24292e',
-                      color: '#fff',
-                      padding: '10px 20px',
-                      border: 'none',
-                      borderRadius: '5px',
-                      cursor: 'pointer',
-                      textDecoration: 'none'
-                    }}
-                  >
-                    Upload
-                  </button>
+                  <h3 style={{ color: 'white' }}>final format CSV, XLSX, JSON, or other </h3>
+                  <FileUploader />
+
                 </div>
               </div>
               <div>
