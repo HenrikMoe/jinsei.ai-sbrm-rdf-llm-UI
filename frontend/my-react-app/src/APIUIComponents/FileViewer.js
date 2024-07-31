@@ -8,25 +8,31 @@ import "@cyntler/react-doc-viewer/dist/index.css";
 
 function App() {
   const docs = [
-    { uri: require("./annual-enterprise-survey-2023-financial-year-provisional.csv") }, // Local File
+    { uri: require("./annual-enterprise-survey-2023-financial-year-provisional.csv") },
+    { uri: require("./annual-enterprise-survey-2023-financial-year-provisional2.csv") },
+    { uri: require("./annual-enterprise-survey-2023-financial-year-provisional3.csv") }, // Local File
   ];
 
   const containerStyle = {
-    width: '80%',
+    width: '100%',
     margin: '0 auto',
-    maxWidth: '400px',
+    maxWidth: '500px',
     overflowX: 'auto', // Add horizontal scroll if content overflows
     height: '300px',
     overflowY: 'auto',
+    transformOrigin: 'top left',
     color: 'black',
     border: '1px solid black',
     backgroundColor: 'white'
   };
 
   const iframeStyle = {
-    width: '20%',
+    width: '100%',
     border: '1px solid black',
     color: 'black',
+    transform: 'scale(0.67)',
+    transformOrigin: 'top left',
+
     overflowX: 'auto',
     height: '300px',
     overflowY: 'auto',

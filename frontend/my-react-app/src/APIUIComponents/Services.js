@@ -65,15 +65,15 @@ export const SyntaxServices = [
   export const SheetTransformersPE = [
     {
         title: 'Business Bank Account Transactions [Wells Fago] to Entity Cash Flow Statement [jinsei standard format]',
-        description: "Upload filings, retrieve filings",
+        description: "By Xgroup, MIT license",
         trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
         intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
         performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
         integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
       },
       {
-        title: 'sheet',
-        description: "Upload filings, retrieve filings",
+        title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
+        description: "By Ygroup, Licensing Required",
         trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
         intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
         performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',

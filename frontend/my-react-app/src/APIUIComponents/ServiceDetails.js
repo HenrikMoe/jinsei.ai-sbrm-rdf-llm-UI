@@ -2,6 +2,7 @@ import React from 'react';
 import FileViewerHim from './FileViewer';
 import Spinner from '../Spinner.js'
 import FileUploader from './FileUploader.js'
+import FileDownloader from './FileDownloader.js'
 
 import {
   AnalysisTransformersPE,
@@ -10,6 +11,7 @@ import {
   AnalysisTransformersCapitilization,
   CreateTransformer
 } from './Services'; // Import the services
+import SearchBar from './SearchBar.js';
 
 const ServiceDetails = ({
   selectedService,
@@ -176,7 +178,92 @@ const ServiceDetails = ({
             </div>
           ) : (
             <div>
-      <div style={{
+      
+
+            
+            <div style={{ display: 'grid', gridTemplateColumns: '3fr 3fr', gap: '20px' }}>
+             
+              <div>
+          <p>this is your published ai or within your eneterprise iam pack permissioned to train</p>
+          </div>
+          <div>
+
+          <button
+            style={{
+              marginTop: '20px',
+              backgroundColor: '#24292e',
+              color: '#fff',
+              padding: '10px 20px',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              textDecoration: 'none'
+            }}
+          >
+            Update AI Training
+          </button>
+          <button
+            style={{
+              marginTop: '20px',
+              marginLeft: '10px',
+              backgroundColor: '#24292e',
+              color: '#fff',
+              padding: '10px 20px',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              textDecoration: 'none'
+            }}
+          >
+            Update IAM
+          </button>
+          </div>
+
+          <div>
+          <p>you have access to this endpoint thru your iam or this is public</p>
+          </div>
+          <div>
+
+          <button
+            style={{
+              marginTop: '20px',
+              backgroundColor: '#24292e',
+              color: '#fff',
+              padding: '10px 20px',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              textDecoration: 'none'
+            }}
+          >
+            Add To Services
+          </button>
+          </div>
+
+          <div>
+          <p>More Details</p>
+          </div>
+          <div>
+
+          <button
+            style={{
+              marginTop: '20px',
+              backgroundColor: '#24292e',
+              color: '#fff',
+              padding: '10px 20px',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              textDecoration: 'none'
+            }}
+          >
+             Endpoint Redocly Documentation
+          </button>
+          </div>
+            </div>
+
+           
+            <div style={{
   display: 'grid',
   gridTemplateColumns: 'repeat(9, 1fr)',
   gap: '20px',
@@ -269,88 +356,8 @@ const ServiceDetails = ({
     Images/CI/CD
   </div>
 </div>
-
-            
-            <div style={{ display: 'grid', gridTemplateColumns: '3fr 3fr', gap: '20px' }}>
-             
-              <div>
-          <p>this is your published ai or within your eneterprise iam pack permissioned to train</p>
-          </div>
-          <div>
-
-          <button
-            style={{
-              marginTop: '20px',
-              backgroundColor: '#24292e',
-              color: '#fff',
-              padding: '10px 20px',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer',
-              textDecoration: 'none'
-            }}
-          >
-            Update AI Training
-          </button>
-          <button
-            style={{
-              marginTop: '20px',
-              marginLeft: '10px',
-              backgroundColor: '#24292e',
-              color: '#fff',
-              padding: '10px 20px',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer',
-              textDecoration: 'none'
-            }}
-          >
-            Update IAM
-          </button>
-          </div>
-
-          <div>
-          <p>this is a public or you have access to this endpoint thru your eneterprise iam</p>
-          </div>
-          <div>
-
-          <button
-            style={{
-              marginTop: '20px',
-              backgroundColor: '#24292e',
-              color: '#fff',
-              padding: '10px 20px',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer',
-              textDecoration: 'none'
-            }}
-          >
-            Add To Dashboard
-          </button>
-          </div>
-
-          <div>
-          <p>More Details</p>
-          </div>
-          <div>
-
-          <button
-            style={{
-              marginTop: '20px',
-              backgroundColor: '#24292e',
-              color: '#fff',
-              padding: '10px 20px',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer',
-              textDecoration: 'none'
-            }}
-          >
-             Endpoint Redocly Documentation
-          </button>
-          </div>
-          <div>
+<div style={{display: 'grid', gridTemplateColumns: '1fr 1fr',}}>
+            <div>
                 <h3 style={{ color: 'white' }}>Input Training Data Preview</h3>
                 <div
                   style={{
@@ -363,6 +370,7 @@ const ServiceDetails = ({
                   }}
                 >
                   <FileViewerHim />
+                  <FileDownloader />
                 </div>
               </div>
               <div>
@@ -378,9 +386,11 @@ const ServiceDetails = ({
                   }}
                 >
                   <FileViewerHim />
+                  <FileDownloader/>
                 </div>
               </div>
-            </div>
+              </div>
+
             </div>
           )}
           
@@ -408,6 +418,9 @@ const ServiceDetails = ({
             Create Transformer
           </button>
           <p style={{ color: 'white' }}>Public Transformers:</p>
+
+            <SearchBar />
+
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
             {getSubServices().map((service, index) => (
               <div
