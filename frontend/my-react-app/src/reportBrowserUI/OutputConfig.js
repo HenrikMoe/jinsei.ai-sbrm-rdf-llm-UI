@@ -2,8 +2,8 @@ import React from 'react';
 
 // Define arrays of dummy values
 const dummyValues = [
-  'File URI', 'https://wellsfargo.com/asdfjjfdbsbajs', 'call at',
-  '00:00 monthly', 'req type', 'get', 'IAM', 'Smith-John-CPA-PEVP-Deloitte','inspect transformer'
+  'File URI', 'https://jinsei.ai/asdfjjfdbsbajs', 'call at',
+  '00:00 monthly', 'formats', 'json,  xlsx', 'IAM', 'Smith-John-CPA-PEVP-Deloitte', 'inspect transformer', 'inspect produced packages'
 
   
 ];
@@ -28,8 +28,8 @@ const RandomGrid = () => {
   const gridItems = dummyValues
 
   return (
-    <div>
-        <h3>Input Config</h3>
+    <div >
+        <h3>Output Config</h3>
     <div style={styles.gridContainer}>
       {gridItems.map((value, index) => (
         <div key={index} style={styles.gridItem}>

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import InputConfig from './InputConfig.js'
+import OutputConfig from './OutputConfig.js'
 import CheckMark from './CheckMark.js'
 Modal.setAppElement('#root');
 
@@ -33,10 +34,10 @@ const App = () => {
         <button style={styles.button} onClick={() => openModal(<InputConfig/>)}>
           Input Config
         </button>
-        <CheckMark/>
+        
       </div>
       <div style={styles.cellBottomRight}>
-        <button style={styles.button} onClick={() => openModal('This is the bottom right modal')}>
+        <button style={styles.button} onClick={() => openModal(<OutputConfig/>)}>
           Output Config
         </button>
       </div>
@@ -142,7 +143,7 @@ const modalStyles = {
     transform: 'translate(-50%, -50%)',
     padding: '20px',
     borderRadius: '10px',
-    width: '300px',
+    width: '800px',
     textAlign: 'center',
   },
 };
