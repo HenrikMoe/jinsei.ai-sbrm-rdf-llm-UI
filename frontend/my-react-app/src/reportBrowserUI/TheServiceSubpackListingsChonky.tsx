@@ -252,6 +252,8 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
 
     return (
         <div>
+                        <h3 style={{color: 'white'}}>All Packs</h3>
+
             <button
                 style={{ marginBottom: '15px' }}
                 onClick={resetFileMap} 

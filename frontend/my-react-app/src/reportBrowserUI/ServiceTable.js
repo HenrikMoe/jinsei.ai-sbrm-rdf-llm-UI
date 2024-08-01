@@ -7,7 +7,7 @@ const createData = (name, description) => {
 };
 
 const rows = [
-  createData('myservice1', 'End to End k1: bank statements to filing'),
+  createData('My Service 1', 'End to End k1 server: bank statements to filing'),
   createData('Service 2', 'Description of Service 2'),
   createData('Service 3', 'Description of Service 3'),
 ];
@@ -18,15 +18,9 @@ const handleRowClick = (row) => {
 
 const ServicesTable = () => {
   return (
+    <div>
+      <h3 style={{color: 'white'}}>Your Jinsei.ai Services</h3>
     <TableContainer component={Paper}>
-      <Table aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Full Services</TableCell>
-            <TableCell>Your assembled Jinsei.ai subpackage services</TableCell>
-          </TableRow>
-        </TableHead>
-        </Table>
         <Table aria-label="simple table">
         <TableBody>
           {rows.map((row) => (
@@ -35,11 +29,14 @@ const ServicesTable = () => {
                 {row.name}
               </TableCell>
               <TableCell>{row.description}</TableCell>
+              <button style={{marginTop: '15px'}}>open</button>
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
+    </div>
+
   );
 };
 

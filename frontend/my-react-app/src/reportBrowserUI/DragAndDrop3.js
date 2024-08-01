@@ -20,8 +20,10 @@ const App = () => {
 
   return (
     <div style={styles.gridContainer}>
+              <div>Transformer: <button>open</button></div>
+
       <div style={styles.cellTopLeft}>
-        <p style={styles.text}>K1 Report Package Deloitte to Deloitte SEC Filing Service <button>open pack</button></p>
+        <p style={styles.text}>K1 Report Package Deloitte to Deloitte SEC Filing Service <button>open</button></p>
       </div>
       <div style={styles.cellTopRight}>
         <button style={styles.closeButton} onClick={() => openModal('This is the X modal')}>

@@ -1,4 +1,3 @@
-
 import {
     ChonkyActions,
     ChonkyFileActionData,
@@ -7,30 +6,18 @@ import {
     FileData,
     FileHelper,
     FullFileBrowser,
+    ChonkyIconFA,
 } from 'chonky';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import DemoFsMap from './chonkySubPackViewerConfig.json';
 import { setChonkyDefaults } from 'chonky';
+import './DarkTheme.css';
+
 setChonkyDefaults({
     disableDragAndDrop: true,
+    defaultFileViewActionId: ChonkyActions.EnableListView.id,
 });
 
-// 2 x 2 grid in stead 1 x 2 , import a table list component for the services  and another chonky that only goes down one level
-
-// canvas part of the right bottom component needs to like do a bunch of stuff from service modding to report element viewing
-
-// for all reports possible and derivable from a taxonomy set that is on your transformers will be listed in the chonky above the other chonky on the left
-
-// so that above there is about report packages possible given the transfomer setups from the services on the right side, but also in that dir there is service api code bases for every subservice in the users service listings, and the infrastructure code bases for deployment of the services, enterprise pack is here too
-
-
-
-
-//import Button from '@material-ui/core/Button';
-//import { showActionNotification } from '../util';
-
-// We define a custom interface for file data because we want to add some custom fields
-// to Chonky's built-in `FileData` interface.
 interface CustomFileData extends FileData {
     parentId?: string;
     childrenIds?: string[];
@@ -39,56 +26,35 @@ interface CustomFileMap {
     [fileId: string]: CustomFileData;
 }
 
-// Helper method to attach our custom TypeScript types to the imported JSON file map.
 const prepareCustomFileMap = () => {
     const baseFileMap = (DemoFsMap.fileMap as unknown) as CustomFileMap;
     const rootFolderId = DemoFsMap.rootFolderId;
     return { baseFileMap, rootFolderId };
 };
 
-// Hook that sets up our file map and defines functions used to mutate - `deleteFiles`,
-// `moveFiles`, and so on.
 const useCustomFileMap = () => {
     const { baseFileMap, rootFolderId } = useMemo(prepareCustomFileMap, []);
 
-    // Setup the React state for our file map and the current folder.
     const [fileMap, setFileMap] = useState(baseFileMap);
     const [currentFolderId, setCurrentFolderId] = useState(rootFolderId);
 
-    // Setup the function used to reset our file map to its initial value. Note that
-    // here and below we will always use `useCallback` hook for our functions - this is
-    // a crucial React performance optimization, read more about it here:
-    // https://reactjs.org/docs/hooks-reference.html#usecallback
     const resetFileMap = useCallback(() => {
         setFileMap(baseFileMap);
         setCurrentFolderId(rootFolderId);
     }, [baseFileMap, rootFolderId]);
 
-    // Setup logic to listen to changes in current folder ID without having to update
-    // `useCallback` hooks. Read more about it here:
-    // https://reactjs.org/docs/hooks-faq.html#is-there-something-like-instance-variables
     const currentFolderIdRef = useRef(currentFolderId);
     useEffect(() => {
         currentFolderIdRef.current = currentFolderId;
     }, [currentFolderId]);
 
-    // Function that will be called when user deletes files either using the toolbar
-    // button or `Delete` key.
     const deleteFiles = useCallback((files: CustomFileData[]) => {
-        // We use the so-called "functional update" to set the new file map. This
-        // lets us access the current file map value without having to track it
-        // explicitly. Read more about it here:
-        // https://reactjs.org/docs/hooks-reference.html#functional-updates
         setFileMap((currentFileMap) => {
-            // Create a copy of the file map to make sure we don't mutate it.
             const newFileMap = { ...currentFileMap };
 
             files.forEach((file) => {
-                // Delete file from the file map.
                 delete newFileMap[file.id];
 
-                // Update the parent folder to make sure it doesn't try to load the
-                // file we just deleted.
                 if (file.parentId) {
                     const parent = newFileMap[file.parentId]!;
                     const newChildrenIds = parent.childrenIds!.filter(
@@ -106,8 +72,6 @@ const useCustomFileMap = () => {
         });
     }, []);
 
-    // Function that will be called when files are moved from one folder to another
-    // using drag & drop.
     const moveFiles = useCallback(
         (
             files: CustomFileData[],
@@ -118,7 +82,6 @@ const useCustomFileMap = () => {
                 const newFileMap = { ...currentFileMap };
                 const moveFileIds = new Set(files.map((f) => f.id));
 
-                // Delete files from their source folder.
                 const newSourceChildrenIds = source.childrenIds!.filter(
                     (id) => !moveFileIds.has(id)
                 );
@@ -128,7 +91,6 @@ const useCustomFileMap = () => {
                     childrenCount: newSourceChildrenIds.length,
                 };
 
-                // Add the files to their destination folder.
                 const newDestinationChildrenIds = [
                     ...destination.childrenIds!,
                     ...files.map((f) => f.id),
@@ -139,8 +101,6 @@ const useCustomFileMap = () => {
                     childrenCount: newDestinationChildrenIds.length,
                 };
 
-                // Finally, update the parent folder ID on the files from source folder
-                // ID to the destination folder ID.
                 files.forEach((file) => {
                     newFileMap[file.id] = {
                         ...file,
@@ -154,16 +114,11 @@ const useCustomFileMap = () => {
         []
     );
 
-    // Function that will be called when user creates a new folder using the toolbar
-    // button. That that we use incremental integer IDs for new folder, but this is
-    // not a good practice in production! Instead, you should use something like UUIDs
-    // or MD5 hashes for file paths.
     const idCounter = useRef(0);
     const createFolder = useCallback((folderName: string) => {
         setFileMap((currentFileMap) => {
             const newFileMap = { ...currentFileMap };
 
-            // Create the new folder
             const newFolderId = `new-folder-${idCounter.current++}`;
             newFileMap[newFolderId] = {
                 id: newFolderId,
@@ -175,7 +130,6 @@ const useCustomFileMap = () => {
                 childrenCount: 0,
             };
 
-            // Update parent folder to reference the new folder.
             const parent = newFileMap[currentFolderIdRef.current];
             newFileMap[currentFolderIdRef.current] = {
                 ...parent,
@@ -298,28 +252,26 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
     );
 
     return (
-        <div>
-
+        <div className="chonky-dark-theme">
+            <h3 style={{color: 'white'}}>Active Subpack</h3>
             <button
                 style={{ marginBottom: '15px' }}
-                onClick={resetFileMap} // Add onClick handler if needed
+                onClick={resetFileMap}
             >
                 Reset file map
             </button>
-            
             <div style={{ height: '400px', marginTop: '10px' }}>
-                <FullFileBrowser
-                    files={files}
-                    folderChain={folderChain}
-                    fileActions={fileActions}
-                    onFileAction={handleFileAction}
-                    thumbnailGenerator={thumbnailGenerator}
-                    {...props} // Spread any other props needed for FullFileBrowser
-                />
-            </div>
-
+            <FullFileBrowser
+                files={files}
+                folderChain={folderChain}
+                fileActions={fileActions}
+                onFileAction={handleFileAction}
+                thumbnailGenerator={thumbnailGenerator}
+                {...props}
+            />
         </div>
-    );
+    </div>
+);
 });
 
 export default VFSBrowser;

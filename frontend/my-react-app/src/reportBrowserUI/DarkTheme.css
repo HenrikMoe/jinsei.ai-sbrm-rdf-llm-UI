@@ -1,12 +1,13 @@
-:root {
-    --chonk-bg-primary: #333;
-    --chonk-bg-secondary: #444;
-    --chonk-bg-hover: #555;
-    --chonk-bg-selected: #666;
-    --chonk-bg-hover-selected: #777;
-    --chonk-bg-toolbar: #222;
-    --chonk-text-light: #fff;
-    --chonk-text-dark: #ccc;
-    --chonk-border: #444;
-    --chonk-border-dark: #333;
+/* DarkTheme.css */
+.chonky-dark-theme {
+    --chonky-bg-color: #2e2e2e;
+    --chonky-text-color: #e0e0e0;
+    --chonky-border-color: #444;
+    --chonky-active-bg-color: #3c3c3c;
+    --chonky-button-hover-bg-color: #4c4c4c;
+    --chonky-button-active-bg-color: #5c5c5c;
+    --chonky-danger-color: #ff6b6b;
+    --chonky-selected-file-bg-color: #4a4a4a;
+    --chonky-hover-file-bg-color: #3a3a3a;
+    --chonky-disabled-bg-color: #1e1e1e;
 }

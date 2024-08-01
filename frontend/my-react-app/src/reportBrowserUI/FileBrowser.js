@@ -72,7 +72,7 @@ const FileBrowserPage = (listLoginInfo) => {
           overflow: 'auto',
         }}
       >
-        <button onClick={() => openModal(<APIUI />)}>Add Subservice</button>
+        <button onClick={() => openModal(<APIUI />)}>Add Jinsei.ai Endpoint Services</button>
         <ServiceSubpackChonk />
       </div>
 
@@ -131,30 +131,18 @@ const FileBrowserPage = (listLoginInfo) => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr',
+            gridTemplateColumns: '1fr 1fr 1fr',
             gridTemplateRows: '1fr 1fr',
             marginLeft: '10px',
-            transform: 'scale(0.67)',
+            transform: 'scale(0.77)',
             transformOrigin: 'top left',
           }}
         >
-          <div style={{
-            color: 'white',
-            marginTop: '150px',
-            marginLeft: '20px',
-          }}> {'>>>'} </div>
+          
           <DragAndDrop />
-          <div style={{
-            color: 'white',
-            marginTop: '150px',
-            marginLeft: '20px',
-          }}> {'>>>'} </div>
+         
           <DragAndDrop2 />
-          <div style={{
-            color: 'white',
-            marginTop: '150px',
-            marginLeft: '20px',
-          }}> {'>>>'} </div>
+          
           <DragAndDrop3 />
         </div>
 
