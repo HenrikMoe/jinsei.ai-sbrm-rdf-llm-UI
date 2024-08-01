@@ -1,6 +1,11 @@
 
+
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import InputConfig from './InputConfig.js';
+import OutputConfig from './OutputConfig.js';
+import CheckMark from './CheckMark.js';
+import { Button } from '@mui/material';
 
 Modal.setAppElement('#root');
 
@@ -19,26 +24,48 @@ const App = () => {
   };
 
   return (
-    <div style={styles.gridContainer}>
-              <div>Transformer: <button>open</button></div>
+    <div style={styles.mainGrid}>
+      {/* Top grid (1x2) */}
+      <div style={styles.topGrid}>
+        <div style={styles.cellTopLeft}>
+          <p style={styles.text}>Subservice C:</p>
+        </div>
+        <div style={styles.cellTopRight}>
+          <button style={styles.closeButton} onClick={() => openModal('This is the X modal')}>
+            X
+          </button>
+        </div>
+      </div>
 
-      <div style={styles.cellTopLeft}>
-        <p style={styles.text}>K1 Report Package Deloitte to Deloitte SEC Filing Service <button>open</button></p>
+      {/* Middle grid (2x2) */}
+      <div style={styles.middleGrid}>
+        <div style={styles.cellMiddleLeftTop}>
+          <p style={styles.text}>K1 Report Package Deloitte to Deloitte SEC Filing Service, id: c17xcip</p>
+        </div>
+        <div style={styles.cellMiddleRightTop}>
+          <button style={styles.button}>Open Transformer</button>
+          <button style={styles.button}>Change Transformer</button>
+        </div>
+        <div style={styles.cellMiddleLeftBottom}>
+          <button style={styles.button} onClick={() => openModal(<InputConfig />)}>
+            Input Config
+          </button>
+        </div>
+        <div style={styles.cellMiddleRightBottom}>
+          <button style={styles.button} onClick={() => openModal(<OutputConfig />)}>
+            Output Config
+          </button>
+        </div>
       </div>
-      <div style={styles.cellTopRight}>
-        <button style={styles.closeButton} onClick={() => openModal('This is the X modal')}>
-          X
-        </button>
-      </div>
-      <div style={styles.cellBottomLeft}>
-        <button style={styles.button} onClick={() => openModal('This is the bottom left modal')}>
-          Input Config
-        </button>
-      </div>
-      <div style={styles.cellBottomRight}>
-        <button style={styles.button} onClick={() => openModal('This is the bottom right modal')}>
-          Output Config
-        </button>
+
+      {/* Bottom grid (1x2) */}
+      <div style={styles.bottomGrid}>
+        <div style={styles.cellBottomLeft}>
+          <p style={styles.text}><Button>Logs</Button></p>
+        </div>
+        <div style={styles.cellBottomRight}>
+          <p style={styles.text}><Button>State</Button></p>
+        </div>
       </div>
 
       <Modal
@@ -47,8 +74,9 @@ const App = () => {
         contentLabel="Modal"
         style={modalStyles}
       >
-        <h2>Modal Content</h2>
-        <p>{modalContent}</p>
+        <div style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
+          {modalContent}
+        </div>
         <button onClick={closeModal} style={styles.button}>Close Modal</button>
       </Modal>
     </div>
@@ -56,20 +84,35 @@ const App = () => {
 };
 
 const styles = {
-  gridContainer: {
+  mainGrid: {
     display: 'grid',
-    gridTemplateColumns: '2fr 1fr',
-    gridTemplateRows: '1fr 1fr',
+    gridTemplateRows: '.3fr 2fr .1fr',
     gap: '10px',
-    width: '300px',
-    height: '200px',
-    margin: '50px auto',
+    width: '100%',
+    marginLeft: '100px',
+    // height: '100vh',
+    padding: '10px',
     border: '2px solid #ccc',
     borderRadius: '10px',
-    padding: '10px',
-    marginLeft: '30px'
   },
- 
+  topGrid: {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    gap: '10px',
+  },
+  middleGrid: {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    gridTemplateRows: '1fr 1fr',
+    gap: '10px',
+  },
+  bottomGrid: {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    gap: '10px',
+    marginTop: '-55px',
+    height: '50px'
+  },
   cellTopLeft: {
     display: 'flex',
     alignItems: 'center',
@@ -77,8 +120,6 @@ const styles = {
     border: '1px solid #ddd',
     borderRadius: '5px',
     padding: '10px',
-    gridColumn: '1 / span 1',
-    gridRow: '1 / span 1',
   },
   cellTopRight: {
     display: 'flex',
@@ -87,8 +128,42 @@ const styles = {
     border: '1px solid #ddd',
     borderRadius: '5px',
     padding: '10px',
-    gridColumn: '2 / span 1',
-    gridRow: '1 / span 1',
+  },
+  cellMiddleLeftTop: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    border: '1px solid #ddd',
+    borderRadius: '5px',
+    padding: '10px',
+  },
+  cellMiddleRightTop: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column', // Stacking buttons on top of each other
+    border: '1px solid #ddd',
+    borderRadius: '5px',
+    padding: '10px',
+  },
+  cellMiddleLeftBottom: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    border: '1px solid #ddd',
+    borderRadius: '5px',
+    padding: '10px',
+    height: '50px'
+  },
+  cellMiddleRightBottom: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    border: '1px solid #ddd',
+    borderRadius: '5px',
+    padding: '10px',
+    height: '50px'
+
   },
   cellBottomLeft: {
     display: 'flex',
@@ -97,8 +172,7 @@ const styles = {
     border: '1px solid #ddd',
     borderRadius: '5px',
     padding: '10px',
-    gridColumn: '1 / span 1',
-    gridRow: '2 / span 1',
+  
   },
   cellBottomRight: {
     display: 'flex',
@@ -107,8 +181,7 @@ const styles = {
     border: '1px solid #ddd',
     borderRadius: '5px',
     padding: '10px',
-    gridColumn: '2 / span 1',
-    gridRow: '2 / span 1',
+
   },
   text: {
     margin: 0,
@@ -129,6 +202,7 @@ const styles = {
     borderRadius: '5px',
     padding: '10px',
     cursor: 'pointer',
+    marginBottom: '5px', // Adding margin to separate the buttons
   },
 };
 
@@ -142,7 +216,7 @@ const modalStyles = {
     transform: 'translate(-50%, -50%)',
     padding: '20px',
     borderRadius: '10px',
-    width: '300px',
+    width: '800px',
     textAlign: 'center',
   },
 };

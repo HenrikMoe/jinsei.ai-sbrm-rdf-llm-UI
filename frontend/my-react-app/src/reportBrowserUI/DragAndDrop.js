@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import InputConfig from './InputConfig.js';
 import OutputConfig from './OutputConfig.js';
 import CheckMark from './CheckMark.js';
+import { Button } from '@mui/material';
 
 Modal.setAppElement('#root');
 
@@ -58,10 +59,10 @@ const App = () => {
       {/* Bottom grid (1x2) */}
       <div style={styles.bottomGrid}>
         <div style={styles.cellBottomLeft}>
-          <p style={styles.text}>Boilerplate Content</p>
+          <p style={styles.text}><Button>Logs</Button></p>
         </div>
         <div style={styles.cellBottomRight}>
-          <p style={styles.text}>Boilerplate Content</p>
+          <p style={styles.text}><Button>State</Button></p>
         </div>
       </div>
 
@@ -106,7 +107,7 @@ const styles = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
     gap: '10px',
-    marginTop: '-50px',
+    marginTop: '-55px',
     height: '50px'
   },
   cellTopLeft: {

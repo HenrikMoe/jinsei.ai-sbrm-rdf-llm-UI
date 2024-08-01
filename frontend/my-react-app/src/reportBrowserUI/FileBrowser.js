@@ -122,12 +122,12 @@ const FileBrowserPage = (listLoginInfo) => {
           <h3 style={{ color: 'white' }}>Status: Active <button>Manage</button></h3>
         </div>
 
-        <h3 style={{
+        {/* <h3 style={{
             color: 'white',
             marginTop: '-40px',
             transform: 'scale(0.67)',
             transformOrigin: 'top left',
-          }}>Process SubServices</h3>
+          }}>Process SubServices</h3> */}
         <div
           style={{
             display: 'grid',
