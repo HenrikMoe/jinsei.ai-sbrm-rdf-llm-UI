@@ -83,10 +83,10 @@ const App = () => {
 const styles = {
   mainGrid: {
     display: 'grid',
-    gridTemplateRows: '.3fr 2fr .3fr',
+    gridTemplateRows: '.3fr 2fr .1fr',
     gap: '10px',
     width: '100%',
-    height: '100vh',
+    // height: '100vh',
     padding: '10px',
     border: '2px solid #ccc',
     borderRadius: '10px',
@@ -106,7 +106,7 @@ const styles = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
     gap: '10px',
- marginTop: '-150px',
+    marginTop: '-50px',
     height: '50px'
   },
   cellTopLeft: {
