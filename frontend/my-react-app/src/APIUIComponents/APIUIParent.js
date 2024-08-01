@@ -42,7 +42,7 @@ const JinseiAPIEndpoints = () => {
         ) : (
           <div>
 
-          <div style={{ marginTop: isRowBased ? '0px' : '-50px', display: 'flex', marginLeft: '-40px', flexDirection: 'column', alignItems: 'center', position: 'relative', zIndex: 1 }}>
+          <div style={{ marginTop: isRowBased ? '-150px' : '-150px', display: 'flex', marginLeft: '-40px', flexDirection: 'column', alignItems: 'center', position: 'relative', zIndex: 1 }}>
             <h1 style={{ color: 'white', marginLeft: isRowBased ? '50px' : '0', marginTop: isRowBased ? (isMobileMode ? '50px' : '100px') : '200px', textAlign: 'center' }}>
               Jinsei.ai API
             </h1>

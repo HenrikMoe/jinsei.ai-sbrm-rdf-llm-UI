@@ -112,14 +112,15 @@ const FileBrowserPage = (listLoginInfo) => {
       >
         <div style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gridTemplateRows: '1fr 1fr',
+            gridTemplateColumns: '1fr 1fr 1fr',
             marginLeft: '10px',
             transform: 'scale(0.87)',
             transformOrigin: 'top left',
           }}>
           <h3 style={{ color: 'white' }}>My Service 1</h3>
-          <h3 style={{ color: 'white' }}>Status: Active <button>Manage</button></h3>
+          <h3 style={{ color: 'white' }}>Status: Active [Remote Jinsei Deploy] <button>Manage</button></h3>
+          <h3 style={{ color: 'white' }}>Genererated Packs <button>Open</button></h3>
+
         </div>
 
         {/* <h3 style={{
@@ -131,18 +132,15 @@ const FileBrowserPage = (listLoginInfo) => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr 1fr',
+            gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr',
             gridTemplateRows: '1fr 1fr',
             marginLeft: '10px',
             transform: 'scale(0.77)',
             transformOrigin: 'top left',
           }}
         >
-          
-          <DragAndDrop />
-         
+          <DragAndDrop />          
           <DragAndDrop2 />
-          
           <DragAndDrop3 />
         </div>
 
@@ -197,6 +195,7 @@ const modalStyles = {
   content: {
     right: 'auto',
     bottom: 'auto',
+    marginTop: '50px',
     // marginRight: '-50%',
     padding: '20px',
     borderRadius: '10px',

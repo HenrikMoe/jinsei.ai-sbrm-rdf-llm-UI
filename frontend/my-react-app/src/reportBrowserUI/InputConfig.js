@@ -1,44 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Define arrays of dummy values
 const dummyValues = [
   'File URI', 'https://wellsfargo.com/asdfjjfdbsbajs', 'call at',
-  '00:00 monthly', 'req type', 'get', 'IAM', 'Smith-John-CPA-PEVP-Deloitte','inspect transformer'
-
-  
+  '00:00 monthly', 'req type', 'get', 'IAM', 'Smith-John-CPA-PEVP-Deloitte', 'inspect transformer'
 ];
-
-// Shuffle function for randomizing the dummy values
-const shuffleArray = (array) => {
-  let currentIndex = array.length, randomIndex;
-  while (currentIndex !== 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-  }
-  return array;
-};
 
 const RandomGrid = () => {
   const rows = 8;
   const columns = 2;
   const totalCells = rows * columns;
 
-  // Create a shuffled version of the dummy values array
-  const gridItems = dummyValues
+  // Create a state to manage grid items
+  const [gridItems, setGridItems] = useState(generateGridItems());
+
+  function generateGridItems() {
+    // Extend dummyValues to match the required number of cells
+    return [...dummyValues.slice(0, totalCells)];
+  }
+
+  // Handle change in input field
+  const handleChange = (index, event) => {
+    const newValue = event.target.value;
+    setGridItems(prevItems =>
+      prevItems.map((item, i) => (i === index ? newValue : item))
+    );
+  };
 
   return (
     <div>
-        <h3>Input Config</h3>
-    <div style={styles.gridContainer}>
-      {gridItems.map((value, index) => (
-        <div key={index} style={styles.gridItem}>
-          {value}
-        </div>
-      ))}
+      <h3>Input Config</h3>
+      <div style={styles.gridContainer}>
+        {gridItems.map((value, index) => (
+          <div key={index} style={styles.gridItem}>
+            <input
+              type="text"
+              value={value}
+              onChange={(event) => handleChange(index, event)}
+              style={styles.input}
+            />
+          </div>
+        ))}
+      </div>
     </div>
-    </div>
-
   );
 };
 
@@ -55,6 +59,12 @@ const styles = {
     padding: '10px',
     textAlign: 'center',
     overflow: 'hidden',
+  },
+  input: {
+    width: '100%',
+    border: 'none',
+    padding: '5px',
+    boxSizing: 'border-box',
   },
 };
 
