@@ -19,7 +19,7 @@ const ServicesTable = () => {
   return (
     <div>
       <h3 style={{color: 'white'}}>Your Jinsei.ai Services</h3>
-      <button style={{color: 'black', marginBottom: '10px'}}>Add New Service</button>
+      <button style={{color: 'black', marginBottom: '10px'}}>Create New Service</button>
 
     <TableContainer component={Paper}>
         <Table aria-label="simple table">

@@ -72,7 +72,7 @@ const FileBrowserPage = (listLoginInfo) => {
           overflow: 'auto',
         }}
       >
-        <button onClick={() => openModal(<APIUI />)}>Add Jinsei.ai Endpoint Services</button>
+        <button onClick={() => openModal(<APIUI />)}>Add Jinsei.ai Transformers</button>
         <ServiceSubpackChonk />
       </div>
 
