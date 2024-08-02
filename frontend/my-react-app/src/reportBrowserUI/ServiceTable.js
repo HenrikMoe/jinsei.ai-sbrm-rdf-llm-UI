@@ -8,8 +8,7 @@ const createData = (name, description) => {
 
 const rows = [
   createData('My Service 1', 'End to End k1 server: bank statements to filing'),
-  createData('Service 2', 'Description of Service 2'),
-  createData('Service 3', 'Description of Service 3'),
+  
 ];
 
 const handleRowClick = (row) => {
@@ -20,6 +19,8 @@ const ServicesTable = () => {
   return (
     <div>
       <h3 style={{color: 'white'}}>Your Jinsei.ai Services</h3>
+      <button style={{color: 'black', marginBottom: '10px'}}>Add New Service</button>
+
     <TableContainer component={Paper}>
         <Table aria-label="simple table">
         <TableBody>
@@ -30,6 +31,8 @@ const ServicesTable = () => {
               </TableCell>
               <TableCell>{row.description}</TableCell>
               <button style={{marginTop: '15px'}}>open</button>
+              <button style={{marginTop: '15px', marginLeft: '5px'}}>delete</button>
+
             </TableRow>
           ))}
         </TableBody>

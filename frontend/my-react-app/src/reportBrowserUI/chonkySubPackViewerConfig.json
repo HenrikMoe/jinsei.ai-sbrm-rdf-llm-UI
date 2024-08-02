@@ -3,7 +3,7 @@
     "fileMap": {
       "qwerty123456": {
         "id": "qwerty123456",
-        "name": "my-k1-bankStatementTransformer",
+        "name": "Wells Fargo Monthly Statement to Entity Cash Flow, id: a17xcip",
         "isDir": true,
         "childrenIds": [
           "e598a85f843c",
@@ -21,7 +21,7 @@
       },
       "e598a85f843c": {
         "id": "e598a85f843c",
-        "name": "K1-XBRi-Report-AccountManagerName",
+        "name": "Training Data",
         "isDir": true,
         "modDate": "2020-10-24T17:48:39.866Z",
         "childrenIds": [
@@ -1199,7 +1199,7 @@
       },
       "b53aa057fad1": {
         "id": "b53aa057fad1",
-        "name": "API 1 Application Code Base",
+        "name": "Service Source",
         "isDir": true,
         "modDate": "2020-06-27T12:28:53.648Z",
         "childrenIds": [
@@ -1213,6 +1213,24 @@
           "653f1108cf87"
         ],
         "childrenCount": 8,
+        "parentId": "qwerty123456"
+      },
+      "b53aa0z7fad1": {
+        "id": "b53aa057fad1",
+        "name": "Deployment Packs",
+        "isDir": true,
+        "modDate": "2020-06-27T12:28:53.648Z",
+        "childrenIds": [
+          "353f63dbd169",
+          "28f0f5f391eb",
+          "d1b9dc5457b8",
+          "0c8fa73e4685",
+          "0b74a148c890",
+          "7cd701884c5d",
+          "6655c71cdc8d",
+          "653f1108cf87"
+        ],
+        "childrenCount": 1,
         "parentId": "qwerty123456"
       },
       "353f63dbd169": {
@@ -1281,7 +1299,7 @@
       },
       "b6667221f24b": {
         "id": "b6667221f24b",
-        "name": "mypersonalk1transformer",
+        "name": "Input Declarations",
         "isDir": true,
         "modDate": "2020-06-27T13:38:08.776Z",
         "childrenIds": [
@@ -1315,7 +1333,7 @@
       },
       "002705459ca4": {
         "id": "002705459ca4",
-        "name": "myBankStatementTransformers",
+        "name": "Produced Packages",
         "isDir": true,
         "modDate": "2020-07-18T22:27:23.864Z",
         "childrenIds": [],
@@ -1324,7 +1342,7 @@
       },
       "a9fd7c8a04db": {
         "id": "a9fd7c8a04db",
-        "name": "myBankStatementTransformers",
+        "name": "IAM Package",
         "isDir": true,
         "modDate": "2020-06-27T13:32:07.253Z",
         "childrenIds": [
@@ -1507,7 +1525,7 @@
       },
       "549c1f93247a": {
         "id": "549c1f93247a",
-        "name": "mypersonalsecedgarfiler",
+        "name": "Output Declarations",
         "isDir": true,
         "modDate": "2020-06-27T13:58:16.428Z",
         "childrenIds": [
@@ -1520,38 +1538,6 @@
       },
       "34308fe0264f": null,
       "79e0e1372800": null,
-      "a358142e72e3": null,
-      "zFe": {
-        "id": "zFe",
-        "name": ".hidden.txt",
-        "isHidden": true,
-        "modDate": "1997-04-26T11:00:00.000Z",
-        "size": 42,
-        "parentId": "qwerty123456"
-      },
-      "zJr": {
-        "id": "zJr",
-        "name": "encrypted.zip",
-        "isEncrypted": true,
-        "modDate": "2020-10-24T19:10:17.659Z",
-        "size": 1337,
-        "parentId": "qwerty123456"
-      },
-      "zHy": {
-        "id": "zHy",
-        "name": "chonky-sphere-v2.png",
-        "thumbnailUrl": "/chonky-sphere-v2.png",
-        "modDate": "2020-10-24T19:10:17.659Z",
-        "size": 322,
-        "parentId": "qwerty123456"
-      },
-      "vCt": {
-        "id": "vCt",
-        "name": "nyan-cat.gif",
-        "thumbnailUrl": "/nyan-cat.gif",
-        "size": 9001,
-        "modDate": "2020-10-24T19:10:17.659Z",
-        "parentId": "qwerty123456"
-      }
+      "a358142e72e3": null
     }
   }
