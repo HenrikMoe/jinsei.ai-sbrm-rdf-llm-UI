@@ -394,10 +394,7 @@ const ServiceDetails = ({
             </div>
           )}
           
-          <p>{selectedService.trainingData}</p>
-          <p>{selectedService.intakeData}</p>
-          <p>{selectedService.performanceData}</p>
-          <p>{selectedService.integrationNotes}</p>
+         
         </div>
       ) : selectedSubServiceLevel1 ? (
         <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: '100%' }}>
@@ -479,10 +476,7 @@ const ServiceDetails = ({
               <h3 style={{ color: 'white' }}>Analysis Transformers</h3>
             </div>
           </div>
-          <p>{selectedService.trainingData}</p>
-          <p>{selectedService.intakeData}</p>
-          <p>{selectedService.performanceData}</p>
-          <p>{selectedService.integrationNotes}</p>
+          
         </div>
       ) : null}
     </div>
