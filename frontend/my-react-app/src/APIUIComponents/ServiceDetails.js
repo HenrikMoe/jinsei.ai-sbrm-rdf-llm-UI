@@ -114,6 +114,7 @@ const ServiceDetails = ({
           <p style={{ color: 'white' }}>Details</p>
           {selectedSubServiceLevel2.type === 'createTransformer' ?
            (
+            <div>
             <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr', gap: '20px' }}>
               <div>
                 <h3 style={{ color: 'white' }}>Input</h3>
@@ -187,7 +188,16 @@ const ServiceDetails = ({
               </div>
               <PerformanceTuning />
                   <ModelTester/>
+                  <button style={{width: '200px'}} >Save Transformer</button>
+                  <button style={{width: '200px'}}>Add Transformer To Subservices </button>
+                  <button style={{width: '200px'}} >Transformer Version History</button>
+                  <button style={{width: '200px'}}>Share</button>
           </div>
+    
+
+
+          </div>
+          
           ) : (
             <div>
       
@@ -212,23 +222,9 @@ const ServiceDetails = ({
               textDecoration: 'none'
             }}
           >
-            Update AI Training
+            Update Transformer
           </button>
-          <button
-            style={{
-              marginTop: '20px',
-              marginLeft: '10px',
-              backgroundColor: '#24292e',
-              color: '#fff',
-              padding: '10px 20px',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer',
-              textDecoration: 'none'
-            }}
-          >
-            Update IAM
-          </button>
+         
           </div>
 
           <div>
@@ -253,7 +249,7 @@ const ServiceDetails = ({
           </div>
 
           <div>
-          <p>More Details</p>
+          <p>Endpoint Data </p>
           </div>
           <div>
 
