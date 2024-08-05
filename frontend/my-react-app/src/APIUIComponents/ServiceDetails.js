@@ -177,7 +177,7 @@ const ServiceDetails = ({
                 </div>
               </div>
               <div>
-          <p>Permissions, select erp pack / config or make ai public </p>
+          <p>IAM Config</p>
           </div>
           <div>
 
@@ -193,7 +193,7 @@ const ServiceDetails = ({
               textDecoration: 'none'
             }}
           >
-             Select
+             Open
           </button>
           </div>
           <div>
@@ -212,10 +212,11 @@ const ServiceDetails = ({
               cursor: 'pointer',
               textDecoration: 'none'
             }}
+            onClick={{}}
           >
              Create AI
           </button>
-          <Spinner/>
+          <Spinner/> 
 
           </div>
             </div>
@@ -484,10 +485,7 @@ const ServiceDetails = ({
               </div>
             ))}
           </div>
-          <p>{selectedService.trainingData}</p>
-          <p>{selectedService.intakeData}</p>
-          <p>{selectedService.performanceData}</p>
-          <p>{selectedService.integrationNotes}</p>
+         
         </div>
       ) : selectedService ? (
         <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: '100%' }}>

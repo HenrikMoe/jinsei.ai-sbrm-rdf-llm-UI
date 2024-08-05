@@ -162,7 +162,7 @@ const FileBrowserPage = (listLoginInfo) => {
         <div style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
           {modalContent}
         </div>
-        <button onClick={closeModal} style={styles.button}>Close Modal</button>
+        <button onClick={closeModal} style={styles.button}>Close API UI</button>
       </Modal>
     </div>
   );
