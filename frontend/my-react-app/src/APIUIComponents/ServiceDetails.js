@@ -62,9 +62,52 @@ const ServiceDetails = ({
 
       {selectedSubServiceLevel2 ? (
         <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: '100%' }}>
-          <h2 style={{ color: 'white' }}>{getTitle()}</h2>
-          <h2 style={{ color: 'white' }}> -&gt; {selectedSubServiceLevel2.title}</h2>
-          <p>{selectedSubServiceLevel2.description}</p>
+          <h2 style={{ color: 'white' }}>{getTitle()}  </h2>
+          <h2 style={{ color: 'white' }}> 
+            
+          {selectedSubServiceLevel2.title === 'create title here' ? (
+            <div>
+                          <div>-&gt; 
+
+                  <input
+                    type="text"
+                   
+                    style={{
+                      color: 'white',
+                      backgroundColor: 'transparent',
+                      border: '1px solid white',
+                      outline: 'none',
+                      width: '300px',
+                      marginLeft: '25px'
+                    }}
+                    placeholder='create transformer title'
+                  />
+  </div>
+  <div style={{
+                      marginTop: '25px',
+                    }}>
+
+                  <input
+                    type="text"
+                   
+                    style={{
+                      color: 'white',
+                      backgroundColor: 'transparent',
+                      border: '1px solid white',
+                      outline: 'none',
+                      marginTop: '25px',
+                      width: '300px'
+                    }}
+                    placeholder='create transformer description'
+                  />
+                  </div>
+                  </div>
+
+                    
+                ) : (
+                  <h3 style={{ color: 'white' }}>  <p>{selectedSubServiceLevel2.description}</p>
+</h3>
+                )}</h2>
           <p style={{ color: 'white' }}>Details</p>
           {selectedSubServiceLevel2.type === 'createTransformer' ?
            (
@@ -432,7 +475,10 @@ const ServiceDetails = ({
                 }}
                 onClick={() => onSubServiceLevel2Click(service)}
               >
-                <h3 style={{ color: 'white' }}>{service.title}</h3>
+
+             
+                  <h3 style={{ color: 'white' }}>{service.title}</h3>
+                
                 <p>{service.description}</p>
                 <p>{service.integrationNotes}</p>
               </div>
