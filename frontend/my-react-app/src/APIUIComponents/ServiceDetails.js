@@ -3,6 +3,8 @@ import FileViewerHim from './FileViewer';
 import Spinner from '../Spinner.js'
 import FileUploader from './FileUploader.js'
 import FileDownloader from './FileDownloader.js'
+import PerformanceTuning from './PerformanceTuning..js'
+import ModelTester from './ModelTester.js'
 
 import {
   AnalysisTransformersPE,
@@ -12,6 +14,7 @@ import {
   CreateTransformer
 } from './Services'; // Import the services
 import SearchBar from './SearchBar.js';
+import Model from '../Model.js';
 
 const ServiceDetails = ({
   selectedService,
@@ -124,10 +127,14 @@ const ServiceDetails = ({
                     marginTop: '10px'
                   }}
                 >
-                  <h3 style={{ color: 'white' }}>initial CSV, XLSX, JSON, or other format</h3>
+                  <h3 style={{ color: 'white' }}>Initial Data <button>Supported Type List</button></h3>
                
                   <FileUploader />
+                  
+
                 </div>
+                <FileDownloader />
+
               </div>
               <div>
                 <h3 style={{ color: 'white' }}>Output</h3>
@@ -141,10 +148,12 @@ const ServiceDetails = ({
                     marginTop: '10px'
                   }}
                 >
-                  <h3 style={{ color: 'white' }}>final format CSV, XLSX, JSON, or other </h3>
+                  <h3 style={{ color: 'white' }}>Final State <button>Supported Type List</button></h3>
                   <FileUploader />
 
                 </div>
+                <FileDownloader />
+
               </div>
               <div>
                 <h3 style={{ color: 'white' }}>Input Preview</h3>
@@ -176,50 +185,9 @@ const ServiceDetails = ({
                   <FileViewerHim />
                 </div>
               </div>
-              <div>
-          <p>IAM Config</p>
+              <PerformanceTuning />
+                  <ModelTester/>
           </div>
-          <div>
-
-          <button
-            style={{
-              marginTop: '20px',
-              backgroundColor: '#24292e',
-              color: '#fff',
-              padding: '10px 20px',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer',
-              textDecoration: 'none'
-            }}
-          >
-             Open
-          </button>
-          </div>
-          <div>
-          <p>Looks good? </p>
-          </div>
-          <div>
-
-          <button
-            style={{
-              marginTop: '20px',
-              backgroundColor: '#24292e',
-              color: '#fff',
-              padding: '10px 20px',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer',
-              textDecoration: 'none'
-            }}
-            onClick={{}}
-          >
-             Create AI
-          </button>
-          <Spinner/> 
-
-          </div>
-            </div>
           ) : (
             <div>
       

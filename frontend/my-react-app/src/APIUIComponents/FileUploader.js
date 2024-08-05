@@ -15,7 +15,7 @@ const FileUploader = () => {
     <div {...getRootProps()} style={styles.container}>
       <input {...getInputProps()} />
       <button style={styles.button}>
-        {isDragActive ? 'Drop the files here ...' : 'Click to select files'}
+        {isDragActive ? 'Drop the files here ...' : 'Upload Files'}
       </button>
     </div>
   );
