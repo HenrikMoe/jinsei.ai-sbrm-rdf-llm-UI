@@ -65,12 +65,12 @@ const ServiceDetails = ({
 
       {selectedSubServiceLevel2 ? (
         <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: '100%' }}>
-          <h2 style={{ color: 'white' }}>{getTitle()}  </h2>
-          <h2 style={{ color: 'white' }}> 
+          <h2 style={{ color: 'tan' }}>{getTitle()}  </h2>
+          <h2 style={{ color: 'white' }}> &rarr; {selectedSubServiceLevel2.title}
             
           {selectedSubServiceLevel2.title === 'create title here' ? (
             <div>
-                          <div>-&gt; 
+                          <div>&rarr; 
 
                   <input
                     type="text"
@@ -108,8 +108,8 @@ const ServiceDetails = ({
 
                     
                 ) : (
-                  <h3 style={{ color: 'white' }}>  <p>{selectedSubServiceLevel2.description}</p>
-</h3>
+                   <div style={{ color: 'white', marginTop: '25px' }}>{selectedSubServiceLevel2.description}</div>
+
                 )}</h2>
           <p style={{ color: 'white' }}>Details</p>
           {selectedSubServiceLevel2.type === 'createTransformer' ?
@@ -468,7 +468,7 @@ const ServiceDetails = ({
               }}
               onClick={() => onSubServiceLevel1Click('sheettransformer')}
             >
-              <h3 style={{ color: 'white' }}>Format Transformers</h3>
+              <h3 style={{ color: 'white' }}>Format Transformers (Prediction Based LLM)</h3>
             </div>
             <div
               style={{
@@ -481,7 +481,7 @@ const ServiceDetails = ({
               }}
               onClick={() => onSubServiceLevel1Click('analysisfunctions')}
             >
-              <h3 style={{ color: 'white' }}>Analysis Transformers</h3>
+              <h3 style={{ color: 'white' }}>Analysis Transformers (Sequential LLM Add Ons Available)</h3>
             </div>
           </div>
           

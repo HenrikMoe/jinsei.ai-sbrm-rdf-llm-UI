@@ -49,7 +49,7 @@ const SearchBar = () => {
   };
 
   const inputProps = {
-    placeholder: 'Search a transformer service',
+    placeholder: 'Search a transformer',
     value,
     onChange,
   };
