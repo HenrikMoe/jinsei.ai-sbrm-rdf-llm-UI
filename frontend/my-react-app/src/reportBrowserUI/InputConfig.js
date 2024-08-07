@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import RunnerApp from './RunnerApp';
 // Define arrays of dummy values
 const dummyValues = [
   'File URI', 'https://wellsfargo.com/asdfjjfdbsbajs', 'call at',
@@ -42,6 +42,8 @@ const RandomGrid = () => {
           </div>
         ))}
       </div>
+      <RunnerApp/>
+
     </div>
   );
 };
