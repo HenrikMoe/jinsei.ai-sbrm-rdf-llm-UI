@@ -191,10 +191,10 @@ const ServiceDetails = ({
               </div>
               <PerformanceTuning />
                   <ModelTester/>
-                  <button style={{width: '200px'}} >Save Transformer</button>
-                  <button style={{width: '200px'}}>Add Transformer To Subservices </button>
-                  <button style={{width: '200px'}} >Transformer Version History</button>
-                  <button style={{width: '200px'}}>Share</button>
+                  <button style={{width: '200px', padding: '10px', marginLeft: '170px'}}>Save Transformer</button>
+                  <button style={{width: '200px', padding: '10px', marginLeft: '170px'}}>Add Transformer To Subservices </button>
+                  <button style={{width: '200px', padding: '10px', marginLeft: '170px'}} >Transformer Version History</button>
+                  <button style={{width: '200px', padding: '10px', marginLeft: '170px'}}>Share</button>
           </div>
     
 
