@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import RunnerApp from './RunnerApp';
 // Define arrays of dummy values
 const dummyValues = [
-  'File URI', 'https://wellsfargo.com/asdfjjfdbsbajs', 'call at',
-  '00:00 monthly', 'req type', 'get', 'IAM', 'Smith-John-CPA-PEVP-Deloitte', 'inspect transformer'
+  'File URI:', 'https://wellsfargo.com/asdfjjfdbsbajs', 'call at:',
+  '00:00 monthly', 'req type:', 'get', 'IAM:', 'Smith-John-CPA-PEVP-Deloitte', 'inspect transformer'
 ];
 
 const RandomGrid = () => {

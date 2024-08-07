@@ -21,16 +21,16 @@ const RunnerApp = () => {
       {showDetails && (
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginTop: '20px', backgroundColor: '#333', padding: '20px', borderRadius: '8px' }}>
           <div style={{ border: '1px solid #ccc', padding: '20px' }}>
-            <p>Filler Information 1</p>
+            <p>Created Input Config Runner</p>
           </div>
           <div style={{ border: '1px solid #ccc', padding: '20px' }}>
-            <p>Filler Information 2</p>
+            <button style={{ marginTop: '5px',padding: '15px' }}>Download</button>
           </div>
           <div style={{ border: '1px solid #ccc', padding: '20px' }}>
-            <p>Filler Information 3</p>
+            <p>Test Installed Runner</p>
           </div>
           <div style={{ border: '1px solid #ccc', padding: '20px' }}>
-            <p>Filler Information 4</p>
+            <button style={{ marginTop: '5px', padding: '15px' }}>Test Runner</button>
           </div>
         </div>
       )}
