@@ -66,7 +66,7 @@ const ServiceDetails = ({
       {selectedSubServiceLevel2 ? (
         <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: '100%' }}>
           <h2 style={{ color: 'tan' }}>{getTitle()}  </h2>
-          <h2 style={{ color: 'white' }}> &rarr; {selectedSubServiceLevel2.title}
+          <h2 style={{ color: 'white' }}> 
             
           {selectedSubServiceLevel2.title === 'create title here' ? (
             <div>
@@ -108,8 +108,11 @@ const ServiceDetails = ({
 
                     
                 ) : (
+                  <div>
+                  <h2 style={{ color: 'white' }}>&rarr; 
+                  {selectedSubServiceLevel2.title}</h2>
                    <div style={{ color: 'white', marginTop: '25px' }}>{selectedSubServiceLevel2.description}</div>
-
+                   </div>
                 )}</h2>
           <p style={{ color: 'white' }}>Details</p>
           {selectedSubServiceLevel2.type === 'createTransformer' ?
