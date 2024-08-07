@@ -4,6 +4,7 @@ import InputConfig from './InputConfig.js';
 import OutputConfig from './OutputConfig.js';
 import CheckMark from './CheckMark.js';
 import { Button } from '@mui/material';
+import APIUI from '../APIUIComponents/APIUIParent.js';
 
 Modal.setAppElement('#root');
 
@@ -41,8 +42,12 @@ const App = () => {
           <p style={styles.text}>Wells Fargo Monthly Statement to Entity Cash Flow, id: a17xcip</p>
         </div>
         <div style={styles.cellMiddleRightTop}>
-          <button style={styles.button}>Open Transformer</button>
-          <button style={styles.button}>Change Transformer</button>
+          <button style={styles.button} onClick={() => openModal(<APIUI />)}>
+            Open Transformer
+          </button>
+          <button style={styles.button} onClick={() => openModal(<APIUI />)}>
+            Change Transformer
+          </button>
         </div>
         <div style={styles.cellMiddleLeftBottom}>
           <button style={styles.button} onClick={() => openModal(<InputConfig />)}>
@@ -87,7 +92,6 @@ const styles = {
     gridTemplateRows: '.3fr 2fr .1fr',
     gap: '10px',
     width: '100%',
-    // height: '100vh',
     padding: '10px',
     border: '2px solid #ccc',
     borderRadius: '10px',
@@ -138,7 +142,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: 'column', // Stacking buttons on top of each other
+    flexDirection: 'column',
     border: '1px solid #ddd',
     borderRadius: '5px',
     padding: '10px',
@@ -169,7 +173,6 @@ const styles = {
     border: '1px solid #ddd',
     borderRadius: '5px',
     padding: '10px',
-  
   },
   cellBottomRight: {
     display: 'flex',
@@ -178,7 +181,6 @@ const styles = {
     border: '1px solid #ddd',
     borderRadius: '5px',
     padding: '10px',
-
   },
   text: {
     margin: 0,
@@ -199,21 +201,22 @@ const styles = {
     borderRadius: '5px',
     padding: '10px',
     cursor: 'pointer',
-    marginBottom: '5px', // Adding margin to separate the buttons
+    marginBottom: '5px',
   },
 };
 
 const modalStyles = {
   content: {
-    top: '50%',
-    left: '50%',
     right: 'auto',
     bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
+    marginTop: '50px',
     padding: '20px',
     borderRadius: '10px',
-    width: '800px',
+    backgroundColor: 'black',
+    overflowX: 'hidden',
+    overflowY: 'auto',
+    width: '90%',
+    maxHeight: '90vh',
     textAlign: 'center',
   },
 };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import VFSBrowser from './ChonkyAdvanced.tsx'; // Assuming this is where you've defined VFSBrowser
 import { Resizable } from 'react-resizable';
@@ -13,6 +13,9 @@ import DragAndDrop2 from './DragAndDrop2.js';
 import DragAndDrop3 from './DragAndDrop3.js';
 import Modal from 'react-modal';
 import APIUI from '../APIUIComponents/APIUIParent.js';
+import Spinner from '../Spinner.js'; // Import the Spinner component
+import ButtonGroup from './ServiceActions.js'
+
 import {
   MainContainer,
   ChatContainer,
@@ -44,6 +47,25 @@ const FileBrowserPage = (listLoginInfo) => {
   const [modalContent, setModalContent] = useState(null);
   const [showChat, setShowChat] = useState(false);
   const [messages, setMessages] = useState([]);
+
+  const [isSpinnerVisible, setIsSpinnerVisible] = useState(true);
+
+ 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsSpinnerVisible(prev => !prev);
+    }, 6000); // 6 seconds total: 1.5 seconds visible, 4.5 seconds invisible
+
+    // Set up the timeout for the first visibility change
+    const timeout = setTimeout(() => {
+      setIsSpinnerVisible(false);
+    }, 1500); // 1.5 seconds after the component mounts
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
+  }, []);
 
   const onResize = (event, { size }) => {
     setLeftPanelWidth(size.width);
@@ -129,16 +151,28 @@ const FileBrowserPage = (listLoginInfo) => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr 1fr',
+            gridTemplateColumns: '1fr 1fr 1fr 1fr',
             marginLeft: '10px',
-            transform: 'scale(0.87)',
+            transform: 'scale(0.99)',
             transformOrigin: 'top left',
+            border: 'solid 1px black',
           }}
         >
-          <h3 style={{ color: 'white' }}>My Service 1</h3>
-          <h3 style={{ color: 'white' }}>
-            Status: Active [Remote Jinsei Deploy] <button>Manage</button>
-          </h3>
+          <h3 style={{ color: 'white', padding: '10px' }}>My Service 1</h3>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            marginLeft: '10px',
+            transform: 'scale(0.99)',
+            transformOrigin: 'top left',
+            border: 'solid 1px black',
+          }}>
+            <h3 style={{ color: 'green' , padding: '10px', marginLeft: '20px',}}>
+              Active
+            </h3>
+            {isSpinnerVisible && <Spinner style={{marginTop: '50px'}} />} 
+          </div>
+          <ButtonGroup/>
           <h3 style={{ color: 'white' }}>Generated Packs <button>Open</button></h3>
         </div>
 

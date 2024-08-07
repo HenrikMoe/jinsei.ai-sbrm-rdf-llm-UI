@@ -3,7 +3,8 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 const override: CSSProperties = {
   display: "block",
-  margin: "10px auto",
+  marginTop: "25px ",
+  marginLeft: "10px ",
   borderColor: "green",
   width: '30px',
   height: '30px'
