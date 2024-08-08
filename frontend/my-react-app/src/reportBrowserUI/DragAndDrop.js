@@ -9,16 +9,27 @@ import APIUI from '../APIUIComponents/APIUIParent.js';
 Modal.setAppElement('#root');
 
 const App = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAPIUIModalOpen, setIsAPIUIModalOpen] = useState(false);
+  const [isConfigModalOpen, setIsConfigModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState('');
 
-  const openModal = (content) => {
-    setModalContent(content);
-    setIsModalOpen(true);
+  const openAPIUIModal = () => {
+    setModalContent(<APIUI />);
+    setIsAPIUIModalOpen(true);
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const openConfigModal = (content) => {
+    setModalContent(content);
+    setIsConfigModalOpen(true);
+  };
+
+  const closeAPIUIModal = () => {
+    setIsAPIUIModalOpen(false);
+    setModalContent('');
+  };
+
+  const closeConfigModal = () => {
+    setIsConfigModalOpen(false);
     setModalContent('');
   };
 
@@ -30,7 +41,7 @@ const App = () => {
           <p style={styles.text}>Subservice A:</p>
         </div>
         <div style={styles.cellTopRight}>
-          <button style={styles.closeButton} onClick={() => openModal('This is the X modal')}>
+          <button style={styles.closeButton} onClick={() => openConfigModal('This is the X modal')}>
             X
           </button>
         </div>
@@ -42,20 +53,20 @@ const App = () => {
           <p style={styles.text}>Wells Fargo Monthly Statement to Entity Cash Flow, id: a17xcip</p>
         </div>
         <div style={styles.cellMiddleRightTop}>
-          <button style={styles.button} onClick={() => openModal(<APIUI />)}>
+          <button style={styles.button} onClick={openAPIUIModal}>
             Open Transformer
           </button>
-          <button style={styles.button} onClick={() => openModal(<APIUI />)}>
+          <button style={styles.button} onClick={openAPIUIModal}>
             Change Transformer
           </button>
         </div>
         <div style={styles.cellMiddleLeftBottom}>
-          <button style={styles.button} onClick={() => openModal(<InputConfig />)}>
+          <button style={styles.button} onClick={() => openConfigModal(<InputConfig />)}>
             Input Config
           </button>
         </div>
         <div style={styles.cellMiddleRightBottom}>
-          <button style={styles.button} onClick={() => openModal(<OutputConfig />)}>
+          <button style={styles.button} onClick={() => openConfigModal(<OutputConfig />)}>
             Output Config
           </button>
         </div>
@@ -72,15 +83,27 @@ const App = () => {
       </div>
 
       <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        contentLabel="Modal"
-        style={modalStyles}
+        isOpen={isAPIUIModalOpen}
+        onRequestClose={closeAPIUIModal}
+        contentLabel="API UI Modal"
+        style={modalStyles.apiui}
       >
         <div style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
           {modalContent}
         </div>
-        <button onClick={closeModal} style={styles.button}>Close Modal</button>
+        <button onClick={closeAPIUIModal} style={styles.button}>Close Modal</button>
+      </Modal>
+
+      <Modal
+        isOpen={isConfigModalOpen}
+        onRequestClose={closeConfigModal}
+        contentLabel="Config Modal"
+        style={modalStyles.config}
+      >
+        <div style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
+          {modalContent}
+        </div>
+        <button onClick={closeConfigModal} style={styles.button}>Close Modal</button>
       </Modal>
     </div>
   );
@@ -112,7 +135,7 @@ const styles = {
     gridTemplateColumns: '1fr 1fr',
     gap: '10px',
     marginTop: '-55px',
-    height: '50px'
+    height: '50px',
   },
   cellTopLeft: {
     display: 'flex',
@@ -154,7 +177,7 @@ const styles = {
     border: '1px solid #ddd',
     borderRadius: '5px',
     padding: '10px',
-    height: '50px'
+    height: '50px',
   },
   cellMiddleRightBottom: {
     display: 'flex',
@@ -163,8 +186,7 @@ const styles = {
     border: '1px solid #ddd',
     borderRadius: '5px',
     padding: '10px',
-    height: '50px'
-
+    height: '50px',
   },
   cellBottomLeft: {
     display: 'flex',
@@ -206,18 +228,35 @@ const styles = {
 };
 
 const modalStyles = {
-  content: {
-    right: 'auto',
-    bottom: 'auto',
-    marginTop: '50px',
-    padding: '20px',
-    borderRadius: '10px',
-    backgroundColor: 'black',
-    overflowX: 'hidden',
-    overflowY: 'auto',
-    width: '90%',
-    maxHeight: '90vh',
-    textAlign: 'center',
+  apiui: {
+    content: {
+      right: 'auto',
+      bottom: 'auto',
+      marginTop: '50px',
+      padding: '20px',
+      borderRadius: '10px',
+      backgroundColor: 'black',
+      overflowX: 'hidden',
+      overflowY: 'auto',
+      width: '90%',
+      maxHeight: '90vh',
+      textAlign: 'center',
+    },
+  },
+  config: {
+    content: {
+      right: 'auto',
+      bottom: 'auto',
+      marginTop: '50px',
+      padding: '20px',
+      borderRadius: '10px',
+      backgroundColor: 'white',
+      overflowX: 'hidden',
+      overflowY: 'auto',
+      width: '90%',
+      maxHeight: '90vh',
+      textAlign: 'center',
+    },
   },
 };
 

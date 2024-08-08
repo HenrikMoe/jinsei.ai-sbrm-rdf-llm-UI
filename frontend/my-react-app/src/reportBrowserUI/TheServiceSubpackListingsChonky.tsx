@@ -1,3 +1,4 @@
+// Import statements
 import {
     ChonkyActions,
     ChonkyFileActionData,
@@ -11,6 +12,8 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import DemoFsMap from './demoFileSystemObj.json';
 import { setChonkyDefaults } from 'chonky';
 import './DarkTheme.css'; // Import the dark theme CSS
+import APIUI from '../APIUIComponents/APIUIParent';
+import Modal from 'react-modal';
 
 setChonkyDefaults({
     disableDragAndDrop: true,
@@ -250,17 +253,32 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
         []
     );
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalContent, setModalContent] = useState(null);
+
+    const openModal = (content) => {
+        setModalContent(content);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setModalContent(null);
+    };
+
     return (
         <div>
-                        <h3 style={{color: 'white'}}>All Packs</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+                <button style={{margin: '5px', }}onClick={() => openModal(<APIUI />)}>Add Jinsei.ai Transformers</button>
+                <h3 style={{ color: 'white',marginTop: '10px',marginLeft: '15px' }}>All Packs</h3>
+                <button
+                    style={{ marginBottom: '0px', margin: '5px' }}
+                    onClick={resetFileMap}
+                >
+                    Reset file map
+                </button>
+            </div>
 
-            <button
-                style={{ marginBottom: '15px' }}
-                onClick={resetFileMap} 
-            >
-                Reset file map
-            </button>
-            
             <div style={{ height: '400px', marginTop: '10px' }}>
                 <FullFileBrowser
                     files={files}
@@ -272,8 +290,48 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
                     {...props}
                 />
             </div>
+            <Modal
+                isOpen={isModalOpen}
+                onRequestClose={closeModal}
+                contentLabel="Modal"
+                style={modalStyles}
+            >
+                <div style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
+                    {modalContent}
+                </div>
+                <button onClick={closeModal} style={styles.button}>
+                    Close API UI
+                </button>
+            </Modal>
         </div>
     );
 });
+
+const modalStyles = {
+    content: {
+        right: 'auto',
+        bottom: 'auto',
+        marginTop: '50px',
+        padding: '20px',
+        borderRadius: '10px',
+        backgroundColor: 'black',
+        overflowX: 'hidden',
+        overflowY: 'auto',
+        width: '90%',
+        maxHeight: '90vh',
+        textAlign: 'center',
+    },
+};
+
+const styles = {
+    button: {
+        backgroundColor: 'black',
+        color: 'white',
+        padding: '10px 20px',
+        border: 'none',
+        borderRadius: '5px',
+        cursor: 'pointer',
+    },
+};
 
 export default VFSBrowser;
