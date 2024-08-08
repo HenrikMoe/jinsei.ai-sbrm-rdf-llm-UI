@@ -9,6 +9,13 @@ const MyComponent = () => {
   const [spinnerActive, setSpinnerActive] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [grids, setGrids] = useState([]); // State to hold multiple grids
+  const [performanceMetrics, setPerformanceMetrics] = useState([]); // State for performance metrics
+
+  // State for model parameters
+  const [learningRate, setLearningRate] = useState('');
+  const [batchSize, setBatchSize] = useState('');
+  const [epochs, setEpochs] = useState('');
+  const [validationSplit, setValidationSplit] = useState('');
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -18,13 +25,31 @@ const MyComponent = () => {
     setIsModalOpen(false);
   };
 
-  const handleCreateClick = () => {
+  const mockTrainModel = () => {
+    // Simulate model training and return mock performance metrics
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({
+          accuracy: Math.random().toFixed(2),
+          loss: Math.random().toFixed(2),
+          valAccuracy: Math.random().toFixed(2),
+          valLoss: Math.random().toFixed(2),
+        });
+      }, 3000);
+    });
+  };
+
+  const handleCreateClick = async () => {
     setSpinnerActive(true);
-    setTimeout(() => {
-      setSpinnerActive(false);
-      setDropdownVisible(true);
-      setGrids([...grids, true]); // Add a new grid to the list
-    }, 5000);
+    const metrics = await mockTrainModel();
+    setPerformanceMetrics([...performanceMetrics, metrics]);
+    setSpinnerActive(false);
+    setDropdownVisible(true);
+    setGrids([...grids, true]); // Add a new grid to the list
+  };
+
+  const handleModelParameterChange = (setter) => (event) => {
+    setter(event.target.value);
   };
 
   return (
@@ -33,32 +58,54 @@ const MyComponent = () => {
         <p>IAM Config</p>
       </div>
       <div>
-        <button
-          style={styles.button}
-          onClick={openModal}
-        >
+        <button style={styles.button} onClick={openModal}>
           Open
         </button>
       </div>
       <div>
-        <p>Model Tuning</p>
+        <p>TensorFlow Prediction Model Tuning:</p>
       </div>
       <div style={styles.gridContainer}>
-        <div style={styles.gridItem}>Function 1</div>
-        <div style={styles.gridItem}><input style={styles.input} placeholder="Enter value" /></div>
-        <div style={styles.gridItem}>Function 2</div>
-        <div style={styles.gridItem}><input style={styles.input} placeholder="Enter value" /></div>
-        <div style={styles.gridItem}>Function 3</div>
-        <div style={styles.gridItem}><input style={styles.input} placeholder="Enter value" /></div>
-        <div style={styles.gridItem}>Function 4</div>
-        <div style={styles.gridItem}><input style={styles.input} placeholder="Enter value" /></div>
+        <div style={styles.gridItem}>Learning Rate</div>
+        <div style={styles.gridItem}>
+          <input
+            style={styles.input}
+            placeholder="Enter learning rate"
+            value={learningRate}
+            onChange={handleModelParameterChange(setLearningRate)}
+          />
+        </div>
+        <div style={styles.gridItem}>Batch Size</div>
+        <div style={styles.gridItem}>
+          <input
+            style={styles.input}
+            placeholder="Enter batch size"
+            value={batchSize}
+            onChange={handleModelParameterChange(setBatchSize)}
+          />
+        </div>
+        <div style={styles.gridItem}>Epochs</div>
+        <div style={styles.gridItem}>
+          <input
+            style={styles.input}
+            placeholder="Enter number of epochs"
+            value={epochs}
+            onChange={handleModelParameterChange(setEpochs)}
+          />
+        </div>
+        <div style={styles.gridItem}>Validation Split</div>
+        <div style={styles.gridItem}>
+          <input
+            style={styles.input}
+            placeholder="Enter validation split"
+            value={validationSplit}
+            onChange={handleModelParameterChange(setValidationSplit)}
+          />
+        </div>
       </div>
       <div>
         {!spinnerActive && (
-          <button
-            style={styles.button}
-            onClick={handleCreateClick}
-          >
+          <button style={styles.button} onClick={handleCreateClick}>
             Create AI
           </button>
         )}
@@ -66,11 +113,16 @@ const MyComponent = () => {
       </div>
       {grids.map((_, index) => (
         <div key={index} style={styles.dropdownContainer}>
-          {[...Array(10)].map((_, index) => (
-            <div key={index} style={styles.dropdownItem}>
-              Placeholder Content
-            </div>
-          ))}
+          {performanceMetrics.length > index ? (
+            <>
+              <div style={styles.dropdownItem}>Accuracy: {performanceMetrics[index].accuracy}</div>
+              <div style={styles.dropdownItem}>Loss: {performanceMetrics[index].loss}</div>
+              <div style={styles.dropdownItem}>Val Accuracy: {performanceMetrics[index].valAccuracy}</div>
+              <div style={styles.dropdownItem}>Val Loss: {performanceMetrics[index].valLoss}</div>
+            </>
+          ) : (
+            <div style={styles.dropdownItem}>Loading...</div>
+          )}
         </div>
       ))}
 
@@ -82,10 +134,7 @@ const MyComponent = () => {
       >
         <h2>IAM Config</h2>
         <p>Configure your IAM settings here.</p>
-        <button
-          style={styles.button}
-          onClick={closeModal}
-        >
+        <button style={styles.button} onClick={closeModal}>
           Close
         </button>
       </Modal>
