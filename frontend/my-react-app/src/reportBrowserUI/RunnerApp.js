@@ -61,16 +61,16 @@ const RunnerApp = () => {
       {showMoreDetails && (
         <div style={styles.detailsContainer}>
           <div style={styles.gridItem}>
-            <p>Additional Info 1</p>
+            <p>Retrieved or Deposited File(s)</p>
           </div>
           <div style={styles.gridItem}>
-            <p>Additional Info 2</p>
+            <p>File/dir link to active subpack</p>
           </div>
           <div style={styles.gridItem}>
-            <p>Additional Info 3</p>
+            <p>Runner Process Time</p>
           </div>
           <div style={styles.gridItem}>
-            <p>Additional Info 4</p>
+            <p>lightspeed bro, maybe iam here?</p>
           </div>
         </div>
       )}

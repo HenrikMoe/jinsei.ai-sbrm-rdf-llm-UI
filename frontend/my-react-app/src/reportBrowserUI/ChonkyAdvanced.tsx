@@ -256,7 +256,7 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
             <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr'}}>
             <h3 style={{color: 'white'}}>Active Subpack</h3>
             <button
-                style={{ marginBottom: '0px', padding: '5px' }}
+                style={{ marginRight: '10px', marginTop: '15px', marginBottom: '15px', marginLeft: '10px',padding: '0px' }}
                 onClick={resetFileMap}
             >
                 Reset file map

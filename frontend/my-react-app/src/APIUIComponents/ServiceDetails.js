@@ -276,7 +276,7 @@ const ServiceDetails = ({
            
             <div style={{
   display: 'grid',
-  gridTemplateColumns: 'repeat(9, 1fr)',
+  gridTemplateColumns: 'repeat(8, 1fr)',
   gap: '20px',
   marginTop: '20px',
   marginBottom: '20px',
@@ -355,17 +355,9 @@ const ServiceDetails = ({
     padding: '10px',
     textAlign: 'center'
   }}>
-    Source
+    Source, Images
   </div>
-  <div style={{
-    color: 'white',
-    border: '1px solid #666',
-    borderRadius: '5px',
-    padding: '10px',
-    textAlign: 'center'
-  }}>
-    Images/CI/CD
-  </div>
+ 
 </div>
 <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr',}}>
             <div>

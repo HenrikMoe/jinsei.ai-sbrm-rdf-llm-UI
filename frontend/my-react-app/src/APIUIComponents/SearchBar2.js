@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Autosuggest from 'react-autosuggest';
-import './SearchBar.css';
+import './SearchBar2.css';
 
 // Sample data for suggestions
 const suggestions = [
@@ -56,7 +56,7 @@ const SearchBar = () => {
 
   return (
     <Autosuggest
-      
+    style={{ padding: '10px', marginRight: '20px', gridColumn: 'span 1' }} 
       suggestions={suggestionsList}
       onSuggestionsFetchRequested={onSuggestionsFetchRequested}
       onSuggestionsClearRequested={onSuggestionsClearRequested}
