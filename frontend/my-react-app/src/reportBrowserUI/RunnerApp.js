@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Spinner from '../Spinner.js';
+import Downloader from '../APIUIComponents/FileDownloader2.js'
 
 const RunnerApp = () => {
   const [showDetails, setShowDetails] = useState(false);
@@ -36,8 +37,8 @@ const RunnerApp = () => {
               <p>Created Input Config Runner</p>
             </div>
             <div style={{ border: '1px solid #ccc', padding: '20px' }}>
-              <button style={{ marginTop: '5px',padding: '15px' }}>Download</button>
-            </div>
+                  < Downloader/>
+                        </div>
             <div style={{ border: '1px solid #ccc', padding: '20px' }}>
               <p>Test Installed Runner</p>
             </div>

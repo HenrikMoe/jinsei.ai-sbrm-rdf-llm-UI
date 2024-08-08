@@ -10,24 +10,23 @@ const dummyFiles = [
 
 const FileDownloader = () => {
   const downloadFile = (fileName) => {
-    saveAs(sampleFile, fileName); // Update the second argument to the desired file name
+    saveAs(sampleFile); // Update the second argument to the desired file name
   };
 
   return (
     <div style={styles.container}>
-      <h3 style={styles.header}>Training Files </h3>
-      <div style={styles.fileGrid}>
-        {dummyFiles.map((file, index) => (
-          <div key={index} style={styles.fileItem}>
-            <span style={styles.fileName}>{file}</span>
+      <h3 style={styles.header}>Install File Runner at Directory Relative to Your File URI Config (id:214821)</h3>
+      <div >
+        
+          <div style={styles.fileItem}>
             <button
               style={styles.downloadButton}
-              onClick={() => downloadFile(file)}
+              onClick={() => downloadFile()}
             >
               Download
             </button>
           </div>
-        ))}
+      
       </div>
     </div>
   );
