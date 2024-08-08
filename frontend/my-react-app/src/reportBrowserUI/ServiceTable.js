@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
-
+import SearchBar from '../APIUIComponents/SearchBar2'
 const createData = (name, description) => {
   return { name, description };
 };
@@ -18,9 +18,12 @@ const handleRowClick = (row) => {
 const ServicesTable = () => {
   return (
     <div>
-      <h3 style={{color: 'white'}}>Your Jinsei.ai Services</h3>
-      <button style={{color: 'black', marginBottom: '10px'}}>Create New Service</button>
-
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }} >
+      <h3 style={{color: 'white', marginLeft: '20px', marginTop: '20px'}}>Your Jinsei.ai Services</h3>
+      <button style={{color: 'black', marginBottom: '15px', padding: '5px', marginTop: '15px', marginLeft: '-25px'}}>Create New Service</button>
+      <SearchBar/>
+      </div>
+    
     <TableContainer component={Paper}>
         <Table aria-label="simple table">
         <TableBody>
