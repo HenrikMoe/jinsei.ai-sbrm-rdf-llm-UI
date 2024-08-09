@@ -91,7 +91,7 @@ const App = () => {
         <div style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
           {modalContent}
         </div>
-        <button onClick={closeAPIUIModal} style={styles.button}>Close Modal</button>
+        <button onClick={closeAPIUIModal} style={styles.button}>Close</button>
       </Modal>
 
       <Modal
@@ -103,7 +103,7 @@ const App = () => {
         <div style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
           {modalContent}
         </div>
-        <button onClick={closeConfigModal} style={styles.button}>Close Modal</button>
+        <button onClick={closeConfigModal} style={styles.button}>Close</button>
       </Modal>
     </div>
   );

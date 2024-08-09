@@ -109,7 +109,7 @@ const ServiceDetails = ({
                     
                 ) : (
                   <div>
-                  <h2 style={{ color: 'white' }}>&rarr; 
+                  <h2 style={{ color: 'white', fontSize: '24px' }}>&rarr; 
                   {selectedSubServiceLevel2.title}</h2>
                    <div style={{ color: 'white', marginTop: '25px' }}>{selectedSubServiceLevel2.description}</div>
                    </div>
@@ -438,7 +438,7 @@ const ServiceDetails = ({
               >
 
              
-                  <h3 style={{ color: 'white' }}>{service.title}</h3>
+                  <h3 style={{ color: 'white', }}>{service.title}</h3>
                 
                 <p>{service.description}</p>
                 <p>{service.integrationNotes}</p>
@@ -449,7 +449,7 @@ const ServiceDetails = ({
         </div>
       ) : selectedService ? (
         <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: '100%' }}>
-          <h2 style={{ color: 'white' }}>{selectedService.title}</h2>
+          <h2 style={{ color: 'white', }}>{selectedService.title}</h2>
           <p>{selectedService.description}</p>
           <p style={{ color: 'white' }}>Details</p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
