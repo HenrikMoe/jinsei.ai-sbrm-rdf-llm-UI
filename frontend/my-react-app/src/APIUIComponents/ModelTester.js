@@ -76,7 +76,8 @@ const ModelTester = () => {
 
 const styles = {
   container: {
-    padding: '20px',
+    padding: '20px', 
+  
     backgroundColor: '#1e1e1e',
     color: '#fff',
     borderRadius: '10px',
@@ -85,6 +86,8 @@ const styles = {
   },
   gridContainer: {
     display: 'grid',
+    transform: 'scale(1.09)',
+    transformOrigin: 'top',
     gridTemplateColumns: '1fr 2fr',
     gap: '10px',
     marginBottom: '20px'

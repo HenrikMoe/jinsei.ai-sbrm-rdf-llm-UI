@@ -247,7 +247,7 @@ const ServiceDetails = ({
               textDecoration: 'none'
             }}
           >
-            Add To Services
+            Add To My Services
           </button>
           </div>
 

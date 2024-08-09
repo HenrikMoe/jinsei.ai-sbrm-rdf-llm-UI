@@ -38,6 +38,8 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     padding: '20px',
+    transform: 'scale(.89)',
+    transformOrigin: 'bottom',
     border: '1px solid #333',
     borderRadius: '10px',
     backgroundColor: '#1e1e1e',
