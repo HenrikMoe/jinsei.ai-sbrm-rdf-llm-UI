@@ -393,6 +393,7 @@ const ServiceDetails = ({
                 </div>
               </div>
               </div>
+<ModelTester/>
 
             </div>
           )}
