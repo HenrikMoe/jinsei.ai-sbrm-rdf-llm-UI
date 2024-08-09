@@ -206,7 +206,7 @@ const ServiceDetails = ({
       
 
             
-            <div style={{ display: 'grid', gridTemplateColumns: '3fr 3fr', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '20px' }}>
              
               <div>
           <p>this is your published ai or within your eneterprise iam pack permissioned to train</p>
@@ -271,6 +271,7 @@ const ServiceDetails = ({
              Endpoint Redocly Documentation
           </button>
           </div>
+
             </div>
 
            
@@ -281,6 +282,8 @@ const ServiceDetails = ({
   marginTop: '20px',
   marginBottom: '20px',
   padding: '20px',
+  transform: 'scale(0.89)',
+  transformOrigin: 'top',
   border: '1px solid #ccc',
   borderRadius: '8px',
   backgroundColor: '#333'
@@ -359,8 +362,10 @@ const ServiceDetails = ({
   </div>
  
 </div>
-<div style={{display: 'grid', gridTemplateColumns: '1fr 1fr',}}>
-            <div>
+<div style={{display: 'grid', gridTemplateColumns: '1fr 1fr',  transform: 'scale(0.89)',
+  transformOrigin: 'top',}}>
+            <div style={{ transform: 'scale(0.89)',
+  transformOrigin: 'top',}}>
                 <h3 style={{ color: 'white' }}>Input Training Data Preview</h3>
                 <div
                   style={{
@@ -376,8 +381,9 @@ const ServiceDetails = ({
                   <FileDownloader />
                 </div>
               </div>
-              <div>
-                <h3 style={{ color: 'white' }}>Output Training Data Preview</h3>
+              <div  style={{ transform: 'scale(0.89)',
+  transformOrigin: 'top',}}>
+                <h3 style={{ color: 'white',  }}>Output Training Data Preview</h3>
                 <div
                   style={{
                     color: 'tan',
@@ -422,7 +428,7 @@ const ServiceDetails = ({
 
             <SearchBar />
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: '20px' }}>
             {getSubServices().map((service, index) => (
               <div
                 key={index}

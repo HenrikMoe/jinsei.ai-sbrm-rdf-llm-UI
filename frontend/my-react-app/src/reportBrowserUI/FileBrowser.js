@@ -154,7 +154,9 @@ const FileBrowserPage = (listLoginInfo) => {
             marginLeft: '10px',
             transform: 'scale(0.99)',
             transformOrigin: 'top left',
-            border: 'solid 1px black',
+            border: 'solid 1px white',
+            borderRadius: '3px',
+            marginBottom: '10px'
           }}
         >
           <h3 style={{ color: 'white', padding: '10px' }}>My Service 1</h3>
@@ -164,7 +166,6 @@ const FileBrowserPage = (listLoginInfo) => {
             marginLeft: '10px',
             transform: 'scale(0.99)',
             transformOrigin: 'top left',
-            border: 'solid 1px black',
           }}>
             <h3 style={{ color: 'green' , padding: '10px', marginLeft: '20px',}}>
               Active
