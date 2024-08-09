@@ -152,10 +152,10 @@ const FileBrowserPage = (listLoginInfo) => {
             display: 'grid',
             gridTemplateColumns: '1fr 1fr 1fr 1fr',
             marginLeft: '10px',
-            transform: 'scale(0.99)',
+            transform: 'scale(0.79)',
             transformOrigin: 'top left',
-            border: 'solid 1px white',
-            borderRadius: '3px',
+            width: '122%',
+            borderBottom: 'solid 1px grey',
             marginBottom: '10px'
           }}
         >
@@ -173,7 +173,7 @@ const FileBrowserPage = (listLoginInfo) => {
             {isSpinnerVisible && <Spinner style={{marginTop: '50px'}} />} 
           </div>
           <ButtonGroup/>
-          <h3 style={{ color: 'white' }}>Generated Packs <button>Open</button></h3>
+          <h3 style={{ color: 'white', marginTop: '30px' }}>Generated Packs <button>Open</button></h3>
         </div>
 
         <div

@@ -114,7 +114,6 @@ const ServiceDetails = ({
                    <div style={{ color: 'white', marginTop: '25px' }}>{selectedSubServiceLevel2.description}</div>
                    </div>
                 )}</h2>
-          <p style={{ color: 'white' }}>Details</p>
           {selectedSubServiceLevel2.type === 'createTransformer' ?
            (
             <div>
@@ -206,13 +205,16 @@ const ServiceDetails = ({
       
 
             
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: '20px', transform: 'scale(0.83)',
+    transformOrigin: 'top left',     width: '114%',
+              
+             }}>
              
-              <div>
+           
+          <div>
+          <div>
           <p>this is your published ai or within your eneterprise iam pack permissioned to train</p>
           </div>
-          <div>
-
           <button
             style={{
               marginTop: '20px',
@@ -230,11 +232,11 @@ const ServiceDetails = ({
          
           </div>
 
+         
+          <div>
           <div>
           <p>you have access to this endpoint thru your iam or this is public</p>
           </div>
-          <div>
-
           <button
             style={{
               marginTop: '20px',
@@ -251,11 +253,11 @@ const ServiceDetails = ({
           </button>
           </div>
 
+       
+          <div>
           <div>
           <p>Endpoint Data </p>
           </div>
-          <div>
-
           <button
             style={{
               marginTop: '20px',
@@ -271,8 +273,11 @@ const ServiceDetails = ({
              Endpoint Redocly Documentation
           </button>
           </div>
+          <ModelTester/>
+
 
             </div>
+            <p style={{ color: 'white' }}>Details</p>
 
            
             <div style={{
@@ -399,7 +404,6 @@ const ServiceDetails = ({
                 </div>
               </div>
               </div>
-<ModelTester/>
 
             </div>
           )}
@@ -457,7 +461,6 @@ const ServiceDetails = ({
         <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: '100%' }}>
           <h2 style={{ color: 'white', }}>{selectedService.title}</h2>
           <p>{selectedService.description}</p>
-          <p style={{ color: 'white' }}>Details</p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
             <div
               style={{

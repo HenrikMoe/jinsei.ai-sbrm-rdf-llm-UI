@@ -88,8 +88,9 @@ const styles = {
   mainGrid: {
     display: 'grid',
     gridTemplateRows: '.3fr 2fr .1fr',
+    transform: 'scale(0.85)',
+    transformOrigin: 'top left',     width: '120%',
     gap: '10px',
-    width: '100%',
     marginLeft: '50px',
     // height: '100vh',
     padding: '10px',

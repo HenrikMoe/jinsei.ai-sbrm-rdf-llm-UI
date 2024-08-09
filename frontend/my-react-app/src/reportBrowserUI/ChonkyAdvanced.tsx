@@ -253,7 +253,8 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
 
     return (
         <div className="chonky-dark-theme">
-            <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr'}}>
+            <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', transform: 'scale(0.85)',
+    transformOrigin: 'top left',     width: '116%', }}>
             <h3 style={{color: 'white'}}>Active Subpack</h3>
             <button
                 style={{ marginRight: '10px', marginTop: '15px', marginBottom: '15px', marginLeft: '10px',padding: '0px' }}
@@ -262,7 +263,9 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
                 Reset file map
             </button>
             </div>
-            <div style={{ height: '400px', marginTop: '10px' }}>
+            <div style={{ height: '400px', marginTop: '10px',   transform: 'scale(0.82)',
+    transformOrigin: 'top left',     width: '122%',  // Increase width to counteract the scaling
+    }}>
             <FullFileBrowser
                 files={files}
                 folderChain={folderChain}

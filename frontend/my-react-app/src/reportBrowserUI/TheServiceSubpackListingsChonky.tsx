@@ -268,7 +268,8 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
 
     return (
         <div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', transform: 'scale(0.85)',
+    transformOrigin: 'top left',     width: '116%', }}>
                 <button style={{margin: '5px', }}onClick={() => openModal(<APIUI />)}>Add Jinsei.ai Transformers</button>
                 <h3 style={{ color: 'white',marginTop: '10px',marginLeft: '15px' }}>All Packs</h3>
                 <button
@@ -279,7 +280,8 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
                 </button>
             </div>
 
-            <div style={{ height: '400px', marginTop: '10px' }}>
+            <div style={{ height: '400px', marginTop: '10px', transform: 'scale(0.82)',
+    transformOrigin: 'top left',     width: '122%',  }}>
                 <FullFileBrowser
                     files={files}
                     folderChain={folderChain}

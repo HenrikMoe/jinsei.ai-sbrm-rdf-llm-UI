@@ -12,6 +12,8 @@ const createData = (name, description) => {
 
 const rows = [
   createData('My Service 1', 'End to End k1 server: bank statements to filing'),
+  createData('My Service 2', 'P.E. K1 report aggregator: filing to client summary'),
+
   
 ];
 
@@ -39,7 +41,8 @@ const ServicesTable = () => {
 
   return (
     <div>
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', alignItems: 'center', padding: '10px', gap: '10px' }} >
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', alignItems: 'center', padding: '10px', gap: '10px', transform: 'scale(0.85)',
+    transformOrigin: 'top left',     width: '114%', }} >
     <h3 style={{ color: 'white', margin: '0' }}>Your Jinsei.ai Services</h3>
     <button style={{ color: 'black', padding: '10px', margin: '0' }}>Create New Service</button>
     <SearchBar style={{ padding: '10px', margin: '0', gridColumn: 'span 1' }} />
@@ -48,10 +51,11 @@ const ServicesTable = () => {
 
     
     <TableContainer component={Paper}>
-        <Table aria-label="simple table">
+        <Table aria-label="simple table" >
         <TableBody>
           {rows.map((row) => (
-            <TableRow key={row.name} hover onClick={() => handleRowClick(row)} style={{ cursor: 'pointer' }}>
+            <TableRow key={row.name} hover onClick={() => handleRowClick(row)} style={{ cursor: 'pointer', transform: 'scale(0.85)',
+    transformOrigin: 'top ',     width: '100%', }}>
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
