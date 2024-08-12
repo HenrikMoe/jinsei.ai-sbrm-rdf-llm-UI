@@ -173,7 +173,7 @@ const FileBrowserPage = (listLoginInfo) => {
             {isSpinnerVisible && <Spinner style={{marginTop: '50px'}} />} 
           </div>
           <ButtonGroup/>
-          <h3 style={{ color: 'white', marginTop: '30px' }}>Generated Packs <button>Open</button></h3>
+          <h3 style={{ color: 'white', marginTop: '30px' }}>Generated Reports <button>Open</button></h3>
         </div>
 
         <div
