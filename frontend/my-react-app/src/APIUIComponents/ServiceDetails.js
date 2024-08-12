@@ -107,6 +107,16 @@ const ServiceDetails = ({
           {selectedSubServiceLevel2.type === 'createTransformer' ?
            (
             <div>
+               <h3 style={{ color: 'white' }}>Sequental Model Silos:</h3>
+
+              <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr',  transform: 'scale(0.89)',
+  transformOrigin: 'top', border: 'solid 1px white'}}>
+<button style={{ color: 'white', backgroundColor: 'grey', margin: '10px auto', padding: '15px auto'}}>Silo 1</button>
+<button style={{ color: 'black', margin: '10px auto', padding: '15px auto'}}>Silo 2</button>
+<button style={{ color: 'black', margin: '10px auto', padding: '15px auto'}}>New Silo</button>
+<button style={{ color: 'black', margin: '10px auto', padding: '15px auto'}}>Re-Order Silos</button>
+
+</div>
             <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr', gap: '20px' }}>
               <div>
                 <h3 style={{ color: 'white' }}>Input</h3>
@@ -361,12 +371,10 @@ const ServiceDetails = ({
  
 </div>
 
-<div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr',  transform: 'scale(0.89)',
+<div style={{display: 'grid', gridTemplateColumns: '1fr 1fr',  transform: 'scale(0.89)',
   transformOrigin: 'top', border: 'solid 1px white'}}>
 <button style={{ color: 'white', backgroundColor: 'grey', margin: '10px auto', padding: '15px auto'}}>Silo 1</button>
 <button style={{ color: 'black', margin: '10px auto', padding: '15px auto'}}>Silo 2</button>
-<button style={{ color: 'black', margin: '10px auto', padding: '15px auto'}}>New Silo</button>
-<button style={{ color: 'black', margin: '10px auto', padding: '15px auto'}}>Re-Order Silos</button>
 
 </div>
 
@@ -386,7 +394,20 @@ const ServiceDetails = ({
                   }}
                 >
                   <FileViewerHim />
-                  <FileDownloader />
+             
+                </div>
+                <div
+                  style={{
+                    color: 'tan',
+                    border: '1px solid #ccc',
+                    padding: '20px',
+                    borderRadius: '8px',
+                    cursor: 'pointer',
+                    marginTop: '10px'
+                  }}
+                >
+                <FileDownloader/>
+             
                 </div>
               </div>
               <div  style={{ transform: 'scale(0.89)',
@@ -403,7 +424,20 @@ const ServiceDetails = ({
                   }}
                 >
                   <FileViewerHim />
-                  <FileDownloader/>
+             
+                </div>
+                <div
+                  style={{
+                    color: 'tan',
+                    border: '1px solid #ccc',
+                    padding: '20px',
+                    borderRadius: '8px',
+                    cursor: 'pointer',
+                    marginTop: '10px'
+                  }}
+                >
+                <FileDownloader/>
+             
                 </div>
               </div>
               </div>
