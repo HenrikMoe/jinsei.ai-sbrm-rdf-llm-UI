@@ -2,7 +2,7 @@
 export const SyntaxServices = [
     {
       title: 'Private Equity',
-      description: "Description: K1, LEI, 10 K 10 Q ; P.E stuff",
+      description: "Description: K1 Aggregators, Entity Tracking, XLSX, CSV, Form 10-K, 10-Q, anything Private Equity ",
       trainingData: 'Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
@@ -71,83 +71,81 @@ export const SyntaxServices = [
   ];
   
 
-  export const SheetTransformersPE = [
+  
+
+  export const PE = [
     {
-        title: 'Business Bank Account Transactions [Wells Fago] to Entity Cash Flow Statement [jinsei standard format]',
-        description: "By Xgroup, MIT license",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
-        description: "By Ygroup, Licensing Required",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
-        description: "By Ygroup, Licensing Required",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
-        description: "By Ygroup, Licensing Required",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
-        description: "By Ygroup, Licensing Required",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
-        description: "By Ygroup, Licensing Required",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
-        description: "By Ygroup, Licensing Required",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
-        description: "By Ygroup, Licensing Required",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
-        description: "By Ygroup, Licensing Required",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-  ]
-
-
-  export const AnalysisTransformersPE = [
+      title: 'Business Bank Account Transactions [Wells Fago] to Entity Cash Flow Statement [jinsei standard format]',
+      description: "By Xgroup, MIT license",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
+      description: "By Ygroup, Licensing Required",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
+      description: "By Ygroup, Licensing Required",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
+      description: "By Ygroup, Licensing Required",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
+      description: "By Ygroup, Licensing Required",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
+      description: "By Ygroup, Licensing Required",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
+      description: "By Ygroup, Licensing Required",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
+      description: "By Ygroup, Licensing Required",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'Fund equity balance sheet [Ygroup] to LEI & K1 [ESMA & Jinsei Spec]',
+      description: "By Ygroup, Licensing Required",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
     {
         title: 'K1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
         description: "Upload filings, retrieve filings",
@@ -198,69 +196,63 @@ export const SyntaxServices = [
       },
   ]
 
-
-
-  export const AnalysisTransformersCapitilization = [
+  export const Cap = [
     {
-        title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
-        description: "Upload filings, retrieve filings",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
-        description: "Upload filings, retrieve filings",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
-        description: "Upload filings, retrieve filings",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
-        description: "Upload filings, retrieve filings",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
-        description: "Upload filings, retrieve filings",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
-        description: "Upload filings, retrieve filings",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-      {
-        title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
-        description: "Upload filings, retrieve filings",
-        trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
-        integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
-      },
-  ]
-
-
-  export const SheetTransformersCapitilization = [
+      title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
+      description: "Upload filings, retrieve filings",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
+      description: "Upload filings, retrieve filings",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
+      description: "Upload filings, retrieve filings",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
+      description: "Upload filings, retrieve filings",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
+      description: "Upload filings, retrieve filings",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
+      description: "Upload filings, retrieve filings",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
+    {
+      title: 'Trans america project ifrs 38 stuff flow edK1 Report Pack [Deloitte] given Entity Cash Flow Statements [jinsei standard format] ',
+      description: "Upload filings, retrieve filings",
+      trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
+      integrationNotes: 'Integration Notes: Standardized data format for integration into Baker Tilly tool suite.',
+    },
     {
         title: 'Trans amer Bank Account Transactions [Wells Fago] to Entity Cash Flow Statement [jinsei standard format]',
         description: "Upload filings, retrieve filings",

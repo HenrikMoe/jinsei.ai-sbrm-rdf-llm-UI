@@ -7,10 +7,8 @@ import PerformanceTuning from './PerformanceTuning..js'
 import ModelTester from './ModelTester.js'
 
 import {
-  AnalysisTransformersPE,
-  SheetTransformersPE,
-  SheetTransformersCapitilization,
-  AnalysisTransformersCapitilization,
+  PE,
+  Cap,
   CreateTransformer
 } from './Services'; // Import the services
 import SearchBar from './SearchBar.js';
@@ -25,24 +23,16 @@ const ServiceDetails = ({
   onSubServiceLevel2Click
 }) => {
   const getSubServices = () => {
-    if (selectedSubServiceLevel1 === 'sheettransformer' && selectedService.title === 'Private Equity') {
-      return SheetTransformersPE;
-    } else if (selectedSubServiceLevel1 === 'analysisfunctions' && selectedService.title === 'Private Equity') {
-      return AnalysisTransformersPE;
-    } else if (selectedSubServiceLevel1 === 'sheettransformer' && selectedService.title === 'Capitlization') {
-      return SheetTransformersCapitilization;
-    } else if (selectedSubServiceLevel1 === 'analysisfunctions' && selectedService.title === 'Capitlization') {
-      return AnalysisTransformersCapitilization;
+    if (selectedService.title === 'Private Equity') {
+      return PE;
+    } else if (selectedService.title === 'Capitlization') {
+      return Cap;
     }
     return [];
   };
 
   const getTitle = () => {
-    if (selectedSubServiceLevel1 === 'sheettransformer') {
-      return `${selectedService.title} -> Format Transformers`;
-    } else if (selectedSubServiceLevel1 === 'analysisfunctions') {
-      return `${selectedService.title} -> Analysis Transformers`;
-    }
+   
     return 'Sub Services';
   };
 
@@ -461,7 +451,7 @@ const ServiceDetails = ({
         <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: '100%' }}>
           <h2 style={{ color: 'white', }}>{selectedService.title}</h2>
           <p>{selectedService.description}</p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px' }}>
             <div
               style={{
                 color: 'tan',
@@ -473,21 +463,9 @@ const ServiceDetails = ({
               }}
               onClick={() => onSubServiceLevel1Click('sheettransformer')}
             >
-              <h3 style={{ color: 'white' }}>Format Transformers (Prediction Based LLM)</h3>
+              <h3 style={{ color: 'white' }}>Sequential LLM Services</h3>
             </div>
-            <div
-              style={{
-                color: 'tan',
-                border: '1px solid #ccc',
-                padding: '20px',
-                borderRadius: '8px',
-                cursor: 'pointer',
-                marginTop: '10px'
-              }}
-              onClick={() => onSubServiceLevel1Click('analysisfunctions')}
-            >
-              <h3 style={{ color: 'white' }}>Analysis Transformers (Sequential LLM Add Ons Available)</h3>
-            </div>
+           
           </div>
           
         </div>
