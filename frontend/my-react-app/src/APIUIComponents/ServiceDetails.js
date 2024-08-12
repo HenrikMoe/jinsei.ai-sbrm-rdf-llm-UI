@@ -33,7 +33,7 @@ const ServiceDetails = ({
 
   const getTitle = () => {
    
-    return 'Sub Services';
+    return selectedService.title;
   };
 
   return (
@@ -202,9 +202,7 @@ const ServiceDetails = ({
              
            
           <div>
-          <div>
-          <p>this is your published ai or within your eneterprise iam pack permissioned to train</p>
-          </div>
+         
           <button
             style={{
               marginTop: '20px',
@@ -219,14 +217,14 @@ const ServiceDetails = ({
           >
             Update Transformer
           </button>
-         
+          <div>
+          <p>this is your published ai or within your eneterprise iam pack permissioned to train</p>
+          </div>
           </div>
 
          
           <div>
-          <div>
-          <p>you have access to this endpoint thru your iam or this is public</p>
-          </div>
+         
           <button
             style={{
               marginTop: '20px',
@@ -241,13 +239,14 @@ const ServiceDetails = ({
           >
             Add To My Services
           </button>
+          <div>
+          <p>you have access to this endpoint thru your iam or this is public</p>
+          </div>
           </div>
 
        
           <div>
-          <div>
-          <p>Endpoint Data </p>
-          </div>
+        
           <button
             style={{
               marginTop: '20px',
@@ -262,6 +261,9 @@ const ServiceDetails = ({
           >
              Endpoint Redocly Documentation
           </button>
+          <div>
+          <p>Endpoint Data </p>
+          </div>
           </div>
           <ModelTester/>
 
@@ -290,7 +292,7 @@ const ServiceDetails = ({
     padding: '10px',
     textAlign: 'center'
   }}>
-    Popularity: 2nd
+    Rank: 1st
   </div>
   <div style={{
     color: 'white',
