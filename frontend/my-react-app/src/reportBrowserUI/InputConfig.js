@@ -26,10 +26,17 @@ const RandomGrid = () => {
       prevItems.map((item, i) => (i === index ? newValue : item))
     );
   };
+  //       <h1 style={{fontSize: '120px', margin:'300px auto'}}>Jinsei.ai</h1>
+//       <h1 style={{fontSize: '40px', margin:'300px auto'}}>Creating a data transformer.</h1>
+//       <h1 style={{fontSize: '40px', margin:'300px auto'}}>Train and tune your ai models.</h1>
+       <h1 style={{fontSize: '40px', margin:'300px auto'}}>Test your transformer model.</h1>
+
 
   return (
     <div>
       <h3>Input Config</h3>
+       <h1 style={{fontSize: '40px', margin:'300px auto'}}>Share your model with other creators.</h1>
+
       <div style={styles.gridContainer}>
         {gridItems.map((value, index) => (
           <div key={index} style={styles.gridItem}>

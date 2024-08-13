@@ -109,11 +109,10 @@ const ServiceDetails = ({
             <div>
                <h3 style={{ color: 'white' }}>Sequental Model Silos:</h3>
 
-              <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr',  transform: 'scale(0.89)',
+              <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',  transform: 'scale(0.89)',
   transformOrigin: 'top', border: 'solid 1px white'}}>
 <button style={{ color: 'white', backgroundColor: 'grey', margin: '10px auto', padding: '15px auto'}}>Silo 1</button>
-<button style={{ color: 'black', margin: '10px auto', padding: '15px auto'}}>Silo 2</button>
-<button style={{ color: 'black', margin: '10px auto', padding: '15px auto'}}>New Silo</button>
+<button style={{ color: 'black', margin: '10px auto', padding: '15px auto'}}>Add Silo</button>
 <button style={{ color: 'black', margin: '10px auto', padding: '15px auto'}}>Re-Order Silos</button>
 
 </div>
@@ -188,8 +187,13 @@ const ServiceDetails = ({
                   <FileViewerHim />
                 </div>
               </div>
-              <PerformanceTuning />
+
+
+             
+                  <PerformanceTuning />
                   <ModelTester/>
+                  <button style={{width: '200px', padding: '10px', marginLeft: '170px'}}>IAM Config</button>
+
                   <button style={{width: '200px', padding: '10px', marginLeft: '170px'}}>Save Transformer</button>
                   <button style={{width: '200px', padding: '10px', marginLeft: '170px'}}>Add Transformer To Subservices </button>
                   <button style={{width: '200px', padding: '10px', marginLeft: '170px'}} >Transformer Version History</button>

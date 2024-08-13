@@ -54,14 +54,7 @@ const MyComponent = () => {
 
   return (
     <div style={styles.container}>
-      <div>
-        <p>IAM Config</p>
-      </div>
-      <div>
-        <button style={styles.button} onClick={openModal}>
-          Open
-        </button>
-      </div>
+    
       <div>
         <p>TensorFlow Prediction Model Tuning:</p>
       </div>
