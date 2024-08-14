@@ -33,12 +33,20 @@ const RandomGrid = () => {
   //  <h1 style={{fontSize: '40px', margin:'300px auto'}}>Up next: Add model to a service.</h1>
 
       //  <h1 style={{fontSize: '40px', margin:'300px auto'}}>Share your model with other creators.</h1>
+//    <h1 style={{fontSize: '40px', margin:'300px auto'}}>Use queries or file runners.</h1>
+//    <h1 style={{fontSize: '40px', margin:'300px auto'}}>Test your configured transformer.</h1>
+//    <h1 style={{fontSize: '40px', margin:'300px auto'}}>View subprocess results.</h1>
+
+//<h1 style={{fontSize: '40px', margin:'300px auto'}}>Configure your transformer.</h1>
+//<h1 style={{fontSize: '40px', margin:'300px auto'}}>Setting up a transformer as a service.</h1>
+//<h1 style={{fontSize: '40px', margin:'300px auto'}}>Up next: Multi-transformer services.</h1>
+
 
   return (
     <div>
       <h3>Input Config</h3>
 
-    <h1 style={{fontSize: '40px', margin:'300px auto'}}>Using a transformer in a service.</h1>
+      <h1 style={{fontSize: '40px', margin:'300px auto'}}>Setting up a transformer as a service.</h1>
 
       <div style={styles.gridContainer}>
         {gridItems.map((value, index) => (
