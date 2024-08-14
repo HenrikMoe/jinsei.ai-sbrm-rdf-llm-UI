@@ -41,12 +41,14 @@ const RandomGrid = () => {
 //<h1 style={{fontSize: '40px', margin:'300px auto'}}>Setting up a transformer as a service.</h1>
 //<h1 style={{fontSize: '40px', margin:'300px auto'}}>Up next: Multi-transformer services.</h1>
 
+//      <h1 style={{fontSize: '40px', margin:'300px auto'}}>Using multiple transformers as a service.</h1>
+
 
   return (
     <div>
       <h3>Input Config</h3>
 
-      <h1 style={{fontSize: '40px', margin:'300px auto'}}>Setting up a transformer as a service.</h1>
+      <h1 style={{fontSize: '40px', margin:'300px auto'}}>Use case: End to end K1 process.</h1>
 
       <div style={styles.gridContainer}>
         {gridItems.map((value, index) => (
