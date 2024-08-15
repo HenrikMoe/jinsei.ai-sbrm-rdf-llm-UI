@@ -92,17 +92,34 @@ const FileBrowserPage = (listLoginInfo) => {
     ]);
   };
 
+  // gridArea: 'right-bottom'
+  // <div
+  //   className="vfs-browser"
+  //   style={{
+  //     border: '1px solid #ccc',
+  //     padding: '10px',
+  //     overflow: 'auto',
+  //   }}
+  // >
+  //   <VFSBrowser style={{ height: '100%' }} />
+  // </div>
+
   return (
     <div
       className="file-browser-page"
       style={{
         display: 'grid',
-        gridTemplateColumns: '1fr 2fr',
-        gridTemplateRows: '1fr 2fr',
-        height: 'calc(100vh - 100px)',
+        gridTemplateColumns: '2fr 5fr', // Left column takes 1fr, right takes 2fr
+        gridTemplateRows: '1fr 2fr', // Right side is split into two equal rows
+        height: 'calc(100vh - 150px)', // Full viewport height minus 100px
         gap: '10px',
         marginTop: '100px',
+        borderRadius: '5px',
         padding: '10px',
+        gridTemplateAreas: `
+          "left right-top"
+          "left right-bottom"
+        `
       }}
     >
       <div
@@ -110,7 +127,9 @@ const FileBrowserPage = (listLoginInfo) => {
         style={{
           border: '1px solid #ccc',
           padding: '10px',
+          borderRadius: '5px',
           overflow: 'auto',
+          gridArea: 'left'
         }}
       >
         <ServiceSubpackChonk />
@@ -121,22 +140,15 @@ const FileBrowserPage = (listLoginInfo) => {
         style={{
           border: '1px solid #ccc',
           padding: '10px',
+          borderRadius: '5px',
+
           overflow: 'auto',
+          gridArea: 'right-top'
         }}
       >
         <ServiceTable />
       </div>
-
-      <div
-        className="vfs-browser"
-        style={{
-          border: '1px solid #ccc',
-          padding: '10px',
-          overflow: 'auto',
-        }}
-      >
-        <VFSBrowser style={{ height: '100%' }} />
-      </div>
+   
 
       <div
         className="right-side-content"
@@ -144,6 +156,9 @@ const FileBrowserPage = (listLoginInfo) => {
           border: '1px solid #ccc',
           padding: '10px',
           overflow: 'auto',
+           gridArea: 'right-bottom',
+           borderRadius: '5px',
+
           color: 'white',
         }}
       >

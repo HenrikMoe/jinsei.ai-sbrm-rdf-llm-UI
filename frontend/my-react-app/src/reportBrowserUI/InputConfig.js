@@ -42,13 +42,16 @@ const RandomGrid = () => {
 //<h1 style={{fontSize: '40px', margin:'300px auto'}}>Up next: Multi-transformer services.</h1>
 
 //      <h1 style={{fontSize: '40px', margin:'300px auto'}}>Using multiple transformers as a service.</h1>
+//      <h1 style={{fontSize: '40px', margin:'300px auto'}}>Transformer 1: Bank Statements to Entity Cashflows.</h1>
+//foot ntoe transformer 
+//<h1 style={{fontSize: '40px', margin:'300px auto'}}>K1 Package to SEC Edgar</h1>
+//      <h1 style={{fontSize: '30px', margin:'300px auto'}}>Copyright 2024 Jinsei Corp. All Rights Reserved.</h1>
 
 
   return (
     <div>
       <h3>Input Config</h3>
 
-      <h1 style={{fontSize: '40px', margin:'300px auto'}}>Use case: End to end K1 process.</h1>
 
       <div style={styles.gridContainer}>
         {gridItems.map((value, index) => (
