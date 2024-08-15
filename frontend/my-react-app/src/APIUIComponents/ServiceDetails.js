@@ -47,7 +47,7 @@ const ServiceDetails = ({
           border: 'none',
           borderRadius: '5px',
           cursor: 'pointer',
-          textDecoration: 'none'
+marginLeft: '-1000px',          textDecoration: 'none'
         }}
       >
         Back
@@ -55,51 +55,66 @@ const ServiceDetails = ({
 
       {selectedSubServiceLevel2 ? (
         <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: '100%' }}>
-          <h2 style={{ color: 'tan' }}>{getTitle()}  </h2>
+          <h2 style={{ color: 'tan', textAlign: 'left' }}>{getTitle()}  </h2>
           <h2 style={{ color: 'white' }}> 
             
           {selectedSubServiceLevel2.title === 'create title here' ? (
             <div>
-                          <div>&rarr; 
-
+                          <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr'}}> 
+            <div><h3 style={{color: 'white'}}>Transformer Title</h3></div>
+<div>
                   <input
                     type="text"
                    
                     style={{
                       color: 'white',
                       backgroundColor: 'transparent',
-                      border: '1px solid white',
+                      borderLeft: '1px solid white',
+                      borderBottom: '1px solid white',
+                      borderRadius: '5px',
+
                       outline: 'none',
+                      marginTop: '25px',
+                      marginLeft: '-250px',
                       width: '300px',
-                      marginLeft: '25px'
                     }}
                     placeholder='create transformer title'
                   />
-  </div>
-  <div style={{
-                      marginTop: '25px',
-                    }}>
+                  </div>
 
+  </div>
+  <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr',
+                      marginTop: '5px',
+                    }}>
+            <div>
+              <h3 style={{color: 'white', }}>Description</h3></div>
+            <div>
                   <input
                     type="text"
                    
                     style={{
                       color: 'white',
                       backgroundColor: 'transparent',
-                      border: '1px solid white',
+                      borderLeft: '1px solid white',
+                      borderBottom: '1px solid white',
+                      borderRadius: '5px',
                       outline: 'none',
+                      marginLeft: '-200px',
+
+                      
                       marginTop: '25px',
-                      width: '300px'
+                      width: '400px'
                     }}
                     placeholder='create transformer description'
                   />
+                  </div>
                   </div>
                   </div>
 
                     
                 ) : (
                   <div>
-                  <h2 style={{ color: 'white', fontSize: '24px' }}>&rarr; 
+                  <h2 style={{ color: 'white', fontSize: '24px', textAlign: 'left' }}>&rarr; 
                   {selectedSubServiceLevel2.title}</h2>
                    <div style={{ color: 'white', marginTop: '25px' }}>{selectedSubServiceLevel2.description}</div>
                    </div>
@@ -107,15 +122,94 @@ const ServiceDetails = ({
           {selectedSubServiceLevel2.type === 'createTransformer' ?
            (
             <div>
-               <h3 style={{ color: 'white' }}>Sequental Model Silos:</h3>
+               <h3 style={{ color: 'white',textAlign: 'left' }}>Transformer Silos:</h3>
 
               <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',  transform: 'scale(0.89)',
-  transformOrigin: 'top', border: 'solid 1px white'}}>
-<button style={{ color: 'white', backgroundColor: 'grey', margin: '10px auto', padding: '15px auto'}}>Silo 1</button>
-<button style={{ color: 'black', margin: '10px auto', padding: '15px auto'}}>Add Silo</button>
-<button style={{ color: 'black', margin: '10px auto', padding: '15px auto'}}>Re-Order Silos</button>
+  transformOrigin: 'top', borderBottom: 'solid 1px white', borderRadius: '5px' }}>
+<button style={{
+          backgroundColor: 'forestgreen',
+          color: '#fff',
+          padding: '10px 20px',
+          border: 'none',
+          borderRadius: '5px',
+          margin: '5px auto',
+          marginBottom: '10px',
+
+          cursor: 'pointer',
+          textDecoration: 'none'
+        }}>Silo 1</button>
+<button style={{
+          backgroundColor: '#24292e',
+          color: '#fff',
+          padding: '10px 20px',
+          border: 'none',
+          margin: '5px auto',
+          marginBottom: '10px',
+
+          borderRadius: '5px',
+          cursor: 'pointer',
+          textDecoration: 'none'
+        }}>Add Silo</button>
+<button style={{
+          backgroundColor: '#24292e',
+          color: '#fff',          margin: '5px auto',
+
+          padding: '10px 20px',
+          border: 'none',
+          marginBottom: '10px',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          textDecoration: 'none'
+        }}>Re-Order Silos</button>
 
 </div>
+<h3 style={{color: 'white',textAlign: 'left'}}>Silo Details:</h3>
+
+<div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderBottom: '1px solid white', borderRadius: '5px'}}>
+<div>
+<button style={{
+          backgroundColor: 'forestgreen',
+          color: '#fff',          margin: '5px auto',
+          marginBottom: '10px',
+
+          padding: '10px 20px',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          textDecoration: 'none'
+        }}>Upload Training Data</button>
+        </div>
+        <div>
+        <button style={{
+          backgroundColor: '#24292e',
+          color: '#fff',          margin: '5px auto',
+          marginBottom: '10px',
+
+          padding: '10px 20px',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          textDecoration: 'none'
+        }}>Select Model, Tune and Test</button>
+        </div>
+        <div>
+<button style={{
+          backgroundColor: '#24292e',
+          color: '#fff',          margin: '5px auto',
+          marginBottom: '10px',
+
+          padding: '10px 20px',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          textDecoration: 'none'
+        }}>Export and Publish</button>
+        </div>
+        </div>
+
+
+        <h3 style={{ color: 'white', textAlign: 'left' }}>Training Data:</h3>
+
             <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr', gap: '20px' }}>
               <div>
                 <h3 style={{ color: 'white' }}>Input</h3>
@@ -186,7 +280,35 @@ const ServiceDetails = ({
                 >
                   <FileViewerHim />
                 </div>
+                </div>
+
+                <div> <button style={{
+          backgroundColor: '#24292e',
+          color: '#fff',          margin: '5px auto',
+
+          padding: '10px 20px',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          textDecoration: 'none'
+        }}>Save Training Data</button></div>
+                <div><button style={{
+          backgroundColor: '#24292e',
+          color: '#fff',          margin: '5px auto',
+
+          padding: '10px 20px',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          textDecoration: 'none'
+        }}> Continue To Model</button></div>
+
+               
+         
               </div>
+              <h3 style={{color: 'white',}}>Select, Tune, and Test Model:</h3>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr', gap: '20px' }}>
 
 
              
@@ -198,8 +320,8 @@ const ServiceDetails = ({
                   <button style={{width: '200px', padding: '10px', marginLeft: '170px'}}>Add Transformer To Subservices </button>
                   <button style={{width: '200px', padding: '10px', marginLeft: '170px'}} >Transformer Version History</button>
                   <button style={{width: '200px', padding: '10px', marginLeft: '170px'}}>Share</button>
-          </div>
-    
+                  </div>
+
 
 
           </div>
