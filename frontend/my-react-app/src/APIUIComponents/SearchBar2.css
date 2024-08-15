@@ -4,8 +4,10 @@
   position: relative;
   margin-right: 30px;
   margin-left: 20px;
-    margin-top: 5px;
+    margin-top: 8px;
+    
 }
+
 
 .react-autosuggest__input {
   width: 240px;
@@ -16,6 +18,8 @@
   font-size: 16px;
   border: 1px solid #aaa;
   border-radius: 4px;
+  background-color: #f0ecec !important;
+
 }
 
 .react-autosuggest__input--focused {
@@ -32,7 +36,7 @@
   top: 40px;
   width: 240px;
   border: 1px solid #aaa;
-  background-color: #fff;
+  background-color: #f6f6f6;
   font-family: 'Arial', sans-serif;
   font-weight: 300;
   font-size: 16px;

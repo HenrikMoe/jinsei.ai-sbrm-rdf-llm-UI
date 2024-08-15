@@ -31,7 +31,7 @@ const ServiceActions = () => {
 const styles = {
   container: {
     display: 'flex',
-    gap: '4px',
+    gap: '30px',
     width: '100px'
   },
   button: {

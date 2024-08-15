@@ -49,14 +49,23 @@ const SearchBar = () => {
   };
 
   const inputProps = {
-    placeholder: 'Search a service',
+    placeholder: 'Search service',
     value,
     onChange,
   };
 
   return (
     <Autosuggest
-    style={{ padding: '10px', marginRight: '20px', gridColumn: 'span 1' }} 
+    style={{ 
+      marginTop: '10px',
+      backgroundColor: '#24292e',
+      color: '#fff',
+      padding: '10px 20px',
+      border: 'none',
+      borderRadius: '5px',
+      cursor: 'pointer',
+      textDecoration: 'none',
+   gridColumn: 'span 1' }} 
       suggestions={suggestionsList}
       onSuggestionsFetchRequested={onSuggestionsFetchRequested}
       onSuggestionsClearRequested={onSuggestionsClearRequested}

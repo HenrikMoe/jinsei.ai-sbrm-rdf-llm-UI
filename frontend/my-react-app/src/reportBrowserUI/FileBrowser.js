@@ -108,6 +108,7 @@ const FileBrowserPage = (listLoginInfo) => {
     <div
       className="file-browser-page"
       style={{
+        backgroundColor: '#281111',
         display: 'grid',
         gridTemplateColumns: '2fr 5fr', // Left column takes 1fr, right takes 2fr
         gridTemplateRows: '1fr 2fr', // Right side is split into two equal rows
@@ -174,7 +175,7 @@ const FileBrowserPage = (listLoginInfo) => {
             marginBottom: '10px'
           }}
         >
-          <h3 style={{ color: 'white', padding: '10px' }}>My Service 1</h3>
+          <h3 style={{ color: 'white', padding: '10px' }}> Full Filing Project</h3>
           <div style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
@@ -188,7 +189,17 @@ const FileBrowserPage = (listLoginInfo) => {
             {isSpinnerVisible && <Spinner style={{marginTop: '50px'}} />} 
           </div>
           <ButtonGroup/>
-          <h3 style={{ color: 'white', marginTop: '30px' }}>Generated Reports <button>Open</button></h3>
+          <button style={{
+                        marginTop: '10px',
+                        backgroundColor: '#24292e',
+                        color: '#fff',
+                        padding: '10px 20px',
+                        border: 'none',
+                        borderRadius: '5px',
+                        cursor: 'pointer',
+                        textDecoration: 'none',
+                        marginBottom: '10px'
+                      }}>Reports Generated</button>
         </div>
 
         <div

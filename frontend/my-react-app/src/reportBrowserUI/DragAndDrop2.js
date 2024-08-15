@@ -1,6 +1,8 @@
 
 
 
+
+
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import InputConfig from './InputConfig.js';
@@ -41,33 +43,31 @@ const App = () => {
       {/* Middle grid (2x2) */}
       <div style={styles.middleGrid}>
         <div style={styles.cellMiddleLeftTop}>
-          <p style={styles.text}>Entity Cash Flow to Deloitte K1 Report Package, id: b17xcip</p>
+        <p style={styles.text}>Entity Cash Flow to Deloitte K1 Report Package, id: b17xcip</p>
         </div>
         <div style={styles.cellMiddleRightTop}>
-          <button style={styles.button}>Open Transformer</button>
-          <button style={styles.button}>Change Transformer</button>
+          <button style={styles.button}>Open </button>
+          <button style={styles.button}>Update </button>
         </div>
+        </div>
+
+        <div style={styles.middleGrid2}>
+
         <div style={styles.cellMiddleLeftBottom}>
           <button style={styles.button} onClick={() => openModal(<InputConfig />)}>
-            Input Config
+            Input 
           </button>
         </div>
         <div style={styles.cellMiddleRightBottom}>
           <button style={styles.button} onClick={() => openModal(<OutputConfig />)}>
-            Output Config
+            Output 
           </button>
         </div>
       </div>
 
       {/* Bottom grid (1x2) */}
-      <div style={styles.bottomGrid}>
-        <div style={styles.cellBottomLeft}>
-          <p style={styles.text}><Button>Logs</Button></p>
-        </div>
-        <div style={styles.cellBottomRight}>
-          <p style={styles.text}><Button>State</Button></p>
-        </div>
-      </div>
+          <p style={styles.button2}><Button>Logs</Button></p>
+       
 
       <Modal
         isOpen={isModalOpen}
@@ -87,11 +87,11 @@ const App = () => {
 const styles = {
   mainGrid: {
     display: 'grid',
-    gridTemplateRows: '.3fr 2fr .1fr',
-    transform: 'scale(0.85)',
-    transformOrigin: 'top left',     width: '120%',
+    gridTemplateRows: '.3fr 1fr 1fr ',
     gap: '10px',
-    marginLeft: '50px',
+    marginLeft: '40px',
+    transform: 'scale(0.91)',
+    transformOrigin: 'top left',     width: '100%',
     // height: '100vh',
     padding: '10px',
     border: '2px solid #ccc',
@@ -104,31 +104,31 @@ const styles = {
   },
   middleGrid: {
     display: 'grid',
+    gridTemplateColumns: '1.5fr 1fr',
+    gap: '10px',
+  },
+  middleGrid2: {
+    display: 'grid',
     gridTemplateColumns: '1fr 1fr',
-    gridTemplateRows: '1fr 1fr',
     gap: '10px',
   },
   bottomGrid: {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
     gap: '10px',
-    marginTop: '-55px',
+    marginTop: '0px',
     height: '50px'
   },
   cellTopLeft: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    border: '1px solid #ddd',
-    borderRadius: '5px',
     padding: '10px',
   },
   cellTopRight: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    border: '1px solid #ddd',
-    borderRadius: '5px',
     padding: '10px',
   },
   cellMiddleLeftTop: {
@@ -140,16 +140,18 @@ const styles = {
     padding: '10px',
   },
   cellMiddleRightTop: {
-    display: 'flex',
+    display: 'grid',
+    gridTemplateColumns: '1fr',
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: 'column', // Stacking buttons on top of each other
+    flexDirection: 'column',
     border: '1px solid #ddd',
     borderRadius: '5px',
     padding: '10px',
   },
   cellMiddleLeftBottom: {
-    display: 'flex',
+    display: 'grid',
+    gridTemplateColumns: '1fr',
     alignItems: 'center',
     justifyContent: 'center',
     border: '1px solid #ddd',
@@ -158,7 +160,9 @@ const styles = {
     height: '50px'
   },
   cellMiddleRightBottom: {
-    display: 'flex',
+    display: 'grid',
+    gridTemplateColumns: '1fr',
+
     alignItems: 'center',
     justifyContent: 'center',
     border: '1px solid #ddd',
@@ -198,10 +202,20 @@ const styles = {
     cursor: 'pointer',
   },
   button: {
-    background: 'blue',
+    background: '#24292e',
     color: 'white',
     border: 'none',
     borderRadius: '5px',
+    padding: '10px',
+    cursor: 'pointer',
+    marginBottom: '5px', // Adding margin to separate the buttons
+  },
+  button2: {
+    background: '#24292e',
+    color: 'white',
+    border: 'none',
+    borderRadius: '5px',
+    marginTop: '-60px',
     padding: '10px',
     cursor: 'pointer',
     marginBottom: '5px', // Adding margin to separate the buttons

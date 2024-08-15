@@ -1,33 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
-import SearchBar from '../APIUIComponents/SearchBar2'
 import Modal from 'react-modal';
-import IAM from './IamConfig'
+import SearchBar from '../APIUIComponents/SearchBar2';
+import IAM from './IamConfig';
 Modal.setAppElement('#root');
 
-const createData = (name, description) => {
-  return { name, description };
-};
-
-const rows = [
-  createData('My Service 1', 'End to End k1 server: bank statements to filing'),
-  createData('My Service 2', 'P.E. K1 report aggregator: filing to client summary'),
-
-  
-];
-
-const handleRowClick = (row) => {
-  console.log('Clicked row:', row);
-};
-
-
-
 const ServicesTable = () => {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
-  
+
+  const rows = [
+    { name: 'K1 Footnote Project', description: 'Generates footnotes on client K1 reports' },
+    { name: 'Full Filing Project', description: 'Full K1 filing process for my clients' },
+  ];
+
   const openModal = (content) => {
     setModalContent(content);
     setIsModalOpen(true);
@@ -38,37 +24,56 @@ const ServicesTable = () => {
     setModalContent(null);
   };
 
-
   return (
-    <div>
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', alignItems: 'center', padding: '10px', gap: '10px', transform: 'scale(0.85)',
-    transformOrigin: 'top left',     width: '114%', }} >
-    <h3 style={{ color: 'white', margin: '0' }}>Your Services</h3>
-    <button style={{ color: 'black', padding: '10px', margin: '0' }}>Create New Service</button>
-    <SearchBar style={{ padding: '10px', margin: '0', gridColumn: 'span 1' }} />
-    <button onClick={() => openModal(<IAM />)} style={{ color: 'black', padding: '10px', margin: '0' }}>Iam</button>
-</div>
+    <div style={{ transform: 'scale(0.87)', transformOrigin: 'top left' }}>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr 1fr 1fr',
+          alignItems: 'center',
+          padding: '10px',
+          gap: '10px',
+          width: '114%',
+        }}
+      >
+        <h3 style={{ color: 'white', margin: '0' }}>Your Services</h3>
+        <button style={styles.button}>Create New Service</button>
+        <SearchBar style={{ padding: '10px', margin: '0', gridColumn: 'span 1' }} />
+        <button onClick={() => openModal(<IAM />)} style={styles.button}>
+          Bob Smith IAM
+        </button>
+      </div>
 
-    
-    <TableContainer component={Paper}>
-        <Table aria-label="simple table" >
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.name} hover onClick={() => handleRowClick(row)} style={{ cursor: 'pointer', transform: 'scale(0.85)',
-    transformOrigin: 'top ',     width: '100%', }}>
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell>{row.description}</TableCell>
-              <button style={{marginTop: '15px'}}>open</button>
-              <button style={{marginTop: '15px', marginLeft: '5px'}}>delete</button>
+      <div style={styles.tableContainer}>
+        <div style={styles.tableHeader}>
+          <div style={styles.tableCell}>Service Name</div>
+          <div style={styles.tableCell}>Description</div>
+          <div style={styles.tableCell}>Actions</div>
+        </div>
+        {rows.map((row, index) => (
+          <div
+            key={index}
+            style={{
+              ...styles.tableRow,
+              ...(index === 1 ? styles.highlightedRow : {}),
+            }}
+            onClick={() => console.log('Clicked row:', row)}
+          >
+            <div style={index === 1 ? styles.highlightedCell : styles.tableCell2}>
+              {row.name}
+            </div>
+            <div style={index === 1 ? styles.highlightedCell : styles.tableCell2}>
+              {row.description}
+            </div>
+            <div style={styles.tableCell}>
+              <button style={index === 1 ? styles.button2 : styles.button}>{index === 1 ? 'Viewing' : 'Open'}</button>
+              <button style={styles.button}>Delete</button>
+            </div>
+          </div>
+        ))}
+      </div>
 
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-    <Modal
+      <Modal
         isOpen={isModalOpen}
         onRequestClose={closeModal}
         contentLabel="Modal"
@@ -81,33 +86,73 @@ const ServicesTable = () => {
           Close API UI
         </button>
       </Modal>
-
     </div>
-
   );
 };
 
-
 const styles = {
-  text: {
-    margin: 0,
-    fontSize: '16px',
-  },
-  closeButton: {
-    background: 'red',
-    color: 'white',
-    border: 'none',
-    borderRadius: '5px',
-    padding: '10px',
-    cursor: 'pointer',
-  },
   button: {
-    background: 'blue',
-    color: 'white',
+    marginTop: '0px',
+    backgroundColor: '#24292e',
+    color: '#fff',
+    padding: '10px 20px',
     border: 'none',
+    marginLeft: '15px',
     borderRadius: '5px',
-    padding: '10px',
     cursor: 'pointer',
+    textDecoration: 'none',
+  },
+  button2: {
+    marginTop: '0px',
+    backgroundColor: 'forestgreen',
+    color: '#fff',
+    padding: '10px 20px',
+    border: 'none',
+    marginLeft: '15px',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    textDecoration: 'none',
+  },
+  tableContainer: {
+    width: '110%',
+    margin: '20px auto',
+    border: '1px solid #ddd',
+    borderRadius: '8px',
+    marginLeft: '15px',
+    overflow: 'hidden',
+  },
+  tableHeader: {
+    display: 'flex',
+    backgroundColor: '#f5f5f5',
+    padding: '10px',
+    borderBottom: '1px solid #ddd',
+  },
+  tableRow: {
+    display: 'flex',
+    padding: '10px',
+    borderBottom: '1px solid #ddd',
+    cursor: 'pointer',
+  },
+  tableCell: {
+    flex: 1,
+    textAlign: 'left',
+    fontSize: '14px',
+  },
+  tableCell2: {
+    flex: 1,
+    textAlign: 'left',
+    fontSize: '14px',
+    color: 'white'
+  },
+  highlightedRow: {
+    backgroundColor: '#333',
+  },
+  highlightedCell: {
+    flex: 1,
+    textAlign: 'left',
+    fontSize: '14px',
+    color: 'white',
+    fontWeight: 'bold',
   },
 };
 
