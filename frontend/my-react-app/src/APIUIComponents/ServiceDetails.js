@@ -214,7 +214,25 @@ const ServiceDetails = ({
               
              }}>
              
-           
+             <div>
+         
+         <button
+           style={{
+             marginTop: '20px',
+             backgroundColor: '#24292e',
+             color: '#fff',
+             padding: '10px 20px',
+             border: 'none',
+             borderRadius: '5px',
+             cursor: 'pointer',
+             textDecoration: 'none'
+           }}
+         >
+           Bob's IAMs
+         </button>
+         
+         </div>
+
           <div>
          
           <button
@@ -231,9 +249,7 @@ const ServiceDetails = ({
           >
             Update Transformer
           </button>
-          <div>
-          <p>this is your published ai or within your eneterprise iam pack permissioned to train</p>
-          </div>
+          
           </div>
 
          
@@ -253,9 +269,7 @@ const ServiceDetails = ({
           >
             Add To My Services
           </button>
-          <div>
-          <p>you have access to this endpoint thru your iam or this is public</p>
-          </div>
+         
           </div>
 
        
@@ -275,11 +289,9 @@ const ServiceDetails = ({
           >
              Endpoint Redocly Documentation
           </button>
-          <div>
-          <p>Endpoint Data </p>
+          
           </div>
-          </div>
-          <ModelTester/>
+        
 
 
             </div>
@@ -375,10 +387,36 @@ const ServiceDetails = ({
  
 </div>
 
-<div style={{display: 'grid', gridTemplateColumns: '1fr 1fr',  transform: 'scale(0.89)',
-  transformOrigin: 'top', border: 'solid 1px white'}}>
-<button style={{ color: 'white', backgroundColor: 'grey', margin: '10px auto', padding: '15px auto'}}>Silo 1</button>
-<button style={{ color: 'black', margin: '10px auto', padding: '15px auto'}}>Silo 2</button>
+<div style={{display: 'grid', gridTemplateColumns: ' 1fr 1fr 1fr',  transform: 'scale(0.89)',
+   border: 'solid 1px white', borderRadius: '5px'}}>
+    <div><h3 style={{color: 'white'}}>LLMs: </h3></div>
+    <div>
+    
+<button  style={{
+             marginTop: '10px',
+             backgroundColor: 'forestgreen',
+             color: '#fff',
+             padding: '10px 20px',
+             border: 'none',
+             borderRadius: '5px',
+             cursor: 'pointer',
+             textDecoration: 'none'
+           }}
+         >Silo 1</button>
+         </div>
+         <div>
+<button  style={{
+             marginTop: '10px',
+             backgroundColor: '#24292e',
+             color: '#fff',
+             padding: '10px 20px',
+             border: 'none',
+             borderRadius: '5px',
+             cursor: 'pointer',
+             textDecoration: 'none'
+           }}
+         >Silo 2</button>
+         </div>
 
 </div>
 
@@ -386,6 +424,31 @@ const ServiceDetails = ({
   transformOrigin: 'top',}}>
             <div style={{ transform: 'scale(0.89)',
   transformOrigin: 'top',}}>
+
+<div><button  style={{
+             marginTop: '20px',
+             backgroundColor: '#24292e',
+             color: '#fff',
+             padding: '10px 20px',
+             border: 'none',
+             borderRadius: '5px',
+             cursor: 'pointer',
+             textDecoration: 'none'
+           }}
+         >Open Training Dir</button></div>
+                <div><button  style={{
+             marginTop: '20px',
+             backgroundColor: '#24292e',
+             color: '#fff',
+             padding: '10px 20px',
+             border: 'none',
+             borderRadius: '5px',
+             cursor: 'pointer',
+             textDecoration: 'none'
+           }}
+         >Download Dir</button></div>
+                    <FileDownloader/>
+
                 <h3 style={{ color: 'white' }}>Input Training Data Preview</h3>
                 <div
                   style={{
@@ -410,12 +473,34 @@ const ServiceDetails = ({
                     marginTop: '10px'
                   }}
                 >
-                <FileDownloader/>
              
                 </div>
               </div>
               <div  style={{ transform: 'scale(0.89)',
   transformOrigin: 'top',}}>
+
+                <div><button style={{
+             marginTop: '20px',
+             backgroundColor: '#24292e',
+             color: '#fff',
+             padding: '10px 20px',
+             border: 'none',
+             borderRadius: '5px',
+             cursor: 'pointer',
+             textDecoration: 'none'
+           }}>Open Training Dir</button></div>
+                <div><button style={{
+             marginTop: '20px',
+             backgroundColor: '#24292e',
+             color: '#fff',
+             padding: '10px 20px',
+             border: 'none',
+             borderRadius: '5px',
+             cursor: 'pointer',
+             textDecoration: 'none'
+           }}>Download Dir</button></div>
+                    <FileDownloader/>
+
                 <h3 style={{ color: 'white',  }}>Output Training Data Preview</h3>
                 <div
                   style={{
@@ -440,12 +525,11 @@ const ServiceDetails = ({
                     marginTop: '10px'
                   }}
                 >
-                <FileDownloader/>
              
                 </div>
               </div>
               </div>
-
+              <ModelTester/>
             </div>
           )}
           

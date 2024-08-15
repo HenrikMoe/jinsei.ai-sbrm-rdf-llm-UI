@@ -43,7 +43,7 @@ const ServicesTable = () => {
     <div>
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', alignItems: 'center', padding: '10px', gap: '10px', transform: 'scale(0.85)',
     transformOrigin: 'top left',     width: '114%', }} >
-    <h3 style={{ color: 'white', margin: '0' }}>Your Jinsei.ai Services</h3>
+    <h3 style={{ color: 'white', margin: '0' }}>Your Services</h3>
     <button style={{ color: 'black', padding: '10px', margin: '0' }}>Create New Service</button>
     <SearchBar style={{ padding: '10px', margin: '0', gridColumn: 'span 1' }} />
     <button onClick={() => openModal(<IAM />)} style={{ color: 'black', padding: '10px', margin: '0' }}>Iam</button>

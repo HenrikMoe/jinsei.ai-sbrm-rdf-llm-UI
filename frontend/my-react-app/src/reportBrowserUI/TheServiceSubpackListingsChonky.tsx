@@ -266,18 +266,39 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
         setModalContent(null);
     };
 
+
+//     <button
+//     style={{
+//         marginTop: '10px',
+//         backgroundColor: '#24292e',
+//         color: '#fff',
+//         padding: '10px 20px',
+//         border: 'none',
+//         borderRadius: '5px',
+//         cursor: 'pointer',
+//         textDecoration: 'none'
+//       }}
+//     onClick={resetFileMap}
+// >
+//     Reset file map
+// </button>
     return (
         <div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', transform: 'scale(0.85)',
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr ', transform: 'scale(0.85)',
     transformOrigin: 'top left',     width: '116%', }}>
-                <button style={{margin: '5px', }}onClick={() => openModal(<APIUI />)}>Add Jinsei.ai Transformers</button>
-                <h3 style={{ color: 'white',marginTop: '10px',marginLeft: '15px' }}>All Packs</h3>
-                <button
-                    style={{ marginBottom: '0px', margin: '5px' }}
-                    onClick={resetFileMap}
-                >
-                    Reset file map
-                </button>
+                        <h3 style={{ color: 'white',marginTop: '10px',marginLeft: '15px' }}>All Packages</h3>
+
+                <button style={{
+             marginTop: '0px',
+             backgroundColor: '#24292e',
+             color: '#fff',
+             padding: '10px 20px',
+             border: 'none',
+             borderRadius: '5px',
+             cursor: 'pointer',
+             textDecoration: 'none'
+           }} onClick={() => openModal(<APIUI />)}> Jinsei.ai APIs</button>
+              
             </div>
 
             <div style={{ height: '400px', marginTop: '10px', transform: 'scale(0.82)',
