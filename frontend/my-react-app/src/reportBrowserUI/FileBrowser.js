@@ -15,7 +15,7 @@ import Modal from 'react-modal';
 import APIUI from '../APIUIComponents/APIUIParent.js';
 import Spinner from '../Spinner.js'; // Import the Spinner component
 import ButtonGroup from './ServiceActions.js'
-
+import Flow from './Flow.js'
 import {
   MainContainer,
   ChatContainer,
@@ -143,7 +143,7 @@ const FileBrowserPage = (listLoginInfo) => {
           padding: '10px',
           borderRadius: '5px',
 
-          overflow: 'auto',
+          overflow: 'hidden',
           gridArea: 'right-top'
         }}
       >
@@ -201,12 +201,11 @@ const FileBrowserPage = (listLoginInfo) => {
                         marginBottom: '10px'
                       }}>Reports Generated</button>
         </div>
-
+        {/* <Flow/> */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr',
-            gridTemplateRows: '1fr 1fr',
+            gridTemplateColumns: ' 1fr 1fr 1fr',
             marginLeft: '10px',
             transform: 'scale(0.77)',
             transformOrigin: 'top left',

@@ -214,8 +214,9 @@ const styles = {
     background: '#24292e',
     color: 'white',
     border: 'none',
+    marginTop: '-20px',
+
     borderRadius: '5px',
-    marginTop: '-60px',
     padding: '10px',
     cursor: 'pointer',
     marginBottom: '5px', // Adding margin to separate the buttons

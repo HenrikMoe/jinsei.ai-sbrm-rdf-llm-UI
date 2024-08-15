@@ -214,7 +214,7 @@ const styles = {
     background: '#24292e',
     color: 'white',
     border: 'none',
-    marginTop: '-60px',
+    marginTop: '-20px',
 
     borderRadius: '5px',
     padding: '10px',

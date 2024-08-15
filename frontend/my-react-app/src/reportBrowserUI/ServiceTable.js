@@ -116,10 +116,11 @@ const styles = {
   tableContainer: {
     width: '110%',
     margin: '20px auto',
-    border: '1px solid #ddd',
+    marginTop: '-5px',
     borderRadius: '8px',
     marginLeft: '15px',
-    overflow: 'hidden',
+    height: '100px',
+    overflow: 'auto',
   },
   tableHeader: {
     display: 'flex',

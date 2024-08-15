@@ -212,7 +212,7 @@ const styles = {
     color: 'white',
     border: 'none',
     borderRadius: '5px',
-    marginTop: '-60px',
+    marginTop: '-20px',
     padding: '10px',
     cursor: 'pointer',
     marginBottom: '5px', // Adding margin to separate the buttons
