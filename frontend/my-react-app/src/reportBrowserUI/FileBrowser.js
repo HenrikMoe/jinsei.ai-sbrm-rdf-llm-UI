@@ -114,8 +114,9 @@ const FileBrowserPage = (listLoginInfo) => {
         gridTemplateRows: '1fr 2fr', // Right side is split into two equal rows
         height: 'calc(100vh - 150px)', // Full viewport height minus 100px
         gap: '10px',
+        
         marginTop: '100px',
-        borderRadius: '5px',
+        borderRadius: '10px',
         padding: '10px',
         gridTemplateAreas: `
           "left right-top"
@@ -126,8 +127,8 @@ const FileBrowserPage = (listLoginInfo) => {
       <div
         className="service-subpack-chonk"
         style={{
-          border: '1px solid #ccc',
-          padding: '10px',
+          borderBottom: '2px solid #ddd',
+          borderRight: '2px solid #ddd',          padding: '10px',
           borderRadius: '5px',
           overflow: 'auto',
           gridArea: 'left'
@@ -139,8 +140,8 @@ const FileBrowserPage = (listLoginInfo) => {
       <div
         className="service-table"
         style={{
-          border: '1px solid #ccc',
-          padding: '10px',
+          borderBottom: '2px solid #ddd',
+          borderRight: '2px solid #ddd',          padding: '10px',
           borderRadius: '5px',
 
           overflow: 'hidden',
@@ -154,8 +155,10 @@ const FileBrowserPage = (listLoginInfo) => {
       <div
         className="right-side-content"
         style={{
-          border: '1px solid #ccc',
-          padding: '10px',
+          borderBottom: '2px solid #ddd',
+          borderLeft: '2px solid #ddd',
+
+          borderRight: '2px solid #ddd',          padding: '10px',
           overflow: 'auto',
            gridArea: 'right-bottom',
            borderRadius: '5px',

@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import Spinner from '../Spinner.js';
+import Select from 'react-select'; // Import react-select
 
 Modal.setAppElement('#root');
+
+const options = [
+  { value: 'xGrokSemantic', label: 'xGrok Semantic' },
+  { value: 'tensorflowPrediction', label: 'TensorFlow Prediction' }
+];
 
 const MyComponent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [spinnerActive, setSpinnerActive] = useState(false);
-  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
   const [grids, setGrids] = useState([]); // State to hold multiple grids
   const [performanceMetrics, setPerformanceMetrics] = useState([]); // State for performance metrics
 
@@ -44,7 +50,6 @@ const MyComponent = () => {
     const metrics = await mockTrainModel();
     setPerformanceMetrics([...performanceMetrics, metrics]);
     setSpinnerActive(false);
-    setDropdownVisible(true);
     setGrids([...grids, true]); // Add a new grid to the list
   };
 
@@ -54,70 +59,88 @@ const MyComponent = () => {
 
   return (
     <div style={styles.container}>
-    
       <div>
-        <p>TensorFlow Prediction Model Tuning:</p>
+        <Select
+          options={options}
+          value={selectedOption}
+          onChange={setSelectedOption}
+          placeholder="Select Model"
+          styles={selectStyles}
+        />
       </div>
-      <div style={styles.gridContainer}>
-        <div style={styles.gridItem}>Learning Rate</div>
-        <div style={styles.gridItem}>
-          <input
-            style={styles.input}
-            placeholder="Enter learning rate"
-            value={learningRate}
-            onChange={handleModelParameterChange(setLearningRate)}
-          />
+
+      {selectedOption && selectedOption.value === 'tensorflowPrediction' && (
+        <div>
+          <p>TensorFlow Prediction Model Tuning:</p>
+          <div style={styles.gridContainer}>
+            <div style={styles.gridItem}>Learning Rate</div>
+            <div style={styles.gridItem}>
+              <input
+                style={styles.input}
+                placeholder="Enter learning rate"
+                value={learningRate}
+                onChange={handleModelParameterChange(setLearningRate)}
+              />
+            </div>
+            <div style={styles.gridItem}>Batch Size</div>
+            <div style={styles.gridItem}>
+              <input
+                style={styles.input}
+                placeholder="Enter batch size"
+                value={batchSize}
+                onChange={handleModelParameterChange(setBatchSize)}
+              />
+            </div>
+            <div style={styles.gridItem}>Epochs</div>
+            <div style={styles.gridItem}>
+              <input
+                style={styles.input}
+                placeholder="Enter number of epochs"
+                value={epochs}
+                onChange={handleModelParameterChange(setEpochs)}
+              />
+            </div>
+            <div style={styles.gridItem}>Validation Split</div>
+            <div style={styles.gridItem}>
+              <input
+                style={styles.input}
+                placeholder="Enter validation split"
+                value={validationSplit}
+                onChange={handleModelParameterChange(setValidationSplit)}
+              />
+            </div>
+          </div>
+          <div>
+            {!spinnerActive && (
+              <button style={styles.button} onClick={handleCreateClick}>
+                Create AI
+              </button>
+            )}
+            {spinnerActive && <Spinner />}
+          </div>
+          {grids.map((_, index) => (
+            <div key={index} style={styles.dropdownContainer}>
+              {performanceMetrics.length > index ? (
+                <>
+                  <div style={styles.dropdownItem}>Accuracy: {performanceMetrics[index].accuracy}</div>
+                  <div style={styles.dropdownItem}>Loss: {performanceMetrics[index].loss}</div>
+                  <div style={styles.dropdownItem}>Val Accuracy: {performanceMetrics[index].valAccuracy}</div>
+                  <div style={styles.dropdownItem}>Val Loss: {performanceMetrics[index].valLoss}</div>
+                </>
+              ) : (
+                <div style={styles.dropdownItem}>Loading...</div>
+              )}
+            </div>
+          ))}
         </div>
-        <div style={styles.gridItem}>Batch Size</div>
-        <div style={styles.gridItem}>
-          <input
-            style={styles.input}
-            placeholder="Enter batch size"
-            value={batchSize}
-            onChange={handleModelParameterChange(setBatchSize)}
-          />
+      )}
+
+      {selectedOption && selectedOption.value === 'xGrokSemantic' && (
+        <div>
+          <p>xGrok Semantic Model Configuration:</p>
+          {/* Add any specific fields or components related to xGrok Semantic here */}
         </div>
-        <div style={styles.gridItem}>Epochs</div>
-        <div style={styles.gridItem}>
-          <input
-            style={styles.input}
-            placeholder="Enter number of epochs"
-            value={epochs}
-            onChange={handleModelParameterChange(setEpochs)}
-          />
-        </div>
-        <div style={styles.gridItem}>Validation Split</div>
-        <div style={styles.gridItem}>
-          <input
-            style={styles.input}
-            placeholder="Enter validation split"
-            value={validationSplit}
-            onChange={handleModelParameterChange(setValidationSplit)}
-          />
-        </div>
-      </div>
-      <div>
-        {!spinnerActive && (
-          <button style={styles.button} onClick={handleCreateClick}>
-            Create AI
-          </button>
-        )}
-        {spinnerActive && <Spinner />}
-      </div>
-      {grids.map((_, index) => (
-        <div key={index} style={styles.dropdownContainer}>
-          {performanceMetrics.length > index ? (
-            <>
-              <div style={styles.dropdownItem}>Accuracy: {performanceMetrics[index].accuracy}</div>
-              <div style={styles.dropdownItem}>Loss: {performanceMetrics[index].loss}</div>
-              <div style={styles.dropdownItem}>Val Accuracy: {performanceMetrics[index].valAccuracy}</div>
-              <div style={styles.dropdownItem}>Val Loss: {performanceMetrics[index].valLoss}</div>
-            </>
-          ) : (
-            <div style={styles.dropdownItem}>Loading...</div>
-          )}
-        </div>
-      ))}
+      )}
 
       <Modal
         isOpen={isModalOpen}
@@ -141,6 +164,8 @@ const styles = {
     backgroundColor: '#1e1e1e',
     color: '#fff',
     borderRadius: '10px',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd', 
     width: '60%',
     margin: '0 auto',
   },
@@ -164,7 +189,8 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    border: '1px solid #444',
+    borderBottom: '2px solid #ddd',
+    borderRight: '2px solid #ddd',     
     padding: '10px',
     borderRadius: '5px',
     backgroundColor: '#333',
@@ -174,7 +200,8 @@ const styles = {
     width: '100%',
     padding: '5px',
     borderRadius: '5px',
-    border: '1px solid #444',
+    borderBottom: '2px solid #ddd',
+    borderRight: '2px solid #ddd',     
     backgroundColor: '#555',
     color: '#fff'
   },
@@ -196,6 +223,29 @@ const styles = {
     color: '#fff',
     borderRadius: '5px',
   },
+};
+
+const selectStyles = {
+  control: (provided) => ({
+    ...provided,
+    backgroundColor: '#333',
+    border: '1px solid #444',
+    color: '#fff',
+    borderRadius: '5px',
+  }),
+  menu: (provided) => ({
+    ...provided,
+    backgroundColor: '#333',
+  }),
+  option: (provided, state) => ({
+    ...provided,
+    backgroundColor: state.isSelected ? '#555' : '#333',
+    color: '#fff',
+  }),
+  singleValue: (provided) => ({
+    ...provided,
+    color: '#fff',
+  }),
 };
 
 const modalStyles = {

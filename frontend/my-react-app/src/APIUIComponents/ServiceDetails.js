@@ -461,7 +461,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
     padding: '10px',
     textAlign: 'center'
   }}>
-    Issues: 8
+    Notes: 8
   </div>
   <div style={{
     color: 'white',
@@ -481,7 +481,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
     padding: '10px',
     textAlign: 'center'
   }}>
-    Performance
+    Type: TensorFlow
   </div>
   <div style={{
     color: 'black',
@@ -707,7 +707,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
           <div style={{ display: 'grid',                borderRadius: '5px',
  gridTemplateColumns: '1fr', gap: '20px', alignText: 'left',
     borderBottom: '1px solid #ddd',
-    borderRight: '1px solid #ddd', }}>
+    }}>
             <div
               style={{
                 color: 'tan',
@@ -722,6 +722,21 @@ marginLeft: '-1000px',          textDecoration: 'none'
               onClick={() => onSubServiceLevel1Click('sheettransformer')}
             >
               <h3 style={{ color: 'white', }}>Sequential LLM Services</h3>
+            </div>
+            <div
+              style={{
+                color: 'tan',
+                alignText: 'left',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',
+                padding: '20px',
+                borderRadius: '5px',
+                cursor: 'pointer',
+                marginTop: '10px'
+              }}
+              onClick={() => onSubServiceLevel1Click('sheettransformer')}
+            >
+              <h3 style={{ color: 'white', }}>Asynchronous LLM Services</h3>
             </div>
            
           </div>
