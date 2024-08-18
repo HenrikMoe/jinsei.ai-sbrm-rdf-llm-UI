@@ -184,7 +184,6 @@ marginLeft: '-1000px',          textDecoration: 'none'
           backgroundColor: '#24292e',
           color: '#fff',          margin: '5px auto',
           marginBottom: '10px',
-
           padding: '10px 20px',
           border: 'none',
           borderRadius: '5px',
@@ -306,7 +305,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
                
          
               </div>
-              <h3 style={{color: 'white',}}>Select, Tune, and Test Model:</h3>
+              <h3 style={{color: 'white',          textAlign: 'left',
+}}>Select, Tune, and Test Model:</h3>
 
               <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr', gap: '20px' }}>
 
@@ -314,6 +314,11 @@ marginLeft: '-1000px',          textDecoration: 'none'
              
                   <PerformanceTuning />
                   <ModelTester/>
+</div>
+                  <h3 style={{color: 'white',          textAlign: 'left',
+}}>Save and Publish:</h3>
+              <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr', gap: '20px' }}>
+
                   <button style={{width: '200px', padding: '10px', marginLeft: '170px'}}>IAM Config</button>
 
                   <button style={{width: '200px', padding: '10px', marginLeft: '170px'}}>Save Transformer</button>
