@@ -417,6 +417,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
 
 
             </div>
+            <ModelTester/>
+
             <p style={{ color: 'white' }}>Details</p>
 
            
@@ -585,18 +587,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
                   <FileViewerHim />
              
                 </div>
-                <div
-                  style={{
-                    color: 'tan',
-                    border: '1px solid #ccc',
-                    padding: '20px',
-                    borderRadius: '8px',
-                    cursor: 'pointer',
-                    marginTop: '10px'
-                  }}
-                >
              
-                </div>
               </div>
               <div  style={{ transform: 'scale(0.89)',
   transformOrigin: 'top',}}>
@@ -637,21 +628,9 @@ marginLeft: '-1000px',          textDecoration: 'none'
                   <FileViewerHim />
              
                 </div>
-                <div
-                  style={{
-                    color: 'tan',
-                    border: '1px solid #ccc',
-                    padding: '20px',
-                    borderRadius: '8px',
-                    cursor: 'pointer',
-                    marginTop: '10px'
-                  }}
-                >
-             
-                </div>
+                
               </div>
               </div>
-              <ModelTester/>
             </div>
           )}
           

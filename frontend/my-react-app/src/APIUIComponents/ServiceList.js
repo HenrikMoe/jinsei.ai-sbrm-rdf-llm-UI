@@ -78,7 +78,7 @@ const ServiceList = ({ SyntaxServices, AuthorityServices, onServiceClick }) => {
         </div>
         <div>
           <button style={buttonStyle} onClick={() => setShowUtility(!showUtility)}>
-            Utility Tranformers
+            Utility Miscellaneous
           </button>
           {showUtility && (
             <div>
