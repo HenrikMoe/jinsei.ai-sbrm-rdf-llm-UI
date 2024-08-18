@@ -70,7 +70,7 @@ const RunnerApp = () => {
             <p>Runner Process Time</p>
           </div>
           <div style={styles.gridItem}>
-            <p>lightspeed bro, maybe iam here?</p>
+            <p>iam</p>
           </div>
         </div>
       )}
@@ -84,11 +84,13 @@ const styles = {
     gridTemplateColumns: '1fr 1fr',
     gap: '10px',
     backgroundColor: '#24292e',
+    transform: 'scale(0.78)',
+    transformOrigin: 'top',
     padding: '20px',
     borderRadius: '8px',
   },
   gridItem: {
-    border: '1px solid #ccc',
+    borderBottom: '1px solid #ccc',
     padding: '10px',
     textAlign: 'center',
     overflow: 'hidden',
@@ -97,7 +99,9 @@ const styles = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
     gap: '10px',
-    marginTop: '20px',
+    transform: 'scale(0.78)',
+    transformOrigin: 'top',
+    marginTop: '0px',
     backgroundColor: '#333',
     padding: '20px',
     borderRadius: '8px',

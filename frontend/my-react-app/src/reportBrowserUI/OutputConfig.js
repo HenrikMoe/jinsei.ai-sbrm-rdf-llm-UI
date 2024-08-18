@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Spinner from '../Spinner.js';
-
+import Runner from './RunnerApp.js'
 // Define arrays of dummy values
 const dummyValues = [
   'File URI:', 'https://jinsei.ai/asdfjjfdbsbajs', 'call at:',
@@ -45,7 +45,7 @@ const RandomGrid = () => {
 
   return (
     <div>
-      <h3>Output Config</h3>
+      <h3 style={{    textAlign: 'left',}}>Output Config</h3>
       <div style={styles.gridContainer}>
         {gridItems.map((value, index) => (
           <div key={index} style={styles.gridItem}>
@@ -58,53 +58,9 @@ const RandomGrid = () => {
           </div>
         ))}
       </div>
+      <h3 style={{    textAlign: 'left',}}>Runner App</h3>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', backgroundColor: '#24292e', padding: '20px', borderRadius: '8px', marginTop: '20px', color: 'white' }}>
-        <div>
-          <p>Add File Runner</p>
-        </div>
-        <div>
-          <input style={{marginTop: '20px', height: '25px', width: '25px'}} type="checkbox" id="showDetails" onChange={handleCheckboxChange} />
-        </div>
-      </div>
-
-      {showDetails && (
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginTop: '20px', backgroundColor: '#333', padding: '20px', borderRadius: '8px' }}>
-          <div style={{ border: '1px solid #ccc', padding: '20px' }}>
-            <p style={{ color: 'white',}}>Created Input Config Runner</p>
-          </div>
-          <div style={{ border: '1px solid #ccc', padding: '20px' }}>
-            <button style={{ marginTop: '5px', padding: '15px' }}>Download</button>
-          </div>
-          <div style={{ border: '1px solid #ccc', padding: '20px' }}>
-            <p style={{ color: 'white',}}>Test Installed Runner</p>
-          </div>
-          <div style={{ border: '1px solid #ccc', padding: '20px' }}>
-            {loading ? (
-              <Spinner />
-            ) : (
-              <button style={{ marginTop: '5px', padding: '15px' }} onClick={handleButtonClick}>Test Runner</button>
-            )}
-          </div>
-        </div>
-      )}
-
-      {showMoreDetails && (
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginTop: '20px', backgroundColor: '#333', padding: '20px', borderRadius: '8px' }}>
-          <div style={{ border: '1px solid #ccc', padding: '20px' }}>
-            <p style={{ color: 'white',}}>Additional Info 1</p>
-          </div>
-          <div style={{ border: '1px solid #ccc', padding: '20px' }}>
-            <p style={{ color: 'white',}}>Additional Info 2</p>
-          </div>
-          <div style={{ border: '1px solid #ccc', padding: '20px' }}>
-            <p style={{ color: 'white',}}>Additional Info 3</p>
-          </div>
-          <div style={{ border: '1px solid #ccc', padding: '20px' }}>
-            <p style={{ color: 'white',}}>Additional Info 4</p>
-          </div>
-        </div>
-      )}
+      <Runner/>
     </div>
   );
 };
@@ -114,13 +70,16 @@ const styles = {
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
     gridTemplateRows: 'repeat(8, auto)',
-    gap: '10px',
+    transform: 'scale(0.89)',
+    transformOrigin: 'top',
+    gap: '5px',
     padding: '10px',
   },
   gridItem: {
-    border: '1px solid #ccc',
+    borderBottom: '1px solid #ccc',
     padding: '10px',
-    textAlign: 'center',
+    textAlign: 'left',
+
     overflow: 'hidden',
   },
   input: {

@@ -50,7 +50,7 @@ const RandomGrid = () => {
 
   return (
     <div>
-      <h3>Input Config</h3>
+      <h3 style={{    textAlign: 'left',}}>Input Config</h3>
 
 
       <div style={styles.gridContainer}>
@@ -65,6 +65,9 @@ const RandomGrid = () => {
           </div>
         ))}
       </div>
+
+      <h3 style={{    textAlign: 'left',}}>Runner App</h3>
+
       <RunnerApp/>
 
     </div>
@@ -76,13 +79,16 @@ const styles = {
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
     gridTemplateRows: 'repeat(8, auto)',
+    transform: 'scale(0.89)',
+    transformOrigin: 'top',
     gap: '10px',
     padding: '10px',
   },
   gridItem: {
-    border: '1px solid #ccc',
+    borderBottom: '1px solid #ccc',
     padding: '10px',
-    textAlign: 'center',
+    textAlign: 'left',
+
     overflow: 'hidden',
   },
   input: {

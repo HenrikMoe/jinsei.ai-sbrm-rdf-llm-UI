@@ -94,8 +94,8 @@ const styles = {
     transformOrigin: 'top left',     width: '100%',
     // height: '100vh',
     padding: '10px',
-    border: '2px solid #ccc',
-    borderRadius: '10px',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',    borderRadius: '10px',
   },
   topGrid: {
     display: 'grid',
@@ -122,6 +122,10 @@ const styles = {
   cellTopLeft: {
     display: 'flex',
     alignItems: 'center',
+    alignText: 'left',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',
+    borderRadius: '5px',
     justifyContent: 'center',
     padding: '10px',
   },
@@ -135,7 +139,9 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    border: '1px solid #ddd',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',
+
     borderRadius: '5px',
     padding: '10px',
   },
@@ -145,8 +151,8 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    border: '1px solid #ddd',
-    borderRadius: '5px',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',    borderRadius: '5px',
     padding: '10px',
   },
   cellMiddleLeftBottom: {
@@ -154,8 +160,8 @@ const styles = {
     gridTemplateColumns: '1fr',
     alignItems: 'center',
     justifyContent: 'center',
-    border: '1px solid #ddd',
-    borderRadius: '5px',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',    borderRadius: '5px',
     padding: '10px',
     height: '50px'
   },
@@ -165,8 +171,8 @@ const styles = {
 
     alignItems: 'center',
     justifyContent: 'center',
-    border: '1px solid #ddd',
-    borderRadius: '5px',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',    borderRadius: '5px',
     padding: '10px',
     height: '50px'
 

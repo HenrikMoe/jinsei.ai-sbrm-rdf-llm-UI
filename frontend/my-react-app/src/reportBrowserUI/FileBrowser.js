@@ -169,9 +169,13 @@ const FileBrowserPage = (listLoginInfo) => {
             gridTemplateColumns: '1fr 1fr 1fr 1fr',
             marginLeft: '10px',
             transform: 'scale(0.79)',
+            borderRadius: '5px',
+            
             transformOrigin: 'top left',
             width: '122%',
             borderBottom: 'solid 1px grey',
+            borderRight: 'solid 1px grey',
+
             marginBottom: '10px'
           }}
         >
@@ -198,7 +202,8 @@ const FileBrowserPage = (listLoginInfo) => {
                         borderRadius: '5px',
                         cursor: 'pointer',
                         textDecoration: 'none',
-                        marginBottom: '10px'
+                        marginBottom: '10px',
+                        marginRight: '10px',
                       }}>Reports Generated</button>
         </div>
         {/* <Flow/> */}
