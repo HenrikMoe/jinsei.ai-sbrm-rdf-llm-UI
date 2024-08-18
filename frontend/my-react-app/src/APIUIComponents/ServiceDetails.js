@@ -216,8 +216,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
                 <div
                   style={{
                     color: 'tan',
-                    border: '1px solid #ccc',
-                    padding: '20px',
+                    borderBottom: '1px solid #ddd',
+                    borderRight: '1px solid #ddd',                     padding: '20px',
                     borderRadius: '8px',
                     cursor: 'pointer',
                     marginTop: '10px'
@@ -237,8 +237,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
                 <div
                   style={{
                     color: 'tan',
-                    border: '1px solid #ccc',
-                    padding: '20px',
+                    borderBottom: '1px solid #ddd',
+                    borderRight: '1px solid #ddd',                     padding: '20px',
                     borderRadius: '8px',
                     cursor: 'pointer',
                     marginTop: '10px'
@@ -256,8 +256,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
                 <div
                   style={{
                     color: 'tan',
-                    border: '1px solid #ccc',
-                    padding: '20px',
+                    borderBottom: '1px solid #ddd',
+                    borderRight: '1px solid #ddd',                     padding: '20px',
                     borderRadius: '8px',
                     cursor: 'pointer',
                     marginTop: '10px'
@@ -271,8 +271,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
                 <div
                   style={{
                     color: 'tan',
-                    border: '1px solid #ccc',
-                    padding: '20px',
+                    borderBottom: '1px solid #ddd',
+                    borderRight: '1px solid #ddd',                     padding: '20px',
                     borderRadius: '8px',
                     cursor: 'pointer',
                     marginTop: '10px'
@@ -332,7 +332,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
 
             
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: '20px', transform: 'scale(0.83)',
-    transformOrigin: 'top left',     width: '114%',
+    transformOrigin: 'top left',     width: '114%', borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd', borderRadius: '5px',
               
              }}>
              
@@ -345,6 +346,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
              color: '#fff',
              padding: '10px 20px',
              border: 'none',
+             marginBottom: '10px',
              borderRadius: '5px',
              cursor: 'pointer',
              textDecoration: 'none'
@@ -365,6 +367,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
               padding: '10px 20px',
               border: 'none',
               borderRadius: '5px',
+              marginBottom: '10px',
+
               cursor: 'pointer',
               textDecoration: 'none'
             }}
@@ -383,6 +387,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
               backgroundColor: '#24292e',
               color: '#fff',
               padding: '10px 20px',
+              marginBottom: '10px',
+
               border: 'none',
               borderRadius: '5px',
               cursor: 'pointer',
@@ -403,6 +409,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
               backgroundColor: '#24292e',
               color: '#fff',
               padding: '10px 20px',
+              marginBottom: '10px',
+
               border: 'none',
               borderRadius: '5px',
               cursor: 'pointer',
@@ -431,14 +439,15 @@ marginLeft: '-1000px',          textDecoration: 'none'
   padding: '20px',
   transform: 'scale(0.89)',
   transformOrigin: 'top',
-  border: '1px solid #ccc',
-  borderRadius: '8px',
+  borderBottom: '1px solid #ddd',
+  borderRight: '1px solid #ddd',   borderRadius: '8px',
   backgroundColor: '#333'
 }}>
   <div style={{
     color: 'white',
-    border: '1px solid #666',
-    borderRadius: '5px',
+    alignText: 'left',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',    borderRadius: '5px',
     padding: '10px',
     textAlign: 'center'
   }}>
@@ -446,8 +455,9 @@ marginLeft: '-1000px',          textDecoration: 'none'
   </div>
   <div style={{
     color: 'white',
-    border: '1px solid #666',
-    borderRadius: '5px',
+    alignText: 'left',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',    borderRadius: '5px',
     padding: '10px',
     textAlign: 'center'
   }}>
@@ -455,8 +465,9 @@ marginLeft: '-1000px',          textDecoration: 'none'
   </div>
   <div style={{
     color: 'white',
-    border: '1px solid #666',
-    borderRadius: '5px',
+    alignText: 'left',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',    borderRadius: '5px',
     padding: '10px',
     textAlign: 'center'
   }}>
@@ -464,8 +475,9 @@ marginLeft: '-1000px',          textDecoration: 'none'
   </div>
   <div style={{
     color: 'white',
-    border: '1px solid #666',
-    borderRadius: '5px',
+    alignText: 'left',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',    borderRadius: '5px',
     padding: '10px',
     textAlign: 'center'
   }}>
@@ -473,8 +485,9 @@ marginLeft: '-1000px',          textDecoration: 'none'
   </div>
   <div style={{
     color: 'black',
-    border: '1px solid #666',
-    borderRadius: '5px',
+    alignText: 'left',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',    borderRadius: '5px',
     padding: '10px',
     textAlign: 'center',
     backgroundColor: 'white',
@@ -483,8 +496,9 @@ marginLeft: '-1000px',          textDecoration: 'none'
   </div>
   <div style={{
     color: 'white',
-    border: '1px solid #666',
-    borderRadius: '5px',
+    alignText: 'left',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',    borderRadius: '5px',
     padding: '10px',
     textAlign: 'center'
   }}>
@@ -492,8 +506,9 @@ marginLeft: '-1000px',          textDecoration: 'none'
   </div>
   <div style={{
     color: 'white',
-    border: '1px solid #666',
-    borderRadius: '5px',
+    alignText: 'left',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',    borderRadius: '5px',
     padding: '10px',
     textAlign: 'center'
   }}>
@@ -501,8 +516,9 @@ marginLeft: '-1000px',          textDecoration: 'none'
   </div>
   <div style={{
     color: 'white',
-    border: '1px solid #666',
-    borderRadius: '5px',
+    alignText: 'left',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',    borderRadius: '5px',
     padding: '10px',
     textAlign: 'center'
   }}>
@@ -512,7 +528,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
 </div>
 
 <div style={{display: 'grid', gridTemplateColumns: ' 1fr 1fr 1fr',  transform: 'scale(0.89)',
-   border: 'solid 1px white', borderRadius: '5px'}}>
+  borderBottom: '1px solid #ddd',
+  borderRight: '1px solid #ddd',  borderRadius: '5px'}}>
     <div><h3 style={{color: 'white'}}>LLMs: </h3></div>
     <div>
     
@@ -577,8 +594,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
                 <div
                   style={{
                     color: 'tan',
-                    border: '1px solid #ccc',
-                    padding: '20px',
+                    borderBottom: '1px solid #ddd',
+                    borderRight: '1px solid #ddd',                     padding: '20px',
                     borderRadius: '8px',
                     cursor: 'pointer',
                     marginTop: '10px'
@@ -618,8 +635,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
                 <div
                   style={{
                     color: 'tan',
-                    border: '1px solid #ccc',
-                    padding: '20px',
+                    borderBottom: '1px solid #ddd',
+                    borderRight: '1px solid #ddd',                     padding: '20px',
                     borderRadius: '8px',
                     cursor: 'pointer',
                     marginTop: '10px'
@@ -664,8 +681,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
                 key={index}
                 style={{
                   color: 'tan',
-                  border: '1px solid #ccc',
-                  padding: '20px',
+                  borderBottom: '1px solid #ddd',
+                  borderRight: '1px solid #ddd',                  padding: '20px',
                   borderRadius: '8px',
                   cursor: 'pointer',
                   marginTop: '10px'
@@ -687,19 +704,24 @@ marginLeft: '-1000px',          textDecoration: 'none'
         <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: '100%' }}>
           <h2 style={{ color: 'white', }}>{selectedService.title}</h2>
           <p>{selectedService.description}</p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px' }}>
+          <div style={{ display: 'grid',                borderRadius: '5px',
+ gridTemplateColumns: '1fr', gap: '20px', alignText: 'left',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd', }}>
             <div
               style={{
                 color: 'tan',
-                border: '1px solid #ccc',
+                alignText: 'left',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',
                 padding: '20px',
-                borderRadius: '8px',
+                borderRadius: '5px',
                 cursor: 'pointer',
                 marginTop: '10px'
               }}
               onClick={() => onSubServiceLevel1Click('sheettransformer')}
             >
-              <h3 style={{ color: 'white' }}>Sequential LLM Services</h3>
+              <h3 style={{ color: 'white', }}>Sequential LLM Services</h3>
             </div>
            
           </div>

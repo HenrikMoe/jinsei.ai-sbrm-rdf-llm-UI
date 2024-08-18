@@ -77,12 +77,15 @@ const ModelTester = () => {
 const styles = {
   container: {
     padding: '20px', 
-  
     backgroundColor: '#1e1e1e',
     color: '#fff',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd', 
     borderRadius: '10px',
     width: '60%',
     margin: '0 auto',
+    marginTop: '10px',
+
   },
   gridContainer: {
     display: 'grid',

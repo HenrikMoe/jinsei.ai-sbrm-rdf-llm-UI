@@ -6,11 +6,13 @@ const ServiceList = ({ SyntaxServices, AuthorityServices, onServiceClick }) => {
   const [showUtility, setShowUtility] = useState(false);
 
   const commonItemStyle = {
-    border: '1px solid #ccc',
-    padding: '20px',
+    alignText: 'left',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',    padding: '20px',
     borderRadius: '8px',
     marginTop: '10px',
     color: 'white',
+  
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
