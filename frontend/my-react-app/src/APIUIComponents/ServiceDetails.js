@@ -1,16 +1,16 @@
 import React from 'react';
-import FileViewerHim from './FileViewer';
+import FileViewerHim from './FileViewer.js';
 import Spinner from '../Spinner.js'
 import FileUploader from './FileUploader.js'
 import FileDownloader from './FileDownloader.js'
-import PerformanceTuning from './PerformanceTuning..js'
+import PerformanceTuning from './PerformanceTuning.js'
 import ModelTester from './ModelTester.js'
 
 import {
   PE,
   Cap,
   CreateTransformer
-} from './Services'; // Import the services
+} from './Services.js'; // Import the services
 import SearchBar from './SearchBar.js';
 import Model from '../Model.js';
 
