@@ -166,6 +166,8 @@ const FileBrowserPage = (listLoginInfo) => {
           color: 'white',
         }}
       >
+                  <h3 style={{ color: 'white', padding: '10px' , textAlign: 'left', borderBottom: '1px solid white',borderRadius: '10px'}}> Service Management</h3>
+
         <div
           style={{
             display: 'grid',
@@ -220,8 +222,8 @@ const FileBrowserPage = (listLoginInfo) => {
           }}
         >
           <DragAndDrop />
-          <DragAndDrop2 />
-          <DragAndDrop3 />
+          {/* <DragAndDrop2 />
+          <DragAndDrop3 /> */}
         </div>
 
         <AuthenticationProvider>

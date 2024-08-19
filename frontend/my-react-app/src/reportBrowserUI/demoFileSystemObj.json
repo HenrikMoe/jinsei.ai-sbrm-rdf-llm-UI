@@ -3,7 +3,7 @@
     "fileMap": {
       "qwerty123456": {
         "id": "qwerty123456",
-        "name": "Transformers [T], Services [S], Reports [R]",
+        "name": "Reports [R], Services [S], Transformers [T]",
         "isDir": true,
         "childrenIds": [
           "e598a85f843c",
@@ -11,11 +11,41 @@
           "b6667221f24b",
           "002705459ca4",
           "a9fd7c8a04db",
-          "549c1f93247a"
+          "a9f17c8a04db",
+          "a9f27c8a04db",
+          "a9f37c8a04db",
+          "a9f47c8a04db",
+          "a9f57c8a04db",
+          "a9f67c8a04db",
+          "549c1f93247a",
+          "e518a85f843c"
         ],
         "childrenCount": 0
       },
       "e598a85f843c": {
+        "id": "e598a85f843c",
+        "name": "[T] K1 Report Package Deloitte to Deloitte SEC Filing Service, id: c17xcip",
+        "isDir": true,
+        "modDate": "2020-10-24T17:48:39.866Z",
+        "childrenIds": [
+          "9514a3d74d57",
+          "ed918037b975",
+          "c21e08daf308",
+          "0729af954fe6",
+          "a1361e98e01d",
+          "12dd195bb146",
+          "f9b3b8472664",
+          "998c5fed54dc",
+          "e6b2e6181d54",
+          "24c33e69f0f1",
+          "a3a6f4860f0a",
+          "b4344ec9eb06",
+          "0b05bc983fd9"
+        ],
+        "childrenCount": 13,
+        "parentId": "qwerty123456"
+      },
+      "e518a85f843c": {
         "id": "e598a85f843c",
         "name": "[T] K1 Report Package Deloitte to Deloitte SEC Filing Service, id: c17xcip",
         "isDir": true,
@@ -1311,7 +1341,73 @@
       },
       "a9fd7c8a04db": {
         "id": "a9fd7c8a04db",
-        "name": "[S] My Service 1",
+        "name": "[S] Full Filing Project",
+        "isDir": true,
+        "modDate": "2020-06-27T13:32:07.253Z",
+        "childrenIds": [
+          "e3bcade90390"
+        ],
+        "childrenCount": 1,
+        "parentId": "qwerty123456"
+      },
+      "a9f17c8a04db": {
+        "id": "a9f17c8a04db",
+        "name": "[R] Apr: K1-ABCo, Footnote",
+        "isDir": true,
+        "modDate": "2020-06-27T13:32:07.253Z",
+        "childrenIds": [
+          "e3bcade90390"
+        ],
+        "childrenCount": 1,
+        "parentId": "qwerty123456"
+      },
+      "a9f27c8a04db": {
+        "id": "a9f27c8a04db",
+        "name": "[R] May: K1-ABCo, Footnote",
+        "isDir": true,
+        "modDate": "2020-06-27T13:32:07.253Z",
+        "childrenIds": [
+          "e3bcade90390"
+        ],
+        "childrenCount": 1,
+        "parentId": "qwerty123456"
+      },
+      "a9f37c8a04db": {
+        "id": "a9f37c8a04db",
+        "name": "[R] Jun: K1-ABCo, Footnote",
+        "isDir": true,
+        "modDate": "2020-06-27T13:32:07.253Z",
+        "childrenIds": [
+          "e3bcade90390"
+        ],
+        "childrenCount": 1,
+        "parentId": "qwerty123456"
+      },
+      "a9f47c8a04db": {
+        "id": "a9f47c8a04db",
+        "name": "[S] K1 Footnote Project",
+        "isDir": true,
+        "modDate": "2020-06-27T13:32:07.253Z",
+        "childrenIds": [
+          "e3bcade90390"
+        ],
+        "childrenCount": 1,
+        "parentId": "qwerty123456"
+      },
+      "a9f57c8a04db": {
+        "id": "a9f57c8a04db",
+        "name": "[T] Footnote A Maker",
+        "isDir": true,
+        "modDate": "2020-06-27T13:32:07.253Z",
+        "childrenIds": [
+          "e3bcade90390"
+        ],
+        "childrenCount": 1,
+        "parentId": "qwerty123456"
+      },
+      "a9f67c8a04db": {
+        "id": "a9f67c8a04db",
+        "name": "[T] Footnote B Maker",
         "isDir": true,
         "modDate": "2020-06-27T13:32:07.253Z",
         "childrenIds": [
