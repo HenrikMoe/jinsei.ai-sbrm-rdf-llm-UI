@@ -55,7 +55,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
 
       {selectedSubServiceLevel2 ? (
         <div style={{ color: 'tan', marginTop: '0px', marginBottom: '150px', width: '100%' }}>
-          <h2 style={{ color: 'tan', textAlign: 'left' }}>{getTitle()}  </h2>
+          <div style={{ display:'grid', gridTemplateColumns:' 1fr 1fr '}}><h2 style={{ color: 'tan', textAlign: 'left' }}>{getTitle()}  </h2><h2 style={{ color: 'grey', textAlign: 'right', marginRight: '30px' }}>Jinsei.ai Transformer </h2></div>
+          
           <h2 style={{ color: 'white' }}> 
             
           {selectedSubServiceLevel2.title === 'create title here' ? (
@@ -400,7 +401,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
               textDecoration: 'none'
             }}
           >
-            Add To My Services
+            Added To My Services
           </button>
          
           </div>
@@ -456,7 +457,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
     padding: '10px',
     textAlign: 'center'
   }}>
-    Rank: 1st
+    Rank: [Private]
   </div>
   <div style={{
     color: 'white',
@@ -476,7 +477,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
     padding: '10px',
     textAlign: 'center'
   }}>
-    Contributors: 15
+    Contributors: 1
   </div>
   <div style={{
     color: 'white',
@@ -486,7 +487,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
     padding: '10px',
     textAlign: 'center'
   }}>
-    Type: TensorFlow
+    LLM Types: TensorFlow Pred, xGrok
   </div>
   <div style={{
     color: 'black',
@@ -565,6 +566,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
          </div>
 
 </div>
+<h3 style={{ color: 'white', textAlign:'left' }}>Training Data </h3>
 
 <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr',  transform: 'scale(0.89)',
   transformOrigin: 'top',}}>
@@ -636,7 +638,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
            }}>Download Dir</button></div>
                     <FileDownloader/>
 
-                <h3 style={{ color: 'white',  }}>Output Training Data Preview</h3>
+                <h3 style={{ color: 'white', textAlign:'left' }}>Output Training Data Preview</h3>
                 <div
                   style={{
                     color: 'tan',

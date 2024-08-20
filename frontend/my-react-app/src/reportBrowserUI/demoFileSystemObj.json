@@ -17,6 +17,9 @@
           "a9f47c8a04db",
           "a9f57c8a04db",
           "a9f67c8a04db",
+          "a9f77c8a04db",
+          "a9f87c8a04db",
+          "a9f97c8a04db",
           "549c1f93247a",
           "e518a85f843c"
         ],
@@ -1407,6 +1410,39 @@
       },
       "a9f67c8a04db": {
         "id": "a9f67c8a04db",
+        "name": "[T] Footnote B Maker",
+        "isDir": true,
+        "modDate": "2020-06-27T13:32:07.253Z",
+        "childrenIds": [
+          "e3bcade90390"
+        ],
+        "childrenCount": 1,
+        "parentId": "qwerty123456"
+      },
+      "a9f77c8a04db": {
+        "id": "a9f77c8a04db",
+        "name": "[T] Footnote B Maker",
+        "isDir": true,
+        "modDate": "2020-06-27T13:32:07.253Z",
+        "childrenIds": [
+          "e3bcade90390"
+        ],
+        "childrenCount": 1,
+        "parentId": "qwerty123456"
+      },
+      "a9f87c8a04db": {
+        "id": "a9f87c8a04db",
+        "name": "[T] Footnote B Maker",
+        "isDir": true,
+        "modDate": "2020-06-27T13:32:07.253Z",
+        "childrenIds": [
+          "e3bcade90390"
+        ],
+        "childrenCount": 1,
+        "parentId": "qwerty123456"
+      },
+      "a9f97c8a04db": {
+        "id": "a9f97c8a04db",
         "name": "[T] Footnote B Maker",
         "isDir": true,
         "modDate": "2020-06-27T13:32:07.253Z",

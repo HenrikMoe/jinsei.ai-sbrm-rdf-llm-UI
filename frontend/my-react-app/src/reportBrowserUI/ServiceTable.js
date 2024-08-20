@@ -67,7 +67,9 @@ const ServicesTable = () => {
             </div>
             <div style={styles.tableCell}>
               <button style={index === 1 ? styles.button2 : styles.button}>{index === 1 ? 'Viewing' : 'Open'}</button>
+              <button style={styles.button}>Share</button>
               <button style={styles.button}>Delete</button>
+
             </div>
           </div>
         ))}

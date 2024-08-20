@@ -301,7 +301,7 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
               
             </div>
 
-            <div style={{ height: '400px', marginTop: '10px', transform: 'scale(0.82)',
+            <div style={{ height: '500px', marginTop: '10px', transform: 'scale(0.82)',
     transformOrigin: 'top left',     width: '122%',  }}>
                 <FullFileBrowser
                     files={files}

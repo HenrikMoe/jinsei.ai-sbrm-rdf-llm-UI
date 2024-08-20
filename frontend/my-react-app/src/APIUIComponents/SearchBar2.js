@@ -8,7 +8,7 @@ const suggestions = [
   { name: 'Banana' },
   { name: 'Cherry' },
   { name: 'Date' },
-  { name: 'Fig' },
+  { name: 'K1 Footnote Project' },
   { name: 'Grape' },
   { name: 'Honeydew' },
 ];

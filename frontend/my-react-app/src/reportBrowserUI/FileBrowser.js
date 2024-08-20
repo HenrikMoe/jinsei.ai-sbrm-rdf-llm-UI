@@ -166,6 +166,9 @@ const FileBrowserPage = (listLoginInfo) => {
           color: 'white',
         }}
       >
+                  <h1 style={{ color: 'white', padding: '120px' ,textSize: '32px' ,textAlign: 'center', }}> Jinsei.ai</h1>
+
+
                   <h3 style={{ color: 'white', padding: '10px' , textAlign: 'left', borderBottom: '1px solid white',borderRadius: '10px'}}> Service Management</h3>
 
         <div
@@ -222,8 +225,8 @@ const FileBrowserPage = (listLoginInfo) => {
           }}
         >
           <DragAndDrop />
-          {/* <DragAndDrop2 />
-          <DragAndDrop3 /> */}
+          <DragAndDrop2 />
+          <DragAndDrop3 />
         </div>
 
         <AuthenticationProvider>
