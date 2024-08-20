@@ -84,7 +84,7 @@ export const SyntaxServices = [
     },
     {
       title: '[Private] Footnote B Maker',
-      description: "By Bob Smith, [Private]",
+      description: "Unrelated Business Income Tax Note By Bob Smith, [Private]",
       trainingData: 'EdgarPack Training Data: Sample training data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       intakeData: 'Intake Data: Sample intake data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
       performanceData: 'Performance Data: Sample performance data for XML/CSV/JSON Sequence-to-Sequence Sheets Transformer.',
