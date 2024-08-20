@@ -47,7 +47,7 @@ const JinseiAPIEndpoints = () => {
               Jinsei.ai API
             </h1>
             <h3 style={{ color: 'tan', marginLeft: isRowBased ? '50px' : '0', textAlign: 'center' }}>
-             Use the community or create your own Jinsei.ai transformers.
+             Use the community or create your own Jinsei.ai transformer.
             </h3>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <a href="https://github.com/HenrikMoe/BakerTilly-Jinsei.ai/tree/main" target="_blank" rel="noopener noreferrer">
