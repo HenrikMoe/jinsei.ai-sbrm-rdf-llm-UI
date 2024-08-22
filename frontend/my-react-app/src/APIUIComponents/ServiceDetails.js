@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FileViewerHim from './FileViewer.js';
 import Spinner from '../Spinner.js'
 import FileUploader from './FileUploader.js'
@@ -31,6 +31,18 @@ const ServiceDetails = ({
       return Cap;
     }
     return [];
+  };
+
+  const [spinnerActive, setSpinnerActive] = useState(false);
+  const [publishedActive, setPublishedActive] = useState(false);
+
+  
+  const delay1 = () => {
+    setSpinnerActive(true)
+    setTimeout(() => {
+      setSpinnerActive(false);
+    }, 2000);
+    setPublishedActive(true)
   };
 
   const getTitle = () => {
@@ -171,7 +183,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
 <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderBottom: '1px solid white', borderRadius: '5px'}}>
 <div>
 <button style={{
-          backgroundColor: 'forestgreen',
+          backgroundColor: '#24292e',
           color: '#fff',          margin: '5px auto',
           marginBottom: '10px',
 
@@ -196,7 +208,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
         </div>
         <div>
 <button style={{
-          backgroundColor: '#24292e',
+          backgroundColor: 'forestgreen',
           color: '#fff',          margin: '5px auto',
           marginBottom: '10px',
 
@@ -210,7 +222,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
         </div>
 
 
-        <h3 style={{ color: 'white', textAlign: 'left' }}>Training Data:</h3>
+        {/* <h3 style={{ color: 'white', textAlign: 'left' }}>Training Data:</h3>
 
             <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr', gap: '20px' }}>
               <div>
@@ -294,7 +306,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
           borderRadius: '5px',
           cursor: 'pointer',
           textDecoration: 'none'
-        }}>Save Training Data</button></div>
+        }}>Auto Saved</button></div>
                 <div><button style={{
           backgroundColor: '#24292e',
           color: '#fff',          margin: '5px auto',
@@ -308,8 +320,8 @@ marginLeft: '-1000px',          textDecoration: 'none'
 
                
          
-              </div>
-              
+              </div> */}
+{/*               
               <h3 style={{color: 'white',          textAlign: 'left',
 }}>Select, Tune, and Test Model:</h3>
 
@@ -319,17 +331,18 @@ marginLeft: '-1000px',          textDecoration: 'none'
              
                   <PerformanceTuning />
                   <ModelTester/>
-</div>
+</div> */}
                   <h3 style={{color: 'white',          textAlign: 'left',
 }}>Save and Publish:</h3>
               <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr', gap: '20px' }}>
 
-                  <button style={{width: '200px', padding: '10px', marginLeft: '170px'}}>IAM Config</button>
+                  <button style={{textAlign: 'left', width: '200px', padding: '10px', marginLeft: '10px'}}>IAM Config</button>
+                  <button style={{textAlign: 'left',width: '200px', padding: '10px', marginLeft: '10px'}}>Saved To Drafts</button>
+                  <button style={{textAlign: 'left',width: '200px', padding: '10px', marginLeft: '10px'}}>Add To My Packages </button>
+                  <button style={{textAlign: 'left',width: '200px', padding: '10px', marginLeft: '10px'}} >Silo Version History</button>
+                  {spinnerActive && <Spinner /> }
 
-                  <button style={{width: '200px', padding: '10px', marginLeft: '170px'}}>Save Transformer</button>
-                  <button style={{width: '200px', padding: '10px', marginLeft: '170px'}}>Add Transformer To Subservices </button>
-                  <button style={{width: '200px', padding: '10px', marginLeft: '170px'}} >Transformer Version History</button>
-                  <button style={{width: '200px', padding: '10px', marginLeft: '170px'}}>Share</button>
+                  {spinnerActive ? <div></div> : publishedActive ? <button style={{ textAlign: 'left',width: '200px', padding: '10px', marginLeft: '10px'}}>Published<div style={{color: 'blue'}}>[go to listing]</div> </button> : <button style={{textAlign: 'left',width: '200px', padding: '10px', marginLeft: '10px'}} onClick={delay1}>Publish</button>}
                   </div>
 
 

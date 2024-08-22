@@ -236,6 +236,8 @@ const styles = {
     display: 'grid',
     gridTemplateColumns: 'repeat(4, 1fr)',
     gap: '10px',
+    transform: 'scale(.8)',
+    transformOrigin: 'top left',
     marginBottom: '20px'
   },
   gridItem: {
