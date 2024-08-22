@@ -3,17 +3,31 @@
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   padding: 20px;
-  max-width: 1100px;
-  max-height: 400px;
+  max-width: 1400px;
+  max-height: 800px;
   overflow: auto;
   display: block;
   margin-top: 0px;
   border: 2px solid white;
-
-  margin-left: 470px;
+transform: scale(.8);
+transform-origin: top;
+  margin-left: 870px;
   border-radius: 10px;
   margin-bottom: -80px;
   transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+.reportTitle{
+  color: white;
+  margin-left: 800px;
+  font-size: 30px;
+  margin-top: -800px !important;
+  text-align: left;
+}
+
+.reportWrapper{
+  padding-left: 500px;
+  padding-right: 500px;
 }
 
 .balance-sheet:hover {

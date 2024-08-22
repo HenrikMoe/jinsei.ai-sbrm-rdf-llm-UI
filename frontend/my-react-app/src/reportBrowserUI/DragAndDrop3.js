@@ -28,7 +28,7 @@ const App = () => {
       {/* Top grid (1x2) */}
       <div style={styles.topGrid}>
         <div style={styles.cellTopLeft}>
-          <p style={styles.text}>Subservice C:</p>
+          <p style={styles.text}>Transformer C:</p>
         </div>
         <div style={styles.cellTopRight}>
           <button style={styles.closeButton} onClick={() => openModal('This is the X modal')}>

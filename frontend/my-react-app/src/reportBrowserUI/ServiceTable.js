@@ -55,18 +55,18 @@ const ServicesTable = () => {
             key={index}
             style={{
               ...styles.tableRow,
-              ...(index === 1 ? styles.highlightedRow : {}),
+              ...(index === 3 ? styles.highlightedRow : {}),
             }}
             onClick={() => console.log('Clicked row:', row)}
           >
-            <div style={index === 1 ? styles.highlightedCell : styles.tableCell2}>
+            <div style={index === 3 ? styles.highlightedCell : styles.tableCell2}>
               {row.name}
             </div>
-            <div style={index === 1 ? styles.highlightedCell : styles.tableCell2}>
+            <div style={index === 3 ? styles.highlightedCell : styles.tableCell2}>
               {row.description}
             </div>
             <div style={styles.tableCell}>
-              <button style={index === 1 ? styles.button2 : styles.button}>{index === 1 ? 'Viewing' : 'Open'}</button>
+              <button style={index === 3 ? styles.button2 : styles.button}>{index === 3 ? 'Viewing' : 'Open'}</button>
               <button style={styles.button}>Share</button>
               <button style={styles.button}>Delete</button>
 

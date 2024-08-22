@@ -46,10 +46,15 @@ const RandomGrid = () => {
 //foot ntoe transformer 
 //<h1 style={{fontSize: '40px', margin:'300px auto'}}>K1 Package to SEC Edgar</h1>
 //      <h1 style={{fontSize: '30px', margin:'300px auto'}}>Copyright 2024 Jinsei Corp. All Rights Reserved.</h1>
+//       <h1 style={{fontSize: '30px', margin:'300px auto'}}>Manage your services.</h1>
+//       <h1 style={{fontSize: '30px', margin:'300px auto'}}>Checkout a transformer.</h1>
 
 
   return (
     <div>
+       <h1 style={{fontSize: '30px', margin:'300px auto'}}>Control panel overview.</h1>
+
+
       <h3 style={{    textAlign: 'left',}}>Input Config</h3>
 
 

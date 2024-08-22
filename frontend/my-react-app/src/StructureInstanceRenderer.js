@@ -752,50 +752,15 @@ const handleImportTrue =()=>{
 
 return (
     <div className='structureInstanceWrap2'>
-  <div className="elementTitle5">Report Viewing and Editing </div>
+  {/* <div className="elementTitle5">Report Viewing and Editing </div> */}
   {exportStatus ? <Modal2 setExportFalse={setExportFalse} exportStatus={exportStatus}/> : <div></div>}
   {importStatus ? <ImportModal setImportFalse={setImportFalse} importStatus={importStatus}/> : <div></div>}
+  <div className='reportWrapper'>
 
-  <div className='reportWraper'>
   <XBRLComponentTaxonomy dataStore={dataStore} setStrucutreComponentItem={setStrucutreComponentItem} />
-  <div className='reportHeaderWrapper'>
-  <div
-    className='reportHeader'
-    onClick={() => handleIsRendering()}
-    style={{
-      color: isRendering ? '#556B2F' : 'white',
-      padding: '10px'
-    }}
-  >
-     Rendering
-  </div>
-  <div className='reportHeader'
-  onClick={()=>handleIsModel()}
-  style={{
-    color: isModel ? '#556B2F' : 'white',
-    padding: '10px'
-  }}>Model</div>
-  <div className='reportHeader' onClick={()=>handleIsFactTable()}
-  style={{
-    color: isFactTable ? '#556B2F' : 'white',
-    padding: '10px'
-  }}>Fact Table</div>
-  <div className='reportHeader' onClick={()=>handleIsRules()}
-  style={{
-    color: isRules ? '#556B2F' : 'white',
-    padding: '10px'
-  }}>Rules</div>
-  <div className='reportHeader' onClick={()=>handleIsVerification()}
-  style={{
-    color: isVerification ? '#556B2F' : 'white',
-    padding: '10px'
-  }}>Verification</div>
-  <div className='reportHeader' onClick={()=>handleIsReportElements()}
-  style={{
-    color: isReportElements ? '#556B2F' : 'white',
-    padding: '10px'
-  }}>Report Elements</div>
-  </div>
+  <div className='reportTitle'>Report Viewer</div>
+
+ 
 
   {isRendering ? <div>
     <div className='reportHeaderWrapper'>

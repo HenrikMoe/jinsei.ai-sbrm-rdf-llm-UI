@@ -244,7 +244,8 @@ transition: background-color 0.3s ease; /* Smooth transition on hover */
 .reportHeaderWrapper{
   display: flex;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 50px;
+  margin-left: 800px;
   justify-content: center; /* Horizontal centering */
 align-items: center; /* Vertical centering */
   margin-bottom: 20px;

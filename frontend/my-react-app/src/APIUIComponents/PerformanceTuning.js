@@ -59,6 +59,7 @@ const MyComponent = () => {
 
   return (
     <div style={styles.container}>
+      <h2 style={{textAlign: 'left', fontSize: '18px', color: 'white'}}>Select AI Model:</h2>
       <div>
         <Select
           options={options}
@@ -71,10 +72,10 @@ const MyComponent = () => {
 
       {selectedOption && selectedOption.value === 'tensorflowPrediction' && (
         <div>
-          <p>TensorFlow Prediction Model Tuning:</p>
+          <p>Model Tuning:</p>
           <div style={styles.gridContainer}>
             <div style={styles.gridItem}>Learning Rate</div>
-            <div style={styles.gridItem}>
+            <div style={styles.gridItem2}>
               <input
                 style={styles.input}
                 placeholder="Enter learning rate"
@@ -83,7 +84,7 @@ const MyComponent = () => {
               />
             </div>
             <div style={styles.gridItem}>Batch Size</div>
-            <div style={styles.gridItem}>
+            <div style={styles.gridItem2}>
               <input
                 style={styles.input}
                 placeholder="Enter batch size"
@@ -92,7 +93,7 @@ const MyComponent = () => {
               />
             </div>
             <div style={styles.gridItem}>Epochs</div>
-            <div style={styles.gridItem}>
+            <div style={styles.gridItem2}>
               <input
                 style={styles.input}
                 placeholder="Enter number of epochs"
@@ -101,7 +102,7 @@ const MyComponent = () => {
               />
             </div>
             <div style={styles.gridItem}>Validation Split</div>
-            <div style={styles.gridItem}>
+            <div style={styles.gridItem2}>
               <input
                 style={styles.input}
                 placeholder="Enter validation split"
@@ -189,19 +190,38 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    borderBottom: '2px solid #ddd',
-    borderRight: '2px solid #ddd',     
-    padding: '10px',
+    transform: 'scale(.8)',
+    transformOrigin: 'top left',
+    width: '110%',
+    borderBottom: '1px solid #ddd',
+    borderRight: '1px solid #ddd',     
+    padding: '3px',
+    borderRadius: '5px',
+    backgroundColor: '#333',
+    color: '#fff'
+  },
+  gridItem2: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    transform: 'scale(.7)',
+    transformOrigin: 'top left',
+    width: '80px',
+    borderBottom: '1px solid white',
+    borderRight: '1px solid white',     
+    paddingLeft: '5px',
+
     borderRadius: '5px',
     backgroundColor: '#333',
     color: '#fff'
   },
   input: {
     width: '100%',
-    padding: '5px',
+    paddingLeft: '5px',
+    height: '80%',
     borderRadius: '5px',
-    borderBottom: '2px solid #ddd',
-    borderRight: '2px solid #ddd',     
+    borderBottom: '.5px solid #ddd',
+    borderRight: '.5px solid #ddd',     
     backgroundColor: '#555',
     color: '#fff'
   },
