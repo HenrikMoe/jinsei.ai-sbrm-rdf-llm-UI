@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import Spinner from '../Spinner.js';
-import Select from 'react-select'; // Import react-select
+import Select from 'react-select';
 
 Modal.setAppElement('#root');
 
@@ -14,14 +14,20 @@ const MyComponent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [spinnerActive, setSpinnerActive] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
-  const [grids, setGrids] = useState([]); // State to hold multiple grids
-  const [performanceMetrics, setPerformanceMetrics] = useState([]); // State for performance metrics
+  const [grids, setGrids] = useState([]); 
+  const [performanceMetrics, setPerformanceMetrics] = useState([]);
 
-  // State for model parameters
+  // State for TensorFlow model parameters
   const [learningRate, setLearningRate] = useState('');
   const [batchSize, setBatchSize] = useState('');
   const [epochs, setEpochs] = useState('');
   const [validationSplit, setValidationSplit] = useState('');
+
+  // State for xGrok transformer parameters
+  const [xgrokLearningRate, setXgrokLearningRate] = useState('');
+  const [xgrokBatchSize, setXgrokBatchSize] = useState('');
+  const [xgrokEpochs, setXgrokEpochs] = useState('');
+  const [xgrokDropout, setXgrokDropout] = useState('');
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -32,7 +38,6 @@ const MyComponent = () => {
   };
 
   const mockTrainModel = () => {
-    // Simulate model training and return mock performance metrics
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve({
@@ -50,7 +55,7 @@ const MyComponent = () => {
     const metrics = await mockTrainModel();
     setPerformanceMetrics([...performanceMetrics, metrics]);
     setSpinnerActive(false);
-    setGrids([...grids, true]); // Add a new grid to the list
+    setGrids([...grids, true]);
   };
 
   const handleModelParameterChange = (setter) => (event) => {
@@ -59,7 +64,7 @@ const MyComponent = () => {
 
   return (
     <div style={styles.container}>
-      <h2 style={{textAlign: 'left', fontSize: '18px', color: 'white'}}>Select AI Model:</h2>
+      <h2 style={{ textAlign: 'left', fontSize: '18px', color: 'white' }}>Select AI Model:</h2>
       <div>
         <Select
           options={options}
@@ -74,6 +79,7 @@ const MyComponent = () => {
         <div>
           <p>Model Tuning:</p>
           <div style={styles.gridContainer}>
+            {/* TensorFlow model parameters */}
             <div style={styles.gridItem}>Learning Rate</div>
             <div style={styles.gridItem2}>
               <input
@@ -139,7 +145,53 @@ const MyComponent = () => {
       {selectedOption && selectedOption.value === 'xGrokSemantic' && (
         <div>
           <p>xGrok Semantic Model Configuration:</p>
-          {/* Add any specific fields or components related to xGrok Semantic here */}
+          <div style={styles.gridContainer}>
+            {/* xGrok transformer parameters */}
+            <div style={styles.gridItem}>Learning Rate</div>
+            <div style={styles.gridItem2}>
+              <input
+                style={styles.input}
+                placeholder="Enter learning rate"
+                value={xgrokLearningRate}
+                onChange={handleModelParameterChange(setXgrokLearningRate)}
+              />
+            </div>
+            <div style={styles.gridItem}>Batch Size</div>
+            <div style={styles.gridItem2}>
+              <input
+                style={styles.input}
+                placeholder="Enter batch size"
+                value={xgrokBatchSize}
+                onChange={handleModelParameterChange(setXgrokBatchSize)}
+              />
+            </div>
+            <div style={styles.gridItem}>Epochs</div>
+            <div style={styles.gridItem2}>
+              <input
+                style={styles.input}
+                placeholder="Enter number of epochs"
+                value={xgrokEpochs}
+                onChange={handleModelParameterChange(setXgrokEpochs)}
+              />
+            </div>
+            <div style={styles.gridItem}>Dropout Rate</div>
+            <div style={styles.gridItem2}>
+              <input
+                style={styles.input}
+                placeholder="Enter dropout rate"
+                value={xgrokDropout}
+                onChange={handleModelParameterChange(setXgrokDropout)}
+              />
+            </div>
+          </div>
+          <div>
+            {!spinnerActive && (
+              <button style={styles.button} onClick={handleCreateClick}>
+                Create AI
+              </button>
+            )}
+            {spinnerActive && <Spinner />}
+          </div>
         </div>
       )}
 
@@ -166,7 +218,7 @@ const styles = {
     color: '#fff',
     borderRadius: '10px',
     borderBottom: '1px solid #ddd',
-    borderRight: '1px solid #ddd', 
+    borderRight: '1px solid #ddd',
     width: '60%',
     margin: '0 auto',
   },
@@ -194,7 +246,7 @@ const styles = {
     transformOrigin: 'top left',
     width: '110%',
     borderBottom: '1px solid #ddd',
-    borderRight: '1px solid #ddd',     
+    borderRight: '1px solid #ddd',
     padding: '3px',
     borderRadius: '5px',
     backgroundColor: '#333',
@@ -208,9 +260,8 @@ const styles = {
     transformOrigin: 'top left',
     width: '80px',
     borderBottom: '1px solid white',
-    borderRight: '1px solid white',     
+    borderRight: '1px solid white',
     paddingLeft: '5px',
-
     borderRadius: '5px',
     backgroundColor: '#333',
     color: '#fff'
@@ -221,7 +272,7 @@ const styles = {
     height: '80%',
     borderRadius: '5px',
     borderBottom: '.5px solid #ddd',
-    borderRight: '.5px solid #ddd',     
+    borderRight: '.5px solid #ddd',
     backgroundColor: '#555',
     color: '#fff'
   },
