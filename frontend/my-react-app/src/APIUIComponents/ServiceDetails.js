@@ -3,6 +3,8 @@ import FileViewerHim from './FileViewer.js';
 import Spinner from '../Spinner.js'
 import FileUploader from './FileUploader.js'
 import FileDownloader from './FileDownloader.js'
+import FileDownloader3 from './FileDownloader3.js'
+
 import PerformanceTuning from './PerformanceTuning.js'
 import ModelTester from './ModelTester.js'
 
@@ -248,16 +250,16 @@ marginLeft: '-1000px',          textDecoration: 'none'
                   <FileUploader />
 
                 </div>
-                <FileDownloader />
+                <FileDownloader3 />
 
               </div>
               <div>
-                <h3 style={{ color: 'white' }}>Input Preview</h3>
+                <h3 style={{ color: 'white' }}>Input Training Preview</h3>
                 <div
                   style={{
                     color: 'tan',
                     borderBottom: '1px solid #ddd',
-                    borderRight: '1px solid #ddd',                     padding: '20px',
+                    borderRight: '1px solid #ddd',                     padding: '5px',
                     borderRadius: '8px',
                     cursor: 'pointer',
                     marginTop: '10px'
@@ -267,13 +269,14 @@ marginLeft: '-1000px',          textDecoration: 'none'
                 </div>
               </div>
               <div>
-                <h3 style={{ color: 'white' }}>Output Preview</h3>
+                <h3 style={{ color: 'white' }}>Output Training Preview</h3>
                 <div
                   style={{
                     color: 'tan',
                     borderBottom: '1px solid #ddd',
-                    borderRight: '1px solid #ddd',                     padding: '20px',
+                    borderRight: '1px solid #ddd',                     padding: '5px',
                     borderRadius: '8px',
+
                     cursor: 'pointer',
                     marginTop: '10px'
                   }}

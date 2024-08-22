@@ -18,7 +18,7 @@ function App() {
     margin: '0 auto',
     maxWidth: '500px',
     overflowX: 'auto', // Add horizontal scroll if content overflows
-    height: '700px',
+    height: '400px',
     overflowY: 'auto',
     transformOrigin: 'top', transform: 'scale(0.80)',
    
@@ -31,11 +31,10 @@ function App() {
     width: '100%',
     border: '1px solid black',
     color: 'black',
-    transform: 'scale(0.67)',
+    transform: 'scale(0.87)',
     transformOrigin: 'top',
-
     overflowX: 'auto',
-    height: '300px',
+    height: '240px',
     overflowY: 'auto',
   };
 

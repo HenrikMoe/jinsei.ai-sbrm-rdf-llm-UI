@@ -3,14 +3,14 @@ import { saveAs } from 'file-saver';
 import sampleFile from './favicon.png'; // Update this path to your actual file
 
 const dummyFiles = [
-  'K1-account-B-PreFootnote-Mar2023.xlsx',
-  'K1-account-B-PreFootnote-Apr2023.xlsx',
-  'K1-account-B-PreFootnote-May2023.xlsx',
-  'K1-account-B-PreFootnote-Jun2023.xlsx',
-  'K1-account-B-PreFootnote-Jul2023.xlsx',
-  'K1-account-B-PreFootnote-Aug2023.xlsx',
-  'K1-account-B-PreFootnote-Sep2023.xlsx',
-  'K1-account-B-PreFootnote-Oct2023.xlsx',
+    'K1-account-B-FINAL-Footnote-Mar2023.xlsx',
+    'K1-account-B-FINAL-Footnote-Apr2023.xlsx',
+  'K1-account-B-FINAL-Footnote-May2023.xlsx',
+  'K1-account-B-FINAL-Footnote-Jun2023.xlsx',
+  'K1-account-B-FINAL-Footnote-Jul2023.xlsx',
+  'K1-account-B-FINAL-Footnote-Aug2023.xlsx',
+  'K1-account-B-FINAL-Footnote-Sep2023.xlsx',
+  'K1-account-B-FINAL-Footnote-Aug2023.xlsx',
 
 
 ];
@@ -22,7 +22,7 @@ const FileDownloader = () => {
 
   return (
     <div style={styles.container}>
-      <h3 style={styles.header}>Initial State Training Files </h3>
+      <h3 style={styles.header}>Final State Training Files </h3>
       <div style={styles.fileGrid}>
         {dummyFiles.map((file, index) => (
           <div key={index} style={styles.fileItem}>
@@ -47,14 +47,13 @@ const styles = {
     alignItems: 'center',
     transform: 'scale(0.89)',
     transformOrigin: 'bottom',
-    height: '150px',
     padding: '20px',
     border: '1px solid #333',
     borderRadius: '10px',
     backgroundColor: '#1e1e1e',
     width: '80%',
+    height: '150px',
     overflowY: 'auto',
-
     margin: '0 auto',
     color: '#fff',
   },
