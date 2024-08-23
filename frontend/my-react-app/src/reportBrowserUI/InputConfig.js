@@ -1,80 +1,95 @@
 import React, { useState } from 'react';
 import RunnerApp from './RunnerApp';
-// Define arrays of dummy values
-const dummyValues = [
-  'File URI:', 'https://wellsfargo.com/asdfjjfdbsbajs', 'call at:',
-  '00:00 monthly', 'req type:', 'get', 'IAM:', 'Smith-John-CPA-PEVP-Deloitte', 'inspect transformer'
-];
 
-const RandomGrid = () => {
-  const rows = 8;
-  const columns = 2;
-  const totalCells = rows * columns;
+// Dummy placeholder values
+const placeholders = {
+  uri: 'https://example.com',
+  reqType: 'GET',
+  iam: 'User-Role',
+  callAt: '00:00 daily'
+};
 
-  // Create a state to manage grid items
-  const [gridItems, setGridItems] = useState(generateGridItems());
+const DynamicUriInputs = () => {
+  // State to manage inputs and their values
+  const [inputs, setInputs] = useState([
+    { uri: 'https://wellsfargo.com/asdfjjfdbsbajs', reqType: '', iam: '', callAt: '' } // Initial dummy values
+  ]);
 
-  function generateGridItems() {
-    // Extend dummyValues to match the required number of cells
-    return [...dummyValues.slice(0, totalCells)];
-  }
-
-  // Handle change in input field
-  const handleChange = (index, event) => {
-    const newValue = event.target.value;
-    setGridItems(prevItems =>
-      prevItems.map((item, i) => (i === index ? newValue : item))
-    );
+  // Function to handle changes in input fields
+  const handleInputChange = (index, field, value) => {
+    const newInputs = [...inputs];
+    newInputs[index][field] = value;
+    setInputs(newInputs);
   };
-  //       <h1 style={{fontSize: '120px', margin:'300px auto'}}>Jinsei.ai</h1>
-//       <h1 style={{fontSize: '40px', margin:'300px auto'}}>Creating a data transformer.</h1>
-//       <h1 style={{fontSize: '40px', margin:'300px auto'}}>Train and tune your ai models.</h1>
-      //  <h1 style={{fontSize: '40px', margin:'300px auto'}}>Test your model.</h1>
-  //  <h1 style={{fontSize: '40px', margin:'300px auto'}}>Up next: Add model to a service.</h1>
 
-      //  <h1 style={{fontSize: '40px', margin:'300px auto'}}>Share your model with other creators.</h1>
-//    <h1 style={{fontSize: '40px', margin:'300px auto'}}>Use queries or file runners.</h1>
-//    <h1 style={{fontSize: '40px', margin:'300px auto'}}>Test your configured transformer.</h1>
-//    <h1 style={{fontSize: '40px', margin:'300px auto'}}>View subprocess results.</h1>
-
-//<h1 style={{fontSize: '40px', margin:'300px auto'}}>Configure your transformer.</h1>
-//<h1 style={{fontSize: '40px', margin:'300px auto'}}>Setting up a transformer as a service.</h1>
-//<h1 style={{fontSize: '40px', margin:'300px auto'}}>Up next: Multi-transformer services.</h1>
-
-//      <h1 style={{fontSize: '40px', margin:'300px auto'}}>Using multiple transformers as a service.</h1>
-//      <h1 style={{fontSize: '40px', margin:'300px auto'}}>Transformer 1: Bank Statements to Entity Cashflows.</h1>
-//foot ntoe transformer 
-//<h1 style={{fontSize: '40px', margin:'300px auto'}}>K1 Package to SEC Edgar</h1>
-//      <h1 style={{fontSize: '30px', margin:'300px auto'}}>Copyright 2024 Jinsei Corp. All Rights Reserved.</h1>
-//       <h1 style={{fontSize: '30px', margin:'300px auto'}}>Manage your services.</h1>
-//       <h1 style={{fontSize: '30px', margin:'300px auto'}}>Checkout a transformer.</h1>
-
+  // Function to add a new input field group
+  const addInputField = () => {
+    setInputs([...inputs, { uri: '', reqType: '', iam: '', callAt: '' }]); // Add empty fields for a new entry
+  };
 
   return (
     <div>
-       <h1 style={{fontSize: '30px', margin:'300px auto'}}>Control panel overview.</h1>
+      <h1 style={{ fontSize: '30px', margin: '300px auto' }}>Control panel overview.</h1>
+      <h3 style={{ textAlign: 'left' }}>Input Config</h3>
 
-
-      <h3 style={{    textAlign: 'left',}}>Input Config</h3>
-
-
+      {/* URI Input Section */}
       <div style={styles.gridContainer}>
-        {gridItems.map((value, index) => (
+        {inputs.map((input, index) => (
           <div key={index} style={styles.gridItem}>
-            <input
-              type="text"
-              value={value}
-              onChange={(event) => handleChange(index, event)}
-              style={styles.input}
-            />
+            {/* URI Input */}
+            <div style={styles.inputWrapper}>
+              <div style={styles.label}>File URI:</div>
+              <input
+                type="text"
+                value={input.uri}
+                onChange={(e) => handleInputChange(index, 'uri', e.target.value)}
+                placeholder={placeholders.uri}
+                style={styles.input}
+              />
+            </div>
+            {/* Req Type Input */}
+            <div style={styles.inputWrapper}>
+              <div style={styles.label}>Request Type:</div>
+              <input
+                type="text"
+                value={input.reqType}
+                onChange={(e) => handleInputChange(index, 'reqType', e.target.value)}
+                placeholder={placeholders.reqType}
+                style={styles.input}
+              />
+            </div>
+            {/* IAM Input */}
+            <div style={styles.inputWrapper}>
+              <div style={styles.label}>IAM:</div>
+              <input
+                type="text"
+                value={input.iam}
+                onChange={(e) => handleInputChange(index, 'iam', e.target.value)}
+                placeholder={placeholders.iam}
+                style={styles.input}
+              />
+            </div>
+            {/* Call At Input */}
+            <div style={styles.inputWrapper}>
+              <div style={styles.label}>Call At:</div>
+              <input
+                type="text"
+                value={input.callAt}
+                onChange={(e) => handleInputChange(index, 'callAt', e.target.value)}
+                placeholder={placeholders.callAt}
+                style={styles.input}
+              />
+            </div>
           </div>
         ))}
       </div>
 
-      <h3 style={{    textAlign: 'left',}}>Runner App</h3>
+      <button onClick={addInputField} style={styles.addButton}>
+        + Add Input
+      </button>
 
-      <RunnerApp/>
-
+      <h3 style={{ textAlign: 'left' }}>Runner App</h3>
+      <RunnerApp />
     </div>
   );
 };
@@ -82,26 +97,42 @@ const RandomGrid = () => {
 const styles = {
   gridContainer: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(2, 1fr)',
-    gridTemplateRows: 'repeat(8, auto)',
-    transform: 'scale(0.89)',
-    transformOrigin: 'top',
-    gap: '10px',
+    gridTemplateColumns: '1fr', // Single column grid for each input group
+    gap: '20px',
     padding: '10px',
   },
   gridItem: {
     borderBottom: '1px solid #ccc',
-    padding: '10px',
+    paddingBottom: '10px',
+    marginBottom: '10px',
+  },
+  inputWrapper: {
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: '10px',
+  },
+  label: {
+    width: '150px',
+    fontWeight: 'bold',
+    marginRight: '10px',
     textAlign: 'left',
-
-    overflow: 'hidden',
   },
   input: {
-    width: '100%',
-    border: 'none',
-    padding: '5px',
+    width: 'calc(100% - 160px)', // Adjust width to fit label and input
+    border: '1px solid #ccc',
+    padding: '10px',
+    borderRadius: '4px',
     boxSizing: 'border-box',
+  },
+  addButton: {
+    marginTop: '10px',
+    padding: '10px 15px',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
   },
 };
 
-export default RandomGrid;
+export default DynamicUriInputs;

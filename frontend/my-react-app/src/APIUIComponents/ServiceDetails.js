@@ -183,7 +183,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
 <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderBottom: '1px solid white', borderRadius: '5px'}}>
 <div>
 <button style={{
-          backgroundColor: '#24292e',
+          backgroundColor: 'forestgreen',
           color: '#fff',          margin: '5px auto',
           marginBottom: '10px',
 
@@ -208,7 +208,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
         </div>
         <div>
 <button style={{
-          backgroundColor: 'forestgreen',
+          backgroundColor: '#24292e',
           color: '#fff',          margin: '5px auto',
           marginBottom: '10px',
 
@@ -222,7 +222,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
         </div>
 
 
-        {/* <h3 style={{ color: 'white', textAlign: 'left' }}>Training Data:</h3>
+        <h3 style={{ color: 'white', textAlign: 'left' }}>Training Data:</h3>
 
             <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr', gap: '20px' }}>
               <div>
@@ -320,7 +320,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
 
                
          
-              </div> */}
+              </div>
 {/*               
               <h3 style={{color: 'white',          textAlign: 'left',
 }}>Select, Tune, and Test Model:</h3>
@@ -332,7 +332,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
                   <PerformanceTuning />
                   <ModelTester/>
 </div> */}
-                  <h3 style={{color: 'white',          textAlign: 'left',
+                  {/* <h3 style={{color: 'white',          textAlign: 'left',
 }}>Save and Publish:</h3>
               <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr', gap: '20px' }}>
 
@@ -343,7 +343,7 @@ marginLeft: '-1000px',          textDecoration: 'none'
                   {spinnerActive && <Spinner /> }
 
                   {spinnerActive ? <div></div> : publishedActive ? <button style={{ textAlign: 'left',width: '200px', padding: '10px', marginLeft: '10px'}}>Published<div style={{color: 'blue'}}>[go to listing]</div> </button> : <button style={{textAlign: 'left',width: '200px', padding: '10px', marginLeft: '10px'}} onClick={delay1}>Publish</button>}
-                  </div>
+                  </div> */}
 
 
 
