@@ -1,6 +1,8 @@
+
 // Import statements
 import {
     ChonkyActions,
+    defineFileAction,
     ChonkyFileActionData,
     FileArray,
     FileBrowserProps,
@@ -189,6 +191,19 @@ export const useFolderChain = (
     }, [currentFolderId, fileMap]);
 };
 
+// Define custom action for "Add to Service"
+const CustomActions = {
+    AddToService: defineFileAction({
+        id: 'add_to_service',
+        button: {
+            name: 'Add to Service',
+            toolbar: true,
+            contextMenu: true,
+            icon: '<YourIcon>', // Replace <YourIcon> with a suitable icon if needed
+        },
+    }),
+};
+
 export const useFileActionHandler = (
     setCurrentFolderId: (folderId: string) => void,
     deleteFiles: (files: CustomFileData[]) => void,
@@ -215,6 +230,12 @@ export const useFileActionHandler = (
             } else if (data.id === ChonkyActions.CreateFolder.id) {
                 const folderName = prompt('Provide the name for your new folder:');
                 if (folderName) createFolder(folderName);
+            } else if (data.id === CustomActions.AddToService.id) {
+                // Your logic to handle "Add to Service" action
+                const selectedFiles = data.state.selectedFilesForAction!;
+                // Handle the selected files to add to service
+                console.log('Adding to service:', selectedFiles);
+                // Additional logic for "Add to Service"
             }
 
             console.log(data);
@@ -244,7 +265,7 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
         createFolder
     );
     const fileActions = useMemo(
-        () => [ChonkyActions.CreateFolder, ChonkyActions.DeleteFiles],
+        () => [CustomActions.AddToService, ChonkyActions.CreateFolder, ChonkyActions.DeleteFiles],
         []
     );
     const thumbnailGenerator = useCallback(
@@ -266,70 +287,57 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
         setModalContent(null);
     };
 
+    const [isServiceModalOpen, setIsServiceModalOpen] = useState(false);
+    const openServiceModal = () => setIsServiceModalOpen(true);
+    const closeServiceModal = () => setIsServiceModalOpen(false);
 
-//     <button
-//     style={{
-//         marginTop: '10px',
-//         backgroundColor: '#24292e',
-//         color: '#fff',
-//         padding: '10px 20px',
-//         border: 'none',
-//         borderRadius: '5px',
-//         cursor: 'pointer',
-//         textDecoration: 'none'
-//       }}
-//     onClick={resetFileMap}
-// >
-//     Reset file map
-// </button>
     return (
         <div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr ', transform: 'scale(0.85)',
-    transformOrigin: 'top left',     width: '116%', }}>
-                        <h3 style={{ color: 'white',marginTop: '10px',marginLeft: '15px' }}>All Packages</h3>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr ', transform: 'scale(0.85)',
+transformOrigin: 'top left',     width: '116%', }}>
+                    <h3 style={{ color: 'white',marginTop: '10px',marginLeft: '15px' }}>All Packages</h3>
 
-                <button style={{
-             marginTop: '0px',
-             backgroundColor: '#24292e',
-             color: '#fff',
-             padding: '10px 20px',
-             border: 'none',
-             borderRadius: '5px',
-             cursor: 'pointer',
-             textDecoration: 'none'
-           }} onClick={() => openModal(<APIUI />)}> Jinsei.ai APIs</button>
-              
-            </div>
-
-            <div style={{ height: '500px', marginTop: '10px', transform: 'scale(0.82)',
-    transformOrigin: 'top left',     width: '122%',  }}>
-                <FullFileBrowser
-                    files={files}
-                    folderChain={folderChain}
-                    fileActions={fileActions}
-                    onFileAction={handleFileAction}
-                    thumbnailGenerator={thumbnailGenerator}
-                    defaultFileViewActionId={ChonkyActions.EnableListView.id}
-                    {...props}
-                />
-            </div>
-            <Modal
-                isOpen={isModalOpen}
-                onRequestClose={closeModal}
-                contentLabel="Modal"
-                style={modalStyles}
-            >
-                <div style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
-                    {modalContent}
-                </div>
-                <button onClick={closeModal} style={styles.button}>
-                    Close API UI
-                </button>
-            </Modal>
+            <button style={{
+         marginTop: '0px',
+         backgroundColor: '#24292e',
+         color: '#fff',
+         padding: '10px 20px',
+         border: 'none',
+         borderRadius: '5px',
+         cursor: 'pointer',
+         textDecoration: 'none'
+       }} onClick={() => openModal(<APIUI />)}> Jinsei.ai APIs</button>
+          
         </div>
+
+        <div style={{ height: '500px', marginTop: '10px', transform: 'scale(0.82)',
+transformOrigin: 'top left',     width: '122%',  }}>
+           <FullFileBrowser
+                files={files}
+                folderChain={folderChain}
+                fileActions={fileActions}
+                onFileAction={handleFileAction}
+                thumbnailGenerator={thumbnailGenerator}
+                {...props}
+            />
+        </div>
+        <Modal
+            isOpen={isModalOpen}
+            onRequestClose={closeModal}
+            contentLabel="Modal"
+            style={modalStyles}
+        >
+            <div style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
+                {modalContent}
+            </div>
+            <button onClick={closeModal} style={styles.button}>
+                Close API UI
+            </button>
+        </Modal>
+    </div>
+        
     );
 });
-
 const modalStyles = {
     content: {
         right: 'auto',
