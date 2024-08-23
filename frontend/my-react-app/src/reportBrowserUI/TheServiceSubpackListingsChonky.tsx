@@ -264,8 +264,9 @@ export const VFSBrowser: React.FC<VFSProps> = React.memo((props) => {
         moveFiles,
         createFolder
     );
+//ChonkyActions.CreateFolder,
     const fileActions = useMemo(
-        () => [CustomActions.AddToService, ChonkyActions.CreateFolder, ChonkyActions.DeleteFiles],
+        () => [CustomActions.AddToService,  ChonkyActions.DeleteFiles],
         []
     );
     const thumbnailGenerator = useCallback(
