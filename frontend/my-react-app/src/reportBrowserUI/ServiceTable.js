@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import SearchBar from '../APIUIComponents/SearchBar2';
 import IAM from './IamConfig';
+
 Modal.setAppElement('#root');
 
 const ServicesTable = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
+
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
 
   const rows = [
     { name: 'K1 Footnote Project', description: 'Generates footnotes on client K1 reports' },
@@ -22,7 +26,43 @@ const ServicesTable = () => {
   const closeModal = () => {
     setIsModalOpen(false);
     setModalContent(null);
+    setTitle('');
+    setDescription('');
   };
+
+  const handleCreateService = () => {
+    // Logic to handle form submission
+    console.log('Service Created:', { title, description });
+    closeModal();
+  };
+
+  const createServiceForm = (
+    <div style={{height: '300px', width: '110%', transform: 'scale(.89)', transformOrigin: 'top left'}}>
+      <h2 style={{color: 'white'}}>Create New Service</h2>
+      <form onSubmit={(e) => { e.preventDefault(); handleCreateService(); }}>
+        <div style={formFieldStyle}>
+          <label style={labelStyle}>Title:</label>
+          <input
+            type="text"
+            // value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            style={inputStyle}
+            required
+          />
+        </div>
+        <div style={formFieldStyle}>
+          <label style={labelStyle}>Description:</label>
+          <textarea
+            // value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            style={textareaStyle}
+            required
+          />
+        </div>
+        <button type="submit" style={styles.button}>Create Service</button>
+      </form>
+    </div>
+  );
 
   return (
     <div style={{ transform: 'scale(0.87)', transformOrigin: 'top left' }}>
@@ -37,7 +77,7 @@ const ServicesTable = () => {
         }}
       >
         <h3 style={{ color: 'white', margin: '0' }}>Your Services</h3>
-        <button style={styles.button}>Create New Service</button>
+        <button onClick={() => openModal(createServiceForm)} style={styles.button}>Create New Service</button>
         <SearchBar style={{ padding: '10px', margin: '0', gridColumn: 'span 1' }} />
         <button onClick={() => openModal(<IAM />)} style={styles.button}>
           Bob Smith IAM
@@ -69,7 +109,6 @@ const ServicesTable = () => {
               <button style={index === 3 ? styles.button2 : styles.button}>{index === 3 ? 'Viewing' : 'Open'}</button>
               <button style={styles.button}>Share</button>
               <button style={styles.button}>Delete</button>
-
             </div>
           </div>
         ))}
@@ -85,7 +124,7 @@ const ServicesTable = () => {
           {modalContent}
         </div>
         <button onClick={closeModal} style={styles.button}>
-          Close API UI
+          Close
         </button>
       </Modal>
     </div>
@@ -145,7 +184,7 @@ const styles = {
     flex: 1,
     textAlign: 'left',
     fontSize: '14px',
-    color: 'white'
+    color: 'white',
   },
   highlightedRow: {
     backgroundColor: '#333',
@@ -157,6 +196,34 @@ const styles = {
     color: 'white',
     fontWeight: 'bold',
   },
+};
+
+const formFieldStyle = {
+  marginBottom: '10px',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-start',
+};
+
+const labelStyle = {
+  marginBottom: '5px',
+  color: 'white',
+};
+
+const inputStyle = {
+  padding: '8px',
+  borderRadius: '4px',
+  border: '1px solid #ddd',
+  width: '100%',
+};
+
+const textareaStyle = {
+  padding: '8px',
+  borderRadius: '4px',
+  border: '1px solid #ddd',
+  width: '100%',
+  height: '100px',
+  resize: 'vertical',
 };
 
 const modalStyles = {
