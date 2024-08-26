@@ -14,7 +14,9 @@ const placeholders = {
 const OutputConfig = () => {
   // State to manage inputs and their values
   const [inputs, setInputs] = useState([
-    { uri: 'https://jinsei.ai/asdfjjfdbsbajs', callAt: '', reqType: '', formats: '', iam: '' } // Initial dummy values
+    { uri: '', callAt: '', reqType: '', formats: '', iam: '', 
+      connectTran: 'Wells Fargo Monthly Statement to Entity Cash Flow'
+     } // Initial dummy values
   ]);
 
   // Function to handle changes in input fields
@@ -37,6 +39,16 @@ const OutputConfig = () => {
       <div style={styles.gridContainer}>
         {inputs.map((input, index) => (
           <div key={index} style={styles.gridItem}>
+                     <div style={styles.inputWrapper}>
+              <div style={styles.label}>Connect Transformer:</div>
+              <input
+                type="text"
+                value={input.connectTran}
+                onChange={(e) => handleInputChange(index, 'connectTran', e.target.value)}
+                placeholder={placeholders.connectTran}
+                style={styles.input}
+              />
+            </div>
             {/* URI Input */}
             <div style={styles.inputWrapper}>
               <div style={styles.label}>File URI:</div>

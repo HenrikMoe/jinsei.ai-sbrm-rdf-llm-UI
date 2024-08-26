@@ -6,7 +6,8 @@ const placeholders = {
   uri: 'https://example.com',
   reqType: 'GET',
   iam: 'User-Role',
-  callAt: '00:00 daily'
+  callAt: '00:00 daily',
+  connectTran: 'Wells Fargo Monthly Statement to Entity Cash Flow'
 };
 
 const DynamicUriInputs = () => {
@@ -36,6 +37,16 @@ const DynamicUriInputs = () => {
       <div style={styles.gridContainer}>
         {inputs.map((input, index) => (
           <div key={index} style={styles.gridItem}>
+               <div style={styles.inputWrapper}>
+              <div style={styles.label}>Connect Transformer:</div>
+              <input
+                type="text"
+                value={input.connectTran}
+                onChange={(e) => handleInputChange(index, 'connectTran', e.target.value)}
+                placeholder={placeholders.connectTran}
+                style={styles.input}
+              />
+            </div>
             {/* URI Input */}
             <div style={styles.inputWrapper}>
               <div style={styles.label}>File URI:</div>
@@ -80,6 +91,7 @@ const DynamicUriInputs = () => {
                 style={styles.input}
               />
             </div>
+         
           </div>
         ))}
       </div>
