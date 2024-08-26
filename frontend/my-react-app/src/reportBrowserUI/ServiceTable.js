@@ -16,6 +16,8 @@ const ServicesTable = () => {
   const rows = [
     { name: 'K1 Footnote Project', description: 'Generates footnotes on client K1 reports' },
     { name: 'Full Filing Project', description: 'Full K1 filing process for my clients' },
+        { name: 'Bobs Demo Service', description: 'Im Bob and Im making a demo service descr' },
+
   ];
 
   const openModal = (content) => {
@@ -95,18 +97,18 @@ const ServicesTable = () => {
             key={index}
             style={{
               ...styles.tableRow,
-              ...(index === 3 ? styles.highlightedRow : {}),
+              ...(index === 2 ? styles.highlightedRow : {}),
             }}
             onClick={() => console.log('Clicked row:', row)}
           >
-            <div style={index === 3 ? styles.highlightedCell : styles.tableCell2}>
+            <div style={index === 2 ? styles.highlightedCell : styles.tableCell2}>
               {row.name}
             </div>
-            <div style={index === 3 ? styles.highlightedCell : styles.tableCell2}>
+            <div style={index === 2 ? styles.highlightedCell : styles.tableCell2}>
               {row.description}
             </div>
             <div style={styles.tableCell}>
-              <button style={index === 3 ? styles.button2 : styles.button}>{index === 3 ? 'Viewing' : 'Open'}</button>
+              <button style={index === 2 ? styles.button2 : styles.button}>{index === 2 ? 'Viewing' : 'Open'}</button>
               <button style={styles.button}>Share</button>
               <button style={styles.button}>Delete</button>
             </div>
@@ -200,14 +202,16 @@ const styles = {
 
 const formFieldStyle = {
   marginBottom: '10px',
-  display: 'flex',
-  flexDirection: 'column',
+  display: 'grid',
+
+  gridTemplateColumns: '1fr 1fr',
   alignItems: 'flex-start',
 };
 
 const labelStyle = {
   marginBottom: '5px',
   color: 'white',
+  fontSize: '20px'
 };
 
 const inputStyle = {

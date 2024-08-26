@@ -187,7 +187,7 @@ const FileBrowserPage = (listLoginInfo) => {
             marginBottom: '10px'
           }}
         >
-          <h3 style={{ color: 'white', padding: '10px' }}> Full Filing Project</h3>
+          <h3 style={{ color: 'white', padding: '10px' }}> Bobs Demo Service</h3>
           <div style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
@@ -224,18 +224,19 @@ const FileBrowserPage = (listLoginInfo) => {
             transformOrigin: 'top left',
           }}
         >
+          {/* <div style={{height: '400px'}}></div> */}
           <DragAndDrop />
-          <DragAndDrop2 />
-          <DragAndDrop3 />
+          {/* <DragAndDrop2 />
+          <DragAndDrop3 /> */}
         </div>
 
-        <AuthenticationProvider>
+        {/* <AuthenticationProvider>
           <DataStoreProvider>
             <DarkModeProvider>
               <Prototype listLoginInfo={listLoginInfo} />
             </DarkModeProvider>
           </DataStoreProvider>
-        </AuthenticationProvider>
+        </AuthenticationProvider> */}
       </div>
 
       <Modal
