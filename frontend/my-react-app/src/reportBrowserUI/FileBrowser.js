@@ -226,8 +226,8 @@ const FileBrowserPage = (listLoginInfo) => {
         >
           {/* <div style={{height: '400px'}}></div> */}
           <DragAndDrop />
-          {/* <DragAndDrop2 />
-          <DragAndDrop3 /> */}
+          <DragAndDrop2 />
+          <DragAndDrop3 />
         </div>
 
         {/* <AuthenticationProvider>

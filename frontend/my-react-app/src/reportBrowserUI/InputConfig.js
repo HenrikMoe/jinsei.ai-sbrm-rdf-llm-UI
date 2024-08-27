@@ -7,13 +7,13 @@ const placeholders = {
   reqType: 'GET',
   iam: 'User-Role',
   callAt: '00:00 daily',
-  connectTran: 'Wells Fargo Monthly Statement to Entity Cash Flow'
+  connectTran: 'Entity Cash Flow to Deloitte K1 Report Package'
 };
 
 const DynamicUriInputs = () => {
   // State to manage inputs and their values
   const [inputs, setInputs] = useState([
-    { uri: 'https://wellsfargo.com/asdfjjfdbsbajs', reqType: '', iam: '', callAt: '' } // Initial dummy values
+    { uri: '', reqType: '', iam: '', callAt: '' } // Initial dummy values
   ]);
 
   // Function to handle changes in input fields
@@ -28,9 +28,14 @@ const DynamicUriInputs = () => {
     setInputs([...inputs, { uri: '', reqType: '', iam: '', callAt: '' }]); // Add empty fields for a new entry
   };
 
+//      <h1 style={{ fontSize: '30px', margin: '300px auto' }}>Run the auto filer service.</h1>
+
+//      <h1 style={{ fontSize: '30px', margin: '300px auto' }}>Upload your work as training data.</h1>
+//      <h1 style={{ fontSize: '30px', margin: '300px auto' }}>Run the process by dropping a file in the runner's configured file path.</h1>
+
   return (
     <div>
-      <h1 style={{ fontSize: '30px', margin: '300px auto' }}>Control panel overview.</h1>
+      <h1 style={{ fontSize: '30px', margin: '300px auto' }}>Create a database write output config.</h1>
       <h3 style={{ textAlign: 'left' }}>Input Config</h3>
 
       {/* URI Input Section */}

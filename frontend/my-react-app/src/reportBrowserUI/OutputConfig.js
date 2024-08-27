@@ -15,7 +15,7 @@ const OutputConfig = () => {
   // State to manage inputs and their values
   const [inputs, setInputs] = useState([
     { uri: '', callAt: '', reqType: '', formats: '', iam: '', 
-      connectTran: 'Wells Fargo Monthly Statement to Entity Cash Flow'
+      connectTran: ''
      } // Initial dummy values
   ]);
 
