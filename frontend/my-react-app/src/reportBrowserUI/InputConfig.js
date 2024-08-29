@@ -35,7 +35,7 @@ const DynamicUriInputs = () => {
 
   return (
     <div>
-      {/* <h1 style={{ fontSize: '30px', margin: '300px auto' }}>Create a database write output config.</h1> */}
+      {/* <h1 style={{ fontSize: '30px', margin: '300px auto' }}>Transformer is auto added to your packs.</h1> */}
       <h3 style={{ textAlign: 'left' }}>Input Config</h3>
 
       {/* URI Input Section */}
