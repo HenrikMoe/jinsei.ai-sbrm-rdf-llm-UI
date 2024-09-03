@@ -266,17 +266,22 @@ function Homepage() {
 <div className={styles.overlayContainer}>
 
 <div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {t('Video')}
-   <DownloadButton pdfUrl={pdfUrl} pdfFileName={pdfFileName} />
+  {<div >
+<iframe style={{width: '660px', height: '415px'}} width="360px" height="215px" 
+src="https://www.youtube.com/embed/t8y8-TjGM5k?rel=0" title="YouTube video player" frameborder="0" 
+// allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" 
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+}
+   {/* <DownloadButton pdfUrl={pdfUrl} pdfFileName={pdfFileName} />
    <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button2 ${isDarkMode ? 'dark-mode-button' : ''}`}>
      Let's Build
-   </a>
+   </a> */}
 </div>
 
 
   </div>
 
-<div className='firstConent'>
+{/* <div className='firstConent'> */}
 {/* <div className='iconWrap1'>
 <div><img className='icon2wrap' src={`${process.env.PUBLIC_URL}/factory-2-128.png`}/></div>
 <div><img className='icon1wrap' src={`${process.env.PUBLIC_URL}/arrow-31-128.png`}/></div>
@@ -286,7 +291,7 @@ function Homepage() {
 {/* <div className={`arriving-text7 ${isDarkMode ? 'dark-mode-text' : ''}`}>
   {t('Automate data digestion & win in the 21st century. ')}
 </div> */}
-</div>
+{/* </div> */}
 
 {/* <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
   {t('Jinsei.ai automates data transformation with AI. Delivering intelligent insights, transparency and performance.')}
@@ -306,7 +311,7 @@ function Homepage() {
 </div> */}
 
 
-<div className='firstConent'>
+{/* <div className='firstConent'> */}
 {/* <div className='iconWrap2'>
 <div><img className='icon2wrap' src={`${process.env.PUBLIC_URL}/manage.png`}/></div>
 <div><img className='icon1wrap' src={`${process.env.PUBLIC_URL}/connection.png`}/></div>
@@ -315,7 +320,7 @@ function Homepage() {
 {/* <div className={`arriving-text5 ${isDarkMode ? 'dark-mode-text' : ''}`}>
   {t('AI data transformation and intelligent infrastructure. ')}
 </div> */}
-      </div>
+      {/* </div> */}
       {/* <div className={`arriving-text6 ${isDarkMode ? 'dark-mode-text' : ''}`}>
         {t('Let Jinsei.ai carve new paths to prosperity for your business.')}
 
@@ -334,11 +339,12 @@ function Homepage() {
           ></iframe>
         )}
       </div> */}
+{/* <div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t8y8-TjGM5k?si=mlB9DzlGvO6f_7uq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div> */}
 
-
-      <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button2 ${isDarkMode ? 'dark-mode-button' : ''}`}>
+      {/* <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button2 ${isDarkMode ? 'dark-mode-button' : ''}`}>
         Reach Out
-      </a>
+      </a> */}
 
 
 

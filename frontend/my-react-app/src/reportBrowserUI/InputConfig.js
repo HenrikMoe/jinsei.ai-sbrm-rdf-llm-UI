@@ -32,10 +32,11 @@ const DynamicUriInputs = () => {
 
 //      <h1 style={{ fontSize: '30px', margin: '300px auto' }}>Upload your work as training data.</h1>
 //      <h1 style={{ fontSize: '30px', margin: '300px auto' }}>Run the process by dropping a file in the runner's configured file path.</h1>
+//      <h1 style={{ fontSize: '30px', margin: '300px auto' }}>The GitHub of AI models.</h1>
 
   return (
     <div>
-      {/* <h1 style={{ fontSize: '30px', margin: '300px auto' }}>Transformer is auto added to your packs.</h1> */}
+      <h1 style={{ fontSize: '30px', margin: '300px auto' }}>Trim operators.</h1>
       <h3 style={{ textAlign: 'left' }}>Input Config</h3>
 
       {/* URI Input Section */}
