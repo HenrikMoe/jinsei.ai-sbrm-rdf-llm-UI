@@ -267,10 +267,14 @@ function Homepage() {
 
 <div  className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
   {<div >
-<iframe style={{width: '660px', height: '415px', marginTop: '-100px'}} width="360px" height="215px" 
-src="https://www.youtube.com/embed/t8y8-TjGM5k?rel=0" title="YouTube video player" frameborder="0" 
-// allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" 
-referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+   <iframe
+   className="video-iframe"
+   src="https://www.youtube.com/embed/t8y8-TjGM5k?rel=0"
+   title="YouTube video player"
+   frameBorder="0"
+   referrerPolicy="strict-origin-when-cross-origin"
+   allowFullScreen
+ ></iframe></div>
 }
    {/* <DownloadButton pdfUrl={pdfUrl} pdfFileName={pdfFileName} />
    <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button2 ${isDarkMode ? 'dark-mode-button' : ''}`}>

@@ -1,20 +1,57 @@
-/* Footer.css */
+/* General footer styles */
 .footer {
   background-color: #111111; /* Dark background color */
   color: white; /* Text color */
-  padding: 10px 0; /* Padding at the top and bottom */
+  padding: 20px 10px; /* Increased padding for better spacing */
   text-align: center;
   font-size: 16px; /* Adjust the font size as needed */
-  margin-top: 00px;
+  margin-top: 0;
   bottom: 0;
   z-index: 999 !important;
 }
 
+/* Footer content grid layout */
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px; /* Space between sections */
+  text-align: left;
+  padding: 0; /* Ensure no extra padding on mobile */
+}
 
+/* Individual footer section */
+.footer-section {
+  margin: 0; /* Remove auto margins */
+  padding: 0; /* Ensure no extra padding */
+}
+
+/* Footer title styles */
+.footer-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+/* Responsive styling for larger screens */
+@media (min-width: 600px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+    text-align: center;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+}
+
+/* Root element styling */
 #root {
-  /* Your CSS styles for the element with id="root" go here */
   background-color: #001522;
   height: 100%;
-  margin-top: 00px;
-  /* Add more styles as needed */
+  margin-top: 0;
 }

@@ -14,6 +14,7 @@
   @media (max-width: 768px) {
   .homepage-container {
     margin-right: 0px;
+    margin-bottom: 200px;
   }
 }
 
@@ -61,6 +62,7 @@
   .arriving-text {
     margin-right: 0px;
     margin-left: -5px;
+    margin-bottom: 000px;
 
   }
 }
@@ -78,7 +80,6 @@
 }
 @media (max-width: 767px) {
   .arriving-text {
-    margin-top: -200px;
     margin-right: 0px;
     margin-left: -5px;
 
@@ -504,6 +505,21 @@
 }
 
 
+/* Default styles for desktop */
+.video-iframe {
+  width: 660px;
+  height: 415px;
+  margin-top: -100px;
+}
+
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 600px) {
+  .video-iframe {
+    width: 298px; /* 30% of 660px */
+    height: 304.5px; /* 30% of 415px */
+    margin-top: -50px; /* Adjusted margin */
+  }
+}
 
 @media (max-width: 768px) {
 
