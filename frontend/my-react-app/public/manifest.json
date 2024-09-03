@@ -1,6 +1,6 @@
 {
   "short_name": "Jinsei.ai",
-  "name": "Jinsei.ai | AI ERP Taxonomy Capture and Process Management.",
+  "name": "Jinsei.ai | Automation Hub.",
   "icons": [
     {
       "src": "favicon.png",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "previewModern.png",
+      "src": "preview.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "previewModern.png",
+      "src": "preview.png",
       "type": "image/png",
       "sizes": "512x512"
     }

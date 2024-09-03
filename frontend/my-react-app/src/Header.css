@@ -59,7 +59,11 @@
     background-color: transparent; /* Set the background to be transparent */
     border-bottom: 1px black solid; /* Remove the border */
   }
-
+  @media (min-width: 1367px) {
+    .button {
+      width: 103%;
+    }
+  }
   .title {
     text-align: center;
     font-size: 20px;

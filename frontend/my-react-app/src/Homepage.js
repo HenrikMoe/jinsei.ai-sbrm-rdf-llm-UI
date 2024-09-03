@@ -211,7 +211,7 @@ function Homepage() {
           },
           exitBeforeEnter: true,
           config: {
-            duration: 29000,
+            duration: 15000,
           },
           delay: 1000,
           ref: springApi,

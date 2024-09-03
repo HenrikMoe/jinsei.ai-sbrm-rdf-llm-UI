@@ -51,7 +51,7 @@ const AppRoutes = () => {
 
 
   useEffect(() => {
-    document.title = 'Automate Equity & Enterprise Data With AI'; // Change this title
+    document.title = 'AI Automation Hub'; // Change this title
   }, []);
 
 
