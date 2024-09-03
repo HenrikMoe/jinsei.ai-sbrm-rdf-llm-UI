@@ -265,9 +265,9 @@ function Homepage() {
 
 <div className={styles.overlayContainer}>
 
-<div className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
+<div  className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
   {<div >
-<iframe style={{width: '660px', height: '415px'}} width="360px" height="215px" 
+<iframe style={{width: '660px', height: '415px', marginTop: '-100px'}} width="360px" height="215px" 
 src="https://www.youtube.com/embed/t8y8-TjGM5k?rel=0" title="YouTube video player" frameborder="0" 
 // allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" 
 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
