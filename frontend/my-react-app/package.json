@@ -8,7 +8,6 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.16.4",
-    "react-icons": "^4.9.0",
     "@react-oauth/google": "^0.11.1",
     "@react-spring/web": "^9.7.3",
     "@testing-library/jest-dom": "^5.17.0",
@@ -16,9 +15,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.1",
     "chonky": "^2.3.2",
-    "react-tooltip": "5.28.0",
     "chonky-icon-fontawesome": "^2.3.2",
-    "react-select": "5.7.2",
     "dotenv": "^16.3.1",
     "file-saver": "^2.0.5",
     "fs": "^0.0.1-security",
@@ -32,12 +29,15 @@
     "react-dropzone": "^14.2.3",
     "react-file-viewer": "^0.5.0",
     "react-i18next": "^13.3.0",
+    "react-icons": "^4.9.0",
     "react-modal": "^3.16.1",
     "react-resizable": "^3.0.5",
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
+    "react-select": "5.7.2",
     "react-spinners": "^0.14.1",
     "react-syntax-highlighter": "^15.5.0",
+    "react-tooltip": "5.28.0",
     "react-xml-viewer": "^2.0.1",
     "usehooks-ts": "^3.0.2",
     "web-vitals": "^2.1.4",
@@ -69,7 +69,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "typescript": "5.5.4",
-    "@typescript-eslint/parser": "8.4.0"
+    "@typescript-eslint/parser": "^5.62.0",
+    "typescript": "5.5.4"
   }
 }
