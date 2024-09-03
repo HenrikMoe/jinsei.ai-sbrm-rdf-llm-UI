@@ -18,6 +18,7 @@
     "chonky": "^2.3.2",
     "react-tooltip": "4.2.21",
     "chonky-icon-fontawesome": "^2.3.2",
+    "react-select": "5.7.2",
     "dotenv": "^16.3.1",
     "file-saver": "^2.0.5",
     "fs": "^0.0.1-security",
