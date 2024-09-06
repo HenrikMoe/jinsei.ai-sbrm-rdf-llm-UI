@@ -4,21 +4,28 @@ import './About.css'; // Import the CSS file
 const About = () => {
   return (
     <div className="center-div">
-      <h1 className='aboutJinsei'>AI Automation Hub </h1>
+      <h1 className='aboutJinsei7'>Transparent, Secure, Perminence in AI Automation.</h1>
       <div className='aboutJinsei'>
-      Jinsei.ai is the future AI automation hub for individuals and businesses around the earth. 
+      Jinsei.ai's design is centered around flexibility, from creating multi-silo AI transformers for long analysis tasks, to licensing end-to-end automated processes, to providing model code images for easy integration into ERP systems, Jinsei Corp delivers powerful automation right into your lap. 
       </div>
       <div className='aboutJinsei'>
-      Jinsei API supports publishing AI models. Empowering businesses and individuals via collaboration, yielding powerful automation workflows.  
+      Utilizing bleeding edge in-house server infrastructure, Jinsei Corp provides best in class automated process hosting.
       </div>
+    
       <div className='aboutJinsei'>
-      Users can vendor their proprietary transformer models through the Jinsei API licensing package, while leveraging public models. 
+      Pushing us to the front, Jinsei API supports publishing and licensing AI models.  Set to yield highly powerful automation workflows, Jinsei.ai empowers businesses and individuals with AI collaboration abilities never seen before.
       </div>
+ 
       <div className='aboutJinsei'>
-      The Jinsei.ai control panel's workflows are live on our Youtube channel, linked in the header above. 
+      Enterprise operators develop their own transformer models with previous work, creating full workflows by sharing transformers internally, leveraging the Jinsei.ai public marketplace, and licensing to third parties.
       </div>
-      <div className='aboutJinsei2'>
-      Contact: henrik@jinsei.ai - +1 (805) 358-2780
+   
+      <div className='aboutJinsei'>
+      Jinsei.ai is the future AI automation hub for individuals and businesses all around Earth. 
+      </div>
+  
+      <div className='aboutJinsei'>
+      The Control Panel's workflows are live on our Youtube channel: <a href='https://www.youtube.com/@Jinsei-AI'>Watch</a> 
       </div>
 
     </div>
