@@ -26,6 +26,8 @@ export const sendChatRequest = async (input) => {
   }
 };
 
+//yo tfmyboi
+
 
 export const gpt35turbo = async (userInput) => {
   try {
