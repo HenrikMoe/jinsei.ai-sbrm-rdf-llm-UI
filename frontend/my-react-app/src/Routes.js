@@ -106,6 +106,7 @@ const AppRoutes = () => {
         <Route path="/Jinsei.AI-API" element={<APIParent />} />
         <Route path="/ReportBrowser" element={<FileBrowser />} />
         <Route path="/ControlPanel" element={<VFSBrowser listLoginInfo={listLoginInfo}/>} />
+        <Route path="/activeDemo" element={<VFSBrowser listLoginInfo={listLoginInfo}/>} />
 
       </Routes>
 
