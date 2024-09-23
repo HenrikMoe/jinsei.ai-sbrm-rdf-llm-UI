@@ -224,10 +224,20 @@ const styles = {
   header: {
     textAlign: 'center',
     color: '#333',
-    marginBottom: '20px',
+    borderRadius: '8px',
+    paddingBottom: '30px',
+    paddingTop: '30px',
+
+    borderBottom: '2px solid black',
+    borderTop: '2px solid black',
+
+
+    marginBottom: '0px',
+    marginTop: '100px'
   },
   subHeader: {
-    margin: '20px 0',
+   
+    marginTop: '-200px',
     color: '#555',
   },
   demoSelection: {
