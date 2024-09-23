@@ -40,7 +40,7 @@ import Intuit from './Intuit'
 import SVA from './SVA'
 import APIParent from './APIUIComponents/APIUIParent'
 import FileBrowser from './reportBrowserUI/Chonky' 
-
+import ActiveDemo from './activeDemo'
 import VFSBrowser from './reportBrowserUI/FileBrowser'
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
@@ -106,7 +106,7 @@ const AppRoutes = () => {
         <Route path="/Jinsei.AI-API" element={<APIParent />} />
         <Route path="/ReportBrowser" element={<FileBrowser />} />
         <Route path="/ControlPanel" element={<VFSBrowser listLoginInfo={listLoginInfo}/>} />
-        <Route path="/activeDemo" element={<VFSBrowser listLoginInfo={listLoginInfo}/>} />
+        <Route path="/activeDemo" element={<ActiveDemo listLoginInfo={listLoginInfo}/>} />
 
       </Routes>
 
