@@ -290,8 +290,8 @@ function Homepage() {
   <div style={{
     position: 'absolute',
     bottom: '-100px', // Adjust positioning
-    right: '-35px',  // Move triangle shadow more to the right
-    width: '300px',  // Adjust size as needed
+    right: '-15px',  // Move triangle shadow more to the right
+    width: '280px',  // Adjust size as needed
     height: '100px',
     backgroundColor: 'rgb(46,46,46)', // Darker warm shadow color
     clipPath: 'polygon(0 0, 100% 0, 100% 50%)', // Right triangle shape
@@ -304,11 +304,11 @@ function Homepage() {
   <div style={{
     position: 'absolute',
     bottom: '-15px', // Adjust positioning
-    right: '-200px',  // Move triangle shadow slightly to the right
-    width: '200px',  // Adjust size as needed
+    right: '-40px',  // Move triangle shadow slightly to the right
+    width: '40px',  // Adjust size as needed
     height: '80px', // Adjust size as needed
     backgroundColor: 'rgb(46,46,46)', // Darker warm shadow color
-    clipPath: 'polygon(0 0, 0 100%, 30% 100%)', // Bottom triangle shape
+    clipPath: 'polygon(0 0, 0 100%, 90% 100%)', // Bottom triangle shape
     zIndex: '0',
     mixBlendMode: 'normal', // Prevent darker overlaps
   }}/>

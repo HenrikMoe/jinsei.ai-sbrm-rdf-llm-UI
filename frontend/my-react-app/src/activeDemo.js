@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const demoData = [
   {
     id: "demo1",
-    title: "Demo 1",
+    title: "Control Panel Overview",
     description: "This is a description for Demo 1.",
     steps: [
       {
@@ -29,7 +29,7 @@ const demoData = [
   },
   {
     id: "demo2",
-    title: "Demo 2",
+    title: "Creating a Transformer",
     description: "This is a description for Demo 2.",
     steps: [
       {
@@ -48,7 +48,7 @@ const demoData = [
   },
   {
     id: "demo3",
-    title: "Demo 3",
+    title: "Launching a Transformer",
     description: "This is a description for Demo 3.",
     steps: [
       {
@@ -61,7 +61,7 @@ const demoData = [
   },
   {
     id: "demo4",
-    title: "Demo 4",
+    title: "Multi-Transformer Automation",
     description: "This is a description for Demo 4.",
     steps: [
       {
@@ -103,7 +103,6 @@ const ParentComponent = () => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.header}>Demo Player</h1>
       {!demoSelected ? (
         <DemoSelection onDemoSelect={handleDemoSelect} />
       ) : (
@@ -117,7 +116,7 @@ const ParentComponent = () => {
 const DemoSelection = ({ onDemoSelect }) => {
   return (
     <div style={styles.demoSelection}>
-      <h2 style={styles.subHeader}>Select a Demo</h2>
+      <h2>Select a demo.</h2>
       {demoData.map((demo) => (
         <button
           key={demo.id}
@@ -151,25 +150,30 @@ const DemoPlayer = ({ demo, onBack }) => {
 
   return (
     <div style={styles.demoPlayer}>
-      <h2 style={styles.videoTitle}>{currentStep.title}</h2>
-      <p style={styles.description}>{currentStep.description}</p>
-      <video width="400" controls style={styles.video}>
-        <source src={currentStep.videoUrl} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div style={styles.scrollContainer}>
-        <button onClick={onBack} style={styles.scrollButton}>Back</button> {/* Back Button */}
-        <ScrollButtons 
+      <button onClick={onBack} style={styles.scrollButton2}>Back</button> {/* Back Button */}
+
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <video width="400" controls style={styles.video}>
+          <source src={currentStep.videoUrl} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <h2 style={styles.videoTitle}>{currentStep.title}</h2>
+        <p style={styles.description}>{currentStep.description}</p>
+
+        <div style={styles.scrollContainer}>
+          <ScrollButtons 
+            currentStepIndex={currentStepIndex} 
+            totalSteps={demo.steps.length} 
+            onNext={handleNextStep} 
+            onPrevious={handlePreviousStep} 
+          />
+        </div>
+        
+        <ProgressBar 
           currentStepIndex={currentStepIndex} 
           totalSteps={demo.steps.length} 
-          onNext={handleNextStep} 
-          onPrevious={handlePreviousStep} 
         />
       </div>
-      <ProgressBar 
-        currentStepIndex={currentStepIndex} 
-        totalSteps={demo.steps.length} 
-      />
     </div>
   );
 };
@@ -211,57 +215,43 @@ const styles = {
     padding: '20px',
     fontFamily: 'Arial, sans-serif',
     backgroundColor: '#f5f5f5',
+    width: '80%',
     borderRadius: '8px',
     boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
-    maxWidth: '600px',
-    margin: '50px auto', // Larger top margin
-    position: 'relative',
+    margin: '50px auto',
     display: 'flex',
     flexDirection: 'column',
-    height: '80vh',
+    height: '100vh',
     justifyContent: 'space-between',
-  },
-  header: {
-    textAlign: 'center',
-    color: '#333',
-    borderRadius: '8px',
-    paddingBottom: '30px',
-    paddingTop: '30px',
-
-    borderBottom: '2px solid black',
-    borderTop: '2px solid black',
-
-
-    marginBottom: '0px',
-    marginTop: '100px'
-  },
-  subHeader: {
-   
-    marginTop: '-200px',
-    margin: '20px 0',
-    color: '#555',
   },
   demoSelection: {
     display: 'flex',
+    marginTop: '50px',
     flexDirection: 'column',
     alignItems: 'center',
   },
   button: {
-    backgroundColor: '#007bff',
+    backgroundColor: '#ff5722', // Warm color
     color: '#fff',
     border: 'none',
     borderRadius: '4px',
+    fontSize: '35px', // Font size for desktop
     padding: '10px 20px',
-    margin: '5px 0',
+    boxShadow: `
+      5px 10px 5px rgba(0, 0, 0, 0.4),  
+      10px 5px 5px rgba(0, 0, 0, 0.4)   
+    `,
+    margin: '25px 0',
     cursor: 'pointer',
-    transition: 'background-color 0.3s',
+    transition: 'background-color 0.3s, transform 0.2s',
   },
   buttonHover: {
-    backgroundColor: '#0056b3',
+    backgroundColor: '#e64a19', // Darker on hover
+    transform: 'scale(1.05)',
   },
   demoPlayer: {
     textAlign: 'center',
-    flex: '1', // To grow and shrink within the container
+    flex: '1',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -280,7 +270,7 @@ const styles = {
   },
   scrollContainer: {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     marginTop: '10px',
   },
@@ -288,6 +278,18 @@ const styles = {
     backgroundColor: '#6c757d',
     color: '#fff',
     border: 'none',
+    marginLeft: '5px',
+    borderRadius: '4px',
+    padding: '8px 15px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s',
+  },
+  scrollButton2: {
+    backgroundColor: '#6c757d',
+    color: '#fff',
+    border: 'none',
+    width: '100px',
+    marginLeft: '5px',
     borderRadius: '4px',
     padding: '8px 15px',
     cursor: 'pointer',
@@ -297,11 +299,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '10px',
-    backgroundColor: '#f5f5f5',
-    boxShadow: '0 -2px 10px rgba(0, 0, 0, 0.1)',
-    borderRadius: '8px',
-    marginTop: '20px',
+    padding: '10px 0',
   },
   progressBubble: {
     width: '20px',
@@ -311,5 +309,25 @@ const styles = {
     transition: 'background-color 0.3s',
   },
 };
+
+// Responsive Styling for Buttons
+const mediaQueries = {
+  '@media (max-width: 600px)': {
+    button: {
+      fontSize: '25px', // Smaller font size for mobile
+    },
+    scrollButton: {
+      fontSize: '14px', // Adjust scroll button size
+    },
+  },
+};
+
+// Apply responsive styles
+Object.keys(mediaQueries).forEach((media) => {
+  const stylesMedia = mediaQueries[media];
+  Object.keys(stylesMedia).forEach((key) => {
+    styles[key] = { ...styles[key], ...stylesMedia[key] };
+  });
+});
 
 export default ParentComponent;
