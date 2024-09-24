@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Homepage.css'; // Import the CSS file for styling
 import { useTranslation } from 'react-i18next';
 import { useDarkMode } from './DarkModeContext';
+import { Link } from 'react-router-dom';
 
 import axios from 'axios';
 
@@ -261,12 +262,70 @@ function Homepage() {
 
   return (
     <div className={`homepage-container ${isDarkMode ? 'dark-mode1' : ''}`}>
-<App />
+
+<div className={styles.container} style={{
+    height: '500px',
+    }}>
+<Link 
+  to="/activedemo" 
+  style={{
+    display: 'inline-block',
+    padding: '10px 20px',
+    backgroundColor: 'red',
+    color: 'white',
+    fontFamily: 'sans-serif',
+    textDecoration: 'none',
+    border: 'none',
+    fontSize: '40px',
+    borderRadius: 0,
+    zIndex: '1',
+    cursor: 'pointer',
+    position: 'relative', // Necessary for positioning the pseudo-elements
+    transition: 'all 0.2s ease-in-out',
+  }}
+>
+  Active Demo
+  
+  {/* Bottom Right Triangle Shadow */}
+  <div style={{
+    position: 'absolute',
+    bottom: '-100px', // Adjust positioning
+    right: '-35px',  // Move triangle shadow more to the right
+    width: '300px',  // Adjust size as needed
+    height: '100px',
+    backgroundColor: 'rgb(46,46,46)', // Darker warm shadow color
+    clipPath: 'polygon(0 0, 100% 0, 100% 50%)', // Right triangle shape
+    mixBlendMode: 'normal', // Prevent darker overlaps
+  }}/>
+  
+
+  
+  {/* Right Triangle Shadow */}
+  <div style={{
+    position: 'absolute',
+    bottom: '-15px', // Adjust positioning
+    right: '-200px',  // Move triangle shadow slightly to the right
+    width: '200px',  // Adjust size as needed
+    height: '80px', // Adjust size as needed
+    backgroundColor: 'rgb(46,46,46)', // Darker warm shadow color
+    clipPath: 'polygon(0 0, 0 100%, 30% 100%)', // Bottom triangle shape
+    zIndex: '0',
+    mixBlendMode: 'normal', // Prevent darker overlaps
+  }}/>
+</Link>
+
+
+{/* <App /> */}
+
+
+
+    </div>
 
 <div className={styles.overlayContainer}>
 
 <div  className={`arriving-text ${isDarkMode ? 'dark-mode-text' : ''}`}>
-  {<div >
+  {/* {<div className={styles.container} >
+   
    <iframe
    className="video-iframe"
    src="https://www.youtube.com/embed/t8y8-TjGM5k?rel=0"
@@ -274,7 +333,8 @@ function Homepage() {
    frameBorder="0"
    referrerPolicy="strict-origin-when-cross-origin"
    allowFullScreen
- ></iframe></div>
+ ></iframe>
+ </div> */}
 }
    {/* <DownloadButton pdfUrl={pdfUrl} pdfFileName={pdfFileName} />
    <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button2 ${isDarkMode ? 'dark-mode-button' : ''}`}>

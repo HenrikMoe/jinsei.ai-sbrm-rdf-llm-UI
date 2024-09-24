@@ -238,6 +238,7 @@ const styles = {
   subHeader: {
    
     marginTop: '-200px',
+    margin: '20px 0',
     color: '#555',
   },
   demoSelection: {
