@@ -199,7 +199,7 @@ const DemoPlayer = ({ demo, onBack }) => {
 
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <video 
-          width={isMobile ? "250" : "400"} 
+          width={isMobile ? "300" : "400"} 
           controls 
           style={styles.video}
         >
@@ -304,6 +304,7 @@ mobileScrollButton: {
   marginLeft: '20px',  // Auto margin for centering
   marginBottom: '10px',
   borderRadius: '4px',
+  marginTop: '-80px',
   cursor: 'pointer',
   transition: 'background-color 0.3s',
 },
