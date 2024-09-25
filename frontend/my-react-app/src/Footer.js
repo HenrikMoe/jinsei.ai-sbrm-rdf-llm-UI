@@ -8,13 +8,13 @@ const Footer = () => {
         <div className="footer-section">
           <div className="footer-title">Jinsei Corp:</div>
           <div>California, USA</div>
-          <div>C-Class: 10,000,000 shares</div>
-          <div>Distribution: Joint Venture LLCs</div>
+          <div>C-Class Corporation</div>
+          <div>Assets: Joint Venture Distribution</div>
         </div>
         <div className="footer-section">
           <div className="footer-title">Contact:</div>
           <div>henrik@jinsei.ai</div>
-          <div>+1 (805) 358-2780</div>
+         
         </div>
       </div>
       <div className="footer-bottom">

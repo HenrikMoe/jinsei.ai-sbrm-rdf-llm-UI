@@ -115,10 +115,8 @@ const styles2 = {
     borderRadius: '4px',
     fontSize: isMobile ? '25px' : '35px', // Conditionally adjust font size
     padding: '10px 20px',
-    boxShadow: `
-      5px 10px 5px rgba(0, 0, 0, 0.4),  
-      10px 5px 5px rgba(0, 0, 0, 0.4)   
-    `,
+    boxShadow: '20px 2px 10px rgba(0, 0, 0, 0.9)',
+
     margin: '25px 0',
     cursor: 'pointer',
     transition: 'background-color 0.3s, transform 0.2s',
@@ -154,7 +152,7 @@ const styles2 = {
 const DemoSelection = ({ onDemoSelect }) => {
   return (
     <div style={styles.demoSelection}>
-      <h2>Select a demo.</h2>
+      <h2>Select an active demo.</h2>
       {demoData.map((demo) => (
         <button
           key={demo.id}
@@ -172,6 +170,13 @@ const DemoSelection = ({ onDemoSelect }) => {
 const DemoPlayer = ({ demo, onBack }) => {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 600);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const handleNextStep = () => {
     if (currentStepIndex < demo.steps.length - 1) {
       setCurrentStepIndex(currentStepIndex + 1);
@@ -188,10 +193,16 @@ const DemoPlayer = ({ demo, onBack }) => {
 
   return (
     <div style={styles.demoPlayer}>
-      <button onClick={onBack} style={styles.scrollButton2}>Back</button> {/* Back Button */}
+      <button onClick={onBack} 
+              style={isMobile ? styles.mobileScrollButton : styles.scrollButton2}
+> &#8592; {/* Left Arrow */}</button> {/* Back Button */}
 
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <video width="400" controls style={styles.video}>
+      <video 
+          width={isMobile ? "250" : "400"} 
+          controls 
+          style={styles.video}
+        >
           <source src={currentStep.videoUrl} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -220,15 +231,24 @@ const DemoPlayer = ({ demo, onBack }) => {
 const ScrollButtons = ({ currentStepIndex, totalSteps, onNext, onPrevious }) => {
   return (
     <div style={styles.scrollContainer}>
-      <button onClick={onPrevious} disabled={currentStepIndex === 0} style={styles.scrollButton}>
-        Previous
+      <button 
+        onClick={onPrevious} 
+        disabled={currentStepIndex === 0} 
+        style={styles.scrollButton}
+      >
+        &#8592; {/* Left Arrow */}
       </button>
-      <button onClick={onNext} disabled={currentStepIndex === totalSteps - 1} style={styles.scrollButton}>
-        Next
+      <button 
+        onClick={onNext} 
+        disabled={currentStepIndex === totalSteps - 1} 
+        style={styles.scrollButton}
+      >
+        &#8594; {/* Right Arrow */}
       </button>
     </div>
   );
 };
+
 
 // Progress Bar Component
 const ProgressBar = ({ currentStepIndex, totalSteps }) => {
@@ -265,20 +285,38 @@ const styles = {
   demoSelection: {
     display: 'flex',
     marginTop: '50px',
+
     width: '100%',
     flexDirection: 'column',
     alignItems: 'center',
   },
+mobileScrollButton: {
+  backgroundColor: 'rgb(143, 107, 107)',
+  color: '#fff',
+  border: 'none',
+  fontSize: '24px',
+  padding: '1px 5px 5px 5px',
+  boxShadow: `
+      10px 20px 15px rgba(0, 0, 0, 0.25),  
+      15px 10px 10px rgba(0, 0, 0, 0.15)
+    `,
+  width: '80px',  // Adjust width for mobile
+  marginLeft: '20px',  // Auto margin for centering
+  marginBottom: '10px',
+  borderRadius: '4px',
+  cursor: 'pointer',
+  transition: 'background-color 0.3s',
+},
   button: {
-    backgroundColor: '#ff5722', // Warm color
+    backgroundColor: 'rgb(69, 154, 196)', // Warm color
     color: '#fff',
     border: 'none',
     borderRadius: '4px',
     fontSize:  '25px', // Conditionally adjust font size
     padding: '10px 20px',
     boxShadow: `
-      5px 10px 5px rgba(0, 0, 0, 0.4),  
-      10px 5px 5px rgba(0, 0, 0, 0.4)   
+      10px 20px 15px rgba(0, 0, 0, 0.25),  
+      15px 10px 10px rgba(0, 0, 0, 0.15)
     `,
     margin: '25px 0',
     cursor: 'pointer',
@@ -292,6 +330,8 @@ const styles = {
     textAlign: 'center',
     flex: '1',
     display: 'flex',
+    marginTop: '-150px',
+  
     flexDirection: 'column',
     justifyContent: 'center',
   },
@@ -304,33 +344,43 @@ const styles = {
   },
   video: {
     borderRadius: '8px',
-    boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
-    marginBottom: '20px',
+    boxShadow: `
+    10px 20px 15px rgba(0, 0, 0, 0.25),  
+    15px 10px 10px rgba(0, 0, 0, 0.15)
+  `,    marginBottom: '20px',
   },
   scrollContainer: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: '10px',
+   
   },
   scrollButton: {
-    backgroundColor: '#6c757d',
+    backgroundColor: '#408ddb',
     color: '#fff',
     border: 'none',
+    fontSize: '25px',
+  
     marginLeft: '5px',
     borderRadius: '4px',
-    padding: '8px 15px',
+    padding: '5px 10px 10px 10px',
     cursor: 'pointer',
     transition: 'background-color 0.3s',
   },
   scrollButton2: {
-    backgroundColor: '#6c757d',
+    backgroundColor: 'rgb(143, 107, 107)',
     color: '#fff',
+    boxShadow: `
+    10px 20px 15px rgba(0, 0, 0, 0.25),  
+    15px 10px 10px rgba(0, 0, 0, 0.15)
+  `,
     border: 'none',
+    fontSize: '24px',
+    padding: '1px 5px 5px 5px',
     width: '100px',
-    marginLeft: '5px',
+    marginLeft: '205px',
     borderRadius: '4px',
-    padding: '8px 15px',
     cursor: 'pointer',
     transition: 'background-color 0.3s',
   },
@@ -342,6 +392,10 @@ const styles = {
   },
   progressBubble: {
     width: '20px',
+    boxShadow: `
+    10px 20px 15px rgba(0, 0, 0, 0.25),  
+    15px 10px 10px rgba(0, 0, 0, 0.15)
+  `,
     height: '10px',
     borderRadius: '15px',
     margin: '0 5px',

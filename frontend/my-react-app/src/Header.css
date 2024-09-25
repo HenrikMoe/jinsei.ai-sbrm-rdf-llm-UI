@@ -25,6 +25,7 @@
       width: 107.5%;
     }
   }
+  
 
   .socials{
     height: 25px;
@@ -116,14 +117,14 @@
     transition: left 0.4s ease-in-out; /* Change "right" to "left" */
     z-index: 1000;
     border-radius: 7px;
-    height: 265px; /* Adjust the height to your preference */
+    height: 175px; /* Adjust the height to your preference */
 
   }
 
   /* Set height to 20% on mobile screens */
   @media (max-width: 767px) {
     .menu-container {
-      height: 410px; /* Adjust the height to your preference */
+      height: 230px; /* Adjust the height to your preference */
     }
   }
 
