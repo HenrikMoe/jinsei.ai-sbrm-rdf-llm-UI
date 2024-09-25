@@ -95,7 +95,7 @@
 div iframe {
   height: 450px;
   border-radius: 20px;
-  width: 950px;
+  width: 650px;
 }
 
 @media screen and (min-width: 768px) {

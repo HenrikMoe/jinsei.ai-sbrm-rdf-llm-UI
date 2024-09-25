@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Sample Demo Data
+
+
 const demoData = [
   {
     id: "demo1",
@@ -90,7 +92,37 @@ const demoData = [
 const ParentComponent = () => {
   const [selectedDemo, setSelectedDemo] = useState(null);
   const [demoSelected, setDemoSelected] = useState(false); // State for demo selection
-
+const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+const styles2 = {
+  container: {
+    padding: '20px',
+    fontFamily: 'Arial, sans-serif',
+    backgroundColor: '#f5f5f5',
+    width: isMobile ? '83%' : '100%',
+    borderRadius: '8px',
+    boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+    margin: '50px auto',
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100vh',
+    justifyContent: 'space-between',
+  },
+ 
+  button: {
+    backgroundColor: '#ff5722', // Warm color
+    color: '#fff',
+    border: 'none',
+    borderRadius: '4px',
+    fontSize: isMobile ? '25px' : '35px', // Conditionally adjust font size
+    padding: '10px 20px',
+    boxShadow: `
+      5px 10px 5px rgba(0, 0, 0, 0.4),  
+      10px 5px 5px rgba(0, 0, 0, 0.4)   
+    `,
+    margin: '25px 0',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s, transform 0.2s',
+  },}
   const handleDemoSelect = (demo) => {
     setSelectedDemo(demo);
     setDemoSelected(true); // Set demoSelected to true when a demo is selected
@@ -101,8 +133,14 @@ const ParentComponent = () => {
     setDemoSelected(false); // Set demoSelected to false to show demo selection
   };
 
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 600);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <div style={styles.container}>
+    <div style={styles2.container}>
       {!demoSelected ? (
         <DemoSelection onDemoSelect={handleDemoSelect} />
       ) : (
@@ -215,7 +253,7 @@ const styles = {
     padding: '20px',
     fontFamily: 'Arial, sans-serif',
     backgroundColor: '#f5f5f5',
-    width: '80%',
+    width: '100%',
     borderRadius: '8px',
     boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
     margin: '50px auto',
@@ -227,6 +265,7 @@ const styles = {
   demoSelection: {
     display: 'flex',
     marginTop: '50px',
+    width: '100%',
     flexDirection: 'column',
     alignItems: 'center',
   },
@@ -235,7 +274,7 @@ const styles = {
     color: '#fff',
     border: 'none',
     borderRadius: '4px',
-    fontSize: '35px', // Font size for desktop
+    fontSize:  '25px', // Conditionally adjust font size
     padding: '10px 20px',
     boxShadow: `
       5px 10px 5px rgba(0, 0, 0, 0.4),  
@@ -310,24 +349,6 @@ const styles = {
   },
 };
 
-// Responsive Styling for Buttons
-const mediaQueries = {
-  '@media (max-width: 600px)': {
-    button: {
-      fontSize: '25px', // Smaller font size for mobile
-    },
-    scrollButton: {
-      fontSize: '14px', // Adjust scroll button size
-    },
-  },
-};
-
-// Apply responsive styles
-Object.keys(mediaQueries).forEach((media) => {
-  const stylesMedia = mediaQueries[media];
-  Object.keys(stylesMedia).forEach((key) => {
-    styles[key] = { ...styles[key], ...stylesMedia[key] };
-  });
-});
+// Responsive Styling
 
 export default ParentComponent;

@@ -276,6 +276,8 @@ function Homepage() {
     fontFamily: 'sans-serif',
     textDecoration: 'none',
     border: 'none',
+    marginTop: '100px',
+    
     fontSize: '40px',
     borderRadius: 0,
     zIndex: '1',
@@ -293,7 +295,7 @@ function Homepage() {
     right: '-15px',  // Move triangle shadow more to the right
     width: '280px',  // Adjust size as needed
     height: '100px',
-    backgroundColor: 'rgb(46,46,46)', // Darker warm shadow color
+    backgroundColor: 'rgb(208, 208, 208)', // Darker warm shadow color
     clipPath: 'polygon(0 0, 100% 0, 100% 50%)', // Right triangle shape
     mixBlendMode: 'normal', // Prevent darker overlaps
   }}/>
@@ -307,7 +309,7 @@ function Homepage() {
     right: '-40px',  // Move triangle shadow slightly to the right
     width: '40px',  // Adjust size as needed
     height: '80px', // Adjust size as needed
-    backgroundColor: 'rgb(46,46,46)', // Darker warm shadow color
+    backgroundColor: 'rgb(208, 208, 208)', // Darker warm shadow color
     clipPath: 'polygon(0 0, 0 100%, 90% 100%)', // Bottom triangle shape
     zIndex: '0',
     mixBlendMode: 'normal', // Prevent darker overlaps
@@ -320,6 +322,19 @@ function Homepage() {
 
 
     </div>
+    <div style={{    marginTop: '300px',marginBottom: '200px'
+}}><iframe
+   src="https://www.youtube.com/embed/t8y8-TjGM5k?rel=0"
+   title="YouTube video player"
+   frameBorder="0"
+   referrerPolicy="strict-origin-when-cross-origin"
+   allowFullScreen
+ ></iframe> {/* Bottom Right Triangle Shadow */}
+ {/* Bottom Right Triangle Shadow */}
+ <div style={styles2.bottomRightTriangle} />
+
+{/* Right Triangle Shadow */}
+<div style={styles2.rightTriangle} /></div>
 
 <div className={styles.overlayContainer}>
 
@@ -335,7 +350,7 @@ function Homepage() {
    allowFullScreen
  ></iframe>
  </div> */}
-}
+
    {/* <DownloadButton pdfUrl={pdfUrl} pdfFileName={pdfFileName} />
    <a href="mailto:henrik@jinsei.ai?subject=Reach%20Out" className={`prototype-button2 ${isDarkMode ? 'dark-mode-button' : ''}`}>
      Let's Build
@@ -417,6 +432,56 @@ function Homepage() {
     </div>
   );
 }
+
+const styles2 = {
+  bottomRightTriangle: {
+    position: 'absolute',
+    bottom: '-580px',
+    right: '440px',
+    width: '320px',
+    height: '100px',
+    backgroundColor: 'rgb(146, 146, 146);',
+    clipPath: 'polygon(0 0, 100% 0, 100% 50%)',
+    mixBlendMode: 'normal',
+    zIndex: 0,
+  },
+  rightTriangle: {
+    position: 'absolute',
+    bottom: '-495px',
+    right: '410px',
+    width: '40px',
+    height: '315px',
+    backgroundColor: 'rgb(146, 146, 146);',
+    clipPath: 'polygon(0 0, 0 100%, 90% 100%)',
+    zIndex: 0,
+    mixBlendMode: 'normal',
+  },
+};
+
+// Apply media queries
+const mediaQueries = {
+  '@media (max-width: 600px)': {
+    bottomRightTriangle: {
+      bottom: '-150px', // Adjust mobile position
+      right: '10px', // Adjust mobile position
+      width: '200px', // Adjust mobile size
+      height: '60px', // Adjust mobile size
+    },
+    rightTriangle: {
+      bottom: '-120px', // Adjust mobile position
+      right: '5px', // Adjust mobile position
+      width: '20px', // Adjust mobile size
+      height: '200px', // Adjust mobile size
+    },
+  },
+};
+
+Object.keys(mediaQueries).forEach((media) => {
+  const stylesMedia = mediaQueries[media];
+  Object.keys(stylesMedia).forEach((key) => {
+    styles[key] = { ...styles[key], ...stylesMedia[key] };
+  });
+});
 
 export default Homepage;
 
