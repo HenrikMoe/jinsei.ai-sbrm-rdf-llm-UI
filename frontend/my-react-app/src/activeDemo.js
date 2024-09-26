@@ -15,9 +15,9 @@ const demoData = [
     description: "This is a description for Demo 1.",
     steps: [
       {
-        id: 'step1',
-        title: 'Step 1 Title',
-        description: 'Description for Step 1',
+        id: 'All Packages, Services, Dynamic Canvas',
+        title: 'All Packages, Services, Dynamic Canvas',
+        description: 'All Packages, Services, Dynamic Canvas',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/587415ec-65a6-4e7a-980e-5d02b313a888/playlist.m3u8"
 
       },
@@ -44,15 +44,27 @@ const demoData = [
     steps: [
       {
         id: 'step1',
-        title: 'Step 1 Title',
+        title: 'Creating a transformer',
         description: 'Description for Step 1',
-        videoUrl: "https://example.com/video4.mp4"
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/d355d215-a96a-48b6-8bcc-9c81d0ab3458/playlist.m3u8"
       },
       {
         id: 'step2',
         title: 'Step 2 Title',
         description: 'Description for Step 2',
-        videoUrl: "https://example.com/video5.mp4"
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/65b3052f-8a28-424c-8bd6-1373e9ab5693/playlist.m3u8"
+      },
+      {
+        id: 'step2',
+        title: 'Step 2 Title',
+        description: 'Description for Step 2',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/65b3052f-8a28-424c-8bd6-1373e9ab5693/playlist.m3u8"
+      },
+      {
+        id: 'step2',
+        title: 'Step 2 Title',
+        description: 'Description for Step 2',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/65b3052f-8a28-424c-8bd6-1373e9ab5693/playlist.m3u8"
       }
     ]
   },
