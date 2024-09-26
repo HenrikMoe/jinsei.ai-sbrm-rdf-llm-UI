@@ -16,8 +16,8 @@ const demoData = [
     steps: [
       {
         id: 'All Packages, Services, Dynamic Canvas',
-        title: 'All Packages, Services, Dynamic Canvas',
-        description: 'All Packages, Services, Dynamic Canvas',
+        title: ' All Packages, Services, Dynamic Canvas',
+        description: 'Note the 3 section of the Jinsei.ai Control Panel.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/587415ec-65a6-4e7a-980e-5d02b313a888/playlist.m3u8"
 
       },
@@ -44,27 +44,33 @@ const demoData = [
     steps: [
       {
         id: 'step1',
-        title: 'Creating a transformer',
-        description: 'Description for Step 1',
+        title: 'Create a transformer',
+        description: 'Click on Jinsei API in All Packages. Then select category and create transformer.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/d355d215-a96a-48b6-8bcc-9c81d0ab3458/playlist.m3u8"
       },
       {
         id: 'step2',
-        title: 'Step 2 Title',
-        description: 'Description for Step 2',
+        title: 'Add training data',
+        description: 'Upload training data for the transformer. Typically previous work for some process. You can also add silo transformers for sequential or asynchrouns processes.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/65b3052f-8a28-424c-8bd6-1373e9ab5693/playlist.m3u8"
       },
       {
         id: 'step2',
-        title: 'Step 2 Title',
-        description: 'Description for Step 2',
-        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/65b3052f-8a28-424c-8bd6-1373e9ab5693/playlist.m3u8"
+        title: 'Choose, tune, and test LLM',
+        description: 'Select the LLM library and tune its parameters.',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/389e5d7d-f7bf-47af-a72a-f5d926d13445/playlist.m3u8"
       },
       {
         id: 'step2',
-        title: 'Step 2 Title',
-        description: 'Description for Step 2',
-        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/65b3052f-8a28-424c-8bd6-1373e9ab5693/playlist.m3u8"
+        title: 'Publish and share LLM',
+        description: 'Share your model internally using onPrem IAM or publish a licensable version to the Jinsei API.',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/9e7945aa-32b6-4f92-b33f-80ca787db02b/playlist.m3u8"
+      },
+      {
+        id: 'step2',
+        title: 'Auto-added to control panel',
+        description: 'Your new transformer is added to All Packages in the Control Panel.',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/41d53115-738e-4ef3-93a0-d224de0ca256/playlist.m3u8"
       }
     ]
   },
@@ -227,7 +233,7 @@ const DemoPlayer = ({ demo, onBack }) => {
             src={currentStep.videoUrl}
             autoPlay={false}
             controls={true}
-            width={isMobile ? "300px" : "400px"}
+            width={isMobile ? "300px" : "600px"}
             height={isMobile ? "200px" : "300px"}
             style={styles.video}
           />
