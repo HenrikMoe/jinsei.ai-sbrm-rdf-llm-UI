@@ -17,21 +17,21 @@ const demoData = [
       {
         id: 'All Packages, Services, Dynamic Canvas',
         title: ' All Packages, Services, Dynamic Canvas',
-        description: 'Note the 3 section of the Jinsei.ai Control Panel.',
-        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/587415ec-65a6-4e7a-980e-5d02b313a888/playlist.m3u8"
+        description: 'All Packs contains Transformers [T] Reports [R] and Services [S]. In the bottom right canvas section you can view report files and manage service configurations.',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/47af1211-38a1-4758-a9a2-020840928d9e/playlist.m3u8"
 
       },
       {
         id: 'step2',
-        title: 'Step 2 Title',
-        description: 'Description for Step 2',
-        videoUrl: "https://example.com/video2.mp4"
+        title: 'View Jinsei.ai Transformers',
+        description: 'View transformers. View silo structures, training data, and test the model.',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/3e042af0-7349-4f68-8f88-6c249024c52a/playlist.m3u8"
       },
       {
         id: 'step3',
-        title: 'Step 3 Title',
-        description: 'Description for Step 3',
-        videoUrl: "https://example.com/video3.mp4"
+        title: 'View Reports ',
+        description: 'Reports render dynamically in an extension you choose.',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/2962d14f-e016-46fa-b26e-c51ce8c2fb27/playlist.m3u8"
       },
     ]
   },
