@@ -5,6 +5,7 @@ import Transformer from './noun-transformer-5878572.png'
 import ERP from './noun-enterprise-7090016.png'
 // Sample Demo Data
 
+import HlsPlayer from 'react-hls-player';
 
 const demoData = [
   {
@@ -17,7 +18,7 @@ const demoData = [
         id: 'step1',
         title: 'Step 1 Title',
         description: 'Description for Step 1',
-        videoUrl: "https://example.com/video1.mp4"
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/587415ec-65a6-4e7a-980e-5d02b313a888/playlist.m3u8"
 
       },
       {
@@ -210,14 +211,14 @@ const DemoPlayer = ({ demo, onBack }) => {
 > &#8592; {/* Left Arrow */}</button> {/* Back Button */}
 
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <video 
-          width={isMobile ? "300" : "400"} 
-          controls 
-          style={styles.video}
-        >
-          <source src={currentStep.videoUrl} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <HlsPlayer
+            src={currentStep.videoUrl}
+            autoPlay={false}
+            controls={true}
+            width={isMobile ? "300px" : "400px"}
+            height={isMobile ? "200px" : "300px"}
+            style={styles.video}
+          />
         <h2 style={styles.videoTitle}>{currentStep.title}</h2>
         <p style={styles.description}>{currentStep.description}</p>
 
@@ -344,7 +345,8 @@ mobileScrollButton: {
     flex: '1',
     display: 'flex',
     marginTop: '-150px',
-  
+    padding: '0px',
+
     flexDirection: 'column',
     justifyContent: 'center',
   },
@@ -357,6 +359,7 @@ mobileScrollButton: {
   },
   video: {
     borderRadius: '8px',
+    padding: '0px 0px 0px 0px',
     boxShadow: `
     10px 20px 15px rgba(0, 0, 0, 0.25),  
     15px 10px 10px rgba(0, 0, 0, 0.15)
@@ -384,6 +387,7 @@ mobileScrollButton: {
   scrollButton2: {
     backgroundColor: 'rgb(143, 107, 107)',
     color: '#fff',
+    marginTop: '90px',
     boxShadow: `
     10px 20px 15px rgba(0, 0, 0, 0.25),  
     15px 10px 10px rgba(0, 0, 0, 0.15)
