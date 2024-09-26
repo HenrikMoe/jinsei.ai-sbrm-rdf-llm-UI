@@ -6,9 +6,10 @@ const About = () => {
     <div className="center-div">
       <h1 className='aboutJinsei7'>Limitless Operator Automation.</h1>
       <div className='aboutJinsei'>
-      Jinsei.ai is centered around flexibility. Whether creating multi-silo transformers for long data analysis tasks or licensing end-to-end automated processes to partners, Jinsei.ai delivers powerful automation for your business. 
+      We're building the ultimate LLM training ground. 
       </div>
       <div className='aboutJinsei'>
+      Whether creating multi-silo transformers for long data analysis tasks or licensing end-to-end automated processes to partners, Jinsei.ai delivers powerful automation for your business. 
       Jinsei.ai provides best in class automated process hosting through bleeding edge in-house service infrastructure,.
       </div>
     

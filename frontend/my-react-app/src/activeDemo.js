@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-
+import control from './noun-control-panel-7093048.png'
+import Config from './config.png'
+import Transformer from './noun-transformer-5878572.png'
+import ERP from './noun-enterprise-7090016.png'
 // Sample Demo Data
 
 
@@ -7,6 +10,7 @@ const demoData = [
   {
     id: "demo1",
     title: "Control Panel Overview",
+    image: control,
     description: "This is a description for Demo 1.",
     steps: [
       {
@@ -14,6 +18,7 @@ const demoData = [
         title: 'Step 1 Title',
         description: 'Description for Step 1',
         videoUrl: "https://example.com/video1.mp4"
+
       },
       {
         id: 'step2',
@@ -31,6 +36,8 @@ const demoData = [
   },
   {
     id: "demo2",
+    image: Transformer,
+
     title: "Creating a Transformer",
     description: "This is a description for Demo 2.",
     steps: [
@@ -51,6 +58,8 @@ const demoData = [
   {
     id: "demo3",
     title: "Launching a Transformer",
+    image: Config,
+
     description: "This is a description for Demo 3.",
     steps: [
       {
@@ -63,6 +72,8 @@ const demoData = [
   },
   {
     id: "demo4",
+    image: ERP,
+
     title: "Multi-Transformer Automation",
     description: "This is a description for Demo 4.",
     steps: [
@@ -97,7 +108,7 @@ const styles2 = {
   container: {
     padding: '20px',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: 'white',
     width: isMobile ? '83%' : '100%',
     borderRadius: '8px',
     boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
@@ -159,6 +170,7 @@ const DemoSelection = ({ onDemoSelect }) => {
           onClick={() => onDemoSelect(demo)}
           style={styles.button}
         >
+          <img src={demo.image} alt={`${demo.title} icon`} style={{ width: '30px', height: '30px', marginRight: '10px' }} />
           {demo.title}
         </button>
       ))}
@@ -272,7 +284,7 @@ const styles = {
   container: {
     padding: '20px',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: 'white',
     width: '100%',
     borderRadius: '8px',
     boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
@@ -309,15 +321,15 @@ mobileScrollButton: {
   transition: 'background-color 0.3s',
 },
   button: {
-    backgroundColor: 'rgb(69, 154, 196)', // Warm color
-    color: '#fff',
+    backgroundColor: '#F8FAFC', // Warm color
+    color: 'rgb(33, 31, 31)',
     border: 'none',
     borderRadius: '4px',
     fontSize:  '25px', // Conditionally adjust font size
     padding: '10px 20px',
     boxShadow: `
-      10px 20px 15px rgba(0, 0, 0, 0.25),  
-      15px 10px 10px rgba(0, 0, 0, 0.15)
+      10px 20px 15px rgba(148, 148, 148, 1),  
+      15px 10px 10px rgba(148, 148, 148, 1)
     `,
     margin: '25px 0',
     cursor: 'pointer',
