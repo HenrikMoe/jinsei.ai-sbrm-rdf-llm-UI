@@ -24,7 +24,7 @@ const demoData = [
       {
         id: 'step2',
         title: 'View Jinsei.ai Transformers',
-        description: 'View transformers. View silo structures, training data, and test the model.',
+        description: 'View onPrem or publically available LLMs. View silo structures, training data, and test models.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/3e042af0-7349-4f68-8f88-6c249024c52a/playlist.m3u8"
       },
       {
@@ -83,10 +83,63 @@ const demoData = [
     steps: [
       {
         id: 'step1',
+        title: 'Create a service',
+        description: 'Services host your AI automation processes.',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/c5467b40-3563-4d1c-b6d7-80241e64b1e4/playlist.m3u8"
+      },
+      {
+        id: 'step1',
+        title: 'Add a transformer',
+        description: 'Add a transformer to your selected service from the All Packages menu.',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/2b131d53-8548-460f-8b72-d357e5bcde18/playlist.m3u8"
+      },
+      {
+        id: 'step1',
+        title: 'Configure Inputs',
+        description: 'Declare the inputs for the transformer. CDN, Postgre, Excel Query, and file runner apps for active directory use.',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/f463d8ea-4973-483f-a288-f3b6ddd68a85/playlist.m3u8"
+      },
+      {
+        id: 'step1',
         title: 'Step 1 Title',
         description: 'Description for Step 1',
-        videoUrl: "https://example.com/video6.mp4"
-      }
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/fedcffcc-60af-4b49-9ca1-85f4c0aeb84e/playlist.m3u8"
+      },
+      {
+        
+        id: 'step1',
+        title: 'Step 1 Title',
+        description: 'Description for Step 1',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/041a5ef7-a9ea-43e8-b8c9-af7f0205a0f6/playlist.m3u8"
+      },
+      {
+        
+        id: 'step1',
+        title: 'Step 1 Title',
+        description: 'Description for Step 1',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/3a9eb518-912a-44b5-abbe-ea6222ba52dc/playlist.m3u8"
+      },
+      {
+        
+        id: 'step1',
+        title: 'Step 1 Title',
+        description: 'Description for Step 1',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/35fbdaff-9d66-4629-83a0-ee0690ba5205/playlist.m3u8"
+      },
+      {
+        
+        id: 'step1',
+        title: 'Step 1 Title',
+        description: 'Description for Step 1',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/f1fd1391-3ebd-409e-82f8-052dfd76bd5a/playlist.m3u8"
+      },
+      {
+        
+        id: 'step1',
+        title: 'Step 1 Title',
+        description: 'Description for Step 1',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/5e2b5935-452c-4d83-a430-4a481e18da29/playlist.m3u8"
+      },
     ]
   },
   {
@@ -100,19 +153,25 @@ const demoData = [
         id: 'step1',
         title: 'Step 1 Title',
         description: 'Description for Step 1',
-        videoUrl: "https://example.com/video7.mp4"
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/e02c27bc-c994-40d7-83f2-0654bf6a3ca2/playlist.m3u8"
       },
       {
         id: 'step2',
         title: 'Step 2 Title',
         description: 'Description for Step 2',
-        videoUrl: "https://example.com/video8.mp4"
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/6bd87e59-fe10-49ef-b847-17e914a9a1b1/playlist.m3u8"
       },
       {
         id: 'step3',
         title: 'Step 3 Title',
         description: 'Description for Step 3',
-        videoUrl: "https://example.com/video9.mp4"
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/904af0a3-9e52-4ab4-ad41-4fe4a98214be/playlist.m3u8"
+      },
+      {
+        id: 'step3',
+        title: 'Step 3 Title',
+        description: 'Description for Step 3',
+        videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/96d7f89d-6783-4828-9554-77daf156758a/playlist.m3u8"
       }
     ]
   }
@@ -231,7 +290,7 @@ const DemoPlayer = ({ demo, onBack }) => {
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <HlsPlayer
             src={currentStep.videoUrl}
-            autoPlay={false}
+            autoPlay={true}
             controls={true}
             width={isMobile ? "300px" : "600px"}
             height={isMobile ? "200px" : "300px"}
