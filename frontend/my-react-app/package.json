@@ -28,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",
     "react-file-viewer": "^0.5.0",
+    "react-hls-player": "^3.0.7",
     "react-i18next": "^13.3.0",
     "react-icons": "^4.9.0",
     "react-modal": "^3.16.1",
