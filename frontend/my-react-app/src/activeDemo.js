@@ -15,20 +15,20 @@ const demoData = [
     description: "This is a description for Demo 1.",
     steps: [
       {
-        id: 'All Packages, Services, Dynamic Canvas',
+        id: 'Control Panel Overview',
         title: ' All Packages, Services, Dynamic Canvas',
         description: 'All Packs contains Transformers [T] Reports [R] and Services [S]. In the bottom right canvas section you can view report files and manage service configurations.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/47af1211-38a1-4758-a9a2-020840928d9e/playlist.m3u8"
 
       },
       {
-        id: 'step2',
+        id: 'Control Panel Overview',
         title: 'View Jinsei.ai Transformers',
         description: 'View onPrem or publically available LLMs. View silo structures, training data, and test models.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/3e042af0-7349-4f68-8f88-6c249024c52a/playlist.m3u8"
       },
       {
-        id: 'step3',
+        id: 'Control Panel Overview',
         title: 'View Reports ',
         description: 'Reports render dynamically in an extension you choose.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/2962d14f-e016-46fa-b26e-c51ce8c2fb27/playlist.m3u8"
@@ -43,31 +43,31 @@ const demoData = [
     description: "This is a description for Demo 2.",
     steps: [
       {
-        id: 'step1',
+        id: 'Creating a Transformer',
         title: 'Create a transformer',
         description: 'Click on Jinsei API in All Packages. Then select category and create transformer.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/d355d215-a96a-48b6-8bcc-9c81d0ab3458/playlist.m3u8"
       },
       {
-        id: 'step2',
+        id: 'Creating a Transformer',
         title: 'Add training data',
         description: 'Upload training data for the transformer. Typically previous work for some process. You can also add silo transformers for sequential or asynchrouns processes.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/65b3052f-8a28-424c-8bd6-1373e9ab5693/playlist.m3u8"
       },
       {
-        id: 'step2',
+        id: 'Creating a Transformer',
         title: 'Choose, tune, and test LLM',
         description: 'Select the LLM library and tune its parameters.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/389e5d7d-f7bf-47af-a72a-f5d926d13445/playlist.m3u8"
       },
       {
-        id: 'step2',
+        id: 'Creating a Transformer',
         title: 'Publish and share LLM',
         description: 'Share your model internally using onPrem IAM or publish a licensable version to the Jinsei API.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/9e7945aa-32b6-4f92-b33f-80ca787db02b/playlist.m3u8"
       },
       {
-        id: 'step2',
+        id: 'Creating a Transformer',
         title: 'Auto-added to control panel',
         description: 'Your new transformer is added to All Packages in the Control Panel.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/41d53115-738e-4ef3-93a0-d224de0ca256/playlist.m3u8"
@@ -82,60 +82,60 @@ const demoData = [
     description: "This is a description for Demo 3.",
     steps: [
       {
-        id: 'step1',
+        id: 'Launching a Transformer',
         title: 'Create a service',
         description: 'Services host your AI automation processes.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/c5467b40-3563-4d1c-b6d7-80241e64b1e4/playlist.m3u8"
       },
       {
-        id: 'step1',
+        id: 'Launching a Transformer',
         title: 'Add a transformer',
         description: 'Add a transformer to your selected service from the All Packages menu.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/2b131d53-8548-460f-8b72-d357e5bcde18/playlist.m3u8"
       },
       {
-        id: 'step1',
+        id: 'Launching a Transformer',
         title: 'Configure Inputs',
         description: 'Declare the inputs for the transformer. CDN, Postgre, Excel Query, and file runner apps for active directory use.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/f463d8ea-4973-483f-a288-f3b6ddd68a85/playlist.m3u8"
       },
       {
-        id: 'step1',
+        id: 'Launching a Transformer',
         title: 'Step 1 Title',
         description: 'Description for Step 1',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/fedcffcc-60af-4b49-9ca1-85f4c0aeb84e/playlist.m3u8"
       },
       {
         
-        id: 'step1',
+        id: 'Launching a Transformer',
         title: 'Step 1 Title',
         description: 'Description for Step 1',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/041a5ef7-a9ea-43e8-b8c9-af7f0205a0f6/playlist.m3u8"
       },
       {
         
-        id: 'step1',
+        id: 'Launching a Transformer',
         title: 'Step 1 Title',
         description: 'Description for Step 1',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/3a9eb518-912a-44b5-abbe-ea6222ba52dc/playlist.m3u8"
       },
       {
         
-        id: 'step1',
+        id: 'Launching a Transformer',
         title: 'Step 1 Title',
         description: 'Description for Step 1',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/35fbdaff-9d66-4629-83a0-ee0690ba5205/playlist.m3u8"
       },
       {
         
-        id: 'step1',
+        id: 'Launching a Transformer',
         title: 'Step 1 Title',
         description: 'Description for Step 1',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/f1fd1391-3ebd-409e-82f8-052dfd76bd5a/playlist.m3u8"
       },
       {
         
-        id: 'step1',
+        id: 'Launching a Transformer',
         title: 'Step 1 Title',
         description: 'Description for Step 1',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/5e2b5935-452c-4d83-a430-4a481e18da29/playlist.m3u8"
@@ -150,25 +150,25 @@ const demoData = [
     description: "This is a description for Demo 4.",
     steps: [
       {
-        id: 'step1',
+        id: 'Multi-Transformer Automation',
         title: 'Step 1 Title',
         description: 'Description for Step 1',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/e02c27bc-c994-40d7-83f2-0654bf6a3ca2/playlist.m3u8"
       },
       {
-        id: 'step2',
+        id: 'Multi-Transformer Automation',
         title: 'Step 2 Title',
         description: 'Description for Step 2',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/6bd87e59-fe10-49ef-b847-17e914a9a1b1/playlist.m3u8"
       },
       {
-        id: 'step3',
+        id: 'Multi-Transformer Automation',
         title: 'Step 3 Title',
         description: 'Description for Step 3',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/904af0a3-9e52-4ab4-ad41-4fe4a98214be/playlist.m3u8"
       },
       {
-        id: 'step3',
+        id: 'Multi-Transformer Automation',
         title: 'Step 3 Title',
         description: 'Description for Step 3',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/96d7f89d-6783-4828-9554-77daf156758a/playlist.m3u8"
@@ -286,7 +286,7 @@ const DemoPlayer = ({ demo, onBack }) => {
       <button onClick={onBack} 
               style={isMobile ? styles.mobileScrollButton : styles.scrollButton2}
 > &#8592; {/* Left Arrow */}</button> {/* Back Button */}
-
+<h3 style={isMobile ? styles.titlepartmob : styles.titlepart}>{currentStep.id}</h3>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <HlsPlayer
             src={currentStep.videoUrl}
@@ -394,7 +394,7 @@ mobileScrollButton: {
   marginLeft: '20px',  // Auto margin for centering
   marginBottom: '10px',
   borderRadius: '4px',
-  marginTop: '-80px',
+  marginTop: '0px',
   cursor: 'pointer',
   transition: 'background-color 0.3s',
 },
@@ -416,6 +416,14 @@ mobileScrollButton: {
   buttonHover: {
     backgroundColor: '#e64a19', // Darker on hover
     transform: 'scale(1.05)',
+  },
+  titlepart: {
+
+    marginTop: '0px',
+    marginBottom: '40px',
+    textAlign: 'center', marginRight: '00px'
+  },
+   titlepartmob: {
   },
   demoPlayer: {
     textAlign: 'center',
@@ -464,7 +472,7 @@ mobileScrollButton: {
   scrollButton2: {
     backgroundColor: 'rgb(143, 107, 107)',
     color: '#fff',
-    marginTop: '90px',
+    marginTop: '140px',
     boxShadow: `
     10px 20px 15px rgba(0, 0, 0, 0.25),  
     15px 10px 10px rgba(0, 0, 0, 0.15)
