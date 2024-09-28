@@ -5,7 +5,6 @@ services:
     build:
       context: ./frontend/my-react-app
       dockerfile: Dockerfile
-    timeout: 600 
     ports:
       - "8080:80"
     networks:
