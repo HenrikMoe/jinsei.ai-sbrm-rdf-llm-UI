@@ -290,7 +290,7 @@ const DemoPlayer = ({ demo, onBack }) => {
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <HlsPlayer
             src={currentStep.videoUrl}
-            autoPlay={true}
+            autoPlay={isMobile ? false : true}
             controls={true}
             width={isMobile ? "300px" : "600px"}
             height={isMobile ? "200px" : "300px"}
@@ -394,7 +394,7 @@ mobileScrollButton: {
   marginLeft: '20px',  // Auto margin for centering
   marginBottom: '10px',
   borderRadius: '4px',
-  marginTop: '0px',
+  marginTop: '40px',
   cursor: 'pointer',
   transition: 'background-color 0.3s',
 },
