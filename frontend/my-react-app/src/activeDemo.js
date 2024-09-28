@@ -16,8 +16,8 @@ const demoData = [
     steps: [
       {
         id: 'Control Panel Overview',
-        title: ' All Packages, Services, Dynamic Canvas',
-        description: 'All Packs contains Transformers [T] Reports [R] and Services [S]. In the bottom right canvas section you can view report files and manage service configurations.',
+        title: 'Multi-Window Jinsei.ai Control Panel',
+        description: 'All Packages contains Transformers [T] Reports [R] and Services [S]. In the bottom right canvas section you can view report files and manage service configurations.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/47af1211-38a1-4758-a9a2-020840928d9e/playlist.m3u8"
 
       },
@@ -29,8 +29,8 @@ const demoData = [
       },
       {
         id: 'Control Panel Overview',
-        title: 'View Reports ',
-        description: 'Reports render dynamically in an extension you choose.',
+        title: 'View and Download Reports In Any Format.',
+        description: 'Reports render dynamically in any extension.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/2962d14f-e016-46fa-b26e-c51ce8c2fb27/playlist.m3u8"
       },
     ]
@@ -44,31 +44,31 @@ const demoData = [
     steps: [
       {
         id: 'Creating a Transformer',
-        title: 'Create a transformer',
+        title: 'Create a Transformer',
         description: 'Click on Jinsei API in All Packages. Then select category and create transformer.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/d355d215-a96a-48b6-8bcc-9c81d0ab3458/playlist.m3u8"
       },
       {
         id: 'Creating a Transformer',
-        title: 'Add training data',
-        description: 'Upload training data for the transformer. Typically previous work for some process. You can also add silo transformers for sequential or asynchrouns processes.',
+        title: 'Add Training Data',
+        description: 'Upload training data for the transformer. Usually previous work for some process. Add additional silo transformers for sequential or asynchrouns processes.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/65b3052f-8a28-424c-8bd6-1373e9ab5693/playlist.m3u8"
       },
       {
         id: 'Creating a Transformer',
-        title: 'Choose, tune, and test LLM',
+        title: 'Choose, Tune, and Test LLM',
         description: 'Select the LLM library and tune its parameters.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/389e5d7d-f7bf-47af-a72a-f5d926d13445/playlist.m3u8"
       },
       {
         id: 'Creating a Transformer',
-        title: 'Publish and share LLM',
+        title: 'Publish and Share LLM',
         description: 'Share your model internally using onPrem IAM or publish a licensable version to the Jinsei API.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/9e7945aa-32b6-4f92-b33f-80ca787db02b/playlist.m3u8"
       },
       {
         id: 'Creating a Transformer',
-        title: 'Auto-added to control panel',
+        title: 'Auto-Added to Control Panel',
         description: 'Your new transformer is added to All Packages in the Control Panel.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/41d53115-738e-4ef3-93a0-d224de0ca256/playlist.m3u8"
       }
@@ -83,61 +83,61 @@ const demoData = [
     steps: [
       {
         id: 'Launching a Transformer',
-        title: 'Create a service',
-        description: 'Services host your AI automation processes.',
+        title: 'Create a Service',
+        description: 'Jinsei.ai Services host your AI automation processes.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/c5467b40-3563-4d1c-b6d7-80241e64b1e4/playlist.m3u8"
       },
       {
         id: 'Launching a Transformer',
-        title: 'Add a transformer',
+        title: 'Add a Transformer',
         description: 'Add a transformer to your selected service from the All Packages menu.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/2b131d53-8548-460f-8b72-d357e5bcde18/playlist.m3u8"
       },
       {
         id: 'Launching a Transformer',
         title: 'Configure Inputs',
-        description: 'Declare the inputs for the transformer. CDN, Postgre, Excel Query, and file runner apps for active directory use.',
+        description: 'Declare the inputs for the transformer. Choose from hundreds of options including CDN, Postgre, Excel Query, and file runner apps for active directory use.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/f463d8ea-4973-483f-a288-f3b6ddd68a85/playlist.m3u8"
       },
       {
         id: 'Launching a Transformer',
-        title: 'Step 1 Title',
-        description: 'Description for Step 1',
+        title: 'Installing a File Runner',
+        description: 'File Runner applications get auto generated with your path configuration. Download and install them relative to their configured paths.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/fedcffcc-60af-4b49-9ca1-85f4c0aeb84e/playlist.m3u8"
       },
       {
         
         id: 'Launching a Transformer',
-        title: 'Step 1 Title',
-        description: 'Description for Step 1',
+        title: 'Viewing Runner Apps',
+        description: 'Opening a runner app in a desktop finder UI will open the config of the runner. There you can modify your installed runner.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/041a5ef7-a9ea-43e8-b8c9-af7f0205a0f6/playlist.m3u8"
       },
       {
         
         id: 'Launching a Transformer',
-        title: 'Step 1 Title',
-        description: 'Description for Step 1',
+        title: 'Confiruing Transformer Outputs',
+        description: 'Declare transformer outputs in a similar manner to inputs. Use Iam packages for system integration.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/3a9eb518-912a-44b5-abbe-ea6222ba52dc/playlist.m3u8"
       },
       {
         
         id: 'Launching a Transformer',
-        title: 'Step 1 Title',
-        description: 'Description for Step 1',
+        title: 'Output File Runners',
+        description: 'Output file runners are declared on input runner apps or can be installed independently.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/35fbdaff-9d66-4629-83a0-ee0690ba5205/playlist.m3u8"
       },
       {
         
         id: 'Launching a Transformer',
-        title: 'Step 1 Title',
-        description: 'Description for Step 1',
+        title: 'Running a Process Manually',
+        description: 'Drop files into the path of a runner app to manually run a transformer.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/f1fd1391-3ebd-409e-82f8-052dfd76bd5a/playlist.m3u8"
       },
       {
         
         id: 'Launching a Transformer',
-        title: 'Step 1 Title',
-        description: 'Description for Step 1',
+        title: 'View Transformer Outputs',
+        description: 'After manually starting a transformer you can view the output file in its assigned directory.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/5e2b5935-452c-4d83-a430-4a481e18da29/playlist.m3u8"
       },
     ]
@@ -151,26 +151,26 @@ const demoData = [
     steps: [
       {
         id: 'Multi-Transformer Automation',
-        title: 'Step 1 Title',
-        description: 'Description for Step 1',
+        title: 'Adding a Second Transformer',
+        description: 'Add a second transformer to a Jinsei.ai hosted process from the All Packages menu.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/e02c27bc-c994-40d7-83f2-0654bf6a3ca2/playlist.m3u8"
       },
       {
         id: 'Multi-Transformer Automation',
-        title: 'Step 2 Title',
-        description: 'Description for Step 2',
+        title: 'Configure Transformers Together',
+        description: 'Declare the data output from the first transformer as input to the second transformer.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/6bd87e59-fe10-49ef-b847-17e914a9a1b1/playlist.m3u8"
       },
       {
         id: 'Multi-Transformer Automation',
-        title: 'Step 3 Title',
-        description: 'Description for Step 3',
+        title: 'Add N Transformers',
+        description: 'Jinsei.ai provides multiple layers of moduability. The first layer is in the transformers themselves with multi-silo capability. The second layer is here in the services level, where N transformers can be combined in declarable configurations.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/904af0a3-9e52-4ab4-ad41-4fe4a98214be/playlist.m3u8"
       },
       {
         id: 'Multi-Transformer Automation',
-        title: 'Step 3 Title',
-        description: 'Description for Step 3',
+        title: 'Run the Service',
+        description: 'Manually run the service using the controls. Assign an execution rate in the configs.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/96d7f89d-6783-4828-9554-77daf156758a/playlist.m3u8"
       }
     ]
