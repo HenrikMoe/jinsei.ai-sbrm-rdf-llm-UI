@@ -394,7 +394,7 @@ mobileScrollButton: {
   marginLeft: '20px',  // Auto margin for centering
   marginBottom: '10px',
   borderRadius: '4px',
-  marginTop: '40px',
+  marginTop: '80px',
   cursor: 'pointer',
   transition: 'background-color 0.3s',
 },
