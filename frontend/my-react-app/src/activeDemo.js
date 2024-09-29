@@ -394,7 +394,7 @@ mobileScrollButton: {
   marginLeft: '20px',  // Auto margin for centering
   marginBottom: '10px',
   borderRadius: '4px',
-  marginTop: '80px',
+  marginTop: '160px',
   cursor: 'pointer',
   transition: 'background-color 0.3s',
 },
@@ -472,7 +472,7 @@ mobileScrollButton: {
   scrollButton2: {
     backgroundColor: 'rgb(143, 107, 107)',
     color: '#fff',
-    marginTop: '140px',
+    marginTop: '200px',
     boxShadow: `
     10px 20px 15px rgba(0, 0, 0, 0.25),  
     15px 10px 10px rgba(0, 0, 0, 0.15)
