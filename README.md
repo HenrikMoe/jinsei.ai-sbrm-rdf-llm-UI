@@ -1,13 +1,1 @@
-## Jinsei.ai Commercial Landing Platform + TS Prototype Technology
-
-### TS Boilderplate Prompt Live Matrix Training: 
-https://github.com/HenrikMoe/jinsei.ai-sbrm-rdf-llm-UI/blob/main/backend/matrixContextChatBoiler.js
-
-### TS Boilerplate Prompt (content) Training: 
-https://github.com/HenrikMoe/jinsei.ai-sbrm-rdf-llm-UI/blob/main/backend/server.js
-
-### Declaritve TS SpreadSheet UI: 
-https://github.com/HenrikMoe/jinsei.ai-sbrm-rdf-llm-UI/blob/main/frontend/my-react-app/src/dataManagement.js
-
-#### Copyright 2024 Jinsei Corp
- 
+## Welcome! Reachout by email to get involved in the project -> henrik@jinsei.ai
