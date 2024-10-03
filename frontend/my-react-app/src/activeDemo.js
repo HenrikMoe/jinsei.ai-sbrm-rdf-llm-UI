@@ -15,20 +15,20 @@ const demoData = [
     description: "This is a description for Demo 1.",
     steps: [
       {
-        id: 'Control Panel Overview',
+        id: 'Dashboard Overview',
         title: 'Multi-Window Jinsei.ai Dashboard',
         description: 'The All Packages section contains Transformers [T] Reports [R] and Services [S]. In the bottom right canvas section you can view report files and manage service configurations.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/47af1211-38a1-4758-a9a2-020840928d9e/playlist.m3u8"
 
       },
       {
-        id: 'Control Panel Overview',
+        id: 'Dashboard Overview',
         title: 'View Jinsei.ai Transformers',
         description: 'View onPrem or publically available LLMs. View silo structures, training data, and test models.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/3e042af0-7349-4f68-8f88-6c249024c52a/playlist.m3u8"
       },
       {
-        id: 'Control Panel Overview',
+        id: 'Dashboard Overview',
         title: 'View and Download Reports In Any Format.',
         description: 'Reports render dynamically in any extension.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/2962d14f-e016-46fa-b26e-c51ce8c2fb27/playlist.m3u8"
