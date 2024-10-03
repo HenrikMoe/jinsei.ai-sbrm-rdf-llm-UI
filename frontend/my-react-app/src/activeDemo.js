@@ -10,14 +10,14 @@ import HlsPlayer from 'react-hls-player';
 const demoData = [
   {
     id: "demo1",
-    title: "Control Panel Overview",
+    title: "Dashboard Overview",
     image: control,
     description: "This is a description for Demo 1.",
     steps: [
       {
         id: 'Control Panel Overview',
-        title: 'Multi-Window Jinsei.ai Control Panel',
-        description: 'All Packages contains Transformers [T] Reports [R] and Services [S]. In the bottom right canvas section you can view report files and manage service configurations.',
+        title: 'Multi-Window Jinsei.ai Dashboard',
+        description: 'The All Packages section contains Transformers [T] Reports [R] and Services [S]. In the bottom right canvas section you can view report files and manage service configurations.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/47af1211-38a1-4758-a9a2-020840928d9e/playlist.m3u8"
 
       },
@@ -51,7 +51,7 @@ const demoData = [
       {
         id: 'Creating a Transformer',
         title: 'Add Training Data',
-        description: 'Upload training data for the transformer. Usually previous work for some process. Add additional silo transformers for sequential or asynchrouns processes.',
+        description: 'Upload training data for the transformer. Usually previous work for some process. Add additional silo transformers for sequential or asynchronus processes.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/65b3052f-8a28-424c-8bd6-1373e9ab5693/playlist.m3u8"
       },
       {
@@ -68,8 +68,8 @@ const demoData = [
       },
       {
         id: 'Creating a Transformer',
-        title: 'Auto-Added to Control Panel',
-        description: 'Your new transformer is added to All Packages in the Control Panel.',
+        title: 'Auto-Added to Dashboard',
+        description: 'Your new transformer is added to All Packages in the Dashboard.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/41d53115-738e-4ef3-93a0-d224de0ca256/playlist.m3u8"
       }
     ]
@@ -84,7 +84,7 @@ const demoData = [
       {
         id: 'Launching a Transformer',
         title: 'Create a Service',
-        description: 'Jinsei.ai Services host your AI automation processes.',
+        description: 'Jinsei.ai Services section hosts your AI automation processes.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/c5467b40-3563-4d1c-b6d7-80241e64b1e4/playlist.m3u8"
       },
       {
@@ -96,7 +96,7 @@ const demoData = [
       {
         id: 'Launching a Transformer',
         title: 'Configure Inputs',
-        description: 'Declare the inputs for the transformer. Choose from hundreds of options including CDN, Postgre, Excel Query, and file runner apps for active directory use.',
+        description: 'Declare the inputs for the transformer. Choose from dozens of options including CDN, Postgre, Excel Query, and file runner apps for active directory use.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/f463d8ea-4973-483f-a288-f3b6ddd68a85/playlist.m3u8"
       },
       {
@@ -115,7 +115,7 @@ const demoData = [
       {
         
         id: 'Launching a Transformer',
-        title: 'Confiruing Transformer Outputs',
+        title: 'Configuring Transformer Outputs',
         description: 'Declare transformer outputs in a similar manner to inputs. Use Iam packages for system integration.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/3a9eb518-912a-44b5-abbe-ea6222ba52dc/playlist.m3u8"
       },
