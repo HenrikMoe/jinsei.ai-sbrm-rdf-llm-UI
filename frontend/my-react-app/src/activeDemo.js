@@ -441,6 +441,7 @@ mobileScrollButton: {
   description: {
     color: '#666',
     marginBottom: '10px',
+    width: '90%'
   },
   video: {
     borderRadius: '8px',
