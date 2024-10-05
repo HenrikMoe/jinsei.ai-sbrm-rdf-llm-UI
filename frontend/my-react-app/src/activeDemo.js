@@ -17,7 +17,7 @@ const demoData = [
       {
         id: 'Dashboard Overview',
         title: 'Multi-Window Jinsei.ai Dashboard',
-        description: 'The All Packages section contains Transformers, Reports, and Services. The bottom right canvas section views report files and manages service configurations.',
+        description: 'Services list your automation services. The All Packages section contains the full directories of transformers, reports, and services. The bottom right canvas section views report files and manages service configurations.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/47af1211-38a1-4758-a9a2-020840928d9e/playlist.m3u8"
 
       },
