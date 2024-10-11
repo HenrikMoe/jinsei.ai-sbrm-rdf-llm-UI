@@ -6,10 +6,15 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <div className="footer-title">Jinsei Corp:</div>
-          <div>California, USA</div>
-          <div>C-Class Corporation</div>
-          <div>Assets: Joint Venture Distribution</div>
+          <div className="footer-title">Jinsei.ai Corp:</div>
+
+          <div>Team Implementation</div>
+          <div>Cross Industry</div>
+          <div>Intuitive Use</div>
+
+          <div>CA, USA</div>
+
+
         </div>
         <div className="footer-section">
           <div className="footer-title">Contact:</div>
