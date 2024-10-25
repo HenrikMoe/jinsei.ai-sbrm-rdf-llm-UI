@@ -1,3 +1,3 @@
-### Welcome! Reachout by email to get involved in the project.
+### Welcome! For technical information about Jinsei.ai SaaS see https://github.com/HenrikMoe/Service-Infrastructure/tree/main 
 
-### henrik@jinsei.ai | https://jinsei.ai
+Feel free to reachout by email henrik@jinsei.ai 
