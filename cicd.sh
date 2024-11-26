@@ -29,7 +29,11 @@ else
     echo "No image found for jinseiai-sbrm-rdf-llm-ui-frontend."
 fi
 
-# Step 6: Start the services with Docker Compose
+# Step 6: Prune Docker system including volumes to free up space
+echo "Pruning Docker system..."
+docker system prune -a --volumes -f
+
+# Step 7: Start the services with Docker Compose
 echo "Starting Docker services..."
 docker-compose up -d
 
