@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <div className="footer-title">Jinsei.ai Corp:</div>
+          <div className="footer-title">Jinsei Corp:</div>
 
           <div>Team Implementation</div>
           <div>Cross Industry</div>
