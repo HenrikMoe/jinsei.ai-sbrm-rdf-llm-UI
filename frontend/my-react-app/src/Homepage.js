@@ -323,18 +323,23 @@ function Homepage() {
 
     </div>
     <div style={{    marginTop: '300px',marginBottom: '200px'
-}}><iframe
+}}>
+{/*
+<iframe
    src="https://www.youtube.com/embed/t8y8-TjGM5k?rel=0"
    title="YouTube video player"
    frameBorder="0"
    referrerPolicy="strict-origin-when-cross-origin"
    allowFullScreen
- ></iframe> {/* Bottom Right Triangle Shadow */}
+ ></iframe> 
+ */}
  {/* Bottom Right Triangle Shadow */}
+ {/* Bottom Right Triangle Shadow */}
+</div>
  <div style={styles2.bottomRightTriangle} />
 
 {/* Right Triangle Shadow */}
-<div style={styles2.rightTriangle} /></div>
+<div style={styles2.rightTriangle} />
 
 <div className={styles.overlayContainer}>
 
