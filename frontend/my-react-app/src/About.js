@@ -9,9 +9,12 @@ const About = () => {
       We're building the ultimate LLM hosting and sharing service. In the meantime, reachout over Email or LinkedIn.
       </div>
    
-  
+  <div className='aboutJinsei69'>
+     Visit our Github to learn more about the project:  <a href='https://github.com/HenrikMoe/Service-Infrastructure'>Watch</a> 
+      </div>
+    
       <div className='aboutJinsei69'>
-      Build prototype workflows are live on our Youtube channel: <a href='https://www.youtube.com/@Jinsei-AI'>Watch</a> 
+      Check out the PaaS general workflow with out interface demos: <a href='https://www.youtube.com/@Jinsei-AI'>Watch</a> 
       </div>
 
     </div>
