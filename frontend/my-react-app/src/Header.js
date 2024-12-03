@@ -159,7 +159,6 @@ const Header = ({ currentRoute, userInfo }) => {
                   to={button.url}
                   onClick={closeMenu}
                   className="button"
-                  target={button.label === 'Timeline' ? '' : '_blank'}
                 >
                   {button.label}
                 </Link>
