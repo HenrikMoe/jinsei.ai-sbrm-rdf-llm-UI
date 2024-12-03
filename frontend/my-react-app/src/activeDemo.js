@@ -8,136 +8,128 @@ import ERP from './noun-enterprise-7090016.png'
 import HlsPlayer from 'react-hls-player';
 
 const demoData = [
-  {
+   {
     id: "demo1",
     title: "Jinsei Dashboard",
     image: control,
-    description: "This is a description for Demo 1.",
+    description: "Discover the power of managing your digital ecosystem with the Jinsei Dashboard.",
     steps: [
       {
         id: 'Dashboard Overview',
-        title: 'Jinsei Dashboard',
-        description: 'Manage hosted services, Jinsei data transformers, and audit service output data with the Dashboard PaaS.',
+        title: 'Navigate the Jinsei Dashboard',
+        description: 'Explore the Platform as a Service (PaaS) environment where you can manage hosted services, Jinsei's data transformers, and audit data outputs seamlessly.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/47af1211-38a1-4758-a9a2-020840928d9e/playlist.m3u8"
-
       },
       {
-        id: 'Dashboard Overview',
-        title: 'View Transformers',
-        description: 'View private and publically available LLMs. View model silo structures and training data. Test and add models.',
+        id: 'View Transformers',
+        title: 'Explore Transformers',
+        description: 'Dive into both private and public Large Language Models (LLMs). Analyze model architectures, examine training data, and test or integrate new models into your workflow.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/3e042af0-7349-4f68-8f88-6c249024c52a/playlist.m3u8"
       },
       {
-        id: 'Dashboard Overview',
-        title: 'Any Format. Anywhere.',
-        description: 'Automate augmentation of any file extension type.',
+        id: 'File Format Flexibility',
+        title: 'Universal Format Support',
+        description: 'Leverage Jinsei's capability to automate data augmentation across any file type, ensuring your data transformation is as versatile as your needs.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/2962d14f-e016-46fa-b26e-c51ce8c2fb27/playlist.m3u8"
       },
     ]
   },
-  {
+ {
     id: "demo2",
     image: Transformer,
-
     title: "Creating Transformers",
-    description: "This is a description for Demo 2.",
+    description: "Embark on the journey of building your own data transformers with Jinsei.",
     steps: [
       {
-        id: 'Creating Transformers',
-        title: 'Create a Transformer',
-        description: 'Navigate to the Transformers API then declare a categorization.',
+        id: 'Create a Transformer',
+        title: 'Initiate Transformer Creation',
+        description: 'Access the Transformers API to start defining your custom data categorization.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/d355d215-a96a-48b6-8bcc-9c81d0ab3458/playlist.m3u8"
       },
       {
-        id: 'Creating Transformers',
-        title: 'Adding Training Data',
-        description: 'Upload previous file data augmentation work for some process. Add additional transformer silos to detail specifc data augmentation steps in asynchronous or sequential processes.',
+        id: 'Add Training Data',
+        title: 'Train with Data',
+        description: 'Upload existing data augmentation files or create detailed transformer silos for complex data handling sequences.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/65b3052f-8a28-424c-8bd6-1373e9ab5693/playlist.m3u8"
       },
       {
-        id: 'Creating a Transformer',
-        title: 'Choose, Tune, and Test LLM',
-        description: 'Select the appropriate LLM library for the augmentation task. Utilize NLP and Tensorflow transformer silos on the same file.',
+        id: 'Select LLM',
+        title: 'Customize Your LLM',
+        description: 'Choose from a library of LLMs, fine-tune them for your specific tasks, and run tests using NLP and TensorFlow for optimal performance.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/389e5d7d-f7bf-47af-a72a-f5d926d13445/playlist.m3u8"
       },
       {
-        id: 'Creating a Transformer',
-        title: 'Publish and Share LLM',
-        description: 'Share your model internally using on premise interfaces or publish your model to Jinsei API.',
+        id: 'Share Model',
+        title: 'Distribute Your Model',
+        description: 'Decide to keep your model in-house or share it through the Jinsei API for broader utilization.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/9e7945aa-32b6-4f92-b33f-80ca787db02b/playlist.m3u8"
       },
       {
-        id: 'Creating a Transformer',
-        title: 'Added to Control Dashboard',
-        description: 'Time to launch your new transformer model in a service.',
+        id: 'Add to Dashboard',
+        title: 'Integrate with Jinsei Dashboard',
+        description: 'Deploy your newly created transformer model into a service for real-time operations.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/41d53115-738e-4ef3-93a0-d224de0ca256/playlist.m3u8"
       }
     ]
   },
-  {
+   {
     id: "demo3",
     title: "Launching a Transformer",
     image: Config,
-
-    description: "This is a description for Demo 3.",
+    description: "Set your transformers into motion with Jinsei's streamlined deployment process.",
     steps: [
       {
-        id: 'Launching a Transformer',
-        title: 'Creating a Service',
-        description: 'Create a service to host your transformer.',
+        id: 'Create a Service',
+        title: 'Establish Service Environment',
+        description: 'Build a dedicated service to host your transformer, customizing the environment to meet your specific needs.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/c5467b40-3563-4d1c-b6d7-80241e64b1e4/playlist.m3u8"
       },
       {
-        id: 'Launching a Transformer',
-        title: 'Add Transformer To Service',
-        description: 'Add a transformer to your new service.',
+        id: 'Add Transformer',
+        title: 'Associate Transformer with Service',
+        description: 'Integrate your transformer into the service, ensuring all components are aligned for optimal performance.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/2b131d53-8548-460f-8b72-d357e5bcde18/playlist.m3u8"
       },
       {
-        id: 'Launching a Transformer',
-        title: 'Configure Inputs',
-        description: 'Declare data inputs for the transformer. Easily add on premise data directory runner applications.',
+        id: 'Configure Inputs',
+        title: 'Define Data Inputs',
+        description: 'Specify the data inputs for your transformer, including easy setup of on-premise data directory runners.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/f463d8ea-4973-483f-a288-f3b6ddd68a85/playlist.m3u8"
       },
       {
-        id: 'Launching a Transformer',
-        title: 'Installing a File Runner',
-        description: 'Configure and authorize on premise data directory runner applications for your transformer inputs. ',
+        id: 'Install Runner',
+        title: 'Setup File Runner',
+        description: 'Install and authorize file runners to handle data inputs from your local directories efficiently.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/fedcffcc-60af-4b49-9ca1-85f4c0aeb84e/playlist.m3u8"
       },
       {
-        
-        id: 'Launching a Transformer',
-        title: 'Viewing Runner Apps',
-        description: 'Modify on premise data directory runners to meet your needs.',
+        id: 'View Runners',
+        title: 'Manage Runners',
+        description: 'Adjust and monitor your on-premise file runners to ensure they're performing as expected.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/041a5ef7-a9ea-43e8-b8c9-af7f0205a0f6/playlist.m3u8"
       },
       {
-        
-        id: 'Launching a Transformer',
-        title: 'Configuring Transformer Outputs',
-        description: 'Declare the transformer outputs in a similar way to inputs.',
+        id: 'Set Outputs',
+        title: 'Configure Transformer Outputs',
+        description: 'Define how your transformer outputs data, similar to setting inputs, for seamless data flow.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/3a9eb518-912a-44b5-abbe-ea6222ba52dc/playlist.m3u8"
       },
       {
-        
-        id: 'Launching a Transformer',
-        title: 'Output File Runners',
-        description: 'On premise interfaces allow for easy installation of output runner apps within an enterprise data directory.',
+        id: 'Output Runners',
+        title: 'Deploy Output Runners',
+        description: 'Install output runners to manage and distribute the processed data within your enterprise systems.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/35fbdaff-9d66-4629-83a0-ee0690ba5205/playlist.m3u8"
       },
       {
-        
-        id: 'Launching a Transformer',
-        title: 'Running a Process Manually',
-        description: 'Drop a file in the path of a transformer input declaration.',
+        id: 'Manual Process',
+        title: 'Manual Process Initiation',
+        description: 'Test your setup by manually initiating a process with a file drop into the transformer’s input path.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/f1fd1391-3ebd-409e-82f8-052dfd76bd5a/playlist.m3u8"
       },
       {
-        
-        id: 'Launching a Transformer',
-        title: 'View Transformer Outputs',
-        description: 'View the process output in its assigned data directory.',
+        id: 'View Outputs',
+        title: 'Check Processed Data',
+        description: 'Review the results of your transformer in the designated output directory to ensure accuracy and efficiency.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/5e2b5935-452c-4d83-a430-4a481e18da29/playlist.m3u8"
       },
     ]
@@ -145,32 +137,31 @@ const demoData = [
   {
     id: "demo4",
     image: ERP,
-
     title: "Multi-Transformer Automation",
-    description: "This is a description for Demo 4.",
+    description: "Orchestrate complex data transformation workflows with Jinsei's modular transformer setup.",
     steps: [
       {
-        id: 'Multi-Transformer Automation',
-        title: 'Adding a Second Transformer',
-        description: 'Add more transformers for larger processes. ',
+        id: 'Second Transformer',
+        title: 'Integrate Another Transformer',
+        description: 'Expand your service by adding another transformer to handle subsequent data processing steps.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/e02c27bc-c994-40d7-83f2-0654bf6a3ca2/playlist.m3u8"
       },
       {
-        id: 'Multi-Transformer Automation',
-        title: 'Configure Transformers Together',
-        description: 'Declare the data output from the first transformer as input to the second transformer.',
+        id: 'Configure Transformers',
+        title: 'Chain Transformers',
+        description: 'Link transformers in sequence where the output of one becomes the input for another, creating a data transformation pipeline.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/6bd87e59-fe10-49ef-b847-17e914a9a1b1/playlist.m3u8"
       },
       {
-        id: 'Multi-Transformer Automation',
-        title: 'Add N Transformers',
-        description: 'Jinsei.ai provides multiple layers of moduability. The first layer is in the transformer level with silo splitting and ordering. The second layer is in the services level, where N transformers can be combined to automate huge business processes.',
+        id: 'Multiple Transformers',
+        title: 'Scale with Multiple Transformers',
+        description: 'Jinsei supports scalability at multiple levels: fine-tuning within each transformer and orchestrating multiple transformers for enterprise-scale processes.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/904af0a3-9e52-4ab4-ad41-4fe4a98214be/playlist.m3u8"
       },
       {
-        id: 'Multi-Transformer Automation',
-        title: 'Run the Service',
-        description: 'Click to run the service. Assign an execution rate. Configure hosting options.',
+        id: 'Run Service',
+        title: 'Automate Workflow',
+        description: 'Execute your multi-transformer service, set execution frequencies, and explore hosting options to optimize performance.',
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/96d7f89d-6783-4828-9554-77daf156758a/playlist.m3u8"
       }
     ]
