@@ -17,7 +17,7 @@ const demoData = [
       {
         id: 'Dashboard Overview',
         title: 'Navigate the Jinsei Dashboard',
-        description: 'Explore the Platform as a Service (PaaS) environment where you can manage hosted services, Jinsei's data transformers, and audit data outputs seamlessly.',
+        description: "Explore the Platform as a Service (PaaS) environment where you can manage hosted services, Jinsei's data transformers, and audit data outputs seamlessly.",
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/47af1211-38a1-4758-a9a2-020840928d9e/playlist.m3u8"
       },
       {
@@ -29,7 +29,7 @@ const demoData = [
       {
         id: 'File Format Flexibility',
         title: 'Universal Format Support',
-        description: 'Leverage Jinsei's capability to automate data augmentation across any file type, ensuring your data transformation is as versatile as your needs.',
+        description: "Leverage Jinsei's capability to automate data augmentation across any file type, ensuring your data transformation is as versatile as your needs.",
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/2962d14f-e016-46fa-b26e-c51ce8c2fb27/playlist.m3u8"
       },
     ]
