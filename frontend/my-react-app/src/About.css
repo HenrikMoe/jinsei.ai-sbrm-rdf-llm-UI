@@ -1,292 +1,145 @@
-/* About.css */
 .center-div {
+  max-width: 800px;
+  margin: 80px auto 100px;
+  padding: 20px;
+  background-color: #f5f5f5;
   text-align: left;
-  margin-top: 80px;
-  margin-bottom: 100px;
-  display: flex;
-  flex-direction: column;
-  background-color: #f5f5f5; /* Off-white color for the container */
-
+  font-family: 'Arial', sans-serif;
 }
 
-.pageAlillef{
-  margin-left:60px;
-  margin-right: 60px;
+.pageAlillef {
+  margin: 0 60px;
+}
+
+.aboutJinsei, .aboutJinsei69 {
+  color: #333;
+  margin: 0 40px 40px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.aboutJinsei69 {
+  margin-bottom: 40px; /* Adjusted for consistency */
+}
+
+.aboutJinsei7 {
+  margin: 30px auto 40px;
+  font-size: 24px; /* Increased for header */
+  text-align: center;
 }
 
 .summaryBox {
-  background-color: #f5f5f5;
+  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
   margin: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .summaryBox h2 {
   color: #333;
+  margin-bottom: 15px;
 }
 
 .summaryBox p {
   color: #666;
 }
 
-
-.aboutJinsei {
-  color: #333; /* Off-black color #333*/
-  margin-bottom: 40px;
-  margin-right: 20px;
-  margin-left: 40px;
-  width: 90%;
-  font-size: 18px;
-  text-align: left !important; /* Align text to the left */
-  display: block;
+/* Bullet list styling */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0 0 20px 40px;
 }
 
-.aboutJinsei69{
-  color: #333; /* Off-black color #333*/
-  margin-bottom: 400px;
-  margin-right: 20px;
-  margin-left: 40px;
-  font-size: 18px;
-    width: 90%;
-
-  text-align: left !important; /* Align text to the left */
-  display: block;
-}
-
-.aboutJinsei7 {
-  color: #333; /* Off-black color #333*/
-  margin-bottom: 40px;
-  margin-right: 20px;
-  margin-left: 40px;
-  margin-top: 30px;
-  font-size: 18px;
-  text-align: center !important; /* Align text to the left */
-  display: block;
-}
-
-
-.aboutJinsei2 {
-  color: #333; /* Off-black color #333*/
-  margin-bottom: 50px;
-  margin-right: 20px;
-  margin-left: 40px;
-  text-align: left !important; /* Align text to the left */
-  display: block;
-}
-
-.productTitle{
-  color: #333; /* Off-black color #333*/
+ul li {
+  color: #333;
   margin-bottom: 10px;
-  margin-right: 20px;
-  margin-left: 40px;
-  text-align: left !important; /* Align text to the left */
-  display: block;
 }
 
-.productSubTitle{
-  color: #333; /* Off-black color #333*/
-  margin-bottom: 20px;
-  margin-right: 20px;
+/* Applying consistent margins for various titles and items */
+.productTitle, .tradeSecretTitle, .topicTitle {
+  margin: 20px 40px 10px;
+}
+
+.productSubTitle, .tocItem, .tocItem1 {
   margin-left: 60px;
-  text-align: left !important; /* Align text to the left */
-  display: block;
 }
 
-.tradeSecretTitle{
-  color: #333; /* Off-black color #333*/
-  margin-bottom: 10px;
-  margin-right: 20px;
-  margin-left: 40px;
-  text-align: left !important; /* Align text to the left */
-  display: block;
-}
-
-.tocTitle{
-  color: #333; /* Off-black color #333*/
-  margin-bottom: 20px;
-  margin-right: 20px;
-  margin-left: 40px;
-  text-align: left !important; /* Align text to the left */
-  display: block;
-}
-
-.tocItem{
-  color: #333; /* Off-black color #333*/
-  margin-bottom: 10px;
-  margin-right: 20px;
-  margin-left: 60px;
-  text-align: left !important; /* Align text to the left */
-  display: block;
-}
-
-.tocItem1{
-  color: #333; /* Off-black color #333*/
-  margin-bottom:40px;
-  margin-right: 20px;
-  margin-left: 60px;
-  text-align: left !important; /* Align text to the left */
-  display: block;
-}
-
-.topicTitle{
-  color: #333; /* Off-black color #333*/
-  margin-bottom: 40px;
-  margin-right: 20px;
-  margin-left: 40px;
-  margin-top: 0px;
-  text-align: left !important; /* Align text to the left */
-  display: block;
-}
-
-
+/* Responsive design */
 @media (max-width: 767px) {
   .center-div {
-    margin-right: 20px;
-    margin-left: 20px;
+    margin: 50px 20px;
+  }
 
+  .pageAlillef,
+  .aboutJinsei, .aboutJinsei69 {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
-
 .xlsx-tablez {
-  margin-top: 30px;
-  border-bottom: 2px solid #3498db; /* Border color */
-  border-right: 2px solid #3498db; /* Border color */
-
-  top: 0;
-  padding: 5px;
-  margin-left: 120px;
+  width: 100%;
   max-width: 1500px;
-  max-height: 400px;
-  margin-bottom: 100px;
-  border-radius: 10px !important;
+  margin: 30px auto 40px;
+  border-spacing: 0;
   overflow-x: auto;
   background-color: #F8FAFC;
-  border-collapse: separate;
-  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
-  box-shadow: 5px 5px 0 #003366; /* Add a shadow to the right and bottom */
-
-  border-radius: 5px !important;
+  border-collapse: collapse;
+  box-shadow: 5px 5px 0 #003366;
+  transition: box-shadow 0.3s ease;
 }
 
 .xlsx-tablez:hover {
-  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
-  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 10px 10px 0 #003366;
 }
-
 
 .xlsx-tablez th, .xlsx-tablez td {
   border: 1px solid #ccc;
   padding: 8px;
-  color: black;
-  font-weight: 350;
-
   text-align: left;
 }
 
 .xlsx-tablez th {
   background-color: #f0f0f0;
-  color: black;
-  font-weight: normal;
-}
-
-.xlsx-tablez td {
-  background-color: #ffffff;
-
+  font-weight: bold;
 }
 
 .xlsx-tablez td[contentEditable="true"]:focus {
   outline: none;
   border: 1px solid #007bff;
-  color: black;
   background-color: #fff;
   box-shadow: 0 0 5px #003366;
-
 }
 
-
-
-.aboutJinsei3 {
-  color: #333; /* Off-black color #333*/
-  margin-bottom: 50px;
-  margin-right: 20px;
-  margin-top:30px;
-
-  margin-left: 40px;
-  text-align: left !important; /* Align text to the left */
-  display: block;
-}
-
-.aboutJinsei4 {
-  color: #333; /* Off-black color #333*/
-  margin-bottom: 5px;
-  margin-right: 20px;
-  margin-top:30px;
-
-  margin-left: 40px;
-  text-align: left !important; /* Align text to the left */
-  display: block;
-}
-
-.xlsxView{
-  margin-left: 10px;
-  margin-top: -100px;
+.xlsxView {
   width: 820px;
-  margin-bottom: 50px;
+  margin: 0 auto 50px;
+}
 
+@media (max-width: 767px) {
+  .xlsxView, .xlsx-tablez, .sheetView {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+  }
+}
+
+.sheetView {
+  width: 320px;
+  margin: 20px;
+  box-shadow: 5px 5px 0 #003366;
+  transition: box-shadow 0.3s ease;
 }
 
 .sheetView:hover {
-  box-shadow: 10px 10px 0 #003366; /* Add a shadow to the right and bottom */
-  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 10px 10px 0 #003366;
 }
 
-@media (max-width: 767px) {
-  .xlsxView {
-    width: 250px;
-    margin-left: -20px;
-
-  }
-}
-
-.sheetView{
-  margin-left: 20px;
-  width: 320px;
-  box-shadow: 5px 5px 0 #003366; /* Add a shadow to the right and bottom */
-
-  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
-}
-
-@media (max-width: 767px) {
-  .xlsx-tablez {
-    width: 220px;
-    margin-left: -50px;
-
-  }
-}
-
-@media (max-width: 767px) {
-  .sheetView {
-    width: 220px;
-    margin-left: 20px;
-
-  }
-}
-
-.bulletedList {
-  margin-left: 60px;
-  margin-bottom: 40px;
-}
-
-.bulletedList div {
-  margin-bottom: 5px;
-  list-style: disc; /* Use 'disc' for filled circles, 'circle' for empty circles, or 'square' for squares */
-  color: black; /* Set the color for the bullet */
-}
-.bulletedList li {
-  margin-bottom: 20px;
-  list-style: disc; /* Use 'disc' for filled circles, 'circle' for empty circles, or 'square' for squares */
-  color: black; /* Set the color for the bullet */
+/* Simplified for clarity */
+.aboutJinsei3, .aboutJinsei4 {
+  color: #333;
+  margin: 20px 40px 50px;
+  text-align: left;
 }
