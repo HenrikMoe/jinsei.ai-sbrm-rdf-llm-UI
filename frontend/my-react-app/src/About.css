@@ -37,6 +37,7 @@
   margin-bottom: 40px;
   margin-right: 20px;
   margin-left: 40px;
+  width: 90%;
   font-size: 18px;
   text-align: left !important; /* Align text to the left */
   display: block;
@@ -48,6 +49,8 @@
   margin-right: 20px;
   margin-left: 40px;
   font-size: 18px;
+    width: 90%;
+
   text-align: left !important; /* Align text to the left */
   display: block;
 }
