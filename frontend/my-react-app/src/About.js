@@ -9,7 +9,7 @@ const About = () => {
       We're building the ultimate LLM hosting and sharing service. In the meantime, reachout over Email or LinkedIn.
       </div>
    
-  <div className='aboutJinsei69'>
+  <div className='aboutJinsei'>
      Visit our Github to learn more about the project:  <a href='https://github.com/HenrikMoe/Service-Infrastructure'>Watch</a> 
       </div>
     
