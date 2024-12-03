@@ -105,7 +105,7 @@ const demoData = [
       {
         id: 'View Runners',
         title: 'Manage Runners',
-        description: 'Adjust and monitor your on-premise file runners to ensure they're performing as expected.',
+        description: "Adjust and monitor your on-premise file runners to ensure they're performing as expected.",
         videoUrl: "https://vz-7afb2539-0a9.b-cdn.net/041a5ef7-a9ea-43e8-b8c9-af7f0205a0f6/playlist.m3u8"
       },
       {
