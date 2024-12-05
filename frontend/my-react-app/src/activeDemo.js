@@ -4,6 +4,8 @@ import Config from './config.png'
 import Transformer from './noun-transformer-5878572.png'
 import ERP from './noun-enterprise-7090016.png'
 // Sample Demo Data
+import { Link } from 'react-router-dom';
+
 
 import HlsPlayer from 'react-hls-player';
 
@@ -236,7 +238,7 @@ const DemoSelection = ({ onDemoSelect }) => {
 <h2>Select an active demo.</h2>
    </div>
    <div>
-   <h3>For more information, check out <a href="/about">the About page</a>.</h3>
+   <h3>For more information, check out <Link to="/about">the About page</Link>.</h3>
    </div>
    {demoData.map((demo) => (
         <button
