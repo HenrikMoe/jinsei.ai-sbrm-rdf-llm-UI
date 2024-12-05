@@ -232,8 +232,8 @@ const styles2 = {
 const DemoSelection = ({ onDemoSelect }) => {
   return (
     <div style={styles.demoSelection}>
-      <h2>Select an active demo.</h2>
-      {demoData.map((demo) => (
+<h2>Select an active demo. For more information, check out <a href="/about">the About page</a>.</h2>
+   {demoData.map((demo) => (
         <button
           key={demo.id}
           onClick={() => onDemoSelect(demo)}
