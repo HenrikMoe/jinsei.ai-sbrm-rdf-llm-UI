@@ -18,6 +18,9 @@ const Footer = () => {
         </div>
         <div className="footer-section">
           <div>outreach@jinsei.ai</div>
+         <a href="https://github.com/HenrikMoe/Service-Infrastructure" style="text-decoration: none; color: inherit;">
+              <div>Jinsei.ai Details</div>
+          </a>
          
         </div>
       </div>
