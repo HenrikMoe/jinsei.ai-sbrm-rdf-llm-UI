@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
         <div className="footer-section">
           <div className="footer-title">Contact:</div>
-          <div>henrik@jinsei.ai</div>
+          <div>outreach@jinsei.ai</div>
          
         </div>
       </div>
