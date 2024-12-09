@@ -13,22 +13,17 @@ const Footer = () => {
           <div>Intuitive Use</div>
 
           <div>CA, USA</div>
-
-
-    </div>
-<div className="footer-section">
-  <div className="footer-title"></div>
-  <a href="https://github.com/HenrikMoe/Service-Infrastructure" style={{textDecoration: 'none', color: 'inherit'}}>
-    <div>Jinsei.ai Details</div>
-  </a>
-  <div>outreach@jinsei.ai</div>
-</div>
-       
-         
+        </div>
+        <div className="footer-section">
+          <div className="footer-title"></div>
+          <a href="https://github.com/HenrikMoe/Service-Infrastructure" style={{textDecoration: 'none', color: 'inherit'}}>
+            <div>Jinsei.ai Details</div>
+          </a>
+          <div>outreach@jinsei.ai</div>
         </div>
       </div>
       <div className="footer-bottom">
-        &copy; 2024 Jinsei Corp. All rights reserved.
+        © 2024 Jinsei Corp. All rights reserved.
       </div>
     </div>
   );
