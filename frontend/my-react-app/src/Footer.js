@@ -15,13 +15,14 @@ const Footer = () => {
           <div>CA, USA</div>
 
 
-        </div>
-        <div className="footer-section">
-              <div className="footer-title"> </div>
-  <a href="https://github.com/HenrikMoe/Service-Infrastructure" style="text-decoration: none; color: inherit;">
-              <div>Jinsei.ai Details</div>
-          </a>
-          <div>outreach@jinsei.ai</div>
+    </div>
+<div className="footer-section">
+  <div className="footer-title"></div>
+  <a href="https://github.com/HenrikMoe/Service-Infrastructure" style={{textDecoration: 'none', color: 'inherit'}}>
+    <div>Jinsei.ai Details</div>
+  </a>
+  <div>outreach@jinsei.ai</div>
+</div>
        
          
         </div>
