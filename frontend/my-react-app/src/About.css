@@ -28,6 +28,12 @@
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .aboutJinsei7  {
+    margin: 80px 20px;
+  }
+}
+
 .summaryBox {
   background-color: #fff;
   border: 1px solid #ddd;
